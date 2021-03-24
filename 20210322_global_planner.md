@@ -446,5 +446,9 @@ virtual bool getPath(float* potential, double start_x, double start_y, double en
 ## 未解决的问题
 
 1. 在plan_node.cpp中为什么在订阅者与服务器中都要make plan?
+
+   答：提供了两种全局规划方式，一种是简单的话题通信，即给一个目标，然后一直到规划出结果，返回最终的结果；第二种是利用actionlib的CS服务通信，即规划过程中是可以实时feedback工作进度的。
+
 2. CmakeList中的planner是怎么来的？何时需要把源文件编译成库？链接规则？
+
 3. 
