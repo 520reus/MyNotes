@@ -298,7 +298,7 @@ bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start, const geom
         worldToMap(wx, wy, goal_x, goal_y);
     }
 
-    //清楚起始单元格，clear the starting cell within the costmap because we know it can't be an obstacle
+    //清除起始单元格，clear the starting cell within the costmap because we know it can't be an obstacle
     clearRobotCell(start, start_x_i, start_y_i);
 
     int nx = costmap_->getSizeInCellsX(), ny = costmap_->getSizeInCellsY();
@@ -311,7 +311,7 @@ bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start, const geom
 
     if(outline_map_)
         outlineMap(costmap_->getCharMap(), nx, ny, costmap_2d::LETHAL_OBSTACLE);
-
+    // 具体算法，利用A*或dijkstra搜索最优path，更新potential_array_
     bool found_legal = planner_->calculatePotentials(costmap_->getCharMap(), start_x, start_y, goal_x, goal_y,
                                                     nx * ny * 2, potential_array_);
 
@@ -329,7 +329,7 @@ bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start, const geom
             plan.push_back(goal_copy);
         } else {
             ROS_ERROR("Failed to get a plan from potential when a legal potential was found. This shouldn't happen.");
-        }
+        }u
     }else{
         ROS_ERROR("Failed to get a plan.");
     }
@@ -388,6 +388,7 @@ bool GlobalPlanner::getPlanFromPotential(double start_x, double start_y, double 
 
     ros::Time plan_time = ros::Time::now();
     for (int i = path.size() -1; i>=0; i--) {
+        //* 由于从potential回溯获取路径点时存储是反的（先存的终点），所以这里倒着遍历
         std::pair<float, float> point = path[i];
         //convert the plan to world coordinates
         double world_x, world_y;found_legal

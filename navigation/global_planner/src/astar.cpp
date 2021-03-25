@@ -71,7 +71,6 @@ bool AStarExpansion::calculatePotentials(unsigned char* costs, double start_x, d
         将首元素放到最后，其他元素按照Cost值从小到大排列
 		pop_heap() 是将堆顶元素与最后一个元素交换位置，之后用pop_back将最后一个元素删除
 		greater1()是按小顶堆
-        TODO 一会自己写以下堆就知道构建的是小顶堆还是大顶堆了
          */
         std::pop_heap(queue_.begin(), queue_.end(), greater1()); 
         queue_.pop_back(); //删除最后一个元素，即删除最小代价的点

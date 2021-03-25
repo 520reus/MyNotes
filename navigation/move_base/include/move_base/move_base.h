@@ -83,7 +83,7 @@ namespace move_base {
     public:
       /**
        * @brief  Constructor for the actions
-       * @param name The name of the action
+       * @param name The name olocal_plannerf the action
        * @param tf A reference to a TransformListener
        */
       MoveBase(tf2_ros::Buffer& tf);
@@ -91,7 +91,7 @@ namespace move_base {
       /**
        * @brief  Destructor - Cleans up
        */
-      virtual ~MoveBase();
+      virtual ~MoveBase();local_planner
 
       /**
        * @brief  Performs a control cycle
@@ -116,7 +116,7 @@ namespace move_base {
        * @param  resp The plan request
        * @return True if planning succeeded, false otherwise
        */
-      bool planService(nav_msgs::GetPlan::Request &req, nav_msgs::GetPlan::Response &resp);
+      bool planService(nav_msglocal_planners::GetPlan::Request &req, nav_msgs::GetPlan::Response &resp);
 
       /**
        * @brief  Make a new global plan

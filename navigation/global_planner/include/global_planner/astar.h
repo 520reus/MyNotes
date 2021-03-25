@@ -53,7 +53,7 @@ class Index {
         int i;
         float cost;
 };
-// 用于比较两个node的cost，谁大要谁
+//* 用于构造小顶堆，注意这里符号是大于号！
 struct greater1 {
         bool operator()(const Index& a, const Index& b) const {
             return a.cost > b.cost;
