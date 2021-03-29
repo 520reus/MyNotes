@@ -116,7 +116,7 @@ void GlobalPlanner::initialize(std::string name, costmap_2d::Costmap2D* costmap,
             convert_offset_ = 0.5; //TODO 这个值的作用？
         else
             convert_offset_ = 0.0;
-        //TODO 这里是在计算什么？要看两个源文件
+
         // 参数2：设置为true,将使用二次函数近似函数,否则使用更加简单的计算方式,这样节省硬件计算资源
         bool use_quadratic;
         private_nh.param("use_quadratic", use_quadratic, true);

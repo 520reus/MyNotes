@@ -49,6 +49,7 @@
 #include <sensor_msgs/point_cloud2_iterator.h>
 
 namespace dwa_local_planner {
+  //读取配置文件重新对dwa_planner进行配置
   void DWAPlanner::reconfigure(DWAPlannerConfig &config)
   {
 
@@ -131,13 +132,18 @@ namespace dwa_local_planner {
     //Assuming this planner is being run within the navigation stack, we can
     //just do an upward search for the frequency at which its being run. This
     //also allows the frequency to be overwritten locally.
+    //* 设置速度发布频率，即局部规划频率
     std::string controller_frequency_param_name;
+    //如果没有在全局参数表或yaml中找到"controller_frequency"字段，将其设置为20HZ
     if(!private_nh.searchParam("controller_frequency", controller_frequency_param_name)) {
       sim_period_ = 0.05;
-    } else {
+    } 
+    //能找到该控制器频率字段
+    else {
       double controller_frequency = 0;
       private_nh.param(controller_frequency_param_name, controller_frequency, 20.0);
       if(controller_frequency > 0) {
+        //设置规划一步的时间
         sim_period_ = 1.0 / controller_frequency;
       } else {
         ROS_WARN("A controller_frequency less than 0 has been set. Ignoring the parameter, assuming a rate of 20Hz");
@@ -163,6 +169,7 @@ namespace dwa_local_planner {
 
     // set up all the cost functions that will be applied in order
     // (any function returning negative values will abort scoring, so the order can improve performance)
+     //* 先在构造函数中把涉及到的cost对象全部push进评估器中，然后后面再调用updatePlanAndLocalCosts设置cost
     std::vector<base_local_planner::TrajectoryCostFunction*> critics;
     critics.push_back(&oscillation_costs_); // discards oscillating motions (assisgns cost -1)
     critics.push_back(&obstacle_costs_); // discards trajectories that move into obstacles
@@ -182,6 +189,7 @@ namespace dwa_local_planner {
   }
 
   // used for visualization only, total_costs are not really total costs
+  //* Compute the components and total cost for a map grid cell
   bool DWAPlanner::getCellCosts(int cx, int cy, float &path_cost, float &goal_cost, float &occ_cost, float &total_cost) {
 
     path_cost = path_costs_.getCellCosts(cx, cy);
@@ -208,6 +216,8 @@ namespace dwa_local_planner {
   /**
    * This function is used when other strategies are to be applied,
    * but the cost functions for obstacles are to be reused.
+   * *Check if a trajectory is legal for a position/velocity pair
+   ** 在这里执行采样生成轨迹束与打分的逻辑
    */
   bool DWAPlanner::checkTrajectory(
       Eigen::Vector3f pos,
@@ -235,7 +245,17 @@ namespace dwa_local_planner {
     return false;
   }
 
-
+/**
+ * @brief  Update the cost functions before planning
+       * @param  global_pose The robot's current pose
+       * @param  new_plan The new global plan
+       * @param  footprint_spec The robot's footprint
+       *
+       * The obstacle cost function gets the footprint.
+       * The path and goal cost functions get the global_plan
+       * The alignment cost functions get a version of the global plan
+       *   that is modified based on the global_pose 
+  */
   void DWAPlanner::updatePlanAndLocalCosts(
       const geometry_msgs::PoseStamped& global_pose,
       const std::vector<geometry_msgs::PoseStamped>& new_plan,
@@ -254,6 +274,7 @@ namespace dwa_local_planner {
     goal_costs_.setTargetPoses(global_plan_);
 
     // alignment costs
+    //TODO alignment cost是啥cost？
     geometry_msgs::PoseStamped goal_pose = global_plan_.back();
 
     Eigen::Vector3f pos(global_pose.pose.position.x, global_pose.pose.position.y, tf2::getYaw(global_pose.pose.orientation));
@@ -288,20 +309,21 @@ namespace dwa_local_planner {
 
 
   /*
-   * given the current state of the robot, find a good trajectory
+   * Given the current position and velocity of the robot, find the best trajectory to exectue
    */
   base_local_planner::Trajectory DWAPlanner::findBestPath(
       const geometry_msgs::PoseStamped& global_pose,
       const geometry_msgs::PoseStamped& global_vel,
       geometry_msgs::PoseStamped& drive_velocities) {
 
-    //make sure that our configuration doesn't change mid-run
+    //! make sure that our configuration doesn't change mid-run
     boost::mutex::scoped_lock l(configuration_mutex_);
-
+    //TODO Eigen::vector3f
     Eigen::Vector3f pos(global_pose.pose.position.x, global_pose.pose.position.y, tf2::getYaw(global_pose.pose.orientation));
     Eigen::Vector3f vel(global_vel.pose.position.x, global_vel.pose.position.y, tf2::getYaw(global_vel.pose.orientation));
     geometry_msgs::PoseStamped goal_pose = global_plan_.back();
     Eigen::Vector3f goal(goal_pose.pose.position.x, goal_pose.pose.position.y, tf2::getYaw(goal_pose.pose.orientation));
+    //TODO what's that？
     base_local_planner::LocalPlannerLimits limits = planner_util_->getCurrentLimits();
 
     // prepare cost functions and generators for this run
@@ -365,6 +387,7 @@ namespace dwa_local_planner {
     }
 
     // debrief stateful scoring functions
+    //TODO what's that？
     oscillation_costs_.updateOscillationFlags(pos, &result_traj_, planner_util_->getCurrentLimits().min_vel_trans);
 
     //if we don't have a legal trajectory, we'll just command zero
