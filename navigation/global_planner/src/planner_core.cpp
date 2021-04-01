@@ -329,7 +329,7 @@ bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped& start, const geom
             plan.push_back(goal_copy);
         } else {
             ROS_ERROR("Failed to get a plan from potential when a legal potential was found. This shouldn't happen.");
-        }u
+        }
     }else{
         ROS_ERROR("Failed to get a plan.");
     }

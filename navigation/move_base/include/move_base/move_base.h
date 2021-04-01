@@ -91,7 +91,7 @@ namespace move_base {
       /**
        * @brief  Destructor - Cleans up
        */
-      virtual ~MoveBase();local_planner
+      virtual ~MoveBase();
 
       /**
        * @brief  Performs a control cycle
