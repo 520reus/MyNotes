@@ -43,7 +43,6 @@
 #include <tf2_ros/buffer.h>
 
 #include <dynamic_reconfigure/server.h>
-//TODO where is the DWAPlannerConfig?
 #include <dwa_local_planner/DWAPlannerConfig.h>
 
 #include <angles/angles.h>

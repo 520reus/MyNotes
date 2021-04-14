@@ -566,6 +566,7 @@ namespace move_base {
     planner_cond_.notify_one();
   }
 
+  //! 这是全局规划线程！ 不是局部规划线程！！！
   void MoveBase::planThread(){
     ROS_DEBUG_NAMED("move_base_plan_thread","Starting planner thread...");
     ros::NodeHandle n;
@@ -574,7 +575,8 @@ namespace move_base {
     boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
     while(n.ok()){
       //check if we should run the planner (the mutex is locked)
-      while(wait_for_wake || !runPlanner_){
+      //线程继续运行依赖于变量runPlanner_ ，唤醒线程依赖于条件变量planner_cond_
+      while(wait_for_wake || !runPlanner_){ 
         //if we should not be running the planner then suspend this thread
         ROS_DEBUG_NAMED("move_base_plan_thread","Planner thread is suspending");
         planner_cond_.wait(lock);
@@ -587,7 +589,7 @@ namespace move_base {
       lock.unlock();
       ROS_DEBUG_NAMED("move_base_plan_thread","Planning...");
 
-      //run planner
+      //! run planner
       planner_plan_->clear();
       bool gotPlan = n.ok() && makePlan(temp_goal, *planner_plan_);
 
@@ -597,6 +599,7 @@ namespace move_base {
         std::vector<geometry_msgs::PoseStamped>* temp_plan = planner_plan_;
 
         lock.lock();
+        {
         planner_plan_ = latest_plan_;
         latest_plan_ = temp_plan;
         last_valid_plan_ = ros::Time::now();
@@ -610,6 +613,7 @@ namespace move_base {
           state_ = CONTROLLING;
         if(planner_frequency_ <= 0)
           runPlanner_ = false;
+        }
         lock.unlock();
       }
       //if we didn't get a plan and we are in the planning state (the robot isn't moving)
@@ -637,7 +641,7 @@ namespace move_base {
       //take the mutex for the next iteration
       lock.lock();
 
-      //setup sleep interface if needed
+      //setup sleep interface if needed,定时唤醒全局规划线程工作，若全局规划频率＞0，则按照该频率不断全局规划生成全局路径
       if(planner_frequency_ > 0){
         ros::Duration sleep_time = (start_time + ros::Duration(1.0/planner_frequency_)) - ros::Time::now();
         if (sleep_time > ros::Duration(0.0)){
@@ -645,9 +649,10 @@ namespace move_base {
           timer = n.createTimer(sleep_time, &MoveBase::wakePlanner, this);
         }
       }
-    }
+    } //end while
   }
 
+  //! 当收到goal请求时，执行该回调函数，可理解为主线程，其与全局规划线程plannerThread一起执行
   void MoveBase::executeCb(const move_base_msgs::MoveBaseGoalConstPtr& move_base_goal)
   {
     if(!isQuaternionValid(move_base_goal->target_pose.pose.orientation)){
@@ -658,7 +663,7 @@ namespace move_base {
     geometry_msgs::PoseStamped goal = goalToGlobalFrame(move_base_goal->target_pose);
 
     publishZeroVelocity();
-    //we have a goal so start the planner
+    //we have a goal so start the planner 收到目标请求，启动全局规划
     boost::unique_lock<boost::recursive_mutex> lock(planner_mutex_);
     planner_goal_ = goal;
     runPlanner_ = true;
@@ -782,7 +787,7 @@ namespace move_base {
       //make sure to sleep for the remainder of our cycle time
       if(r.cycleTime() > ros::Duration(1 / controller_frequency_) && state_ == CONTROLLING)
         ROS_WARN("Control loop missed its desired rate of %.4fHz... the loop actually took %.4f seconds", controller_frequency_, r.cycleTime().toSec());
-    }
+    } //end while
 
     //wake up the planner thread so that it can exit cleanly
     lock.lock();
@@ -800,7 +805,6 @@ namespace move_base {
     return hypot(p1.pose.position.x - p2.pose.position.x, p1.pose.position.y - p2.pose.position.y);
   }
   
-  //! move_base规划循环
   bool MoveBase::executeCycle(geometry_msgs::PoseStamped& goal, std::vector<geometry_msgs::PoseStamped>& global_plan){
     boost::recursive_mutex::scoped_lock ecl(configuration_mutex_);
     //we need to be able to publish velocity commands
