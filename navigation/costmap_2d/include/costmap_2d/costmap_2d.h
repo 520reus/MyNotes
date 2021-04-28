@@ -35,10 +35,6 @@
  * Author: Eitan Marder-Eppstein
  *         David V. Lu!!
  *********************************************************************/
-/* 
-该文件中的Costmap2D是输入到规划器中的类对象
-TODO 明天看本文件的地图接口与costmap_2d_ros，搞明白如何调用即可，先不必深入源码
- */
 #ifndef COSTMAP_2D_COSTMAP_2D_H_
 #define COSTMAP_2D_COSTMAP_2D_H_
 
@@ -67,10 +63,10 @@ class Costmap2D
 public:
   /**
    * @brief  Constructor for a costmap
-   * @param  cells_size_x The x size of the map in cells  costmap栅格中x的长度，比如5x3的地图，该值=5
-   * @param  cells_size_y The y size of the map in cells  costmap栅格中x的长度，该值=3
-   * @param  resolution The resolution of the map in meters/cell 地图分辨率
-   * @param  origin_x The x origin of the map  地图起点
+   * @param  cells_size_x The x size of the map in cells
+   * @param  cells_size_y The y size of the map in cells
+   * @param  resolution The resolution of the map in meters/cell
+   * @param  origin_x The x origin of the map
    * @param  origin_y The y origin of the map
    * @param  default_value Default Value
    */
@@ -92,7 +88,6 @@ public:
 
   /**
    * @brief  Turn this costmap into a copy of a window of a costmap passed in
-   * 从旧的costmap中拷贝一个window大小的地图生成一个新的子图
    * @param  map The costmap to copy
    * @param win_origin_x The x origin (lower left corner) for the window to copy, in meters
    * @param win_origin_y The y origin (lower left corner) for the window to copy, in meters
@@ -113,7 +108,7 @@ public:
   virtual ~Costmap2D();
 
   /**
-   * @brief  Get the cost of a cell in the costmap,获取二维索引栅格的cost
+   * @brief  Get the cost of a cell in the costmap
    * @param mx The x coordinate of the cell
    * @param my The y coordinate of the cell
    * @return The cost of the cell
@@ -121,7 +116,7 @@ public:
   unsigned char getCost(unsigned int mx, unsigned int my) const;
 
   /**
-   * @brief  Set the cost of a cell in the costmap，二维索引栅格赋值
+   * @brief  Set the cost of a cell in the costmap
    * @param mx The x coordinate of the cell
    * @param my The y coordinate of the cell
    * @param cost The cost to set the cell to
@@ -169,7 +164,6 @@ public:
 
   /**
    * @brief  Given two map coordinates... compute the associated index
-   * *costmap是存储在一个一维数组中的，所以每次索引二维(x,y)坐标对应的cell时都需要转化到一维索引
    * @param mx The x coordinate
    * @param my The y coordinate
    * @return The associated index
@@ -193,7 +187,6 @@ public:
 
   /**
    * @brief  Will return a pointer to the underlying unsigned char array used as the costmap
-   * /*返回costmap地图指针必须要分清楚该指针是指向master costmap还是其他分层的costmap
    * @return A pointer to the underlying unsigned char array storing cost values
    */
   unsigned char* getCharMap() const;
@@ -287,7 +280,7 @@ public:
 
   void resizeMap(unsigned int size_x, unsigned int size_y, double resolution, double origin_x,
                  double origin_y);
-  //重置地图的部分cell
+
   void resetMap(unsigned int x0, unsigned int y0, unsigned int xn, unsigned int yn);
 
   /**
@@ -343,7 +336,7 @@ protected:
   virtual void deleteMaps();
 
   /**
-   * @brief  Resets the costmap and static_map to be unknown space，重置地图的全部cell
+   * @brief  Resets the costmap and static_map to be unknown space
    */
   virtual void resetMaps();
 
@@ -425,12 +418,21 @@ private:
 
   mutex_t* access_;
 protected:
-  unsigned int size_x_;  //costmap栅格中x的长度，比如5x3的地图，该值=5
-  unsigned int size_y_;  //costmap栅格中y的长度，比如5x3的地图，该值=3
-  double resolution_;    //地图分辨率
-  double origin_x_;      //map原点所对应的全局坐标
+  /**
+   * @brief  Constructor for a costmap
+   * @param  cells_size_x The x size of the map in cells
+   * @param  cells_size_y The y size of the map in cells
+   * @param  resolution The resolution of the map in meters/cell
+   * @param  origin_x The x origin of the map
+   * @param  origin_y The y origin of the map
+   * @param  default_value Default Value
+   */
+  unsigned int size_x_;
+  unsigned int size_y_;
+  double resolution_;
+  double origin_x_;
   double origin_y_;
-  unsigned char* costmap_;   // costmap一维字符数组
+  unsigned char* costmap_;
   unsigned char default_value_;
 
   class MarkCell

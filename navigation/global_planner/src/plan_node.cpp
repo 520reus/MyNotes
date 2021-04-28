@@ -83,7 +83,7 @@ bool PlannerWithCostmap::makePlanService(navfn::MakeNavPlan::Request& req, navfn
     return true;
 }
 
-/* 
+/* cmap
 订阅一个goal的topic，一旦收到goal的发布，就回调PlannerWithCostmap::poseCallback方法，
 根据机器人当前所在地图的位置和目标goal的位置，执行makePlan(global_pose, *goal, path)，
 计算出vector<PoseStamped> path数据。

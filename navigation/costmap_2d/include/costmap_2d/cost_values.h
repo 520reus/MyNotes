@@ -39,7 +39,6 @@
 /** Provides a mapping for often used cost values */
 namespace costmap_2d
 {
-//*好像明白了为什么用unsigned char，因为范围正好是0-255啊！！！
 static const unsigned char NO_INFORMATION = 255;
 static const unsigned char LETHAL_OBSTACLE = 254;
 static const unsigned char INSCRIBED_INFLATED_OBSTACLE = 253;

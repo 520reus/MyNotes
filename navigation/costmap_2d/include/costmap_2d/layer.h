@@ -42,6 +42,11 @@
 #include <string>
 #include <tf2_ros/buffer.h>
 
+/* 
+layer，发现这个类整个就是一个虚类，提供了最重要的两个接口，updateCosts跟updateBounds，
+updateBounds计算打算更新的范围，updateCosts就是更新cost了。
+ */
+
 namespace costmap_2d
 {
 class LayeredCostmap;
@@ -118,7 +123,8 @@ protected:
    * tf_, name_, and layered_costmap_ will all be set already when this is called. */
   virtual void onInitialize() {}
 
-  LayeredCostmap* layered_costmap_;
+  //在基类定义一个layered_costmap_指针，这样每个插件都有相同的一个包工头指针，就可以获得相同的插件队列与地图！
+  LayeredCostmap* layered_costmap_; 
   bool current_;
   bool enabled_;  ///< Currently this var is managed by subclasses. TODO: make this managed by this class and/or container class.
   std::string name_;

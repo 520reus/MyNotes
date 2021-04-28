@@ -60,12 +60,13 @@ void CostmapLayer::useExtraBounds(double* min_x, double* min_y, double* max_x, d
     has_extra_bounds_ = false;
 }
 
+//各地图插件（静态、膨胀、障碍物）相应bound区域的cost值取最大
 void CostmapLayer::updateWithMax(costmap_2d::Costmap2D& master_grid, int min_i, int min_j, int max_i, int max_j)
 {
   if (!enabled_)
     return;
 
-  unsigned char* master_array = master_grid.getCharMap();
+  unsigned char* master_array = master_grid.getCharMap(); //旧的地图
   unsigned int span = master_grid.getSizeInCellsX();
 
   for (int j = min_j; j < max_j; j++)
@@ -73,19 +74,20 @@ void CostmapLayer::updateWithMax(costmap_2d::Costmap2D& master_grid, int min_i, 
     unsigned int it = j * span + min_i;
     for (int i = min_i; i < max_i; i++)
     {
-      if (costmap_[it] == NO_INFORMATION){
+      if (costmap_[it] == NO_INFORMATION){ //costmap_为新的插件地图，故为新的cell
         it++;
         continue;
       }
 
       unsigned char old_cost = master_array[it];
-      if (old_cost == NO_INFORMATION || old_cost < costmap_[it])
+      if (old_cost == NO_INFORMATION || old_cost < costmap_[it]) //新的大于旧的cell的cost
         master_array[it] = costmap_[it];
       it++;
     }
   }
 }
 
+//永远用新的覆盖旧的cell上的cost
 void CostmapLayer::updateWithTrueOverwrite(costmap_2d::Costmap2D& master_grid, int min_i, int min_j,
                                            int max_i, int max_j)
 {
@@ -105,6 +107,7 @@ void CostmapLayer::updateWithTrueOverwrite(costmap_2d::Costmap2D& master_grid, i
   }
 }
 
+//除了未知区域的cell，都用新的插件在该cell的cost覆盖旧插件
 void CostmapLayer::updateWithOverwrite(costmap_2d::Costmap2D& master_grid, int min_i, int min_j, int max_i, int max_j)
 {
   if (!enabled_)
@@ -124,6 +127,7 @@ void CostmapLayer::updateWithOverwrite(costmap_2d::Costmap2D& master_grid, int m
   }
 }
 
+//各插件在该cell处的cost相加Layer
 void CostmapLayer::updateWithAddition(costmap_2d::Costmap2D& master_grid, int min_i, int min_j, int max_i, int max_j)
 {
   if (!enabled_)

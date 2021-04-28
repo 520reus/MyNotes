@@ -73,12 +73,17 @@ Costmap2DROS::Costmap2DROS(const std::string& name, tf2_ros::Buffer& tf) :
     robot_stopped_(false),
     map_update_thread_(NULL),
     last_publish_(0),
+    //param1: the path of plugin package, param2:the base class of plugin class with full name 
     plugin_loader_("costmap_2d", "costmap_2d::Layer"),
     publisher_(NULL),
     dsrv_(NULL),
     footprint_padding_(0.0)
 {
   // Initialize old pose with something
+  /** \brief Convert a tf2 Transform type to an equivalent geometry_msgs Pose message.
+ * \param in A tf2 Transform object.
+ * \param out The Transform converted to a geometry_msgs Pose message type.
+ */
   tf2::toMsg(tf2::Transform::getIdentity(), old_pose_.pose);
 
   ros::NodeHandle private_nh("~/" + name);
@@ -112,6 +117,7 @@ Costmap2DROS::Costmap2DROS(const std::string& name, tf2_ros::Buffer& tf) :
   private_nh.param("track_unknown_space", track_unknown_space, false);
   private_nh.param("always_send_full_costmap", always_send_full_costmap, false);
 
+  //创建一个LayeredCostmap包工头对象 
   layered_costmap_ = new LayeredCostmap(global_frame_, rolling_window, track_unknown_space);
 
   if (!private_nh.hasParam("plugins"))
@@ -134,8 +140,9 @@ Costmap2DROS::Costmap2DROS(const std::string& name, tf2_ros::Buffer& tf) :
       copyParentParameters(pname, type, private_nh);
 
       boost::shared_ptr<Layer> plugin = plugin_loader_.createInstance(type);
-      layered_costmap_->addPlugin(plugin);
-      plugin->initialize(layered_costmap_, name + "/" + pname, &tf_);
+      layered_costmap_->addPlugin(plugin); //*加载插件，利用共享指针指向插件，并push进插件队列
+      //插件的本质上还是一个layer对象，而插件是继承自layer接口的具体对象，因此这里通过多态完成各插件地图的初始化
+      plugin->initialize(layered_costmap_, name + "/" + pname, &tf_); 
     }
   }
 
@@ -358,7 +365,7 @@ void Costmap2DROS::reconfigureCB(costmap_2d::Costmap2DConfig &config, uint32_t l
   readFootprintFromConfig(config, old_config_);
 
   old_config_ = config;
-
+  //TODO 为什么在reconfigCB中创建子线程?不应该在构造函数中就创建么？
   map_update_thread_ = new boost::thread(boost::bind(&Costmap2DROS::mapUpdateLoop, this, map_update_frequency));
 }
 

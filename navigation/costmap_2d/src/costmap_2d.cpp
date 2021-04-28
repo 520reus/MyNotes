@@ -69,6 +69,7 @@ void Costmap2D::initMaps(unsigned int size_x, unsigned int size_y)
   costmap_ = new unsigned char[size_x * size_y];
 }
 
+//重新生成新size大小的map，并重置像素为default_value_
 void Costmap2D::resizeMap(unsigned int size_x, unsigned int size_y, double resolution,
                           double origin_x, double origin_y)
 {
@@ -83,14 +84,17 @@ void Costmap2D::resizeMap(unsigned int size_x, unsigned int size_y, double resol
   // reset our maps to have no information
   resetMaps();
 }
-//重置地图的全部cell
+
+//重置地图全部像素为default_value_
 void Costmap2D::resetMaps()
 {
+  //memset是初始化函数。作用是将某一块内存中的内容全部设置为指定的值， 这个函数通常为新申请的内存做初始化工作。
+  //将costmap_后面的 size_x_ * size_y_ * sizeof(unsigned char)字节用default_value_替代，即重新赋值
   boost::unique_lock<mutex_t> lock(*access_);
-  //将当前地图全部cell用default_value进行更新值
   memset(costmap_, default_value_, size_x_ * size_y_ * sizeof(unsigned char));
 }
-//重置地图的部分cell
+
+//重置地图的一个window
 void Costmap2D::resetMap(unsigned int x0, unsigned int y0, unsigned int xn, unsigned int yn)
 {
   boost::unique_lock<mutex_t> lock(*(access_));
@@ -99,6 +103,7 @@ void Costmap2D::resetMap(unsigned int x0, unsigned int y0, unsigned int xn, unsi
     memset(costmap_ + y, default_value_, len * sizeof(unsigned char));
 }
 
+//将传进来的map的一部分cost赋值给costmap_
 bool Costmap2D::copyCostmapWindow(const Costmap2D& map, double win_origin_x, double win_origin_y, double win_size_x,
                                   double win_size_y)
 {
@@ -154,6 +159,7 @@ Costmap2D& Costmap2D::operator=(const Costmap2D& map)
   initMaps(size_x_, size_y_);
 
   // copy the cost map
+  //void *memcpy(void *destin, void *source, unsigned n)；
   memcpy(costmap_, map.costmap_, size_x_ * size_y_ * sizeof(unsigned char));
 
   return *this;
@@ -163,7 +169,7 @@ Costmap2D::Costmap2D(const Costmap2D& map) :
     costmap_(NULL)
 {
   access_ = new mutex_t();
-  *this = map;
+  *this = map; //调用上一个赋值构造函数
 }
 
 // just initialize everything to NULL by default
@@ -202,24 +208,24 @@ void Costmap2D::setCost(unsigned int mx, unsigned int my, unsigned char cost)
 
 void Costmap2D::mapToWorld(unsigned int mx, unsigned int my, double& wx, double& wy) const
 {
-  wx = origin_x_ + (mx + 0.5) * resolution_;  //+0.5*resolution是为了补偿worldToMap时整型转化的误差
+  wx = origin_x_ + (mx + 0.5) * resolution_;
   wy = origin_y_ + (my + 0.5) * resolution_;
 }
 
 bool Costmap2D::worldToMap(double wx, double wy, unsigned int& mx, unsigned int& my) const
 {
-  if (wx < origin_x_ || wy < origin_y_) //待转换的全局坐标在map左边或下面都超出map范围，返回false
+  if (wx < origin_x_ || wy < origin_y_)
     return false;
 
   mx = (int)((wx - origin_x_) / resolution_);
   my = (int)((wy - origin_y_) / resolution_);
 
-  if (mx < size_x_ && my < size_y_) //待转换的全局坐标在map右边或上面也超出map范围，返回false
+  if (mx < size_x_ && my < size_y_)
     return true;
 
   return false;
 }
-//不考虑map的范围限制，直接将全局坐标转化为map坐标
+
 void Costmap2D::worldToMapNoBounds(double wx, double wy, int& mx, int& my) const
 {
   mx = (int)((wx - origin_x_) / resolution_);

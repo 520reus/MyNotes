@@ -129,9 +129,7 @@ bool GradientPath::getPath(float* potential, double start_x, double start_y, dou
             st++;
             if (potential[st] < minp) {
                 minp = potential[st];
-                minc = st;
-            }
-            st++;
+                minc = st;ostmap2DROS
             if (potential[st] < minp) {
                 minp = potential[st];
                 minc = st;

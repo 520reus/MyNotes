@@ -44,6 +44,11 @@
 #include <vector>
 #include <string>
 
+/* 
+LayeredCostmap类中主要的更新函数是updateMap，
+可以看到在udpateMap里利用到前面提到的多态，遍历调用了所有层的两个核心函数。
+ */
+
 namespace costmap_2d
 {
 class Layer;
@@ -132,8 +137,8 @@ public:
       return initialized_;
   }
 
-  /** @brief Updates the stored footprint, updates the circumscribed
-   * and inscribed radii, and calls onFootprintChanged() in all
+  /** @brief Updates the stored footprint, updates the circumscribed（外接圆半径）
+   * and inscribed radii（内切圆）, and calls onFootprintChanged() in all
    * layers. */
   void setFootprint(const std::vector<geometry_msgs::Point>& footprint_spec);
 
@@ -164,7 +169,7 @@ private:
   double minx_, miny_, maxx_, maxy_;
   unsigned int bx0_, bxn_, by0_, byn_;
 
-  std::vector<boost::shared_ptr<Layer> > plugins_;
+  std::vector<boost::shared_ptr<Layer> > plugins_; //存储所有layer
 
   bool initialized_;
   bool size_locked_;

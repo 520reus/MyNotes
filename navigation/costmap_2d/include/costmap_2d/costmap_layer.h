@@ -41,6 +41,10 @@
 #include <costmap_2d/layer.h>
 #include <costmap_2d/layered_costmap.h>
 
+/* 
+costmaplayer其实就定义了几个更新cost的方法，比如不同层同一点的cost是覆盖 相加 还是选最大。
+ */
+
 namespace costmap_2d
 {
 

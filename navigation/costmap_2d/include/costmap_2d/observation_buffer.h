@@ -49,6 +49,12 @@
 // Thread support
 #include <boost/thread.hpp>
 
+/* 
+observation observationBuffer，就是记录点云的，一次观测得到一堆点云，
+存到observation类的pcl::PointCloud<pcl::PointXYZ>* cloud_里，
+多次观测得到的一系列点云存到observationBuffer的std::list<Observation> observation_list_里。
+ */
+
 namespace costmap_2d
 {
 /**

@@ -44,9 +44,10 @@
 
 PLUGINLIB_EXPORT_CLASS(costmap_2d::StaticLayer, costmap_2d::Layer)
 
-using costmap_2d::NO_INFORMATION;
-using costmap_2d::LETHAL_OBSTACLE;
-using costmap_2d::FREE_SPACE;
+using costmap_2d::NO_INFORMATION;    //255
+using costmap_2d::LETHAL_OBSTACLE;   //254
+using costmap_2d::FREE_SPACE;        //0
+
 
 namespace costmap_2d
 {
@@ -154,15 +155,16 @@ unsigned char StaticLayer::interpretValue(unsigned char value)
     return NO_INFORMATION;
   else if (!track_unknown_space_ && value == unknown_cost_value_)
     return FREE_SPACE;
-  else if (value >= lethal_threshold_)
+  else if (value >= lethal_threshold_) //像素值大于碰撞阈值（这里设为100）就将其视为障碍物
     return LETHAL_OBSTACLE;
-  else if (trinary_costmap_)
+  else if (trinary_costmap_) //If true, translates all map message values to NO_INFORMATION/FREE_SPACE/LETHAL_OBSTACLE (three values). 
     return FREE_SPACE;
 
-  double scale = (double) value / lethal_threshold_;
+  double scale = (double) value / lethal_threshold_; 
   return scale * LETHAL_OBSTACLE;
 }
 
+//回调函数，接收到map消息时，就配置地图
 void StaticLayer::incomingMap(const nav_msgs::OccupancyGridConstPtr& new_map)
 {
   unsigned int size_x = new_map->info.width, size_y = new_map->info.height;
