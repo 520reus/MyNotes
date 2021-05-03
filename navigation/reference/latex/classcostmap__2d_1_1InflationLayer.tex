@@ -1,0 +1,129 @@
+\hypertarget{classcostmap__2d_1_1InflationLayer}{}\doxysection{costmap\+\_\+2d\+::Inflation\+Layer类 参考}
+\label{classcostmap__2d_1_1InflationLayer}\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+类 costmap\+\_\+2d\+::Inflation\+Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcostmap__2d_1_1InflationLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_afa192475f613ad4663f17eb099f698aa}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of initialize(). Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_a9fb359aaee3f5ed1b3617515a9f001e6}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_ad22c75aaa975f97f7c0cb864cc552db8}\label{classcostmap__2d_1_1InflationLayer_ad22c75aaa975f97f7c0cb864cc552db8}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_ad22c75aaa975f97f7c0cb864cc552db8}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a298ae7ff737ea8b409405c51aa34dab3}\label{classcostmap__2d_1_1InflationLayer_a298ae7ff737ea8b409405c51aa34dab3}} 
+virtual bool {\bfseries is\+Discretized} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_aa31d5b18cab3f9408d99542b3cfd30d3}\label{classcostmap__2d_1_1InflationLayer_aa31d5b18cab3f9408d99542b3cfd30d3}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_aa31d5b18cab3f9408d99542b3cfd30d3}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_aa5df966fb4dd99b8b69945408f42c2a6}\label{classcostmap__2d_1_1InflationLayer_aa5df966fb4dd99b8b69945408f42c2a6}} 
+virtual void {\bfseries reset} ()
+\item 
+virtual unsigned char \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_aded99a51737669d85ccc3f1b932061e5}{compute\+Cost}} (double distance) const
+\begin{DoxyCompactList}\small\item\em Given a distance, compute a cost. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_a9bb0571041eaadcf3e93a9e0b1395cbb}{set\+Inflation\+Parameters}} (double inflation\+\_\+radius, double cost\+\_\+scaling\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Change the values of the inflation radius parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_aa61f02cb6b2c88176257a6e0d5553cdc}\label{classcostmap__2d_1_1InflationLayer_aa61f02cb6b2c88176257a6e0d5553cdc}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_aa61f02cb6b2c88176257a6e0d5553cdc}{on\+Footprint\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a194f58d14ff80500d724c0822c5f960a}\label{classcostmap__2d_1_1InflationLayer_a194f58d14ff80500d724c0822c5f960a}} 
+boost\+::recursive\+\_\+mutex $\ast$ {\bfseries inflation\+\_\+access\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a05d76789a37f24cf6af5d82e900a5852}\label{classcostmap__2d_1_1InflationLayer_a05d76789a37f24cf6af5d82e900a5852}} 
+double {\bfseries resolution\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a66302e9f414da11c156e7ce1b5e16bae}\label{classcostmap__2d_1_1InflationLayer_a66302e9f414da11c156e7ce1b5e16bae}} 
+double {\bfseries inflation\+\_\+radius\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_af7c7d884932a3d5f215099f29361d0a8}\label{classcostmap__2d_1_1InflationLayer_af7c7d884932a3d5f215099f29361d0a8}} 
+double {\bfseries inscribed\+\_\+radius\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a507bd49c3aca392d91efcabfe999cc0d}\label{classcostmap__2d_1_1InflationLayer_a507bd49c3aca392d91efcabfe999cc0d}} 
+double {\bfseries weight\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a9dcffd8162d89b97e668bde22b53ec4a}\label{classcostmap__2d_1_1InflationLayer_a9dcffd8162d89b97e668bde22b53ec4a}} 
+bool {\bfseries inflate\+\_\+unknown\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_aded99a51737669d85ccc3f1b932061e5}\label{classcostmap__2d_1_1InflationLayer_aded99a51737669d85ccc3f1b932061e5}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!computeCost@{computeCost}}
+\index{computeCost@{computeCost}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{computeCost()}{computeCost()}}
+{\footnotesize\ttfamily virtual unsigned char costmap\+\_\+2d\+::\+Inflation\+Layer\+::compute\+Cost (\begin{DoxyParamCaption}\item[{double}]{distance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Given a distance, compute a cost. 
+
+
+\begin{DoxyParams}{参数}
+{\em distance} & The distance from an obstacle in cells \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A cost value for the distance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_afa192475f613ad4663f17eb099f698aa}\label{classcostmap__2d_1_1InflationLayer_afa192475f613ad4663f17eb099f698aa}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Inflation\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of initialize(). Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}{costmap\+\_\+2d\+::\+Layer}} .
+
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a9bb0571041eaadcf3e93a9e0b1395cbb}\label{classcostmap__2d_1_1InflationLayer_a9bb0571041eaadcf3e93a9e0b1395cbb}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!setInflationParameters@{setInflationParameters}}
+\index{setInflationParameters@{setInflationParameters}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{setInflationParameters()}{setInflationParameters()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::set\+Inflation\+Parameters (\begin{DoxyParamCaption}\item[{double}]{inflation\+\_\+radius,  }\item[{double}]{cost\+\_\+scaling\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Change the values of the inflation radius parameters 
+
+
+\begin{DoxyParams}{参数}
+{\em inflation\+\_\+radius} & The new inflation radius \\
+\hline
+{\em cost\+\_\+scaling\+\_\+factor} & The new weight \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1InflationLayer_a9fb359aaee3f5ed1b3617515a9f001e6}\label{classcostmap__2d_1_1InflationLayer_a9fb359aaee3f5ed1b3617515a9f001e6}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Inflation\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/inflation\+\_\+layer.\+h\end{DoxyCompactItemize}

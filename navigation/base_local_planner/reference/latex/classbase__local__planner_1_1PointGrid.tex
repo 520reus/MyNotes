@@ -1,0 +1,564 @@
+\hypertarget{classbase__local__planner_1_1PointGrid}{}\doxysection{base\+\_\+local\+\_\+planner\+::Point\+Grid类 参考}
+\label{classbase__local__planner_1_1PointGrid}\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+
+
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide free-\/space collision checks for the trajectory controller. This class stores points binned into a grid and performs point-\/in-\/polygon checks when necessary to determine the legality of a footprint at a given position/orientation.  
+
+
+
+
+{\ttfamily \#include $<$point\+\_\+grid.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Point\+Grid 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1PointGrid}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1PointGrid_adaccd0818cd5b3334f1410f6cfca93dc}{Point\+Grid}} (double width, double height, double resolution, geometry\+\_\+msgs\+::\+Point origin, double max\+\_\+z, double obstacle\+\_\+range, double min\+\_\+separation)
+\begin{DoxyCompactList}\small\item\em Constuctor for a grid that stores points in the plane \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_adcf3cf7ebf7d52a909fb2744560bf1e4}\label{classbase__local__planner_1_1PointGrid_adcf3cf7ebf7d52a909fb2744560bf1e4}} 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_adcf3cf7ebf7d52a909fb2744560bf1e4}{$\sim$\+Point\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a point grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_af222229f74f1bc4e14536548c316e755}{get\+Points\+In\+Range}} (const geometry\+\_\+msgs\+::\+Point \&lower\+\_\+left, const geometry\+\_\+msgs\+::\+Point \&upper\+\_\+right, std\+::vector$<$ std\+::list$<$ geometry\+\_\+msgs\+::\+Point32 $>$ $\ast$ $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Returns the points that lie within the cells contained in the specified range. Some of these points may be outside the range itself. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_ad1d2b34fc12c74b22c9693865b5f2d9e}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Checks if any points in the grid lie inside a convex footprint \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_adb8a9a0665445fe274510a86dd0e8277}{update\+World}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, const std\+::vector$<$ costmap\+\_\+2d\+::\+Observation $>$ \&observations, const std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} $>$ \&laser\+\_\+scans)
+\begin{DoxyCompactList}\small\item\em Inserts observations from sensors into the point grid \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a85f9826c14353e9a75696be52d438554}{grid\+Coords}} (geometry\+\_\+msgs\+::\+Point pt, unsigned int \&gx, unsigned int \&gy) const
+\begin{DoxyCompactList}\small\item\em Convert from world coordinates to grid coordinates \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_aa98a155058a5045be350a89eb3858f41}{get\+Cell\+Bounds}} (unsigned int gx, unsigned int gy, geometry\+\_\+msgs\+::\+Point \&lower\+\_\+left, geometry\+\_\+msgs\+::\+Point \&upper\+\_\+right) const
+\begin{DoxyCompactList}\small\item\em Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a70991650fe65105f90f31acdab32a830}{sq\+\_\+distance}} (const geometry\+\_\+msgs\+::\+Point32 \&pt1, const geometry\+\_\+msgs\+::\+Point32 \&pt2)
+\begin{DoxyCompactList}\small\item\em Compute the squared distance between two points \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a35f097e6894731b7d9963e46b16d0d6f}{grid\+Coords}} (const geometry\+\_\+msgs\+::\+Point32 \&pt, unsigned int \&gx, unsigned int \&gy) const
+\begin{DoxyCompactList}\small\item\em Convert from world coordinates to grid coordinates \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a107ea768298e5560e962498692674d5a}{grid\+Index}} (unsigned int gx, unsigned int gy) const
+\begin{DoxyCompactList}\small\item\em Converts cell coordinates to an index value that can be used to look up the correct grid cell \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}} (const geometry\+\_\+msgs\+::\+Point \&a, const geometry\+\_\+msgs\+::\+Point \&b, const geometry\+\_\+msgs\+::\+Point32 \&c)
+\begin{DoxyCompactList}\small\item\em Check the orientation of a pt c with respect to the vector a-\/$>$b \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a8558a1d185f1299007cb4a92726f8541}{orient}} (const T \&a, const T \&b, const T \&c)
+\begin{DoxyCompactList}\small\item\em Check the orientation of a pt c with respect to the vector a-\/$>$b \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_af11952049cf710f3e49d27181a7c09e9}{seg\+Intersect}} (const geometry\+\_\+msgs\+::\+Point32 \&v1, const geometry\+\_\+msgs\+::\+Point32 \&v2, const geometry\+\_\+msgs\+::\+Point32 \&u1, const geometry\+\_\+msgs\+::\+Point32 \&u2)
+\begin{DoxyCompactList}\small\item\em Check if two line segmenst intersect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a42d9b62516e5e401669b618e790979ad}{intersection\+Point}} (const geometry\+\_\+msgs\+::\+Point \&v1, const geometry\+\_\+msgs\+::\+Point \&v2, const geometry\+\_\+msgs\+::\+Point \&u1, const geometry\+\_\+msgs\+::\+Point \&u2, geometry\+\_\+msgs\+::\+Point \&result)
+\begin{DoxyCompactList}\small\item\em Find the intersection point of two lines \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a7d813f2a10631747b458377fdd4a2a4f}{pt\+In\+Polygon}} (const geometry\+\_\+msgs\+::\+Point32 \&pt, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&poly)
+\begin{DoxyCompactList}\small\item\em Check if a point is in a polygon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a5276643487b1ab03a4a9602b3f338ba8}{insert}} (const geometry\+\_\+msgs\+::\+Point32 \&pt)
+\begin{DoxyCompactList}\small\item\em Insert a point into the point grid \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_aebd6e4378342589f07e5700aac825550}{nearest\+Neighbor\+Distance}} (const geometry\+\_\+msgs\+::\+Point32 \&pt)
+\begin{DoxyCompactList}\small\item\em Find the distance between a point and its nearest neighbor in the grid \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_aace5884f03d444ee13dffd0dbe866678}{get\+Nearest\+In\+Cell}} (const geometry\+\_\+msgs\+::\+Point32 \&pt, unsigned int gx, unsigned int gy)
+\begin{DoxyCompactList}\small\item\em Find the distance between a point and its nearest neighbor in a cell \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_afb743eed27facd44c2ed0e59e9f04449}{remove\+Points\+In\+Polygon}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ poly)
+\begin{DoxyCompactList}\small\item\em Removes points from the grid that lie within the polygon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a693cf4b2962ea0ffb4e74daf44a317a4}{remove\+Points\+In\+Scan\+Boundry}} (const \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} \&laser\+\_\+scan)
+\begin{DoxyCompactList}\small\item\em Removes points from the grid that lie within a laser scan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a763e1d4207cc1ecbc670936074211155}{pt\+In\+Scan}} (const geometry\+\_\+msgs\+::\+Point32 \&pt, const \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} \&laser\+\_\+scan)
+\begin{DoxyCompactList}\small\item\em Checks to see if a point is within a laser scan specification \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a60a0ccb34b0468c2249c32ebad03623c}{get\+Points}} (sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Get the points in the point grid \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a36d4c808bc441e2b87b0ac038099993a}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)=0
+\begin{DoxyCompactList}\small\item\em Subclass will implement this method to check a footprint at a given position and orientation for legality in the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_ac7e8dc9c77a2dd2fa77f5a27d812fd43}\label{classbase__local__planner_1_1PointGrid_ac7e8dc9c77a2dd2fa77f5a27d812fd43}} 
+double {\bfseries footprint\+Cost} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_a358fe0d75fefe46dda134ee6e3305f71}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius, double extra)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide free-\/space collision checks for the trajectory controller. This class stores points binned into a grid and performs point-\/in-\/polygon checks when necessary to determine the legality of a footprint at a given position/orientation. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_adaccd0818cd5b3334f1410f6cfca93dc}\label{classbase__local__planner_1_1PointGrid_adaccd0818cd5b3334f1410f6cfca93dc}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!PointGrid@{PointGrid}}
+\index{PointGrid@{PointGrid}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{PointGrid()}{PointGrid()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::\+Point\+Grid (\begin{DoxyParamCaption}\item[{double}]{width,  }\item[{double}]{height,  }\item[{double}]{resolution,  }\item[{geometry\+\_\+msgs\+::\+Point}]{origin,  }\item[{double}]{max\+\_\+z,  }\item[{double}]{obstacle\+\_\+range,  }\item[{double}]{min\+\_\+separation }\end{DoxyParamCaption})}
+
+
+
+Constuctor for a grid that stores points in the plane 
+
+
+\begin{DoxyParams}{参数}
+{\em width} & The width in meters of the grid \\
+\hline
+{\em height} & The height in meters of the gird \\
+\hline
+{\em resolution} & The resolution of the grid in meters/cell \\
+\hline
+{\em origin} & The origin of the bottom left corner of the grid \\
+\hline
+{\em max\+\_\+z} & The maximum height for an obstacle to be added to the grid \\
+\hline
+{\em obstacle\+\_\+range} & The maximum distance for obstacles to be added to the grid \\
+\hline
+{\em min\+\_\+separation} & The minimum distance between points in the grid \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_ad1d2b34fc12c74b22c9693865b5f2d9e}\label{classbase__local__planner_1_1PointGrid_ad1d2b34fc12c74b22c9693865b5f2d9e}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{position,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double}]{inscribed\+\_\+radius,  }\item[{double}]{circumscribed\+\_\+radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if any points in the grid lie inside a convex footprint 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}{base\+\_\+local\+\_\+planner\+::\+World\+Model}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a36d4c808bc441e2b87b0ac038099993a}\label{classbase__local__planner_1_1PointGrid_a36d4c808bc441e2b87b0ac038099993a}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost}
+
+
+
+Subclass will implement this method to check a footprint at a given position and orientation for legality in the world 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise\+: -\/1 if footprint covers at least a lethal obstacle cell, or -\/2 if footprint covers at least a no-\/information cell, or -\/3 if footprint is partially or totally outside of the map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a358fe0d75fefe46dda134ee6e3305f71}\label{classbase__local__planner_1_1PointGrid_a358fe0d75fefe46dda134ee6e3305f71}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_aa98a155058a5045be350a89eb3858f41}\label{classbase__local__planner_1_1PointGrid_aa98a155058a5045be350a89eb3858f41}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!getCellBounds@{getCellBounds}}
+\index{getCellBounds@{getCellBounds}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{getCellBounds()}{getCellBounds()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::get\+Cell\+Bounds (\begin{DoxyParamCaption}\item[{unsigned int}]{gx,  }\item[{unsigned int}]{gy,  }\item[{geometry\+\_\+msgs\+::\+Point \&}]{lower\+\_\+left,  }\item[{geometry\+\_\+msgs\+::\+Point \&}]{upper\+\_\+right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called 
+
+
+\begin{DoxyParams}{参数}
+{\em gx} & The x coordinate of the grid cell \\
+\hline
+{\em gy} & The y coordinate of the grid cell \\
+\hline
+{\em lower\+\_\+left} & The lower left bounds of the cell in world coordinates to be filled in \\
+\hline
+{\em upper\+\_\+right} & The upper right bounds of the cell in world coordinates to be filled in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_aace5884f03d444ee13dffd0dbe866678}\label{classbase__local__planner_1_1PointGrid_aace5884f03d444ee13dffd0dbe866678}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!getNearestInCell@{getNearestInCell}}
+\index{getNearestInCell@{getNearestInCell}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{getNearestInCell()}{getNearestInCell()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::get\+Nearest\+In\+Cell (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt,  }\item[{unsigned int}]{gx,  }\item[{unsigned int}]{gy }\end{DoxyParamCaption})}
+
+
+
+Find the distance between a point and its nearest neighbor in a cell 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & The point used for comparison \\
+\hline
+{\em gx} & The x coordinate of the cell \\
+\hline
+{\em gy} & The y coordinate of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The distance between the point passed in and its nearest neighbor in the cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a60a0ccb34b0468c2249c32ebad03623c}\label{classbase__local__planner_1_1PointGrid_a60a0ccb34b0468c2249c32ebad03623c}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::get\+Points (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud }\end{DoxyParamCaption})}
+
+
+
+Get the points in the point grid 
+
+
+\begin{DoxyParams}{参数}
+{\em cloud} & The point cloud to insert the points into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_af222229f74f1bc4e14536548c316e755}\label{classbase__local__planner_1_1PointGrid_af222229f74f1bc4e14536548c316e755}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!getPointsInRange@{getPointsInRange}}
+\index{getPointsInRange@{getPointsInRange}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{getPointsInRange()}{getPointsInRange()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::get\+Points\+In\+Range (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{lower\+\_\+left,  }\item[{const geometry\+\_\+msgs\+::\+Point \&}]{upper\+\_\+right,  }\item[{std\+::vector$<$ std\+::list$<$ geometry\+\_\+msgs\+::\+Point32 $>$ $\ast$ $>$ \&}]{points }\end{DoxyParamCaption})}
+
+
+
+Returns the points that lie within the cells contained in the specified range. Some of these points may be outside the range itself. 
+
+
+\begin{DoxyParams}{参数}
+{\em lower\+\_\+left} & The lower left corner of the range search \\
+\hline
+{\em upper\+\_\+right} & The upper right corner of the range search \\
+\hline
+{\em points} & A vector of pointers to lists of the relevant points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a35f097e6894731b7d9963e46b16d0d6f}\label{classbase__local__planner_1_1PointGrid_a35f097e6894731b7d9963e46b16d0d6f}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!gridCoords@{gridCoords}}
+\index{gridCoords@{gridCoords}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{gridCoords()}{gridCoords()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::grid\+Coords (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt,  }\item[{unsigned int \&}]{gx,  }\item[{unsigned int \&}]{gy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert from world coordinates to grid coordinates 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & A point in world space \\
+\hline
+{\em gx} & The x coordinate of the corresponding grid cell to be set by the function \\
+\hline
+{\em gy} & The y coordinate of the corresponding grid cell to be set by the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the conversion was successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a85f9826c14353e9a75696be52d438554}\label{classbase__local__planner_1_1PointGrid_a85f9826c14353e9a75696be52d438554}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!gridCoords@{gridCoords}}
+\index{gridCoords@{gridCoords}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{gridCoords()}{gridCoords()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::grid\+Coords (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Point}]{pt,  }\item[{unsigned int \&}]{gx,  }\item[{unsigned int \&}]{gy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert from world coordinates to grid coordinates 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & A point in world space \\
+\hline
+{\em gx} & The x coordinate of the corresponding grid cell to be set by the function \\
+\hline
+{\em gy} & The y coordinate of the corresponding grid cell to be set by the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the conversion was successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a107ea768298e5560e962498692674d5a}\label{classbase__local__planner_1_1PointGrid_a107ea768298e5560e962498692674d5a}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!gridIndex@{gridIndex}}
+\index{gridIndex@{gridIndex}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{gridIndex()}{gridIndex()}}
+{\footnotesize\ttfamily unsigned int base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::grid\+Index (\begin{DoxyParamCaption}\item[{unsigned int}]{gx,  }\item[{unsigned int}]{gy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts cell coordinates to an index value that can be used to look up the correct grid cell 
+
+
+\begin{DoxyParams}{参数}
+{\em gx} & The x coordinate of the cell \\
+\hline
+{\em gy} & The y coordinate of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The index of the cell in the stored cell list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a5276643487b1ab03a4a9602b3f338ba8}\label{classbase__local__planner_1_1PointGrid_a5276643487b1ab03a4a9602b3f338ba8}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!insert@{insert}}
+\index{insert@{insert}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::insert (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Insert a point into the point grid 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & The point to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a42d9b62516e5e401669b618e790979ad}\label{classbase__local__planner_1_1PointGrid_a42d9b62516e5e401669b618e790979ad}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!intersectionPoint@{intersectionPoint}}
+\index{intersectionPoint@{intersectionPoint}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{intersectionPoint()}{intersectionPoint()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::intersection\+Point (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{v1,  }\item[{const geometry\+\_\+msgs\+::\+Point \&}]{v2,  }\item[{const geometry\+\_\+msgs\+::\+Point \&}]{u1,  }\item[{const geometry\+\_\+msgs\+::\+Point \&}]{u2,  }\item[{geometry\+\_\+msgs\+::\+Point \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Find the intersection point of two lines 
+
+
+\begin{DoxyParams}{参数}
+{\em v1} & The first point of the first segment \\
+\hline
+{\em v2} & The second point of the first segment \\
+\hline
+{\em u1} & The first point of the second segment \\
+\hline
+{\em u2} & The second point of the second segment \\
+\hline
+{\em result} & The point to be filled in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_aebd6e4378342589f07e5700aac825550}\label{classbase__local__planner_1_1PointGrid_aebd6e4378342589f07e5700aac825550}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!nearestNeighborDistance@{nearestNeighborDistance}}
+\index{nearestNeighborDistance@{nearestNeighborDistance}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{nearestNeighborDistance()}{nearestNeighborDistance()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::nearest\+Neighbor\+Distance (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt }\end{DoxyParamCaption})}
+
+
+
+Find the distance between a point and its nearest neighbor in the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & The point used for comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The distance between the point passed in and its nearest neighbor in the point grid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_ab3604c15e0eebb45dcaf4ae5403c5f7e}\label{classbase__local__planner_1_1PointGrid_ab3604c15e0eebb45dcaf4ae5403c5f7e}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!orient@{orient}}
+\index{orient@{orient}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{orient()}{orient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::orient (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{a,  }\item[{const geometry\+\_\+msgs\+::\+Point \&}]{b,  }\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check the orientation of a pt c with respect to the vector a-\/$>$b 
+
+
+\begin{DoxyParams}{参数}
+{\em a} & The start point of the vector \\
+\hline
+{\em b} & The end point of the vector \\
+\hline
+{\em c} & The point to compute orientation for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+orient(a, b, c) $<$ 0 -\/---$>$ Right, orient(a, b, c) $>$ 0 -\/---$>$ Left 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a8558a1d185f1299007cb4a92726f8541}\label{classbase__local__planner_1_1PointGrid_a8558a1d185f1299007cb4a92726f8541}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!orient@{orient}}
+\index{orient@{orient}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{orient()}{orient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::orient (\begin{DoxyParamCaption}\item[{const T \&}]{a,  }\item[{const T \&}]{b,  }\item[{const T \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check the orientation of a pt c with respect to the vector a-\/$>$b 
+
+
+\begin{DoxyParams}{参数}
+{\em a} & The start point of the vector \\
+\hline
+{\em b} & The end point of the vector \\
+\hline
+{\em c} & The point to compute orientation for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+orient(a, b, c) $<$ 0 -\/---$>$ Right, orient(a, b, c) $>$ 0 -\/---$>$ Left 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a7d813f2a10631747b458377fdd4a2a4f}\label{classbase__local__planner_1_1PointGrid_a7d813f2a10631747b458377fdd4a2a4f}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!ptInPolygon@{ptInPolygon}}
+\index{ptInPolygon@{ptInPolygon}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{ptInPolygon()}{ptInPolygon()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::pt\+In\+Polygon (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{poly }\end{DoxyParamCaption})}
+
+
+
+Check if a point is in a polygon 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & The point to be checked \\
+\hline
+{\em poly} & The polygon to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the point is in the polygon, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a763e1d4207cc1ecbc670936074211155}\label{classbase__local__planner_1_1PointGrid_a763e1d4207cc1ecbc670936074211155}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!ptInScan@{ptInScan}}
+\index{ptInScan@{ptInScan}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{ptInScan()}{ptInScan()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::pt\+In\+Scan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt,  }\item[{const \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} \&}]{laser\+\_\+scan }\end{DoxyParamCaption})}
+
+
+
+Checks to see if a point is within a laser scan specification 
+
+
+\begin{DoxyParams}{参数}
+{\em pt} & The point to check \\
+\hline
+{\em laser\+\_\+scan} & The specification of the scan to check against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the point is contained within the scan, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_afb743eed27facd44c2ed0e59e9f04449}\label{classbase__local__planner_1_1PointGrid_afb743eed27facd44c2ed0e59e9f04449}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!removePointsInPolygon@{removePointsInPolygon}}
+\index{removePointsInPolygon@{removePointsInPolygon}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{removePointsInPolygon()}{removePointsInPolygon()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::remove\+Points\+In\+Polygon (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$}]{poly }\end{DoxyParamCaption})}
+
+
+
+Removes points from the grid that lie within the polygon 
+
+
+\begin{DoxyParams}{参数}
+{\em poly} & A specification of the polygon to clear from the grid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a693cf4b2962ea0ffb4e74daf44a317a4}\label{classbase__local__planner_1_1PointGrid_a693cf4b2962ea0ffb4e74daf44a317a4}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!removePointsInScanBoundry@{removePointsInScanBoundry}}
+\index{removePointsInScanBoundry@{removePointsInScanBoundry}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{removePointsInScanBoundry()}{removePointsInScanBoundry()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::remove\+Points\+In\+Scan\+Boundry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} \&}]{laser\+\_\+scan }\end{DoxyParamCaption})}
+
+
+
+Removes points from the grid that lie within a laser scan 
+
+
+\begin{DoxyParams}{参数}
+{\em laser\+\_\+scan} & A specification of the laser scan to use for clearing \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_af11952049cf710f3e49d27181a7c09e9}\label{classbase__local__planner_1_1PointGrid_af11952049cf710f3e49d27181a7c09e9}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!segIntersect@{segIntersect}}
+\index{segIntersect@{segIntersect}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{segIntersect()}{segIntersect()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::seg\+Intersect (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{v1,  }\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{v2,  }\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{u1,  }\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{u2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if two line segmenst intersect 
+
+
+\begin{DoxyParams}{参数}
+{\em v1} & The first point of the first segment \\
+\hline
+{\em v2} & The second point of the first segment \\
+\hline
+{\em u1} & The first point of the second segment \\
+\hline
+{\em u2} & The second point of the second segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the segments intersect, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_a70991650fe65105f90f31acdab32a830}\label{classbase__local__planner_1_1PointGrid_a70991650fe65105f90f31acdab32a830}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!sq\_distance@{sq\_distance}}
+\index{sq\_distance@{sq\_distance}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{sq\_distance()}{sq\_distance()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::sq\+\_\+distance (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt1,  }\item[{const geometry\+\_\+msgs\+::\+Point32 \&}]{pt2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the squared distance between two points 
+
+
+\begin{DoxyParams}{参数}
+{\em pt1} & The first point \\
+\hline
+{\em pt2} & The second point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The squared distance between the two points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1PointGrid_adb8a9a0665445fe274510a86dd0e8277}\label{classbase__local__planner_1_1PointGrid_adb8a9a0665445fe274510a86dd0e8277}} 
+\index{base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}!updateWorld@{updateWorld}}
+\index{updateWorld@{updateWorld}!base\_local\_planner::PointGrid@{base\_local\_planner::PointGrid}}
+\doxysubsubsection{\texorpdfstring{updateWorld()}{updateWorld()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Point\+Grid\+::update\+World (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{const std\+::vector$<$ costmap\+\_\+2d\+::\+Observation $>$ \&}]{observations,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} $>$ \&}]{laser\+\_\+scans }\end{DoxyParamCaption})}
+
+
+
+Inserts observations from sensors into the point grid 
+
+
+\begin{DoxyParams}{参数}
+{\em footprint} & The footprint of the robot in its current location \\
+\hline
+{\em observations} & The observations from various sensors \\
+\hline
+{\em laser\+\_\+scans} & The laser scans used to clear freespace (the point grid only uses the first scan which is assumed to be the base laser) \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/point\+\_\+grid.\+h\end{DoxyCompactItemize}

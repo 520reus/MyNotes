@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_2d/include/costmap_2d/costmap_2d_ros.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_9023f81029f0cf9e898f85623bcdf0cf.html">include</a></li><li class="navelem"><a class="el" href="dir_16510bf0b8e4dfa92912bb2cd2c73724.html">costmap_2d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">costmap_2d_ros.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef COSTMAP_2D_COSTMAP_2D_ROS_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define COSTMAP_2D_COSTMAP_2D_ROS_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/layered_costmap.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/layer.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d_publisher.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/Costmap2DConfig.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/footprint.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Polygon.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PolygonStamped.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;pluginlib/class_loader.hpp&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;tf2/LinearMath/Transform.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classSuperValue.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSuperValue.html">SuperValue</a> : <span class="keyword">public</span> XmlRpc::XmlRpcValue</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> setStruct(XmlRpc::XmlRpcValue::ValueStruct* a)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    _type = TypeStruct;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    _value.asStruct = <span class="keyword">new</span> XmlRpc::XmlRpcValue::ValueStruct(*a);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> setArray(XmlRpc::XmlRpcValue::ValueArray* a)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    _type = TypeArray;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    _value.asArray = <span class="keyword">new</span> std::vector&lt;XmlRpc::XmlRpcValue&gt;(*a);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecostmap__2d.html">costmap_2d</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">Costmap2DROS</a></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed">   82</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed">Costmap2DROS</a>(<span class="keyword">const</span> std::string &amp;name, tf2_ros::Buffer&amp; tf);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  ~<a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">Costmap2DROS</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a426e3bfc085f9534b908807d1d734396">   90</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a426e3bfc085f9534b908807d1d734396">start</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a6034554ce34557a2426eda649629c670">   95</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a6034554ce34557a2426eda649629c670">stop</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a9df641b15f263c18d7a39e55224d5df3">  100</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a9df641b15f263c18d7a39e55224d5df3">pause</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a881910f6dbefabddbf012b8c51c4dd0a">  105</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a881910f6dbefabddbf012b8c51c4dd0a">resume</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> updateMap();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#af0370b7b97c5d8cfcc961abb8d190f21">  112</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#af0370b7b97c5d8cfcc961abb8d190f21">resetLayers</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#aa5cec3bacf7f8ce288acae413e77bace">  115</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#aa5cec3bacf7f8ce288acae413e77bace">isCurrent</a>()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordflow">return</span> layered_costmap_-&gt;isCurrent();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#adcf3512b555a02dbbe2f57e784defce9">  125</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#adcf3512b555a02dbbe2f57e784defce9">getRobotPose</a>(geometry_msgs::PoseStamped&amp; global_pose) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a25a9d0682d5997a6e8b3f548f095a2dd">  128</a></span>&#160;  std::string <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a25a9d0682d5997a6e8b3f548f095a2dd">getName</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">return</span> name_;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#aa96116a5847c4cbbe872e7ace18dc67c">  134</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#aa96116a5847c4cbbe872e7ace18dc67c">getTransformTolerance</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a285fdb30fb75f5bc94091e4f40de4b0b">transform_tolerance_</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#ac07a4d7573ab5d8daa87e4bbebf43853">  142</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>* <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#ac07a4d7573ab5d8daa87e4bbebf43853">getCostmap</a>()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">return</span> layered_costmap_-&gt;getCostmap();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a10181fc2c66a8f1ae9a9d67100f98d73">  151</a></span>&#160;  std::string <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a10181fc2c66a8f1ae9a9d67100f98d73">getGlobalFrameID</a>()</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#aee5cf95f348f42b83a7b5733b452a4b1">global_frame_</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#ad529a3c85f89233a524699514fee1927">  160</a></span>&#160;  std::string <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#ad529a3c85f89233a524699514fee1927">getBaseFrameID</a>()</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#abd4149bf56e6935f1adc9114c2db162c">robot_base_frame_</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a>* getLayeredCostmap()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">return</span> layered_costmap_;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a8e23eef773096a1fca61ae038220070d">  170</a></span>&#160;  geometry_msgs::Polygon <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a8e23eef773096a1fca61ae038220070d">getRobotFootprintPolygon</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacecostmap__2d.html#a137137a824a6a667fbf9a850c762c6ec">costmap_2d::toPolygon</a>(padded_footprint_);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#add1c9e06ffbae7fecc956c3c377f869e">  183</a></span>&#160;  std::vector&lt;geometry_msgs::Point&gt; <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#add1c9e06ffbae7fecc956c3c377f869e">getRobotFootprint</a>()</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> padded_footprint_;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a8f4eafac38f214509cd00d1541ec8a84">  195</a></span>&#160;  std::vector&lt;geometry_msgs::Point&gt; <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a8f4eafac38f214509cd00d1541ec8a84">getUnpaddedRobotFootprint</a>()</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> unpadded_footprint_;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a66b8eaac1ba4252fd663adfddfecbb7e">  204</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a66b8eaac1ba4252fd663adfddfecbb7e">getOrientedFootprint</a>(std::vector&lt;geometry_msgs::Point&gt;&amp; oriented_footprint) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a220a578102cf3592a744ad5264bf09ed">  216</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a220a578102cf3592a744ad5264bf09ed">setUnpaddedRobotFootprint</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; points);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a05c662c0ad169c124480ed3d9ee500e8">  228</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a05c662c0ad169c124480ed3d9ee500e8">setUnpaddedRobotFootprintPolygon</a>(<span class="keyword">const</span> geometry_msgs::Polygon&amp; footprint);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <a class="code" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a>* layered_costmap_;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  std::string name_;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#ac93f26f0c6816cb16e4b17b2aa4d5ff8">  233</a></span>&#160;  tf2_ros::Buffer&amp; <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#ac93f26f0c6816cb16e4b17b2aa4d5ff8">tf_</a>;  </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#aee5cf95f348f42b83a7b5733b452a4b1">  234</a></span>&#160;  std::string <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#aee5cf95f348f42b83a7b5733b452a4b1">global_frame_</a>;  </div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#abd4149bf56e6935f1adc9114c2db162c">  235</a></span>&#160;  std::string <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#abd4149bf56e6935f1adc9114c2db162c">robot_base_frame_</a>;  </div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2DROS.html#a285fdb30fb75f5bc94091e4f40de4b0b">  236</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html#a285fdb30fb75f5bc94091e4f40de4b0b">transform_tolerance_</a>;  </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordtype">void</span> readFootprintFromConfig(<span class="keyword">const</span> costmap_2d::Costmap2DConfig &amp;new_config,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                               <span class="keyword">const</span> costmap_2d::Costmap2DConfig &amp;old_config);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordtype">void</span> loadOldParameters(ros::NodeHandle&amp; nh);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">void</span> warnForOldParameters(ros::NodeHandle&amp; nh);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordtype">void</span> checkOldParam(ros::NodeHandle&amp; nh, <span class="keyword">const</span> std::string &amp;param_name);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordtype">void</span> copyParentParameters(<span class="keyword">const</span> std::string&amp; plugin_name, <span class="keyword">const</span> std::string&amp; plugin_type, ros::NodeHandle&amp; nh);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordtype">void</span> reconfigureCB(costmap_2d::Costmap2DConfig &amp;config, uint32_t level);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordtype">void</span> movementCB(<span class="keyword">const</span> ros::TimerEvent &amp;event);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">void</span> mapUpdateLoop(<span class="keywordtype">double</span> frequency);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordtype">bool</span> map_update_thread_shutdown_;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">bool</span> stop_updates_, initialized_, stopped_, robot_stopped_;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  boost::thread* map_update_thread_;  </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  ros::Timer timer_;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  ros::Time last_publish_;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  ros::Duration publish_cycle;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  pluginlib::ClassLoader&lt;Layer&gt; plugin_loader_;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  geometry_msgs::PoseStamped old_pose_;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2DPublisher.html">Costmap2DPublisher</a>* publisher_;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  dynamic_reconfigure::Server&lt;costmap_2d::Costmap2DConfig&gt; *dsrv_;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  boost::recursive_mutex configuration_mutex_;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  ros::Subscriber footprint_sub_;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  ros::Publisher footprint_pub_;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  std::vector&lt;geometry_msgs::Point&gt; unpadded_footprint_;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  std::vector&lt;geometry_msgs::Point&gt; padded_footprint_;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">float</span> footprint_padding_;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  costmap_2d::Costmap2DConfig old_config_;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;};</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">// class Costmap2DROS</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}  <span class="comment">// namespace costmap_2d</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// COSTMAP_2D_COSTMAP_2D_ROS_H</span></div>
+<div class="ttc" id="aclassSuperValue_html"><div class="ttname"><a href="classSuperValue.html">SuperValue</a></div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:54</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DPublisher_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DPublisher.html">costmap_2d::Costmap2DPublisher</a></div><div class="ttdoc">A tool to periodically publish visualization data from a Costmap2D</div><div class="ttdef"><b>Definition:</b> costmap_2d_publisher.h:52</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a05c662c0ad169c124480ed3d9ee500e8"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a05c662c0ad169c124480ed3d9ee500e8">costmap_2d::Costmap2DROS::setUnpaddedRobotFootprintPolygon</a></div><div class="ttdeci">void setUnpaddedRobotFootprintPolygon(const geometry_msgs::Polygon &amp;footprint)</div><div class="ttdoc">Set the footprint of the robot to be the given polygon, padded by footprint_padding.</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a10181fc2c66a8f1ae9a9d67100f98d73"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a10181fc2c66a8f1ae9a9d67100f98d73">costmap_2d::Costmap2DROS::getGlobalFrameID</a></div><div class="ttdeci">std::string getGlobalFrameID()</div><div class="ttdoc">Returns the global frame of the costmap</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:151</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a220a578102cf3592a744ad5264bf09ed"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a220a578102cf3592a744ad5264bf09ed">costmap_2d::Costmap2DROS::setUnpaddedRobotFootprint</a></div><div class="ttdeci">void setUnpaddedRobotFootprint(const std::vector&lt; geometry_msgs::Point &gt; &amp;points)</div><div class="ttdoc">Set the footprint of the robot to be the given set of points, padded by footprint_padding.</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a25a9d0682d5997a6e8b3f548f095a2dd"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a25a9d0682d5997a6e8b3f548f095a2dd">costmap_2d::Costmap2DROS::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Returns costmap name</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:128</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a285fdb30fb75f5bc94091e4f40de4b0b"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a285fdb30fb75f5bc94091e4f40de4b0b">costmap_2d::Costmap2DROS::transform_tolerance_</a></div><div class="ttdeci">double transform_tolerance_</div><div class="ttdoc">timeout before transform errors</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:236</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a426e3bfc085f9534b908807d1d734396"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a426e3bfc085f9534b908807d1d734396">costmap_2d::Costmap2DROS::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos...</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a6034554ce34557a2426eda649629c670"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a6034554ce34557a2426eda649629c670">costmap_2d::Costmap2DROS::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops costmap updates and unsubscribes from sensor topics</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a66b8eaac1ba4252fd663adfddfecbb7e"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a66b8eaac1ba4252fd663adfddfecbb7e">costmap_2d::Costmap2DROS::getOrientedFootprint</a></div><div class="ttdeci">void getOrientedFootprint(std::vector&lt; geometry_msgs::Point &gt; &amp;oriented_footprint) const</div><div class="ttdoc">Build the oriented footprint of the robot at the robot's current pose</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a881910f6dbefabddbf012b8c51c4dd0a"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a881910f6dbefabddbf012b8c51c4dd0a">costmap_2d::Costmap2DROS::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdoc">Resumes costmap updates</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a8e23eef773096a1fca61ae038220070d"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a8e23eef773096a1fca61ae038220070d">costmap_2d::Costmap2DROS::getRobotFootprintPolygon</a></div><div class="ttdeci">geometry_msgs::Polygon getRobotFootprintPolygon()</div><div class="ttdoc">Returns the current padded footprint as a geometry_msgs::Polygon.</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:170</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a8e6acdb79ef3eb738e8f4d9a5197a9ed"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed">costmap_2d::Costmap2DROS::Costmap2DROS</a></div><div class="ttdeci">Costmap2DROS(const std::string &amp;name, tf2_ros::Buffer &amp;tf)</div><div class="ttdoc">Constructor for the wrapper</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a8f4eafac38f214509cd00d1541ec8a84"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a8f4eafac38f214509cd00d1541ec8a84">costmap_2d::Costmap2DROS::getUnpaddedRobotFootprint</a></div><div class="ttdeci">std::vector&lt; geometry_msgs::Point &gt; getUnpaddedRobotFootprint()</div><div class="ttdoc">Return the current unpadded footprint of the robot as a vector of points.</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:195</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_a9df641b15f263c18d7a39e55224d5df3"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#a9df641b15f263c18d7a39e55224d5df3">costmap_2d::Costmap2DROS::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Stops the costmap from updating, but sensor data still comes in over the wire</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_aa5cec3bacf7f8ce288acae413e77bace"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#aa5cec3bacf7f8ce288acae413e77bace">costmap_2d::Costmap2DROS::isCurrent</a></div><div class="ttdeci">bool isCurrent()</div><div class="ttdoc">Same as getLayeredCostmap()-&gt;isCurrent().</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:115</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_aa96116a5847c4cbbe872e7ace18dc67c"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#aa96116a5847c4cbbe872e7ace18dc67c">costmap_2d::Costmap2DROS::getTransformTolerance</a></div><div class="ttdeci">double getTransformTolerance() const</div><div class="ttdoc">Returns the delay in transform (tf) data that is tolerable in seconds</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:134</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_abd4149bf56e6935f1adc9114c2db162c"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#abd4149bf56e6935f1adc9114c2db162c">costmap_2d::Costmap2DROS::robot_base_frame_</a></div><div class="ttdeci">std::string robot_base_frame_</div><div class="ttdoc">The frame_id of the robot base</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:235</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_ac07a4d7573ab5d8daa87e4bbebf43853"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#ac07a4d7573ab5d8daa87e4bbebf43853">costmap_2d::Costmap2DROS::getCostmap</a></div><div class="ttdeci">Costmap2D * getCostmap()</div><div class="ttdoc">Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers.</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:142</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_ac93f26f0c6816cb16e4b17b2aa4d5ff8"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#ac93f26f0c6816cb16e4b17b2aa4d5ff8">costmap_2d::Costmap2DROS::tf_</a></div><div class="ttdeci">tf2_ros::Buffer &amp; tf_</div><div class="ttdoc">Used for transforming point clouds</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:233</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_ad529a3c85f89233a524699514fee1927"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#ad529a3c85f89233a524699514fee1927">costmap_2d::Costmap2DROS::getBaseFrameID</a></div><div class="ttdeci">std::string getBaseFrameID()</div><div class="ttdoc">Returns the local frame of the costmap</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:160</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_adcf3512b555a02dbbe2f57e784defce9"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#adcf3512b555a02dbbe2f57e784defce9">costmap_2d::Costmap2DROS::getRobotPose</a></div><div class="ttdeci">bool getRobotPose(geometry_msgs::PoseStamped &amp;global_pose) const</div><div class="ttdoc">Get the pose of the robot in the global frame of the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_add1c9e06ffbae7fecc956c3c377f869e"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#add1c9e06ffbae7fecc956c3c377f869e">costmap_2d::Costmap2DROS::getRobotFootprint</a></div><div class="ttdeci">std::vector&lt; geometry_msgs::Point &gt; getRobotFootprint()</div><div class="ttdoc">Return the current footprint of the robot as a vector of points.</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:183</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_aee5cf95f348f42b83a7b5733b452a4b1"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#aee5cf95f348f42b83a7b5733b452a4b1">costmap_2d::Costmap2DROS::global_frame_</a></div><div class="ttdeci">std::string global_frame_</div><div class="ttdoc">The global frame for the costmap</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:234</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html_af0370b7b97c5d8cfcc961abb8d190f21"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html#af0370b7b97c5d8cfcc961abb8d190f21">costmap_2d::Costmap2DROS::resetLayers</a></div><div class="ttdeci">void resetLayers()</div><div class="ttdoc">Reset each individual layer</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1LayeredCostmap_html"><div class="ttname"><a href="classcostmap__2d_1_1LayeredCostmap.html">costmap_2d::LayeredCostmap</a></div><div class="ttdoc">Instantiates different layer plugins and aggregates them into one score</div><div class="ttdef"><b>Definition:</b> layered_costmap.h:61</div></div>
+<div class="ttc" id="anamespacecostmap__2d_html"><div class="ttname"><a href="namespacecostmap__2d.html">costmap_2d</a></div><div class="ttdef"><b>Definition:</b> array_parser.h:38</div></div>
+<div class="ttc" id="anamespacecostmap__2d_html_a137137a824a6a667fbf9a850c762c6ec"><div class="ttname"><a href="namespacecostmap__2d.html#a137137a824a6a667fbf9a850c762c6ec">costmap_2d::toPolygon</a></div><div class="ttdeci">geometry_msgs::Polygon toPolygon(std::vector&lt; geometry_msgs::Point &gt; pts)</div><div class="ttdoc">Convert vector of Points to Polygon msg</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

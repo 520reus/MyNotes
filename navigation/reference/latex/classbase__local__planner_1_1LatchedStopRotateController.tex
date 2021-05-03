@@ -1,0 +1,78 @@
+\hypertarget{classbase__local__planner_1_1LatchedStopRotateController}{}\doxysection{base\+\_\+local\+\_\+planner\+::Latched\+Stop\+Rotate\+Controller类 参考}
+\label{classbase__local__planner_1_1LatchedStopRotateController}\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_a217e37ce23f57c28f157d2287d9ad02a}\label{classbase__local__planner_1_1LatchedStopRotateController_a217e37ce23f57c28f157d2287d9ad02a}} 
+{\bfseries Latched\+Stop\+Rotate\+Controller} (const std\+::string \&name=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_a22892ae258fb69ab1cbb78b3e076fba3}\label{classbase__local__planner_1_1LatchedStopRotateController_a22892ae258fb69ab1cbb78b3e076fba3}} 
+bool {\bfseries is\+Position\+Reached} (\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_a296b387b74afe1c430f0dc6efb2f2ae8}\label{classbase__local__planner_1_1LatchedStopRotateController_a296b387b74afe1c430f0dc6efb2f2ae8}} 
+bool {\bfseries is\+Goal\+Reached} (\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, \mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos}{Odometry\+Helper\+Ros}} \&odom\+\_\+helper, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_af3b08514bca9dfc212b770a071f85b3b}\label{classbase__local__planner_1_1LatchedStopRotateController_af3b08514bca9dfc212b770a071f85b3b}} 
+void {\bfseries reset\+Latching} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1LatchedStopRotateController_ae204da0df3c727a7f655e7c12a7dae75}{stop\+With\+Acc\+Limits}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\begin{DoxyCompactList}\small\item\em Stop the robot taking into account acceleration limits \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1LatchedStopRotateController_a3f1784c0f8eb383822d41d0905cb6bda}{rotate\+To\+Goal}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, double goal\+\_\+th, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} \&limits, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\begin{DoxyCompactList}\small\item\em Once a goal position is reached... rotate to the goal orientation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_a5bd9394ca5cabf2a35526dcb193e36be}\label{classbase__local__planner_1_1LatchedStopRotateController_a5bd9394ca5cabf2a35526dcb193e36be}} 
+bool {\bfseries compute\+Velocity\+Commands\+Stop\+Rotate} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, \mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos}{Odometry\+Helper\+Ros}} \&odom\+\_\+helper, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_a3f1784c0f8eb383822d41d0905cb6bda}\label{classbase__local__planner_1_1LatchedStopRotateController_a3f1784c0f8eb383822d41d0905cb6bda}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!rotateToGoal@{rotateToGoal}}
+\index{rotateToGoal@{rotateToGoal}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{rotateToGoal()}{rotateToGoal()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::rotate\+To\+Goal (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{double}]{goal\+\_\+th,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel,  }\item[{Eigen\+::\+Vector3f}]{acc\+\_\+lim,  }\item[{double}]{sim\+\_\+period,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} \&}]{limits,  }\item[{boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$}]{obstacle\+\_\+check }\end{DoxyParamCaption})}
+
+
+
+Once a goal position is reached... rotate to the goal orientation 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & The pose of the robot in the global frame \\
+\hline
+{\em robot\+\_\+vel} & The velocity of the robot \\
+\hline
+{\em goal\+\_\+th} & The desired th value for the goal \\
+\hline
+{\em cmd\+\_\+vel} & The velocity commands to be filled \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1LatchedStopRotateController_ae204da0df3c727a7f655e7c12a7dae75}\label{classbase__local__planner_1_1LatchedStopRotateController_ae204da0df3c727a7f655e7c12a7dae75}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!stopWithAccLimits@{stopWithAccLimits}}
+\index{stopWithAccLimits@{stopWithAccLimits}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{stopWithAccLimits()}{stopWithAccLimits()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::stop\+With\+Acc\+Limits (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel,  }\item[{Eigen\+::\+Vector3f}]{acc\+\_\+lim,  }\item[{double}]{sim\+\_\+period,  }\item[{boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$}]{obstacle\+\_\+check }\end{DoxyParamCaption})}
+
+
+
+Stop the robot taking into account acceleration limits 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & The pose of the robot in the global frame \\
+\hline
+{\em robot\+\_\+vel} & The velocity of the robot \\
+\hline
+{\em cmd\+\_\+vel} & The velocity commands to be filled \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/latched\+\_\+stop\+\_\+rotate\+\_\+controller.\+h\end{DoxyCompactItemize}

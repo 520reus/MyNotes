@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: include/base_local_planner/voxel_grid_model.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_be84e22e59a4c2aa4e4ba6d7620051b0.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">voxel_grid_model.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*   * Neither the name of the Willow Garage nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*********************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef TRAJECTORY_ROLLOUT_VOXEL_WORLD_MODEL_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define TRAJECTORY_ROLLOUT_VOXEL_WORLD_MODEL_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;cfloat&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Point.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/observation.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/world_model.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//voxel grid stuff</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;voxel_grid/voxel_grid.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span>base_local_planner {</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html">   55</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classbase__local__planner_1_1VoxelGridModel.html">VoxelGridModel</a> : <span class="keyword">public</span> <a class="code" href="classbase__local__planner_1_1WorldModel.html">WorldModel</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html#a41482cba0c408053ef433d486693d8b4">   70</a></span>&#160;      <a class="code" href="classbase__local__planner_1_1VoxelGridModel.html#a41482cba0c408053ef433d486693d8b4">VoxelGridModel</a>(<span class="keywordtype">double</span> size_x, <span class="keywordtype">double</span> size_y, <span class="keywordtype">double</span> size_z, <span class="keywordtype">double</span> xy_resolution, <span class="keywordtype">double</span> z_resolution,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          <span class="keywordtype">double</span> origin_x, <span class="keywordtype">double</span> origin_y, <span class="keywordtype">double</span> origin_z, <span class="keywordtype">double</span> max_z, <span class="keywordtype">double</span> obstacle_range);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html#ab9d0a3a6fa8ea481c8b3911b90236c3b">   76</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="classbase__local__planner_1_1VoxelGridModel.html#ab9d0a3a6fa8ea481c8b3911b90236c3b">~VoxelGridModel</a>(){}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">   86</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">footprintCost</a>(<span class="keyword">const</span> geometry_msgs::Point&amp; position, <span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; footprint,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          <span class="keywordtype">double</span> inscribed_radius, <span class="keywordtype">double</span> circumscribed_radius);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keyword">using</span> <a class="code" href="classbase__local__planner_1_1WorldModel.html#a36d4c808bc441e2b87b0ac038099993a">WorldModel::footprintCost</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html#a3a5b2c042a813dc06a9fdbfcd0bd6291">   97</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classbase__local__planner_1_1VoxelGridModel.html#a3a5b2c042a813dc06a9fdbfcd0bd6291">updateWorld</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; footprint,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          <span class="keyword">const</span> std::vector&lt;costmap_2d::Observation&gt;&amp; observations, <span class="keyword">const</span> std::vector&lt;PlanarLaserScan&gt;&amp; laser_scans);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1VoxelGridModel.html#ae64342a63e8e7360997aba566b5f0ed1">  104</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classbase__local__planner_1_1VoxelGridModel.html#ae64342a63e8e7360997aba566b5f0ed1">getPoints</a>(sensor_msgs::PointCloud2&amp; cloud);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordtype">double</span> lineCost(<span class="keywordtype">int</span> x0, <span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y0, <span class="keywordtype">int</span> y1);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordtype">double</span> pointCost(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordtype">void</span> removePointsInScanBoundry(<span class="keyword">const</span> <a class="code" href="classbase__local__planner_1_1PlanarLaserScan.html">PlanarLaserScan</a>&amp; laser_scan, <span class="keywordtype">double</span> raytrace_range);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">bool</span> worldToMap3D(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">double</span> wz, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; my, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mz){</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span>(wx &lt; origin_x_ || wy &lt; origin_y_ || wz &lt; origin_z_)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        mx = (int) ((wx - origin_x_) / xy_resolution_);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        my = (int) ((wy - origin_y_) / xy_resolution_);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        mz = (int) ((wz - origin_z_) / z_resolution_);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">bool</span> worldToMap2D(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; my){</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span>(wx &lt; origin_x_ || wy &lt; origin_y_)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        mx = (int) ((wx - origin_x_) / xy_resolution_);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        my = (int) ((wy - origin_y_) / xy_resolution_);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> mapToWorld3D(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mz, <span class="keywordtype">double</span>&amp; wx, <span class="keywordtype">double</span>&amp; wy, <span class="keywordtype">double</span>&amp; wz){</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//returns the center point of the cell</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        wx = origin_x_ + (mx + 0.5) * xy_resolution_;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        wy = origin_y_ + (my + 0.5) * xy_resolution_;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        wz = origin_z_ + (mz + 0.5) * z_resolution_;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> mapToWorld2D(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my, <span class="keywordtype">double</span>&amp; wx, <span class="keywordtype">double</span>&amp; wy){</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">//returns the center point of the cell</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        wx = origin_x_ + (mx + 0.5) * xy_resolution_;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        wy = origin_y_ + (my + 0.5) * xy_resolution_;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">double</span> dist(<span class="keywordtype">double</span> x0, <span class="keywordtype">double</span> y0, <span class="keywordtype">double</span> z0, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> y1, <span class="keywordtype">double</span> z1){</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> sqrt((x1 - x0) * (x1 - x0) + (y1 - y0) * (y1 - y0) + (z1 - z0) * (z1 - z0));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> insert(<span class="keyword">const</span> geometry_msgs::Point32&amp; pt){</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cell_x, cell_y, cell_z;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span>(!worldToMap3D(pt.x, pt.y, pt.z, cell_x, cell_y, cell_z))</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        obstacle_grid_.markVoxel(cell_x, cell_y, cell_z);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      voxel_grid::VoxelGrid obstacle_grid_;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keywordtype">double</span> xy_resolution_;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordtype">double</span> z_resolution_;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordtype">double</span> origin_x_;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">double</span> origin_y_;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordtype">double</span> origin_z_;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordtype">double</span> max_z_;  </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordtype">double</span> sq_obstacle_range_;  </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  };</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1PlanarLaserScan_html"><div class="ttname"><a href="classbase__local__planner_1_1PlanarLaserScan.html">base_local_planner::PlanarLaserScan</a></div><div class="ttdoc">Stores a scan from a planar laser that can be used to clear freespace</div><div class="ttdef"><b>Definition:</b> planar_laser_scan.h:48</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html">base_local_planner::VoxelGridModel</a></div><div class="ttdoc">A class that implements the WorldModel interface to provide grid based collision checks for the traje...</div><div class="ttdef"><b>Definition:</b> voxel_grid_model.h:55</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html_a3a5b2c042a813dc06a9fdbfcd0bd6291"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html#a3a5b2c042a813dc06a9fdbfcd0bd6291">base_local_planner::VoxelGridModel::updateWorld</a></div><div class="ttdeci">void updateWorld(const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, const std::vector&lt; costmap_2d::Observation &gt; &amp;observations, const std::vector&lt; PlanarLaserScan &gt; &amp;laser_scans)</div><div class="ttdoc">The costmap already keeps track of world observations, so for this world model this method does nothi...</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html_a41482cba0c408053ef433d486693d8b4"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html#a41482cba0c408053ef433d486693d8b4">base_local_planner::VoxelGridModel::VoxelGridModel</a></div><div class="ttdeci">VoxelGridModel(double size_x, double size_y, double size_z, double xy_resolution, double z_resolution, double origin_x, double origin_y, double origin_z, double max_z, double obstacle_range)</div><div class="ttdoc">Constructor for the VoxelGridModel</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html_aa6bc3668327838938f7881a6f553b521"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">base_local_planner::VoxelGridModel::footprintCost</a></div><div class="ttdeci">virtual double footprintCost(const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)</div><div class="ttdoc">Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the g...</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html_ab9d0a3a6fa8ea481c8b3911b90236c3b"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html#ab9d0a3a6fa8ea481c8b3911b90236c3b">base_local_planner::VoxelGridModel::~VoxelGridModel</a></div><div class="ttdeci">virtual ~VoxelGridModel()</div><div class="ttdoc">Destructor for the world model</div><div class="ttdef"><b>Definition:</b> voxel_grid_model.h:76</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1VoxelGridModel_html_ae64342a63e8e7360997aba566b5f0ed1"><div class="ttname"><a href="classbase__local__planner_1_1VoxelGridModel.html#ae64342a63e8e7360997aba566b5f0ed1">base_local_planner::VoxelGridModel::getPoints</a></div><div class="ttdeci">void getPoints(sensor_msgs::PointCloud2 &amp;cloud)</div><div class="ttdoc">Function copying the Voxel points into a point cloud</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1WorldModel_html"><div class="ttname"><a href="classbase__local__planner_1_1WorldModel.html">base_local_planner::WorldModel</a></div><div class="ttdoc">An interface the trajectory controller uses to interact with the world regardless of the underlying w...</div><div class="ttdef"><b>Definition:</b> world_model.h:52</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1WorldModel_html_a36d4c808bc441e2b87b0ac038099993a"><div class="ttname"><a href="classbase__local__planner_1_1WorldModel.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel::footprintCost</a></div><div class="ttdeci">virtual double footprintCost(const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</div><div class="ttdoc">Subclass will implement this method to check a footprint at a given position and orientation for lega...</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

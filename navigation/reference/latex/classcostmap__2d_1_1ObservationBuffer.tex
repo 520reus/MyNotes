@@ -1,0 +1,146 @@
+\hypertarget{classcostmap__2d_1_1ObservationBuffer}{}\doxysection{costmap\+\_\+2d\+::Observation\+Buffer类 参考}
+\label{classcostmap__2d_1_1ObservationBuffer}\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+
+
+Takes in point clouds from sensors, transforms them to the desired frame, and stores them  
+
+
+
+
+{\ttfamily \#include $<$observation\+\_\+buffer.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_a6a6840d481c0f6fabf5f9b2788bbd205}{Observation\+Buffer}} (std\+::string topic\+\_\+name, double observation\+\_\+keep\+\_\+time, double expected\+\_\+update\+\_\+rate, double min\+\_\+obstacle\+\_\+height, double max\+\_\+obstacle\+\_\+height, double obstacle\+\_\+range, double raytrace\+\_\+range, tf2\+\_\+ros\+::\+Buffer \&tf2\+\_\+buffer, std\+::string global\+\_\+frame, std\+::string sensor\+\_\+frame, double tf\+\_\+tolerance)
+\begin{DoxyCompactList}\small\item\em Constructs an observation buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_ad14ce56a9f57bddfecd87d0c2cc2201d}\label{classcostmap__2d_1_1ObservationBuffer_ad14ce56a9f57bddfecd87d0c2cc2201d}} 
+\mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_ad14ce56a9f57bddfecd87d0c2cc2201d}{$\sim$\+Observation\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor... cleans up \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_a078a1fab09eb0501fa9f205f818c4c73}{set\+Global\+Frame}} (const std\+::string new\+\_\+global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_af1bdb755c1ed181b2108fc26826bc273}{buffer\+Cloud}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Transforms a Point\+Cloud to the global frame and buffers it {\bfseries{Note\+: The burden is on the user to make sure the transform is available... ie they should use a Message\+Notifier}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_aa89ff474cd6785349e3c0b2f49e2d738}{get\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{Observation}} $>$ \&observations)
+\begin{DoxyCompactList}\small\item\em Pushes copies of all current observations onto the end of the vector passed in \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_a169930366d75cae5d78e7b069be4a042}{is\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Check if the observation buffer is being update at its expected rate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_af6e43c89ccb0db68cd1bad60108a8167}\label{classcostmap__2d_1_1ObservationBuffer_af6e43c89ccb0db68cd1bad60108a8167}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_af6e43c89ccb0db68cd1bad60108a8167}{lock}} ()
+\begin{DoxyCompactList}\small\item\em Lock the observation buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_a5ccb558d025fd254ab9e1bf89f6d82d8}\label{classcostmap__2d_1_1ObservationBuffer_a5ccb558d025fd254ab9e1bf89f6d82d8}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_a5ccb558d025fd254ab9e1bf89f6d82d8}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em Lock the observation buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_aeb595ff9e1f56003644f4b0743020cd3}\label{classcostmap__2d_1_1ObservationBuffer_aeb595ff9e1f56003644f4b0743020cd3}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer_aeb595ff9e1f56003644f4b0743020cd3}{reset\+Last\+Updated}} ()
+\begin{DoxyCompactList}\small\item\em Reset last updated timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Takes in point clouds from sensors, transforms them to the desired frame, and stores them 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_a6a6840d481c0f6fabf5f9b2788bbd205}\label{classcostmap__2d_1_1ObservationBuffer_a6a6840d481c0f6fabf5f9b2788bbd205}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!ObservationBuffer@{ObservationBuffer}}
+\index{ObservationBuffer@{ObservationBuffer}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{ObservationBuffer()}{ObservationBuffer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+Buffer\+::\+Observation\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{topic\+\_\+name,  }\item[{double}]{observation\+\_\+keep\+\_\+time,  }\item[{double}]{expected\+\_\+update\+\_\+rate,  }\item[{double}]{min\+\_\+obstacle\+\_\+height,  }\item[{double}]{max\+\_\+obstacle\+\_\+height,  }\item[{double}]{obstacle\+\_\+range,  }\item[{double}]{raytrace\+\_\+range,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf2\+\_\+buffer,  }\item[{std\+::string}]{global\+\_\+frame,  }\item[{std\+::string}]{sensor\+\_\+frame,  }\item[{double}]{tf\+\_\+tolerance }\end{DoxyParamCaption})}
+
+
+
+Constructs an observation buffer 
+
+
+\begin{DoxyParams}{参数}
+{\em topic\+\_\+name} & The topic of the observations, used as an identifier for error and warning messages \\
+\hline
+{\em observation\+\_\+keep\+\_\+time} & Defines the persistence of observations in seconds, 0 means only keep the latest \\
+\hline
+{\em expected\+\_\+update\+\_\+rate} & How often this buffer is expected to be updated, 0 means there is no limit \\
+\hline
+{\em min\+\_\+obstacle\+\_\+height} & The minimum height of a hitpoint to be considered legal \\
+\hline
+{\em max\+\_\+obstacle\+\_\+height} & The minimum height of a hitpoint to be considered legal \\
+\hline
+{\em obstacle\+\_\+range} & The range to which the sensor should be trusted for inserting obstacles \\
+\hline
+{\em raytrace\+\_\+range} & The range to which the sensor should be trusted for raytracing to clear out space \\
+\hline
+{\em tf2\+\_\+buffer} & A reference to a tf2 Buffer \\
+\hline
+{\em global\+\_\+frame} & The frame to transform Point\+Clouds into \\
+\hline
+{\em sensor\+\_\+frame} & The frame of the origin of the sensor, can be left blank to be read from the messages \\
+\hline
+{\em tf\+\_\+tolerance} & The amount of time to wait for a transform to be available when setting a new global frame \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_af1bdb755c1ed181b2108fc26826bc273}\label{classcostmap__2d_1_1ObservationBuffer_af1bdb755c1ed181b2108fc26826bc273}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!bufferCloud@{bufferCloud}}
+\index{bufferCloud@{bufferCloud}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{bufferCloud()}{bufferCloud()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::buffer\+Cloud (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud }\end{DoxyParamCaption})}
+
+
+
+Transforms a Point\+Cloud to the global frame and buffers it {\bfseries{Note\+: The burden is on the user to make sure the transform is available... ie they should use a Message\+Notifier}} 
+
+
+\begin{DoxyParams}{参数}
+{\em cloud} & The cloud to be buffered \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_aa89ff474cd6785349e3c0b2f49e2d738}\label{classcostmap__2d_1_1ObservationBuffer_aa89ff474cd6785349e3c0b2f49e2d738}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!getObservations@{getObservations}}
+\index{getObservations@{getObservations}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{getObservations()}{getObservations()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::get\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{Observation}} $>$ \&}]{observations }\end{DoxyParamCaption})}
+
+
+
+Pushes copies of all current observations onto the end of the vector passed in 
+
+
+\begin{DoxyParams}{参数}
+{\em observations} & The vector to be filled \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_a169930366d75cae5d78e7b069be4a042}\label{classcostmap__2d_1_1ObservationBuffer_a169930366d75cae5d78e7b069be4a042}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!isCurrent@{isCurrent}}
+\index{isCurrent@{isCurrent}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{isCurrent()}{isCurrent()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Observation\+Buffer\+::is\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the observation buffer is being update at its expected rate 
+
+\begin{DoxyReturn}{返回}
+True if it is being updated at the expected rate, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObservationBuffer_a078a1fab09eb0501fa9f205f818c4c73}\label{classcostmap__2d_1_1ObservationBuffer_a078a1fab09eb0501fa9f205f818c4c73}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!setGlobalFrame@{setGlobalFrame}}
+\index{setGlobalFrame@{setGlobalFrame}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{setGlobalFrame()}{setGlobalFrame()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Observation\+Buffer\+::set\+Global\+Frame (\begin{DoxyParamCaption}\item[{const std\+::string}]{new\+\_\+global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+global\+\_\+frame} & The name of the new global frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the operation succeeds, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/observation\+\_\+buffer.\+h\end{DoxyCompactItemize}

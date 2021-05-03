@@ -1,0 +1,62 @@
+\hypertarget{classnav__core_1_1RecoveryBehavior}{}\doxysection{nav\+\_\+core\+::Recovery\+Behavior类 参考}
+\label{classnav__core_1_1RecoveryBehavior}\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+
+
+Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as plugins for the navigation stack must adhere to this interface.  
+
+
+
+
+{\ttfamily \#include $<$recovery\+\_\+behavior.\+h$>$}
+
+类 nav\+\_\+core\+::Recovery\+Behavior 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.240310cm]{classnav__core_1_1RecoveryBehavior}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior_ab35332f465b3d2509c9e73d4d95c7b5d}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$global\+\_\+costmap, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)=0
+\begin{DoxyCompactList}\small\item\em Initialization function for the \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior}{Recovery\+Behavior}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnav__core_1_1RecoveryBehavior_a6d8e1eec7a483e530e48b2593ea4fc03}\label{classnav__core_1_1RecoveryBehavior_a6d8e1eec7a483e530e48b2593ea4fc03}} 
+virtual void \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior_a6d8e1eec7a483e530e48b2593ea4fc03}{run\+Behavior}} ()=0
+\begin{DoxyCompactList}\small\item\em Runs the \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior}{Recovery\+Behavior}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnav__core_1_1RecoveryBehavior_add375f2ed722549afd00b7dae9874ac6}\label{classnav__core_1_1RecoveryBehavior_add375f2ed722549afd00b7dae9874ac6}} 
+virtual \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior_add375f2ed722549afd00b7dae9874ac6}{$\sim$\+Recovery\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as plugins for the navigation stack must adhere to this interface. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnav__core_1_1RecoveryBehavior_ab35332f465b3d2509c9e73d4d95c7b5d}\label{classnav__core_1_1RecoveryBehavior_ab35332f465b3d2509c9e73d4d95c7b5d}} 
+\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}!initialize@{initialize}}
+\index{initialize@{initialize}!nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void nav\+\_\+core\+::\+Recovery\+Behavior\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{global\+\_\+costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialization function for the \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior}{Recovery\+Behavior}} 
+
+
+\begin{DoxyParams}{参数}
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em global\+\_\+costmap} & A pointer to the global\+\_\+costmap used by the navigation stack \\
+\hline
+{\em local\+\_\+costmap} & A pointer to the local\+\_\+costmap used by the navigation stack \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5b0e81f3ad151bb9d4058a36c9411efd}{clear\+\_\+costmap\+\_\+recovery\+::\+Clear\+Costmap\+Recovery}}, \mbox{\hyperlink{classrotate__recovery_1_1RotateRecovery_a609f496f7a9f916f526a40a517c69204}{rotate\+\_\+recovery\+::\+Rotate\+Recovery}} , 以及 \mbox{\hyperlink{classmove__slow__and__clear_1_1MoveSlowAndClear_a8c3abf7314837b065c79f55947ebabf5}{move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+nav\+\_\+core/include/nav\+\_\+core/recovery\+\_\+behavior.\+h\end{DoxyCompactItemize}

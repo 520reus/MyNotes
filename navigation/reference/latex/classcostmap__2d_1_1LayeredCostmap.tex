@@ -1,0 +1,100 @@
+\hypertarget{classcostmap__2d_1_1LayeredCostmap}{}\doxysection{costmap\+\_\+2d\+::Layered\+Costmap类 参考}
+\label{classcostmap__2d_1_1LayeredCostmap}\index{costmap\_2d::LayeredCostmap@{costmap\_2d::LayeredCostmap}}
+
+
+Instantiates different layer plugins and aggregates them into one score  
+
+
+
+
+{\ttfamily \#include $<$layered\+\_\+costmap.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a1200f12dd40104f81f8f2771bbec9d71}\label{classcostmap__2d_1_1LayeredCostmap_a1200f12dd40104f81f8f2771bbec9d71}} 
+\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_a1200f12dd40104f81f8f2771bbec9d71}{Layered\+Costmap}} (std\+::string global\+\_\+frame, bool rolling\+\_\+window, bool track\+\_\+unknown)
+\begin{DoxyCompactList}\small\item\em Constructor for a costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_af4cf84d6594ab255ffe07ad33b35eed5}\label{classcostmap__2d_1_1LayeredCostmap_af4cf84d6594ab255ffe07ad33b35eed5}} 
+\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_af4cf84d6594ab255ffe07ad33b35eed5}{$\sim$\+Layered\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_ab598d6442277ba8299ba3c7b952662d6}\label{classcostmap__2d_1_1LayeredCostmap_ab598d6442277ba8299ba3c7b952662d6}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_ab598d6442277ba8299ba3c7b952662d6}{update\+Map}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw)
+\begin{DoxyCompactList}\small\item\em Update the underlying costmap with new data. If you want to update the map outside of the update loop that runs, you can call this. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a676b53370395f4ecd152031a45387c09}\label{classcostmap__2d_1_1LayeredCostmap_a676b53370395f4ecd152031a45387c09}} 
+std\+::string {\bfseries get\+Global\+Frame\+ID} () const
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b}\label{classcostmap__2d_1_1LayeredCostmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b}} 
+void {\bfseries resize\+Map} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, double resolution, double origin\+\_\+x, double origin\+\_\+y, bool size\+\_\+locked=false)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a935ce021ebf125f9c08dec4779be282e}\label{classcostmap__2d_1_1LayeredCostmap_a935ce021ebf125f9c08dec4779be282e}} 
+void {\bfseries get\+Updated\+Bounds} (double \&minx, double \&miny, double \&maxx, double \&maxy)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e}\label{classcostmap__2d_1_1LayeredCostmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e}} 
+bool {\bfseries is\+Current} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_ae0c5b98322d3f62761418b895e2884b3}\label{classcostmap__2d_1_1LayeredCostmap_ae0c5b98322d3f62761418b895e2884b3}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} $\ast$ {\bfseries get\+Costmap} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a60ff509ec4e5464d6e6952c282b8e6bf}\label{classcostmap__2d_1_1LayeredCostmap_a60ff509ec4e5464d6e6952c282b8e6bf}} 
+bool {\bfseries is\+Rolling} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a4aa6e5845344fadb7172fee21d0705cc}\label{classcostmap__2d_1_1LayeredCostmap_a4aa6e5845344fadb7172fee21d0705cc}} 
+bool {\bfseries is\+Tracking\+Unknown} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_aac454be50f1e5a7933667ca4793bfe23}\label{classcostmap__2d_1_1LayeredCostmap_aac454be50f1e5a7933667ca4793bfe23}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1Layer}{Layer}} $>$ $>$ $\ast$ {\bfseries get\+Plugins} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a8afdb4c9795e2383bd5b66b89c748a6b}\label{classcostmap__2d_1_1LayeredCostmap_a8afdb4c9795e2383bd5b66b89c748a6b}} 
+void {\bfseries add\+Plugin} (boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1Layer}{Layer}} $>$ plugin)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_acaa22f5de46ef653c81d2d75d1832a1a}\label{classcostmap__2d_1_1LayeredCostmap_acaa22f5de46ef653c81d2d75d1832a1a}} 
+bool {\bfseries is\+Size\+Locked} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_aef643cb3579fcdc9c0ff936038a6ddde}\label{classcostmap__2d_1_1LayeredCostmap_aef643cb3579fcdc9c0ff936038a6ddde}} 
+void {\bfseries get\+Bounds} (unsigned int $\ast$x0, unsigned int $\ast$xn, unsigned int $\ast$y0, unsigned int $\ast$yn)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_afc113bdd03ed7d3fa29038769a1bd9e3}\label{classcostmap__2d_1_1LayeredCostmap_afc113bdd03ed7d3fa29038769a1bd9e3}} 
+bool {\bfseries is\+Initialized} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}\label{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{set\+Footprint}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec)
+\begin{DoxyCompactList}\small\item\em Updates the stored footprint, updates the circumscribed（外接圆半径） and inscribed radii（内切圆）, and calls on\+Footprint\+Changed() in all layers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a5d39338c55ccd02b1577ffb84320272b}\label{classcostmap__2d_1_1LayeredCostmap_a5d39338c55ccd02b1577ffb84320272b}} 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_a5d39338c55ccd02b1577ffb84320272b}{get\+Footprint}} ()
+\begin{DoxyCompactList}\small\item\em Returns the latest footprint stored with \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{set\+Footprint()}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_aa01de7e0148d03792abdb82f562090d2}{get\+Circumscribed\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em The radius of a circle centered at the origin of the robot which just surrounds all points on the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_a55a92cecc3689caf8b1e9e077788c54b}{get\+Inscribed\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em The radius of a circle centered at the origin of the robot which is just within all points and edges of the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Instantiates different layer plugins and aggregates them into one score 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_aa01de7e0148d03792abdb82f562090d2}\label{classcostmap__2d_1_1LayeredCostmap_aa01de7e0148d03792abdb82f562090d2}} 
+\index{costmap\_2d::LayeredCostmap@{costmap\_2d::LayeredCostmap}!getCircumscribedRadius@{getCircumscribedRadius}}
+\index{getCircumscribedRadius@{getCircumscribedRadius}!costmap\_2d::LayeredCostmap@{costmap\_2d::LayeredCostmap}}
+\doxysubsubsection{\texorpdfstring{getCircumscribedRadius()}{getCircumscribedRadius()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Layered\+Costmap\+::get\+Circumscribed\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The radius of a circle centered at the origin of the robot which just surrounds all points on the robot\textquotesingle{}s footprint. 
+
+This is updated by \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{set\+Footprint()}}. \mbox{\Hypertarget{classcostmap__2d_1_1LayeredCostmap_a55a92cecc3689caf8b1e9e077788c54b}\label{classcostmap__2d_1_1LayeredCostmap_a55a92cecc3689caf8b1e9e077788c54b}} 
+\index{costmap\_2d::LayeredCostmap@{costmap\_2d::LayeredCostmap}!getInscribedRadius@{getInscribedRadius}}
+\index{getInscribedRadius@{getInscribedRadius}!costmap\_2d::LayeredCostmap@{costmap\_2d::LayeredCostmap}}
+\doxysubsubsection{\texorpdfstring{getInscribedRadius()}{getInscribedRadius()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Layered\+Costmap\+::get\+Inscribed\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The radius of a circle centered at the origin of the robot which is just within all points and edges of the robot\textquotesingle{}s footprint. 
+
+This is updated by \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{set\+Footprint()}}. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/layered\+\_\+costmap.\+h\end{DoxyCompactItemize}

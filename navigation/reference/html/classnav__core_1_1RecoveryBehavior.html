@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: nav_core::RecoveryBehavior类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>nav_core</b></li><li class="navelem"><a class="el" href="classnav__core_1_1RecoveryBehavior.html">RecoveryBehavior</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">nav_core::RecoveryBehavior类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as plugins for the navigation stack must adhere to this interface.  
+ <a href="classnav__core_1_1RecoveryBehavior.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="recovery__behavior_8h_source.html">recovery_behavior.h</a>&gt;</code></p>
+<div class="dynheader">
+类 nav_core::RecoveryBehavior 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnav__core_1_1RecoveryBehavior.png" usemap="#nav_5Fcore::RecoveryBehavior_map" alt=""/>
+  <map id="nav_5Fcore::RecoveryBehavior_map" name="nav_5Fcore::RecoveryBehavior_map">
+<area href="classclear__costmap__recovery_1_1ClearCostmapRecovery.html" title="A recovery behavior that reverts the navigation stack&#39;s costmaps to the static map outside of a user-..." alt="clear_costmap_recovery::ClearCostmapRecovery" shape="rect" coords="0,56,293,80"/>
+<area href="classmove__slow__and__clear_1_1MoveSlowAndClear.html" alt="move_slow_and_clear::MoveSlowAndClear" shape="rect" coords="303,56,596,80"/>
+<area href="classrotate__recovery_1_1RotateRecovery.html" title="A recovery behavior that rotates the robot in-place to attempt to clear out space" alt="rotate_recovery::RotateRecovery" shape="rect" coords="606,56,899,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1RecoveryBehavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *global_costmap, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *local_costmap)=0</td></tr>
+<tr class="memdesc:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the <a class="el" href="classnav__core_1_1RecoveryBehavior.html" title="Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as pl...">RecoveryBehavior</a>  <a href="classnav__core_1_1RecoveryBehavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">更多...</a><br /></td></tr>
+<tr class="separator:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="memItemLeft" align="right" valign="top"><a id="a6d8e1eec7a483e530e48b2593ea4fc03"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1RecoveryBehavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">runBehavior</a> ()=0</td></tr>
+<tr class="memdesc:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the <a class="el" href="classnav__core_1_1RecoveryBehavior.html" title="Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as pl...">RecoveryBehavior</a> <br /></td></tr>
+<tr class="separator:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add375f2ed722549afd00b7dae9874ac6"><td class="memItemLeft" align="right" valign="top"><a id="add375f2ed722549afd00b7dae9874ac6"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1RecoveryBehavior.html#add375f2ed722549afd00b7dae9874ac6">~RecoveryBehavior</a> ()</td></tr>
+<tr class="memdesc:add375f2ed722549afd00b7dae9874ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the interface <br /></td></tr>
+<tr class="separator:add375f2ed722549afd00b7dae9874ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as plugins for the navigation stack must adhere to this interface. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab35332f465b3d2509c9e73d4d95c7b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35332f465b3d2509c9e73d4d95c7b5d">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::RecoveryBehavior::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>global_costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>local_costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialization function for the <a class="el" href="classnav__core_1_1RecoveryBehavior.html" title="Provides an interface for recovery behaviors used in navigation. All recovery behaviors written as pl...">RecoveryBehavior</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tf</td><td>A pointer to a transform listener </td></tr>
+    <tr><td class="paramname">global_costmap</td><td>A pointer to the global_costmap used by the navigation stack </td></tr>
+    <tr><td class="paramname">local_costmap</td><td>A pointer to the local_costmap used by the navigation stack </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classclear__costmap__recovery_1_1ClearCostmapRecovery.html#a5b0e81f3ad151bb9d4058a36c9411efd">clear_costmap_recovery::ClearCostmapRecovery</a>, <a class="el" href="classrotate__recovery_1_1RotateRecovery.html#a609f496f7a9f916f526a40a517c69204">rotate_recovery::RotateRecovery</a> , 以及 <a class="el" href="classmove__slow__and__clear_1_1MoveSlowAndClear.html#a8c3abf7314837b065c79f55947ebabf5">move_slow_and_clear::MoveSlowAndClear</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>nav_core/include/nav_core/<a class="el" href="recovery__behavior_8h_source.html">recovery_behavior.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,73 @@
+\hypertarget{classbase__local__planner_1_1OdometryHelperRos}{}\doxysection{base\+\_\+local\+\_\+planner\+::Odometry\+Helper\+Ros类 参考}
+\label{classbase__local__planner_1_1OdometryHelperRos}\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos_af6ea30bc773864015dd3d243dc375d0b}{Odometry\+Helper\+Ros}} (std\+::string odom\+\_\+topic=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos_a0eeb49d061e05d16d43cac5196552c01}{odom\+Callback}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Callback for receiving odometry data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_ada88271c5b81d4a97b81eb51de64f67c}\label{classbase__local__planner_1_1OdometryHelperRos_ada88271c5b81d4a97b81eb51de64f67c}} 
+void {\bfseries get\+Odom} (nav\+\_\+msgs\+::\+Odometry \&base\+\_\+odom)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_ab70a70a7a3f3d8e6788e6e1f0503a717}\label{classbase__local__planner_1_1OdometryHelperRos_ab70a70a7a3f3d8e6788e6e1f0503a717}} 
+void {\bfseries get\+Robot\+Vel} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos_a3405fc02265edac001b3f4c8802c983d}{set\+Odom\+Topic}} (std\+::string odom\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Set the odometry topic. This overrides what was set in the constructor, if anything. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_ab83cff19dc91ac7f8d3b3bb56c568fe2}\label{classbase__local__planner_1_1OdometryHelperRos_ab83cff19dc91ac7f8d3b3bb56c568fe2}} 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1OdometryHelperRos_ab83cff19dc91ac7f8d3b3bb56c568fe2}{get\+Odom\+Topic}} () const
+\begin{DoxyCompactList}\small\item\em Return the current odometry topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_af6ea30bc773864015dd3d243dc375d0b}\label{classbase__local__planner_1_1OdometryHelperRos_af6ea30bc773864015dd3d243dc375d0b}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!OdometryHelperRos@{OdometryHelperRos}}
+\index{OdometryHelperRos@{OdometryHelperRos}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{OdometryHelperRos()}{OdometryHelperRos()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::\+Odometry\+Helper\+Ros (\begin{DoxyParamCaption}\item[{std\+::string}]{odom\+\_\+topic = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{参数}
+{\em odom\+\_\+topic} & The topic on which to subscribe to Odometry messages. If the empty string is given (the default), no subscription is done. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_a0eeb49d061e05d16d43cac5196552c01}\label{classbase__local__planner_1_1OdometryHelperRos_a0eeb49d061e05d16d43cac5196552c01}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!odomCallback@{odomCallback}}
+\index{odomCallback@{odomCallback}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{odomCallback()}{odomCallback()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::odom\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback for receiving odometry data 
+
+
+\begin{DoxyParams}{参数}
+{\em msg} & An Odometry message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1OdometryHelperRos_a3405fc02265edac001b3f4c8802c983d}\label{classbase__local__planner_1_1OdometryHelperRos_a3405fc02265edac001b3f4c8802c983d}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!setOdomTopic@{setOdomTopic}}
+\index{setOdomTopic@{setOdomTopic}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{setOdomTopic()}{setOdomTopic()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::set\+Odom\+Topic (\begin{DoxyParamCaption}\item[{std\+::string}]{odom\+\_\+topic }\end{DoxyParamCaption})}
+
+
+
+Set the odometry topic. This overrides what was set in the constructor, if anything. 
+
+This unsubscribes from the old topic (if any) and subscribes to the new one (if any).
+
+If odom\+\_\+topic is the empty string, this just unsubscribes from the previous topic. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/odometry\+\_\+helper\+\_\+ros.\+h\end{DoxyCompactItemize}

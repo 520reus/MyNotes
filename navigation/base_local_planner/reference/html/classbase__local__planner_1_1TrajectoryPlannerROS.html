@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::TrajectoryPlannerROS类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html">TrajectoryPlannerROS</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::TrajectoryPlannerROS类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A ROS wrapper for the trajectory controller that queries the param server to construct a controller  
+ <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trajectory__planner__ros_8h_source.html">trajectory_planner_ros.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::TrajectoryPlannerROS 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1TrajectoryPlannerROS.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="memItemLeft" align="right" valign="top"><a id="a3b6817c8d9f2a49b00ccdda3bc166548"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a3b6817c8d9f2a49b00ccdda3bc166548">TrajectoryPlannerROS</a> ()</td></tr>
+<tr class="memdesc:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the ros wrapper <br /></td></tr>
+<tr class="separator:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f">TrajectoryPlannerROS</a> (std::string name, tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</td></tr>
+<tr class="memdesc:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the ros wrapper  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f">更多...</a><br /></td></tr>
+<tr class="separator:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9a758c9bd9cb0202ed06c07c5aa49c03">initialize</a> (std::string name, tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</td></tr>
+<tr class="memdesc:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the ros wrapper  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9a758c9bd9cb0202ed06c07c5aa49c03">更多...</a><br /></td></tr>
+<tr class="separator:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79384acb51a894dbcec4447bee1ca90f"><td class="memItemLeft" align="right" valign="top"><a id="a79384acb51a894dbcec4447bee1ca90f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a79384acb51a894dbcec4447bee1ca90f">~TrajectoryPlannerROS</a> ()</td></tr>
+<tr class="memdesc:a79384acb51a894dbcec4447bee1ca90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the wrapper <br /></td></tr>
+<tr class="separator:a79384acb51a894dbcec4447bee1ca90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2d96332da31a154db84930754409af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#adb2d96332da31a154db84930754409af">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:adb2d96332da31a154db84930754409af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#adb2d96332da31a154db84930754409af">更多...</a><br /></td></tr>
+<tr class="separator:adb2d96332da31a154db84930754409af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a0c8be5746b1e1d8657f6b867ea934"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#af3a0c8be5746b1e1d8657f6b867ea934">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</td></tr>
+<tr class="memdesc:af3a0c8be5746b1e1d8657f6b867ea934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plan that the controller is following  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#af3a0c8be5746b1e1d8657f6b867ea934">更多...</a><br /></td></tr>
+<tr class="separator:af3a0c8be5746b1e1d8657f6b867ea934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5196b75a728ab7c37d6bdd99faa7b541"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a5196b75a728ab7c37d6bdd99faa7b541">isGoalReached</a> ()</td></tr>
+<tr class="memdesc:a5196b75a728ab7c37d6bdd99faa7b541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the goal pose has been achieved  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a5196b75a728ab7c37d6bdd99faa7b541">更多...</a><br /></td></tr>
+<tr class="separator:a5196b75a728ab7c37d6bdd99faa7b541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9155bebb3d073ae4b19b8d0da87478a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9155bebb3d073ae4b19b8d0da87478a6">checkTrajectory</a> (double vx_samp, double vy_samp, double vtheta_samp, bool update_map=true)</td></tr>
+<tr class="memdesc:a9155bebb3d073ae4b19b8d0da87478a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and score a single trajectory  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9155bebb3d073ae4b19b8d0da87478a6">更多...</a><br /></td></tr>
+<tr class="separator:a9155bebb3d073ae4b19b8d0da87478a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af883fc515db5a2234cd6b6d366ca31a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#af883fc515db5a2234cd6b6d366ca31a5">scoreTrajectory</a> (double vx_samp, double vy_samp, double vtheta_samp, bool update_map=true)</td></tr>
+<tr class="memdesc:af883fc515db5a2234cd6b6d366ca31a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and score a single trajectory  <a href="classbase__local__planner_1_1TrajectoryPlannerROS.html#af883fc515db5a2234cd6b6d366ca31a5">更多...</a><br /></td></tr>
+<tr class="separator:af883fc515db5a2234cd6b6d366ca31a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bc029d01fb414521862b83f81aa5c9"><td class="memItemLeft" align="right" valign="top"><a id="a99bc029d01fb414521862b83f81aa5c9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInitialized</b> ()</td></tr>
+<tr class="separator:a99bc029d01fb414521862b83f81aa5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4194c8585ff580730a97d0a0a02481fa"><td class="memItemLeft" align="right" valign="top"><a id="a4194c8585ff580730a97d0a0a02481fa"></a>
+<a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html">TrajectoryPlanner</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a4194c8585ff580730a97d0a0a02481fa">getPlanner</a> () const</td></tr>
+<tr class="memdesc:a4194c8585ff580730a97d0a0a02481fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inner <a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html" title="Computes control velocities for a robot given a costmap, a plan, and the robot&#39;s position in the worl...">TrajectoryPlanner</a> object. Only valid after <a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="Constructs the ros wrapper">initialize()</a>. <br /></td></tr>
+<tr class="separator:a4194c8585ff580730a97d0a0a02481fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A ROS wrapper for the trajectory controller that queries the param server to construct a controller </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0ea81ba7bfd31aaa999477ae8f9e0d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea81ba7bfd31aaa999477ae8f9e0d0f">&#9670;&nbsp;</a></span>TrajectoryPlannerROS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryPlannerROS::TrajectoryPlannerROS </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">costmap_2d::Costmap2DROS *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the ros wrapper </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name to give this instance of the trajectory planner </td></tr>
+    <tr><td class="paramname">tf</td><td>A pointer to a transform listener </td></tr>
+    <tr><td class="paramname">costmap</td><td>The cost map to use for assigning costs to trajectories </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9155bebb3d073ae4b19b8d0da87478a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9155bebb3d073ae4b19b8d0da87478a6">&#9670;&nbsp;</a></span>checkTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::checkTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update_map</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and score a single trajectory </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vx_samp</td><td>The x velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>The y velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>The theta velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">update_map</td><td>Whether or not to update the map for the planner when computing the legality of the trajectory, this is useful to set to false if you're going to be doing a lot of trajectory checking over a short period of time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the trajectory is legal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="adb2d96332da31a154db84930754409af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2d96332da31a154db84930754409af">&#9670;&nbsp;</a></span>computeVelocityCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::computeVelocityCommands </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_vel</td><td>Will be filled with the velocity command to be passed to the robot base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid trajectory was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a9a758c9bd9cb0202ed06c07c5aa49c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a758c9bd9cb0202ed06c07c5aa49c03">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryPlannerROS::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">costmap_2d::Costmap2DROS *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the ros wrapper </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name to give this instance of the trajectory planner </td></tr>
+    <tr><td class="paramname">tf</td><td>A pointer to a transform listener </td></tr>
+    <tr><td class="paramname">costmap</td><td>The cost map to use for assigning costs to trajectories </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5196b75a728ab7c37d6bdd99faa7b541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5196b75a728ab7c37d6bdd99faa7b541">&#9670;&nbsp;</a></span>isGoalReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::isGoalReached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the goal pose has been achieved </p>
+<dl class="section return"><dt>返回</dt><dd>True if achieved, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af883fc515db5a2234cd6b6d366ca31a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af883fc515db5a2234cd6b6d366ca31a5">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update_map</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and score a single trajectory </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vx_samp</td><td>The x velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>The y velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>The theta velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">update_map</td><td>Whether or not to update the map for the planner when computing the legality of the trajectory, this is useful to set to false if you're going to be doing a lot of trajectory checking over a short period of time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>score of trajectory (double) </dd></dl>
+
+</div>
+</div>
+<a id="af3a0c8be5746b1e1d8657f6b867ea934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a0c8be5746b1e1d8657f6b867ea934">&#9670;&nbsp;</a></span>setPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::setPlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>orig_global_plan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the plan that the controller is following </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig_global_plan</td><td>The plan to pass to the controller </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the plan was updated successfully, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base_local_planner/<a class="el" href="trajectory__planner__ros_8h_source.html">trajectory_planner_ros.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

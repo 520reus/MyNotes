@@ -1,0 +1,920 @@
+\begin{theindex}
+
+  \item {\_pf\_sample\_set\_t}, \hyperpage{15}
+  \item {\_pf\_t}, \hyperpage{15}
+
+  \indexspace
+
+  \item {active}
+    \subitem {costmap\_2d::Costmap2DPublisher}, \hyperpage{42}
+  \item {addExtraBounds}
+    \subitem {costmap\_2d::CostmapLayer}, \hyperpage{48}
+  \item {addPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{152}
+  \item {adjustPlanResolution}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{83}
+  \item {amcl::AMCLLaser}, \hyperpage{16}
+  \item {amcl::AMCLLaserData}, \hyperpage{16}
+  \item {amcl::AMCLOdom}, \hyperpage{17}
+  \item {amcl::AMCLOdomData}, \hyperpage{17}
+  \item {amcl::AMCLSensor}, \hyperpage{18}
+  \item {amcl::AMCLSensorData}, \hyperpage{18}
+
+  \indexspace
+
+  \item {base\_local\_planner::CostmapModel}, \hyperpage{49}
+    \subitem {CostmapModel}, \hyperpage{50}
+    \subitem {footprintCost}, \hyperpage{50, 51}
+    \subitem {lineCost}, \hyperpage{52}
+    \subitem {pointCost}, \hyperpage{52}
+  \item {base\_local\_planner::FootprintHelper}, \hyperpage{61}
+    \subitem {getFillCells}, \hyperpage{61}
+    \subitem {getFootprintCells}, \hyperpage{62}
+    \subitem {getLineCells}, \hyperpage{62}
+  \item {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{72}
+    \subitem {rotateToGoal}, \hyperpage{72}
+    \subitem {stopWithAccLimits}, \hyperpage{73}
+  \item {base\_local\_planner::LineIterator}, \hyperpage{77}
+  \item {base\_local\_planner::LocalPlannerLimits}, \hyperpage{78}
+    \subitem {getAccLimits}, \hyperpage{78}
+  \item {base\_local\_planner::LocalPlannerUtil}, \hyperpage{79}
+  \item {base\_local\_planner::MapCell}, \hyperpage{80}
+    \subitem {MapCell}, \hyperpage{80}
+  \item {base\_local\_planner::MapGrid}, \hyperpage{81}
+    \subitem {adjustPlanResolution}, \hyperpage{83}
+    \subitem {computeGoalDistance}, \hyperpage{83}
+    \subitem {computeTargetDistance}, \hyperpage{83}
+    \subitem {getIndex}, \hyperpage{84}
+    \subitem {MapGrid}, \hyperpage{82}
+    \subitem {obstacleCosts}, \hyperpage{84}
+    \subitem {operator()}, \hyperpage{84, 85}
+    \subitem {operator=}, \hyperpage{85}
+    \subitem {sizeCheck}, \hyperpage{85}
+    \subitem {unreachableCellCosts}, \hyperpage{86}
+    \subitem {updatePathCell}, \hyperpage{86}
+  \item {base\_local\_planner::MapGridCostFunction}, \hyperpage{86}
+    \subitem {obstacleCosts}, \hyperpage{87}
+    \subitem {prepare}, \hyperpage{87}
+    \subitem {scoreTrajectory}, \hyperpage{88}
+    \subitem {setStopOnFailure}, \hyperpage{88}
+    \subitem {setTargetPoses}, \hyperpage{88}
+    \subitem {unreachableCellCosts}, \hyperpage{88}
+  \item {base\_local\_planner::MapGridVisualizer}, \hyperpage{89}
+    \subitem {initialize}, \hyperpage{89}
+  \item {base\_local\_planner::ObstacleCostFunction}, \hyperpage{115}
+    \subitem {prepare}, \hyperpage{115}
+    \subitem {scoreTrajectory}, \hyperpage{116}
+  \item {base\_local\_planner::OdometryHelperRos}, \hyperpage{121}
+    \subitem {odomCallback}, \hyperpage{122}
+    \subitem {OdometryHelperRos}, \hyperpage{121}
+    \subitem {setOdomTopic}, \hyperpage{122}
+  \item {base\_local\_planner::OscillationCostFunction}, 
+		\hyperpage{123}
+    \subitem {prepare}, \hyperpage{123}
+    \subitem {scoreTrajectory}, \hyperpage{123}
+  \item {base\_local\_planner::PlanarLaserScan}, \hyperpage{126}
+  \item {base\_local\_planner::PointGrid}, \hyperpage{127}
+    \subitem {footprintCost}, \hyperpage{129, 130}
+    \subitem {getCellBounds}, \hyperpage{130}
+    \subitem {getNearestInCell}, \hyperpage{131}
+    \subitem {getPoints}, \hyperpage{131}
+    \subitem {getPointsInRange}, \hyperpage{131}
+    \subitem {gridCoords}, \hyperpage{132}
+    \subitem {gridIndex}, \hyperpage{133}
+    \subitem {insert}, \hyperpage{133}
+    \subitem {intersectionPoint}, \hyperpage{133}
+    \subitem {nearestNeighborDistance}, \hyperpage{134}
+    \subitem {orient}, \hyperpage{134}
+    \subitem {PointGrid}, \hyperpage{128}
+    \subitem {ptInPolygon}, \hyperpage{135}
+    \subitem {ptInScan}, \hyperpage{135}
+    \subitem {removePointsInPolygon}, \hyperpage{136}
+    \subitem {removePointsInScanBoundry}, \hyperpage{136}
+    \subitem {segIntersect}, \hyperpage{136}
+    \subitem {sq\_distance}, \hyperpage{137}
+    \subitem {updateWorld}, \hyperpage{137}
+  \item {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{140}
+    \subitem {prepare}, \hyperpage{140}
+    \subitem {scoreTrajectory}, \hyperpage{140}
+  \item {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{143}
+    \subitem {findBestTrajectory}, \hyperpage{144}
+    \subitem {scoreTrajectory}, \hyperpage{145}
+    \subitem {SimpleScoredSamplingPlanner}, \hyperpage{144}
+  \item {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{145}
+    \subitem {hasMoreTrajectories}, \hyperpage{146}
+    \subitem {initialise}, \hyperpage{146, 147}
+    \subitem {nextTrajectory}, \hyperpage{147}
+    \subitem {setParameters}, \hyperpage{147}
+  \item {base\_local\_planner::Trajectory}, \hyperpage{150}
+    \subitem {addPoint}, \hyperpage{152}
+    \subitem {getEndpoint}, \hyperpage{152}
+    \subitem {getPoint}, \hyperpage{152}
+    \subitem {getPointsSize}, \hyperpage{153}
+    \subitem {setPoint}, \hyperpage{153}
+    \subitem {Trajectory}, \hyperpage{151}
+  \item {base\_local\_planner::TrajectoryCostFunction}, \hyperpage{154}
+    \subitem {prepare}, \hyperpage{154}
+    \subitem {scoreTrajectory}, \hyperpage{154}
+  \item {base\_local\_planner::TrajectoryPlanner}, \hyperpage{155}
+    \subitem {checkTrajectory}, \hyperpage{157}
+    \subitem {findBestPath}, \hyperpage{158}
+    \subitem {getCellCosts}, \hyperpage{159}
+    \subitem {getLocalGoal}, \hyperpage{159}
+    \subitem {scoreTrajectory}, \hyperpage{159}
+    \subitem {TrajectoryPlanner}, \hyperpage{156}
+    \subitem {updatePlan}, \hyperpage{160}
+  \item {base\_local\_planner::TrajectoryPlannerROS}, \hyperpage{161}
+    \subitem {checkTrajectory}, \hyperpage{162}
+    \subitem {computeVelocityCommands}, \hyperpage{162}
+    \subitem {initialize}, \hyperpage{163}
+    \subitem {isGoalReached}, \hyperpage{163}
+    \subitem {scoreTrajectory}, \hyperpage{163}
+    \subitem {setPlan}, \hyperpage{164}
+    \subitem {TrajectoryPlannerROS}, \hyperpage{161}
+  \item {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{164}
+    \subitem {hasMoreTrajectories}, \hyperpage{165}
+    \subitem {nextTrajectory}, \hyperpage{165}
+  \item {base\_local\_planner::TrajectorySearch}, \hyperpage{165}
+    \subitem {findBestTrajectory}, \hyperpage{166}
+  \item {base\_local\_planner::TwirlingCostFunction}, \hyperpage{166}
+    \subitem {prepare}, \hyperpage{167}
+    \subitem {scoreTrajectory}, \hyperpage{167}
+  \item {base\_local\_planner::VelocityIterator}, \hyperpage{167}
+  \item {base\_local\_planner::VoxelGridModel}, \hyperpage{170}
+    \subitem {footprintCost}, \hyperpage{172, 173}
+    \subitem {getPoints}, \hyperpage{173}
+    \subitem {updateWorld}, \hyperpage{173}
+    \subitem {VoxelGridModel}, \hyperpage{171}
+  \item {base\_local\_planner::WavefrontMapAccessor}, \hyperpage{176}
+  \item {base\_local\_planner::WorldModel}, \hyperpage{177}
+    \subitem {footprintCost}, \hyperpage{177, 178}
+  \item {bufferCloud}
+    \subitem {costmap\_2d::ObservationBuffer}, \hyperpage{113}
+
+  \indexspace
+
+  \item {calcNavFnAstar}
+    \subitem {navfn::NavFn}, \hyperpage{94}
+  \item {calcNavFnDijkstra}
+    \subitem {navfn::NavFn}, \hyperpage{94}
+  \item {calcPath}
+    \subitem {navfn::NavFn}, \hyperpage{94}
+  \item {calculateMinAndMaxDistances}
+    \subitem {costmap\_2d}, \hyperpage{12}
+  \item {carrot\_planner::CarrotPlanner}, \hyperpage{24}
+    \subitem {CarrotPlanner}, \hyperpage{24}
+    \subitem {initialize}, \hyperpage{25}
+    \subitem {makePlan}, \hyperpage{25}
+  \item {CarrotPlanner}
+    \subitem {carrot\_planner::CarrotPlanner}, \hyperpage{24}
+  \item {CellData}
+    \subitem {costmap\_2d::CellData}, \hyperpage{26}
+  \item {cellDistance}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{32}
+  \item {checkTrajectory}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{157}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{162}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{55}
+  \item {clear\_costmap\_recovery::ClearCostmapRecovery}, 
+		\hyperpage{27}
+    \subitem {ClearCostmapRecovery}, \hyperpage{27}
+    \subitem {initialize}, \hyperpage{28}
+  \item {ClearCostmapRecovery}
+    \subitem {clear\_costmap\_recovery::ClearCostmapRecovery}, 
+		\hyperpage{27}
+  \item {computeCost}
+    \subitem {costmap\_2d::InflationLayer}, \hyperpage{70}
+  \item {computeGoalDistance}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{83}
+  \item {computePotential}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{64}
+    \subitem {navfn::NavfnROS}, \hyperpage{105}
+  \item {computeTargetDistance}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{83}
+  \item {computeVelocityCommands}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{162}
+    \subitem {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{58}
+    \subitem {nav\_core::BaseLocalPlanner}, \hyperpage{22}
+  \item {convexFillCells}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{32}
+  \item {copyCostmapWindow}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{32}
+  \item {copyMapRegion}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{33}
+  \item {costarr}
+    \subitem {navfn::NavFn}, \hyperpage{100}
+  \item {Costmap2D}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{31}
+  \item {Costmap2DROS}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{44}
+  \item {costmap\_2d}, \hyperpage{11}
+    \subitem {calculateMinAndMaxDistances}, \hyperpage{12}
+    \subitem {makeFootprintFromString}, \hyperpage{13}
+    \subitem {makeFootprintFromXMLRPC}, \hyperpage{13}
+    \subitem {parseVVF}, \hyperpage{13}
+    \subitem {transformFootprint}, \hyperpage{14}
+  \item {costmap\_2d::CellData}, \hyperpage{26}
+    \subitem {CellData}, \hyperpage{26}
+  \item {costmap\_2d::Costmap2D}, \hyperpage{28}
+    \subitem {cellDistance}, \hyperpage{32}
+    \subitem {convexFillCells}, \hyperpage{32}
+    \subitem {copyCostmapWindow}, \hyperpage{32}
+    \subitem {copyMapRegion}, \hyperpage{33}
+    \subitem {Costmap2D}, \hyperpage{31}
+    \subitem {getCharMap}, \hyperpage{33}
+    \subitem {getCost}, \hyperpage{34}
+    \subitem {getIndex}, \hyperpage{34}
+    \subitem {getOriginX}, \hyperpage{34}
+    \subitem {getOriginY}, \hyperpage{35}
+    \subitem {getResolution}, \hyperpage{35}
+    \subitem {getSizeInCellsX}, \hyperpage{35}
+    \subitem {getSizeInCellsY}, \hyperpage{35}
+    \subitem {getSizeInMetersX}, \hyperpage{36}
+    \subitem {getSizeInMetersY}, \hyperpage{36}
+    \subitem {indexToCells}, \hyperpage{36}
+    \subitem {initMaps}, \hyperpage{37}
+    \subitem {mapToWorld}, \hyperpage{37}
+    \subitem {operator=}, \hyperpage{37}
+    \subitem {polygonOutlineCells}, \hyperpage{38}
+    \subitem {raytraceLine}, \hyperpage{38}
+    \subitem {saveMap}, \hyperpage{38}
+    \subitem {setConvexPolygonCost}, \hyperpage{39}
+    \subitem {setCost}, \hyperpage{39}
+    \subitem {size\_x\_}, \hyperpage{41}
+    \subitem {updateOrigin}, \hyperpage{39}
+    \subitem {worldToMap}, \hyperpage{40}
+    \subitem {worldToMapEnforceBounds}, \hyperpage{40}
+    \subitem {worldToMapNoBounds}, \hyperpage{41}
+  \item {costmap\_2d::Costmap2D::MarkCell}, \hyperpage{90}
+  \item {costmap\_2d::Costmap2D::PolygonOutlineCells}, \hyperpage{138}
+  \item {costmap\_2d::Costmap2DPublisher}, \hyperpage{42}
+    \subitem {active}, \hyperpage{42}
+  \item {costmap\_2d::Costmap2DROS}, \hyperpage{43}
+    \subitem {Costmap2DROS}, \hyperpage{44}
+    \subitem {getBaseFrameID}, \hyperpage{45}
+    \subitem {getCostmap}, \hyperpage{45}
+    \subitem {getGlobalFrameID}, \hyperpage{45}
+    \subitem {getOrientedFootprint}, \hyperpage{45}
+    \subitem {getRobotFootprint}, \hyperpage{46}
+    \subitem {getRobotPose}, \hyperpage{46}
+    \subitem {getUnpaddedRobotFootprint}, \hyperpage{46}
+    \subitem {setUnpaddedRobotFootprint}, \hyperpage{46}
+    \subitem {setUnpaddedRobotFootprintPolygon}, \hyperpage{47}
+  \item {costmap\_2d::CostmapLayer}, \hyperpage{47}
+    \subitem {addExtraBounds}, \hyperpage{48}
+    \subitem {touch}, \hyperpage{48}
+  \item {costmap\_2d::InflationLayer}, \hyperpage{69}
+    \subitem {computeCost}, \hyperpage{70}
+    \subitem {onInitialize}, \hyperpage{71}
+    \subitem {setInflationParameters}, \hyperpage{71}
+    \subitem {updateBounds}, \hyperpage{71}
+  \item {costmap\_2d::Layer}, \hyperpage{73}
+    \subitem {isCurrent}, \hyperpage{74}
+    \subitem {onInitialize}, \hyperpage{75}
+    \subitem {updateBounds}, \hyperpage{75}
+  \item {costmap\_2d::LayeredCostmap}, \hyperpage{76}
+    \subitem {getCircumscribedRadius}, \hyperpage{76}
+    \subitem {getInscribedRadius}, \hyperpage{77}
+  \item {costmap\_2d::MapLocation}, \hyperpage{89}
+  \item {costmap\_2d::Observation}, \hyperpage{110}
+    \subitem {Observation}, \hyperpage{111}
+  \item {costmap\_2d::ObservationBuffer}, \hyperpage{112}
+    \subitem {bufferCloud}, \hyperpage{113}
+    \subitem {getObservations}, \hyperpage{113}
+    \subitem {isCurrent}, \hyperpage{114}
+    \subitem {ObservationBuffer}, \hyperpage{112}
+    \subitem {setGlobalFrame}, \hyperpage{114}
+  \item {costmap\_2d::ObstacleLayer}, \hyperpage{116}
+    \subitem {getClearingObservations}, \hyperpage{118}
+    \subitem {getMarkingObservations}, \hyperpage{118}
+    \subitem {laserScanCallback}, \hyperpage{118}
+    \subitem {laserScanValidInfCallback}, \hyperpage{119}
+    \subitem {onInitialize}, \hyperpage{119}
+    \subitem {pointCloud2Callback}, \hyperpage{119}
+    \subitem {pointCloudCallback}, \hyperpage{120}
+    \subitem {raytraceFreespace}, \hyperpage{120}
+    \subitem {updateBounds}, \hyperpage{120}
+  \item {costmap\_2d::StaticLayer}, \hyperpage{148}
+    \subitem {onInitialize}, \hyperpage{149}
+    \subitem {updateBounds}, \hyperpage{149}
+  \item {costmap\_2d::VoxelLayer}, \hyperpage{174}
+    \subitem {onInitialize}, \hyperpage{175}
+    \subitem {updateBounds}, \hyperpage{175}
+    \subitem {updateOrigin}, \hyperpage{175}
+  \item {CostmapModel}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{50}
+  \item {curT}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+
+  \indexspace
+
+  \item {display}
+    \subitem {navfn::NavFn}, \hyperpage{95}
+  \item {displayFn}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {displayInt}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {dwa\_local\_planner::DWAPlanner}, \hyperpage{54}
+    \subitem {checkTrajectory}, \hyperpage{55}
+    \subitem {DWAPlanner}, \hyperpage{54}
+    \subitem {findBestPath}, \hyperpage{55}
+    \subitem {getCellCosts}, \hyperpage{55}
+    \subitem {getSimPeriod}, \hyperpage{56}
+    \subitem {setPlan}, \hyperpage{56}
+    \subitem {updatePlanAndLocalCosts}, \hyperpage{56}
+  \item {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{57}
+    \subitem {computeVelocityCommands}, \hyperpage{58}
+    \subitem {dwaComputeVelocityCommands}, \hyperpage{58}
+    \subitem {initialize}, \hyperpage{58}
+    \subitem {isGoalReached}, \hyperpage{59}
+    \subitem {setPlan}, \hyperpage{59}
+  \item {dwaComputeVelocityCommands}
+    \subitem {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{58}
+  \item {DWAPlanner}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{54}
+
+  \indexspace
+
+  \item {executeCycle}
+    \subitem {move\_base::MoveBase}, \hyperpage{91}
+
+  \indexspace
+
+  \item {findBestPath}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{158}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{55}
+  \item {findBestTrajectory}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{144}
+    \subitem {base\_local\_planner::TrajectorySearch}, \hyperpage{166}
+  \item {footprintCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{50, 51}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{129, 130}
+    \subitem {base\_local\_planner::VoxelGridModel}, 
+		\hyperpage{172, 173}
+    \subitem {base\_local\_planner::WorldModel}, \hyperpage{177, 178}
+
+  \indexspace
+
+  \item {getAccLimits}
+    \subitem {base\_local\_planner::LocalPlannerLimits}, \hyperpage{78}
+  \item {getBaseFrameID}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{45}
+  \item {getCellBounds}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{130}
+  \item {getCellCosts}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{159}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{55}
+  \item {getCharMap}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{33}
+  \item {getCircumscribedRadius}
+    \subitem {costmap\_2d::LayeredCostmap}, \hyperpage{76}
+  \item {getClearingObservations}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{118}
+  \item {getCost}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{34}
+  \item {getCostmap}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{45}
+  \item {getEndpoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{152}
+  \item {getFillCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{61}
+  \item {getFootprintCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{62}
+  \item {getGlobalFrameID}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{45}
+  \item {getIndex}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{84}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{34}
+  \item {getInscribedRadius}
+    \subitem {costmap\_2d::LayeredCostmap}, \hyperpage{77}
+  \item {getLastPathCost}
+    \subitem {navfn::NavFn}, \hyperpage{95}
+  \item {getLineCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{62}
+  \item {getLocalGoal}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{159}
+  \item {getMarkingObservations}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{118}
+  \item {getNearestInCell}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{131}
+  \item {getObservations}
+    \subitem {costmap\_2d::ObservationBuffer}, \hyperpage{113}
+  \item {getOrientedFootprint}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{45}
+  \item {getOriginX}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{34}
+  \item {getOriginY}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{35}
+  \item {getPathLen}
+    \subitem {navfn::NavFn}, \hyperpage{95}
+  \item {getPathX}
+    \subitem {navfn::NavFn}, \hyperpage{95}
+  \item {getPathY}
+    \subitem {navfn::NavFn}, \hyperpage{96}
+  \item {getPlanFromPotential}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{65}
+    \subitem {navfn::NavfnROS}, \hyperpage{106}
+  \item {getPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{152}
+  \item {getPointPotential}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{65}
+    \subitem {navfn::NavfnROS}, \hyperpage{106}
+  \item {getPoints}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{131}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{173}
+  \item {getPointsInRange}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{131}
+  \item {getPointsSize}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{153}
+  \item {getResolution}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{35}
+  \item {getRobotFootprint}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{46}
+  \item {getRobotPose}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{46}
+  \item {getSimPeriod}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{56}
+  \item {getSizeInCellsX}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{35}
+  \item {getSizeInCellsY}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{35}
+  \item {getSizeInMetersX}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{36}
+  \item {getSizeInMetersY}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{36}
+  \item {getUnpaddedRobotFootprint}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{46}
+  \item {global\_planner::AStarExpansion}, \hyperpage{19}
+  \item {global\_planner::DijkstraExpansion}, \hyperpage{53}
+    \subitem {setSize}, \hyperpage{53}
+  \item {global\_planner::Expander}, \hyperpage{60}
+    \subitem {ns\_}, \hyperpage{61}
+    \subitem {setSize}, \hyperpage{60}
+  \item {global\_planner::GlobalPlanner}, \hyperpage{63}
+    \subitem {computePotential}, \hyperpage{64}
+    \subitem {getPlanFromPotential}, \hyperpage{65}
+    \subitem {getPointPotential}, \hyperpage{65}
+    \subitem {GlobalPlanner}, \hyperpage{64}
+    \subitem {initialize}, \hyperpage{66}
+    \subitem {makePlan}, \hyperpage{66}
+    \subitem {validPointPotential}, \hyperpage{67}
+  \item {global\_planner::GradientPath}, \hyperpage{68}
+  \item {global\_planner::greater1}, \hyperpage{68}
+  \item {global\_planner::GridPath}, \hyperpage{69}
+  \item {global\_planner::Index}, \hyperpage{69}
+  \item {global\_planner::OrientationFilter}, \hyperpage{122}
+  \item {global\_planner::PotentialCalculator}, \hyperpage{138}
+    \subitem {ns\_}, \hyperpage{139}
+    \subitem {setSize}, \hyperpage{139}
+  \item {global\_planner::QuadraticCalculator}, \hyperpage{141}
+  \item {global\_planner::Traceback}, \hyperpage{150}
+  \item {GlobalPlanner}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{64}
+  \item {gradCell}
+    \subitem {navfn::NavFn}, \hyperpage{96}
+  \item {gradx}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {grady}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {gridCoords}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{132}
+  \item {gridIndex}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{133}
+
+  \indexspace
+
+  \item {hasMoreTrajectories}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{146}
+    \subitem {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{165}
+
+  \indexspace
+
+  \item {indexToCells}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{36}
+  \item {initCost}
+    \subitem {navfn::NavFn}, \hyperpage{96}
+  \item {initialise}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{146, 147}
+  \item {initialize}
+    \subitem {base\_local\_planner::MapGridVisualizer}, \hyperpage{89}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{163}
+    \subitem {carrot\_planner::CarrotPlanner}, \hyperpage{25}
+    \subitem {clear\_costmap\_recovery::ClearCostmapRecovery}, 
+		\hyperpage{28}
+    \subitem {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{58}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{66}
+    \subitem {nav\_core::BaseGlobalPlanner}, \hyperpage{20}
+    \subitem {nav\_core::BaseLocalPlanner}, \hyperpage{22}
+    \subitem {nav\_core::RecoveryBehavior}, \hyperpage{142}
+    \subitem {navfn::NavfnROS}, \hyperpage{106, 107}
+    \subitem {rotate\_recovery::RotateRecovery}, \hyperpage{143}
+  \item {initMaps}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{37}
+  \item {insert}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{133}
+  \item {intersectionPoint}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{133}
+  \item {isCurrent}
+    \subitem {costmap\_2d::Layer}, \hyperpage{74}
+    \subitem {costmap\_2d::ObservationBuffer}, \hyperpage{114}
+  \item {isGoalReached}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{163}
+    \subitem {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{59}
+    \subitem {nav\_core::BaseLocalPlanner}, \hyperpage{23}
+
+  \indexspace
+
+  \item {laserScanCallback}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{118}
+  \item {laserScanValidInfCallback}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{119}
+  \item {last\_path\_cost\_}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {lineCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{52}
+
+  \indexspace
+
+  \item {makeFootprintFromString}
+    \subitem {costmap\_2d}, \hyperpage{13}
+  \item {makeFootprintFromXMLRPC}
+    \subitem {costmap\_2d}, \hyperpage{13}
+  \item {makePlan}
+    \subitem {carrot\_planner::CarrotPlanner}, \hyperpage{25}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{66}
+    \subitem {nav\_core::BaseGlobalPlanner}, \hyperpage{20, 21}
+    \subitem {navfn::NavfnROS}, \hyperpage{107, 108}
+  \item {map\_cell\_t}, \hyperpage{79}
+  \item {map\_t}, \hyperpage{79}
+  \item {MapCell}
+    \subitem {base\_local\_planner::MapCell}, \hyperpage{80}
+  \item {MapGrid}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{82}
+  \item {mapToWorld}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{37}
+  \item {move\_base::MoveBase}, \hyperpage{90}
+    \subitem {executeCycle}, \hyperpage{91}
+    \subitem {MoveBase}, \hyperpage{90}
+  \item {move\_slow\_and\_clear::MoveSlowAndClear}, \hyperpage{91}
+  \item {MoveBase}
+    \subitem {move\_base::MoveBase}, \hyperpage{90}
+
+  \indexspace
+
+  \item {nav\_core::BaseGlobalPlanner}, \hyperpage{19}
+    \subitem {initialize}, \hyperpage{20}
+    \subitem {makePlan}, \hyperpage{20, 21}
+  \item {nav\_core::BaseLocalPlanner}, \hyperpage{21}
+    \subitem {computeVelocityCommands}, \hyperpage{22}
+    \subitem {initialize}, \hyperpage{22}
+    \subitem {isGoalReached}, \hyperpage{23}
+    \subitem {setPlan}, \hyperpage{23}
+  \item {nav\_core::RecoveryBehavior}, \hyperpage{141}
+    \subitem {initialize}, \hyperpage{142}
+  \item {NavFn}
+    \subitem {navfn::NavFn}, \hyperpage{94}
+  \item {navfn::NavFn}, \hyperpage{92}
+    \subitem {calcNavFnAstar}, \hyperpage{94}
+    \subitem {calcNavFnDijkstra}, \hyperpage{94}
+    \subitem {calcPath}, \hyperpage{94}
+    \subitem {costarr}, \hyperpage{100}
+    \subitem {curT}, \hyperpage{101}
+    \subitem {display}, \hyperpage{95}
+    \subitem {displayFn}, \hyperpage{101}
+    \subitem {displayInt}, \hyperpage{101}
+    \subitem {getLastPathCost}, \hyperpage{95}
+    \subitem {getPathLen}, \hyperpage{95}
+    \subitem {getPathX}, \hyperpage{95}
+    \subitem {getPathY}, \hyperpage{96}
+    \subitem {gradCell}, \hyperpage{96}
+    \subitem {gradx}, \hyperpage{101}
+    \subitem {grady}, \hyperpage{101}
+    \subitem {initCost}, \hyperpage{96}
+    \subitem {last\_path\_cost\_}, \hyperpage{101}
+    \subitem {NavFn}, \hyperpage{94}
+    \subitem {nobs}, \hyperpage{101}
+    \subitem {npath}, \hyperpage{101}
+    \subitem {npathbuf}, \hyperpage{102}
+    \subitem {ns}, \hyperpage{102}
+    \subitem {overP}, \hyperpage{102}
+    \subitem {overPe}, \hyperpage{102}
+    \subitem {pathStep}, \hyperpage{102}
+    \subitem {pathy}, \hyperpage{102}
+    \subitem {pb1}, \hyperpage{102}
+    \subitem {pb3}, \hyperpage{102}
+    \subitem {pending}, \hyperpage{103}
+    \subitem {potarr}, \hyperpage{103}
+    \subitem {priInc}, \hyperpage{103}
+    \subitem {propNavFnAstar}, \hyperpage{96}
+    \subitem {propNavFnDijkstra}, \hyperpage{97}
+    \subitem {savemap}, \hyperpage{97}
+    \subitem {setCostmap}, \hyperpage{97}
+    \subitem {setGoal}, \hyperpage{99}
+    \subitem {setNavArr}, \hyperpage{99}
+    \subitem {setStart}, \hyperpage{99}
+    \subitem {setupNavFn}, \hyperpage{100}
+    \subitem {updateCell}, \hyperpage{100}
+    \subitem {updateCellAstar}, \hyperpage{100}
+  \item {navfn::NavfnROS}, \hyperpage{103}
+    \subitem {computePotential}, \hyperpage{105}
+    \subitem {getPlanFromPotential}, \hyperpage{106}
+    \subitem {getPointPotential}, \hyperpage{106}
+    \subitem {initialize}, \hyperpage{106, 107}
+    \subitem {makePlan}, \hyperpage{107, 108}
+    \subitem {NavfnROS}, \hyperpage{105}
+    \subitem {validPointPotential}, \hyperpage{108}
+  \item {navfn::NavWin}, \hyperpage{109}
+  \item {navfn::PotarrPoint}, \hyperpage{138}
+  \item {NavfnROS}
+    \subitem {navfn::NavfnROS}, \hyperpage{105}
+  \item {nearestNeighborDistance}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{134}
+  \item {nextTrajectory}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{147}
+    \subitem {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{165}
+  \item {nobs}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {npath}
+    \subitem {navfn::NavFn}, \hyperpage{101}
+  \item {npathbuf}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {ns}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {ns\_}
+    \subitem {global\_planner::Expander}, \hyperpage{61}
+    \subitem {global\_planner::PotentialCalculator}, \hyperpage{139}
+
+  \indexspace
+
+  \item {Observation}
+    \subitem {costmap\_2d::Observation}, \hyperpage{111}
+  \item {ObservationBuffer}
+    \subitem {costmap\_2d::ObservationBuffer}, \hyperpage{112}
+  \item {obstacleCosts}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{84}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{87}
+  \item {odomCallback}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{122}
+  \item {OdometryHelperRos}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{121}
+  \item {onInitialize}
+    \subitem {costmap\_2d::InflationLayer}, \hyperpage{71}
+    \subitem {costmap\_2d::Layer}, \hyperpage{75}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{119}
+    \subitem {costmap\_2d::StaticLayer}, \hyperpage{149}
+    \subitem {costmap\_2d::VoxelLayer}, \hyperpage{175}
+  \item {operator()}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{84, 85}
+  \item {operator=}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{85}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{37}
+  \item {orient}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{134}
+  \item {overP}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {overPe}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+
+  \indexspace
+
+  \item {parseVVF}
+    \subitem {costmap\_2d}, \hyperpage{13}
+  \item {pathStep}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {pathy}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {pb1}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {pb3}
+    \subitem {navfn::NavFn}, \hyperpage{102}
+  \item {pending}
+    \subitem {navfn::NavFn}, \hyperpage{103}
+  \item {pf\_cluster\_t}, \hyperpage{124}
+  \item {pf\_kdtree\_node}, \hyperpage{124}
+  \item {pf\_kdtree\_t}, \hyperpage{125}
+  \item {pf\_matrix\_t}, \hyperpage{125}
+  \item {pf\_pdf\_gaussian\_t}, \hyperpage{125}
+  \item {pf\_sample\_t}, \hyperpage{125}
+  \item {pf\_vector\_t}, \hyperpage{126}
+  \item {PlannerCore}, \hyperpage{126}
+  \item {pointCloud2Callback}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{119}
+  \item {pointCloudCallback}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{120}
+  \item {pointCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{52}
+  \item {PointGrid}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{128}
+  \item {polygonOutlineCells}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{38}
+  \item {potarr}
+    \subitem {navfn::NavFn}, \hyperpage{103}
+  \item {prepare}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{87}
+    \subitem {base\_local\_planner::ObstacleCostFunction}, 
+		\hyperpage{115}
+    \subitem {base\_local\_planner::OscillationCostFunction}, 
+		\hyperpage{123}
+    \subitem {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{140}
+    \subitem {base\_local\_planner::TrajectoryCostFunction}, 
+		\hyperpage{154}
+    \subitem {base\_local\_planner::TwirlingCostFunction}, 
+		\hyperpage{167}
+  \item {priInc}
+    \subitem {navfn::NavFn}, \hyperpage{103}
+  \item {propNavFnAstar}
+    \subitem {navfn::NavFn}, \hyperpage{96}
+  \item {propNavFnDijkstra}
+    \subitem {navfn::NavFn}, \hyperpage{97}
+  \item {ptInPolygon}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{135}
+  \item {ptInScan}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{135}
+
+  \indexspace
+
+  \item {raytraceFreespace}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{120}
+  \item {raytraceLine}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{38}
+  \item {removePointsInPolygon}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{136}
+  \item {removePointsInScanBoundry}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{136}
+  \item {resize}
+    \subitem {voxel\_grid::VoxelGrid}, \hyperpage{169}
+  \item {rotate\_recovery::RotateRecovery}, \hyperpage{142}
+    \subitem {initialize}, \hyperpage{143}
+  \item {rotateToGoal}
+    \subitem {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{72}
+
+  \indexspace
+
+  \item {saveMap}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{38}
+  \item {savemap}
+    \subitem {navfn::NavFn}, \hyperpage{97}
+  \item {scoreTrajectory}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{88}
+    \subitem {base\_local\_planner::ObstacleCostFunction}, 
+		\hyperpage{116}
+    \subitem {base\_local\_planner::OscillationCostFunction}, 
+		\hyperpage{123}
+    \subitem {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{140}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{145}
+    \subitem {base\_local\_planner::TrajectoryCostFunction}, 
+		\hyperpage{154}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{159}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{163}
+    \subitem {base\_local\_planner::TwirlingCostFunction}, 
+		\hyperpage{167}
+  \item {segIntersect}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{136}
+  \item {setConvexPolygonCost}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{39}
+  \item {setCost}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{39}
+  \item {setCostmap}
+    \subitem {navfn::NavFn}, \hyperpage{97}
+  \item {setGlobalFrame}
+    \subitem {costmap\_2d::ObservationBuffer}, \hyperpage{114}
+  \item {setGoal}
+    \subitem {navfn::NavFn}, \hyperpage{99}
+  \item {setInflationParameters}
+    \subitem {costmap\_2d::InflationLayer}, \hyperpage{71}
+  \item {setNavArr}
+    \subitem {navfn::NavFn}, \hyperpage{99}
+  \item {setOdomTopic}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{122}
+  \item {setParameters}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{147}
+  \item {setPlan}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{164}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{56}
+    \subitem {dwa\_local\_planner::DWAPlannerROS}, \hyperpage{59}
+    \subitem {nav\_core::BaseLocalPlanner}, \hyperpage{23}
+  \item {setPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{153}
+  \item {setSize}
+    \subitem {global\_planner::DijkstraExpansion}, \hyperpage{53}
+    \subitem {global\_planner::Expander}, \hyperpage{60}
+    \subitem {global\_planner::PotentialCalculator}, \hyperpage{139}
+  \item {setStart}
+    \subitem {navfn::NavFn}, \hyperpage{99}
+  \item {setStopOnFailure}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{88}
+  \item {setTargetPoses}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{88}
+  \item {setUnpaddedRobotFootprint}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{46}
+  \item {setUnpaddedRobotFootprintPolygon}
+    \subitem {costmap\_2d::Costmap2DROS}, \hyperpage{47}
+  \item {setupNavFn}
+    \subitem {navfn::NavFn}, \hyperpage{100}
+  \item {SimpleScoredSamplingPlanner}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{144}
+  \item {size\_x\_}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{41}
+  \item {sizeCheck}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{85}
+  \item {sq\_distance}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{137}
+  \item {stopWithAccLimits}
+    \subitem {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{73}
+  \item {SuperValue}, \hyperpage{149}
+
+  \indexspace
+
+  \item {touch}
+    \subitem {costmap\_2d::CostmapLayer}, \hyperpage{48}
+  \item {Trajectory}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{151}
+  \item {TrajectoryPlanner}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{156}
+  \item {TrajectoryPlannerROS}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{161}
+  \item {transformFootprint}
+    \subitem {costmap\_2d}, \hyperpage{14}
+
+  \indexspace
+
+  \item {unreachableCellCosts}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{86}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{88}
+  \item {updateBounds}
+    \subitem {costmap\_2d::InflationLayer}, \hyperpage{71}
+    \subitem {costmap\_2d::Layer}, \hyperpage{75}
+    \subitem {costmap\_2d::ObstacleLayer}, \hyperpage{120}
+    \subitem {costmap\_2d::StaticLayer}, \hyperpage{149}
+    \subitem {costmap\_2d::VoxelLayer}, \hyperpage{175}
+  \item {updateCell}
+    \subitem {navfn::NavFn}, \hyperpage{100}
+  \item {updateCellAstar}
+    \subitem {navfn::NavFn}, \hyperpage{100}
+  \item {updateOrigin}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{39}
+    \subitem {costmap\_2d::VoxelLayer}, \hyperpage{175}
+  \item {updatePathCell}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{86}
+  \item {updatePlan}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{160}
+  \item {updatePlanAndLocalCosts}
+    \subitem {dwa\_local\_planner::DWAPlanner}, \hyperpage{56}
+  \item {updateWorld}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{137}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{173}
+
+  \indexspace
+
+  \item {validPointPotential}
+    \subitem {global\_planner::GlobalPlanner}, \hyperpage{67}
+    \subitem {navfn::NavfnROS}, \hyperpage{108}
+  \item {voxel\_grid::VoxelGrid}, \hyperpage{168}
+    \subitem {resize}, \hyperpage{169}
+    \subitem {VoxelGrid}, \hyperpage{169}
+  \item {VoxelGrid}, \hyperpage{170}
+    \subitem {voxel\_grid::VoxelGrid}, \hyperpage{169}
+  \item {VoxelGridModel}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{171}
+
+  \indexspace
+
+  \item {worldToMap}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{40}
+  \item {worldToMapEnforceBounds}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{40}
+  \item {worldToMapNoBounds}
+    \subitem {costmap\_2d::Costmap2D}, \hyperpage{41}
+
+\end{theindex}

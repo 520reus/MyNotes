@@ -1,0 +1,50 @@
+\hypertarget{classbase__local__planner_1_1PreferForwardCostFunction}{}\doxysection{base\+\_\+local\+\_\+planner\+::Prefer\+Forward\+Cost\+Function类 参考}
+\label{classbase__local__planner_1_1PreferForwardCostFunction}\index{base\_local\_planner::PreferForwardCostFunction@{base\_local\_planner::PreferForwardCostFunction}}
+类 base\+\_\+local\+\_\+planner\+::Prefer\+Forward\+Cost\+Function 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1PreferForwardCostFunction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1PreferForwardCostFunction_a65ec4a67e55f0f482c6da0e9e8150fbb}\label{classbase__local__planner_1_1PreferForwardCostFunction_a65ec4a67e55f0f482c6da0e9e8150fbb}} 
+{\bfseries Prefer\+Forward\+Cost\+Function} (double penalty)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1PreferForwardCostFunction_a87ba9f1a9598d9851af39578ce62beda}{score\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1PreferForwardCostFunction_a3f378ae4e7f2c01b0af4acff71ed564f}{prepare}} ()
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1PreferForwardCostFunction_aa330c69b782336d11030167868f933d6}\label{classbase__local__planner_1_1PreferForwardCostFunction_aa330c69b782336d11030167868f933d6}} 
+void {\bfseries set\+Penalty} (double penalty)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1PreferForwardCostFunction_a3f378ae4e7f2c01b0af4acff71ed564f}\label{classbase__local__planner_1_1PreferForwardCostFunction_a3f378ae4e7f2c01b0af4acff71ed564f}} 
+\index{base\_local\_planner::PreferForwardCostFunction@{base\_local\_planner::PreferForwardCostFunction}!prepare@{prepare}}
+\index{prepare@{prepare}!base\_local\_planner::PreferForwardCostFunction@{base\_local\_planner::PreferForwardCostFunction}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Prefer\+Forward\+Cost\+Function\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+General updating of context values if required. Subclasses may overwrite. Return false in case there is any error. 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction_a351dddca226f210a09bd10c151e2975f}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1PreferForwardCostFunction_a87ba9f1a9598d9851af39578ce62beda}\label{classbase__local__planner_1_1PreferForwardCostFunction_a87ba9f1a9598d9851af39578ce62beda}} 
+\index{base\_local\_planner::PreferForwardCostFunction@{base\_local\_planner::PreferForwardCostFunction}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::PreferForwardCostFunction@{base\_local\_planner::PreferForwardCostFunction}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Prefer\+Forward\+Cost\+Function\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+return a score for trajectory traj 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction_a6908a8071270b455fc25b48db76e2d3c}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/prefer\+\_\+forward\+\_\+cost\+\_\+function.\+h\end{DoxyCompactItemize}

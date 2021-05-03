@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: move_base::MoveBase类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>move_base</b></li><li class="navelem"><a class="el" href="classmove__base_1_1MoveBase.html">MoveBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">move_base::MoveBase类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location.  
+ <a href="classmove__base_1_1MoveBase.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="move__base_8h_source.html">move_base.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1132ccb47b3c514d52be347805eb31f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1MoveBase.html#a1132ccb47b3c514d52be347805eb31f5">MoveBase</a> (tf2_ros::Buffer &amp;tf)</td></tr>
+<tr class="memdesc:a1132ccb47b3c514d52be347805eb31f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the actions  <a href="classmove__base_1_1MoveBase.html#a1132ccb47b3c514d52be347805eb31f5">更多...</a><br /></td></tr>
+<tr class="separator:a1132ccb47b3c514d52be347805eb31f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afc8f7c7f940d87a7a81e508ec99e6d"><td class="memItemLeft" align="right" valign="top"><a id="a8afc8f7c7f940d87a7a81e508ec99e6d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1MoveBase.html#a8afc8f7c7f940d87a7a81e508ec99e6d">~MoveBase</a> ()</td></tr>
+<tr class="memdesc:a8afc8f7c7f940d87a7a81e508ec99e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - Cleans up <br /></td></tr>
+<tr class="separator:a8afc8f7c7f940d87a7a81e508ec99e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217b7185de670a1ee56bb59433ee54d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1MoveBase.html#a217b7185de670a1ee56bb59433ee54d2">executeCycle</a> (geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan)</td></tr>
+<tr class="memdesc:a217b7185de670a1ee56bb59433ee54d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a control cycle  <a href="classmove__base_1_1MoveBase.html#a217b7185de670a1ee56bb59433ee54d2">更多...</a><br /></td></tr>
+<tr class="separator:a217b7185de670a1ee56bb59433ee54d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1132ccb47b3c514d52be347805eb31f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1132ccb47b3c514d52be347805eb31f5">&#9670;&nbsp;</a></span>MoveBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">move_base::MoveBase::MoveBase </td>
+          <td>(</td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the actions </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name olocal_plannerf the action </td></tr>
+    <tr><td class="paramname">tf</td><td>A reference to a TransformListener </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a217b7185de670a1ee56bb59433ee54d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217b7185de670a1ee56bb59433ee54d2">&#9670;&nbsp;</a></span>executeCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::executeCycle </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>global_plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a control cycle </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal</td><td>A reference to the goal to pursue </td></tr>
+    <tr><td class="paramname">global_plan</td><td>A reference to the global plan being used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if processing of the goal is done, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>move_base/include/move_base/<a class="el" href="move__base_8h_source.html">move_base.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

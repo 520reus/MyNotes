@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::TrajectoryCostFunction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html">TrajectoryCostFunction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::TrajectoryCostFunction类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for critics of trajectories During each sampling run, a batch of many trajectories will be scored using such a cost function. The prepare method is called before each batch run, and then for each trajectory of the sampling set, score_trajectory may be called.  
+ <a href="classbase__local__planner_1_1TrajectoryCostFunction.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trajectory__cost__function_8h_source.html">trajectory_cost_function.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::TrajectoryCostFunction 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1TrajectoryCostFunction.png" usemap="#base_5Flocal_5Fplanner::TrajectoryCostFunction_map" alt=""/>
+  <map id="base_5Flocal_5Fplanner::TrajectoryCostFunction_map" name="base_5Flocal_5Fplanner::TrajectoryCostFunction_map">
+<area href="classbase__local__planner_1_1MapGridCostFunction.html" alt="base_local_planner::MapGridCostFunction" shape="rect" coords="0,56,287,80"/>
+<area href="classbase__local__planner_1_1ObstacleCostFunction.html" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec..." alt="base_local_planner::ObstacleCostFunction" shape="rect" coords="297,56,584,80"/>
+<area href="classbase__local__planner_1_1OscillationCostFunction.html" alt="base_local_planner::OscillationCostFunction" shape="rect" coords="594,56,881,80"/>
+<area href="classbase__local__planner_1_1PreferForwardCostFunction.html" alt="base_local_planner::PreferForwardCostFunction" shape="rect" coords="891,56,1178,80"/>
+<area href="classbase__local__planner_1_1TwirlingCostFunction.html" alt="base_local_planner::TwirlingCostFunction" shape="rect" coords="1188,56,1475,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a351dddca226f210a09bd10c151e2975f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html#a351dddca226f210a09bd10c151e2975f">prepare</a> ()=0</td></tr>
+<tr class="separator:a351dddca226f210a09bd10c151e2975f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6908a8071270b455fc25b48db76e2d3c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html#a6908a8071270b455fc25b48db76e2d3c">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;traj)=0</td></tr>
+<tr class="separator:a6908a8071270b455fc25b48db76e2d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaae8d899bd41d8baf02bf7aa175ded9"><td class="memItemLeft" align="right" valign="top"><a id="abaae8d899bd41d8baf02bf7aa175ded9"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getScale</b> ()</td></tr>
+<tr class="separator:abaae8d899bd41d8baf02bf7aa175ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816da4ed3c9be419fc00abb271d5a8b5"><td class="memItemLeft" align="right" valign="top"><a id="a816da4ed3c9be419fc00abb271d5a8b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (double scale)</td></tr>
+<tr class="separator:a816da4ed3c9be419fc00abb271d5a8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a5a80d6bb3fade55e28d8cb234936c43a"><td class="memItemLeft" align="right" valign="top"><a id="a5a80d6bb3fade55e28d8cb234936c43a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TrajectoryCostFunction</b> (double scale=1.0)</td></tr>
+<tr class="separator:a5a80d6bb3fade55e28d8cb234936c43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Provides an interface for critics of trajectories During each sampling run, a batch of many trajectories will be scored using such a cost function. The prepare method is called before each batch run, and then for each trajectory of the sampling set, score_trajectory may be called. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a351dddca226f210a09bd10c151e2975f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351dddca226f210a09bd10c151e2975f">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool base_local_planner::TrajectoryCostFunction::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>General updating of context values if required. Subclasses may overwrite. Return false in case there is any error. </p>
+
+<p>在 <a class="el" href="classbase__local__planner_1_1TwirlingCostFunction.html#ab371127d4584e608d012e3447e2680b3">base_local_planner::TwirlingCostFunction</a>, <a class="el" href="classbase__local__planner_1_1PreferForwardCostFunction.html#a3f378ae4e7f2c01b0af4acff71ed564f">base_local_planner::PreferForwardCostFunction</a>, <a class="el" href="classbase__local__planner_1_1OscillationCostFunction.html#a1cc7c1cd4c49df97515da3c12400f4df">base_local_planner::OscillationCostFunction</a>, <a class="el" href="classbase__local__planner_1_1ObstacleCostFunction.html#a9a9929d60bfd91f8814d8b31e51969cf">base_local_planner::ObstacleCostFunction</a> , 以及 <a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#af3f80d67ddeefec5871b4828ddafb5dc">base_local_planner::MapGridCostFunction</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6908a8071270b455fc25b48db76e2d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6908a8071270b455fc25b48db76e2d3c">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::TrajectoryCostFunction::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return a score for trajectory traj </p>
+
+<p>在 <a class="el" href="classbase__local__planner_1_1TwirlingCostFunction.html#ae6744c50c77888cb4f59d3a6650227ee">base_local_planner::TwirlingCostFunction</a>, <a class="el" href="classbase__local__planner_1_1PreferForwardCostFunction.html#a87ba9f1a9598d9851af39578ce62beda">base_local_planner::PreferForwardCostFunction</a>, <a class="el" href="classbase__local__planner_1_1OscillationCostFunction.html#ac9fd440e97142115b8bbe81408eadc14">base_local_planner::OscillationCostFunction</a>, <a class="el" href="classbase__local__planner_1_1ObstacleCostFunction.html#a3bac5a99d333a755440449809270e638">base_local_planner::ObstacleCostFunction</a> , 以及 <a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a4332b1fd1c72795c87fb5d3a427df476">base_local_planner::MapGridCostFunction</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="trajectory__cost__function_8h_source.html">trajectory_cost_function.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

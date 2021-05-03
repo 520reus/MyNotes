@@ -1,0 +1,152 @@
+\hypertarget{classdwa__local__planner_1_1DWAPlannerROS}{}\doxysection{dwa\+\_\+local\+\_\+planner\+::DWAPlanner\+ROS类 参考}
+\label{classdwa__local__planner_1_1DWAPlannerROS}\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+
+
+ROS Wrapper for the \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner}{DWAPlanner}} that adheres to the Base\+Local\+Planner interface and can be used as a plugin for move\+\_\+base.  
+
+
+
+
+{\ttfamily \#include $<$dwa\+\_\+planner\+\_\+ros.\+h$>$}
+
+类 dwa\+\_\+local\+\_\+planner\+::DWAPlanner\+ROS 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdwa__local__planner_1_1DWAPlannerROS}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a53854eb5a69270d2935db6115da00b07}\label{classdwa__local__planner_1_1DWAPlannerROS_a53854eb5a69270d2935db6115da00b07}} 
+\mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a53854eb5a69270d2935db6115da00b07}{DWAPlanner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS}{DWAPlanner\+ROS}} wrapper \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a61c4737a8e5eb82f4c2407326e411d85}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Constructs the ros wrapper \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_ab4a313f013569f71f59101ba8529640a}\label{classdwa__local__planner_1_1DWAPlannerROS_ab4a313f013569f71f59101ba8529640a}} 
+\mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_ab4a313f013569f71f59101ba8529640a}{$\sim$\+DWAPlanner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the wrapper \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a700178e32159b614d328326b6ba5f8b0}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a6d5796c54a10c3e2c89ec9afb64e9b5e}{dwa\+Compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base, using dynamic window approach \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a0cfcf517c3112678a7eabeb498d9b2ce}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Set the plan that the controller is following \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a847c1877d967acd515d7ddf1ac246941}{is\+Goal\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em Check if the goal pose has been achieved \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_ae6d59b99f11c5998b10fba331ef077a8}\label{classdwa__local__planner_1_1DWAPlannerROS_ae6d59b99f11c5998b10fba331ef077a8}} 
+bool {\bfseries is\+Initialized} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+ROS Wrapper for the \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner}{DWAPlanner}} that adheres to the Base\+Local\+Planner interface and can be used as a plugin for move\+\_\+base. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a700178e32159b614d328326b6ba5f8b0}\label{classdwa__local__planner_1_1DWAPlannerROS_a700178e32159b614d328326b6ba5f8b0}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_aa02dad5e3be910ae7d5159b7a53c0188}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a6d5796c54a10c3e2c89ec9afb64e9b5e}\label{classdwa__local__planner_1_1DWAPlannerROS_a6d5796c54a10c3e2c89ec9afb64e9b5e}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!dwaComputeVelocityCommands@{dwaComputeVelocityCommands}}
+\index{dwaComputeVelocityCommands@{dwaComputeVelocityCommands}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{dwaComputeVelocityCommands()}{dwaComputeVelocityCommands()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::dwa\+Compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base, using dynamic window approach 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a61c4737a8e5eb82f4c2407326e411d85}\label{classdwa__local__planner_1_1DWAPlannerROS_a61c4737a8e5eb82f4c2407326e411d85}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!initialize@{initialize}}
+\index{initialize@{initialize}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Constructs the ros wrapper 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to give this instance of the trajectory planner \\
+\hline
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em costmap} & The cost map to use for assigning costs to trajectories \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a488521ac3d0ff67000aed87ab3fea84b}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a847c1877d967acd515d7ddf1ac246941}\label{classdwa__local__planner_1_1DWAPlannerROS_a847c1877d967acd515d7ddf1ac246941}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the goal pose has been achieved 
+
+\begin{DoxyReturn}{返回}
+True if achieved, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a27b2312d3218496be06a298767b26716}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlannerROS_a0cfcf517c3112678a7eabeb498d9b2ce}\label{classdwa__local__planner_1_1DWAPlannerROS_a0cfcf517c3112678a7eabeb498d9b2ce}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the plan that the controller is following 
+
+
+\begin{DoxyParams}{参数}
+{\em orig\+\_\+global\+\_\+plan} & The plan to pass to the controller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the plan was updated successfully, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_ac30adc27a5c123f129ef7046ffbb0f3e}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+dwa\+\_\+local\+\_\+planner/include/dwa\+\_\+local\+\_\+planner/dwa\+\_\+planner\+\_\+ros.\+h\end{DoxyCompactItemize}

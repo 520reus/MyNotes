@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: nav_core::BaseLocalPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>nav_core</b></li><li class="navelem"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html">BaseLocalPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">nav_core::BaseLocalPlanner类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for local planners used in navigation. All local planners written as plugins for the navigation stack must adhere to this interface.  
+ <a href="classnav__core_1_1BaseLocalPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="base__local__planner_8h_source.html">base_local_planner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 nav_core::BaseLocalPlanner 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnav__core_1_1BaseLocalPlanner.png" usemap="#nav_5Fcore::BaseLocalPlanner_map" alt=""/>
+  <map id="nav_5Fcore::BaseLocalPlanner_map" name="nav_5Fcore::BaseLocalPlanner_map">
+<area href="classbase__local__planner_1_1TrajectoryPlannerROS.html" title="A ROS wrapper for the trajectory controller that queries the param server to construct a controller" alt="base_local_planner::TrajectoryPlannerROS" shape="rect" coords="0,56,257,80"/>
+<area href="classdwa__local__planner_1_1DWAPlannerROS.html" title="ROS Wrapper for the DWAPlanner that adheres to the BaseLocalPlanner interface and can be used as a pl..." alt="dwa_local_planner::DWAPlannerROS" shape="rect" coords="267,56,524,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa02dad5e3be910ae7d5159b7a53c0188"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html#aa02dad5e3be910ae7d5159b7a53c0188">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)=0</td></tr>
+<tr class="memdesc:aa02dad5e3be910ae7d5159b7a53c0188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base  <a href="classnav__core_1_1BaseLocalPlanner.html#aa02dad5e3be910ae7d5159b7a53c0188">更多...</a><br /></td></tr>
+<tr class="separator:aa02dad5e3be910ae7d5159b7a53c0188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b2312d3218496be06a298767b26716"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html#a27b2312d3218496be06a298767b26716">isGoalReached</a> ()=0</td></tr>
+<tr class="memdesc:a27b2312d3218496be06a298767b26716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the goal pose has been achieved by the local planner  <a href="classnav__core_1_1BaseLocalPlanner.html#a27b2312d3218496be06a298767b26716">更多...</a><br /></td></tr>
+<tr class="separator:a27b2312d3218496be06a298767b26716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30adc27a5c123f129ef7046ffbb0f3e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html#ac30adc27a5c123f129ef7046ffbb0f3e">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ac30adc27a5c123f129ef7046ffbb0f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the plan that the local planner is following  <a href="classnav__core_1_1BaseLocalPlanner.html#ac30adc27a5c123f129ef7046ffbb0f3e">更多...</a><br /></td></tr>
+<tr class="separator:ac30adc27a5c123f129ef7046ffbb0f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488521ac3d0ff67000aed87ab3fea84b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html#a488521ac3d0ff67000aed87ab3fea84b">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a488521ac3d0ff67000aed87ab3fea84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the local planner  <a href="classnav__core_1_1BaseLocalPlanner.html#a488521ac3d0ff67000aed87ab3fea84b">更多...</a><br /></td></tr>
+<tr class="separator:a488521ac3d0ff67000aed87ab3fea84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5526e4d50be56e27bf5a11a2c177453"><td class="memItemLeft" align="right" valign="top"><a id="ad5526e4d50be56e27bf5a11a2c177453"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseLocalPlanner.html#ad5526e4d50be56e27bf5a11a2c177453">~BaseLocalPlanner</a> ()</td></tr>
+<tr class="memdesc:ad5526e4d50be56e27bf5a11a2c177453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the interface <br /></td></tr>
+<tr class="separator:ad5526e4d50be56e27bf5a11a2c177453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Provides an interface for local planners used in navigation. All local planners written as plugins for the navigation stack must adhere to this interface. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="aa02dad5e3be910ae7d5159b7a53c0188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02dad5e3be910ae7d5159b7a53c0188">&#9670;&nbsp;</a></span>computeVelocityCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseLocalPlanner::computeVelocityCommands </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_vel</td><td>Will be filled with the velocity command to be passed to the robot base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid velocity command was found, false otherwise </dd></dl>
+
+<p>在 <a class="el" href="classdwa__local__planner_1_1DWAPlannerROS.html#a700178e32159b614d328326b6ba5f8b0">dwa_local_planner::DWAPlannerROS</a> , 以及 <a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#adb2d96332da31a154db84930754409af">base_local_planner::TrajectoryPlannerROS</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a488521ac3d0ff67000aed87ab3fea84b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488521ac3d0ff67000aed87ab3fea84b">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::BaseLocalPlanner::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the local planner </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name to give this instance of the local planner </td></tr>
+    <tr><td class="paramname">tf</td><td>A pointer to a transform listener </td></tr>
+    <tr><td class="paramname">costmap_ros</td><td>The cost map to use for assigning costs to local plans </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classdwa__local__planner_1_1DWAPlannerROS.html#a61c4737a8e5eb82f4c2407326e411d85">dwa_local_planner::DWAPlannerROS</a> , 以及 <a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a9a758c9bd9cb0202ed06c07c5aa49c03">base_local_planner::TrajectoryPlannerROS</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a27b2312d3218496be06a298767b26716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27b2312d3218496be06a298767b26716">&#9670;&nbsp;</a></span>isGoalReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseLocalPlanner::isGoalReached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the goal pose has been achieved by the local planner </p>
+<dl class="section return"><dt>返回</dt><dd>True if achieved, false otherwise </dd></dl>
+
+<p>在 <a class="el" href="classdwa__local__planner_1_1DWAPlannerROS.html#a847c1877d967acd515d7ddf1ac246941">dwa_local_planner::DWAPlannerROS</a> , 以及 <a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#a5196b75a728ab7c37d6bdd99faa7b541">base_local_planner::TrajectoryPlannerROS</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ac30adc27a5c123f129ef7046ffbb0f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30adc27a5c123f129ef7046ffbb0f3e">&#9670;&nbsp;</a></span>setPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseLocalPlanner::setPlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the plan that the local planner is following </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plan</td><td>The plan to pass to the local planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the plan was updated successfully, false otherwise 全局路径规划出的结果利用该函数存取到局部规划器中 </dd></dl>
+
+<p>在 <a class="el" href="classdwa__local__planner_1_1DWAPlannerROS.html#a0cfcf517c3112678a7eabeb498d9b2ce">dwa_local_planner::DWAPlannerROS</a> , 以及 <a class="el" href="classbase__local__planner_1_1TrajectoryPlannerROS.html#af3a0c8be5746b1e1d8657f6b867ea934">base_local_planner::TrajectoryPlannerROS</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>nav_core/include/nav_core/<a class="el" href="base__local__planner_8h_source.html">base_local_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -94,12 +94,13 @@ namespace dwa_local_planner {
 
   }
 
+
   void DWAPlannerROS::initialize(
       std::string name,
       tf2_ros::Buffer* tf,
       costmap_2d::Costmap2DROS* costmap_ros) {
     if (! isInitialized()) {
-
+      
       ros::NodeHandle private_nh("~/" + name);
       g_plan_pub_ = private_nh.advertise<nav_msgs::Path>("global_plan", 1);
       l_plan_pub_ = private_nh.advertise<nav_msgs::Path>("local_plan", 1);
@@ -151,6 +152,7 @@ namespace dwa_local_planner {
     return dp_->setPlan(orig_global_plan);
   }
 
+
   bool DWAPlannerROS::isGoalReached() {
     if (! isInitialized()) {
       ROS_ERROR("This planner has not been initialized, please call initialize() before using this planner");
@@ -168,6 +170,7 @@ namespace dwa_local_planner {
       return false;
     }
   }
+
 
   void DWAPlannerROS::publishLocalPlan(std::vector<geometry_msgs::PoseStamped>& path) {
     base_local_planner::publishPlan(path, l_plan_pub_);
@@ -195,12 +198,6 @@ namespace dwa_local_planner {
     geometry_msgs::PoseStamped robot_vel;
     odom_helper_.getRobotVel(robot_vel);
 
-    /* For timing uncomment
-    struct timeval start, end;
-    double start_t, end_t, t_diff;
-    gettimeofday(&start, NULL);
-    */
-
     //compute what trajectory to drive along
     geometry_msgs::PoseStamped drive_cmds;
     drive_cmds.header.frame_id = costmap_ros_->getBaseFrameID();
@@ -208,14 +205,6 @@ namespace dwa_local_planner {
     // call with updated footprint
     base_local_planner::Trajectory path = dp_->findBestPath(global_pose, robot_vel, drive_cmds);
     //ROS_ERROR("Best: %.2f, %.2f, %.2f, %.2f", path.xv_, path.yv_, path.thetav_, path.cost_);
-
-    /* For timing uncomment
-    gettimeofday(&end, NULL);
-    start_t = start.tv_sec + double(start.tv_usec) / 1e6;
-    end_t = end.tv_sec + double(end.tv_usec) / 1e6;
-    t_diff = end_t - start_t;
-    ROS_INFO("Cycle time: %.9f", t_diff);
-    */
 
     //pass along drive commands
     cmd_vel.linear.x = drive_cmds.pose.position.x;
@@ -253,7 +242,6 @@ namespace dwa_local_planner {
     }
 
     //publish information to the visualizer
-
     publishLocalPlan(local_plan);
     return true;
   }

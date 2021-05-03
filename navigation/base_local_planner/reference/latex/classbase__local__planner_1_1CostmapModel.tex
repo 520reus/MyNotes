@@ -1,0 +1,190 @@
+\hypertarget{classbase__local__planner_1_1CostmapModel}{}\doxysection{base\+\_\+local\+\_\+planner\+::Costmap\+Model类 参考}
+\label{classbase__local__planner_1_1CostmapModel}\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+
+
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide grid based collision checks for the trajectory controller using the costmap.  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+model.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Costmap\+Model 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1CostmapModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a7f785fd68a7d341c41a5c2397e7b8a06}{Costmap\+Model}} (const costmap\+\_\+2d\+::\+Costmap2D \&costmap)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel}{Costmap\+Model}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a0ec575505589c1816559a563b34cd682}\label{classbase__local__planner_1_1CostmapModel_a0ec575505589c1816559a563b34cd682}} 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a0ec575505589c1816559a563b34cd682}{$\sim$\+Costmap\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the world model \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a8a6c30a640dc5046a483bc109f0d99b1}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a8c65ee26aa8032afb635c3cb544e57cf}{line\+Cost}} (int x0, int x1, int y0, int y1) const
+\begin{DoxyCompactList}\small\item\em Rasterizes a line in the costmap grid and checks for collisions \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_abfd021e995f9493ddeb64184a0bd3cf8}{point\+Cost}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Checks the cost of a point in the costmap \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a36d4c808bc441e2b87b0ac038099993a}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)=0
+\begin{DoxyCompactList}\small\item\em Subclass will implement this method to check a footprint at a given position and orientation for legality in the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}\label{classbase__local__planner_1_1CostmapModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}} 
+double {\bfseries footprint\+Cost} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a358fe0d75fefe46dda134ee6e3305f71}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius, double extra)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide grid based collision checks for the trajectory controller using the costmap. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a7f785fd68a7d341c41a5c2397e7b8a06}\label{classbase__local__planner_1_1CostmapModel_a7f785fd68a7d341c41a5c2397e7b8a06}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!CostmapModel@{CostmapModel}}
+\index{CostmapModel@{CostmapModel}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{CostmapModel()}{CostmapModel()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Costmap\+Model\+::\+Costmap\+Model (\begin{DoxyParamCaption}\item[{const costmap\+\_\+2d\+::\+Costmap2D \&}]{costmap }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel}{Costmap\+Model}} 
+
+
+\begin{DoxyParams}{参数}
+{\em costmap} & The costmap that should be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a8a6c30a640dc5046a483bc109f0d99b1}\label{classbase__local__planner_1_1CostmapModel_a8a6c30a640dc5046a483bc109f0d99b1}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+Costmap\+Model\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{position,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double}]{inscribed\+\_\+radius,  }\item[{double}]{circumscribed\+\_\+radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise\+: -\/1 if footprint covers at least a lethal obstacle cell, or -\/2 if footprint covers at least a no-\/information cell, or -\/3 if footprint is \mbox{[}partially\mbox{]} outside of the map 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}{base\+\_\+local\+\_\+planner\+::\+World\+Model}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a36d4c808bc441e2b87b0ac038099993a}\label{classbase__local__planner_1_1CostmapModel_a36d4c808bc441e2b87b0ac038099993a}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost}
+
+
+
+Subclass will implement this method to check a footprint at a given position and orientation for legality in the world 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise\+: -\/1 if footprint covers at least a lethal obstacle cell, or -\/2 if footprint covers at least a no-\/information cell, or -\/3 if footprint is partially or totally outside of the map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a358fe0d75fefe46dda134ee6e3305f71}\label{classbase__local__planner_1_1CostmapModel_a358fe0d75fefe46dda134ee6e3305f71}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_a8c65ee26aa8032afb635c3cb544e57cf}\label{classbase__local__planner_1_1CostmapModel_a8c65ee26aa8032afb635c3cb544e57cf}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!lineCost@{lineCost}}
+\index{lineCost@{lineCost}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{lineCost()}{lineCost()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Costmap\+Model\+::line\+Cost (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1 }\end{DoxyParamCaption}) const}
+
+
+
+Rasterizes a line in the costmap grid and checks for collisions 
+
+
+\begin{DoxyParams}{参数}
+{\em x0} & The x position of the first cell in grid coordinates \\
+\hline
+{\em y0} & The y position of the first cell in grid coordinates \\
+\hline
+{\em x1} & The x position of the second cell in grid coordinates \\
+\hline
+{\em y1} & The y position of the second cell in grid coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A positive cost for a legal line... negative otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1CostmapModel_abfd021e995f9493ddeb64184a0bd3cf8}\label{classbase__local__planner_1_1CostmapModel_abfd021e995f9493ddeb64184a0bd3cf8}} 
+\index{base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}!pointCost@{pointCost}}
+\index{pointCost@{pointCost}!base\_local\_planner::CostmapModel@{base\_local\_planner::CostmapModel}}
+\doxysubsubsection{\texorpdfstring{pointCost()}{pointCost()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Costmap\+Model\+::point\+Cost (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Checks the cost of a point in the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The x position of the point in cell coordinates \\
+\hline
+{\em y} & The y position of the point in cell coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A positive cost for a legal point... negative otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/costmap\+\_\+model.\+h\end{DoxyCompactItemize}

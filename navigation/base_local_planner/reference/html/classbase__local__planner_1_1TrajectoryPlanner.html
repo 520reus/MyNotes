@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::TrajectoryPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html">TrajectoryPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::TrajectoryPlanner类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Computes control velocities for a robot given a costmap, a plan, and the robot's position in the world.  
+ <a href="classbase__local__planner_1_1TrajectoryPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trajectory__planner_8h_source.html">trajectory_planner.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a49c9d7e52d7cad7e90baba29ad6b8a59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a49c9d7e52d7cad7e90baba29ad6b8a59">TrajectoryPlanner</a> (<a class="el" href="classbase__local__planner_1_1WorldModel.html">WorldModel</a> &amp;world_model, const costmap_2d::Costmap2D &amp;costmap, std::vector&lt; geometry_msgs::Point &gt; footprint_spec, double acc_lim_x=1.0, double acc_lim_y=1.0, double acc_lim_theta=1.0, double sim_time=1.0, double sim_granularity=0.025, int vx_samples=20, int vtheta_samples=20, double path_distance_bias=0.6, double goal_distance_bias=0.8, double occdist_scale=0.2, double heading_lookahead=0.325, double oscillation_reset_dist=0.05, double escape_reset_dist=0.10, double escape_reset_theta=M_PI_2, bool holonomic_robot=true, double max_vel_x=0.5, double min_vel_x=0.1, double max_vel_th=1.0, double min_vel_th=-1.0, double min_in_place_vel_th=0.4, double backup_vel=-0.1, bool dwa=false, bool heading_scoring=false, double heading_scoring_timestep=0.1, bool meter_scoring=true, bool simple_attractor=false, std::vector&lt; double &gt; y_vels=std::vector&lt; double &gt;(0), double stop_time_buffer=0.2, double sim_period=0.1, double angular_sim_granularity=0.025)</td></tr>
+<tr class="memdesc:a49c9d7e52d7cad7e90baba29ad6b8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a trajectory controller  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a49c9d7e52d7cad7e90baba29ad6b8a59">更多...</a><br /></td></tr>
+<tr class="separator:a49c9d7e52d7cad7e90baba29ad6b8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccbb304a8c6fe44b81a279a689831e6"><td class="memItemLeft" align="right" valign="top"><a id="aeccbb304a8c6fe44b81a279a689831e6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#aeccbb304a8c6fe44b81a279a689831e6">~TrajectoryPlanner</a> ()</td></tr>
+<tr class="memdesc:aeccbb304a8c6fe44b81a279a689831e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs a trajectory controller <br /></td></tr>
+<tr class="separator:aeccbb304a8c6fe44b81a279a689831e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b83584ef7b95a641db52efc67bc59c"><td class="memItemLeft" align="right" valign="top"><a id="a30b83584ef7b95a641db52efc67bc59c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a30b83584ef7b95a641db52efc67bc59c">reconfigure</a> (BaseLocalPlannerConfig &amp;cfg)</td></tr>
+<tr class="memdesc:a30b83584ef7b95a641db52efc67bc59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconfigures the trajectory planner <br /></td></tr>
+<tr class="separator:a30b83584ef7b95a641db52efc67bc59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa1222899b6f8d630924f7de5e32a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a0fa1222899b6f8d630924f7de5e32a66">findBestPath</a> (const geometry_msgs::PoseStamped &amp;global_pose, geometry_msgs::PoseStamped &amp;global_vel, geometry_msgs::PoseStamped &amp;drive_velocities)</td></tr>
+<tr class="memdesc:a0fa1222899b6f8d630924f7de5e32a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the current position, orientation, and velocity of the robot, return a trajectory to follow  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a0fa1222899b6f8d630924f7de5e32a66">更多...</a><br /></td></tr>
+<tr class="separator:a0fa1222899b6f8d630924f7de5e32a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c384954625a91934bad8354f5dc24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#ad8c384954625a91934bad8354f5dc24d">updatePlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;new_plan, bool compute_dists=false)</td></tr>
+<tr class="memdesc:ad8c384954625a91934bad8354f5dc24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the plan that the controller is following  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#ad8c384954625a91934bad8354f5dc24d">更多...</a><br /></td></tr>
+<tr class="separator:ad8c384954625a91934bad8354f5dc24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2106157af1e6bf29c289524ee3391db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a2106157af1e6bf29c289524ee3391db4">getLocalGoal</a> (double &amp;x, double &amp;y)</td></tr>
+<tr class="memdesc:a2106157af1e6bf29c289524ee3391db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the goal the robot is currently pursuing in world corrdinates  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a2106157af1e6bf29c289524ee3391db4">更多...</a><br /></td></tr>
+<tr class="separator:a2106157af1e6bf29c289524ee3391db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f45df8237d94cafe714d4e5aa4eeb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a16f45df8237d94cafe714d4e5aa4eeb3">checkTrajectory</a> (double x, double y, double theta, double vx, double vy, double vtheta, double vx_samp, double vy_samp, double vtheta_samp)</td></tr>
+<tr class="memdesc:a16f45df8237d94cafe714d4e5aa4eeb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and score a single trajectory  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a16f45df8237d94cafe714d4e5aa4eeb3">更多...</a><br /></td></tr>
+<tr class="separator:a16f45df8237d94cafe714d4e5aa4eeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff397f04fbb25760ab68e2ac65a99b0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a8ff397f04fbb25760ab68e2ac65a99b0">scoreTrajectory</a> (double x, double y, double theta, double vx, double vy, double vtheta, double vx_samp, double vy_samp, double vtheta_samp)</td></tr>
+<tr class="memdesc:a8ff397f04fbb25760ab68e2ac65a99b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate and score a single trajectory  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a8ff397f04fbb25760ab68e2ac65a99b0">更多...</a><br /></td></tr>
+<tr class="separator:a8ff397f04fbb25760ab68e2ac65a99b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f9726d0f43f94e8c5b3a50556dd7b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a23f9726d0f43f94e8c5b3a50556dd7b7">getCellCosts</a> (int cx, int cy, float &amp;path_cost, float &amp;goal_cost, float &amp;occ_cost, float &amp;total_cost)</td></tr>
+<tr class="memdesc:a23f9726d0f43f94e8c5b3a50556dd7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the components and total cost for a map grid cell  <a href="classbase__local__planner_1_1TrajectoryPlanner.html#a23f9726d0f43f94e8c5b3a50556dd7b7">更多...</a><br /></td></tr>
+<tr class="separator:a23f9726d0f43f94e8c5b3a50556dd7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7145aa72e0045489279955d59fcaa3d4"><td class="memItemLeft" align="right" valign="top"><a id="a7145aa72e0045489279955d59fcaa3d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a7145aa72e0045489279955d59fcaa3d4">setFootprint</a> (std::vector&lt; geometry_msgs::Point &gt; footprint)</td></tr>
+<tr class="memdesc:a7145aa72e0045489279955d59fcaa3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the footprint specification of the robot. <br /></td></tr>
+<tr class="separator:a7145aa72e0045489279955d59fcaa3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3349ee9e66e3943b48a8c75189e1e0cc"><td class="memItemLeft" align="right" valign="top"><a id="a3349ee9e66e3943b48a8c75189e1e0cc"></a>
+geometry_msgs::Polygon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectoryPlanner.html#a3349ee9e66e3943b48a8c75189e1e0cc">getFootprintPolygon</a> () const</td></tr>
+<tr class="memdesc:a3349ee9e66e3943b48a8c75189e1e0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the footprint specification of the robot. <br /></td></tr>
+<tr class="separator:a3349ee9e66e3943b48a8c75189e1e0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bedb8110dc79ebf49ba544f8ac5e8bd"><td class="memItemLeft" align="right" valign="top"><a id="a9bedb8110dc79ebf49ba544f8ac5e8bd"></a>
+std::vector&lt; geometry_msgs::Point &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getFootprint</b> () const</td></tr>
+<tr class="separator:a9bedb8110dc79ebf49ba544f8ac5e8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a156887bf956f38e1462db6dfbbe523a1"><td class="memItemLeft" align="right" valign="top"><a id="a156887bf956f38e1462db6dfbbe523a1"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>TrajectoryPlannerTest</b></td></tr>
+<tr class="separator:a156887bf956f38e1462db6dfbbe523a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Computes control velocities for a robot given a costmap, a plan, and the robot's position in the world. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a49c9d7e52d7cad7e90baba29ad6b8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c9d7e52d7cad7e90baba29ad6b8a59">&#9670;&nbsp;</a></span>TrajectoryPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryPlanner::TrajectoryPlanner </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1WorldModel.html">WorldModel</a> &amp;&#160;</td>
+          <td class="paramname"><em>world_model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const costmap_2d::Costmap2D &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::Point &gt;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>acc_lim_x</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>acc_lim_y</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>acc_lim_theta</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_time</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_granularity</em> = <code>0.025</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx_samples</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vtheta_samples</em> = <code>20</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>path_distance_bias</em> = <code>0.6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_distance_bias</em> = <code>0.8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>occdist_scale</em> = <code>0.2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>heading_lookahead</em> = <code>0.325</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oscillation_reset_dist</em> = <code>0.05</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>escape_reset_dist</em> = <code>0.10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>escape_reset_theta</em> = <code>M_PI_2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>holonomic_robot</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_x</em> = <code>0.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_vel_x</em> = <code>0.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_th</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_vel_th</em> = <code>-1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_in_place_vel_th</em> = <code>0.4</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>backup_vel</em> = <code>-0.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dwa</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>heading_scoring</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>heading_scoring_timestep</em> = <code>0.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>meter_scoring</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>simple_attractor</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>y_vels</em> = <code>std::vector&lt;&#160;double&#160;&gt;(0)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>stop_time_buffer</em> = <code>0.2</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em> = <code>0.1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angular_sim_granularity</em> = <code>0.025</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a trajectory controller </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_model</td><td>The <a class="el" href="classbase__local__planner_1_1WorldModel.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> the trajectory controller uses to check for collisions </td></tr>
+    <tr><td class="paramname">costmap</td><td>A reference to the Costmap the controller should use </td></tr>
+    <tr><td class="paramname">footprint_spec</td><td>A polygon representing the footprint of the robot. (Must be convex) </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+    <tr><td class="paramname">acc_lim_x</td><td>The acceleration limit of the robot in the x direction </td></tr>
+    <tr><td class="paramname">acc_lim_y</td><td>The acceleration limit of the robot in the y direction </td></tr>
+    <tr><td class="paramname">acc_lim_theta</td><td>The acceleration limit of the robot in the theta direction </td></tr>
+    <tr><td class="paramname">sim_time</td><td>The number of seconds to "roll-out" each trajectory </td></tr>
+    <tr><td class="paramname">sim_granularity</td><td>The distance between simulation points should be small enough that the robot doesn't hit things </td></tr>
+    <tr><td class="paramname">vx_samples</td><td>The number of trajectories to sample in the x dimension </td></tr>
+    <tr><td class="paramname">vtheta_samples</td><td>The number of trajectories to sample in the theta dimension </td></tr>
+    <tr><td class="paramname">path_distance_bias</td><td>A scaling factor for how close the robot should stay to the path </td></tr>
+    <tr><td class="paramname">goal_distance_bias</td><td>A scaling factor for how aggresively the robot should pursue a local goal </td></tr>
+    <tr><td class="paramname">occdist_scale</td><td>A scaling factor for how much the robot should prefer to stay away from obstacles </td></tr>
+    <tr><td class="paramname">heading_lookahead</td><td>How far the robot should look ahead of itself when differentiating between different rotational velocities </td></tr>
+    <tr><td class="paramname">oscillation_reset_dist</td><td>The distance the robot must travel before it can explore rotational velocities that were unsuccessful in the past </td></tr>
+    <tr><td class="paramname">escape_reset_dist</td><td>The distance the robot must travel before it can exit escape mode </td></tr>
+    <tr><td class="paramname">escape_reset_theta</td><td>The distance the robot must rotate before it can exit escape mode </td></tr>
+    <tr><td class="paramname">holonomic_robot</td><td>Set this to true if the robot being controlled can take y velocities and false otherwise </td></tr>
+    <tr><td class="paramname">max_vel_x</td><td>The maximum x velocity the controller will explore </td></tr>
+    <tr><td class="paramname">min_vel_x</td><td>The minimum x velocity the controller will explore </td></tr>
+    <tr><td class="paramname">max_vel_th</td><td>The maximum rotational velocity the controller will explore </td></tr>
+    <tr><td class="paramname">min_vel_th</td><td>The minimum rotational velocity the controller will explore </td></tr>
+    <tr><td class="paramname">min_in_place_vel_th</td><td>The absolute value of the minimum in-place rotational velocity the controller will explore </td></tr>
+    <tr><td class="paramname">backup_vel</td><td>The velocity to use while backing up </td></tr>
+    <tr><td class="paramname">dwa</td><td>Set this to true to use the Dynamic Window Approach, false to use acceleration limits </td></tr>
+    <tr><td class="paramname">heading_scoring</td><td>Set this to true to score trajectories based on the robot's heading after 1 timestep </td></tr>
+    <tr><td class="paramname">heading_scoring_timestep</td><td>How far to look ahead in time when we score heading based trajectories </td></tr>
+    <tr><td class="paramname">meter_scoring</td><td>adapt parameters to costmap resolution </td></tr>
+    <tr><td class="paramname">simple_attractor</td><td>Set this to true to allow simple attraction to a goal point instead of intelligent cost propagation </td></tr>
+    <tr><td class="paramname">y_vels</td><td>A vector of the y velocities the controller will explore </td></tr>
+    <tr><td class="paramname">angular_sim_granularity</td><td>The distance between simulation points for angular velocity should be small enough that the robot doesn't hit things </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a16f45df8237d94cafe714d4e5aa4eeb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f45df8237d94cafe714d4e5aa4eeb3">&#9670;&nbsp;</a></span>checkTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlanner::checkTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and score a single trajectory </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x position of the robot <br  />
+ </td></tr>
+    <tr><td class="paramname">y</td><td>The y position of the robot <br  />
+ </td></tr>
+    <tr><td class="paramname">theta</td><td>The orientation of the robot </td></tr>
+    <tr><td class="paramname">vx</td><td>The x velocity of the robot </td></tr>
+    <tr><td class="paramname">vy</td><td>The y velocity of the robot </td></tr>
+    <tr><td class="paramname">vtheta</td><td>The theta velocity of the robot </td></tr>
+    <tr><td class="paramname">vx_samp</td><td>The x velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>The y velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>The theta velocity used to seed the trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the trajectory is legal, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a0fa1222899b6f8d630924f7de5e32a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa1222899b6f8d630924f7de5e32a66">&#9670;&nbsp;</a></span>findBestPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> base_local_planner::TrajectoryPlanner::findBestPath </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>drive_velocities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given the current position, orientation, and velocity of the robot, return a trajectory to follow </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>The current pose of the robot in world space </td></tr>
+    <tr><td class="paramname">global_vel</td><td>The current velocity of the robot in world space </td></tr>
+    <tr><td class="paramname">drive_velocities</td><td>Will be set to velocities to send to the robot base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The selected path or trajectory </dd></dl>
+
+</div>
+</div>
+<a id="a23f9726d0f43f94e8c5b3a50556dd7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f9726d0f43f94e8c5b3a50556dd7b7">&#9670;&nbsp;</a></span>getCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlanner::getCellCosts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>path_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>goal_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>occ_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>total_cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the components and total cost for a map grid cell </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cx</td><td>The x coordinate of the cell in the map grid </td></tr>
+    <tr><td class="paramname">cy</td><td>The y coordinate of the cell in the map grid </td></tr>
+    <tr><td class="paramname">path_cost</td><td>Will be set to the path distance component of the cost function </td></tr>
+    <tr><td class="paramname">goal_cost</td><td>Will be set to the goal distance component of the cost function </td></tr>
+    <tr><td class="paramname">occ_cost</td><td>Will be set to the costmap value of the cell </td></tr>
+    <tr><td class="paramname">total_cost</td><td>Will be set to the value of the overall cost function, taking into account the scaling parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the cell is traversible and therefore a legal location for the robot to move to </dd></dl>
+
+</div>
+</div>
+<a id="a2106157af1e6bf29c289524ee3391db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2106157af1e6bf29c289524ee3391db4">&#9670;&nbsp;</a></span>getLocalGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryPlanner::getLocalGoal </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor for the goal the robot is currently pursuing in world corrdinates </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Will be set to the x position of the local goal </td></tr>
+    <tr><td class="paramname">y</td><td>Will be set to the y position of the local goal </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ff397f04fbb25760ab68e2ac65a99b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff397f04fbb25760ab68e2ac65a99b0">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlanner::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate and score a single trajectory </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x position of the robot <br  />
+ </td></tr>
+    <tr><td class="paramname">y</td><td>The y position of the robot <br  />
+ </td></tr>
+    <tr><td class="paramname">theta</td><td>The orientation of the robot </td></tr>
+    <tr><td class="paramname">vx</td><td>The x velocity of the robot </td></tr>
+    <tr><td class="paramname">vy</td><td>The y velocity of the robot </td></tr>
+    <tr><td class="paramname">vtheta</td><td>The theta velocity of the robot </td></tr>
+    <tr><td class="paramname">vx_samp</td><td>The x velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>The y velocity used to seed the trajectory </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>The theta velocity used to seed the trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The score (as double) </dd></dl>
+
+</div>
+</div>
+<a id="ad8c384954625a91934bad8354f5dc24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c384954625a91934bad8354f5dc24d">&#9670;&nbsp;</a></span>updatePlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryPlanner::updatePlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>compute_dists</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the plan that the controller is following </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_plan</td><td>A new plan for the controller to follow </td></tr>
+    <tr><td class="paramname">compute_dists</td><td>Wheter or not to compute path/goal distances when a plan is updated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base_local_planner/<a class="el" href="trajectory__planner_8h_source.html">trajectory_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

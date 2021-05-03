@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::VoxelGridModel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html">VoxelGridModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::VoxelGridModel类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class that implements the <a class="el" href="classbase__local__planner_1_1WorldModel.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> interface to provide grid based collision checks for the trajectory controller using a 3D voxel grid.  
+ <a href="classbase__local__planner_1_1VoxelGridModel.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="voxel__grid__model_8h_source.html">voxel_grid_model.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::VoxelGridModel 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1VoxelGridModel.png" usemap="#base_5Flocal_5Fplanner::VoxelGridModel_map" alt=""/>
+  <map id="base_5Flocal_5Fplanner::VoxelGridModel_map" name="base_5Flocal_5Fplanner::VoxelGridModel_map">
+<area href="classbase__local__planner_1_1WorldModel.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="base_local_planner::WorldModel" shape="rect" coords="0,0,220,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a41482cba0c408053ef433d486693d8b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#a41482cba0c408053ef433d486693d8b4">VoxelGridModel</a> (double size_x, double size_y, double size_z, double xy_resolution, double z_resolution, double origin_x, double origin_y, double origin_z, double max_z, double obstacle_range)</td></tr>
+<tr class="memdesc:a41482cba0c408053ef433d486693d8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classbase__local__planner_1_1VoxelGridModel.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje...">VoxelGridModel</a>  <a href="classbase__local__planner_1_1VoxelGridModel.html#a41482cba0c408053ef433d486693d8b4">更多...</a><br /></td></tr>
+<tr class="separator:a41482cba0c408053ef433d486693d8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d0a3a6fa8ea481c8b3911b90236c3b"><td class="memItemLeft" align="right" valign="top"><a id="ab9d0a3a6fa8ea481c8b3911b90236c3b"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#ab9d0a3a6fa8ea481c8b3911b90236c3b">~VoxelGridModel</a> ()</td></tr>
+<tr class="memdesc:ab9d0a3a6fa8ea481c8b3911b90236c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the world model <br /></td></tr>
+<tr class="separator:ab9d0a3a6fa8ea481c8b3911b90236c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bc3668327838938f7881a6f553b521"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)</td></tr>
+<tr class="memdesc:aa6bc3668327838938f7881a6f553b521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">更多...</a><br /></td></tr>
+<tr class="separator:aa6bc3668327838938f7881a6f553b521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5b2c042a813dc06a9fdbfcd0bd6291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#a3a5b2c042a813dc06a9fdbfcd0bd6291">updateWorld</a> (const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, const std::vector&lt; costmap_2d::Observation &gt; &amp;observations, const std::vector&lt; <a class="el" href="classbase__local__planner_1_1PlanarLaserScan.html">PlanarLaserScan</a> &gt; &amp;laser_scans)</td></tr>
+<tr class="memdesc:a3a5b2c042a813dc06a9fdbfcd0bd6291"><td class="mdescLeft">&#160;</td><td class="mdescRight">The costmap already keeps track of world observations, so for this world model this method does nothing  <a href="classbase__local__planner_1_1VoxelGridModel.html#a3a5b2c042a813dc06a9fdbfcd0bd6291">更多...</a><br /></td></tr>
+<tr class="separator:a3a5b2c042a813dc06a9fdbfcd0bd6291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64342a63e8e7360997aba566b5f0ed1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#ae64342a63e8e7360997aba566b5f0ed1">getPoints</a> (sensor_msgs::PointCloud2 &amp;cloud)</td></tr>
+<tr class="memdesc:ae64342a63e8e7360997aba566b5f0ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function copying the Voxel points into a point cloud  <a href="classbase__local__planner_1_1VoxelGridModel.html#ae64342a63e8e7360997aba566b5f0ed1">更多...</a><br /></td></tr>
+<tr class="separator:ae64342a63e8e7360997aba566b5f0ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1VoxelGridModel.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memItemLeft" align="right" valign="top"><a id="ac7e8dc9c77a2dd2fa77f5a27d812fd43"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>footprintCost</b> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1VoxelGridModel.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1WorldModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1WorldModel')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1WorldModel.html">base_local_planner::WorldModel</a></td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memItemLeft" align="right" valign="top"><a id="ac7e8dc9c77a2dd2fa77f5a27d812fd43"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>footprintCost</b> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1WorldModel.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1WorldModel.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memItemLeft" align="right" valign="top"><a id="a87c45611143fde55c4a2efb4d078471d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1WorldModel.html#a87c45611143fde55c4a2efb4d078471d">~WorldModel</a> ()</td></tr>
+<tr class="memdesc:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement a destructor <br /></td></tr>
+<tr class="separator:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1WorldModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A class that implements the <a class="el" href="classbase__local__planner_1_1WorldModel.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> interface to provide grid based collision checks for the trajectory controller using a 3D voxel grid. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a41482cba0c408053ef433d486693d8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41482cba0c408053ef433d486693d8b4">&#9670;&nbsp;</a></span>VoxelGridModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::VoxelGridModel::VoxelGridModel </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xy_resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>origin_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>origin_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>origin_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obstacle_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the <a class="el" href="classbase__local__planner_1_1VoxelGridModel.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje...">VoxelGridModel</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size_x</td><td>The x size of the map </td></tr>
+    <tr><td class="paramname">size_y</td><td>The y size of the map </td></tr>
+    <tr><td class="paramname">size_z</td><td>The z size of the map... up to 32 cells </td></tr>
+    <tr><td class="paramname">xy_resolution</td><td>The horizontal resolution of the map in meters/cell </td></tr>
+    <tr><td class="paramname">z_resolution</td><td>The vertical resolution of the map in meters/cell </td></tr>
+    <tr><td class="paramname">origin_x</td><td>The x value of the origin of the map </td></tr>
+    <tr><td class="paramname">origin_y</td><td>The y value of the origin of the map </td></tr>
+    <tr><td class="paramname">origin_z</td><td>The z value of the origin of the map </td></tr>
+    <tr><td class="paramname">max_z</td><td>The maximum height for an obstacle to be added to the grid </td></tr>
+    <tr><td class="paramname">obstacle_range</td><td>The maximum distance for obstacles to be added to the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa6bc3668327838938f7881a6f553b521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bc3668327838938f7881a6f553b521">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::VoxelGridModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1WorldModel.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel</a>.</p>
+
+</div>
+</div>
+<a id="a36d4c808bc441e2b87b0ac038099993a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d4c808bc441e2b87b0ac038099993a">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::WorldModel::footprintCost</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subclass will implement this method to check a footprint at a given position and orientation for legality in the world </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise: -1 if footprint covers at least a lethal obstacle cell, or -2 if footprint covers at least a no-information cell, or -3 if footprint is partially or totally outside of the map </dd></dl>
+
+</div>
+</div>
+<a id="a358fe0d75fefe46dda134ee6e3305f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358fe0d75fefe46dda134ee6e3305f71">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae64342a63e8e7360997aba566b5f0ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64342a63e8e7360997aba566b5f0ed1">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::VoxelGridModel::getPoints </td>
+          <td>(</td>
+          <td class="paramtype">sensor_msgs::PointCloud2 &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function copying the Voxel points into a point cloud </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cloud</td><td>the point cloud to copy data to. It has the usual x,y,z channels </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a5b2c042a813dc06a9fdbfcd0bd6291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5b2c042a813dc06a9fdbfcd0bd6291">&#9670;&nbsp;</a></span>updateWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::VoxelGridModel::updateWorld </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; costmap_2d::Observation &gt; &amp;&#160;</td>
+          <td class="paramname"><em>observations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classbase__local__planner_1_1PlanarLaserScan.html">PlanarLaserScan</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>laser_scans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The costmap already keeps track of world observations, so for this world model this method does nothing </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">footprint</td><td>The footprint of the robot in its current location </td></tr>
+    <tr><td class="paramname">observations</td><td>The observations from various sensors </td></tr>
+    <tr><td class="paramname">laser_scan</td><td>The scans used to clear freespace </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base_local_planner/<a class="el" href="voxel__grid__model_8h_source.html">voxel_grid_model.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

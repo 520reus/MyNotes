@@ -1,0 +1,172 @@
+\hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator}{}\doxysection{base\+\_\+local\+\_\+planner\+::Simple\+Trajectory\+Generator类 参考}
+\label{classbase__local__planner_1_1SimpleTrajectoryGenerator}\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+
+
+{\ttfamily \#include $<$simple\+\_\+trajectory\+\_\+generator.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Simple\+Trajectory\+Generator 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1SimpleTrajectoryGenerator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_a0810ac35a39d3d7ccc1c19a862e97fbf}{initialise}} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, const Eigen\+::\+Vector3f \&goal, \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$limits, const Eigen\+::\+Vector3f \&vsamples, std\+::vector$<$ Eigen\+::\+Vector3f $>$ additional\+\_\+samples, bool discretize\+\_\+by\+\_\+time=false)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_a56881a7d1e6cf7027eb2243a764dc0fa}{initialise}} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, const Eigen\+::\+Vector3f \&goal, \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$limits, const Eigen\+::\+Vector3f \&vsamples, bool discretize\+\_\+by\+\_\+time=false)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}{set\+Parameters}} (double sim\+\_\+time, double sim\+\_\+granularity, double angular\+\_\+sim\+\_\+granularity, bool use\+\_\+dwa=false, double sim\+\_\+period=0.\+0)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_ab2e9ca5e1468974af51acc17e5c7aec2}{has\+More\+Trajectories}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_adb064b57ea297fc3810e185861e444e8}{next\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a09675e3d736eaf9ff3b8c8bc3587b768}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a09675e3d736eaf9ff3b8c8bc3587b768}} 
+bool {\bfseries generate\+Trajectory} (Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f sample\+\_\+target\+\_\+vel, \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \&traj)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_aa537739d404cbb09cc6cfec1f7267e2d}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_aa537739d404cbb09cc6cfec1f7267e2d}} 
+static Eigen\+::\+Vector3f {\bfseries compute\+New\+Positions} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, double dt)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a12dcba06a05dff5ede75fc039e5e917a}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a12dcba06a05dff5ede75fc039e5e917a}} 
+static Eigen\+::\+Vector3f {\bfseries compute\+New\+Velocities} (const Eigen\+::\+Vector3f \&sample\+\_\+target\+\_\+vel, const Eigen\+::\+Vector3f \&vel, Eigen\+::\+Vector3f acclimits, double dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_acc42f25461d9894845955e5d464e4a58}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_acc42f25461d9894845955e5d464e4a58}} 
+unsigned int {\bfseries next\+\_\+sample\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6084045fc45c79ded7ef6b75f60320e7}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6084045fc45c79ded7ef6b75f60320e7}} 
+std\+::vector$<$ Eigen\+::\+Vector3f $>$ {\bfseries sample\+\_\+params\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a0586ccaf8b6372830bd715d476889bb9}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a0586ccaf8b6372830bd715d476889bb9}} 
+\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$ {\bfseries limits\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a1e308de90ce96375e50889bb75398830}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a1e308de90ce96375e50889bb75398830}} 
+Eigen\+::\+Vector3f {\bfseries pos\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6d5012705423167541f096bedaa5152f}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6d5012705423167541f096bedaa5152f}} 
+Eigen\+::\+Vector3f {\bfseries vel\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_aa811b5385f768045ec76638d431c4289}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_aa811b5385f768045ec76638d431c4289}} 
+bool {\bfseries continued\+\_\+acceleration\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a719ba193671c3057ac1dace84aa01526}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a719ba193671c3057ac1dace84aa01526}} 
+bool {\bfseries discretize\+\_\+by\+\_\+time\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6e59c0e68ed11342bcad2d80db5f967d}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a6e59c0e68ed11342bcad2d80db5f967d}} 
+double {\bfseries sim\+\_\+time\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_ac8e05c3fe4516c7343621649722b1bae}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_ac8e05c3fe4516c7343621649722b1bae}} 
+double {\bfseries sim\+\_\+granularity\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_abe5c2bf96effe4753a884f5947044fb9}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_abe5c2bf96effe4753a884f5947044fb9}} 
+double {\bfseries angular\+\_\+sim\+\_\+granularity\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_ad388680d803d492b2565c7f3f4a508e6}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_ad388680d803d492b2565c7f3f4a508e6}} 
+bool {\bfseries use\+\_\+dwa\+\_\+}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a5447b0d5c0fb3f642db474c86d0e33d8}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a5447b0d5c0fb3f642db474c86d0e33d8}} 
+double {\bfseries sim\+\_\+period\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+generates trajectories based on equi-\/distant discretisation of the degrees of freedom. This is supposed to be a simple and robust implementation of the \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator}{Trajectory\+Sample\+Generator}} interface, more efficient implementations are thinkable.
+
+This can be used for both dwa and trajectory rollout approaches. As an example, assuming these values\+: sim\+\_\+time = 1s, sim\+\_\+period=200ms, dt = 200ms, vsamples\+\_\+x=5, acc\+\_\+limit\+\_\+x = 1m/s$^\wedge$2, vel\+\_\+x=0 (robot at rest, values just for easy calculations) dwa\+\_\+planner will sample max-\/x-\/velocities from 0m/s to 0.\+2m/s. trajectory rollout approach will sample max-\/x-\/velocities 0m/s up to 1m/s trajectory rollout approach does so respecting the acceleration limit, so it gradually increases velocity 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_ab2e9ca5e1468974af51acc17e5c7aec2}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_ab2e9ca5e1468974af51acc17e5c7aec2}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!hasMoreTrajectories@{hasMoreTrajectories}}
+\index{hasMoreTrajectories@{hasMoreTrajectories}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{hasMoreTrajectories()}{hasMoreTrajectories()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::has\+More\+Trajectories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Whether this generator can create more trajectories 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator_a053d4cfcef3b7c84bc86eb4c87211e3b}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a56881a7d1e6cf7027eb2243a764dc0fa}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a56881a7d1e6cf7027eb2243a764dc0fa}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!initialise@{initialise}}
+\index{initialise@{initialise}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{initialise()}{initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::initialise (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{pos,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{const Eigen\+::\+Vector3f \&}]{goal,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$}]{limits,  }\item[{const Eigen\+::\+Vector3f \&}]{vsamples,  }\item[{bool}]{discretize\+\_\+by\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & current robot position \\
+\hline
+{\em vel} & current robot velocity \\
+\hline
+{\em limits} & Current velocity limits \\
+\hline
+{\em vsamples} & in how many samples to divide the given dimension \\
+\hline
+{\em use\+\_\+acceleration\+\_\+limits} & if true use physical model, else idealized robot model \\
+\hline
+{\em discretize\+\_\+by\+\_\+time} & if true, the trajectory is split according in chunks of the same duration, else of same length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a0810ac35a39d3d7ccc1c19a862e97fbf}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a0810ac35a39d3d7ccc1c19a862e97fbf}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!initialise@{initialise}}
+\index{initialise@{initialise}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{initialise()}{initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::initialise (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{pos,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{const Eigen\+::\+Vector3f \&}]{goal,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$}]{limits,  }\item[{const Eigen\+::\+Vector3f \&}]{vsamples,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3f $>$}]{additional\+\_\+samples,  }\item[{bool}]{discretize\+\_\+by\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & current robot position \\
+\hline
+{\em vel} & current robot velocity \\
+\hline
+{\em limits} & Current velocity limits \\
+\hline
+{\em vsamples} & in how many samples to divide the given dimension \\
+\hline
+{\em use\+\_\+acceleration\+\_\+limits} & if true use physical model, else idealized robot model \\
+\hline
+{\em additional\+\_\+samples} & (deprecated)\+: Additional velocity samples to generate individual trajectories from. \\
+\hline
+{\em discretize\+\_\+by\+\_\+time} & if true, the trajectory is split according in chunks of the same duration, else of same length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_adb064b57ea297fc3810e185861e444e8}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_adb064b57ea297fc3810e185861e444e8}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!nextTrajectory@{nextTrajectory}}
+\index{nextTrajectory@{nextTrajectory}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{nextTrajectory()}{nextTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::next\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Whether this generator can create more trajectories 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator_a810dd5771cf6cd1645fabf5c9bc25d94}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleTrajectoryGenerator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}\label{classbase__local__planner_1_1SimpleTrajectoryGenerator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{setParameters()}{setParameters()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::set\+Parameters (\begin{DoxyParamCaption}\item[{double}]{sim\+\_\+time,  }\item[{double}]{sim\+\_\+granularity,  }\item[{double}]{angular\+\_\+sim\+\_\+granularity,  }\item[{bool}]{use\+\_\+dwa = {\ttfamily false},  }\item[{double}]{sim\+\_\+period = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+This function is to be called only when parameters change
+
+
+\begin{DoxyParams}{参数}
+{\em sim\+\_\+granularity} & granularity of collision detection \\
+\hline
+{\em angular\+\_\+sim\+\_\+granularity} & angular granularity of collision detection \\
+\hline
+{\em use\+\_\+dwa} & whether to use DWA or trajectory rollout \\
+\hline
+{\em sim\+\_\+period} & distance between points in one trajectory \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/simple\+\_\+trajectory\+\_\+generator.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::SimpleTrajectoryGenerator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html">SimpleTrajectoryGenerator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::SimpleTrajectoryGenerator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="simple__trajectory__generator_8h_source.html">simple_trajectory_generator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::SimpleTrajectoryGenerator 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1SimpleTrajectoryGenerator.png" usemap="#base_5Flocal_5Fplanner::SimpleTrajectoryGenerator_map" alt=""/>
+  <map id="base_5Flocal_5Fplanner::SimpleTrajectoryGenerator_map" name="base_5Flocal_5Fplanner::SimpleTrajectoryGenerator_map">
+<area href="classbase__local__planner_1_1TrajectorySampleGenerator.html" title="Provides an interface for navigation trajectory generators" alt="base_local_planner::TrajectorySampleGenerator" shape="rect" coords="0,0,285,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0810ac35a39d3d7ccc1c19a862e97fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html#a0810ac35a39d3d7ccc1c19a862e97fbf">initialise</a> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, const Eigen::Vector3f &amp;goal, <a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> *limits, const Eigen::Vector3f &amp;vsamples, std::vector&lt; Eigen::Vector3f &gt; additional_samples, bool discretize_by_time=false)</td></tr>
+<tr class="separator:a0810ac35a39d3d7ccc1c19a862e97fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56881a7d1e6cf7027eb2243a764dc0fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html#a56881a7d1e6cf7027eb2243a764dc0fa">initialise</a> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, const Eigen::Vector3f &amp;goal, <a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> *limits, const Eigen::Vector3f &amp;vsamples, bool discretize_by_time=false)</td></tr>
+<tr class="separator:a56881a7d1e6cf7027eb2243a764dc0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce8e2d22eafe3f2a2d2daf236e1ce83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html#a9ce8e2d22eafe3f2a2d2daf236e1ce83">setParameters</a> (double sim_time, double sim_granularity, double angular_sim_granularity, bool use_dwa=false, double sim_period=0.0)</td></tr>
+<tr class="separator:a9ce8e2d22eafe3f2a2d2daf236e1ce83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e9ca5e1468974af51acc17e5c7aec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html#ab2e9ca5e1468974af51acc17e5c7aec2">hasMoreTrajectories</a> ()</td></tr>
+<tr class="separator:ab2e9ca5e1468974af51acc17e5c7aec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb064b57ea297fc3810e185861e444e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1SimpleTrajectoryGenerator.html#adb064b57ea297fc3810e185861e444e8">nextTrajectory</a> (<a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:adb064b57ea297fc3810e185861e444e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09675e3d736eaf9ff3b8c8bc3587b768"><td class="memItemLeft" align="right" valign="top"><a id="a09675e3d736eaf9ff3b8c8bc3587b768"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>generateTrajectory</b> (Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f sample_target_vel, <a class="el" href="classbase__local__planner_1_1Trajectory.html">base_local_planner::Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:a09675e3d736eaf9ff3b8c8bc3587b768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1TrajectorySampleGenerator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1TrajectorySampleGenerator')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1TrajectorySampleGenerator.html">base_local_planner::TrajectorySampleGenerator</a></td></tr>
+<tr class="memitem:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1TrajectorySampleGenerator"><td class="memItemLeft" align="right" valign="top"><a id="a409735b0c1e854fe288d61dcef810175"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1TrajectorySampleGenerator.html#a409735b0c1e854fe288d61dcef810175">~TrajectorySampleGenerator</a> ()</td></tr>
+<tr class="memdesc:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1TrajectorySampleGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the interface <br /></td></tr>
+<tr class="separator:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1TrajectorySampleGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aa537739d404cbb09cc6cfec1f7267e2d"><td class="memItemLeft" align="right" valign="top"><a id="aa537739d404cbb09cc6cfec1f7267e2d"></a>
+static Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>computeNewPositions</b> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, double dt)</td></tr>
+<tr class="separator:aa537739d404cbb09cc6cfec1f7267e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12dcba06a05dff5ede75fc039e5e917a"><td class="memItemLeft" align="right" valign="top"><a id="a12dcba06a05dff5ede75fc039e5e917a"></a>
+static Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>computeNewVelocities</b> (const Eigen::Vector3f &amp;sample_target_vel, const Eigen::Vector3f &amp;vel, Eigen::Vector3f acclimits, double dt)</td></tr>
+<tr class="separator:a12dcba06a05dff5ede75fc039e5e917a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:acc42f25461d9894845955e5d464e4a58"><td class="memItemLeft" align="right" valign="top"><a id="acc42f25461d9894845955e5d464e4a58"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>next_sample_index_</b></td></tr>
+<tr class="separator:acc42f25461d9894845955e5d464e4a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6084045fc45c79ded7ef6b75f60320e7"><td class="memItemLeft" align="right" valign="top"><a id="a6084045fc45c79ded7ef6b75f60320e7"></a>
+std::vector&lt; Eigen::Vector3f &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sample_params_</b></td></tr>
+<tr class="separator:a6084045fc45c79ded7ef6b75f60320e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0586ccaf8b6372830bd715d476889bb9"><td class="memItemLeft" align="right" valign="top"><a id="a0586ccaf8b6372830bd715d476889bb9"></a>
+<a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>limits_</b></td></tr>
+<tr class="separator:a0586ccaf8b6372830bd715d476889bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e308de90ce96375e50889bb75398830"><td class="memItemLeft" align="right" valign="top"><a id="a1e308de90ce96375e50889bb75398830"></a>
+Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>pos_</b></td></tr>
+<tr class="separator:a1e308de90ce96375e50889bb75398830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5012705423167541f096bedaa5152f"><td class="memItemLeft" align="right" valign="top"><a id="a6d5012705423167541f096bedaa5152f"></a>
+Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><b>vel_</b></td></tr>
+<tr class="separator:a6d5012705423167541f096bedaa5152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa811b5385f768045ec76638d431c4289"><td class="memItemLeft" align="right" valign="top"><a id="aa811b5385f768045ec76638d431c4289"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>continued_acceleration_</b></td></tr>
+<tr class="separator:aa811b5385f768045ec76638d431c4289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719ba193671c3057ac1dace84aa01526"><td class="memItemLeft" align="right" valign="top"><a id="a719ba193671c3057ac1dace84aa01526"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>discretize_by_time_</b></td></tr>
+<tr class="separator:a719ba193671c3057ac1dace84aa01526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e59c0e68ed11342bcad2d80db5f967d"><td class="memItemLeft" align="right" valign="top"><a id="a6e59c0e68ed11342bcad2d80db5f967d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>sim_time_</b></td></tr>
+<tr class="separator:a6e59c0e68ed11342bcad2d80db5f967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e05c3fe4516c7343621649722b1bae"><td class="memItemLeft" align="right" valign="top"><a id="ac8e05c3fe4516c7343621649722b1bae"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>sim_granularity_</b></td></tr>
+<tr class="separator:ac8e05c3fe4516c7343621649722b1bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5c2bf96effe4753a884f5947044fb9"><td class="memItemLeft" align="right" valign="top"><a id="abe5c2bf96effe4753a884f5947044fb9"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>angular_sim_granularity_</b></td></tr>
+<tr class="separator:abe5c2bf96effe4753a884f5947044fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad388680d803d492b2565c7f3f4a508e6"><td class="memItemLeft" align="right" valign="top"><a id="ad388680d803d492b2565c7f3f4a508e6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_dwa_</b></td></tr>
+<tr class="separator:ad388680d803d492b2565c7f3f4a508e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5447b0d5c0fb3f642db474c86d0e33d8"><td class="memItemLeft" align="right" valign="top"><a id="a5447b0d5c0fb3f642db474c86d0e33d8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>sim_period_</b></td></tr>
+<tr class="separator:a5447b0d5c0fb3f642db474c86d0e33d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>generates trajectories based on equi-distant discretisation of the degrees of freedom. This is supposed to be a simple and robust implementation of the <a class="el" href="classbase__local__planner_1_1TrajectorySampleGenerator.html" title="Provides an interface for navigation trajectory generators">TrajectorySampleGenerator</a> interface, more efficient implementations are thinkable.</p>
+<p>This can be used for both dwa and trajectory rollout approaches. As an example, assuming these values: sim_time = 1s, sim_period=200ms, dt = 200ms, vsamples_x=5, acc_limit_x = 1m/s^2, vel_x=0 (robot at rest, values just for easy calculations) dwa_planner will sample max-x-velocities from 0m/s to 0.2m/s. trajectory rollout approach will sample max-x-velocities 0m/s up to 1m/s trajectory rollout approach does so respecting the acceleration limit, so it gradually increases velocity </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab2e9ca5e1468974af51acc17e5c7aec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e9ca5e1468974af51acc17e5c7aec2">&#9670;&nbsp;</a></span>hasMoreTrajectories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::hasMoreTrajectories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether this generator can create more trajectories </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1TrajectorySampleGenerator.html#a053d4cfcef3b7c84bc86eb4c87211e3b">base_local_planner::TrajectorySampleGenerator</a>.</p>
+
+</div>
+</div>
+<a id="a56881a7d1e6cf7027eb2243a764dc0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56881a7d1e6cf7027eb2243a764dc0fa">&#9670;&nbsp;</a></span>initialise() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::initialise </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vsamples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>discretize_by_time</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>current robot position </td></tr>
+    <tr><td class="paramname">vel</td><td>current robot velocity </td></tr>
+    <tr><td class="paramname">limits</td><td>Current velocity limits </td></tr>
+    <tr><td class="paramname">vsamples</td><td>in how many samples to divide the given dimension </td></tr>
+    <tr><td class="paramname">use_acceleration_limits</td><td>if true use physical model, else idealized robot model </td></tr>
+    <tr><td class="paramname">discretize_by_time</td><td>if true, the trajectory is split according in chunks of the same duration, else of same length </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0810ac35a39d3d7ccc1c19a862e97fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0810ac35a39d3d7ccc1c19a862e97fbf">&#9670;&nbsp;</a></span>initialise() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::initialise </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vsamples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Eigen::Vector3f &gt;&#160;</td>
+          <td class="paramname"><em>additional_samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>discretize_by_time</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>current robot position </td></tr>
+    <tr><td class="paramname">vel</td><td>current robot velocity </td></tr>
+    <tr><td class="paramname">limits</td><td>Current velocity limits </td></tr>
+    <tr><td class="paramname">vsamples</td><td>in how many samples to divide the given dimension </td></tr>
+    <tr><td class="paramname">use_acceleration_limits</td><td>if true use physical model, else idealized robot model </td></tr>
+    <tr><td class="paramname">additional_samples</td><td>(deprecated): Additional velocity samples to generate individual trajectories from. </td></tr>
+    <tr><td class="paramname">discretize_by_time</td><td>if true, the trajectory is split according in chunks of the same duration, else of same length </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adb064b57ea297fc3810e185861e444e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb064b57ea297fc3810e185861e444e8">&#9670;&nbsp;</a></span>nextTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::nextTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether this generator can create more trajectories </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1TrajectorySampleGenerator.html#a810dd5771cf6cd1645fabf5c9bc25d94">base_local_planner::TrajectorySampleGenerator</a>.</p>
+
+</div>
+</div>
+<a id="a9ce8e2d22eafe3f2a2d2daf236e1ce83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce8e2d22eafe3f2a2d2daf236e1ce83">&#9670;&nbsp;</a></span>setParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::setParameters </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_granularity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angular_sim_granularity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_dwa</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is to be called only when parameters change</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sim_granularity</td><td>granularity of collision detection </td></tr>
+    <tr><td class="paramname">angular_sim_granularity</td><td>angular granularity of collision detection </td></tr>
+    <tr><td class="paramname">use_dwa</td><td>whether to use DWA or trajectory rollout </td></tr>
+    <tr><td class="paramname">sim_period</td><td>distance between points in one trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base_local_planner/<a class="el" href="simple__trajectory__generator_8h_source.html">simple_trajectory_generator.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

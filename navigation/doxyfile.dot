@@ -1,0 +1,27 @@
+# 编码方式
+DOXYFILE_ENCODING      = UTF-8
+# 工程名（最后在 pdf 首页显示）
+PROJECT_NAME           = "project_name"
+# 版本号（显示在 pdf 首页）
+PROJECT_NUMBER         = "ver:1.0"
+# 项目 logo
+PROJECT_LOGO           = log.png
+# 输出的文档的存放位置（存放在reference文件夹）
+OUTPUT_DIRECTORY       = reference
+# 文档环境语言（默认是English， Chinese-Traditional是中文繁体）
+OUTPUT_LANGUAGE        = Chinese
+# 选择程序的语言类型（在需要的语言那边设置为 YES，不需要的设置为 NO）
+#可以设置的语言有：C、JAVA、FORTRAN、VHDL....
+OPTIMIZE_OUTPUT_FOR_C  = YES
+OPTIMIZE_OUTPUT_JAVA   = NO
+# 选择输入的程序地址（我选择的是在当前工程的目录下面，doc.dot 也在同一个目录下）
+INPUT                  = ./
+#指定处理目录下的文件类型，默认会去搜索典型的c文件，也可以自行指定，格式如下
+FILE_PATTERNS          = *.c \
+						 *.h
+# 是否递归遍历该目录下的所有文件（默认是NO，一般都要设置为YES）
+RECURSIVE              = YES
+# 是否生成 Latex，默认是NO`在这里插入代码片` （如果要生成 pdf，就一定要选择是）
+GENERATE_LATEX         = YES
+# 是否生成 HTML，默认是NO
+GENERATE_HTML          = YES

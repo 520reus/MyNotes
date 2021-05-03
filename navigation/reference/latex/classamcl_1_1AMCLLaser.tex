@@ -1,0 +1,35 @@
+\hypertarget{classamcl_1_1AMCLLaser}{}\doxysection{amcl\+::AMCLLaser类 参考}
+\label{classamcl_1_1AMCLLaser}\index{amcl::AMCLLaser@{amcl::AMCLLaser}}
+类 amcl\+::AMCLLaser 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classamcl_1_1AMCLLaser}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_a2935db8b62bb720f08e1ba40dbbbc26f}\label{classamcl_1_1AMCLLaser_a2935db8b62bb720f08e1ba40dbbbc26f}} 
+{\bfseries AMCLLaser} (size\+\_\+t max\+\_\+beams, \mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map)
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_aa001902cad25e2951145cadac0be7829}\label{classamcl_1_1AMCLLaser_aa001902cad25e2951145cadac0be7829}} 
+void {\bfseries Set\+Model\+Beam} (double z\+\_\+hit, double z\+\_\+short, double z\+\_\+max, double z\+\_\+rand, double sigma\+\_\+hit, double lambda\+\_\+short, double chi\+\_\+outlier)
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_a28dd8ec90f97a3d77090450dc8a63df6}\label{classamcl_1_1AMCLLaser_a28dd8ec90f97a3d77090450dc8a63df6}} 
+void {\bfseries Set\+Model\+Likelihood\+Field} (double z\+\_\+hit, double z\+\_\+rand, double sigma\+\_\+hit, double max\+\_\+occ\+\_\+dist)
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_a5b8da39ae836ccfbf87c527f42ffaf96}\label{classamcl_1_1AMCLLaser_a5b8da39ae836ccfbf87c527f42ffaf96}} 
+void {\bfseries Set\+Model\+Likelihood\+Field\+Prob} (double z\+\_\+hit, double z\+\_\+rand, double sigma\+\_\+hit, double max\+\_\+occ\+\_\+dist, bool do\+\_\+beamskip, double beam\+\_\+skip\+\_\+distance, double beam\+\_\+skip\+\_\+threshold, double beam\+\_\+skip\+\_\+error\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_ab9bcfb2c8d29b9677a01647f36a2df14}\label{classamcl_1_1AMCLLaser_ab9bcfb2c8d29b9677a01647f36a2df14}} 
+virtual bool {\bfseries Update\+Sensor} (\mbox{\hyperlink{struct__pf__t}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{classamcl_1_1AMCLSensorData}{AMCLSensor\+Data}} $\ast$data)
+\item 
+\mbox{\Hypertarget{classamcl_1_1AMCLLaser_a6803650b65b0ece79767ee64490fa5e8}\label{classamcl_1_1AMCLLaser_a6803650b65b0ece79767ee64490fa5e8}} 
+void {\bfseries Set\+Laser\+Pose} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \&laser\+\_\+pose)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+amcl/include/amcl/sensors/amcl\+\_\+laser.\+h\end{DoxyCompactItemize}

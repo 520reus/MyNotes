@@ -1,0 +1,384 @@
+\begin{theindex}
+
+  \item {addPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{47}
+  \item {adjustPlanResolution}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{18}
+
+  \indexspace
+
+  \item {base\_local\_planner::CostmapModel}, \hyperpage{5}
+    \subitem {CostmapModel}, \hyperpage{6}
+    \subitem {footprintCost}, \hyperpage{6, 7}
+    \subitem {lineCost}, \hyperpage{7}
+    \subitem {pointCost}, \hyperpage{8}
+  \item {base\_local\_planner::FootprintHelper}, \hyperpage{8}
+    \subitem {getFillCells}, \hyperpage{9}
+    \subitem {getFootprintCells}, \hyperpage{9}
+    \subitem {getLineCells}, \hyperpage{9}
+  \item {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{10}
+    \subitem {rotateToGoal}, \hyperpage{10}
+    \subitem {stopWithAccLimits}, \hyperpage{11}
+  \item {base\_local\_planner::LineIterator}, \hyperpage{12}
+  \item {base\_local\_planner::LocalPlannerLimits}, \hyperpage{12}
+    \subitem {getAccLimits}, \hyperpage{13}
+  \item {base\_local\_planner::LocalPlannerUtil}, \hyperpage{13}
+  \item {base\_local\_planner::MapCell}, \hyperpage{14}
+    \subitem {MapCell}, \hyperpage{15}
+  \item {base\_local\_planner::MapGrid}, \hyperpage{15}
+    \subitem {adjustPlanResolution}, \hyperpage{18}
+    \subitem {computeGoalDistance}, \hyperpage{18}
+    \subitem {computeTargetDistance}, \hyperpage{19}
+    \subitem {getIndex}, \hyperpage{19}
+    \subitem {MapGrid}, \hyperpage{16}, \hyperpage{18}
+    \subitem {obstacleCosts}, \hyperpage{19}
+    \subitem {operator()}, \hyperpage{19, 20}
+    \subitem {operator=}, \hyperpage{20}
+    \subitem {sizeCheck}, \hyperpage{21}
+    \subitem {unreachableCellCosts}, \hyperpage{21}
+    \subitem {updatePathCell}, \hyperpage{21}
+  \item {base\_local\_planner::MapGridCostFunction}, \hyperpage{21}
+    \subitem {obstacleCosts}, \hyperpage{22}
+    \subitem {prepare}, \hyperpage{23}
+    \subitem {scoreTrajectory}, \hyperpage{23}
+    \subitem {setStopOnFailure}, \hyperpage{23}
+    \subitem {setTargetPoses}, \hyperpage{23}
+    \subitem {unreachableCellCosts}, \hyperpage{23}
+  \item {base\_local\_planner::MapGridVisualizer}, \hyperpage{24}
+    \subitem {initialize}, \hyperpage{24}
+  \item {base\_local\_planner::ObstacleCostFunction}, \hyperpage{24}
+    \subitem {prepare}, \hyperpage{25}
+    \subitem {scoreTrajectory}, \hyperpage{25}
+  \item {base\_local\_planner::OdometryHelperRos}, \hyperpage{26}
+    \subitem {odomCallback}, \hyperpage{27}
+    \subitem {OdometryHelperRos}, \hyperpage{26}
+    \subitem {setOdomTopic}, \hyperpage{27}
+  \item {base\_local\_planner::OscillationCostFunction}, \hyperpage{27}
+    \subitem {prepare}, \hyperpage{28}
+    \subitem {scoreTrajectory}, \hyperpage{28}
+  \item {base\_local\_planner::PlanarLaserScan}, \hyperpage{28}
+  \item {base\_local\_planner::PointGrid}, \hyperpage{29}
+    \subitem {footprintCost}, \hyperpage{31, 32}
+    \subitem {getCellBounds}, \hyperpage{32}
+    \subitem {getNearestInCell}, \hyperpage{33}
+    \subitem {getPoints}, \hyperpage{33}
+    \subitem {getPointsInRange}, \hyperpage{33}
+    \subitem {gridCoords}, \hyperpage{34}
+    \subitem {gridIndex}, \hyperpage{35}
+    \subitem {insert}, \hyperpage{35}
+    \subitem {intersectionPoint}, \hyperpage{35}
+    \subitem {nearestNeighborDistance}, \hyperpage{36}
+    \subitem {orient}, \hyperpage{36, 37}
+    \subitem {PointGrid}, \hyperpage{30}
+    \subitem {ptInPolygon}, \hyperpage{37}
+    \subitem {ptInScan}, \hyperpage{37}
+    \subitem {removePointsInPolygon}, \hyperpage{38}
+    \subitem {removePointsInScanBoundry}, \hyperpage{38}
+    \subitem {segIntersect}, \hyperpage{38}
+    \subitem {sq\_distance}, \hyperpage{39}
+    \subitem {updateWorld}, \hyperpage{39}
+  \item {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{40}
+    \subitem {prepare}, \hyperpage{40}
+    \subitem {scoreTrajectory}, \hyperpage{40}
+  \item {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{41}
+    \subitem {findBestTrajectory}, \hyperpage{42}
+    \subitem {scoreTrajectory}, \hyperpage{42}
+    \subitem {SimpleScoredSamplingPlanner}, \hyperpage{41}
+  \item {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{43}
+    \subitem {hasMoreTrajectories}, \hyperpage{44}
+    \subitem {initialise}, \hyperpage{44}
+    \subitem {nextTrajectory}, \hyperpage{45}
+    \subitem {setParameters}, \hyperpage{45}
+  \item {base\_local\_planner::Trajectory}, \hyperpage{46}
+    \subitem {addPoint}, \hyperpage{47}
+    \subitem {getEndpoint}, \hyperpage{47}
+    \subitem {getPoint}, \hyperpage{48}
+    \subitem {getPointsSize}, \hyperpage{48}
+    \subitem {setPoint}, \hyperpage{48}
+    \subitem {Trajectory}, \hyperpage{47}
+  \item {base\_local\_planner::TrajectoryCostFunction}, \hyperpage{49}
+    \subitem {prepare}, \hyperpage{49}
+    \subitem {scoreTrajectory}, \hyperpage{50}
+  \item {base\_local\_planner::TrajectoryPlanner}, \hyperpage{50}
+    \subitem {checkTrajectory}, \hyperpage{53}
+    \subitem {findBestPath}, \hyperpage{54}
+    \subitem {getCellCosts}, \hyperpage{54}
+    \subitem {getLocalGoal}, \hyperpage{54}
+    \subitem {scoreTrajectory}, \hyperpage{55}
+    \subitem {TrajectoryPlanner}, \hyperpage{51}
+    \subitem {updatePlan}, \hyperpage{55}
+  \item {base\_local\_planner::TrajectoryPlannerROS}, \hyperpage{56}
+    \subitem {checkTrajectory}, \hyperpage{57}
+    \subitem {computeVelocityCommands}, \hyperpage{58}
+    \subitem {initialize}, \hyperpage{58}
+    \subitem {isGoalReached}, \hyperpage{58}
+    \subitem {scoreTrajectory}, \hyperpage{58}
+    \subitem {setPlan}, \hyperpage{59}
+    \subitem {TrajectoryPlannerROS}, \hyperpage{57}
+  \item {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{59}
+    \subitem {hasMoreTrajectories}, \hyperpage{60}
+    \subitem {nextTrajectory}, \hyperpage{60}
+  \item {base\_local\_planner::TrajectorySearch}, \hyperpage{61}
+    \subitem {findBestTrajectory}, \hyperpage{61}
+  \item {base\_local\_planner::TwirlingCostFunction}, \hyperpage{62}
+    \subitem {prepare}, \hyperpage{62}
+    \subitem {scoreTrajectory}, \hyperpage{62}
+  \item {base\_local\_planner::VelocityIterator}, \hyperpage{63}
+  \item {base\_local\_planner::VoxelGridModel}, \hyperpage{63}
+    \subitem {footprintCost}, \hyperpage{65, 66}
+    \subitem {getPoints}, \hyperpage{66}
+    \subitem {updateWorld}, \hyperpage{66}
+    \subitem {VoxelGridModel}, \hyperpage{64}
+  \item {base\_local\_planner::WavefrontMapAccessor}, \hyperpage{67}
+  \item {base\_local\_planner::WorldModel}, \hyperpage{68}
+    \subitem {footprintCost}, \hyperpage{68, 69}
+
+  \indexspace
+
+  \item {checkTrajectory}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{53}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{57}
+  \item {computeGoalDistance}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{18}
+  \item {computeTargetDistance}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{19}
+  \item {computeVelocityCommands}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{58}
+  \item {CostmapModel}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{6}
+
+  \indexspace
+
+  \item {findBestPath}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{54}
+  \item {findBestTrajectory}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{42}
+    \subitem {base\_local\_planner::TrajectorySearch}, \hyperpage{61}
+  \item {footprintCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{6, 7}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{31, 32}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{65, 66}
+    \subitem {base\_local\_planner::WorldModel}, \hyperpage{68, 69}
+
+  \indexspace
+
+  \item {getAccLimits}
+    \subitem {base\_local\_planner::LocalPlannerLimits}, \hyperpage{13}
+  \item {getCellBounds}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{32}
+  \item {getCellCosts}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{54}
+  \item {getEndpoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{47}
+  \item {getFillCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{9}
+  \item {getFootprintCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{9}
+  \item {getIndex}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{19}
+  \item {getLineCells}
+    \subitem {base\_local\_planner::FootprintHelper}, \hyperpage{9}
+  \item {getLocalGoal}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{54}
+  \item {getNearestInCell}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{33}
+  \item {getPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{48}
+  \item {getPoints}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{33}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{66}
+  \item {getPointsInRange}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{33}
+  \item {getPointsSize}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{48}
+  \item {gridCoords}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{34}
+  \item {gridIndex}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{35}
+
+  \indexspace
+
+  \item {hasMoreTrajectories}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{44}
+    \subitem {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{60}
+
+  \indexspace
+
+  \item {initialise}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{44}
+  \item {initialize}
+    \subitem {base\_local\_planner::MapGridVisualizer}, \hyperpage{24}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{58}
+  \item {insert}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{35}
+  \item {intersectionPoint}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{35}
+  \item {isGoalReached}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{58}
+
+  \indexspace
+
+  \item {lineCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{7}
+
+  \indexspace
+
+  \item {MapCell}
+    \subitem {base\_local\_planner::MapCell}, \hyperpage{15}
+  \item {MapGrid}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{16}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {nearestNeighborDistance}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{36}
+  \item {nextTrajectory}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{45}
+    \subitem {base\_local\_planner::TrajectorySampleGenerator}, 
+		\hyperpage{60}
+
+  \indexspace
+
+  \item {obstacleCosts}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{19}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{22}
+  \item {odomCallback}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{27}
+  \item {OdometryHelperRos}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{26}
+  \item {operator()}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{19, 20}
+  \item {operator=}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{20}
+  \item {orient}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{36, 37}
+
+  \indexspace
+
+  \item {pointCost}
+    \subitem {base\_local\_planner::CostmapModel}, \hyperpage{8}
+  \item {PointGrid}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{30}
+  \item {prepare}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{23}
+    \subitem {base\_local\_planner::ObstacleCostFunction}, 
+		\hyperpage{25}
+    \subitem {base\_local\_planner::OscillationCostFunction}, 
+		\hyperpage{28}
+    \subitem {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{40}
+    \subitem {base\_local\_planner::TrajectoryCostFunction}, 
+		\hyperpage{49}
+    \subitem {base\_local\_planner::TwirlingCostFunction}, 
+		\hyperpage{62}
+  \item {ptInPolygon}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{37}
+  \item {ptInScan}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{37}
+
+  \indexspace
+
+  \item {removePointsInPolygon}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{38}
+  \item {removePointsInScanBoundry}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{38}
+  \item {rotateToGoal}
+    \subitem {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{10}
+
+  \indexspace
+
+  \item {scoreTrajectory}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{23}
+    \subitem {base\_local\_planner::ObstacleCostFunction}, 
+		\hyperpage{25}
+    \subitem {base\_local\_planner::OscillationCostFunction}, 
+		\hyperpage{28}
+    \subitem {base\_local\_planner::PreferForwardCostFunction}, 
+		\hyperpage{40}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{42}
+    \subitem {base\_local\_planner::TrajectoryCostFunction}, 
+		\hyperpage{50}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{55}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{58}
+    \subitem {base\_local\_planner::TwirlingCostFunction}, 
+		\hyperpage{62}
+  \item {segIntersect}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{38}
+  \item {setOdomTopic}
+    \subitem {base\_local\_planner::OdometryHelperRos}, \hyperpage{27}
+  \item {setParameters}
+    \subitem {base\_local\_planner::SimpleTrajectoryGenerator}, 
+		\hyperpage{45}
+  \item {setPlan}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{59}
+  \item {setPoint}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{48}
+  \item {setStopOnFailure}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{23}
+  \item {setTargetPoses}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{23}
+  \item {SimpleScoredSamplingPlanner}
+    \subitem {base\_local\_planner::SimpleScoredSamplingPlanner}, 
+		\hyperpage{41}
+  \item {sizeCheck}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{21}
+  \item {sq\_distance}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{39}
+  \item {stopWithAccLimits}
+    \subitem {base\_local\_planner::LatchedStopRotateController}, 
+		\hyperpage{11}
+
+  \indexspace
+
+  \item {Trajectory}
+    \subitem {base\_local\_planner::Trajectory}, \hyperpage{47}
+  \item {TrajectoryPlanner}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{51}
+  \item {TrajectoryPlannerROS}
+    \subitem {base\_local\_planner::TrajectoryPlannerROS}, 
+		\hyperpage{57}
+
+  \indexspace
+
+  \item {unreachableCellCosts}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{21}
+    \subitem {base\_local\_planner::MapGridCostFunction}, 
+		\hyperpage{23}
+  \item {updatePathCell}
+    \subitem {base\_local\_planner::MapGrid}, \hyperpage{21}
+  \item {updatePlan}
+    \subitem {base\_local\_planner::TrajectoryPlanner}, \hyperpage{55}
+  \item {updateWorld}
+    \subitem {base\_local\_planner::PointGrid}, \hyperpage{39}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{66}
+
+  \indexspace
+
+  \item {VoxelGridModel}
+    \subitem {base\_local\_planner::VoxelGridModel}, \hyperpage{64}
+
+\end{theindex}

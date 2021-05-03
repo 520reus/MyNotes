@@ -1,6 +1,6 @@
 # base_local_planner局部规划器笔记
 
-局部导航可以说是整个导航包最为复杂的一个包了，base_lcoal_planner头文件30个，代码近1万行。从[wiki](https://link.zhihu.com/?target=http%3A//wiki.ros.org/base_local_planner)上可以看到，局部导航主要包括Trajectory Rollout 和 Dynamic Window Approach  (DWA)两种方法，理论上来说分别对应base_local_planner和dwa_local_planner两个包，但其实dwa的大部分代码都放在了base_local_planner包里面。
+局部规划可以说是整个导航包最为复杂的一个包了，base_lcoal_planner头文件30个，代码近1万行。局部导航主要包括Trajectory Rollout 和 Dynamic Window Approach  (DWA)两种方法，理论上来说分别对应base_local_planner和dwa_local_planner两个包，但其实**dwa的大部分代码都放在了base_local_planner包里面**。
 
 ## 框架    
 
@@ -51,3 +51,4 @@ private:
 ## 总结
 
 worldModel除了costmapModel在obstacle_cost_function里面用到之外，其他两个并没用到，所以这里就不看了。回顾整个工程，可以发现这种接口化的设计有种说不出的美感，每一步的实现都具体踏实，调用又简洁可靠，将一个复杂的项目简化到游刃有余的地步，实在厉害。原来的非接口的trajectory_planner就不看了，有了电驴还要啥自行车（主要因为懒）。
+

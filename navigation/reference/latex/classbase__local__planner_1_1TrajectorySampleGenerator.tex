@@ -1,0 +1,58 @@
+\hypertarget{classbase__local__planner_1_1TrajectorySampleGenerator}{}\doxysection{base\+\_\+local\+\_\+planner\+::Trajectory\+Sample\+Generator类 参考}
+\label{classbase__local__planner_1_1TrajectorySampleGenerator}\index{base\_local\_planner::TrajectorySampleGenerator@{base\_local\_planner::TrajectorySampleGenerator}}
+
+
+Provides an interface for navigation trajectory generators  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+sample\+\_\+generator.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Trajectory\+Sample\+Generator 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1TrajectorySampleGenerator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator_a053d4cfcef3b7c84bc86eb4c87211e3b}{has\+More\+Trajectories}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator_a810dd5771cf6cd1645fabf5c9bc25d94}{next\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj)=0
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectorySampleGenerator_a409735b0c1e854fe288d61dcef810175}\label{classbase__local__planner_1_1TrajectorySampleGenerator_a409735b0c1e854fe288d61dcef810175}} 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator_a409735b0c1e854fe288d61dcef810175}{$\sim$\+Trajectory\+Sample\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides an interface for navigation trajectory generators 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectorySampleGenerator_a053d4cfcef3b7c84bc86eb4c87211e3b}\label{classbase__local__planner_1_1TrajectorySampleGenerator_a053d4cfcef3b7c84bc86eb4c87211e3b}} 
+\index{base\_local\_planner::TrajectorySampleGenerator@{base\_local\_planner::TrajectorySampleGenerator}!hasMoreTrajectories@{hasMoreTrajectories}}
+\index{hasMoreTrajectories@{hasMoreTrajectories}!base\_local\_planner::TrajectorySampleGenerator@{base\_local\_planner::TrajectorySampleGenerator}}
+\doxysubsubsection{\texorpdfstring{hasMoreTrajectories()}{hasMoreTrajectories()}}
+{\footnotesize\ttfamily virtual bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator\+::has\+More\+Trajectories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Whether this generator can create more trajectories 
+
+在 \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_ab2e9ca5e1468974af51acc17e5c7aec2}{base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator}} 内被实现.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectorySampleGenerator_a810dd5771cf6cd1645fabf5c9bc25d94}\label{classbase__local__planner_1_1TrajectorySampleGenerator_a810dd5771cf6cd1645fabf5c9bc25d94}} 
+\index{base\_local\_planner::TrajectorySampleGenerator@{base\_local\_planner::TrajectorySampleGenerator}!nextTrajectory@{nextTrajectory}}
+\index{nextTrajectory@{nextTrajectory}!base\_local\_planner::TrajectorySampleGenerator@{base\_local\_planner::TrajectorySampleGenerator}}
+\doxysubsubsection{\texorpdfstring{nextTrajectory()}{nextTrajectory()}}
+{\footnotesize\ttfamily virtual bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator\+::next\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Whether this generator can create more trajectories 
+
+在 \mbox{\hyperlink{classbase__local__planner_1_1SimpleTrajectoryGenerator_adb064b57ea297fc3810e185861e444e8}{base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/trajectory\+\_\+sample\+\_\+generator.\+h\end{DoxyCompactItemize}

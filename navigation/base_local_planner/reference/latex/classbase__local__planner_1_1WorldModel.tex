@@ -1,0 +1,93 @@
+\hypertarget{classbase__local__planner_1_1WorldModel}{}\doxysection{base\+\_\+local\+\_\+planner\+::World\+Model类 参考}
+\label{classbase__local__planner_1_1WorldModel}\index{base\_local\_planner::WorldModel@{base\_local\_planner::WorldModel}}
+
+
+An interface the trajectory controller uses to interact with the world regardless of the underlying world model.  
+
+
+
+
+{\ttfamily \#include $<$world\+\_\+model.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::World\+Model 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.637427cm]{classbase__local__planner_1_1WorldModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)=0
+\begin{DoxyCompactList}\small\item\em Subclass will implement this method to check a footprint at a given position and orientation for legality in the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1WorldModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}\label{classbase__local__planner_1_1WorldModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}} 
+double {\bfseries footprint\+Cost} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a358fe0d75fefe46dda134ee6e3305f71}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius, double extra)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1WorldModel_a87c45611143fde55c4a2efb4d078471d}\label{classbase__local__planner_1_1WorldModel_a87c45611143fde55c4a2efb4d078471d}} 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a87c45611143fde55c4a2efb4d078471d}{$\sim$\+World\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Subclass will implement a destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+An interface the trajectory controller uses to interact with the world regardless of the underlying world model. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}\label{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}} 
+\index{base\_local\_planner::WorldModel@{base\_local\_planner::WorldModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::WorldModel@{base\_local\_planner::WorldModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{position,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double}]{inscribed\+\_\+radius,  }\item[{double}]{circumscribed\+\_\+radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Subclass will implement this method to check a footprint at a given position and orientation for legality in the world 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise\+: -\/1 if footprint covers at least a lethal obstacle cell, or -\/2 if footprint covers at least a no-\/information cell, or -\/3 if footprint is partially or totally outside of the map 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_aa6bc3668327838938f7881a6f553b521}{base\+\_\+local\+\_\+planner\+::\+Voxel\+Grid\+Model}}, \mbox{\hyperlink{classbase__local__planner_1_1PointGrid_ad1d2b34fc12c74b22c9693865b5f2d9e}{base\+\_\+local\+\_\+planner\+::\+Point\+Grid}} , 以及 \mbox{\hyperlink{classbase__local__planner_1_1CostmapModel_a8a6c30a640dc5046a483bc109f0d99b1}{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model}} 内被实现.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1WorldModel_a358fe0d75fefe46dda134ee6e3305f71}\label{classbase__local__planner_1_1WorldModel_a358fe0d75fefe46dda134ee6e3305f71}} 
+\index{base\_local\_planner::WorldModel@{base\_local\_planner::WorldModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::WorldModel@{base\_local\_planner::WorldModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{position,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double}]{inscribed\+\_\+radius,  }\item[{double}]{circumscribed\+\_\+radius,  }\item[{double}]{extra }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/world\+\_\+model.\+h\end{DoxyCompactItemize}

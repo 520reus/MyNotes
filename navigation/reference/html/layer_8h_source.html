@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_2d/include/costmap_2d/layer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_9023f81029f0cf9e898f85623bcdf0cf.html">include</a></li><li class="navelem"><a class="el" href="dir_16510bf0b8e4dfa92912bb2cd2c73724.html">costmap_2d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">layer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Author: David V. Lu!!</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef COSTMAP_2D_LAYER_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define COSTMAP_2D_LAYER_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/layered_costmap.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">layer，发现这个类整个就是一个虚类，提供了最重要的两个接口，updateCosts跟updateBounds，</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">updateBounds计算打算更新的范围，updateCosts就是更新cost了。</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecostmap__2d.html">costmap_2d</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">class </span>LayeredCostmap;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcostmap__2d_1_1Layer.html">Layer</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classcostmap__2d_1_1Layer.html">Layer</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> initialize(<a class="code" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a>* parent, std::string name, tf2_ros::Buffer *tf);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a978fb5288265b293a6fd08787314f2f1">   69</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a978fb5288265b293a6fd08787314f2f1">updateBounds</a>(<span class="keywordtype">double</span> robot_x, <span class="keywordtype">double</span> robot_y, <span class="keywordtype">double</span> robot_yaw, <span class="keywordtype">double</span>* min_x, <span class="keywordtype">double</span>* min_y,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                            <span class="keywordtype">double</span>* max_x, <span class="keywordtype">double</span>* max_y) {}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a56528644ba7d534b15ca3d73615dc12e">   76</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a56528644ba7d534b15ca3d73615dc12e">updateCosts</a>(<a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; master_grid, <span class="keywordtype">int</span> min_i, <span class="keywordtype">int</span> min_j, <span class="keywordtype">int</span> max_i, <span class="keywordtype">int</span> max_j) {}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a8238b7e03dc09bade9543a23addc65e2">   79</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a8238b7e03dc09bade9543a23addc65e2">deactivate</a>() {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a83cb399475b5536ae8e278569756d68b">   82</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a83cb399475b5536ae8e278569756d68b">activate</a>() {}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset() {}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">virtual</span> ~Layer() {}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a3331b68fc4db5ca14dcc31de179fd75f">   98</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a3331b68fc4db5ca14dcc31de179fd75f">isCurrent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> current_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a2e0a0cf4fb307699c098507d718af7ff">  104</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a2e0a0cf4fb307699c098507d718af7ff">matchSize</a>() {}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  std::string getName()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> name_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#afd164562392c1e243a4d4a5a23c27cb0">  112</a></span>&#160;  <span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; <a class="code" href="classcostmap__2d_1_1Layer.html#afd164562392c1e243a4d4a5a23c27cb0">getFootprint</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#ab65a9d55987f504e8c658bc64f61181e">  117</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#ab65a9d55987f504e8c658bc64f61181e">onFootprintChanged</a>() {}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#a97888a23e12ab5b798a854c2f590ae71">  124</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Layer.html#a97888a23e12ab5b798a854c2f590ae71">onInitialize</a>() {}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="comment">//在基类定义一个layered_costmap_指针，这样每个插件都有相同的一个包工头指针，就可以获得相同的插件队列与地图！</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a>* layered_costmap_; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">bool</span> current_;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Layer.html#ab61b2a3e01353b97258c207a397977fe">  129</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Layer.html#ab61b2a3e01353b97258c207a397977fe">enabled_</a>;  </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  std::string name_;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  tf2_ros::Buffer *tf_;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  std::vector&lt;geometry_msgs::Point&gt; footprint_spec_;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}  <span class="comment">// namespace costmap_2d</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// COSTMAP_2D_LAYER_H_</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html">costmap_2d::Layer</a></div><div class="ttdef"><b>Definition:</b> layer.h:55</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a2e0a0cf4fb307699c098507d718af7ff"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a2e0a0cf4fb307699c098507d718af7ff">costmap_2d::Layer::matchSize</a></div><div class="ttdeci">virtual void matchSize()</div><div class="ttdoc">Implement this to make this layer match the size of the parent costmap.</div><div class="ttdef"><b>Definition:</b> layer.h:104</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a3331b68fc4db5ca14dcc31de179fd75f"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a3331b68fc4db5ca14dcc31de179fd75f">costmap_2d::Layer::isCurrent</a></div><div class="ttdeci">bool isCurrent() const</div><div class="ttdoc">Check to make sure all the data in the layer is up to date. If the layer is not up to date,...</div><div class="ttdef"><b>Definition:</b> layer.h:98</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a56528644ba7d534b15ca3d73615dc12e"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a56528644ba7d534b15ca3d73615dc12e">costmap_2d::Layer::updateCosts</a></div><div class="ttdeci">virtual void updateCosts(Costmap2D &amp;master_grid, int min_i, int min_j, int max_i, int max_j)</div><div class="ttdoc">Actually update the underlying costmap, only within the bounds calculated during UpdateBounds().</div><div class="ttdef"><b>Definition:</b> layer.h:76</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a8238b7e03dc09bade9543a23addc65e2"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a8238b7e03dc09bade9543a23addc65e2">costmap_2d::Layer::deactivate</a></div><div class="ttdeci">virtual void deactivate()</div><div class="ttdoc">Stop publishers.</div><div class="ttdef"><b>Definition:</b> layer.h:79</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a83cb399475b5536ae8e278569756d68b"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a83cb399475b5536ae8e278569756d68b">costmap_2d::Layer::activate</a></div><div class="ttdeci">virtual void activate()</div><div class="ttdoc">Restart publishers if they've been stopped.</div><div class="ttdef"><b>Definition:</b> layer.h:82</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a97888a23e12ab5b798a854c2f590ae71"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a97888a23e12ab5b798a854c2f590ae71">costmap_2d::Layer::onInitialize</a></div><div class="ttdeci">virtual void onInitialize()</div><div class="ttdoc">This is called at the end of initialize(). Override to implement subclass-specific initialization.</div><div class="ttdef"><b>Definition:</b> layer.h:124</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_a978fb5288265b293a6fd08787314f2f1"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#a978fb5288265b293a6fd08787314f2f1">costmap_2d::Layer::updateBounds</a></div><div class="ttdeci">virtual void updateBounds(double robot_x, double robot_y, double robot_yaw, double *min_x, double *min_y, double *max_x, double *max_y)</div><div class="ttdoc">This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up...</div><div class="ttdef"><b>Definition:</b> layer.h:69</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_ab61b2a3e01353b97258c207a397977fe"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#ab61b2a3e01353b97258c207a397977fe">costmap_2d::Layer::enabled_</a></div><div class="ttdeci">bool enabled_</div><div class="ttdoc">Currently this var is managed by subclasses. TODO: make this managed by this class and/or container c...</div><div class="ttdef"><b>Definition:</b> layer.h:129</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_ab65a9d55987f504e8c658bc64f61181e"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#ab65a9d55987f504e8c658bc64f61181e">costmap_2d::Layer::onFootprintChanged</a></div><div class="ttdeci">virtual void onFootprintChanged()</div><div class="ttdoc">LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())....</div><div class="ttdef"><b>Definition:</b> layer.h:117</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Layer_html_afd164562392c1e243a4d4a5a23c27cb0"><div class="ttname"><a href="classcostmap__2d_1_1Layer.html#afd164562392c1e243a4d4a5a23c27cb0">costmap_2d::Layer::getFootprint</a></div><div class="ttdeci">const std::vector&lt; geometry_msgs::Point &gt; &amp; getFootprint() const</div><div class="ttdoc">Convenience function for layered_costmap_-&gt;getFootprint().</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1LayeredCostmap_html"><div class="ttname"><a href="classcostmap__2d_1_1LayeredCostmap.html">costmap_2d::LayeredCostmap</a></div><div class="ttdoc">Instantiates different layer plugins and aggregates them into one score</div><div class="ttdef"><b>Definition:</b> layered_costmap.h:61</div></div>
+<div class="ttc" id="anamespacecostmap__2d_html"><div class="ttname"><a href="namespacecostmap__2d.html">costmap_2d</a></div><div class="ttdef"><b>Definition:</b> array_parser.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

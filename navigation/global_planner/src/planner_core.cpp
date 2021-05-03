@@ -97,7 +97,7 @@ GlobalPlanner::~GlobalPlanner() {
 //? 以下两个函数执行global_planner主要的参数配置
 void GlobalPlanner::initialize(std::string name, costmap_2d::Costmap2DROS* costmap_ros) {
     initialize(name, costmap_ros->getCostmap(), costmap_ros->getGlobalFrameID());
-}
+}  
 
 void GlobalPlanner::initialize(std::string name, costmap_2d::Costmap2D* costmap, std::string frame_id) {
     if (!initialized_) {

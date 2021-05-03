@@ -1,0 +1,73 @@
+\hypertarget{classbase__local__planner_1_1SimpleScoredSamplingPlanner}{}\doxysection{base\+\_\+local\+\_\+planner\+::Simple\+Scored\+Sampling\+Planner类 参考}
+\label{classbase__local__planner_1_1SimpleScoredSamplingPlanner}\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+
+
+Generates a local plan using the given generator and cost functions. Assumes less cost are best, and negative costs indicate infinite costs  
+
+
+
+
+{\ttfamily \#include $<$simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Simple\+Scored\+Sampling\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1SimpleScoredSamplingPlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1SimpleScoredSamplingPlanner_a4e587086b74e151e38c6a81905924772}{Simple\+Scored\+Sampling\+Planner}} (std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator}{Trajectory\+Sample\+Generator}} $\ast$ $>$ gen\+\_\+list, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction}{Trajectory\+Cost\+Function}} $\ast$ $>$ \&critics, int max\+\_\+samples=-\/1)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ac11a2d2fbf69d6ed55f720c5ebe1b541}{score\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj, double best\+\_\+traj\+\_\+cost)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ad1a365b0504879a2e57f1a9d713acdc4}{find\+Best\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} $>$ $\ast$all\+\_\+explored=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Generates a local plan using the given generator and cost functions. Assumes less cost are best, and negative costs indicate infinite costs 
+
+This is supposed to be a simple and robust implementation of the \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySearch}{Trajectory\+Search}} interface. More efficient search may well be possible using search heuristics, parallel search, etc. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleScoredSamplingPlanner_a4e587086b74e151e38c6a81905924772}\label{classbase__local__planner_1_1SimpleScoredSamplingPlanner_a4e587086b74e151e38c6a81905924772}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}}
+\index{SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleScoredSamplingPlanner()}{SimpleScoredSamplingPlanner()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::\+Simple\+Scored\+Sampling\+Planner (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySampleGenerator}{Trajectory\+Sample\+Generator}} $\ast$ $>$}]{gen\+\_\+list,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction}{Trajectory\+Cost\+Function}} $\ast$ $>$ \&}]{critics,  }\item[{int}]{max\+\_\+samples = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Takes a list of generators and critics. Critics return costs $>$ 0, or negative costs for invalid trajectories. Generators other than the first are fallback generators, meaning they only get to generate if the previous generator did not find a valid trajectory. Will use every generator until it stops returning trajectories or count reaches max\+\_\+samples. Then resets count and tries for the next in the list. passing max\+\_\+samples = -\/1 (default)\+: Each Sampling planner will continue to call generator until generator runs out of samples (or forever if that never happens) 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ad1a365b0504879a2e57f1a9d713acdc4}\label{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ad1a365b0504879a2e57f1a9d713acdc4}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!findBestTrajectory@{findBestTrajectory}}
+\index{findBestTrajectory@{findBestTrajectory}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{findBestTrajectory()}{findBestTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::find\+Best\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} $>$ $\ast$}]{all\+\_\+explored = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calls generator until generator has no more samples or max\+\_\+samples is reached. For each generated traj, calls critics in turn. If any critic returns negative value, that value is assumed as costs, else the costs are the sum of all critics result. Returns true and sets the traj parameter to the first trajectory with minimal non-\/negative costs if sampling yields trajectories with non-\/negative costs, else returns false.
+
+
+\begin{DoxyParams}{参数}
+{\em traj} & The container to write the result to \\
+\hline
+{\em all\+\_\+explored} & pass NULL or a container to collect all trajectories for debugging (has a penalty) \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySearch_a75fd0f1e0c72b6ba6f6edabe569e8271}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ac11a2d2fbf69d6ed55f720c5ebe1b541}\label{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ac11a2d2fbf69d6ed55f720c5ebe1b541}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj,  }\item[{double}]{best\+\_\+traj\+\_\+cost }\end{DoxyParamCaption})}
+
+runs all scoring functions over the trajectory creating a weigthed sum of positive costs, aborting as soon as a negative cost are found or costs greater than positive best\+\_\+traj\+\_\+cost accumulated 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/base\+\_\+local\+\_\+planner/simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+h\end{DoxyCompactItemize}

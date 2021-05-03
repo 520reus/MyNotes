@@ -1,0 +1,40 @@
+\hypertarget{classbase__local__planner_1_1MapGridVisualizer}{}\doxysection{base\+\_\+local\+\_\+planner\+::Map\+Grid\+Visualizer类 参考}
+\label{classbase__local__planner_1_1MapGridVisualizer}\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapGridVisualizer_a420b3e168a5a208620f1dffe7845ae4e}\label{classbase__local__planner_1_1MapGridVisualizer_a420b3e168a5a208620f1dffe7845ae4e}} 
+\mbox{\hyperlink{classbase__local__planner_1_1MapGridVisualizer_a420b3e168a5a208620f1dffe7845ae4e}{Map\+Grid\+Visualizer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1MapGridVisualizer_a4145416ab13ea8b513d7707d65f3e8f3}{initialize}} (const std\+::string \&name, std\+::string frame, boost\+::function$<$ bool(int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$ cost\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classbase__local__planner_1_1MapGridVisualizer}{Map\+Grid\+Visualizer}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapGridVisualizer_abc768f1e16ce0cdf87dec9f25a60ee64}\label{classbase__local__planner_1_1MapGridVisualizer_abc768f1e16ce0cdf87dec9f25a60ee64}} 
+void \mbox{\hyperlink{classbase__local__planner_1_1MapGridVisualizer_abc768f1e16ce0cdf87dec9f25a60ee64}{publish\+Cost\+Cloud}} (const \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap\+\_\+p\+\_\+)
+\begin{DoxyCompactList}\small\item\em Build and publish a Point\+Cloud if the publish\+\_\+cost\+\_\+grid\+\_\+pc parameter was true. Only include points for which the cost\+\_\+function at (cx,cy) returns true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1MapGridVisualizer_a4145416ab13ea8b513d7707d65f3e8f3}\label{classbase__local__planner_1_1MapGridVisualizer_a4145416ab13ea8b513d7707d65f3e8f3}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!initialize@{initialize}}
+\index{initialize@{initialize}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::initialize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::string}]{frame,  }\item[{boost\+::function$<$ bool(int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$}]{cost\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classbase__local__planner_1_1MapGridVisualizer}{Map\+Grid\+Visualizer}} 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to be appended to $\sim$/ in order to get the proper namespace for parameters \\
+\hline
+{\em costmap} & The costmap instance to use to get the size of the map to generate a point cloud for \\
+\hline
+{\em cost\+\_\+function} & The function to use to compute the cost values to be inserted into each point in the output Point\+Cloud as well as whether to include a given point or not \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/map\+\_\+grid\+\_\+visualizer.\+h\end{DoxyCompactItemize}
