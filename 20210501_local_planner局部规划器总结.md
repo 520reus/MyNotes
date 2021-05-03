@@ -104,6 +104,8 @@ dwa说白了是一种在控制空间采样的搜索算法，也算lattice规划�
 
 读了dwa_planner发现它还不是最底层的类，因为诸如轨迹评分、生成轨迹都是调用这个类内定义好的对象，因此最底层是这些类对象。
 
+其中最关键的为simple_trajectory_generator,simple_scored_sampling_planner以及几个cost_function类
+
 ## DWA算法
 
 DWA算法全称为dynamic window approach，其原理主要是在速度空间（v,w）中采样多组速度，并模拟这些速度在一定时间内的运动轨迹，再通过一个评价函数对这些轨迹打分，最优的速度被选择出来发送给下位机。
@@ -111,6 +113,8 @@ DWA算法全称为dynamic window approach，其原理主要是在速度空间（
 ![在这里插入图片描述](图片/20210501_local_planner局部规划器总结/20190528103444842.png)
 
 ![在这里插入图片描述](图片/20210501_local_planner局部规划器总结/20190528103512407.png)
+
+![在这里插入图片描述](图片/20210501_local_planner局部规划器总结/20190528103555693.png)
 
 ## 算法程序分析
 

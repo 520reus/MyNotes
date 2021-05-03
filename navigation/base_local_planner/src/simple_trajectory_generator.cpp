@@ -56,7 +56,7 @@ void SimpleTrajectoryGenerator::initialise(
   sample_params_.insert(sample_params_.end(), additional_samples.begin(), additional_samples.end());
 }
 
-
+// 该函数主要负责将动力学约束加入当前车辆状态，获得控制离散序列sample_params_
 void SimpleTrajectoryGenerator::initialise(
     const Eigen::Vector3f& pos,
     const Eigen::Vector3f& vel,
@@ -112,10 +112,11 @@ void SimpleTrajectoryGenerator::initialise(
       min_vel[0] = std::max(min_vel_x, vel[0] - acc_lim[0] * sim_period_);
       min_vel[1] = std::max(min_vel_y, vel[1] - acc_lim[1] * sim_period_);
       min_vel[2] = std::max(min_vel_th, vel[2] - acc_lim[2] * sim_period_);
-    }
+    } 
 
     Eigen::Vector3f vel_samp = Eigen::Vector3f::Zero();
-    VelocityIterator x_it(min_vel[0], max_vel[0], vsamples[0]);
+    //离散成[vmin,vmax],离散点个数取决于vsample采样点个数
+    VelocityIterator x_it(min_vel[0], max_vel[0], vsamples[0]); 
     VelocityIterator y_it(min_vel[1], max_vel[1], vsamples[1]);
     VelocityIterator th_it(min_vel[2], max_vel[2], vsamples[2]);
     for(; !x_it.isFinished(); x_it++) {
@@ -221,6 +222,7 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
 
   Eigen::Vector3f loop_vel;
   if (continued_acceleration_) {
+    //TODO sample_target_vel is what？
     // assuming the velocity of the first cycle is the one we want to store in the trajectory object
     loop_vel = computeNewVelocities(sample_target_vel, vel, limits_->getAccLimits(), dt);
     traj.xv_     = loop_vel[0];
@@ -254,6 +256,7 @@ bool SimpleTrajectoryGenerator::generateTrajectory(
   return true; // trajectory has at least one point
 }
 
+//积分求位置
 Eigen::Vector3f SimpleTrajectoryGenerator::computeNewPositions(const Eigen::Vector3f& pos,
     const Eigen::Vector3f& vel, double dt) {
   Eigen::Vector3f new_pos = Eigen::Vector3f::Zero();
@@ -264,6 +267,7 @@ Eigen::Vector3f SimpleTrajectoryGenerator::computeNewPositions(const Eigen::Vect
 }
 
 /**
+ * 积分求速度
  * change vel using acceleration limits to converge towards sample_target-vel
  */
 Eigen::Vector3f SimpleTrajectoryGenerator::computeNewVelocities(const Eigen::Vector3f& sample_target_vel,

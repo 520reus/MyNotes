@@ -141,8 +141,8 @@ public:
 protected:
 
   unsigned int next_sample_index_;
-  // to store sample params of each sample between init and generation
-  std::vector<Eigen::Vector3f> sample_params_;
+  //* to store sample params of each sample between init and generation
+  std::vector<Eigen::Vector3f> sample_params_; //该集合的每一个元素是生成的一条轨迹
   base_local_planner::LocalPlannerLimits* limits_;
   Eigen::Vector3f pos_;
   Eigen::Vector3f vel_;
