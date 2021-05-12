@@ -1,0 +1,4 @@
+<launch>
+<node pkg="tutorial_action" type="action_client_node" name="action_client" output="screen"></node>
+<node pkg="tutorial_action" type="action_server_node" name="action_server" output="screen"></node>
+</launch>

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/dataType_trans.dir/src/dataType_trans.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/dataType_trans  -L/usr/local/lib 

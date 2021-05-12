@@ -1,0 +1,8 @@
+# goal
+uint32 dish_id
+---
+# resault
+uint32 total_is_washed
+---
+# feedback
+uint32 pecent_complete

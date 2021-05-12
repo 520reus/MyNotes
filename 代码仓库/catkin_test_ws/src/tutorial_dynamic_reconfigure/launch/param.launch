@@ -1,0 +1,6 @@
+<launch>
+<param name="global_planner" type="string" value="Astar" />
+<param name="local_planner" type="string" value="DWAlocalPlannerROS"/>
+<rosparam file="$(find tutorial_dynamic_reconfigure)/config/dwa_planner.config" command="load"/>
+</launch>
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/discrete_points_smoother.dir/src/discrete_points_smoother.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/discrete_points_smoother  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lipopt -ladolc 

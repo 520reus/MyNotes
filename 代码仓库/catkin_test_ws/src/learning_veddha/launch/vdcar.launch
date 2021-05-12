@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+<!--地图参数-->
+<arg name="map_file" default="$(find learning_veddha)/map/tzh_map.yaml"/>
+
+<!--加载地图-->
+<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+<!--加载小车urdf模型，发布tf-->
+<include file="$(find learning_veddha)/launch/car_urdf_model.launch"/>
+
+<!--MOVE_BASE-->
+<include file="$(find learning_veddha)/launch/move_base.launch"/>
+
+<!--TF(map=>odom)-->
+<node name="tf_map2odom" pkg="learning_veddha" type="tf_map2odom"/>
+
+<!--odom-->
+<node name="odom_pub" pkg="learning_veddha" type="odom_pub"/>
+
+<!--rviz可视化-->
+<node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find learning_veddha)/rviz/visual_vdcar.rviz" />
+<!--datasets-->
+
+
+</launch>

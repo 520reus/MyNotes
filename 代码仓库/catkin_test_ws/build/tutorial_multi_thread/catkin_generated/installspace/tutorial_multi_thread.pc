@@ -1,0 +1,8 @@
+prefix=/home/wu/catkin_test_ws/install
+
+Name: tutorial_multi_thread
+Description: Description of tutorial_multi_thread
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

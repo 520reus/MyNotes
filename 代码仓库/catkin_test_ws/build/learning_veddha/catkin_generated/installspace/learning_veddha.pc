@@ -1,0 +1,8 @@
+prefix=/home/wu/catkin_test_ws/install
+
+Name: learning_veddha
+Description: Description of learning_veddha
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

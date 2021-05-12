@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/discrete_points_main  -L/usr/local/lib -Wl,-rpath,/usr/local/lib:/home/wu/catkin_test_ws/src/fortest/lib -lpython2.7 /home/wu/catkin_test_ws/src/fortest/lib/libdiscrete_points_smoothing.so -lipopt -ladolc 

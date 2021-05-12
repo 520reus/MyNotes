@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wu/catkin_test_ws/src/fortest/src/cppad_example.cpp
+iostream
+-
+cppad/ipopt/solve.hpp
+-
+

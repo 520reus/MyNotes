@@ -1,0 +1,8 @@
+prefix=/home/wu/catkin_test_ws/devel
+
+Name: fortest
+Description: Description of fortest
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

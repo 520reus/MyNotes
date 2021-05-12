@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libdiscrete_points_smoothing.so -o /home/wu/catkin_test_ws/src/fortest/lib/libdiscrete_points_smoothing.so CMakeFiles/discrete_points_smoothing.dir/src/discrete_points_smooth_ipopt_interface.cpp.o CMakeFiles/discrete_points_smoothing.dir/src/discrete_points_smoother.cpp.o  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lipopt -ladolc 

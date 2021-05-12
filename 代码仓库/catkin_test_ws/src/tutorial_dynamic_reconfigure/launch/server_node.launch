@@ -1,0 +1,10 @@
+<launch>
+<include file="$(find tutorial_dynamic_reconfigure)/launch/param.launch"/>
+<node pkg="tutorial_dynamic_reconfigure" type="dynamic_reconfigure_server_node" name="server_node" ns="sn" output="screen">
+    <remap from="/sn/server_node/parameter_updates" to="/parameter_updates"/>
+</node>
+
+<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure"></node>
+<!--<node pkg="rviz" type="rviz" name="rviz"></node>!-->
+
+</launch>

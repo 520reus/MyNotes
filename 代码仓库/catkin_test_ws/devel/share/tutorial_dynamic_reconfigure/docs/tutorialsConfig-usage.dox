@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="tutorial_dynamic_reconfigure" pkg="tutorial_dynamic_reconfigure" type="tutorial_dynamic_reconfigure">
+  <param name="planner_frequency" type="int" value="0" />
+  <param name="controller_frequency" type="int" value="2" />
+  <param name="planner_name" type="str" value="" />
+  <param name="isDone" type="bool" value="True" />
+  <param name="size" type="int" value="1" />
+</node>
+\endverbatim
+

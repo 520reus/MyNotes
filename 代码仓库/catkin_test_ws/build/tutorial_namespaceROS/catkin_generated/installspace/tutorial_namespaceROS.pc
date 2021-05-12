@@ -1,0 +1,8 @@
+prefix=/home/wu/catkin_test_ws/install
+
+Name: tutorial_namespaceROS
+Description: Description of tutorial_namespaceROS
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

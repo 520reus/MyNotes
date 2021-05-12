@@ -1,0 +1,8 @@
+<launch>
+
+<!--加载机器人模型参数-->
+<param name="robot_description" textfile="$(find learning_veddha)/urdf/vdcar_4wheel.urdf.xacro"/>
+<!--运行robot_state_publisher节点，发布tf-->
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+</launch>

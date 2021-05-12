@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wu/catkin_test_ws/src/fortest/src/test2.cpp
+iostream
+-
+string
+-
+vector
+-
+fstream
+-
+sstream
+-
+cppad/cppad.hpp
+-
+
