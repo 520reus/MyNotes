@@ -38,6 +38,22 @@ numpy/arrayobject.h
 opencv2/opencv.hpp
 -
 
+/home/wu/catkin_test_ws/src/fortest/include/spline.h
+cstdio
+-
+cassert
+-
+cmath
+-
+vector
+-
+algorithm
+-
+sstream
+-
+string
+-
+
 /home/wu/catkin_test_ws/src/fortest/src/discrete_points_main.cpp
 iostream
 -
@@ -57,6 +73,10 @@ eigen3/Eigen/Dense
 -
 discrete_points_smoother.h
 /home/wu/catkin_test_ws/src/fortest/src/discrete_points_smoother.h
+spline.h
+/home/wu/catkin_test_ws/src/fortest/src/spline.h
+chrono
+-
 
 /usr/include/python2.7/Python.h
 patchlevel.h

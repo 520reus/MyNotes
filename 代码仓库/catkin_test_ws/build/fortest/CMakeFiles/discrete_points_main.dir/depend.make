@@ -3,6 +3,7 @@
 
 fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /home/wu/catkin_test_ws/src/fortest/include/discrete_points_smoother.h
 fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /home/wu/catkin_test_ws/src/fortest/include/matplotlibcpp.h
+fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /home/wu/catkin_test_ws/src/fortest/include/spline.h
 fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /home/wu/catkin_test_ws/src/fortest/src/discrete_points_main.cpp
 fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /usr/include/python2.7/Python.h
 fortest/CMakeFiles/discrete_points_main.dir/src/discrete_points_main.cpp.o: /usr/include/python2.7/abstract.h

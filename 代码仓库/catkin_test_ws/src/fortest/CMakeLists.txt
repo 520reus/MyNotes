@@ -16,8 +16,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 #find_package(Eigen REQUIRED)
 #INCLUDE_DIRECTORIES(${Eigen_INCLUDE_DIRS})
-include_directories( "/usr/include/eigen3/Eigen")
 
+include_directories( "/usr/include/eigen3/Eigen")
 
 catkin_package(
 #  INCLUDE_DIRS include
@@ -46,7 +46,7 @@ message("ipopt binary path is: " ${IPOPT_LIBRARY_DIRS} )
 message("ipopt include path is: " ${IPOPT_INCLUDE_DIRS} )
 
 
-include_directories(${IPOPT_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/include)
+include_directories(${IPOPT_INCLUDE_DIRS})
 link_directories(${IPOPT_LIBRARY_DIRS})
 
 add_library(ipopt_nlp src/hs071_nlp.cpp)
@@ -83,6 +83,7 @@ set(ADOLC_LIBRARY_DIRS "/usr/lib/x86_64-linux-gnu") # libadolc.so所在位置
 link_directories(${ADOLC_LIBRARY_DIRS})
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+
 add_library(discrete_points_smoothing src/discrete_points_smooth_ipopt_interface.cpp 
                                       src/discrete_points_smoother.cpp)
 target_link_libraries(discrete_points_smoothing ipopt adolc)
