@@ -1,0 +1,8 @@
+solvers/op_type.lo: solvers/op_type.c /usr/include/stdc-predef.h \
+ solvers/op_type.hd solvers/op_typeb.hd
+
+/usr/include/stdc-predef.h:
+
+solvers/op_type.hd:
+
+solvers/op_typeb.hd:

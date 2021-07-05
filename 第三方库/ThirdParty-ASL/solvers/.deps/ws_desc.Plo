@@ -1,0 +1,3 @@
+solvers/ws_desc.lo: solvers/ws_desc.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
