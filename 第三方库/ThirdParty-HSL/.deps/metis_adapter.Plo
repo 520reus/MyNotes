@@ -1,0 +1,6 @@
+metis_adapter.lo: metis_adapter.c /usr/include/stdc-predef.h \
+ CoinHslConfig.h
+
+/usr/include/stdc-predef.h:
+
+CoinHslConfig.h:

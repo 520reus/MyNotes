@@ -1,0 +1,15 @@
+prefix=/usr/local
+#prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin-or/hsl
+
+Name: HSL
+Description: Harwell Subroutines Library
+URL: https://github.com/coin-or-tools/ThirdParty-HSL
+Version: 2.2.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lcoinhsl
+Requires.private: 
+#Libs: -L${libdir} -lcoinhsl   -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. -lgfortran -lm -lquadmath
+#Requires: 

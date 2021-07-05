@@ -1,0 +1,17 @@
+* text=auto !eol
+/INSTALL.ASL -text
+/LICENSE -text
+/Makefile.am -text
+/ar-lib -text
+/coinasl.pc.in -text
+/compile -text
+/config.guess -text
+/config.sub -text
+/configure -text
+/depcomp -text
+/dtoa.patch -text
+/get.ASL -text
+/install-sh -text
+/ltmain.sh -text
+/mingw.patch -text
+/missing -text

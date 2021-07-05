@@ -1,0 +1,13 @@
+prefix=/usr/local
+#prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin-or/asl
+
+Name: ASL
+Description: AMPL Solver Library
+URL: https://github.com/coin-or-tools/ThirdParty-ASL
+Version: 2.0.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lcoinasl
+#Libs: -L${libdir} -lcoinasl -lm -ldl 
