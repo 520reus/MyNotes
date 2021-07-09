@@ -1,0 +1,50 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/wu/navigation_ws/devel/include/**",
+        "/home/wu/catkin_test_ws/devel/include/**",
+        "/home/wu/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/racecar/ackermann_cmd_mux/include/**",
+        "/home/wu/navigation_ws/src/navigation/amcl/include/**",
+        "/home/wu/navigation_ws/src/navigation/base_local_planner/include/**",
+        "/home/wu/navigation_ws/src/navigation/carrot_planner/include/**",
+        "/home/wu/navigation_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/home/wu/navigation_ws/src/navigation/costmap_2d/include/**",
+        "/home/wu/navigation_ws/src/navigation/costmap_converter/include/**",
+        "/home/wu/navigation_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/wu/catkin_test_ws/src/fortest/include/**",
+        "/home/wu/navigation_ws/src/navigation/global_planner/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/hector_slam/hector_geotiff/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/hector_slam/hector_map_tools/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/hector_slam/hector_mapping/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/hector_slam/hector_marker_drawing/include/**",
+        "/home/wu/navigation_ws/src/navigation/lattice_planner/include/**",
+        "/home/wu/catkin_test_ws/src/learning_veddha/include/**",
+        "/home/wu/navigation_ws/src/navigation/map_server/include/**",
+        "/home/wu/navigation_ws/src/navigation/move_base/include/**",
+        "/home/wu/navigation_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/wu/navigation_ws/src/navigation/nav_core/include/**",
+        "/home/wu/navigation_ws/src/navigation/navfn/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/robot_localization/include/**",
+        "/home/wu/catkin_ws/src/carlike_robot_sim/calf_carlike_robot/robot_pose_ekf/include/**",
+        "/home/wu/navigation_ws/src/navigation/rotate_recovery/include/**",
+        "/home/wu/catkin_ws/src/send_goal/include/**",
+        "/home/wu/navigation_ws/src/navigation/teb_local_planner/include/**",
+        "/home/wu/catkin_test_ws/src/tutorial_action/include/**",
+        "/home/wu/catkin_test_ws/src/tutorial_dynamic_reconfigure/include/**",
+        "/home/wu/catkin_test_ws/src/tutorial_multi_thread/include/**",
+        "/home/wu/catkin_test_ws/src/tutorial_namespaceROS/include/**",
+        "/home/wu/navigation_ws/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

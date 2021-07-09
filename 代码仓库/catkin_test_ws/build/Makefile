@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named dy_test
+
+# Build rule for target.
+dy_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dy_test
+.PHONY : dy_test
+
+# fast build rule for target.
+dy_test/fast:
+	$(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/build
+.PHONY : dy_test/fast
+
+#=============================================================================
 # Target rules for targets named discrete_points_main
 
 # Build rule for target.
@@ -296,6 +309,19 @@ discrete_points_main: cmake_check_build_system
 discrete_points_main/fast:
 	$(MAKE) -f fortest/CMakeFiles/discrete_points_main.dir/build.make fortest/CMakeFiles/discrete_points_main.dir/build
 .PHONY : discrete_points_main/fast
+
+#=============================================================================
+# Target rules for targets named test2
+
+# Build rule for target.
+test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test2
+.PHONY : test2
+
+# fast build rule for target.
+test2/fast:
+	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
+.PHONY : test2/fast
 
 #=============================================================================
 # Target rules for targets named dataType_trans
@@ -324,19 +350,6 @@ generate_discrete_points/fast:
 .PHONY : generate_discrete_points/fast
 
 #=============================================================================
-# Target rules for targets named test2
-
-# Build rule for target.
-test2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test2
-.PHONY : test2
-
-# fast build rule for target.
-test2/fast:
-	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
-.PHONY : test2/fast
-
-#=============================================================================
 # Target rules for targets named ipopt_nlp
 
 # Build rule for target.
@@ -363,17 +376,17 @@ test3/fast:
 .PHONY : test3/fast
 
 #=============================================================================
-# Target rules for targets named mytest
+# Target rules for targets named osqp_example
 
 # Build rule for target.
-mytest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mytest
-.PHONY : mytest
+osqp_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 osqp_example
+.PHONY : osqp_example
 
 # fast build rule for target.
-mytest/fast:
-	$(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/build
-.PHONY : mytest/fast
+osqp_example/fast:
+	$(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/build
+.PHONY : osqp_example/fast
 
 #=============================================================================
 # Target rules for targets named dynamic_reconfigure_gencfg
@@ -582,19 +595,6 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f fortest/CMakeFiles/std_msgs_generate_messages_py.dir/build.make fortest/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named cppad_mytest
-
-# Build rule for target.
-cppad_mytest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cppad_mytest
-.PHONY : cppad_mytest
-
-# fast build rule for target.
-cppad_mytest/fast:
-	$(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/build
-.PHONY : cppad_mytest/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
@@ -1840,13 +1840,14 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... dy_test"
 	@echo "... discrete_points_main"
+	@echo "... test2"
 	@echo "... dataType_trans"
 	@echo "... generate_discrete_points"
-	@echo "... test2"
 	@echo "... ipopt_nlp"
 	@echo "... test3"
-	@echo "... mytest"
+	@echo "... osqp_example"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
@@ -1863,7 +1864,6 @@ help:
 	@echo "... ipopt_example"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... cppad_mytest"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"

@@ -1,0 +1,257 @@
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[twoside]{book}
+
+%% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+\usepackage{ifthen}
+\ifx\requestedLaTeXdate\undefined
+\usepackage{array}
+\else
+\usepackage{array}[=2016-10-06]
+\fi
+%%
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage{ifxetex}
+
+% NLS support packages
+\usepackage{CJKutf8}
+
+% Font selection
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sectsty}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Arguments of doxygenemoji:
+% 1) ':<text>:' form of the emoji, already "LaTeX"-escaped
+% 2) file with the name of the emoji without the .png extension
+% in case image exist use this otherwise use the ':<text>:' form
+\newcommand{\doxygenemoji}[2]{%
+  \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+}
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+\newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+\doxynormalparskip
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+\makeatletter
+\newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\renewcommand{\footrulewidth}{0.4pt}
+%
+\fancypagestyle{fancyplain}{
+\fancyhf{}
+\fancyhead[LE, RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+}
+%
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+\renewcommand{\headrulewidth}{0pt}}
+%
+\pagestyle{fancyplain}
+%
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+% Hyperlinks (required, but should be loaded last)
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \ifxetex
+    \usepackage[pagebackref=true]{hyperref}
+  \else
+    \usepackage[ps2pdf,pagebackref=true]{hyperref}
+  \fi
+\fi
+
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+\usepackage{etoc}
+\etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+\renewcommand{\numberline}[1]{#1~}
+%===== C O N T E N T S =====
+
+\begin{document}
+\raggedbottom
+\begin{CJK}{UTF8}{min}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large project\+\_\+name \\[1ex]\large ver\+:1.\+0 }\\
+\vspace*{1cm}
+{\large 制作者 Doxygen 1.9.1}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{待办事项列表}
+\label{todo}
+\Hypertarget{todo}
+\input{todo}
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{结构体索引}
+\input{annotated}
+\chapter{结构体说明}
+\input{classteb__local__planner_1_1BaseRobotFootprintModel}
+\input{classteb__local__planner_1_1BaseTebBinaryEdge}
+\input{classteb__local__planner_1_1BaseTebMultiEdge}
+\input{classteb__local__planner_1_1BaseTebUnaryEdge}
+\input{classteb__local__planner_1_1CircularObstacle}
+\input{classteb__local__planner_1_1CircularRobotFootprint}
+\input{classteb__local__planner_1_1EdgeAcceleration}
+\input{classteb__local__planner_1_1EdgeAccelerationGoal}
+\input{classteb__local__planner_1_1EdgeAccelerationHolonomic}
+\input{classteb__local__planner_1_1EdgeAccelerationHolonomicGoal}
+\input{classteb__local__planner_1_1EdgeAccelerationHolonomicStart}
+\input{classteb__local__planner_1_1EdgeAccelerationStart}
+\input{classteb__local__planner_1_1EdgeDynamicObstacle}
+\input{classteb__local__planner_1_1EdgeInflatedObstacle}
+\input{classteb__local__planner_1_1EdgeKinematicsCarlike}
+\input{classteb__local__planner_1_1EdgeKinematicsDiffDrive}
+\input{classteb__local__planner_1_1EdgeObstacle}
+\input{classteb__local__planner_1_1EdgePreferRotDir}
+\input{classteb__local__planner_1_1EdgeShortestPath}
+\input{classteb__local__planner_1_1EdgeTimeOptimal}
+\input{classteb__local__planner_1_1EdgeVelocity}
+\input{classteb__local__planner_1_1EdgeVelocityHolonomic}
+\input{classteb__local__planner_1_1EdgeVelocityObstacleRatio}
+\input{classteb__local__planner_1_1EdgeViaPoint}
+\input{classteb__local__planner_1_1EquivalenceClass}
+\input{classteb__local__planner_1_1FailureDetector}
+\input{structteb__local__planner_1_1TebConfig_1_1GoalTolerance}
+\input{classteb__local__planner_1_1GraphSearchInterface}
+\input{structteb__local__planner_1_1HcGraphVertex}
+\input{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses}
+\input{classteb__local__planner_1_1HomotopyClassPlanner}
+\input{classteb__local__planner_1_1HSignature}
+\input{classteb__local__planner_1_1HSignature3d}
+\input{classteb__local__planner_1_1LineObstacle}
+\input{classteb__local__planner_1_1LineRobotFootprint}
+\input{classteb__local__planner_1_1lrKeyPointGraph}
+\input{classteb__local__planner_1_1Obstacle}
+\input{structteb__local__planner_1_1TebConfig_1_1Obstacles}
+\input{structteb__local__planner_1_1TebConfig_1_1Optimization}
+\input{classteb__local__planner_1_1PillObstacle}
+\input{classteb__local__planner_1_1PlannerInterface}
+\input{classteb__local__planner_1_1PointObstacle}
+\input{classteb__local__planner_1_1PointRobotFootprint}
+\input{classPointRobotShape}
+\input{classteb__local__planner_1_1PolygonObstacle}
+\input{classteb__local__planner_1_1PolygonRobotFootprint}
+\input{classteb__local__planner_1_1PoseSE2}
+\input{classteb__local__planner_1_1ProbRoadmapGraph}
+\input{structteb__local__planner_1_1TebConfig_1_1Recovery}
+\input{structteb__local__planner_1_1TebConfig_1_1Robot}
+\input{classteb__local__planner_1_1TebConfig}
+\input{classteb__local__planner_1_1TebLocalPlannerROS}
+\input{classteb__local__planner_1_1TebOptimalPlanner}
+\input{classteb__local__planner_1_1TebVisualization}
+\input{classteb__local__planner_1_1TimedElasticBand}
+\input{structteb__local__planner_1_1TebConfig_1_1Trajectory}
+\input{classteb__local__planner_1_1TwoCirclesRobotFootprint}
+\input{structteb__local__planner_1_1FailureDetector_1_1VelMeasurement}
+\input{classteb__local__planner_1_1VertexPose}
+\input{classteb__local__planner_1_1VertexTimeDiff}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\end{CJK}
+\end{document}

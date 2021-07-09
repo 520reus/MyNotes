@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wu/catkin_test_ws/src/fortest/src/osqp_example.cpp
+osqp/osqp.h
+/home/wu/catkin_test_ws/src/fortest/src/osqp/osqp.h
+

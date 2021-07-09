@@ -1,0 +1,400 @@
+\hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH}{}\doxysection{costmap\+\_\+converter\+::Costmap\+To\+Polygons\+DBSMCCH类 参考}
+\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH}\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+
+
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of convex polygons (and points)  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+to\+\_\+polygons.\+h$>$}
+
+类 costmap\+\_\+converter\+::Costmap\+To\+Polygons\+DBSMCCH 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.618497cm]{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH}
+\end{center}
+\end{figure}
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}}
+\begin{DoxyCompactList}\small\item\em Defines a keypoint in metric coordinates of the map \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters}{Parameters}}
+\begin{DoxyCompactList}\small\item\em Defines the parameters of the algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa221aa769dc1d82db848a47fddfe6b51}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa221aa769dc1d82db848a47fddfe6b51}} 
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa221aa769dc1d82db848a47fddfe6b51}{Costmap\+To\+Polygons\+DBSMCCH}} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a14113894b97b32b6c467642392a1d1cd}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a14113894b97b32b6c467642392a1d1cd}} 
+virtual \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a14113894b97b32b6c467642392a1d1cd}{$\sim$\+Costmap\+To\+Polygons\+DBSMCCH}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}{initialize}} (ros\+::\+Node\+Handle nh)
+\begin{DoxyCompactList}\small\item\em Initialize the plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6e2b9aa4db5eec24e2cae5f4d3af1909}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6e2b9aa4db5eec24e2cae5f4d3af1909}} 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6e2b9aa4db5eec24e2cae5f4d3af1909}{compute}} ()
+\begin{DoxyCompactList}\small\item\em This method performs the actual work (conversion of the costmap to polygons) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aed33709b3251194bf95b0f611ac606a3}{set\+Costmap2D}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap)
+\begin{DoxyCompactList}\small\item\em Pass a pointer to the costap to the plugin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}{update\+Costmap2D}} ()
+\begin{DoxyCompactList}\small\item\em Get updated data from the previously set Costmap2D \end{DoxyCompactList}\item 
+Polygon\+Container\+Const\+Ptr \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}{get\+Polygons}} ()
+\begin{DoxyCompactList}\small\item\em Get a shared instance of the current polygon container \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Point $>$ }\\static void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6ea25c3ebd002c376481a6167acd10a0}{convert\+Point\+To\+Polygon}} (const Point \&point, geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Convert a generi point type to a geometry\+\_\+msgs\+::\+Polygon \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a0cd5aaaba9344ff25b5c3feb6faa534c}{db\+Scan}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $>$ \&clusters)
+\begin{DoxyCompactList}\small\item\em DBSCAN algorithm for clustering \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a30c9e455820f8193735362f325e0de60}{region\+Query}} (int curr\+\_\+index, std\+::vector$<$ int $>$ \&neighbor\+\_\+indices)
+\begin{DoxyCompactList}\small\item\em Helper function for db\+Scan to search for neighboring points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a4fb264f67eb63e68e8d5183f1f0ca4ad}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a4fb264f67eb63e68e8d5183f1f0ca4ad}} 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a4fb264f67eb63e68e8d5183f1f0ca4ad}{add\+Point}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em helper function for adding a point to the lookup data structures \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{convex\+Hull}} (std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&cluster, geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Compute the convex hull for a single cluster (monotone chain algorithm) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2}} (std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&cluster, geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Compute the convex hull for a single cluster \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a980a39de9a8e2aad76f3e72d221de173}{simplify\+Polygon}} (geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Simplify a polygon by removing points. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename P1 , typename P2 , typename P3 $>$ }\\long double \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aaeed7c6af5b0b8420f0988d6213c3f61}{cross}} (const P1 \&O, const P2 \&A, const P3 \&B)
+\begin{DoxyCompactList}\small\item\em 2D Cross product of two vectors defined by two points and a common origin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a8a09ea3e7b78271f0b9f1f7e13933479}{update\+Polygon\+Container}} (Polygon\+Container\+Ptr polygons)
+\begin{DoxyCompactList}\small\item\em Thread-\/safe update of the internal polygon container (that is shared using \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}{get\+Polygons()}} from outside this class) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a55d233727263d3f89d007f9fb8754744}{neighbor\+Cells\+To\+Index}} (int cx, int cy)
+\begin{DoxyCompactList}\small\item\em offset \mbox{[}meters\mbox{]} in y for the lookup grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a44c350a82dd0b45084b05701e3094caf}{point\+To\+Neighbor\+Cells}} (const \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} \&kp, int \&cx, int \&cy)
+\begin{DoxyCompactList}\small\item\em compute the cell indices of a keypoint \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_af086dcaa5d4d7196a94552105bc9b868}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_af086dcaa5d4d7196a94552105bc9b868}} 
+std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_af086dcaa5d4d7196a94552105bc9b868}{occupied\+\_\+cells\+\_\+}}
+\begin{DoxyCompactList}\small\item\em List of occupied cells in the current map (updated by \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}{update\+Costmap2\+D()}}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a1492bab030a0fe2236a9f531d8178b86}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a1492bab030a0fe2236a9f531d8178b86}} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bfseries neighbor\+\_\+lookup\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9933aaeb5d7249fe8d4f466771fb677f}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9933aaeb5d7249fe8d4f466771fb677f}} 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9933aaeb5d7249fe8d4f466771fb677f}{neighbor\+\_\+size\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em array of cells for neighbor lookup \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a71e2a22cfd9b4a35129dab677980e12b}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a71e2a22cfd9b4a35129dab677980e12b}} 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a71e2a22cfd9b4a35129dab677980e12b}{neighbor\+\_\+size\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em size of the neighbour lookup in x (number of cells) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a68009a61efee912fa6f53c88216d2a28}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a68009a61efee912fa6f53c88216d2a28}} 
+double \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a68009a61efee912fa6f53c88216d2a28}{offset\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em size of the neighbour lookup in y (number of cells) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a40315680a42482e8a81367f802c73545}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a40315680a42482e8a81367f802c73545}} 
+double \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a40315680a42482e8a81367f802c73545}{offset\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em offset \mbox{[}meters\mbox{]} in x for the lookup grid \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aacda867bb50b071838a331f98527559c}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aacda867bb50b071838a331f98527559c}} 
+\mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters}{Parameters}} {\bfseries parameter\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a80a194d849ba7beb3f455fee560e5b42}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a80a194d849ba7beb3f455fee560e5b42}} 
+\mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters}{Parameters}} {\bfseries parameter\+\_\+buffered\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a86d471167f2abe46d792f8e8479e1bc1}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a86d471167f2abe46d792f8e8479e1bc1}} 
+boost\+::mutex \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a86d471167f2abe46d792f8e8479e1bc1}{parameter\+\_\+mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Mutex that keeps track about the ownership of the shared polygon instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of convex polygons (and points) 
+
+The conversion is performed in two stages\+:
+\begin{DoxyEnumerate}
+\item Clusters in the costmap are collected using the DBSCAN Algorithm (\href{https://en.wikipedia.org/wiki/DBSCAN}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+DBSCAN}}) Reference\+: Ester, Martin; Kriegel, Hans-\/\+Peter; Sander, Jörg; Xu, Xiaowei, A density-\/based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-\/57735-\/004-\/9.
+\item In the subsequent stage, clusters are converted into convex polgons using the monotone chain algorithm aka Andrew\textquotesingle{}s algorithm\+: C++ implementation example\+: \href{http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull}{\texttt{ http\+://www.\+algorithmist.\+com/index.\+php/\+Monotone\+\_\+\+Chain\+\_\+\+Convex\+\_\+\+Hull}} ( GNU Free Documentation License 1.\+2 ) Reference\+: A. M. Andrew, \char`\"{}\+Another Efficient Algorithm for Convex Hulls in Two Dimensions\char`\"{}, Info. Proc. Letters 9, 216-\/219 (1979).
+\end{DoxyEnumerate}
+
+All single points that do not define a cluster (noise) are also treated as polygon (represented as a single vertex) 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6ea25c3ebd002c376481a6167acd10a0}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6ea25c3ebd002c376481a6167acd10a0}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!convertPointToPolygon@{convertPointToPolygon}}
+\index{convertPointToPolygon@{convertPointToPolygon}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{convertPointToPolygon()}{convertPointToPolygon()}}
+{\footnotesize\ttfamily template$<$typename Point $>$ \\
+static void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::convert\+Point\+To\+Polygon (\begin{DoxyParamCaption}\item[{const Point \&}]{point,  }\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert a generi point type to a geometry\+\_\+msgs\+::\+Polygon 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em point} & generic 2D point type \\
+\hline
+\mbox{\texttt{ out}}  & {\em polygon} & already instantiated polygon that will be filled with a single point \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Point} & generic point type that should provide (writable) x and y member fiels. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!convexHull@{convexHull}}
+\index{convexHull@{convexHull}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{convexHull()}{convexHull()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::convex\+Hull (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{cluster,  }\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the convex hull for a single cluster (monotone chain algorithm) 
+
+Clusters are converted into convex polgons using the monotone chain algorithm aka Andrew\textquotesingle{}s algorithm\+: C++ implementation example\+: \href{http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull}{\texttt{ http\+://www.\+algorithmist.\+com/index.\+php/\+Monotone\+\_\+\+Chain\+\_\+\+Convex\+\_\+\+Hull}} ( GNU Free Documentation License 1.\+2 ) Reference\+: A. M. Andrew, \char`\"{}\+Another Efficient Algorithm for Convex Hulls in Two Dimensions\char`\"{}, Info. Proc. Letters 9, 216-\/219 (1979). \begin{DoxyRemark}{备注}
+The algorithm seems to cut edges, thus we give a try to \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2()}}. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000002}{待办事项}}]Evaluate and figure out whether \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{convex\+Hull()}} or \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2()}} is better suited (performance, quality, ...) \end{DoxyRefDesc}
+\begin{DoxyRemark}{备注}
+The last point is the same as the first one 
+\end{DoxyRemark}
+
+\begin{DoxyParams}[1]{参数}
+ & {\em cluster} & list of keypoints that should be converted into a polygon \\
+\hline
+\mbox{\texttt{ out}}  & {\em polygon} & the resulting convex polygon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!convexHull2@{convexHull2}}
+\index{convexHull2@{convexHull2}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{convexHull2()}{convexHull2()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::convex\+Hull2 (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{cluster,  }\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the convex hull for a single cluster 
+
+Clusters are converted into convex polgons using an algorithm provided here\+: \href{https://bitbucket.org/vostreltsov/concave-hull/overview}{\texttt{ https\+://bitbucket.\+org/vostreltsov/concave-\/hull/overview}} The convex hull algorithm is part of the concave hull algorithm. The license is WTFPL 2.\+0 and permits any usage.
+
+\begin{DoxyRemark}{备注}
+The last point is the same as the first one 
+\end{DoxyRemark}
+
+\begin{DoxyParams}[1]{参数}
+ & {\em cluster} & list of keypoints that should be converted into a polygon \\
+\hline
+\mbox{\texttt{ out}}  & {\em polygon} & the resulting convex polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000003}{待办事项}}]Evaluate and figure out whether \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{convex\+Hull()}} or \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2()}} is better suited (performance, quality, ...) \end{DoxyRefDesc}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aaeed7c6af5b0b8420f0988d6213c3f61}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aaeed7c6af5b0b8420f0988d6213c3f61}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!cross@{cross}}
+\index{cross@{cross}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily template$<$typename P1 , typename P2 , typename P3 $>$ \\
+long double costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::cross (\begin{DoxyParamCaption}\item[{const P1 \&}]{O,  }\item[{const P2 \&}]{A,  }\item[{const P3 \&}]{B }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+2D Cross product of two vectors defined by two points and a common origin 
+
+
+\begin{DoxyParams}{参数}
+{\em O} & Origin \\
+\hline
+{\em A} & First point \\
+\hline
+{\em B} & Second point \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em P1} & 2D Point type with x and y member fields \\
+\hline
+{\em P2} & 2D Point type with x and y member fields \\
+\hline
+{\em P3} & 2D Point type with x and y member fields \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a0cd5aaaba9344ff25b5c3feb6faa534c}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a0cd5aaaba9344ff25b5c3feb6faa534c}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!dbScan@{dbScan}}
+\index{dbScan@{dbScan}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{dbScan()}{dbScan()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::db\+Scan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $>$ \&}]{clusters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+DBSCAN algorithm for clustering 
+
+Clusters in the costmap are collected using the DBSCAN Algorithm (\href{https://en.wikipedia.org/wiki/DBSCAN}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+DBSCAN}}) Reference\+: Ester, Martin; Kriegel, Hans-\/\+Peter; Sander, Jörg; Xu, Xiaowei, A density-\/based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-\/57735-\/004-\/9.
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em clusters} & clusters will added to this output-\/argument (a sequence of keypoints for each cluster) the first cluster (clusters\mbox{[}0\mbox{]}) will contain all noise points (that does not fulfil the min\+\_\+pts condition \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!getPolygons@{getPolygons}}
+\index{getPolygons@{getPolygons}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{getPolygons()}{getPolygons()}}
+{\footnotesize\ttfamily Polygon\+Container\+Const\+Ptr costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::get\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get a shared instance of the current polygon container 
+
+\begin{DoxyRemark}{备注}
+If \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6e2b9aa4db5eec24e2cae5f4d3af1909}{compute()}} or \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} has not been called before, this method returns an empty instance! 
+\end{DoxyRemark}
+\begin{DoxyReturn}{返回}
+Shared instance of the current polygon container 
+\end{DoxyReturn}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}} .
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Nodehandle that defines the namespace for parameters \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a5e9d598f3a5913f754cc91c10fa70672}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+
+
+被 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_a9ee7a0ff34e7da8a850953963c17f733}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSConcave\+Hull}}, \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a7d4d748eb406363f923deba89d412bcc}{costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC}} , 以及 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_aac61c254df219ed217b148665e81e04f}{costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSMCCH}} 重载.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a55d233727263d3f89d007f9fb8754744}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a55d233727263d3f89d007f9fb8754744}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!neighborCellsToIndex@{neighborCellsToIndex}}
+\index{neighborCellsToIndex@{neighborCellsToIndex}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{neighborCellsToIndex()}{neighborCellsToIndex()}}
+{\footnotesize\ttfamily int costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::neighbor\+Cells\+To\+Index (\begin{DoxyParamCaption}\item[{int}]{cx,  }\item[{int}]{cy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+offset \mbox{[}meters\mbox{]} in y for the lookup grid 
+
+convert a 2d cell coordinate into the 1D index of the array 
+\begin{DoxyParams}{参数}
+{\em cx} & the x index of the cell \\
+\hline
+{\em cy} & the y index of the cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a44c350a82dd0b45084b05701e3094caf}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a44c350a82dd0b45084b05701e3094caf}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!pointToNeighborCells@{pointToNeighborCells}}
+\index{pointToNeighborCells@{pointToNeighborCells}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{pointToNeighborCells()}{pointToNeighborCells()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::point\+To\+Neighbor\+Cells (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} \&}]{kp,  }\item[{int \&}]{cx,  }\item[{int \&}]{cy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+compute the cell indices of a keypoint 
+
+
+\begin{DoxyParams}{参数}
+{\em kp} & key point given in world coordinates \mbox{[}m, m\mbox{]} \\
+\hline
+{\em cx} & output cell index in x direction \\
+\hline
+{\em cy} & output cell index in y direction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a30c9e455820f8193735362f325e0de60}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a30c9e455820f8193735362f325e0de60}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!regionQuery@{regionQuery}}
+\index{regionQuery@{regionQuery}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{regionQuery()}{regionQuery()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::region\+Query (\begin{DoxyParamCaption}\item[{int}]{curr\+\_\+index,  }\item[{std\+::vector$<$ int $>$ \&}]{neighbor\+\_\+indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Helper function for db\+Scan to search for neighboring points 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em curr\+\_\+index} & index to the current item in {\ttfamily occupied\+\_\+cells} \\
+\hline
+\mbox{\texttt{ out}}  & {\em neighbor\+\_\+indices} & list of neighbors (indices of {\ttfamily occupied} cells) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aed33709b3251194bf95b0f611ac606a3}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aed33709b3251194bf95b0f611ac606a3}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!setCostmap2D@{setCostmap2D}}
+\index{setCostmap2D@{setCostmap2D}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{setCostmap2D()}{setCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::set\+Costmap2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pass a pointer to the costap to the plugin. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}{update\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em costmap} & Pointer to the costmap2d source \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a980a39de9a8e2aad76f3e72d221de173}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a980a39de9a8e2aad76f3e72d221de173}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!simplifyPolygon@{simplifyPolygon}}
+\index{simplifyPolygon@{simplifyPolygon}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{simplifyPolygon()}{simplifyPolygon()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::simplify\+Polygon (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Simplify a polygon by removing points. 
+
+We apply the Douglas-\/\+Peucker Algorithm to simplify the edges of the polygon. Internally, the parameter min\+\_\+keypoint\+\_\+separation is used for deciding whether a point is considered close to an edge and to be merged into the line. \mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!updateCostmap2D@{updateCostmap2D}}
+\index{updateCostmap2D@{updateCostmap2D}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{updateCostmap2D()}{updateCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::update\+Costmap2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get updated data from the previously set Costmap2D 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aed33709b3251194bf95b0f611ac606a3}{set\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a8a09ea3e7b78271f0b9f1f7e13933479}\label{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a8a09ea3e7b78271f0b9f1f7e13933479}} 
+\index{costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}!updatePolygonContainer@{updatePolygonContainer}}
+\index{updatePolygonContainer@{updatePolygonContainer}!costmap\_converter::CostmapToPolygonsDBSMCCH@{costmap\_converter::CostmapToPolygonsDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{updatePolygonContainer()}{updatePolygonContainer()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH\+::update\+Polygon\+Container (\begin{DoxyParamCaption}\item[{Polygon\+Container\+Ptr}]{polygons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Thread-\/safe update of the internal polygon container (that is shared using \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}{get\+Polygons()}} from outside this class) 
+
+
+\begin{DoxyParams}{参数}
+{\em polygons} & Updated polygon container \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+polygons.\+h\end{DoxyCompactItemize}

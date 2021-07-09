@@ -1,0 +1,30 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~alpha_slow" : \b [double] Foreground detection: Learning rate of the slow filter min: 0.0, default: 0.3, max: 1.0
+- \b "~alpha_fast" : \b [double] Foreground detection: Learning rate of the fast filter min: 0.0, default: 0.85, max: 1.0
+- \b "~beta" : \b [double] Foreground detection: Weighting coefficient between a pixels value and the mean of its nearest neighbors min: 0.0, default: 0.85, max: 1.0
+- \b "~min_sep_between_slow_and_fast_filter" : \b [int] Foreground detection: Minimal difference between the fast and the slow filter to recognize a obstacle as dynamic min: 0, default: 80, max: 255
+- \b "~min_occupancy_probability" : \b [int] Foreground detection: Minimal value of the fast filter to recognize a obstacle as dynamic min: 0, default: 180, max: 255
+- \b "~max_occupancy_neighbors" : \b [int] Foreground detection: Maximal mean value of the nearest neighbors of a pixel in the slow filter min: 0, default: 80, max: 255
+- \b "~morph_size" : \b [int] Foreground detection: Size of the structuring element for the closing operation min: 0, default: 1, max: 10
+- \b "~publish_static_obstacles" : \b [bool] Include static obstacles as single-point polygons min: False, default: True, max: True
+- \b "~min_distance_between_blobs" : \b [double] Blob detection: Minimal distance between centers of two blobs to be considered as seperate blobs min: 0.0, default: 10.0, max: 300.0
+- \b "~filter_by_area" : \b [bool] Blob detection: Filter blobs based on number of pixels min: False, default: True, max: True
+- \b "~min_area" : \b [int] Blob detection: Minimal number of pixels a blob consists of min: 0, default: 3, max: 300
+- \b "~max_area" : \b [int] Blob detection: Maximal number of pixels a blob consists of min: 0, default: 300, max: 300
+- \b "~filter_by_circularity" : \b [bool] Blob detection: Filter blobs based on their circularity min: False, default: True, max: True
+- \b "~min_circularity" : \b [double] Blob detection: Minimal circularity value (0 in case of a line) min: 0.0, default: 0.2, max: 1.0
+- \b "~max_circularity" : \b [double] Blob detection: Maximal circularity value (1 in case of a circle) min: 0.0, default: 1.0, max: 1.0
+- \b "~filter_by_inertia" : \b [bool] Blob detection: Filter blobs based on their inertia ratio min: False, default: True, max: True
+- \b "~min_inertia_ratio" : \b [double] Blob detection: Minimal inertia ratio min: 0.0, default: 0.2, max: 1.0
+- \b "~max_inertia_ratio" : \b [double] Blob detection: Maximal inertia ratio min: 0.0, default: 1.0, max: 1.0
+- \b "~filter_by_convexity" : \b [bool] Blob detection: Filter blobs based on their convexity (Blob area / area of its convex hull) min: False, default: False, max: True
+- \b "~min_convexity" : \b [double] Blob detection: Minimum convexity ratio min: 0.0, default: 0.0, max: 1.0
+- \b "~max_convexity" : \b [double] Blob detection: Maximal convexity ratio min: 0.0, default: 1.0, max: 1.0
+- \b "~dt" : \b [double] Tracking: Time for one timestep of the kalman filter min: 0.1, default: 0.2, max: 3.0
+- \b "~dist_thresh" : \b [double] Tracking: Maximum distance between two points to be considered in the assignment problem min: 0.0, default: 20.0, max: 150.0
+- \b "~max_allowed_skipped_frames" : \b [int] Tracking: Maximum number of frames a object is tracked while it is not seen min: 0, default: 3, max: 10
+- \b "~max_trace_length" : \b [int] Tracking: Maximum number of Points in a objects trace min: 1, default: 10, max: 100
+

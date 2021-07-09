@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="standalone_converter" pkg="costmap_converter" type="standalone_converter">
+  <param name="cluster_max_distance" type="double" value="0.4" />
+  <param name="cluster_min_pts" type="int" value="2" />
+  <param name="cluster_max_pts" type="int" value="30" />
+  <param name="convex_hull_min_pt_separation" type="double" value="0.1" />
+  <param name="concave_hull_depth" type="double" value="2.0" />
+</node>
+\endverbatim
+

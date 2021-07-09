@@ -57,6 +57,8 @@ fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/ros/typ
 fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
+fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/serial/serial.h
+fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/serial/v8stdint.h
 fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 

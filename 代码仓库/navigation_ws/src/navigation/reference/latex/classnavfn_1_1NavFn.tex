@@ -1,0 +1,556 @@
+\hypertarget{classnavfn_1_1NavFn}{}\doxysection{navfn\+::Nav\+Fn类 参考}
+\label{classnavfn_1_1NavFn}\index{navfn::NavFn@{navfn::NavFn}}
+
+
+Navigation function class. Holds buffers for costmap, navfn map. Maps are pixel-\/based. Origin is upper left, x is right, y is down.  
+
+
+
+
+{\ttfamily \#include $<$navfn.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnavfn_1_1NavFn_aeed7d6c6f59caf8935ed76bb39a80379}{Nav\+Fn}} (int nx, int ny)
+\begin{DoxyCompactList}\small\item\em Constructs the planner \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a3b0c18b3e87f5f4350814e24b9a722fa}{set\+Nav\+Arr}} (int nx, int ny)
+\begin{DoxyCompactList}\small\item\em Sets or resets the size of the map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a140814a85ec650787a958fc235281c6f}{set\+Costmap}} (const COSTTYPE $\ast$cmap, bool is\+ROS=true, bool allow\+\_\+unknown=true)
+\begin{DoxyCompactList}\small\item\em Set up the cost array for the planner, usually from ROS ~\newline
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavFn_a20f2459aef927442363148b8403ad199}{calc\+Nav\+Fn\+Astar}} ()
+\begin{DoxyCompactList}\small\item\em Calculates a plan using the A$\ast$ heuristic, returns true if one is found \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavFn_a3516a575e782e45168ee810a983befa3}{calc\+Nav\+Fn\+Dijkstra}} (bool at\+Start=false)
+\begin{DoxyCompactList}\small\item\em Caclulates the full navigation function using Dijkstra \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a01ecb49a0247369c6996fde24df993c9}{get\+PathX}} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the x-\/coordinates of a path \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a4289ad0aa75ad65b7ba2bf88cd751eff}{get\+PathY}} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the y-\/coordinates of a path \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a27d0bdd9e1406e3467384b38e562684e}{get\+Path\+Len}} ()
+\begin{DoxyCompactList}\small\item\em Accessor for the length of a path \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a991e667731691eb111cddc786e2d02d0}{get\+Last\+Path\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Gets the cost of the path found the last time a navigation function was computed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a11224bd6ba1392f59e2b8e053c29e19f}{set\+Goal}} (int $\ast$goal)
+\begin{DoxyCompactList}\small\item\em Sets the goal position for the planner. Note\+: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_aae372dff3862f5fddc7de05a8ec9729c}{set\+Start}} (int $\ast$start)
+\begin{DoxyCompactList}\small\item\em Sets the start position for the planner. Note\+: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a18a538679f3b968ef741dd6ad76f7753}{init\+Cost}} (int k, float v)
+\begin{DoxyCompactList}\small\item\em Initialize cell k with cost v for propagation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a5246a7901de2865ac90b19d2434f22c1}{update\+Cell}} (int n)
+\begin{DoxyCompactList}\small\item\em Updates the cell at index n ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a45813052a7bd3295909b5eb4d0364e58}{update\+Cell\+Astar}} (int n)
+\begin{DoxyCompactList}\small\item\em Updates the cell at index n using the A$\ast$ heuristic \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a233063ad5d082e7e86802c194a9a322a}{setup\+Nav\+Fn}} (bool keepit=false)
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavFn_a076842de1d6d76769040f21856b7cb55}{prop\+Nav\+Fn\+Dijkstra}} (int cycles, bool at\+Start=false)
+\begin{DoxyCompactList}\small\item\em Run propagation for $<$cycles$>$ iterations, or until start is reached using breadth-\/first Dijkstra method \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavFn_a561511e57e6590da2dcfe7d5a4cf751d}{prop\+Nav\+Fn\+Astar}} (int cycles)
+\begin{DoxyCompactList}\small\item\em Run propagation for $<$cycles$>$ iterations, or until start is reached using the best-\/first A$\ast$ method with Euclidean distance heuristic \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a672ab629393be0eb4b91696cb1b6c01a}{calc\+Path}} (int n, int $\ast$st=NULL)
+\begin{DoxyCompactList}\small\item\em Calculates the path for at mose $<$n$>$ cycles \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a28b709d5ffb7619f9f2083415a5c96ab}{grad\+Cell}} (int n)
+\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_ab42572b5439ae4510a1a261d704082f0}{display}} (void fn(\mbox{\hyperlink{classnavfn_1_1NavFn}{Nav\+Fn}} $\ast$nav), int n=100)
+\item 
+void \mbox{\hyperlink{classnavfn_1_1NavFn_a8cf5e1fee399f2b501182e01badea3b0}{savemap}} (const char $\ast$fname)
+\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a0210ff0b5a9c876304957942f5b3b06f}\label{classnavfn_1_1NavFn_a0210ff0b5a9c876304957942f5b3b06f}} 
+int {\bfseries nx}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_adf2f81d0ab6ed5f1fc70d966833c428b}\label{classnavfn_1_1NavFn_adf2f81d0ab6ed5f1fc70d966833c428b}} 
+int {\bfseries ny}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_aafecaed0735031096ec1ac9cdda95221}{ns}}
+\item 
+COSTTYPE $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a65f1a68e92cc36905c8adc1ed8419c07}{costarr}}
+\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_ac1c141329d83e70f7ec649eeb74d5930}{potarr}}
+\item 
+bool $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a7a79ea21c1c230d65349c1a4234a1146}{pending}}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a77885790b4fee72d82d34738ecd420e8}{nobs}}
+\item 
+int $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a2e511ecff0c963f777149b3112d7d088}{pb1}}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_ab3bb9ffd5a267db916883bc8adeea45e}\label{classnavfn_1_1NavFn_ab3bb9ffd5a267db916883bc8adeea45e}} 
+int $\ast$ {\bfseries pb2}
+\item 
+int $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a0cc8d5ebae7a7ec08c1c1ebc52f806e1}{pb3}}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_ab3804865f546eb599da9384108879ae1}\label{classnavfn_1_1NavFn_ab3804865f546eb599da9384108879ae1}} 
+int $\ast$ {\bfseries curP}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a02d3f4d1998b6dcf10e67eb0cc17a3c9}\label{classnavfn_1_1NavFn_a02d3f4d1998b6dcf10e67eb0cc17a3c9}} 
+int $\ast$ {\bfseries nextP}
+\item 
+int $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_aec4a086d1cd8357f0e9becf3a03e1807}{overP}}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a5fea5223a6798e3caafbb09db73f5dcb}\label{classnavfn_1_1NavFn_a5fea5223a6798e3caafbb09db73f5dcb}} 
+int {\bfseries cur\+Pe}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a57a0981a650734f98cc9110b9c30a622}\label{classnavfn_1_1NavFn_a57a0981a650734f98cc9110b9c30a622}} 
+int {\bfseries next\+Pe}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a967459dcc87c8b99850d74d9b2c8457d}{over\+Pe}}
+\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a8c7e3f2353501b6cd5f347d6dab39129}{curT}}
+\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a1ac0b9f1455e2bfefd2b7ab37ddf86a6}{pri\+Inc}}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_aab43846083a47f5e1863675e99e0314c}\label{classnavfn_1_1NavFn_aab43846083a47f5e1863675e99e0314c}} 
+int {\bfseries goal} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a1e91833444b39d86056e74b7c769bcfc}\label{classnavfn_1_1NavFn_a1e91833444b39d86056e74b7c769bcfc}} 
+int {\bfseries start} \mbox{[}2\mbox{]}
+\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a64aa3815ac0d3e6315b205694660109a}{gradx}}
+\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a135d509f9624d7e78ebed07f7fb3c71f}{grady}}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a375aad1164c8253c86861e5fb25631e5}\label{classnavfn_1_1NavFn_a375aad1164c8253c86861e5fb25631e5}} 
+float $\ast$ {\bfseries pathx}
+\item 
+float $\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a1114910bfef12f5cc403379df0cf0a29}{pathy}}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a3df20c72cbc55329e735ca9c244e2829}{npath}}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_a6d9f6dd7f2d1467bab7687e1c05fb536}{npathbuf}}
+\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a591744e902fa225f1557898777a9decd}{last\+\_\+path\+\_\+cost\+\_\+}}
+\item 
+float \mbox{\hyperlink{classnavfn_1_1NavFn_a93b7bc3a8b6ef9e41d2dd84bda5fd264}{path\+Step}}
+\item 
+int \mbox{\hyperlink{classnavfn_1_1NavFn_ace2319d3eb0aa49e5fe7cf478049fffc}{display\+Int}}
+\item 
+void($\ast$ \mbox{\hyperlink{classnavfn_1_1NavFn_a1513371ee240294a9f29e2511e725f18}{display\+Fn}} )(\mbox{\hyperlink{classnavfn_1_1NavFn}{Nav\+Fn}} $\ast$nav)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Navigation function class. Holds buffers for costmap, navfn map. Maps are pixel-\/based. Origin is upper left, x is right, y is down. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_aeed7d6c6f59caf8935ed76bb39a80379}\label{classnavfn_1_1NavFn_aeed7d6c6f59caf8935ed76bb39a80379}} 
+\index{navfn::NavFn@{navfn::NavFn}!NavFn@{NavFn}}
+\index{NavFn@{NavFn}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{NavFn()}{NavFn()}}
+{\footnotesize\ttfamily navfn\+::\+Nav\+Fn\+::\+Nav\+Fn (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})}
+
+
+
+Constructs the planner 
+
+
+\begin{DoxyParams}{参数}
+{\em nx} & The x size of the map \\
+\hline
+{\em ny} & The y size of the map \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a20f2459aef927442363148b8403ad199}\label{classnavfn_1_1NavFn_a20f2459aef927442363148b8403ad199}} 
+\index{navfn::NavFn@{navfn::NavFn}!calcNavFnAstar@{calcNavFnAstar}}
+\index{calcNavFnAstar@{calcNavFnAstar}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{calcNavFnAstar()}{calcNavFnAstar()}}
+{\footnotesize\ttfamily bool navfn\+::\+Nav\+Fn\+::calc\+Nav\+Fn\+Astar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates a plan using the A$\ast$ heuristic, returns true if one is found 
+
+\begin{DoxyReturn}{返回}
+True if a plan is found, false otherwise calculates a plan, returns true if found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a3516a575e782e45168ee810a983befa3}\label{classnavfn_1_1NavFn_a3516a575e782e45168ee810a983befa3}} 
+\index{navfn::NavFn@{navfn::NavFn}!calcNavFnDijkstra@{calcNavFnDijkstra}}
+\index{calcNavFnDijkstra@{calcNavFnDijkstra}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{calcNavFnDijkstra()}{calcNavFnDijkstra()}}
+{\footnotesize\ttfamily bool navfn\+::\+Nav\+Fn\+::calc\+Nav\+Fn\+Dijkstra (\begin{DoxyParamCaption}\item[{bool}]{at\+Start = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Caclulates the full navigation function using Dijkstra 
+
+calculates the full navigation function \mbox{\Hypertarget{classnavfn_1_1NavFn_a672ab629393be0eb4b91696cb1b6c01a}\label{classnavfn_1_1NavFn_a672ab629393be0eb4b91696cb1b6c01a}} 
+\index{navfn::NavFn@{navfn::NavFn}!calcPath@{calcPath}}
+\index{calcPath@{calcPath}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{calcPath()}{calcPath()}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::calc\+Path (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int $\ast$}]{st = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Calculates the path for at mose $<$n$>$ cycles 
+
+
+\begin{DoxyParams}{参数}
+{\em n} & The maximum number of cycles to run for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The length of the path found calculates path for at most $<$n$>$ cycles, returns path length, 0 if none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_ab42572b5439ae4510a1a261d704082f0}\label{classnavfn_1_1NavFn_ab42572b5439ae4510a1a261d704082f0}} 
+\index{navfn::NavFn@{navfn::NavFn}!display@{display}}
+\index{display@{display}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::display (\begin{DoxyParamCaption}\item[{void }]{fnNav\+Fn $\ast$nav,  }\item[{int}]{n = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+display callback $<$n$>$ is the number of cycles between updates ~\newline
+ \mbox{\Hypertarget{classnavfn_1_1NavFn_a991e667731691eb111cddc786e2d02d0}\label{classnavfn_1_1NavFn_a991e667731691eb111cddc786e2d02d0}} 
+\index{navfn::NavFn@{navfn::NavFn}!getLastPathCost@{getLastPathCost}}
+\index{getLastPathCost@{getLastPathCost}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{getLastPathCost()}{getLastPathCost()}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::get\+Last\+Path\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the cost of the path found the last time a navigation function was computed 
+
+\begin{DoxyReturn}{返回}
+The cost of the last path found Return cost of path found the last time A$\ast$ was called 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a27d0bdd9e1406e3467384b38e562684e}\label{classnavfn_1_1NavFn_a27d0bdd9e1406e3467384b38e562684e}} 
+\index{navfn::NavFn@{navfn::NavFn}!getPathLen@{getPathLen}}
+\index{getPathLen@{getPathLen}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{getPathLen()}{getPathLen()}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::get\+Path\+Len (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accessor for the length of a path 
+
+\begin{DoxyReturn}{返回}
+The length of a path length of path, 0 if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a01ecb49a0247369c6996fde24df993c9}\label{classnavfn_1_1NavFn_a01ecb49a0247369c6996fde24df993c9}} 
+\index{navfn::NavFn@{navfn::NavFn}!getPathX@{getPathX}}
+\index{getPathX@{getPathX}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{getPathX()}{getPathX()}}
+{\footnotesize\ttfamily float$\ast$ navfn\+::\+Nav\+Fn\+::get\+PathX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accessor for the x-\/coordinates of a path 
+
+\begin{DoxyReturn}{返回}
+The x-\/coordinates of a path x-\/coordinates of path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a4289ad0aa75ad65b7ba2bf88cd751eff}\label{classnavfn_1_1NavFn_a4289ad0aa75ad65b7ba2bf88cd751eff}} 
+\index{navfn::NavFn@{navfn::NavFn}!getPathY@{getPathY}}
+\index{getPathY@{getPathY}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{getPathY()}{getPathY()}}
+{\footnotesize\ttfamily float$\ast$ navfn\+::\+Nav\+Fn\+::get\+PathY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accessor for the y-\/coordinates of a path 
+
+\begin{DoxyReturn}{返回}
+The y-\/coordinates of a path y-\/coordinates of path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a28b709d5ffb7619f9f2083415a5c96ab}\label{classnavfn_1_1NavFn_a28b709d5ffb7619f9f2083415a5c96ab}} 
+\index{navfn::NavFn@{navfn::NavFn}!gradCell@{gradCell}}
+\index{gradCell@{gradCell}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{gradCell()}{gradCell()}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::grad\+Cell (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+calculates gradient at cell $<$n$>$, returns norm \mbox{\Hypertarget{classnavfn_1_1NavFn_a18a538679f3b968ef741dd6ad76f7753}\label{classnavfn_1_1NavFn_a18a538679f3b968ef741dd6ad76f7753}} 
+\index{navfn::NavFn@{navfn::NavFn}!initCost@{initCost}}
+\index{initCost@{initCost}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{initCost()}{initCost()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::init\+Cost (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{float}]{v }\end{DoxyParamCaption})}
+
+
+
+Initialize cell k with cost v for propagation 
+
+
+\begin{DoxyParams}{参数}
+{\em k} & the cell to initialize \\
+\hline
+{\em v} & the cost to give to the cell initialize cell $<$k$>$ with cost $<$v$>$, for propagation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a561511e57e6590da2dcfe7d5a4cf751d}\label{classnavfn_1_1NavFn_a561511e57e6590da2dcfe7d5a4cf751d}} 
+\index{navfn::NavFn@{navfn::NavFn}!propNavFnAstar@{propNavFnAstar}}
+\index{propNavFnAstar@{propNavFnAstar}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{propNavFnAstar()}{propNavFnAstar()}}
+{\footnotesize\ttfamily bool navfn\+::\+Nav\+Fn\+::prop\+Nav\+Fn\+Astar (\begin{DoxyParamCaption}\item[{int}]{cycles }\end{DoxyParamCaption})}
+
+
+
+Run propagation for $<$cycles$>$ iterations, or until start is reached using the best-\/first A$\ast$ method with Euclidean distance heuristic 
+
+
+\begin{DoxyParams}{参数}
+{\em cycles} & The maximum number of iterations to run for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+true if the start point is reached returns true if start point found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a076842de1d6d76769040f21856b7cb55}\label{classnavfn_1_1NavFn_a076842de1d6d76769040f21856b7cb55}} 
+\index{navfn::NavFn@{navfn::NavFn}!propNavFnDijkstra@{propNavFnDijkstra}}
+\index{propNavFnDijkstra@{propNavFnDijkstra}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{propNavFnDijkstra()}{propNavFnDijkstra()}}
+{\footnotesize\ttfamily bool navfn\+::\+Nav\+Fn\+::prop\+Nav\+Fn\+Dijkstra (\begin{DoxyParamCaption}\item[{int}]{cycles,  }\item[{bool}]{at\+Start = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Run propagation for $<$cycles$>$ iterations, or until start is reached using breadth-\/first Dijkstra method 
+
+
+\begin{DoxyParams}{参数}
+{\em cycles} & The maximum number of iterations to run for \\
+\hline
+{\em at\+Start} & Whether or not to stop when the start point is reached \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+true if the start point is reached returns true if start point found or full prop 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a8cf5e1fee399f2b501182e01badea3b0}\label{classnavfn_1_1NavFn_a8cf5e1fee399f2b501182e01badea3b0}} 
+\index{navfn::NavFn@{navfn::NavFn}!savemap@{savemap}}
+\index{savemap@{savemap}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{savemap()}{savemap()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::savemap (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+save costmap write out costmap and start/goal states as fname.\+pgm and fname.\+txt \mbox{\Hypertarget{classnavfn_1_1NavFn_a140814a85ec650787a958fc235281c6f}\label{classnavfn_1_1NavFn_a140814a85ec650787a958fc235281c6f}} 
+\index{navfn::NavFn@{navfn::NavFn}!setCostmap@{setCostmap}}
+\index{setCostmap@{setCostmap}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{setCostmap()}{setCostmap()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::set\+Costmap (\begin{DoxyParamCaption}\item[{const COSTTYPE $\ast$}]{cmap,  }\item[{bool}]{is\+ROS = {\ttfamily true},  }\item[{bool}]{allow\+\_\+unknown = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Set up the cost array for the planner, usually from ROS ~\newline
+ 
+
+
+\begin{DoxyParams}{参数}
+{\em cmap} & The costmap \\
+\hline
+{\em is\+ROS} & Whether or not the costmap is coming in in ROS format \\
+\hline
+{\em allow\+\_\+unknown} & Whether or not the planner should be allowed to plan through unknown space sets up the cost map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a11224bd6ba1392f59e2b8e053c29e19f}\label{classnavfn_1_1NavFn_a11224bd6ba1392f59e2b8e053c29e19f}} 
+\index{navfn::NavFn@{navfn::NavFn}!setGoal@{setGoal}}
+\index{setGoal@{setGoal}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{setGoal()}{setGoal()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::set\+Goal (\begin{DoxyParamCaption}\item[{int $\ast$}]{goal }\end{DoxyParamCaption})}
+
+
+
+Sets the goal position for the planner. Note\+: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. 
+
+goal and start positions 
+\begin{DoxyParams}{参数}
+{\em goal} & the goal position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a3b0c18b3e87f5f4350814e24b9a722fa}\label{classnavfn_1_1NavFn_a3b0c18b3e87f5f4350814e24b9a722fa}} 
+\index{navfn::NavFn@{navfn::NavFn}!setNavArr@{setNavArr}}
+\index{setNavArr@{setNavArr}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{setNavArr()}{setNavArr()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::set\+Nav\+Arr (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})}
+
+
+
+Sets or resets the size of the map 
+
+
+\begin{DoxyParams}{参数}
+{\em nx} & The x size of the map \\
+\hline
+{\em ny} & The y size of the map sets or resets the size of the map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_aae372dff3862f5fddc7de05a8ec9729c}\label{classnavfn_1_1NavFn_aae372dff3862f5fddc7de05a8ec9729c}} 
+\index{navfn::NavFn@{navfn::NavFn}!setStart@{setStart}}
+\index{setStart@{setStart}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{setStart()}{setStart()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::set\+Start (\begin{DoxyParamCaption}\item[{int $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+
+Sets the start position for the planner. Note\+: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & the start position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a233063ad5d082e7e86802c194a9a322a}\label{classnavfn_1_1NavFn_a233063ad5d082e7e86802c194a9a322a}} 
+\index{navfn::NavFn@{navfn::NavFn}!setupNavFn@{setupNavFn}}
+\index{setupNavFn@{setupNavFn}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{setupNavFn()}{setupNavFn()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::setup\+Nav\+Fn (\begin{DoxyParamCaption}\item[{bool}]{keepit = {\ttfamily false} }\end{DoxyParamCaption})}
+
+resets all nav fn arrays for propagation \mbox{\Hypertarget{classnavfn_1_1NavFn_a5246a7901de2865ac90b19d2434f22c1}\label{classnavfn_1_1NavFn_a5246a7901de2865ac90b19d2434f22c1}} 
+\index{navfn::NavFn@{navfn::NavFn}!updateCell@{updateCell}}
+\index{updateCell@{updateCell}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{updateCell()}{updateCell()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::update\+Cell (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Updates the cell at index n ~\newline
+ 
+
+propagation 
+\begin{DoxyParams}{参数}
+{\em n} & The index to update updates the cell at index $<$n$>$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a45813052a7bd3295909b5eb4d0364e58}\label{classnavfn_1_1NavFn_a45813052a7bd3295909b5eb4d0364e58}} 
+\index{navfn::NavFn@{navfn::NavFn}!updateCellAstar@{updateCellAstar}}
+\index{updateCellAstar@{updateCellAstar}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{updateCellAstar()}{updateCellAstar()}}
+{\footnotesize\ttfamily void navfn\+::\+Nav\+Fn\+::update\+Cell\+Astar (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Updates the cell at index n using the A$\ast$ heuristic 
+
+
+\begin{DoxyParams}{参数}
+{\em n} & The index to update updates the cell at index $<$n$>$, uses A$\ast$ heuristic \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{classnavfn_1_1NavFn_a65f1a68e92cc36905c8adc1ed8419c07}\label{classnavfn_1_1NavFn_a65f1a68e92cc36905c8adc1ed8419c07}} 
+\index{navfn::NavFn@{navfn::NavFn}!costarr@{costarr}}
+\index{costarr@{costarr}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{costarr}{costarr}}
+{\footnotesize\ttfamily COSTTYPE$\ast$ navfn\+::\+Nav\+Fn\+::costarr}
+
+cell arrays cost array in 2D configuration space \mbox{\Hypertarget{classnavfn_1_1NavFn_a8c7e3f2353501b6cd5f347d6dab39129}\label{classnavfn_1_1NavFn_a8c7e3f2353501b6cd5f347d6dab39129}} 
+\index{navfn::NavFn@{navfn::NavFn}!curT@{curT}}
+\index{curT@{curT}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{curT}{curT}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::curT}
+
+block priority thresholds current threshold \mbox{\Hypertarget{classnavfn_1_1NavFn_a1513371ee240294a9f29e2511e725f18}\label{classnavfn_1_1NavFn_a1513371ee240294a9f29e2511e725f18}} 
+\index{navfn::NavFn@{navfn::NavFn}!displayFn@{displayFn}}
+\index{displayFn@{displayFn}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{displayFn}{displayFn}}
+{\footnotesize\ttfamily void($\ast$ navfn\+::\+Nav\+Fn\+::display\+Fn) (\mbox{\hyperlink{classnavfn_1_1NavFn}{Nav\+Fn}} $\ast$nav)}
+
+display function itself \mbox{\Hypertarget{classnavfn_1_1NavFn_ace2319d3eb0aa49e5fe7cf478049fffc}\label{classnavfn_1_1NavFn_ace2319d3eb0aa49e5fe7cf478049fffc}} 
+\index{navfn::NavFn@{navfn::NavFn}!displayInt@{displayInt}}
+\index{displayInt@{displayInt}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{displayInt}{displayInt}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::display\+Int}
+
+save second argument of \mbox{\hyperlink{classnavfn_1_1NavFn_ab42572b5439ae4510a1a261d704082f0}{display()}} above \mbox{\Hypertarget{classnavfn_1_1NavFn_a64aa3815ac0d3e6315b205694660109a}\label{classnavfn_1_1NavFn_a64aa3815ac0d3e6315b205694660109a}} 
+\index{navfn::NavFn@{navfn::NavFn}!gradx@{gradx}}
+\index{gradx@{gradx}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{gradx}{gradx}}
+{\footnotesize\ttfamily float$\ast$ navfn\+::\+Nav\+Fn\+::gradx}
+
+gradient and paths \mbox{\Hypertarget{classnavfn_1_1NavFn_a135d509f9624d7e78ebed07f7fb3c71f}\label{classnavfn_1_1NavFn_a135d509f9624d7e78ebed07f7fb3c71f}} 
+\index{navfn::NavFn@{navfn::NavFn}!grady@{grady}}
+\index{grady@{grady}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{grady}{grady}}
+{\footnotesize\ttfamily float $\ast$ navfn\+::\+Nav\+Fn\+::grady}
+
+gradient arrays, size of potential array \mbox{\Hypertarget{classnavfn_1_1NavFn_a591744e902fa225f1557898777a9decd}\label{classnavfn_1_1NavFn_a591744e902fa225f1557898777a9decd}} 
+\index{navfn::NavFn@{navfn::NavFn}!last\_path\_cost\_@{last\_path\_cost\_}}
+\index{last\_path\_cost\_@{last\_path\_cost\_}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{last\_path\_cost\_}{last\_path\_cost\_}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::last\+\_\+path\+\_\+cost\+\_\+}
+
+Holds the cost of the path found the last time A$\ast$ was called \mbox{\Hypertarget{classnavfn_1_1NavFn_a77885790b4fee72d82d34738ecd420e8}\label{classnavfn_1_1NavFn_a77885790b4fee72d82d34738ecd420e8}} 
+\index{navfn::NavFn@{navfn::NavFn}!nobs@{nobs}}
+\index{nobs@{nobs}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{nobs}{nobs}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::nobs}
+
+number of obstacle cells \mbox{\Hypertarget{classnavfn_1_1NavFn_a3df20c72cbc55329e735ca9c244e2829}\label{classnavfn_1_1NavFn_a3df20c72cbc55329e735ca9c244e2829}} 
+\index{navfn::NavFn@{navfn::NavFn}!npath@{npath}}
+\index{npath@{npath}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{npath}{npath}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::npath}
+
+number of path points \mbox{\Hypertarget{classnavfn_1_1NavFn_a6d9f6dd7f2d1467bab7687e1c05fb536}\label{classnavfn_1_1NavFn_a6d9f6dd7f2d1467bab7687e1c05fb536}} 
+\index{navfn::NavFn@{navfn::NavFn}!npathbuf@{npathbuf}}
+\index{npathbuf@{npathbuf}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{npathbuf}{npathbuf}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::npathbuf}
+
+size of pathx, pathy buffers \mbox{\Hypertarget{classnavfn_1_1NavFn_aafecaed0735031096ec1ac9cdda95221}\label{classnavfn_1_1NavFn_aafecaed0735031096ec1ac9cdda95221}} 
+\index{navfn::NavFn@{navfn::NavFn}!ns@{ns}}
+\index{ns@{ns}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{ns}{ns}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::ns}
+
+size of grid, in pixels \mbox{\Hypertarget{classnavfn_1_1NavFn_aec4a086d1cd8357f0e9becf3a03e1807}\label{classnavfn_1_1NavFn_aec4a086d1cd8357f0e9becf3a03e1807}} 
+\index{navfn::NavFn@{navfn::NavFn}!overP@{overP}}
+\index{overP@{overP}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{overP}{overP}}
+{\footnotesize\ttfamily int $\ast$ navfn\+::\+Nav\+Fn\+::overP}
+
+priority buffer block ptrs \mbox{\Hypertarget{classnavfn_1_1NavFn_a967459dcc87c8b99850d74d9b2c8457d}\label{classnavfn_1_1NavFn_a967459dcc87c8b99850d74d9b2c8457d}} 
+\index{navfn::NavFn@{navfn::NavFn}!overPe@{overPe}}
+\index{overPe@{overPe}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{overPe}{overPe}}
+{\footnotesize\ttfamily int navfn\+::\+Nav\+Fn\+::over\+Pe}
+
+end points of arrays \mbox{\Hypertarget{classnavfn_1_1NavFn_a93b7bc3a8b6ef9e41d2dd84bda5fd264}\label{classnavfn_1_1NavFn_a93b7bc3a8b6ef9e41d2dd84bda5fd264}} 
+\index{navfn::NavFn@{navfn::NavFn}!pathStep@{pathStep}}
+\index{pathStep@{pathStep}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{pathStep}{pathStep}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::path\+Step}
+
+step size for following gradient \mbox{\Hypertarget{classnavfn_1_1NavFn_a1114910bfef12f5cc403379df0cf0a29}\label{classnavfn_1_1NavFn_a1114910bfef12f5cc403379df0cf0a29}} 
+\index{navfn::NavFn@{navfn::NavFn}!pathy@{pathy}}
+\index{pathy@{pathy}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{pathy}{pathy}}
+{\footnotesize\ttfamily float $\ast$ navfn\+::\+Nav\+Fn\+::pathy}
+
+path points, as subpixel cell coordinates \mbox{\Hypertarget{classnavfn_1_1NavFn_a2e511ecff0c963f777149b3112d7d088}\label{classnavfn_1_1NavFn_a2e511ecff0c963f777149b3112d7d088}} 
+\index{navfn::NavFn@{navfn::NavFn}!pb1@{pb1}}
+\index{pb1@{pb1}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{pb1}{pb1}}
+{\footnotesize\ttfamily int$\ast$ navfn\+::\+Nav\+Fn\+::pb1}
+
+block priority buffers \mbox{\Hypertarget{classnavfn_1_1NavFn_a0cc8d5ebae7a7ec08c1c1ebc52f806e1}\label{classnavfn_1_1NavFn_a0cc8d5ebae7a7ec08c1c1ebc52f806e1}} 
+\index{navfn::NavFn@{navfn::NavFn}!pb3@{pb3}}
+\index{pb3@{pb3}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{pb3}{pb3}}
+{\footnotesize\ttfamily int $\ast$ navfn\+::\+Nav\+Fn\+::pb3}
+
+storage buffers for priority blocks \mbox{\Hypertarget{classnavfn_1_1NavFn_a7a79ea21c1c230d65349c1a4234a1146}\label{classnavfn_1_1NavFn_a7a79ea21c1c230d65349c1a4234a1146}} 
+\index{navfn::NavFn@{navfn::NavFn}!pending@{pending}}
+\index{pending@{pending}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{pending}{pending}}
+{\footnotesize\ttfamily bool$\ast$ navfn\+::\+Nav\+Fn\+::pending}
+
+pending cells during propagation \mbox{\Hypertarget{classnavfn_1_1NavFn_ac1c141329d83e70f7ec649eeb74d5930}\label{classnavfn_1_1NavFn_ac1c141329d83e70f7ec649eeb74d5930}} 
+\index{navfn::NavFn@{navfn::NavFn}!potarr@{potarr}}
+\index{potarr@{potarr}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{potarr}{potarr}}
+{\footnotesize\ttfamily float$\ast$ navfn\+::\+Nav\+Fn\+::potarr}
+
+potential array, navigation function potential \mbox{\Hypertarget{classnavfn_1_1NavFn_a1ac0b9f1455e2bfefd2b7ab37ddf86a6}\label{classnavfn_1_1NavFn_a1ac0b9f1455e2bfefd2b7ab37ddf86a6}} 
+\index{navfn::NavFn@{navfn::NavFn}!priInc@{priInc}}
+\index{priInc@{priInc}!navfn::NavFn@{navfn::NavFn}}
+\doxysubsubsection{\texorpdfstring{priInc}{priInc}}
+{\footnotesize\ttfamily float navfn\+::\+Nav\+Fn\+::pri\+Inc}
+
+priority threshold increment 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+navfn/include/navfn/navfn.\+h\end{DoxyCompactItemize}

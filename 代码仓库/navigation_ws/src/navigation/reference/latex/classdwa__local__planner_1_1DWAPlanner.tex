@@ -1,0 +1,174 @@
+\hypertarget{classdwa__local__planner_1_1DWAPlanner}{}\doxysection{dwa\+\_\+local\+\_\+planner\+::DWAPlanner类 参考}
+\label{classdwa__local__planner_1_1DWAPlanner}\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+
+
+A class implementing a local planner using the Dynamic Window Approach  
+
+
+
+
+{\ttfamily \#include $<$dwa\+\_\+planner.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_ab2c1143a3a54638d0dc38f9b6fa16e53}{DWAPlanner}} (std\+::string name, \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} $\ast$planner\+\_\+util)
+\begin{DoxyCompactList}\small\item\em Constructor for the planner \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_a9388b62309f6148c697aef4ebf5fe20a}\label{classdwa__local__planner_1_1DWAPlanner_a9388b62309f6148c697aef4ebf5fe20a}} 
+void \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_a9388b62309f6148c697aef4ebf5fe20a}{reconfigure}} (DWAPlanner\+Config \&cfg)
+\begin{DoxyCompactList}\small\item\em Reconfigures the trajectory planner \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_a1200e7b997f2acd8c3b912bed37e69d5}{check\+Trajectory}} (const Eigen\+::\+Vector3f pos, const Eigen\+::\+Vector3f vel, const Eigen\+::\+Vector3f vel\+\_\+samples)
+\begin{DoxyCompactList}\small\item\em Check if a trajectory is legal for a position/velocity pair \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_acf862f4cbfd701bacf1eb359cd05892f}{find\+Best\+Path}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+vel, geometry\+\_\+msgs\+::\+Pose\+Stamped \&drive\+\_\+velocities)
+\begin{DoxyCompactList}\small\item\em Given the current position and velocity of the robot, find the best trajectory to exectue \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_aa681debca2e138a957652e9451893f67}{update\+Plan\+And\+Local\+Costs}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&new\+\_\+plan, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec)
+\begin{DoxyCompactList}\small\item\em Update the cost functions before planning \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_a943ce6facaf2c7602709ed4d0e9c9c54}{get\+Sim\+Period}} ()
+\begin{DoxyCompactList}\small\item\em Get the period at which the local planner is expected to run \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_ab62d6664d13e90e42327de34a2ed1cfb}{get\+Cell\+Costs}} (int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Compute the components and total cost for a map grid cell \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlanner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class implementing a local planner using the Dynamic Window Approach 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_ab2c1143a3a54638d0dc38f9b6fa16e53}\label{classdwa__local__planner_1_1DWAPlanner_ab2c1143a3a54638d0dc38f9b6fa16e53}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!DWAPlanner@{DWAPlanner}}
+\index{DWAPlanner@{DWAPlanner}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{DWAPlanner()}{DWAPlanner()}}
+{\footnotesize\ttfamily dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::\+DWAPlanner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} $\ast$}]{planner\+\_\+util }\end{DoxyParamCaption})}
+
+
+
+Constructor for the planner 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of the planner \\
+\hline
+{\em costmap\+\_\+ros} & A pointer to the costmap instance the planner should use \\
+\hline
+{\em global\+\_\+frame} & the frame id of the tf frame to use \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_a1200e7b997f2acd8c3b912bed37e69d5}\label{classdwa__local__planner_1_1DWAPlanner_a1200e7b997f2acd8c3b912bed37e69d5}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f}]{pos,  }\item[{const Eigen\+::\+Vector3f}]{vel,  }\item[{const Eigen\+::\+Vector3f}]{vel\+\_\+samples }\end{DoxyParamCaption})}
+
+
+
+Check if a trajectory is legal for a position/velocity pair 
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & The robot\textquotesingle{}s position \\
+\hline
+{\em vel} & The robot\textquotesingle{}s velocity \\
+\hline
+{\em vel\+\_\+samples} & The desired velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the trajectory is valid, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_acf862f4cbfd701bacf1eb359cd05892f}\label{classdwa__local__planner_1_1DWAPlanner_acf862f4cbfd701bacf1eb359cd05892f}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!findBestPath@{findBestPath}}
+\index{findBestPath@{findBestPath}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{findBestPath()}{findBestPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::find\+Best\+Path (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+vel,  }\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{drive\+\_\+velocities }\end{DoxyParamCaption})}
+
+
+
+Given the current position and velocity of the robot, find the best trajectory to exectue 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & The current position of the robot \\
+\hline
+{\em global\+\_\+vel} & The current velocity of the robot \\
+\hline
+{\em drive\+\_\+velocities} & The velocities to send to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The highest scoring trajectory. A cost $>$= 0 means the trajectory is legal to execute. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_ab62d6664d13e90e42327de34a2ed1cfb}\label{classdwa__local__planner_1_1DWAPlanner_ab62d6664d13e90e42327de34a2ed1cfb}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!getCellCosts@{getCellCosts}}
+\index{getCellCosts@{getCellCosts}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{getCellCosts()}{getCellCosts()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::get\+Cell\+Costs (\begin{DoxyParamCaption}\item[{int}]{cx,  }\item[{int}]{cy,  }\item[{float \&}]{path\+\_\+cost,  }\item[{float \&}]{goal\+\_\+cost,  }\item[{float \&}]{occ\+\_\+cost,  }\item[{float \&}]{total\+\_\+cost }\end{DoxyParamCaption})}
+
+
+
+Compute the components and total cost for a map grid cell 
+
+
+\begin{DoxyParams}{参数}
+{\em cx} & The x coordinate of the cell in the map grid \\
+\hline
+{\em cy} & The y coordinate of the cell in the map grid \\
+\hline
+{\em path\+\_\+cost} & Will be set to the path distance component of the cost function \\
+\hline
+{\em goal\+\_\+cost} & Will be set to the goal distance component of the cost function \\
+\hline
+{\em occ\+\_\+cost} & Will be set to the costmap value of the cell \\
+\hline
+{\em total\+\_\+cost} & Will be set to the value of the overall cost function, taking into account the scaling parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the cell is traversible and therefore a legal location for the robot to move to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_a943ce6facaf2c7602709ed4d0e9c9c54}\label{classdwa__local__planner_1_1DWAPlanner_a943ce6facaf2c7602709ed4d0e9c9c54}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!getSimPeriod@{getSimPeriod}}
+\index{getSimPeriod@{getSimPeriod}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{getSimPeriod()}{getSimPeriod()}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::get\+Sim\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the period at which the local planner is expected to run 
+
+\begin{DoxyReturn}{返回}
+The simulation period 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}\label{classdwa__local__planner_1_1DWAPlanner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})}
+
+sets new plan and resets state \mbox{\Hypertarget{classdwa__local__planner_1_1DWAPlanner_aa681debca2e138a957652e9451893f67}\label{classdwa__local__planner_1_1DWAPlanner_aa681debca2e138a957652e9451893f67}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!updatePlanAndLocalCosts@{updatePlanAndLocalCosts}}
+\index{updatePlanAndLocalCosts@{updatePlanAndLocalCosts}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{updatePlanAndLocalCosts()}{updatePlanAndLocalCosts()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::update\+Plan\+And\+Local\+Costs (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{new\+\_\+plan,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec }\end{DoxyParamCaption})}
+
+
+
+Update the cost functions before planning 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & The robot\textquotesingle{}s current pose \\
+\hline
+{\em new\+\_\+plan} & The new global plan \\
+\hline
+{\em footprint\+\_\+spec} & The robot\textquotesingle{}s footprint\\
+\hline
+\end{DoxyParams}
+The obstacle cost function gets the footprint. The path and goal cost functions get the global\+\_\+plan The alignment cost functions get a version of the global plan that is modified based on the global\+\_\+pose 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+dwa\+\_\+local\+\_\+planner/include/dwa\+\_\+local\+\_\+planner/dwa\+\_\+planner.\+h\end{DoxyCompactItemize}

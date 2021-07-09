@@ -11,7 +11,11 @@ iostream
 -
 ros/ros.h
 -
-ros/time.h
+serial/serial.h
+-
+queue
+-
+deque
 -
 
 /opt/ros/melodic/include/ros/advertise_options.h
@@ -655,6 +659,32 @@ ros/forwards.h
 /opt/ros/melodic/include/ros/ros/forwards.h
 
 /opt/ros/melodic/include/rosconsole/macros_generated.h
+
+/opt/ros/melodic/include/serial/serial.h
+limits
+-
+vector
+-
+string
+-
+cstring
+-
+sstream
+-
+exception
+-
+stdexcept
+-
+serial/v8stdint.h
+-
+
+/opt/ros/melodic/include/serial/v8stdint.h
+stddef.h
+-
+stdio.h
+-
+stdint.h
+-
 
 /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h

@@ -1,2 +1,2 @@
 fortest:learning_veddha:tutorial_action:tutorial_dynamic_reconfigure:tutorial_multi_thread:tutorial_namespaceROS
--DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/wu/catkin_test_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wu/catkin_test_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/wu/catkin_test_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wu/catkin_test_ws/install -G Unix Makefiles

@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: nav_core::BaseGlobalPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>nav_core</b></li><li class="navelem"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html">BaseGlobalPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">nav_core::BaseGlobalPlanner类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for global planners used in navigation. All global planners written as plugins for the navigation stack must adhere to this interface.  
+ <a href="classnav__core_1_1BaseGlobalPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="base__global__planner_8h_source.html">base_global_planner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 nav_core::BaseGlobalPlanner 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnav__core_1_1BaseGlobalPlanner.png" usemap="#nav_5Fcore::BaseGlobalPlanner_map" alt=""/>
+  <map id="nav_5Fcore::BaseGlobalPlanner_map" name="nav_5Fcore::BaseGlobalPlanner_map">
+<area href="classcarrot__planner_1_1CarrotPlanner.html" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="carrot_planner::CarrotPlanner" shape="rect" coords="0,56,198,80"/>
+<area href="classglobal__planner_1_1GlobalPlanner.html" alt="global_planner::GlobalPlanner" shape="rect" coords="208,56,406,80"/>
+<area href="classglobal__planner_1_1VdGlobalPlanner.html" alt="global_planner::VdGlobalPlanner" shape="rect" coords="416,56,614,80"/>
+<area href="classlattice__planner_1_1TBLatticePlanner.html" title="planner core." alt="lattice_planner::TBLatticePlanner" shape="rect" coords="624,56,822,80"/>
+<area href="classnavfn_1_1NavfnROS.html" title="Provides a ROS wrapper for the navfn planner which runs a fast, interpolated navigation function on a..." alt="navfn::NavfnROS" shape="rect" coords="832,56,1030,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a> (const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a goal pose in the world, compute a plan  <a href="classnav__core_1_1BaseGlobalPlanner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">更多...</a><br /></td></tr>
+<tr class="separator:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a> (const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</td></tr>
+<tr class="memdesc:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a goal pose in the world, compute a plan  <a href="classnav__core_1_1BaseGlobalPlanner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">更多...</a><br /></td></tr>
+<tr class="separator:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485461ff314103dac95744f771107c43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#a485461ff314103dac95744f771107c43">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a485461ff314103dac95744f771107c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the <a class="el" href="classnav__core_1_1BaseGlobalPlanner.html" title="Provides an interface for global planners used in navigation. All global planners written as plugins ...">BaseGlobalPlanner</a>  <a href="classnav__core_1_1BaseGlobalPlanner.html#a485461ff314103dac95744f771107c43">更多...</a><br /></td></tr>
+<tr class="separator:a485461ff314103dac95744f771107c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98120c1d76f7a5badb74adef9694a06d"><td class="memItemLeft" align="right" valign="top"><a id="a98120c1d76f7a5badb74adef9694a06d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a98120c1d76f7a5badb74adef9694a06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the interface <br /></td></tr>
+<tr class="separator:a98120c1d76f7a5badb74adef9694a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Provides an interface for global planners used in navigation. All global planners written as plugins for the navigation stack must adhere to this interface. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a485461ff314103dac95744f771107c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485461ff314103dac95744f771107c43">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::BaseGlobalPlanner::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialization function for the <a class="el" href="classnav__core_1_1BaseGlobalPlanner.html" title="Provides an interface for global planners used in navigation. All global planners written as plugins ...">BaseGlobalPlanner</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of this planner </td></tr>
+    <tr><td class="paramname">costmap_ros</td><td>A pointer to the ROS wrapper of the costmap to use for planning </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classglobal__planner_1_1VdGlobalPlanner.html#a987f94bb7182b8b9ff12984b2ba17fd0">global_planner::VdGlobalPlanner</a>, <a class="el" href="classnavfn_1_1NavfnROS.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">navfn::NavfnROS</a>, <a class="el" href="classlattice__planner_1_1TBLatticePlanner.html#abb0cc52d1531fcec179c31469cf571ec">lattice_planner::TBLatticePlanner</a>, <a class="el" href="classglobal__planner_1_1GlobalPlanner.html#a280ebb6723d46b462eb66ec73a2fe266">global_planner::GlobalPlanner</a> , 以及 <a class="el" href="classcarrot__planner_1_1CarrotPlanner.html#a83b1bb77b4ef4a2719dcc29bf90d077e">carrot_planner::CarrotPlanner</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae34a7c7cf96ebdfaf6b33f24a646156c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34a7c7cf96ebdfaf6b33f24a646156c">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseGlobalPlanner::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a goal pose in the world, compute a plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start pose </td></tr>
+    <tr><td class="paramname">goal</td><td>The goal pose </td></tr>
+    <tr><td class="paramname">plan</td><td>The plan... filled by the planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid plan was found, false otherwise </dd></dl>
+
+<p>在 <a class="el" href="classglobal__planner_1_1VdGlobalPlanner.html#a180660da5336c67b6cb86aeb678f6bac">global_planner::VdGlobalPlanner</a>, <a class="el" href="classnavfn_1_1NavfnROS.html#aa8cec6d49a902ace7e71ffc7125b29a9">navfn::NavfnROS</a>, <a class="el" href="classlattice__planner_1_1TBLatticePlanner.html#a0c4400a4f74a624528ca4ddf79f89477">lattice_planner::TBLatticePlanner</a>, <a class="el" href="classglobal__planner_1_1GlobalPlanner.html#abb7f40f6a851f88e6b7668a38571712a">global_planner::GlobalPlanner</a> , 以及 <a class="el" href="classcarrot__planner_1_1CarrotPlanner.html#a59c64d61f2e992d08b32438116614ab5">carrot_planner::CarrotPlanner</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="afbc2b0f16bdd55a8b619f9fb5b7aa8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc2b0f16bdd55a8b619f9fb5b7aa8da">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseGlobalPlanner::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a goal pose in the world, compute a plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start pose </td></tr>
+    <tr><td class="paramname">goal</td><td>The goal pose </td></tr>
+    <tr><td class="paramname">plan</td><td>The plan... filled by the planner </td></tr>
+    <tr><td class="paramname">cost</td><td>The plans calculated cost </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid plan was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>nav_core/include/nav_core/<a class="el" href="base__global__planner_8h_source.html">base_global_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

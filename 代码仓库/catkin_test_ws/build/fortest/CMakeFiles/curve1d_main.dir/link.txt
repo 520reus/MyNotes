@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/curve1d_main.dir/src/curve1d/curve1d_main.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/curve1d_main  -L/usr/local/lib -Wl,-rpath,/usr/local/lib:/home/wu/catkin_test_ws/src/fortest/lib /home/wu/catkin_test_ws/src/fortest/lib/libcurve1d_set.so 

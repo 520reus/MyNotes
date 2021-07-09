@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::LineObstacle类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1LineObstacle.html">LineObstacle</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::LineObstacle类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implements a 2D line obstacle  
+ <a href="classteb__local__planner_1_1LineObstacle.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="obstacles_8h_source.html">obstacles.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::LineObstacle 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1LineObstacle.png" usemap="#teb_5Flocal_5Fplanner::LineObstacle_map" alt=""/>
+  <map id="teb_5Flocal_5Fplanner::LineObstacle_map" name="teb_5Flocal_5Fplanner::LineObstacle_map">
+<area href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles" alt="teb_local_planner::Obstacle" shape="rect" coords="0,0,193,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a2eda1d7297bcacd1d1ed3b4ced280c3d"><td class="memItemLeft" align="right" valign="top"><a id="a2eda1d7297bcacd1d1ed3b4ced280c3d"></a>
+typedef std::vector&lt; Eigen::Vector2d, Eigen::aligned_allocator&lt; Eigen::Vector2d &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a2eda1d7297bcacd1d1ed3b4ced280c3d">VertexContainer</a></td></tr>
+<tr class="memdesc:a2eda1d7297bcacd1d1ed3b4ced280c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abbrev. for a container storing vertices (2d points defining the edge points of the polygon) <br /></td></tr>
+<tr class="separator:a2eda1d7297bcacd1d1ed3b4ced280c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8a63c701716c4abc8f0c3a09cd7e3db4"><td class="memItemLeft" align="right" valign="top"><a id="a8a63c701716c4abc8f0c3a09cd7e3db4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a8a63c701716c4abc8f0c3a09cd7e3db4">LineObstacle</a> ()</td></tr>
+<tr class="memdesc:a8a63c701716c4abc8f0c3a09cd7e3db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor of the point obstacle class <br /></td></tr>
+<tr class="separator:a8a63c701716c4abc8f0c3a09cd7e3db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a5f600d02a795f42b20562a84da9b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#ad4a5f600d02a795f42b20562a84da9b9">LineObstacle</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;line_start, const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;line_end)</td></tr>
+<tr class="memdesc:ad4a5f600d02a795f42b20562a84da9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classteb__local__planner_1_1LineObstacle.html" title="Implements a 2D line obstacle">LineObstacle</a> using 2d position vectors as start and end of the line  <a href="classteb__local__planner_1_1LineObstacle.html#ad4a5f600d02a795f42b20562a84da9b9">更多...</a><br /></td></tr>
+<tr class="separator:ad4a5f600d02a795f42b20562a84da9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225c45580f0be90e85efb3d0b4c2f503"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a225c45580f0be90e85efb3d0b4c2f503">LineObstacle</a> (double x1, double y1, double x2, double y2)</td></tr>
+<tr class="memdesc:a225c45580f0be90e85efb3d0b4c2f503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classteb__local__planner_1_1LineObstacle.html" title="Implements a 2D line obstacle">LineObstacle</a> using start and end coordinates  <a href="classteb__local__planner_1_1LineObstacle.html#a225c45580f0be90e85efb3d0b4c2f503">更多...</a><br /></td></tr>
+<tr class="separator:a225c45580f0be90e85efb3d0b4c2f503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af7e913caa229b902a1376eb3816e70"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a6af7e913caa229b902a1376eb3816e70">checkCollision</a> (const Eigen::Vector2d &amp;point, double min_dist) const</td></tr>
+<tr class="memdesc:a6af7e913caa229b902a1376eb3816e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given point collides with the obstacle  <a href="classteb__local__planner_1_1LineObstacle.html#a6af7e913caa229b902a1376eb3816e70">更多...</a><br /></td></tr>
+<tr class="separator:a6af7e913caa229b902a1376eb3816e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdbfdf287466276512ec95e6248d864"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#adfdbfdf287466276512ec95e6248d864">checkLineIntersection</a> (const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end, double min_dist=0) const</td></tr>
+<tr class="memdesc:adfdbfdf287466276512ec95e6248d864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance <code>min_dist</code>)  <a href="classteb__local__planner_1_1LineObstacle.html#adfdbfdf287466276512ec95e6248d864">更多...</a><br /></td></tr>
+<tr class="separator:adfdbfdf287466276512ec95e6248d864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dde3a848e9828b18c9dd14a1eac24e4"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a8dde3a848e9828b18c9dd14a1eac24e4">getMinimumDistance</a> (const Eigen::Vector2d &amp;position) const</td></tr>
+<tr class="memdesc:a8dde3a848e9828b18c9dd14a1eac24e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum euclidean distance to the obstacle (point as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#a8dde3a848e9828b18c9dd14a1eac24e4">更多...</a><br /></td></tr>
+<tr class="separator:a8dde3a848e9828b18c9dd14a1eac24e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315b44c438b173e95ce312360ac8131f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a315b44c438b173e95ce312360ac8131f">getMinimumDistance</a> (const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end) const</td></tr>
+<tr class="memdesc:a315b44c438b173e95ce312360ac8131f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum euclidean distance to the obstacle (line as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#a315b44c438b173e95ce312360ac8131f">更多...</a><br /></td></tr>
+<tr class="separator:a315b44c438b173e95ce312360ac8131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ee51da24dd554f423f4038e5941e0e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a78ee51da24dd554f423f4038e5941e0e">getMinimumDistance</a> (const Point2dContainer &amp;polygon) const</td></tr>
+<tr class="memdesc:a78ee51da24dd554f423f4038e5941e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum euclidean distance to the obstacle (polygon as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#a78ee51da24dd554f423f4038e5941e0e">更多...</a><br /></td></tr>
+<tr class="separator:a78ee51da24dd554f423f4038e5941e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffe47a0860be1019dbee62bfa6b0aec"><td class="memItemLeft" align="right" valign="top">virtual Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#abffe47a0860be1019dbee62bfa6b0aec">getClosestPoint</a> (const Eigen::Vector2d &amp;position) const</td></tr>
+<tr class="memdesc:abffe47a0860be1019dbee62bfa6b0aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the closest point on the boundary of the obstacle w.r.t. a specified reference position  <a href="classteb__local__planner_1_1LineObstacle.html#abffe47a0860be1019dbee62bfa6b0aec">更多...</a><br /></td></tr>
+<tr class="separator:abffe47a0860be1019dbee62bfa6b0aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad245f7aa94deb9096f2ea29cf063332e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#ad245f7aa94deb9096f2ea29cf063332e">getMinimumSpatioTemporalDistance</a> (const Eigen::Vector2d &amp;position, double t) const</td></tr>
+<tr class="memdesc:ad245f7aa94deb9096f2ea29cf063332e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#ad245f7aa94deb9096f2ea29cf063332e">更多...</a><br /></td></tr>
+<tr class="separator:ad245f7aa94deb9096f2ea29cf063332e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b929820b989897cdb380797079a755"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a32b929820b989897cdb380797079a755">getMinimumSpatioTemporalDistance</a> (const Eigen::Vector2d &amp;line_start, const Eigen::Vector2d &amp;line_end, double t) const</td></tr>
+<tr class="memdesc:a32b929820b989897cdb380797079a755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#a32b929820b989897cdb380797079a755">更多...</a><br /></td></tr>
+<tr class="separator:a32b929820b989897cdb380797079a755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d849d054a068d5fe532deb7f89049e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#a39d849d054a068d5fe532deb7f89049e">getMinimumSpatioTemporalDistance</a> (const Point2dContainer &amp;polygon, double t) const</td></tr>
+<tr class="memdesc:a39d849d054a068d5fe532deb7f89049e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference)  <a href="classteb__local__planner_1_1LineObstacle.html#a39d849d054a068d5fe532deb7f89049e">更多...</a><br /></td></tr>
+<tr class="separator:a39d849d054a068d5fe532deb7f89049e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55dd713045973127b5ebb8245ba0377"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#ad55dd713045973127b5ebb8245ba0377">getCentroid</a> () const</td></tr>
+<tr class="memdesc:ad55dd713045973127b5ebb8245ba0377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get centroid coordinates of the obstacle  <a href="classteb__local__planner_1_1LineObstacle.html#ad55dd713045973127b5ebb8245ba0377">更多...</a><br /></td></tr>
+<tr class="separator:ad55dd713045973127b5ebb8245ba0377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f1666d26172b63dde0e226a2fa7142"><td class="memItemLeft" align="right" valign="top">virtual std::complex&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#ac9f1666d26172b63dde0e226a2fa7142">getCentroidCplx</a> () const</td></tr>
+<tr class="memdesc:ac9f1666d26172b63dde0e226a2fa7142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get centroid coordinates of the obstacle as complex number  <a href="classteb__local__planner_1_1LineObstacle.html#ac9f1666d26172b63dde0e226a2fa7142">更多...</a><br /></td></tr>
+<tr class="separator:ac9f1666d26172b63dde0e226a2fa7142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174d25df71a1f3214649154040481f81"><td class="memItemLeft" align="right" valign="top"><a id="a174d25df71a1f3214649154040481f81"></a>
+const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> () const</td></tr>
+<tr class="separator:a174d25df71a1f3214649154040481f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e4d2b3b978cbb5d572c0d3510c5a77"><td class="memItemLeft" align="right" valign="top"><a id="af0e4d2b3b978cbb5d572c0d3510c5a77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStart</b> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;start)</td></tr>
+<tr class="separator:af0e4d2b3b978cbb5d572c0d3510c5a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca912edee4ebf83a3fe060b065abdc10"><td class="memItemLeft" align="right" valign="top"><a id="aca912edee4ebf83a3fe060b065abdc10"></a>
+const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="separator:aca912edee4ebf83a3fe060b065abdc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d204bd0d5e319efcdb463617414423"><td class="memItemLeft" align="right" valign="top"><a id="a04d204bd0d5e319efcdb463617414423"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnd</b> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;end)</td></tr>
+<tr class="separator:a04d204bd0d5e319efcdb463617414423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbec1954cd67c93adc02537329eb4ec4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1LineObstacle.html#abbec1954cd67c93adc02537329eb4ec4">toPolygonMsg</a> (geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:abbec1954cd67c93adc02537329eb4ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the obstacle to a polygon message  <a href="classteb__local__planner_1_1LineObstacle.html#abbec1954cd67c93adc02537329eb4ec4">更多...</a><br /></td></tr>
+<tr class="separator:abbec1954cd67c93adc02537329eb4ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classteb__local__planner_1_1Obstacle"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classteb__local__planner_1_1Obstacle')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classteb__local__planner_1_1Obstacle.html">teb_local_planner::Obstacle</a></td></tr>
+<tr class="memitem:a6ed0b3bf06fabe6a341788df35d67b93 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a6ed0b3bf06fabe6a341788df35d67b93"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a6ed0b3bf06fabe6a341788df35d67b93">Obstacle</a> ()</td></tr>
+<tr class="memdesc:a6ed0b3bf06fabe6a341788df35d67b93 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor of the abstract obstacle class <br /></td></tr>
+<tr class="separator:a6ed0b3bf06fabe6a341788df35d67b93 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c6687e1b207dc9d344a4597c5d8be7 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a28c6687e1b207dc9d344a4597c5d8be7"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a28c6687e1b207dc9d344a4597c5d8be7">~Obstacle</a> ()</td></tr>
+<tr class="memdesc:a28c6687e1b207dc9d344a4597c5d8be7 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:a28c6687e1b207dc9d344a4597c5d8be7 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddd791a3a9424cbfce4843e8cb51198 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a6ddd791a3a9424cbfce4843e8cb51198">predictCentroidConstantVelocity</a> (double t, Eigen::Ref&lt; Eigen::Vector2d &gt; position) const</td></tr>
+<tr class="memdesc:a6ddd791a3a9424cbfce4843e8cb51198 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict position of the centroid assuming a constant velocity model  <a href="classteb__local__planner_1_1Obstacle.html#a6ddd791a3a9424cbfce4843e8cb51198">更多...</a><br /></td></tr>
+<tr class="separator:a6ddd791a3a9424cbfce4843e8cb51198 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e9918faa2f8704b3c042590157ba49 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a45e9918faa2f8704b3c042590157ba49">isDynamic</a> () const</td></tr>
+<tr class="memdesc:a45e9918faa2f8704b3c042590157ba49 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the obstacle is a moving with a (non-zero) velocity  <a href="classteb__local__planner_1_1Obstacle.html#a45e9918faa2f8704b3c042590157ba49">更多...</a><br /></td></tr>
+<tr class="separator:a45e9918faa2f8704b3c042590157ba49 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09b1cabdee7953e905cb0d41fc9a11a inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#aa09b1cabdee7953e905cb0d41fc9a11a">setCentroidVelocity</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;vel)</td></tr>
+<tr class="memdesc:aa09b1cabdee7953e905cb0d41fc9a11a inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 2d velocity (vx, vy) of the obstacle w.r.t to the centroid  <a href="classteb__local__planner_1_1Obstacle.html#aa09b1cabdee7953e905cb0d41fc9a11a">更多...</a><br /></td></tr>
+<tr class="separator:aa09b1cabdee7953e905cb0d41fc9a11a inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f2b1c78f106d586081412f1e771dc2 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#af4f2b1c78f106d586081412f1e771dc2">setCentroidVelocity</a> (const geometry_msgs::TwistWithCovariance &amp;velocity, const geometry_msgs::Quaternion &amp;orientation)</td></tr>
+<tr class="memdesc:af4f2b1c78f106d586081412f1e771dc2 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 2d velocity (vx, vy) of the obstacle w.r.t to the centroid  <a href="classteb__local__planner_1_1Obstacle.html#af4f2b1c78f106d586081412f1e771dc2">更多...</a><br /></td></tr>
+<tr class="separator:af4f2b1c78f106d586081412f1e771dc2 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8163351473b457a86e703a1ed17071 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a0d8163351473b457a86e703a1ed17071"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setCentroidVelocity</b> (const geometry_msgs::TwistWithCovariance &amp;velocity, const geometry_msgs::QuaternionStamped &amp;orientation)</td></tr>
+<tr class="separator:a0d8163351473b457a86e703a1ed17071 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c107cf55b6c92060b91570a2f64846 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a51c107cf55b6c92060b91570a2f64846">getCentroidVelocity</a> () const</td></tr>
+<tr class="memdesc:a51c107cf55b6c92060b91570a2f64846 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the obstacle velocity (vx, vy) (w.r.t. to the centroid)  <a href="classteb__local__planner_1_1Obstacle.html#a51c107cf55b6c92060b91570a2f64846">更多...</a><br /></td></tr>
+<tr class="separator:a51c107cf55b6c92060b91570a2f64846 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f748685d08de199f7b1cf434b0958d0 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a8f748685d08de199f7b1cf434b0958d0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>toTwistWithCovarianceMsg</b> (geometry_msgs::TwistWithCovariance &amp;twistWithCovariance)</td></tr>
+<tr class="separator:a8f748685d08de199f7b1cf434b0958d0 inherit pub_methods_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a3c71861d6afcbd423647af041af7ca66"><td class="memItemLeft" align="right" valign="top"><a id="a3c71861d6afcbd423647af041af7ca66"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>calcCentroid</b> ()</td></tr>
+<tr class="separator:a3c71861d6afcbd423647af041af7ca66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classteb__local__planner_1_1Obstacle"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classteb__local__planner_1_1Obstacle')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classteb__local__planner_1_1Obstacle.html">teb_local_planner::Obstacle</a></td></tr>
+<tr class="memitem:a15f9ab8310125b1bcaeada34a5019f08 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a15f9ab8310125b1bcaeada34a5019f08"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a15f9ab8310125b1bcaeada34a5019f08">dynamic_</a></td></tr>
+<tr class="memdesc:a15f9ab8310125b1bcaeada34a5019f08 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store flag if obstacle is dynamic (resp. a moving obstacle) <br /></td></tr>
+<tr class="separator:a15f9ab8310125b1bcaeada34a5019f08 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600b04efad61b787ab8e2428426755d0 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="memItemLeft" align="right" valign="top"><a id="a600b04efad61b787ab8e2428426755d0"></a>
+Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1Obstacle.html#a600b04efad61b787ab8e2428426755d0">centroid_velocity_</a></td></tr>
+<tr class="memdesc:a600b04efad61b787ab8e2428426755d0 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the corresponding velocity (vx, vy) of the centroid (zero, if _dynamic is <code>true</code>) <br /></td></tr>
+<tr class="separator:a600b04efad61b787ab8e2428426755d0 inherit pro_attribs_classteb__local__planner_1_1Obstacle"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Implements a 2D line obstacle </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ad4a5f600d02a795f42b20562a84da9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a5f600d02a795f42b20562a84da9b9">&#9670;&nbsp;</a></span>LineObstacle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::LineObstacle::LineObstacle </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>line_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>line_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct <a class="el" href="classteb__local__planner_1_1LineObstacle.html" title="Implements a 2D line obstacle">LineObstacle</a> using 2d position vectors as start and end of the line </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_start</td><td>2d position that defines the start of the line obstacle </td></tr>
+    <tr><td class="paramname">line_end</td><td>2d position that defines the end of the line obstacle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a225c45580f0be90e85efb3d0b4c2f503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225c45580f0be90e85efb3d0b4c2f503">&#9670;&nbsp;</a></span>LineObstacle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::LineObstacle::LineObstacle </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct <a class="el" href="classteb__local__planner_1_1LineObstacle.html" title="Implements a 2D line obstacle">LineObstacle</a> using start and end coordinates </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>x-coordinate of the start of the line </td></tr>
+    <tr><td class="paramname">y1</td><td>y-coordinate of the start of the line </td></tr>
+    <tr><td class="paramname">x2</td><td>x-coordinate of the end of the line </td></tr>
+    <tr><td class="paramname">y2</td><td>y-coordinate of the end of the line </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6af7e913caa229b902a1376eb3816e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af7e913caa229b902a1376eb3816e70">&#9670;&nbsp;</a></span>checkCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::LineObstacle::checkCollision </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a given point collides with the obstacle </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>2D reference position that should be checked </td></tr>
+    <tr><td class="paramname">min_dist</td><td>Minimum distance allowed to the obstacle to be collision free </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if position is inside the region of the obstacle or if the minimum distance is lower than min_dist </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#af2487bf6752ca520032608e95a016223">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="adfdbfdf287466276512ec95e6248d864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfdbfdf287466276512ec95e6248d864">&#9670;&nbsp;</a></span>checkLineIntersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::LineObstacle::checkLineIntersection </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_dist</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance <code>min_dist</code>) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_start</td><td>2D point for the end of the reference line </td></tr>
+    <tr><td class="paramname">line_end</td><td>2D point for the end of the reference line </td></tr>
+    <tr><td class="paramname">min_dist</td><td>Minimum distance allowed to the obstacle to be collision/intersection free </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if given line intersects the region of the obstacle or if the minimum distance is lower than min_dist </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#af94e4f86ac2c6d26fccb6022d4b3c457">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="ad55dd713045973127b5ebb8245ba0377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55dd713045973127b5ebb8245ba0377">&#9670;&nbsp;</a></span>getCentroid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const Eigen::Vector2d&amp; teb_local_planner::LineObstacle::getCentroid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get centroid coordinates of the obstacle </p>
+<dl class="section return"><dt>返回</dt><dd>Eigen::Vector2d containing the centroid </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#a6960c8404759401120d53a44ec2155cc">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="ac9f1666d26172b63dde0e226a2fa7142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f1666d26172b63dde0e226a2fa7142">&#9670;&nbsp;</a></span>getCentroidCplx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::complex&lt;double&gt; teb_local_planner::LineObstacle::getCentroidCplx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get centroid coordinates of the obstacle as complex number </p>
+<dl class="section return"><dt>返回</dt><dd>std::complex containing the centroid coordinate </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#abb48a94476235acde6ff31fd6607b35c">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="abffe47a0860be1019dbee62bfa6b0aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffe47a0860be1019dbee62bfa6b0aec">&#9670;&nbsp;</a></span>getClosestPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::Vector2d teb_local_planner::LineObstacle::getClosestPoint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the closest point on the boundary of the obstacle w.r.t. a specified reference position </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>reference 2d position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>closest point on the obstacle boundary </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#ab16489bf4a8a5a1dd116b7714f8d04a9">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="a315b44c438b173e95ce312360ac8131f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315b44c438b173e95ce312360ac8131f">&#9670;&nbsp;</a></span>getMinimumDistance() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum euclidean distance to the obstacle (line as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_start</td><td>2d position of the begin of the reference line </td></tr>
+    <tr><td class="paramname">line_end</td><td>2d position of the end of the reference line </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#ad0318a1d12949d41f72109477e002587">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="a8dde3a848e9828b18c9dd14a1eac24e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dde3a848e9828b18c9dd14a1eac24e4">&#9670;&nbsp;</a></span>getMinimumDistance() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum euclidean distance to the obstacle (point as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>2d reference position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#aa402c55336629cea9eb2abf34cffc013">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="a78ee51da24dd554f423f4038e5941e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ee51da24dd554f423f4038e5941e0e">&#9670;&nbsp;</a></span>getMinimumDistance() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Point2dContainer &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the minimum euclidean distance to the obstacle (polygon as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polygon</td><td>Vertices (2D points) describing a closed polygon </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#a252167bfbe5e08dea1ea3c5d3ed94ca3">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="a32b929820b989897cdb380797079a755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b929820b989897cdb380797079a755">&#9670;&nbsp;</a></span>getMinimumSpatioTemporalDistance() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumSpatioTemporalDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>line_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line_start</td><td>2d position of the begin of the reference line </td></tr>
+    <tr><td class="paramname">line_end</td><td>2d position of the end of the reference line </td></tr>
+    <tr><td class="paramname">t</td><td>time, for which the minimum distance to the obstacle is estimated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle at time t </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#a1a36926f6b2c9554ada188ad431d919c">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="ad245f7aa94deb9096f2ea29cf063332e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad245f7aa94deb9096f2ea29cf063332e">&#9670;&nbsp;</a></span>getMinimumSpatioTemporalDistance() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumSpatioTemporalDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector2d &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>2d reference position </td></tr>
+    <tr><td class="paramname">t</td><td>time, for which the minimum distance to the obstacle is estimated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle at time t </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#a39a81893ed6f8acb5c0bea07f26788a3">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="a39d849d054a068d5fe532deb7f89049e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d849d054a068d5fe532deb7f89049e">&#9670;&nbsp;</a></span>getMinimumSpatioTemporalDistance() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::LineObstacle::getMinimumSpatioTemporalDistance </td>
+          <td>(</td>
+          <td class="paramtype">const Point2dContainer &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polygon</td><td>Vertices (2D points) describing a closed polygon </td></tr>
+    <tr><td class="paramname">t</td><td>time, for which the minimum distance to the obstacle is estimated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The nearest possible distance to the obstacle at time t </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#ae70483f0255fed37cef35b9c60b2f001">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<a id="abbec1954cd67c93adc02537329eb4ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbec1954cd67c93adc02537329eb4ec4">&#9670;&nbsp;</a></span>toPolygonMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::LineObstacle::toPolygonMsg </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Polygon &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the obstacle to a polygon message </p>
+<p>Convert the obstacle to a corresponding polygon msg. Point obstacles have one vertex, lines have two vertices and polygons might are implictly closed such that the start vertex must not be repeated. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">polygon</td><td>the polygon message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1Obstacle.html#a13d46bddd41ab00dbcc968da213424d4">teb_local_planner::Obstacle</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>teb_local_planner/include/teb_local_planner/<a class="el" href="obstacles_8h_source.html">obstacles.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

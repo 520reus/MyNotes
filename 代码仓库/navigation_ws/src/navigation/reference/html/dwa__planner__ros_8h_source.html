@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: dwa_local_planner/include/dwa_local_planner/dwa_planner_ros.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2cc68a6132e9273d64afb7235e6f46d2.html">dwa_local_planner</a></li><li class="navelem"><a class="el" href="dir_30c3668e3322fa4a3725bafdc83b1b59.html">include</a></li><li class="navelem"><a class="el" href="dir_858bc23697a7030ee6f1e350c24b6121.html">dwa_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dwa_planner_ros.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*  Copyright (c) 2009, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*********************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef DWA_LOCAL_PLANNER_DWA_PLANNER_ROS_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define DWA_LOCAL_PLANNER_DWA_PLANNER_ROS_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;dwa_local_planner/DWAPlannerConfig.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;angles/angles.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d_ros.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_local_planner.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/latched_stop_rotate_controller.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/odometry_helper_ros.h&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;dwa_local_planner/dwa_planner.h&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">namespace </span>dwa_local_planner {</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html">   66</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html">DWAPlannerROS</a> : <span class="keyword">public</span> <a class="code" href="classnav__core_1_1BaseLocalPlanner.html">nav_core::BaseLocalPlanner</a> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a53854eb5a69270d2935db6115da00b07">   71</a></span>&#160;      <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a53854eb5a69270d2935db6115da00b07">DWAPlannerROS</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a61c4737a8e5eb82f4c2407326e411d85">   79</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a61c4737a8e5eb82f4c2407326e411d85">initialize</a>(std::string name, tf2_ros::Buffer* tf,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#ab4a313f013569f71f59101ba8529640a">   85</a></span>&#160;      <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#ab4a313f013569f71f59101ba8529640a">~DWAPlannerROS</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a700178e32159b614d328326b6ba5f8b0">   93</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a700178e32159b614d328326b6ba5f8b0">computeVelocityCommands</a>(geometry_msgs::Twist&amp; cmd_vel);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">  102</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">dwaComputeVelocityCommands</a>(geometry_msgs::PoseStamped&amp; global_pose, geometry_msgs::Twist&amp; cmd_vel);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a0cfcf517c3112678a7eabeb498d9b2ce">  109</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a0cfcf517c3112678a7eabeb498d9b2ce">setPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; orig_global_plan);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1DWAPlannerROS.html#a847c1877d967acd515d7ddf1ac246941">  115</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="classdwa__local__planner_1_1DWAPlannerROS.html#a847c1877d967acd515d7ddf1ac246941">isGoalReached</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordtype">bool</span> isInitialized() {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> initialized_;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordtype">void</span> reconfigureCB(DWAPlannerConfig &amp;config, uint32_t level);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordtype">void</span> publishLocalPlan(std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordtype">void</span> publishGlobalPlan(std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      tf2_ros::Buffer* tf_; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="comment">// for visualisation, publishers of global and local plan</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      ros::Publisher g_plan_pub_, l_plan_pub_;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <a class="code" href="classbase__local__planner_1_1LocalPlannerUtil.html">base_local_planner::LocalPlannerUtil</a> planner_util_;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      boost::shared_ptr&lt;DWAPlanner&gt; dp_; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros_;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      dynamic_reconfigure::Server&lt;DWAPlannerConfig&gt; *dsrv_;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      dwa_local_planner::DWAPlannerConfig default_config_;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">bool</span> setup_;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      geometry_msgs::PoseStamped current_pose_;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <a class="code" href="classbase__local__planner_1_1LatchedStopRotateController.html">base_local_planner::LatchedStopRotateController</a> latchedStopRotateController_;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordtype">bool</span> initialized_;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <a class="code" href="classbase__local__planner_1_1OdometryHelperRos.html">base_local_planner::OdometryHelperRos</a> odom_helper_;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      std::string odom_topic_;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  };</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1LatchedStopRotateController_html"><div class="ttname"><a href="classbase__local__planner_1_1LatchedStopRotateController.html">base_local_planner::LatchedStopRotateController</a></div><div class="ttdef"><b>Definition:</b> latched_stop_rotate_controller.h:20</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1LocalPlannerUtil_html"><div class="ttname"><a href="classbase__local__planner_1_1LocalPlannerUtil.html">base_local_planner::LocalPlannerUtil</a></div><div class="ttdoc">Helper class implementing infrastructure code many local planner implementations may need.</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:57</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1OdometryHelperRos_html"><div class="ttname"><a href="classbase__local__planner_1_1OdometryHelperRos.html">base_local_planner::OdometryHelperRos</a></div><div class="ttdef"><b>Definition:</b> odometry_helper_ros.h:48</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html">dwa_local_planner::DWAPlannerROS</a></div><div class="ttdoc">ROS Wrapper for the DWAPlanner that adheres to the BaseLocalPlanner interface and can be used as a pl...</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:66</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a0cfcf517c3112678a7eabeb498d9b2ce"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a0cfcf517c3112678a7eabeb498d9b2ce">dwa_local_planner::DWAPlannerROS::setPlan</a></div><div class="ttdeci">bool setPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</div><div class="ttdoc">Set the plan that the controller is following</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a53854eb5a69270d2935db6115da00b07"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a53854eb5a69270d2935db6115da00b07">dwa_local_planner::DWAPlannerROS::DWAPlannerROS</a></div><div class="ttdeci">DWAPlannerROS()</div><div class="ttdoc">Constructor for DWAPlannerROS wrapper</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a61c4737a8e5eb82f4c2407326e411d85"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a61c4737a8e5eb82f4c2407326e411d85">dwa_local_planner::DWAPlannerROS::initialize</a></div><div class="ttdeci">void initialize(std::string name, tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">Constructs the ros wrapper</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a6d5796c54a10c3e2c89ec9afb64e9b5e"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">dwa_local_planner::DWAPlannerROS::dwaComputeVelocityCommands</a></div><div class="ttdeci">bool dwaComputeVelocityCommands(geometry_msgs::PoseStamped &amp;global_pose, geometry_msgs::Twist &amp;cmd_vel)</div><div class="ttdoc">Given the current position, orientation, and velocity of the robot, compute velocity commands to send...</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a700178e32159b614d328326b6ba5f8b0"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a700178e32159b614d328326b6ba5f8b0">dwa_local_planner::DWAPlannerROS::computeVelocityCommands</a></div><div class="ttdeci">bool computeVelocityCommands(geometry_msgs::Twist &amp;cmd_vel)</div><div class="ttdoc">Given the current position, orientation, and velocity of the robot, compute velocity commands to send...</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_a847c1877d967acd515d7ddf1ac246941"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#a847c1877d967acd515d7ddf1ac246941">dwa_local_planner::DWAPlannerROS::isGoalReached</a></div><div class="ttdeci">bool isGoalReached()</div><div class="ttdoc">Check if the goal pose has been achieved</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1DWAPlannerROS_html_ab4a313f013569f71f59101ba8529640a"><div class="ttname"><a href="classdwa__local__planner_1_1DWAPlannerROS.html#ab4a313f013569f71f59101ba8529640a">dwa_local_planner::DWAPlannerROS::~DWAPlannerROS</a></div><div class="ttdeci">~DWAPlannerROS()</div><div class="ttdoc">Destructor for the wrapper</div></div>
+<div class="ttc" id="aclassnav__core_1_1BaseLocalPlanner_html"><div class="ttname"><a href="classnav__core_1_1BaseLocalPlanner.html">nav_core::BaseLocalPlanner</a></div><div class="ttdoc">Provides an interface for local planners used in navigation. All local planners written as plugins fo...</div><div class="ttdef"><b>Definition:</b> base_local_planner.h:50</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,412 @@
+\hypertarget{classteb__local__planner_1_1TebVisualization}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Visualization类 参考}
+\label{classteb__local__planner_1_1TebVisualization}\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+
+
+Forward Declaration  
+
+
+
+
+{\ttfamily \#include $<$visualization.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_aef5a9cd43d591e0783c76583c8c8c6fd}{Teb\+Visualization}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a65ccb482184b59aca0873299d3127d19}{Teb\+Visualization}} (ros\+::\+Node\+Handle \&nh, const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the class and registers topics \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}{initialize}} (ros\+::\+Node\+Handle \&nh, const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Initializes the class and registers topics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Publish to topics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_ab6bb0e00af25ffd4400c6487cd682707}\label{classteb__local__planner_1_1TebVisualization_ab6bb0e00af25ffd4400c6487cd682707}} 
+ros\+::\+Publisher \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ab6bb0e00af25ffd4400c6487cd682707}{global\+\_\+plan\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher for the global plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a2a1e9119bed78330fec1129a861ab224}\label{classteb__local__planner_1_1TebVisualization_a2a1e9119bed78330fec1129a861ab224}} 
+ros\+::\+Publisher \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a2a1e9119bed78330fec1129a861ab224}{local\+\_\+plan\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher for the local plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_aeadc6afa476a68db637b4de82a41a9d9}\label{classteb__local__planner_1_1TebVisualization_aeadc6afa476a68db637b4de82a41a9d9}} 
+ros\+::\+Publisher \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_aeadc6afa476a68db637b4de82a41a9d9}{teb\+\_\+poses\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher for the trajectory pose sequence \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a205463ef81981df3ab3effa6d113d4da}\label{classteb__local__planner_1_1TebVisualization_a205463ef81981df3ab3effa6d113d4da}} 
+ros\+::\+Publisher \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a205463ef81981df3ab3effa6d113d4da}{teb\+\_\+marker\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher for visualization markers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a03084fdde86ced7a6883ef33140bb391}\label{classteb__local__planner_1_1TebVisualization_a03084fdde86ced7a6883ef33140bb391}} 
+ros\+::\+Publisher \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a03084fdde86ced7a6883ef33140bb391}{feedback\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Publisher for the feedback message for analysis and debug purposes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_afc63e3d89edc7e1e18fa9b7db32e1f61}\label{classteb__local__planner_1_1TebVisualization_afc63e3d89edc7e1e18fa9b7db32e1f61}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_afc63e3d89edc7e1e18fa9b7db32e1f61}{cfg\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Config class that stores and manages all related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a97e35e82878e70b00200e8cae5c6583a}\label{classteb__local__planner_1_1TebVisualization_a97e35e82878e70b00200e8cae5c6583a}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a97e35e82878e70b00200e8cae5c6583a}{initialized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Keeps track about the correct initialization of this class \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ad6439f2f5ebf7562ee665c6e8da39943}{publish\+Global\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan) const
+\begin{DoxyCompactList}\small\item\em Publish a given global plan to the ros topic {\itshape }../../global\+\_\+plan \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_aba7adf516553edb5e82b85308053bf5e}{publish\+Local\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&local\+\_\+plan) const
+\begin{DoxyCompactList}\small\item\em Publish a given local plan to the ros topic {\itshape }../../local\+\_\+plan \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a4c800281a12b741d3a3437272d394d82}{publish\+Local\+Plan\+And\+Poses}} (const \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} \&teb) const
+\begin{DoxyCompactList}\small\item\em Publish Timed\+\_\+\+Elastic\+\_\+\+Band related stuff (local plan, pose sequence). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ac94196331b894f00f3778935318f15f8}{publish\+Robot\+Footprint\+Model}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \&robot\+\_\+model, const std\+::string \&ns=\char`\"{}Robot\+Footprint\+Model\char`\"{}, const std\+\_\+msgs\+::\+Color\+RGBA \&color=\mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ae5de511875afb55fea4cf167011bc741}{to\+Color\+Msg}}(0.\+5, 0.\+0, 0.\+8, 0.\+0))
+\begin{DoxyCompactList}\small\item\em Publish the visualization of the robot model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a11ee53ef4cf6cd3686d5b2f149547e1e}{publish\+Infeasible\+Robot\+Pose}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \&robot\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Publish the robot footprints related to infeasible poses \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a4265504ad80d52ea050dc3c60f267bff}{publish\+Obstacles}} (const Obst\+Container \&obstacles) const
+\begin{DoxyCompactList}\small\item\em Publish obstacle positions to the ros topic {\itshape }../../teb\+\_\+markers \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a4063ba02b7136d3069c1fda29e00e674}{publish\+Via\+Points}} (const std\+::vector$<$ Eigen\+::\+Vector2d, Eigen\+::aligned\+\_\+allocator$<$ Eigen\+::\+Vector2d $>$ $>$ \&via\+\_\+points, const std\+::string \&ns=\char`\"{}Via\+Points\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Publish via-\/points to the ros topic {\itshape }../../teb\+\_\+markers \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_aca55fb9b7dc2f134d72623e94f924bfd}{publish\+Graph}} (const Graph\+Type \&graph, const std\+::string \&ns\+\_\+prefix=\char`\"{}Graph\char`\"{})
+\begin{DoxyCompactList}\small\item\em Publish a boost\+::adjacency\+\_\+list (boost\textquotesingle{}s graph datatype) via markers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Bidir\+Iter $>$ }\\void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_adf03c35c9cb3a3962f84f9f23821b699}{publish\+Path\+Container}} (Bidir\+Iter first, Bidir\+Iter last, const std\+::string \&ns=\char`\"{}Path\+Container\char`\"{})
+\begin{DoxyCompactList}\small\item\em Publish multiple 2D paths (each path given as a point sequence) from a container class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a946a4976f93d94b15bf9dad8ab740f31}{publish\+Teb\+Container}} (const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} $>$ $>$ \&teb\+\_\+planner, const std\+::string \&ns=\char`\"{}Teb\+Container\char`\"{})
+\begin{DoxyCompactList}\small\item\em Publish multiple Tebs from a container class (publish as marker message). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a699bdff50413e5e10a2f54b4e04af4d3}{publish\+Feedback\+Message}} (const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} $>$ $>$ \&teb\+\_\+planners, unsigned int selected\+\_\+trajectory\+\_\+idx, const Obst\+Container \&obstacles)
+\begin{DoxyCompactList}\small\item\em Publish a feedback message (multiple trajectory version) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a9977a732816cab60a9786ace3c8ce08f}{publish\+Feedback\+Message}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} \&teb\+\_\+planner, const Obst\+Container \&obstacles)
+\begin{DoxyCompactList}\small\item\em Publish a feedback message (single trajectory overload) \end{DoxyCompactList}\item 
+static std\+\_\+msgs\+::\+Color\+RGBA \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ae5de511875afb55fea4cf167011bc741}{to\+Color\+Msg}} (double a, double r, double g, double b)
+\begin{DoxyCompactList}\small\item\em Helper function to generate a color message from single values \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a40b6852b33e392bf72ee89414f8154c4}{print\+Error\+When\+Not\+Initialized}} () const
+\begin{DoxyCompactList}\small\item\em Small helper function that checks if \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}{initialize()}} has been called and prints an error message if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Forward Declaration 
+
+Visualize stuff from the teb\+\_\+local\+\_\+planner 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_aef5a9cd43d591e0783c76583c8c8c6fd}\label{classteb__local__planner_1_1TebVisualization_aef5a9cd43d591e0783c76583c8c8c6fd}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!TebVisualization@{TebVisualization}}
+\index{TebVisualization@{TebVisualization}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{TebVisualization()}{TebVisualization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::\+Teb\+Visualization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor 
+
+\begin{DoxyRemark}{备注}
+do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}{initialize()}} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a65ccb482184b59aca0873299d3127d19}\label{classteb__local__planner_1_1TebVisualization_a65ccb482184b59aca0873299d3127d19}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!TebVisualization@{TebVisualization}}
+\index{TebVisualization@{TebVisualization}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{TebVisualization()}{TebVisualization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::\+Teb\+Visualization (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the class and registers topics 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & local ros\+::\+Node\+Handle \\
+\hline
+{\em cfg} & const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}\label{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!initialize@{initialize}}
+\index{initialize@{initialize}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Initializes the class and registers topics. 
+
+Call this function if only the default constructor has been called before. 
+\begin{DoxyParams}{参数}
+{\em nh} & local ros\+::\+Node\+Handle \\
+\hline
+{\em cfg} & const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for parameters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a40b6852b33e392bf72ee89414f8154c4}\label{classteb__local__planner_1_1TebVisualization_a40b6852b33e392bf72ee89414f8154c4}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!printErrorWhenNotInitialized@{printErrorWhenNotInitialized}}
+\index{printErrorWhenNotInitialized@{printErrorWhenNotInitialized}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{printErrorWhenNotInitialized()}{printErrorWhenNotInitialized()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::print\+Error\+When\+Not\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Small helper function that checks if \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a49d1739f756c17f4f496810da33614fe}{initialize()}} has been called and prints an error message if not. 
+
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if not initialized, {\ttfamily false} if everything is ok 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a699bdff50413e5e10a2f54b4e04af4d3}\label{classteb__local__planner_1_1TebVisualization_a699bdff50413e5e10a2f54b4e04af4d3}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishFeedbackMessage@{publishFeedbackMessage}}
+\index{publishFeedbackMessage@{publishFeedbackMessage}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishFeedbackMessage()}{publishFeedbackMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Feedback\+Message (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} $>$ $>$ \&}]{teb\+\_\+planners,  }\item[{unsigned int}]{selected\+\_\+trajectory\+\_\+idx,  }\item[{const Obst\+Container \&}]{obstacles }\end{DoxyParamCaption})}
+
+
+
+Publish a feedback message (multiple trajectory version) 
+
+The feedback message contains the all planned trajectory candidates (e.\+g. if planning in distinctive topologies is turned on). Each trajectory is composed of the sequence of poses, the velocity profile and temporal information. The feedback message also contains a list of active obstacles. 
+\begin{DoxyParams}{参数}
+{\em teb\+\_\+planners} & container with multiple tebs (resp. their planner instances) \\
+\hline
+{\em selected\+\_\+trajectory\+\_\+idx} & Idx of the currently selected trajectory in {\ttfamily teb\+\_\+planners} \\
+\hline
+{\em obstacles} & Container of obstacles \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a9977a732816cab60a9786ace3c8ce08f}\label{classteb__local__planner_1_1TebVisualization_a9977a732816cab60a9786ace3c8ce08f}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishFeedbackMessage@{publishFeedbackMessage}}
+\index{publishFeedbackMessage@{publishFeedbackMessage}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishFeedbackMessage()}{publishFeedbackMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Feedback\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} \&}]{teb\+\_\+planner,  }\item[{const Obst\+Container \&}]{obstacles }\end{DoxyParamCaption})}
+
+
+
+Publish a feedback message (single trajectory overload) 
+
+The feedback message contains the planned trajectory that is composed of the sequence of poses, the velocity profile and temporal information. The feedback message also contains a list of active obstacles. 
+\begin{DoxyParams}{参数}
+{\em teb\+\_\+planner} & the planning instance \\
+\hline
+{\em obstacles} & Container of obstacles \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_ad6439f2f5ebf7562ee665c6e8da39943}\label{classteb__local__planner_1_1TebVisualization_ad6439f2f5ebf7562ee665c6e8da39943}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishGlobalPlan@{publishGlobalPlan}}
+\index{publishGlobalPlan@{publishGlobalPlan}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishGlobalPlan()}{publishGlobalPlan()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Global\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan }\end{DoxyParamCaption}) const}
+
+
+
+Publish a given global plan to the ros topic {\itshape }../../global\+\_\+plan 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+plan} & Pose array describing the global plan \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_aca55fb9b7dc2f134d72623e94f924bfd}\label{classteb__local__planner_1_1TebVisualization_aca55fb9b7dc2f134d72623e94f924bfd}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishGraph@{publishGraph}}
+\index{publishGraph@{publishGraph}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishGraph()}{publishGraph()}}
+{\footnotesize\ttfamily template$<$typename Graph\+Type $>$ \\
+void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Graph (\begin{DoxyParamCaption}\item[{const Graph\+Type \&}]{graph,  }\item[{const std\+::string \&}]{ns\+\_\+prefix = {\ttfamily \char`\"{}Graph\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Publish a boost\+::adjacency\+\_\+list (boost\textquotesingle{}s graph datatype) via markers. 
+
+\begin{DoxyRemark}{备注}
+Make sure that vertices of the graph contain a member {\ttfamily pos} as {\ttfamily Eigen\+::\+Vector2d} type to query metric position values. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em graph} & Const reference to the boost\+::adjacency\+\_\+list (graph) \\
+\hline
+{\em ns\+\_\+prefix} & Namespace prefix for the marker objects (the strings \char`\"{}\+Edges\char`\"{} and \char`\"{}\+Vertices\char`\"{} will be appended) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Graph\+Type} & boost\+::graph object in which vertices has the field/member {\ttfamily pos}. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a11ee53ef4cf6cd3686d5b2f149547e1e}\label{classteb__local__planner_1_1TebVisualization_a11ee53ef4cf6cd3686d5b2f149547e1e}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishInfeasibleRobotPose@{publishInfeasibleRobotPose}}
+\index{publishInfeasibleRobotPose@{publishInfeasibleRobotPose}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishInfeasibleRobotPose()}{publishInfeasibleRobotPose()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Infeasible\+Robot\+Pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \&}]{robot\+\_\+model }\end{DoxyParamCaption})}
+
+
+
+Publish the robot footprints related to infeasible poses 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & Current pose of the robot \\
+\hline
+{\em robot\+\_\+model} & Subclass of \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_aba7adf516553edb5e82b85308053bf5e}\label{classteb__local__planner_1_1TebVisualization_aba7adf516553edb5e82b85308053bf5e}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishLocalPlan@{publishLocalPlan}}
+\index{publishLocalPlan@{publishLocalPlan}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishLocalPlan()}{publishLocalPlan()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Local\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{local\+\_\+plan }\end{DoxyParamCaption}) const}
+
+
+
+Publish a given local plan to the ros topic {\itshape }../../local\+\_\+plan 
+
+
+\begin{DoxyParams}{参数}
+{\em local\+\_\+plan} & Pose array describing the local plan \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a4c800281a12b741d3a3437272d394d82}\label{classteb__local__planner_1_1TebVisualization_a4c800281a12b741d3a3437272d394d82}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishLocalPlanAndPoses@{publishLocalPlanAndPoses}}
+\index{publishLocalPlanAndPoses@{publishLocalPlanAndPoses}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishLocalPlanAndPoses()}{publishLocalPlanAndPoses()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Local\+Plan\+And\+Poses (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} \&}]{teb }\end{DoxyParamCaption}) const}
+
+
+
+Publish Timed\+\_\+\+Elastic\+\_\+\+Band related stuff (local plan, pose sequence). 
+
+Given a Timed\+\_\+\+Elastic\+\_\+\+Band instance, publish the local plan to {\itshape }../../local\+\_\+plan and the pose sequence to {\itshape }../../teb\+\_\+poses. 
+\begin{DoxyParams}{参数}
+{\em teb} & const reference to a Timed\+\_\+\+Elastic\+\_\+\+Band \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a4265504ad80d52ea050dc3c60f267bff}\label{classteb__local__planner_1_1TebVisualization_a4265504ad80d52ea050dc3c60f267bff}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishObstacles@{publishObstacles}}
+\index{publishObstacles@{publishObstacles}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishObstacles()}{publishObstacles()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Obstacles (\begin{DoxyParamCaption}\item[{const Obst\+Container \&}]{obstacles }\end{DoxyParamCaption}) const}
+
+
+
+Publish obstacle positions to the ros topic {\itshape }../../teb\+\_\+markers 
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000017}{待办事项}}]Move filling of the marker message to polygon class in order to avoid checking types. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{参数}
+{\em obstacles} & \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_adf03c35c9cb3a3962f84f9f23821b699}\label{classteb__local__planner_1_1TebVisualization_adf03c35c9cb3a3962f84f9f23821b699}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishPathContainer@{publishPathContainer}}
+\index{publishPathContainer@{publishPathContainer}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishPathContainer()}{publishPathContainer()}}
+{\footnotesize\ttfamily template$<$typename Bidir\+Iter $>$ \\
+void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Path\+Container (\begin{DoxyParamCaption}\item[{Bidir\+Iter}]{first,  }\item[{Bidir\+Iter}]{last,  }\item[{const std\+::string \&}]{ns = {\ttfamily \char`\"{}PathContainer\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Publish multiple 2D paths (each path given as a point sequence) from a container class. 
+
+Provide a std\+::vector$<$ std\+::vector$<$ T $>$ $>$ in which T.\+x() and T.\+y() exist and std\+::vector could be individually substituded by std\+::list / std\+::deque /...
+
+A common point-\/type for object T could be Eigen\+::\+Vector2d.
+
+T could be also a raw pointer std\+::vector$<$ std\+::vector$<$ T$\ast$ $>$ $>$.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{keyword}{typedef} std::vector<Eigen::Vector2d, Eigen::aligned\_allocator<Eigen::Vector2d> > PathType; \textcolor{comment}{// could be a list or deque as well ...}}
+\DoxyCodeLine{std::vector<PathType> path\_container(2); \textcolor{comment}{// init 2 empty paths; the container could be a list or deque as well ...}}
+\DoxyCodeLine{ \textcolor{comment}{// Fill path\_container.at(0) with Eigen::Vector2d elements, we skip that here}}
+\DoxyCodeLine{ \textcolor{comment}{// Fill path\_container.at(1) with Eigen::Vector2d elements, we skip that here}}
+\DoxyCodeLine{\mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_adf03c35c9cb3a3962f84f9f23821b699}{publishPathContainer}}( path\_container.begin(), path\_container.end() );}
+
+\end{DoxyCode}
+
+
+\begin{DoxyRemark}{备注}
+Actually the underlying path does not necessarily need to be a Eigen\+::\+Vector2d sequence. Eigen\+::\+Vector2d can be replaced with any datatype that implement public x() and y() methods.~\newline
+
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em first} & Bidirectional iterator pointing to the begin of the path \\
+\hline
+{\em last} & Bidirectional iterator pointing to the end of the path \\
+\hline
+{\em ns} & Namespace for the marker objects (the strings \char`\"{}\+Edges\char`\"{} and \char`\"{}\+Vertices\char`\"{} will be appended) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Bidir\+Iter} & Bidirectional iterator to a 2D path (sequence of Eigen\+::\+Vector2d elements) in a container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_ac94196331b894f00f3778935318f15f8}\label{classteb__local__planner_1_1TebVisualization_ac94196331b894f00f3778935318f15f8}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishRobotFootprintModel@{publishRobotFootprintModel}}
+\index{publishRobotFootprintModel@{publishRobotFootprintModel}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishRobotFootprintModel()}{publishRobotFootprintModel()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Robot\+Footprint\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \&}]{robot\+\_\+model,  }\item[{const std\+::string \&}]{ns = {\ttfamily \char`\"{}RobotFootprintModel\char`\"{}},  }\item[{const std\+\_\+msgs\+::\+Color\+RGBA \&}]{color = {\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_ae5de511875afb55fea4cf167011bc741}{to\+Color\+Msg}}(0.5,~0.0,~0.8,~0.0)} }\end{DoxyParamCaption})}
+
+
+
+Publish the visualization of the robot model 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & Current pose of the robot \\
+\hline
+{\em robot\+\_\+model} & Subclass of \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} \\
+\hline
+{\em ns} & Namespace for the marker objects \\
+\hline
+{\em color} & Color of the footprint \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a946a4976f93d94b15bf9dad8ab740f31}\label{classteb__local__planner_1_1TebVisualization_a946a4976f93d94b15bf9dad8ab740f31}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishTebContainer@{publishTebContainer}}
+\index{publishTebContainer@{publishTebContainer}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishTebContainer()}{publishTebContainer()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Teb\+Container (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} $>$ $>$ \&}]{teb\+\_\+planner,  }\item[{const std\+::string \&}]{ns = {\ttfamily \char`\"{}TebContainer\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Publish multiple Tebs from a container class (publish as marker message). 
+
+
+\begin{DoxyParams}{参数}
+{\em teb\+\_\+planner} & Container of boost\+::shared\+\_\+ptr$<$ Teb\+Opt\+Planner\+Ptr $>$ \\
+\hline
+{\em ns} & Namespace for the marker objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_a4063ba02b7136d3069c1fda29e00e674}\label{classteb__local__planner_1_1TebVisualization_a4063ba02b7136d3069c1fda29e00e674}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!publishViaPoints@{publishViaPoints}}
+\index{publishViaPoints@{publishViaPoints}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{publishViaPoints()}{publishViaPoints()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::publish\+Via\+Points (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Eigen\+::\+Vector2d, Eigen\+::aligned\+\_\+allocator$<$ Eigen\+::\+Vector2d $>$ $>$ \&}]{via\+\_\+points,  }\item[{const std\+::string \&}]{ns = {\ttfamily \char`\"{}ViaPoints\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Publish via-\/points to the ros topic {\itshape }../../teb\+\_\+markers 
+
+
+\begin{DoxyParams}{参数}
+{\em via\+\_\+points} & via-\/point container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebVisualization_ae5de511875afb55fea4cf167011bc741}\label{classteb__local__planner_1_1TebVisualization_ae5de511875afb55fea4cf167011bc741}} 
+\index{teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}!toColorMsg@{toColorMsg}}
+\index{toColorMsg@{toColorMsg}!teb\_local\_planner::TebVisualization@{teb\_local\_planner::TebVisualization}}
+\doxysubsubsection{\texorpdfstring{toColorMsg()}{toColorMsg()}}
+{\footnotesize\ttfamily static std\+\_\+msgs\+::\+Color\+RGBA teb\+\_\+local\+\_\+planner\+::\+Teb\+Visualization\+::to\+Color\+Msg (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper function to generate a color message from single values 
+
+
+\begin{DoxyParams}{参数}
+{\em a} & Alpha value \\
+\hline
+{\em r} & Red value \\
+\hline
+{\em g} & Green value \\
+\hline
+{\em b} & Blue value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Color message 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/visualization.\+h\end{DoxyCompactItemize}

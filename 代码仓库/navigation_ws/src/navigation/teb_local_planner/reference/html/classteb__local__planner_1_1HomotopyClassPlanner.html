@@ -1,0 +1,1827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::HomotopyClassPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html">HomotopyClassPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::HomotopyClassPlanner类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Local planner that explores alternative homotopy classes, create a plan for each alternative and finally return the robot controls for the current best path (repeated in each sampling interval)  
+ <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="homotopy__class__planner_8h_source.html">homotopy_class_planner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::HomotopyClassPlanner 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1HomotopyClassPlanner.png" usemap="#teb_5Flocal_5Fplanner::HomotopyClassPlanner_map" alt=""/>
+  <map id="teb_5Flocal_5Fplanner::HomotopyClassPlanner_map" name="teb_5Flocal_5Fplanner::HomotopyClassPlanner_map">
+<area href="classteb__local__planner_1_1PlannerInterface.html" title="This abstract class defines an interface for local planners" alt="teb_local_planner::PlannerInterface" shape="rect" coords="0,0,250,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ae442ea3920a7cb7735733515201bea7e"><td class="memItemLeft" align="right" valign="top"><a id="ae442ea3920a7cb7735733515201bea7e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>EquivalenceClassContainer</b> = std::vector&lt; std::pair&lt; EquivalenceClassPtr, bool &gt; &gt;</td></tr>
+<tr class="separator:ae442ea3920a7cb7735733515201bea7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2110f239b27e401ee3bcb5136eac89b0"><td class="memItemLeft" align="right" valign="top"><a id="a2110f239b27e401ee3bcb5136eac89b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a2110f239b27e401ee3bcb5136eac89b0">HomotopyClassPlanner</a> ()</td></tr>
+<tr class="memdesc:a2110f239b27e401ee3bcb5136eac89b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor <br /></td></tr>
+<tr class="separator:a2110f239b27e401ee3bcb5136eac89b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac767cbafaf5058ee83ff99114d24fb92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac767cbafaf5058ee83ff99114d24fb92">HomotopyClassPlanner</a> (const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;cfg, ObstContainer *<a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a522aa8954809bebe2417b24f9cb5062e">obstacles</a>=NULL, RobotFootprintModelPtr robot_model=boost::make_shared&lt; <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a> &gt;(), TebVisualizationPtr visualization=TebVisualizationPtr(), const ViaPointContainer *via_points=NULL)</td></tr>
+<tr class="memdesc:ac767cbafaf5058ee83ff99114d24fb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and initialize the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a>  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac767cbafaf5058ee83ff99114d24fb92">更多...</a><br /></td></tr>
+<tr class="separator:ac767cbafaf5058ee83ff99114d24fb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc0acb32746fca0df98ed24c0338452"><td class="memItemLeft" align="right" valign="top"><a id="aefc0acb32746fca0df98ed24c0338452"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#aefc0acb32746fca0df98ed24c0338452">~HomotopyClassPlanner</a> ()</td></tr>
+<tr class="memdesc:aefc0acb32746fca0df98ed24c0338452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a>. <br /></td></tr>
+<tr class="separator:aefc0acb32746fca0df98ed24c0338452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8116edc25c55704e5ec640e062ba622f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a8116edc25c55704e5ec640e062ba622f">initialize</a> (const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;cfg, ObstContainer *<a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a522aa8954809bebe2417b24f9cb5062e">obstacles</a>=NULL, RobotFootprintModelPtr robot_model=boost::make_shared&lt; <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a> &gt;(), TebVisualizationPtr visualization=TebVisualizationPtr(), const ViaPointContainer *via_points=NULL)</td></tr>
+<tr class="memdesc:a8116edc25c55704e5ec640e062ba622f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a>  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a8116edc25c55704e5ec640e062ba622f">更多...</a><br /></td></tr>
+<tr class="separator:a8116edc25c55704e5ec640e062ba622f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Plan a trajectory</div></td></tr>
+<tr class="memitem:ab17a26c1abb024c7695038c6d22078b8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8">plan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:ab17a26c1abb024c7695038c6d22078b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory based on an initial reference plan.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8">更多...</a><br /></td></tr>
+<tr class="separator:ab17a26c1abb024c7695038c6d22078b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c2fae1eafa197bd5d787180c036992"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac1c2fae1eafa197bd5d787180c036992">plan</a> (const tf::Pose &amp;start, const tf::Pose &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:ac1c2fae1eafa197bd5d787180c036992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory between a given start and goal pose (tf::Pose version).  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac1c2fae1eafa197bd5d787180c036992">更多...</a><br /></td></tr>
+<tr class="separator:ac1c2fae1eafa197bd5d787180c036992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf7d641444293d5a51f90d7c02d7d8d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a8cf7d641444293d5a51f90d7c02d7d8d">plan</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:a8cf7d641444293d5a51f90d7c02d7d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory between a given start and goal pose.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a8cf7d641444293d5a51f90d7c02d7d8d">更多...</a><br /></td></tr>
+<tr class="separator:a8cf7d641444293d5a51f90d7c02d7d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8f7fa1c3dbc5037a552024101f0c47"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a3e8f7fa1c3dbc5037a552024101f0c47">getVelocityCommand</a> (double &amp;vx, double &amp;vy, double &amp;omega, int look_ahead_poses) const</td></tr>
+<tr class="memdesc:a3e8f7fa1c3dbc5037a552024101f0c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the velocity command from a previously optimized plan to control the robot at the current sampling interval.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a3e8f7fa1c3dbc5037a552024101f0c47">更多...</a><br /></td></tr>
+<tr class="separator:a3e8f7fa1c3dbc5037a552024101f0c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f202e1abac76b8afa467700a3de5cf6"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a9f202e1abac76b8afa467700a3de5cf6">bestTeb</a> () const</td></tr>
+<tr class="memdesc:a9f202e1abac76b8afa467700a3de5cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access current best trajectory candidate (that relates to the "best" homotopy class).  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a9f202e1abac76b8afa467700a3de5cf6">更多...</a><br /></td></tr>
+<tr class="separator:a9f202e1abac76b8afa467700a3de5cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ed26e5b1a0978e6d2c43082a15caea"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab5ed26e5b1a0978e6d2c43082a15caea">isTrajectoryFeasible</a> (base_local_planner::CostmapModel *costmap_model, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0, int look_ahead_idx=-1)</td></tr>
+<tr class="memdesc:ab5ed26e5b1a0978e6d2c43082a15caea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the planned trajectory is feasible or not.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab5ed26e5b1a0978e6d2c43082a15caea">更多...</a><br /></td></tr>
+<tr class="separator:ab5ed26e5b1a0978e6d2c43082a15caea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c4eedef91c7647ead76facc4e7d560"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a27c4eedef91c7647ead76facc4e7d560">findBestTeb</a> ()</td></tr>
+<tr class="memdesc:a27c4eedef91c7647ead76facc4e7d560"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case of empty best teb, scores again the available plans to find the best one. The best_teb_ variable is updated consequently.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a27c4eedef91c7647ead76facc4e7d560">更多...</a><br /></td></tr>
+<tr class="separator:a27c4eedef91c7647ead76facc4e7d560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cb841ab6621305160622d2cb4767c5"><td class="memItemLeft" align="right" valign="top">TebOptPlannerContainer::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a28cb841ab6621305160622d2cb4767c5">removeTeb</a> (TebOptimalPlannerPtr &amp;teb)</td></tr>
+<tr class="memdesc:a28cb841ab6621305160622d2cb4767c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the specified teb and the corresponding homotopy class from the list of available ones.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a28cb841ab6621305160622d2cb4767c5">更多...</a><br /></td></tr>
+<tr class="separator:a28cb841ab6621305160622d2cb4767c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Visualization</div></td></tr>
+<tr class="memitem:a7c5eb7412271b533e774a309fa6abd05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a7c5eb7412271b533e774a309fa6abd05">setVisualization</a> (TebVisualizationPtr visualization)</td></tr>
+<tr class="memdesc:a7c5eb7412271b533e774a309fa6abd05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class to enable visiualization routines (e.g. publish the local plan and pose sequence)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a7c5eb7412271b533e774a309fa6abd05">更多...</a><br /></td></tr>
+<tr class="separator:a7c5eb7412271b533e774a309fa6abd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718510bcffcce3b6a4714495658a911c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a718510bcffcce3b6a4714495658a911c">visualize</a> ()</td></tr>
+<tr class="memdesc:a718510bcffcce3b6a4714495658a911c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish the local plan, pose sequence and additional information via ros topics (e.g. subscribe with rviz).  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a718510bcffcce3b6a4714495658a911c">更多...</a><br /></td></tr>
+<tr class="separator:a718510bcffcce3b6a4714495658a911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classteb__local__planner_1_1PlannerInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classteb__local__planner_1_1PlannerInterface')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html">teb_local_planner::PlannerInterface</a></td></tr>
+<tr class="memitem:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top"><a id="af6e3288fc97b1b54847e47f171575def"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#af6e3288fc97b1b54847e47f171575def">PlannerInterface</a> ()</td></tr>
+<tr class="memdesc:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor <br /></td></tr>
+<tr class="separator:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top"><a id="ad1abeab53bae39232c51b902c357e2c0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#ad1abeab53bae39232c51b902c357e2c0">~PlannerInterface</a> ()</td></tr>
+<tr class="memdesc:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62971a56c686fad9b139790cca52d0ff inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a62971a56c686fad9b139790cca52d0ff">computeCurrentCost</a> (std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="separator:a62971a56c686fad9b139790cca52d0ff inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Explore new paths and keep only a single one for each homotopy class</h2></td></tr>
+<tr class="memitem:a8fadf170bebb98e4c39a07af8afdced4"><td class="memItemLeft" align="right" valign="top"><a id="a8fadf170bebb98e4c39a07af8afdced4"></a>
+const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a8fadf170bebb98e4c39a07af8afdced4">cfg_</a></td></tr>
+<tr class="memdesc:a8fadf170bebb98e4c39a07af8afdced4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config class that stores and manages all related parameters <br /></td></tr>
+<tr class="separator:a8fadf170bebb98e4c39a07af8afdced4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9c4645bb20e68df3bf1a47738da40f"><td class="memItemLeft" align="right" valign="top"><a id="a2d9c4645bb20e68df3bf1a47738da40f"></a>
+ObstContainer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a2d9c4645bb20e68df3bf1a47738da40f">obstacles_</a></td></tr>
+<tr class="memdesc:a2d9c4645bb20e68df3bf1a47738da40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store obstacles that are relevant for planning <br /></td></tr>
+<tr class="separator:a2d9c4645bb20e68df3bf1a47738da40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815890db7b340b937cc8ba135a244571"><td class="memItemLeft" align="right" valign="top"><a id="a815890db7b340b937cc8ba135a244571"></a>
+const ViaPointContainer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a815890db7b340b937cc8ba135a244571">via_points_</a></td></tr>
+<tr class="memdesc:a815890db7b340b937cc8ba135a244571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the current list of via-points <br /></td></tr>
+<tr class="separator:a815890db7b340b937cc8ba135a244571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282c59b32905b7a567070f518d45bdc0"><td class="memItemLeft" align="right" valign="top"><a id="a282c59b32905b7a567070f518d45bdc0"></a>
+TebVisualizationPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a282c59b32905b7a567070f518d45bdc0">visualization_</a></td></tr>
+<tr class="memdesc:a282c59b32905b7a567070f518d45bdc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of the visualization class (local/global plan, obstacles, ...) <br /></td></tr>
+<tr class="separator:a282c59b32905b7a567070f518d45bdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed5825c67604ca73379301672ddae20"><td class="memItemLeft" align="right" valign="top"><a id="a2ed5825c67604ca73379301672ddae20"></a>
+TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a2ed5825c67604ca73379301672ddae20">best_teb_</a></td></tr>
+<tr class="memdesc:a2ed5825c67604ca73379301672ddae20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the current best teb. <br /></td></tr>
+<tr class="separator:a2ed5825c67604ca73379301672ddae20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2d67a9747834ea58132b34bdfbf57f"><td class="memItemLeft" align="right" valign="top"><a id="aaf2d67a9747834ea58132b34bdfbf57f"></a>
+RobotFootprintModelPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#aaf2d67a9747834ea58132b34bdfbf57f">robot_model_</a></td></tr>
+<tr class="memdesc:aaf2d67a9747834ea58132b34bdfbf57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Robot model shared instance <br /></td></tr>
+<tr class="separator:aaf2d67a9747834ea58132b34bdfbf57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e3caa202d4fa614427c30aa49d093a"><td class="memItemLeft" align="right" valign="top"><a id="a27e3caa202d4fa614427c30aa49d093a"></a>
+const std::vector&lt; geometry_msgs::PoseStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a27e3caa202d4fa614427c30aa49d093a">initial_plan_</a></td></tr>
+<tr class="memdesc:a27e3caa202d4fa614427c30aa49d093a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the initial plan if available for a better trajectory initialization <br /></td></tr>
+<tr class="separator:a27e3caa202d4fa614427c30aa49d093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3671752d49c4f668e5f569002f6b5335"><td class="memItemLeft" align="right" valign="top"><a id="a3671752d49c4f668e5f569002f6b5335"></a>
+EquivalenceClassPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a3671752d49c4f668e5f569002f6b5335">initial_plan_eq_class_</a></td></tr>
+<tr class="memdesc:a3671752d49c4f668e5f569002f6b5335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the equivalence class of the initial plan <br /></td></tr>
+<tr class="separator:a3671752d49c4f668e5f569002f6b5335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfcbc87e5e75cc98759ca95c66cb097"><td class="memItemLeft" align="right" valign="top"><a id="a6cfcbc87e5e75cc98759ca95c66cb097"></a>
+TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a6cfcbc87e5e75cc98759ca95c66cb097">initial_plan_teb_</a></td></tr>
+<tr class="memdesc:a6cfcbc87e5e75cc98759ca95c66cb097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store pointer to the TEB related to the initial plan (use method <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a21bcd95064e5325e9ce850d01b91b824" title="Returns a shared pointer to the TEB related to the initial plan">getInitialPlanTEB()</a> since it checks if initial_plan_teb_ is still included in tebs_.) <br /></td></tr>
+<tr class="separator:a6cfcbc87e5e75cc98759ca95c66cb097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3312042b11d8f9606676e8e2793fdc57"><td class="memItemLeft" align="right" valign="top"><a id="a3312042b11d8f9606676e8e2793fdc57"></a>
+TebOptPlannerContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a3312042b11d8f9606676e8e2793fdc57">tebs_</a></td></tr>
+<tr class="memdesc:a3312042b11d8f9606676e8e2793fdc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container that stores multiple local teb planners (for alternative equivalence classes) and their corresponding costs <br /></td></tr>
+<tr class="separator:a3312042b11d8f9606676e8e2793fdc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f8b540ac16eae5f0977fd45e7c1402"><td class="memItemLeft" align="right" valign="top"><a id="a05f8b540ac16eae5f0977fd45e7c1402"></a>
+EquivalenceClassContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a05f8b540ac16eae5f0977fd45e7c1402">equivalence_classes_</a></td></tr>
+<tr class="memdesc:a05f8b540ac16eae5f0977fd45e7c1402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store all known quivalence classes (e.g. h-signatures) to allow checking for duplicates after finding and adding new ones. <br /></td></tr>
+<tr class="separator:a05f8b540ac16eae5f0977fd45e7c1402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e83e0367082007f321e93ffdcea4668"><td class="memItemLeft" align="right" valign="top"><a id="a8e83e0367082007f321e93ffdcea4668"></a>
+boost::shared_ptr&lt; <a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html">GraphSearchInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>graph_search_</b></td></tr>
+<tr class="separator:a8e83e0367082007f321e93ffdcea4668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0e2ee798e219abd59363f6abd66e7f"><td class="memItemLeft" align="right" valign="top"><a id="afb0e2ee798e219abd59363f6abd66e7f"></a>
+ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#afb0e2ee798e219abd59363f6abd66e7f">last_eq_class_switching_time_</a></td></tr>
+<tr class="memdesc:afb0e2ee798e219abd59363f6abd66e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the time at which the equivalence class changed recently <br /></td></tr>
+<tr class="separator:afb0e2ee798e219abd59363f6abd66e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933fdb7d462403912283bec9eaf414be"><td class="memItemLeft" align="right" valign="top"><a id="a933fdb7d462403912283bec9eaf414be"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a933fdb7d462403912283bec9eaf414be">initialized_</a></td></tr>
+<tr class="memdesc:a933fdb7d462403912283bec9eaf414be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keeps track about the correct initialization of this class <br /></td></tr>
+<tr class="separator:a933fdb7d462403912283bec9eaf414be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b224d3aa6d562724d25941e55464a1d"><td class="memItemLeft" align="right" valign="top"><a id="a7b224d3aa6d562724d25941e55464a1d"></a>
+TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a7b224d3aa6d562724d25941e55464a1d">last_best_teb_</a></td></tr>
+<tr class="memdesc:a7b224d3aa6d562724d25941e55464a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points to the plan used in the previous control cycle <br /></td></tr>
+<tr class="separator:a7b224d3aa6d562724d25941e55464a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53da39498920840cd960fca10cde8b6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a53da39498920840cd960fca10cde8b6c">hasEquivalenceClass</a> (const EquivalenceClassPtr &amp;eq_class) const</td></tr>
+<tr class="memdesc:a53da39498920840cd960fca10cde8b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a h-signature exists already.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a53da39498920840cd960fca10cde8b6c">更多...</a><br /></td></tr>
+<tr class="separator:a53da39498920840cd960fca10cde8b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67f5d38e08e1fd6a63ee1f06bf652f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab67f5d38e08e1fd6a63ee1f06bf652f1">renewAndAnalyzeOldTebs</a> (bool delete_detours)</td></tr>
+<tr class="memdesc:ab67f5d38e08e1fd6a63ee1f06bf652f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renew all found h-signatures for the new planning step based on existing TEBs. Optionally detours can be discarded.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab67f5d38e08e1fd6a63ee1f06bf652f1">更多...</a><br /></td></tr>
+<tr class="separator:ab67f5d38e08e1fd6a63ee1f06bf652f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87bba235037c6769b5882ba5714e882a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a87bba235037c6769b5882ba5714e882a">updateReferenceTrajectoryViaPoints</a> (bool all_trajectories)</td></tr>
+<tr class="memdesc:a87bba235037c6769b5882ba5714e882a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate trajectories with via-points  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a87bba235037c6769b5882ba5714e882a">更多...</a><br /></td></tr>
+<tr class="separator:a87bba235037c6769b5882ba5714e882a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Important steps that are called during planning</h2></td></tr>
+<tr class="memitem:ace1e52b129419eb3bd5a7e95ff460bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ace1e52b129419eb3bd5a7e95ff460bf4">exploreEquivalenceClassesAndInitTebs</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, double dist_to_obst, const geometry_msgs::Twist *start_vel)</td></tr>
+<tr class="memdesc:ace1e52b129419eb3bd5a7e95ff460bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explore paths in new equivalence classes (e.g. homotopy classes) and initialize TEBs from them.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ace1e52b129419eb3bd5a7e95ff460bf4">更多...</a><br /></td></tr>
+<tr class="separator:ace1e52b129419eb3bd5a7e95ff460bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e423322d2a35a3083b797f96439396d"><td class="memTemplParams" colspan="2">template&lt;typename BidirIter , typename Fun &gt; </td></tr>
+<tr class="memitem:a0e423322d2a35a3083b797f96439396d"><td class="memTemplItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a0e423322d2a35a3083b797f96439396d">addAndInitNewTeb</a> (BidirIter path_start, BidirIter path_end, Fun fun_position, double start_orientation, double goal_orientation, const geometry_msgs::Twist *start_velocity)</td></tr>
+<tr class="memdesc:a0e423322d2a35a3083b797f96439396d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it using a generic 2D reference path  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a0e423322d2a35a3083b797f96439396d">更多...</a><br /></td></tr>
+<tr class="separator:a0e423322d2a35a3083b797f96439396d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c06e0c0ea750787a521644997816021"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a0c06e0c0ea750787a521644997816021">addAndInitNewTeb</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, const geometry_msgs::Twist *start_velocity)</td></tr>
+<tr class="memdesc:a0c06e0c0ea750787a521644997816021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it with a simple straight line between a given start and goal  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a0c06e0c0ea750787a521644997816021">更多...</a><br /></td></tr>
+<tr class="separator:a0c06e0c0ea750787a521644997816021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f5db987493ea8a052c2727c32bd40f"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#aa3f5db987493ea8a052c2727c32bd40f">addAndInitNewTeb</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::Twist *start_velocity)</td></tr>
+<tr class="memdesc:aa3f5db987493ea8a052c2727c32bd40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new Teb to the internal trajectory container , if this teb constitutes a new equivalence class. Initialize it using a PoseStamped container  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#aa3f5db987493ea8a052c2727c32bd40f">更多...</a><br /></td></tr>
+<tr class="separator:aa3f5db987493ea8a052c2727c32bd40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431ea70eca1620cf991b5154d0c27adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a431ea70eca1620cf991b5154d0c27adc">updateAllTEBs</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> *start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> *goal, const geometry_msgs::Twist *start_velocity)</td></tr>
+<tr class="memdesc:a431ea70eca1620cf991b5154d0c27adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update TEBs with new pose, goal and current velocity.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a431ea70eca1620cf991b5154d0c27adc">更多...</a><br /></td></tr>
+<tr class="separator:a431ea70eca1620cf991b5154d0c27adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c141e147ddb669f5c7155b075f0dce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a1c141e147ddb669f5c7155b075f0dce7">optimizeAllTEBs</a> (int iter_innerloop, int iter_outerloop)</td></tr>
+<tr class="memdesc:a1c141e147ddb669f5c7155b075f0dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize all available trajectories by invoking the optimizer on each one.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a1c141e147ddb669f5c7155b075f0dce7">更多...</a><br /></td></tr>
+<tr class="separator:a1c141e147ddb669f5c7155b075f0dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bcd95064e5325e9ce850d01b91b824"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a21bcd95064e5325e9ce850d01b91b824">getInitialPlanTEB</a> ()</td></tr>
+<tr class="memdesc:a21bcd95064e5325e9ce850d01b91b824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a shared pointer to the TEB related to the initial plan  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a21bcd95064e5325e9ce850d01b91b824">更多...</a><br /></td></tr>
+<tr class="separator:a21bcd95064e5325e9ce850d01b91b824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8377a6481cfd1a7e9c08c556bb0a5e7"><td class="memItemLeft" align="right" valign="top">TebOptimalPlannerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac8377a6481cfd1a7e9c08c556bb0a5e7">selectBestTeb</a> ()</td></tr>
+<tr class="memdesc:ac8377a6481cfd1a7e9c08c556bb0a5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case of multiple, internally stored, alternative trajectories, select the best one according to their cost values.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac8377a6481cfd1a7e9c08c556bb0a5e7">更多...</a><br /></td></tr>
+<tr class="separator:ac8377a6481cfd1a7e9c08c556bb0a5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a350b637fac6eca4e2daf56e4f6d12"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ad0a350b637fac6eca4e2daf56e4f6d12">clearPlanner</a> ()</td></tr>
+<tr class="memdesc:ad0a350b637fac6eca4e2daf56e4f6d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the planner.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ad0a350b637fac6eca4e2daf56e4f6d12">更多...</a><br /></td></tr>
+<tr class="separator:ad0a350b637fac6eca4e2daf56e4f6d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac131c3d9f6de5ea8d9b67cb7dd2a6a4b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac131c3d9f6de5ea8d9b67cb7dd2a6a4b">setPreferredTurningDir</a> (RotType dir)</td></tr>
+<tr class="memdesc:ac131c3d9f6de5ea8d9b67cb7dd2a6a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefer a desired initial turning direction (by penalizing the opposing one)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac131c3d9f6de5ea8d9b67cb7dd2a6a4b">更多...</a><br /></td></tr>
+<tr class="separator:ac131c3d9f6de5ea8d9b67cb7dd2a6a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfc48c321ae75cb39d7a5bdcb9509f5"><td class="memTemplParams" colspan="2">template&lt;typename BidirIter , typename Fun &gt; </td></tr>
+<tr class="memitem:abcfc48c321ae75cb39d7a5bdcb9509f5"><td class="memTemplItemLeft" align="right" valign="top">EquivalenceClassPtr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#abcfc48c321ae75cb39d7a5bdcb9509f5">calculateEquivalenceClass</a> (BidirIter path_start, BidirIter path_end, Fun fun_cplx_point, const ObstContainer *<a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a522aa8954809bebe2417b24f9cb5062e">obstacles</a>=NULL, boost::optional&lt; TimeDiffSequence::iterator &gt; timediff_start=boost::none, boost::optional&lt; TimeDiffSequence::iterator &gt; timediff_end=boost::none)</td></tr>
+<tr class="memdesc:abcfc48c321ae75cb39d7a5bdcb9509f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the equivalence class of a path  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#abcfc48c321ae75cb39d7a5bdcb9509f5">更多...</a><br /></td></tr>
+<tr class="separator:abcfc48c321ae75cb39d7a5bdcb9509f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9424a2705655140407701399e032b7c"><td class="memItemLeft" align="right" valign="top">const TebOptPlannerContainer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#aa9424a2705655140407701399e032b7c">getTrajectoryContainer</a> () const</td></tr>
+<tr class="memdesc:aa9424a2705655140407701399e032b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only access to the internal trajectory container.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#aa9424a2705655140407701399e032b7c">更多...</a><br /></td></tr>
+<tr class="separator:aa9424a2705655140407701399e032b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762d67ecc885aab5899bfe15f091f94f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a762d67ecc885aab5899bfe15f091f94f">computeCurrentCost</a> (std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="separator:a762d67ecc885aab5899bfe15f091f94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6d4bf3972789b3072f1ec87def82ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#adc6d4bf3972789b3072f1ec87def82ab">deletePlansDetouringBackwards</a> (const double orient_threshold, const double len_orientation_vector)</td></tr>
+<tr class="memdesc:adc6d4bf3972789b3072f1ec87def82ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the orientation of the computed trajectories differs from that of the best plan of more than the specified threshold and eventually deletes them. Also deletes detours with a duration much bigger than the duration of the best_teb (duration / best duration &gt; max_ratio_detours_duration_best_duration).  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#adc6d4bf3972789b3072f1ec87def82ab">更多...</a><br /></td></tr>
+<tr class="separator:adc6d4bf3972789b3072f1ec87def82ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee36dd180fff314c4eede79051eb3e1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#aee36dd180fff314c4eede79051eb3e1b">computeStartOrientation</a> (const TebOptimalPlannerPtr <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8">plan</a>, const double len_orientation_vector, double &amp;orientation)</td></tr>
+<tr class="memdesc:aee36dd180fff314c4eede79051eb3e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a plan, computes its start orientation using a vector of length &gt;= len_orientation_vector starting from the initial pose.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#aee36dd180fff314c4eede79051eb3e1b">更多...</a><br /></td></tr>
+<tr class="separator:aee36dd180fff314c4eede79051eb3e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7cf5fe454ad9509143443a59c4f6e07"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ad7cf5fe454ad9509143443a59c4f6e07">config</a> () const</td></tr>
+<tr class="memdesc:ad7cf5fe454ad9509143443a59c4f6e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access config (read-only)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ad7cf5fe454ad9509143443a59c4f6e07">更多...</a><br /></td></tr>
+<tr class="separator:ad7cf5fe454ad9509143443a59c4f6e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522aa8954809bebe2417b24f9cb5062e"><td class="memItemLeft" align="right" valign="top">const ObstContainer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a522aa8954809bebe2417b24f9cb5062e">obstacles</a> () const</td></tr>
+<tr class="memdesc:a522aa8954809bebe2417b24f9cb5062e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access current obstacle container (read-only)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a522aa8954809bebe2417b24f9cb5062e">更多...</a><br /></td></tr>
+<tr class="separator:a522aa8954809bebe2417b24f9cb5062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add39bc798cfe55db6191f822fced5d49"><td class="memItemLeft" align="right" valign="top"><a id="add39bc798cfe55db6191f822fced5d49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#add39bc798cfe55db6191f822fced5d49">isInitialized</a> () const</td></tr>
+<tr class="memdesc:add39bc798cfe55db6191f822fced5d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the planner is initialized <br /></td></tr>
+<tr class="separator:add39bc798cfe55db6191f822fced5d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab8d25cf2d6053608d3ee3e8c55235a"><td class="memItemLeft" align="right" valign="top"><a id="a6ab8d25cf2d6053608d3ee3e8c55235a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a6ab8d25cf2d6053608d3ee3e8c55235a">clearGraph</a> ()</td></tr>
+<tr class="memdesc:a6ab8d25cf2d6053608d3ee3e8c55235a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear any existing graph of the homotopy class search <br /></td></tr>
+<tr class="separator:a6ab8d25cf2d6053608d3ee3e8c55235a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac738eed8b28471741852c954e21f90a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac738eed8b28471741852c954e21f90a1">bestTebIdx</a> () const</td></tr>
+<tr class="memdesc:ac738eed8b28471741852c954e21f90a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the index of the currently best TEB in the container  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac738eed8b28471741852c954e21f90a1">更多...</a><br /></td></tr>
+<tr class="separator:ac738eed8b28471741852c954e21f90a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d76f3d1b94cd294b8295f88249f99a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a66d76f3d1b94cd294b8295f88249f99a">addEquivalenceClassIfNew</a> (const EquivalenceClassPtr &amp;eq_class, bool lock=false)</td></tr>
+<tr class="memdesc:a66d76f3d1b94cd294b8295f88249f99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal helper function that adds a new equivalence class to the list of known classes only if it is unique.  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a66d76f3d1b94cd294b8295f88249f99a">更多...</a><br /></td></tr>
+<tr class="separator:a66d76f3d1b94cd294b8295f88249f99a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664259ee8e2be5ea5d680c69bd7adaa9"><td class="memItemLeft" align="right" valign="top">const EquivalenceClassContainer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a664259ee8e2be5ea5d680c69bd7adaa9">getEquivalenceClassRef</a> () const</td></tr>
+<tr class="memdesc:a664259ee8e2be5ea5d680c69bd7adaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current set of equivalence erelations (read-only)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#a664259ee8e2be5ea5d680c69bd7adaa9">更多...</a><br /></td></tr>
+<tr class="separator:a664259ee8e2be5ea5d680c69bd7adaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4759ac6ac07fee46625ba45ab9fb7d2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab4759ac6ac07fee46625ba45ab9fb7d2">isHSignatureSimilar</a> (const std::complex&lt; long double &gt; &amp;h1, const std::complex&lt; long double &gt; &amp;h2, double threshold)</td></tr>
+<tr class="memdesc:ab4759ac6ac07fee46625ba45ab9fb7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two h-signatures are similar (w.r.t. a certain threshold)  <a href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab4759ac6ac07fee46625ba45ab9fb7d2">更多...</a><br /></td></tr>
+<tr class="separator:ab4759ac6ac07fee46625ba45ab9fb7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Local planner that explores alternative homotopy classes, create a plan for each alternative and finally return the robot controls for the current best path (repeated in each sampling interval) </p>
+<p>Equivalence classes (e.g. homotopy) are explored using the help of a search-graph. <br  />
+A couple of possible candidates are sampled / generated and filtered afterwards such that only a single candidate per homotopy class remain. Filtering is applied using the H-Signature, a homotopy (resp. homology) invariant: <br  />
+</p><ul>
+<li>S. Bhattacharya et al.: Search-based Path Planning with Homotopy Class Constraints, AAAI, 2010</li>
+<li>C. Rösmann et al.: Planning of Multiple Robot Trajectories in Distinctive Topologies, ECMR, 2015.</li>
+</ul>
+<p>Followed by the homotopy class search, each candidate is used as an initialization for the underlying trajectory optimization (in this case utilizing the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> class with the <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a>). <br  />
+Depending on the config parameters, the optimization is performed in parallel. <br  />
+After the optimization is completed, the best optimized candidate is selected w.r.t. to trajectory cost, since the cost already contains important features like clearance from obstacles and transition time. <br  />
+ Everyhting is performed by calling one of the overloaded <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8" title="Plan a trajectory based on an initial reference plan.">plan()</a> methods. <br  />
+Afterwards the velocity command to control the robot is obtained from the "best" candidate via <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a3e8f7fa1c3dbc5037a552024101f0c47" title="Get the velocity command from a previously optimized plan to control the robot at the current samplin...">getVelocityCommand()</a>. <br  />
+ All steps are repeated in the subsequent sampling interval with the exception, that already planned (optimized) trajectories are preferred against new path initilizations in order to improve the hot-starting capability. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac767cbafaf5058ee83ff99114d24fb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac767cbafaf5058ee83ff99114d24fb92">&#9670;&nbsp;</a></span>HomotopyClassPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::HomotopyClassPlanner::HomotopyClassPlanner </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ObstContainer *&#160;</td>
+          <td class="paramname"><em>obstacles</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RobotFootprintModelPtr&#160;</td>
+          <td class="paramname"><em>robot_model</em> = <code>boost::make_shared&lt;&#160;<a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a>&#160;&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visualization</em> = <code>TebVisualizationPtr()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ViaPointContainer *&#160;</td>
+          <td class="paramname"><em>via_points</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct and initialize the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Const reference to the <a class="el" href="classteb__local__planner_1_1TebConfig.html" title="Config class for the teb_local_planner and its components.">TebConfig</a> class for internal parameters </td></tr>
+    <tr><td class="paramname">obstacles</td><td>Container storing all relevant obstacles (see <a class="el" href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles">Obstacle</a>) </td></tr>
+    <tr><td class="paramname">robot_model</td><td>Shared pointer to the robot shape model used for optimization (optional) </td></tr>
+    <tr><td class="paramname">visualization</td><td>Shared pointer to the <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class (optional) </td></tr>
+    <tr><td class="paramname">via_points</td><td>Container storing via-points (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0e423322d2a35a3083b797f96439396d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e423322d2a35a3083b797f96439396d">&#9670;&nbsp;</a></span>addAndInitNewTeb() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BidirIter , typename Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::addAndInitNewTeb </td>
+          <td>(</td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fun&#160;</td>
+          <td class="paramname"><em>fun_position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it using a generic 2D reference path </p>
+<p>Refer to TimedElasticBand::initTEBtoGoal() for more details about the template parameters. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_start</td><td>start iterator of a generic 2d path </td></tr>
+    <tr><td class="paramname">path_end</td><td>end iterator of a generic 2d path </td></tr>
+    <tr><td class="paramname">fun_position</td><td>unary function that returns the Eigen::Vector2d object </td></tr>
+    <tr><td class="paramname">start_orientation</td><td>Orientation of the first pose of the trajectory (optional, otherwise use goal heading) </td></tr>
+    <tr><td class="paramname">goal_orientation</td><td>Orientation of the last pose of the trajectory (optional, otherwise use goal heading) </td></tr>
+    <tr><td class="paramname">start_velocity</td><td>start velocity (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BidirIter</td><td>Bidirectional iterator type </td></tr>
+    <tr><td class="paramname">Fun</td><td>unyary function that transforms the dereferenced iterator into an Eigen::Vector2d </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Shared pointer to the newly created teb optimal planner </dd></dl>
+
+</div>
+</div>
+<a id="a0c06e0c0ea750787a521644997816021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c06e0c0ea750787a521644997816021">&#9670;&nbsp;</a></span>addAndInitNewTeb() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::addAndInitNewTeb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it with a simple straight line between a given start and goal </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>start pose </td></tr>
+    <tr><td class="paramname">goal</td><td>goal pose </td></tr>
+    <tr><td class="paramname">start_velocity</td><td>start velocity (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Shared pointer to the newly created teb optimal planner </dd></dl>
+
+</div>
+</div>
+<a id="aa3f5db987493ea8a052c2727c32bd40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f5db987493ea8a052c2727c32bd40f">&#9670;&nbsp;</a></span>addAndInitNewTeb() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::addAndInitNewTeb </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new Teb to the internal trajectory container , if this teb constitutes a new equivalence class. Initialize it using a PoseStamped container </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_plan</td><td>container of poses (start and goal orientation should be valid!) </td></tr>
+    <tr><td class="paramname">start_velocity</td><td>start velocity (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Shared pointer to the newly created teb optimal planner </dd></dl>
+
+</div>
+</div>
+<a id="a66d76f3d1b94cd294b8295f88249f99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d76f3d1b94cd294b8295f88249f99a">&#9670;&nbsp;</a></span>addEquivalenceClassIfNew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::HomotopyClassPlanner::addEquivalenceClassIfNew </td>
+          <td>(</td>
+          <td class="paramtype">const EquivalenceClassPtr &amp;&#160;</td>
+          <td class="paramname"><em>eq_class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lock</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internal helper function that adds a new equivalence class to the list of known classes only if it is unique. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq_class</td><td>equivalence class that should be tested </td></tr>
+    <tr><td class="paramname">lock</td><td>if <code>true</code>, exclude the H-signature from deletion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if the h-signature was added and no duplicate was found, <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a9f202e1abac76b8afa467700a3de5cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f202e1abac76b8afa467700a3de5cf6">&#9670;&nbsp;</a></span>bestTeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::bestTeb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access current best trajectory candidate (that relates to the "best" homotopy class). </p>
+<p>If no trajectory is available, the pointer will be empty. If only a single trajectory is available, return it. Otherwise return the best one, but call <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ac8377a6481cfd1a7e9c08c556bb0a5e7" title="In case of multiple, internally stored, alternative trajectories, select the best one according to th...">selectBestTeb()</a> before to perform the actual selection (part of the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8" title="Plan a trajectory based on an initial reference plan.">plan()</a> methods). </p><dl class="section return"><dt>返回</dt><dd>Shared pointer to the best <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> that contains the selected trajectory (<a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a>). </dd></dl>
+
+</div>
+</div>
+<a id="ac738eed8b28471741852c954e21f90a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac738eed8b28471741852c954e21f90a1">&#9670;&nbsp;</a></span>bestTebIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teb_local_planner::HomotopyClassPlanner::bestTebIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>find the index of the currently best TEB in the container </p>
+<dl class="section remark"><dt>备注</dt><dd><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a9f202e1abac76b8afa467700a3de5cf6" title="Access current best trajectory candidate (that relates to the &quot;best&quot; homotopy class).">bestTeb()</a> should be preferred whenever possible </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>index of the best TEB obtained with bestTEB(), if no TEB is avaiable, it returns -1. </dd></dl>
+
+</div>
+</div>
+<a id="abcfc48c321ae75cb39d7a5bdcb9509f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfc48c321ae75cb39d7a5bdcb9509f5">&#9670;&nbsp;</a></span>calculateEquivalenceClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BidirIter , typename Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">EquivalenceClassPtr teb_local_planner::HomotopyClassPlanner::calculateEquivalenceClass </td>
+          <td>(</td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fun&#160;</td>
+          <td class="paramname"><em>fun_cplx_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ObstContainer *&#160;</td>
+          <td class="paramname"><em>obstacles</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; TimeDiffSequence::iterator &gt;&#160;</td>
+          <td class="paramname"><em>timediff_start</em> = <code>boost::none</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; TimeDiffSequence::iterator &gt;&#160;</td>
+          <td class="paramname"><em>timediff_end</em> = <code>boost::none</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the equivalence class of a path </p>
+<p>Currently, only the H-signature (refer to <a class="el" href="classteb__local__planner_1_1HSignature.html" title="The H-signature defines an equivalence relation based on homology in terms of complex calculus.">HSignature</a>) is implemented.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_start</td><td>Iterator to the first element in the path </td></tr>
+    <tr><td class="paramname">path_end</td><td>Iterator to the last element in the path </td></tr>
+    <tr><td class="paramname">obstacles</td><td>obstacle container </td></tr>
+    <tr><td class="paramname">fun_cplx_point</td><td>function accepting the dereference iterator type and that returns the position as complex number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BidirIter</td><td>Bidirectional iterator type </td></tr>
+    <tr><td class="paramname">Fun</td><td>function of the form std::complex&lt; long double &gt; (const T&amp; point_type) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>pointer to the equivalence class base type </dd></dl>
+
+</div>
+</div>
+<a id="ad0a350b637fac6eca4e2daf56e4f6d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a350b637fac6eca4e2daf56e4f6d12">&#9670;&nbsp;</a></span>clearPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::HomotopyClassPlanner::clearPlanner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the planner. </p>
+<p>Clear all previously found H-signatures, paths, tebs and the hcgraph. </p>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#aab4b2a774a41d5d98a6eed6bdde81298">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a762d67ecc885aab5899bfe15f091f94f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762d67ecc885aab5899bfe15f091f94f">&#9670;&nbsp;</a></span>computeCurrentCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::HomotopyClassPlanner::computeCurrentCost </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obst_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>viapoint_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alternative_time_cost</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute and return the cost of the current optimization graph (supports multiple trajectories) </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cost</td><td>current cost value for each trajectory [for a planner with just a single trajectory: size=1, vector will not be cleared] </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">obst_cost_scale</td><td>Specify extra scaling for obstacle costs </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">viapoint_cost_scale</td><td>Specify extra scaling for via points. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">alternative_time_cost</td><td>Replace the cost for the time optimal objective by the actual (weighted) transition time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee36dd180fff314c4eede79051eb3e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee36dd180fff314c4eede79051eb3e1b">&#9670;&nbsp;</a></span>computeStartOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::HomotopyClassPlanner::computeStartOrientation </td>
+          <td>(</td>
+          <td class="paramtype">const TebOptimalPlannerPtr&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>len_orientation_vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>orientation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a plan, computes its start orientation using a vector of length &gt;= len_orientation_vector starting from the initial pose. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plan</td><td>Teb to be analyzed </td></tr>
+    <tr><td class="paramname">len_orientation_vector</td><td>min length of the vector used to compute the start orientation </td></tr>
+    <tr><td class="paramname">orientation</td><td>computed start orientation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>: Could the vector for the orientation check be computed? (False if the plan has no pose with a distance &gt; len_orientation_vector from the start poseq) </dd></dl>
+
+</div>
+</div>
+<a id="ad7cf5fe454ad9509143443a59c4f6e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7cf5fe454ad9509143443a59c4f6e07">&#9670;&nbsp;</a></span>config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>* teb_local_planner::HomotopyClassPlanner::config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access config (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const pointer to the config instance </dd></dl>
+
+</div>
+</div>
+<a id="adc6d4bf3972789b3072f1ec87def82ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6d4bf3972789b3072f1ec87def82ab">&#9670;&nbsp;</a></span>deletePlansDetouringBackwards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::deletePlansDetouringBackwards </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>orient_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>len_orientation_vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the orientation of the computed trajectories differs from that of the best plan of more than the specified threshold and eventually deletes them. Also deletes detours with a duration much bigger than the duration of the best_teb (duration / best duration &gt; max_ratio_detours_duration_best_duration). </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orient_threshold</td><td>Threshold paramter for allowed orientation changes in radians </td></tr>
+    <tr><td class="paramname">len_orientation_vector</td><td>length of the vector used to compute the start orientation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace1e52b129419eb3bd5a7e95ff460bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1e52b129419eb3bd5a7e95ff460bf4">&#9670;&nbsp;</a></span>exploreEquivalenceClassesAndInitTebs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::exploreEquivalenceClassesAndInitTebs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dist_to_obst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Explore paths in new equivalence classes (e.g. homotopy classes) and initialize TEBs from them. </p>
+<p>This "all-in-one" method creates a graph with position keypoints from which feasible paths (with clearance from obstacles) are extracted. <br  />
+All obtained paths are filted to only keep a single path for each equivalence class. <br  />
+Each time a new equivalence class is explored (by means of <b>no</b> previous trajectory/TEB remain in that equivalence class), a new trajectory/TEB will be initialized. <br  />
+ Everything is prepared now for the optimization step: see <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a1c141e147ddb669f5c7155b075f0dce7" title="Optimize all available trajectories by invoking the optimizer on each one.">optimizeAllTEBs()</a>. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Current start pose (e.g. pose of the robot) </td></tr>
+    <tr><td class="paramname">goal</td><td>Goal pose (e.g. robot's goal) </td></tr>
+    <tr><td class="paramname">dist_to_obst</td><td>Allowed distance to obstacles: if not satisfying, the path will be rejected (note, this is not the distance used for optimization). </td></tr>
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27c4eedef91c7647ead76facc4e7d560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c4eedef91c7647ead76facc4e7d560">&#9670;&nbsp;</a></span>findBestTeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::findBestTeb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>In case of empty best teb, scores again the available plans to find the best one. The best_teb_ variable is updated consequently. </p>
+<dl class="section return"><dt>返回</dt><dd>Shared pointer to the best <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> that contains the selected trajectory (<a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a>). An empty pointer is returned if no plan is available. </dd></dl>
+
+</div>
+</div>
+<a id="a664259ee8e2be5ea5d680c69bd7adaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664259ee8e2be5ea5d680c69bd7adaa9">&#9670;&nbsp;</a></span>getEquivalenceClassRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EquivalenceClassContainer&amp; teb_local_planner::HomotopyClassPlanner::getEquivalenceClassRef </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the current set of equivalence erelations (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the internal set of currently tracked equivalence relations </dd></dl>
+
+</div>
+</div>
+<a id="a21bcd95064e5325e9ce850d01b91b824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bcd95064e5325e9ce850d01b91b824">&#9670;&nbsp;</a></span>getInitialPlanTEB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::getInitialPlanTEB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a shared pointer to the TEB related to the initial plan </p>
+<dl class="section return"><dt>返回</dt><dd>A non-empty shared ptr is returned if a match was found; Otherwise the shared ptr is empty. </dd></dl>
+
+</div>
+</div>
+<a id="aa9424a2705655140407701399e032b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9424a2705655140407701399e032b7c">&#9670;&nbsp;</a></span>getTrajectoryContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TebOptPlannerContainer&amp; teb_local_planner::HomotopyClassPlanner::getTrajectoryContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read-only access to the internal trajectory container. </p>
+<dl class="section return"><dt>返回</dt><dd>read-only reference to the teb container. </dd></dl>
+
+</div>
+</div>
+<a id="a3e8f7fa1c3dbc5037a552024101f0c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8f7fa1c3dbc5037a552024101f0c47">&#9670;&nbsp;</a></span>getVelocityCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::HomotopyClassPlanner::getVelocityCommand </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>omega</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>look_ahead_poses</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. </p>
+<dl class="section warning"><dt>警告</dt><dd>Call <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8" title="Plan a trajectory based on an initial reference plan.">plan()</a> first and check if the generated plan is feasible. </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">vx</td><td>translational velocity [m/s] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vy</td><td>strafing velocity which can be nonzero for holonomic robots [m/s] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">omega</td><td>rotational velocity [rad/s] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">look_ahead_poses</td><td>index of the final pose used to compute the velocity command. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if command is valid, <code>false</code> otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#afcaba6e2a81b5a9ff4c0103ca73c1d66">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a53da39498920840cd960fca10cde8b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53da39498920840cd960fca10cde8b6c">&#9670;&nbsp;</a></span>hasEquivalenceClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::HomotopyClassPlanner::hasEquivalenceClass </td>
+          <td>(</td>
+          <td class="paramtype">const EquivalenceClassPtr &amp;&#160;</td>
+          <td class="paramname"><em>eq_class</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a h-signature exists already. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq_class</td><td>equivalence class that should be tested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if the h-signature is found, <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a8116edc25c55704e5ec640e062ba622f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8116edc25c55704e5ec640e062ba622f">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ObstContainer *&#160;</td>
+          <td class="paramname"><em>obstacles</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RobotFootprintModelPtr&#160;</td>
+          <td class="paramname"><em>robot_model</em> = <code>boost::make_shared&lt;&#160;<a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a>&#160;&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visualization</em> = <code>TebVisualizationPtr()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ViaPointContainer *&#160;</td>
+          <td class="paramname"><em>via_points</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Const reference to the <a class="el" href="classteb__local__planner_1_1TebConfig.html" title="Config class for the teb_local_planner and its components.">TebConfig</a> class for internal parameters </td></tr>
+    <tr><td class="paramname">obstacles</td><td>Container storing all relevant obstacles (see <a class="el" href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles">Obstacle</a>) </td></tr>
+    <tr><td class="paramname">robot_model</td><td>Shared pointer to the robot shape model used for optimization (optional) </td></tr>
+    <tr><td class="paramname">visualization</td><td>Shared pointer to the <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class (optional) </td></tr>
+    <tr><td class="paramname">via_points</td><td>Container storing via-points (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4759ac6ac07fee46625ba45ab9fb7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4759ac6ac07fee46625ba45ab9fb7d2">&#9670;&nbsp;</a></span>isHSignatureSimilar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool teb_local_planner::HomotopyClassPlanner::isHSignatureSimilar </td>
+          <td>(</td>
+          <td class="paramtype">const std::complex&lt; long double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>h1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::complex&lt; long double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>h2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if two h-signatures are similar (w.r.t. a certain threshold) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h1</td><td>first h-signature </td></tr>
+    <tr><td class="paramname">h2</td><td>second h-signature </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if both h-signatures are similar, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ab5ed26e5b1a0978e6d2c43082a15caea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ed26e5b1a0978e6d2c43082a15caea">&#9670;&nbsp;</a></span>isTrajectoryFeasible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::HomotopyClassPlanner::isTrajectoryFeasible </td>
+          <td>(</td>
+          <td class="paramtype">base_local_planner::CostmapModel *&#160;</td>
+          <td class="paramname"><em>costmap_model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>look_ahead_idx</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether the planned trajectory is feasible or not. </p>
+<p>This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal ObstacleContainer. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap_model</td><td>Pointer to the costmap model </td></tr>
+    <tr><td class="paramname">footprint_spec</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+    <tr><td class="paramname">look_ahead_idx</td><td>Number of poses along the trajectory that should be verified, if -1, the complete trajectory will be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code>, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, <code>false</code> otherwise. </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a6c0c90babc218d68f88135335e3019f6">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a522aa8954809bebe2417b24f9cb5062e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522aa8954809bebe2417b24f9cb5062e">&#9670;&nbsp;</a></span>obstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ObstContainer* teb_local_planner::HomotopyClassPlanner::obstacles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access current obstacle container (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const pointer to the obstacle container instance </dd></dl>
+
+</div>
+</div>
+<a id="a1c141e147ddb669f5c7155b075f0dce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c141e147ddb669f5c7155b075f0dce7">&#9670;&nbsp;</a></span>optimizeAllTEBs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::optimizeAllTEBs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iter_innerloop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iter_outerloop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optimize all available trajectories by invoking the optimizer on each one. </p>
+<p>Depending on the configuration parameters, the optimization is performed either single or multi threaded. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter_innerloop</td><td>Number of inner iterations (see <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">TebOptimalPlanner::optimizeTEB()</a>) </td></tr>
+    <tr><td class="paramname">iter_outerloop</td><td>Number of outer iterations (see <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">TebOptimalPlanner::optimizeTEB()</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cf7d641444293d5a51f90d7c02d7d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf7d641444293d5a51f90d7c02d7d8d">&#9670;&nbsp;</a></span>plan() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::HomotopyClassPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory between a given start and goal pose. </p>
+<p>Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> containing the start pose of the trajectory </td></tr>
+    <tr><td class="paramname">goal</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> containing the goal pose of the trajectory </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Initial velocity at the start pose (twist message containing the translational and angular velocity). </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#ade0509d13cf81df5ad503987ce0ab2cd">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="ab17a26c1abb024c7695038c6d22078b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17a26c1abb024c7695038c6d22078b8">&#9670;&nbsp;</a></span>plan() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::HomotopyClassPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory based on an initial reference plan. </p>
+<p>Provide this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). </p><dl class="section warning"><dt>警告</dt><dd>The current implementation extracts only the start and goal pose and calls the overloaded <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ab17a26c1abb024c7695038c6d22078b8" title="Plan a trajectory based on an initial reference plan.">plan()</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_plan</td><td>vector of geometry_msgs::PoseStamped (must be valid until <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#ad0a350b637fac6eca4e2daf56e4f6d12" title="Reset the planner.">clearPlanner()</a> is called!) </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Current start velocity (e.g. the velocity of the robot, only linear.x, linear.y (holonomic) and angular.z are used) </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#aad7ea1d2454b0bc23db0082df85c99de">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="ac1c2fae1eafa197bd5d787180c036992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c2fae1eafa197bd5d787180c036992">&#9670;&nbsp;</a></span>plan() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::HomotopyClassPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const tf::Pose &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const tf::Pose &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory between a given start and goal pose (tf::Pose version). </p>
+<p>Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>tf::Pose containing the start pose of the trajectory </td></tr>
+    <tr><td class="paramname">goal</td><td>tf::Pose containing the goal pose of the trajectory </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Current start velocity (e.g. the velocity of the robot, only linear.x, linear.y (holonomic) and angular.z are used) </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a35f325b8dd40da1fd8cce699550bf8a2">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a28cb841ab6621305160622d2cb4767c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28cb841ab6621305160622d2cb4767c5">&#9670;&nbsp;</a></span>removeTeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptPlannerContainer::iterator teb_local_planner::HomotopyClassPlanner::removeTeb </td>
+          <td>(</td>
+          <td class="paramtype">TebOptimalPlannerPtr &amp;&#160;</td>
+          <td class="paramname"><em>teb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the specified teb and the corresponding homotopy class from the list of available ones. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointer</td><td>to the teb Band to be removed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Iterator to the next valid teb if available, else to the end of the tebs container. </dd></dl>
+
+</div>
+</div>
+<a id="ab67f5d38e08e1fd6a63ee1f06bf652f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67f5d38e08e1fd6a63ee1f06bf652f1">&#9670;&nbsp;</a></span>renewAndAnalyzeOldTebs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::renewAndAnalyzeOldTebs </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>delete_detours</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Renew all found h-signatures for the new planning step based on existing TEBs. Optionally detours can be discarded. </p>
+<p>Calling this method in each new planning interval is really important. First all old h-signatures are deleted, since they could be invalid for this planning step (obstacle position may changed). Afterwards the h-signatures are calculated for each existing TEB/trajectory and is inserted to the list of known h-signatures. Doing this is important to prefer already optimized trajectories in contrast to initialize newly explored coarse paths. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delete_detours</td><td>if this param is <code>true</code>, all existing TEBs are cleared from detour-candidates calling deletePlansGoingBackwards(). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac8377a6481cfd1a7e9c08c556bb0a5e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8377a6481cfd1a7e9c08c556bb0a5e7">&#9670;&nbsp;</a></span>selectBestTeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TebOptimalPlannerPtr teb_local_planner::HomotopyClassPlanner::selectBestTeb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>In case of multiple, internally stored, alternative trajectories, select the best one according to their cost values. </p>
+<p>The trajectory cost includes features such as transition time and clearance from obstacles. <br  />
+The best trajectory can be accessed later by <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a9f202e1abac76b8afa467700a3de5cf6" title="Access current best trajectory candidate (that relates to the &quot;best&quot; homotopy class).">bestTeb()</a> within the current sampling interval in order to avoid unessary recalculations. </p><dl class="section return"><dt>返回</dt><dd>Shared pointer to the best <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> that contains the selected trajectory (<a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a>). </dd></dl>
+
+</div>
+</div>
+<a id="ac131c3d9f6de5ea8d9b67cb7dd2a6a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac131c3d9f6de5ea8d9b67cb7dd2a6a4b">&#9670;&nbsp;</a></span>setPreferredTurningDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::HomotopyClassPlanner::setPreferredTurningDir </td>
+          <td>(</td>
+          <td class="paramtype">RotType&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prefer a desired initial turning direction (by penalizing the opposing one) </p>
+<p>A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>This parameter might be RotType::left (prefer left), RotType::right (prefer right) or RotType::none (prefer none) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a0df0a82d50a58e7e42ed3e27f5a3b382">teb_local_planner::PlannerInterface</a> .</p>
+
+</div>
+</div>
+<a id="a7c5eb7412271b533e774a309fa6abd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5eb7412271b533e774a309fa6abd05">&#9670;&nbsp;</a></span>setVisualization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::setVisualization </td>
+          <td>(</td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visualization</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class to enable visiualization routines (e.g. publish the local plan and pose sequence) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visualization</td><td>shared pointer to a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd>visualizeTeb </dd></dl>
+
+</div>
+</div>
+<a id="a431ea70eca1620cf991b5154d0c27adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431ea70eca1620cf991b5154d0c27adc">&#9670;&nbsp;</a></span>updateAllTEBs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::updateAllTEBs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> *&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> *&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update TEBs with new pose, goal and current velocity. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>New start pose (optional) </td></tr>
+    <tr><td class="paramname">goal</td><td>New goal pose (optional) </td></tr>
+    <tr><td class="paramname">start_velocity</td><td>start velocity (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a87bba235037c6769b5882ba5714e882a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87bba235037c6769b5882ba5714e882a">&#9670;&nbsp;</a></span>updateReferenceTrajectoryViaPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::HomotopyClassPlanner::updateReferenceTrajectoryViaPoints </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>all_trajectories</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Associate trajectories with via-points </p>
+<p>If <code>all_trajectories</code> is true, all trajectory candidates are connected with the set of via_points, otherwise only the trajectory sharing the homotopy class of the initial/global plan (and all via-points from alternative trajectories are removed) </p><dl class="section remark"><dt>备注</dt><dd>Requires that the plan method is called with an initial plan provided and that via-points are enabled (config) </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">all_trajectories</td><td>see method description </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a718510bcffcce3b6a4714495658a911c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718510bcffcce3b6a4714495658a911c">&#9670;&nbsp;</a></span>visualize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::HomotopyClassPlanner::visualize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publish the local plan, pose sequence and additional information via ros topics (e.g. subscribe with rviz). </p>
+<p>Make sure to register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> instance before using <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a7c5eb7412271b533e774a309fa6abd05" title="Register a TebVisualization class to enable visiualization routines (e.g. publish the local plan and ...">setVisualization()</a> or an overlaoded constructor. </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html#a7c5eb7412271b533e774a309fa6abd05" title="Register a TebVisualization class to enable visiualization routines (e.g. publish the local plan and ...">setVisualization</a> </dd></dl>
+
+<p>重载 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#afeeda8f566d59ee83c02077d2ff6c241">teb_local_planner::PlannerInterface</a> .</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/teb_local_planner/<a class="el" href="homotopy__class__planner_8h_source.html">homotopy_class_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

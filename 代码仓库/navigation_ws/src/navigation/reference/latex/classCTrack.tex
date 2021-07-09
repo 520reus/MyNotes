@@ -1,0 +1,37 @@
+\hypertarget{classCTrack}{}\doxysection{CTrack类 参考}
+\label{classCTrack}\index{CTrack@{CTrack}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCTrack_a37338123b760f303d7ded5ed36d56b2d}\label{classCTrack_a37338123b760f303d7ded5ed36d56b2d}} 
+{\bfseries CTrack} (const Point\+\_\+t \&p, const std\+::vector$<$ cv\+::\+Point $>$ \&contour, track\+\_\+t dt, size\+\_\+t track\+ID)
+\item 
+\mbox{\Hypertarget{classCTrack_affe6f8a72475aae3caf01dd4717098a2}\label{classCTrack_affe6f8a72475aae3caf01dd4717098a2}} 
+track\+\_\+t {\bfseries Calc\+Dist} (const Point\+\_\+t \&p)
+\item 
+\mbox{\Hypertarget{classCTrack_a8f239ffea231a2882194f113b93750f0}\label{classCTrack_a8f239ffea231a2882194f113b93750f0}} 
+void {\bfseries Update} (const Point\+\_\+t \&p, const std\+::vector$<$ cv\+::\+Point $>$ \&contour, bool data\+Correct, size\+\_\+t max\+\_\+trace\+\_\+length)
+\item 
+\mbox{\Hypertarget{classCTrack_aa6758bbeb2f7bc44c225b54b444a0483}\label{classCTrack_aa6758bbeb2f7bc44c225b54b444a0483}} 
+std\+::vector$<$ cv\+::\+Point $>$ {\bfseries get\+Last\+Contour} () const
+\item 
+\mbox{\Hypertarget{classCTrack_ab32486b49086e5421e8f9abcd00becdd}\label{classCTrack_ab32486b49086e5421e8f9abcd00becdd}} 
+Point\+\_\+t {\bfseries get\+Estimated\+Velocity} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCTrack_a4297d655043af89b77494dd16fb7f650}\label{classCTrack_a4297d655043af89b77494dd16fb7f650}} 
+std\+::vector$<$ Point\+\_\+t $>$ {\bfseries trace}
+\item 
+\mbox{\Hypertarget{classCTrack_a92d7e1681f36ef2be1556aed2e16819d}\label{classCTrack_a92d7e1681f36ef2be1556aed2e16819d}} 
+size\+\_\+t {\bfseries track\+\_\+id}
+\item 
+\mbox{\Hypertarget{classCTrack_aaeb899d650f6e5a8a4ff4dd8a60b2cd4}\label{classCTrack_aaeb899d650f6e5a8a4ff4dd8a60b2cd4}} 
+size\+\_\+t {\bfseries skipped\+\_\+frames}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles/multitarget\+\_\+tracker/Ctracker.\+h\end{DoxyCompactItemize}

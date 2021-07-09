@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner/include/lattice_planner/hasher.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d4608036c0a5873288108ca7a6c056e0.html">lattice_planner</a></li><li class="navelem"><a class="el" href="dir_c69004a54815449a25c4300975d14d9f.html">include</a></li><li class="navelem"><a class="el" href="dir_8627c29d6f32bf739f086a6fbb89b9cb.html">lattice_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">hasher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2015 Marina Kollmitz</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * 3. Neither the name of the copyright holder nor the names of its contributors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * may be used to endorse or promote products derived from this software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Author: Marina Kollmitz</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef HASHER_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define HASHER_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>lattice_planner</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html">   47</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlattice__planner_1_1Hasher.html">Hasher</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#a38316033eba48234f62b6c192c161337">   55</a></span>&#160;  std::size_t <a class="code" href="structlattice__planner_1_1Hasher.html#a38316033eba48234f62b6c192c161337">operator()</a>(<span class="keyword">const</span> <a class="code" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a>&amp; index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structlattice__planner_1_1Hasher.html#a3c44a184acab6ff89e0c33906ea13be7">getHash</a>(index);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#a20b9d3a319e9732cafaf9f5d6ea85f9f">   69</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structlattice__planner_1_1Hasher.html#a20b9d3a319e9732cafaf9f5d6ea85f9f">setLimits</a>(<span class="keywordtype">int</span> num_gridcells, <span class="keywordtype">int</span> num_orientations,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="keywordtype">int</span> num_vels_x, <span class="keywordtype">int</span> num_vels_w)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">num_gridcells_</a> = num_gridcells;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">num_orientations_</a> = num_orientations;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structlattice__planner_1_1Hasher.html#ae6ab3dbf64e24552eb3908d3e8152553">num_vels_x_</a> = num_vels_x;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structlattice__planner_1_1Hasher.html#aa2741fde4432297c2ce8d92a04a01aa3">num_vels_w_</a> = num_vels_w;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#a3c44a184acab6ff89e0c33906ea13be7">   84</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code" href="structlattice__planner_1_1Hasher.html#a3c44a184acab6ff89e0c33906ea13be7">getHash</a>(<span class="keyword">const</span> <a class="code" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a>&amp; index)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">size_t</span> hash = index.<a class="code" href="structlattice__planner_1_1DiscreteState.html#a3f3cc72eaddcb38fa902ff480c099e5c">grid_cell</a></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        + index.<a class="code" href="structlattice__planner_1_1DiscreteState.html#a5226ede4e868c3161fd155cc80936b34">angle_i</a> * <a class="code" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">Hasher::num_gridcells_</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        + index.<a class="code" href="structlattice__planner_1_1DiscreteState.html#a3b58388a5b058125945d6c4b3e00c72a">vel_x_i</a> * <a class="code" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">Hasher::num_gridcells_</a> * <a class="code" href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">Hasher::num_orientations_</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        + index.<a class="code" href="structlattice__planner_1_1DiscreteState.html#a7efa6dcf169c05e67cc880e3e73bb506">vel_w_i</a> * <a class="code" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">Hasher::num_gridcells_</a> * <a class="code" href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">Hasher::num_orientations_</a></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        * <a class="code" href="structlattice__planner_1_1Hasher.html#ae6ab3dbf64e24552eb3908d3e8152553">Hasher::num_vels_x_</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">   95</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">num_gridcells_</a>; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">   96</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">num_orientations_</a>; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#ae6ab3dbf64e24552eb3908d3e8152553">   97</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="structlattice__planner_1_1Hasher.html#ae6ab3dbf64e24552eb3908d3e8152553">num_vels_x_</a>; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="structlattice__planner_1_1Hasher.html#aa2741fde4432297c2ce8d92a04a01aa3">   98</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="structlattice__planner_1_1Hasher.html#aa2741fde4432297c2ce8d92a04a01aa3">num_vels_w_</a>; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">//namespace lattice_planner</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html">lattice_planner::DiscreteState</a></div><div class="ttdoc">Data container for the discrete representation of a planning state</div><div class="ttdef"><b>Definition:</b> discrete_state.h:47</div></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html_a3b58388a5b058125945d6c4b3e00c72a"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html#a3b58388a5b058125945d6c4b3e00c72a">lattice_planner::DiscreteState::vel_x_i</a></div><div class="ttdeci">unsigned int vel_x_i</div><div class="ttdoc">discrete forward velocity</div><div class="ttdef"><b>Definition:</b> discrete_state.h:144</div></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html_a3f3cc72eaddcb38fa902ff480c099e5c"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html#a3f3cc72eaddcb38fa902ff480c099e5c">lattice_planner::DiscreteState::grid_cell</a></div><div class="ttdeci">unsigned int grid_cell</div><div class="ttdoc">corresponding map index of a state</div><div class="ttdef"><b>Definition:</b> discrete_state.h:139</div></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html_a5226ede4e868c3161fd155cc80936b34"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html#a5226ede4e868c3161fd155cc80936b34">lattice_planner::DiscreteState::angle_i</a></div><div class="ttdeci">unsigned int angle_i</div><div class="ttdoc">discrete angle</div><div class="ttdef"><b>Definition:</b> discrete_state.h:142</div></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html_a7efa6dcf169c05e67cc880e3e73bb506"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html#a7efa6dcf169c05e67cc880e3e73bb506">lattice_planner::DiscreteState::vel_w_i</a></div><div class="ttdeci">unsigned int vel_w_i</div><div class="ttdoc">discrete angular velocity</div><div class="ttdef"><b>Definition:</b> discrete_state.h:145</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html">lattice_planner::Hasher</a></div><div class="ttdoc">provides methods to generate unique hash values (keys) for DiscreteState objects</div><div class="ttdef"><b>Definition:</b> hasher.h:48</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_a20b9d3a319e9732cafaf9f5d6ea85f9f"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#a20b9d3a319e9732cafaf9f5d6ea85f9f">lattice_planner::Hasher::setLimits</a></div><div class="ttdeci">static void setLimits(int num_gridcells, int num_orientations, int num_vels_x, int num_vels_w)</div><div class="ttdoc">setLimits set the limits for the properties of the DiscreteState objects to generate unique hashes</div><div class="ttdef"><b>Definition:</b> hasher.h:69</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_a38316033eba48234f62b6c192c161337"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#a38316033eba48234f62b6c192c161337">lattice_planner::Hasher::operator()</a></div><div class="ttdeci">std::size_t operator()(const DiscreteState &amp;index) const</div><div class="ttdoc">function operator to create a hash value from a DiscreteState object</div><div class="ttdef"><b>Definition:</b> hasher.h:55</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_a3c44a184acab6ff89e0c33906ea13be7"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#a3c44a184acab6ff89e0c33906ea13be7">lattice_planner::Hasher::getHash</a></div><div class="ttdeci">static size_t getHash(const DiscreteState &amp;index)</div><div class="ttdoc">generate a (unique) hash value from a DiscreteState object</div><div class="ttdef"><b>Definition:</b> hasher.h:84</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_a5fcbf88c6e74f511cb383a3d349ec240"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#a5fcbf88c6e74f511cb383a3d349ec240">lattice_planner::Hasher::num_orientations_</a></div><div class="ttdeci">static int num_orientations_</div><div class="ttdoc">total number of allowed discrete angles</div><div class="ttdef"><b>Definition:</b> hasher.h:96</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_a67dd52250443d66433faa62192236c58"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#a67dd52250443d66433faa62192236c58">lattice_planner::Hasher::num_gridcells_</a></div><div class="ttdeci">static int num_gridcells_</div><div class="ttdoc">total number of grid cells in the map</div><div class="ttdef"><b>Definition:</b> hasher.h:95</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_aa2741fde4432297c2ce8d92a04a01aa3"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#aa2741fde4432297c2ce8d92a04a01aa3">lattice_planner::Hasher::num_vels_w_</a></div><div class="ttdeci">static int num_vels_w_</div><div class="ttdoc">total number of allowed discrete angular velocities</div><div class="ttdef"><b>Definition:</b> hasher.h:98</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Hasher_html_ae6ab3dbf64e24552eb3908d3e8152553"><div class="ttname"><a href="structlattice__planner_1_1Hasher.html#ae6ab3dbf64e24552eb3908d3e8152553">lattice_planner::Hasher::num_vels_x_</a></div><div class="ttdeci">static int num_vels_x_</div><div class="ttdoc">total number of allowed discrete forward velocities</div><div class="ttdef"><b>Definition:</b> hasher.h:97</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: include/teb_local_planner/planner_interface.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d24ca4bd67b87562381dd0f2e8dc09d1.html">teb_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">planner_interface.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef PLANNER_INTERFACE_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define PLANNER_INTERFACE_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// boost</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// ros</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;tf/transform_datatypes.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/costmap_model.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// this package</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/pose_se2.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// messages</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseArray.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/TwistStamped.h&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1PlannerInterface.html">PlannerInterface</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#af6e3288fc97b1b54847e47f171575def">   73</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#af6e3288fc97b1b54847e47f171575def">PlannerInterface</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }  </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#ad1abeab53bae39232c51b902c357e2c0">   79</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#ad1abeab53bae39232c51b902c357e2c0">~PlannerInterface</a>()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#aad7ea1d2454b0bc23db0082df85c99de">   98</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#aad7ea1d2454b0bc23db0082df85c99de">plan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; initial_plan, <span class="keyword">const</span> geometry_msgs::Twist* start_vel = NULL, <span class="keywordtype">bool</span> free_goal_vel=<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#a35f325b8dd40da1fd8cce699550bf8a2">  111</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#a35f325b8dd40da1fd8cce699550bf8a2">plan</a>(<span class="keyword">const</span> tf::Pose&amp; start, <span class="keyword">const</span> tf::Pose&amp; goal, <span class="keyword">const</span> geometry_msgs::Twist* start_vel = NULL, <span class="keywordtype">bool</span> free_goal_vel=<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#ade0509d13cf81df5ad503987ce0ab2cd">  124</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#ade0509d13cf81df5ad503987ce0ab2cd">plan</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; start, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; goal, <span class="keyword">const</span> geometry_msgs::Twist* start_vel = NULL, <span class="keywordtype">bool</span> free_goal_vel=<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  </div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#afcaba6e2a81b5a9ff4c0103ca73c1d66">  135</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#afcaba6e2a81b5a9ff4c0103ca73c1d66">getVelocityCommand</a>(<span class="keywordtype">double</span>&amp; vx, <span class="keywordtype">double</span>&amp; vy, <span class="keywordtype">double</span>&amp; omega, <span class="keywordtype">int</span> look_ahead_poses) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#aab4b2a774a41d5d98a6eed6bdde81298">  143</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#aab4b2a774a41d5d98a6eed6bdde81298">clearPlanner</a>() = 0;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#a0df0a82d50a58e7e42ed3e27f5a3b382">  153</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#a0df0a82d50a58e7e42ed3e27f5a3b382">setPreferredTurningDir</a>(RotType dir) {ROS_WARN(<span class="stringliteral">&quot;setPreferredTurningDir() not implemented for this planner.&quot;</span>);}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#afeeda8f566d59ee83c02077d2ff6c241">  159</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#afeeda8f566d59ee83c02077d2ff6c241">visualize</a>()</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#a6c0c90babc218d68f88135335e3019f6">  176</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#a6c0c90babc218d68f88135335e3019f6">isTrajectoryFeasible</a>(base_local_planner::CostmapModel* costmap_model, <span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; footprint_spec,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">double</span> inscribed_radius = 0.0, <span class="keywordtype">double</span> circumscribed_radius=0.0, <span class="keywordtype">int</span> look_ahead_idx=-1) = 0;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PlannerInterface.html#a62971a56c686fad9b139790cca52d0ff">  186</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PlannerInterface.html#a62971a56c686fad9b139790cca52d0ff">computeCurrentCost</a>(std::vector&lt;double&gt;&amp; cost, <span class="keywordtype">double</span> obst_cost_scale=1.0, <span class="keywordtype">bool</span> alternative_time_cost=<span class="keyword">false</span>)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }      </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;PlannerInterface&gt; PlannerInterfacePtr;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} <span class="comment">// namespace teb_local_planner</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PLANNER_INTERFACE_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html">teb_local_planner::PlannerInterface</a></div><div class="ttdoc">This abstract class defines an interface for local planners</div><div class="ttdef"><b>Definition:</b> planner_interface.h:67</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_a0df0a82d50a58e7e42ed3e27f5a3b382"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#a0df0a82d50a58e7e42ed3e27f5a3b382">teb_local_planner::PlannerInterface::setPreferredTurningDir</a></div><div class="ttdeci">virtual void setPreferredTurningDir(RotType dir)</div><div class="ttdoc">Prefer a desired initial turning direction (by penalizing the opposing one)</div><div class="ttdef"><b>Definition:</b> planner_interface.h:153</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_a35f325b8dd40da1fd8cce699550bf8a2"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#a35f325b8dd40da1fd8cce699550bf8a2">teb_local_planner::PlannerInterface::plan</a></div><div class="ttdeci">virtual bool plan(const tf::Pose &amp;start, const tf::Pose &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)=0</div><div class="ttdoc">Plan a trajectory between a given start and goal pose (tf::Pose version).</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_a62971a56c686fad9b139790cca52d0ff"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#a62971a56c686fad9b139790cca52d0ff">teb_local_planner::PlannerInterface::computeCurrentCost</a></div><div class="ttdeci">virtual void computeCurrentCost(std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, bool alternative_time_cost=false)</div><div class="ttdef"><b>Definition:</b> planner_interface.h:186</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_a6c0c90babc218d68f88135335e3019f6"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#a6c0c90babc218d68f88135335e3019f6">teb_local_planner::PlannerInterface::isTrajectoryFeasible</a></div><div class="ttdeci">virtual bool isTrajectoryFeasible(base_local_planner::CostmapModel *costmap_model, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0, int look_ahead_idx=-1)=0</div><div class="ttdoc">Check whether the planned trajectory is feasible or not.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_aab4b2a774a41d5d98a6eed6bdde81298"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#aab4b2a774a41d5d98a6eed6bdde81298">teb_local_planner::PlannerInterface::clearPlanner</a></div><div class="ttdeci">virtual void clearPlanner()=0</div><div class="ttdoc">Reset the planner.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_aad7ea1d2454b0bc23db0082df85c99de"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#aad7ea1d2454b0bc23db0082df85c99de">teb_local_planner::PlannerInterface::plan</a></div><div class="ttdeci">virtual bool plan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)=0</div><div class="ttdoc">Plan a trajectory based on an initial reference plan.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_ad1abeab53bae39232c51b902c357e2c0"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#ad1abeab53bae39232c51b902c357e2c0">teb_local_planner::PlannerInterface::~PlannerInterface</a></div><div class="ttdeci">virtual ~PlannerInterface()</div><div class="ttdoc">Virtual destructor.</div><div class="ttdef"><b>Definition:</b> planner_interface.h:79</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_ade0509d13cf81df5ad503987ce0ab2cd"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#ade0509d13cf81df5ad503987ce0ab2cd">teb_local_planner::PlannerInterface::plan</a></div><div class="ttdeci">virtual bool plan(const PoseSE2 &amp;start, const PoseSE2 &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)=0</div><div class="ttdoc">Plan a trajectory between a given start and goal pose.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_af6e3288fc97b1b54847e47f171575def"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#af6e3288fc97b1b54847e47f171575def">teb_local_planner::PlannerInterface::PlannerInterface</a></div><div class="ttdeci">PlannerInterface()</div><div class="ttdoc">Default constructor</div><div class="ttdef"><b>Definition:</b> planner_interface.h:73</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_afcaba6e2a81b5a9ff4c0103ca73c1d66"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#afcaba6e2a81b5a9ff4c0103ca73c1d66">teb_local_planner::PlannerInterface::getVelocityCommand</a></div><div class="ttdeci">virtual bool getVelocityCommand(double &amp;vx, double &amp;vy, double &amp;omega, int look_ahead_poses) const =0</div><div class="ttdoc">Get the velocity command from a previously optimized plan to control the robot at the current samplin...</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PlannerInterface_html_afeeda8f566d59ee83c02077d2ff6c241"><div class="ttname"><a href="classteb__local__planner_1_1PlannerInterface.html#afeeda8f566d59ee83c02077d2ff6c241">teb_local_planner::PlannerInterface::visualize</a></div><div class="ttdeci">virtual void visualize()</div><div class="ttdoc">Visualize planner specific stuff. Overwrite this method to provide an interface to perform all planne...</div><div class="ttdef"><b>Definition:</b> planner_interface.h:159</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html">teb_local_planner::PoseSE2</a></div><div class="ttdoc">This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:59</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

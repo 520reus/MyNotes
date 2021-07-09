@@ -1,0 +1,111 @@
+\hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Inflated\+Obstacle类 参考}
+\label{classteb__local__planner_1_1EdgeInflatedObstacle}\index{teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}}
+
+
+Edge defining the cost function for keeping a minimum distance from inflated obstacles.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+obstacle.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Inflated\+Obstacle 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeInflatedObstacle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_a30309cdd2ca7dbfab271f991db8b421a}\label{classteb__local__planner_1_1EdgeInflatedObstacle_a30309cdd2ca7dbfab271f991db8b421a}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a30309cdd2ca7dbfab271f991db8b421a}{Edge\+Inflated\+Obstacle}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_a244988c06ec5fd189b4b42437be093ce}\label{classteb__local__planner_1_1EdgeInflatedObstacle_a244988c06ec5fd189b4b42437be093ce}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a244988c06ec5fd189b4b42437be093ce}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a790ca0497db9cdd3f2e69c4975855e83}{set\+Obstacle}} (const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle)
+\begin{DoxyCompactList}\small\item\em Set pointer to associated obstacle for the underlying cost function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a72a57ce2af45062f116037790a03f354}{set\+Robot\+Model}} (const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} $\ast$robot\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Set pointer to the robot model \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a258617325cf713ec4de573b4c9b8613a}{set\+Parameters}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} $\ast$robot\+\_\+model, const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle)
+\begin{DoxyCompactList}\small\item\em Set all parameters at once \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_aa463c902cbb7f5563ffb67a17b9c9445}\label{classteb__local__planner_1_1EdgeInflatedObstacle_aa463c902cbb7f5563ffb67a17b9c9445}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_aa463c902cbb7f5563ffb67a17b9c9445}{robot\+\_\+model\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store pointer to robot\+\_\+model \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for keeping a minimum distance from inflated obstacles. 
+
+The edge depends on a single vertex $ \mathbf{s}_i $ and minimizes\+: ~\newline
+ $ \min \textrm{penaltyBelow}( dist2point, min_obstacle_dist ) \cdot weight_inflation $. ~\newline
+Additional, a second penalty is provided with ~\newline
+ $ \min \textrm{penaltyBelow}( dist2point, inflation_dist ) \cdot weight_inflation $. It is assumed that inflation\+\_\+dist $>$ min\+\_\+obstacle\+\_\+dist and weight\+\_\+inflation $<$$<$ weight\+\_\+inflation. {\itshape dist2point} denotes the minimum distance to the point obstacle. ~\newline
+{\itshape penalty\+Below} denotes the penalty function, see penalty\+Bound\+From\+Below() ~\newline
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a65977ce4df05c24315742b9486cfc6b0}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Obstacles}}, Teb\+Optimal\+Planner\+::\+Edge\+Obstacle 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a7be295bcbe7ad6ef8dcaefe11aa1be3f}{set\+Teb\+Config()}} and \mbox{\hyperlink{classteb__local__planner_1_1EdgeInflatedObstacle_a790ca0497db9cdd3f2e69c4975855e83}{set\+Obstacle()}} 
+\end{DoxyRemark}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_a790ca0497db9cdd3f2e69c4975855e83}\label{classteb__local__planner_1_1EdgeInflatedObstacle_a790ca0497db9cdd3f2e69c4975855e83}} 
+\index{teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}!setObstacle@{setObstacle}}
+\index{setObstacle@{setObstacle}!teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}}
+\doxysubsubsection{\texorpdfstring{setObstacle()}{setObstacle()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Inflated\+Obstacle\+::set\+Obstacle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pointer to associated obstacle for the underlying cost function 
+
+
+\begin{DoxyParams}{参数}
+{\em obstacle} & 2D position vector containing the position of the obstacle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_a258617325cf713ec4de573b4c9b8613a}\label{classteb__local__planner_1_1EdgeInflatedObstacle_a258617325cf713ec4de573b4c9b8613a}} 
+\index{teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}}
+\doxysubsubsection{\texorpdfstring{setParameters()}{setParameters()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Inflated\+Obstacle\+::set\+Parameters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} $\ast$}]{robot\+\_\+model,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set all parameters at once 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class \\
+\hline
+{\em robot\+\_\+model} & Robot model required for distance calculation \\
+\hline
+{\em obstacle} & 2D position vector containing the position of the obstacle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeInflatedObstacle_a72a57ce2af45062f116037790a03f354}\label{classteb__local__planner_1_1EdgeInflatedObstacle_a72a57ce2af45062f116037790a03f354}} 
+\index{teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}!setRobotModel@{setRobotModel}}
+\index{setRobotModel@{setRobotModel}!teb\_local\_planner::EdgeInflatedObstacle@{teb\_local\_planner::EdgeInflatedObstacle}}
+\doxysubsubsection{\texorpdfstring{setRobotModel()}{setRobotModel()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Inflated\+Obstacle\+::set\+Robot\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel}{Base\+Robot\+Footprint\+Model}} $\ast$}]{robot\+\_\+model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pointer to the robot model 
+
+
+\begin{DoxyParams}{参数}
+{\em robot\+\_\+model} & Robot model required for distance calculation \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+obstacle.\+h\end{DoxyCompactItemize}

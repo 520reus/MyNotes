@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wu/catkin_test_ws/src/fortest/include/curve1d/curve1d.h
+string
+-
+
+/home/wu/catkin_test_ws/src/fortest/include/curve1d/polynomial_curve1d.h
+curve1d.h
+/home/wu/catkin_test_ws/src/fortest/include/curve1d/curve1d.h
+
+/home/wu/catkin_test_ws/src/fortest/include/curve1d/quintic_polynomial_curve1d.h
+array
+-
+string
+-
+polynomial_curve1d.h
+/home/wu/catkin_test_ws/src/fortest/include/curve1d/polynomial_curve1d.h
+
+/home/wu/catkin_test_ws/src/fortest/src/curve1d/quintic_polynomial_curve1d.cpp
+quintic_polynomial_curve1d.h
+/home/wu/catkin_test_ws/src/fortest/src/curve1d/quintic_polynomial_curve1d.h
+

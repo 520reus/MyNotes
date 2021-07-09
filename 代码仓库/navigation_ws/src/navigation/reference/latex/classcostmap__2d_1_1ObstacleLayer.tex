@@ -1,0 +1,279 @@
+\hypertarget{classcostmap__2d_1_1ObstacleLayer}{}\doxysection{costmap\+\_\+2d\+::Obstacle\+Layer类 参考}
+\label{classcostmap__2d_1_1ObstacleLayer}\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+类 costmap\+\_\+2d\+::Obstacle\+Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcostmap__2d_1_1ObstacleLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_afa8dfe916a99f404d60883e0537d1c30}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of initialize(). Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a864faf45bfefe8cd22aaf8ddc4218be6}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ac1bcaec104c1783d52eabf7d3823f6b9}\label{classcostmap__2d_1_1ObstacleLayer_ac1bcaec104c1783d52eabf7d3823f6b9}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ac1bcaec104c1783d52eabf7d3823f6b9}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a531273c0085ff3bd5d2b6c60d5e904f5}\label{classcostmap__2d_1_1ObstacleLayer_a531273c0085ff3bd5d2b6c60d5e904f5}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a531273c0085ff3bd5d2b6c60d5e904f5}{activate}} ()
+\begin{DoxyCompactList}\small\item\em Restart publishers if they\textquotesingle{}ve been stopped. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a7b7e7dc908b095225fc1ab80d296d561}\label{classcostmap__2d_1_1ObstacleLayer_a7b7e7dc908b095225fc1ab80d296d561}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a7b7e7dc908b095225fc1ab80d296d561}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Stop publishers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a80699639dba52f5d4ab0f3b85f7e7aa8}\label{classcostmap__2d_1_1ObstacleLayer_a80699639dba52f5d4ab0f3b85f7e7aa8}} 
+virtual void {\bfseries reset} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_adf9bf6f5d231ae52d012320dd18fe047}{laser\+Scan\+Callback}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em A callback to handle buffering Laser\+Scan messages \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ae83ee29b89e126ffbfb477aff5fafe92}{laser\+Scan\+Valid\+Inf\+Callback}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em A callback to handle buffering Laser\+Scan messages which need filtering to turn Inf values into range\+\_\+max. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_acad6bfccd40caba4e3357e7b48981c2a}{point\+Cloud\+Callback}} (const sensor\+\_\+msgs\+::\+Point\+Cloud\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em A callback to handle buffering Point\+Cloud messages \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_aa8d27200c8f888b3bda5c4fc087f59a9}{point\+Cloud2\+Callback}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em A callback to handle buffering Point\+Cloud2 messages \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ac835aba4f43e4c8a2a8ed66c97899b5f}\label{classcostmap__2d_1_1ObstacleLayer_ac835aba4f43e4c8a2a8ed66c97899b5f}} 
+void {\bfseries add\+Static\+Observation} (\mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} \&obs, bool marking, bool clearing)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a46aa43c6240307253b9bf9377f5e6969}\label{classcostmap__2d_1_1ObstacleLayer_a46aa43c6240307253b9bf9377f5e6969}} 
+void {\bfseries clear\+Static\+Observations} (bool marking, bool clearing)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a9aaadff96affd0f6fc6981f2b552c003}\label{classcostmap__2d_1_1ObstacleLayer_a9aaadff96affd0f6fc6981f2b552c003}} 
+virtual void {\bfseries setup\+Dynamic\+Reconfigure} (ros\+::\+Node\+Handle \&nh)
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ad697514e2077c33ec3e50ed7ef661d19}{get\+Marking\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&marking\+\_\+observations) const
+\begin{DoxyCompactList}\small\item\em Get the observations used to mark space \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ac36f129eecc398e3fd4c235078be29e4}{get\+Clearing\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&clearing\+\_\+observations) const
+\begin{DoxyCompactList}\small\item\em Get the observations used to clear space \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a0312369a5c0031f8eabb24fad0a79c73}{raytrace\+Freespace}} (const \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} \&clearing\+\_\+observation, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Clear freespace based on one observation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_aadace7301e7b08f358ea3e9e8a17f452}\label{classcostmap__2d_1_1ObstacleLayer_aadace7301e7b08f358ea3e9e8a17f452}} 
+void {\bfseries update\+Raytrace\+Bounds} (double ox, double oy, double wx, double wy, double range, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ac81261d46ebc829ca1d747c024a00603}\label{classcostmap__2d_1_1ObstacleLayer_ac81261d46ebc829ca1d747c024a00603}} 
+void {\bfseries update\+Footprint} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a1a6a5dfdeaf6318a5ce08289a8416295}\label{classcostmap__2d_1_1ObstacleLayer_a1a6a5dfdeaf6318a5ce08289a8416295}} 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ {\bfseries transformed\+\_\+footprint\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ae2eef96b7091abd5e2df3902ffb0ac29}\label{classcostmap__2d_1_1ObstacleLayer_ae2eef96b7091abd5e2df3902ffb0ac29}} 
+bool {\bfseries footprint\+\_\+clearing\+\_\+enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ace3e2a9b2ded21743140a558a47bc54c}\label{classcostmap__2d_1_1ObstacleLayer_ace3e2a9b2ded21743140a558a47bc54c}} 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ace3e2a9b2ded21743140a558a47bc54c}{global\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The global frame for the costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ad3c33d01e6f8c73a73a0c34140b88fd9}\label{classcostmap__2d_1_1ObstacleLayer_ad3c33d01e6f8c73a73a0c34140b88fd9}} 
+double \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ad3c33d01e6f8c73a73a0c34140b88fd9}{max\+\_\+obstacle\+\_\+height\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Max Obstacle Height \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a04fe55b7286265ff543ad52b0b327642}\label{classcostmap__2d_1_1ObstacleLayer_a04fe55b7286265ff543ad52b0b327642}} 
+laser\+\_\+geometry\+::\+Laser\+Projection \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a04fe55b7286265ff543ad52b0b327642}{projector\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to project laser scans into point clouds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ad5128763fa389b51ef1e0b70765901b8}\label{classcostmap__2d_1_1ObstacleLayer_ad5128763fa389b51ef1e0b70765901b8}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ message\+\_\+filters\+::\+Subscriber\+Base $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_ad5128763fa389b51ef1e0b70765901b8}{observation\+\_\+subscribers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used for the observation message filters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a7a1721eda53cf4e9e0446b61f197a7e6}\label{classcostmap__2d_1_1ObstacleLayer_a7a1721eda53cf4e9e0446b61f197a7e6}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Message\+Filter\+Base $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a7a1721eda53cf4e9e0446b61f197a7e6}{observation\+\_\+notifiers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to make sure that transforms are available for each sensor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a0374c0cca8722ad5e03612cd8ddaef63}\label{classcostmap__2d_1_1ObstacleLayer_a0374c0cca8722ad5e03612cd8ddaef63}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a0374c0cca8722ad5e03612cd8ddaef63}{observation\+\_\+buffers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to store observations from various sensors \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_aa29c6e8de64c83c5cada0a51a07fa12e}\label{classcostmap__2d_1_1ObstacleLayer_aa29c6e8de64c83c5cada0a51a07fa12e}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_aa29c6e8de64c83c5cada0a51a07fa12e}{marking\+\_\+buffers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to store observation buffers used for marking obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_acf2875689509edd4c22032b46d6d5a96}\label{classcostmap__2d_1_1ObstacleLayer_acf2875689509edd4c22032b46d6d5a96}} 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_acf2875689509edd4c22032b46d6d5a96}{clearing\+\_\+buffers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to store observation buffers used for clearing obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a95578ec2f3218aeebe2e95c3088256ca}\label{classcostmap__2d_1_1ObstacleLayer_a95578ec2f3218aeebe2e95c3088256ca}} 
+std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ {\bfseries static\+\_\+clearing\+\_\+observations\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a25b798557229f62414d59663b392ea08}\label{classcostmap__2d_1_1ObstacleLayer_a25b798557229f62414d59663b392ea08}} 
+std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ {\bfseries static\+\_\+marking\+\_\+observations\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a55c8ebe46b6d32861819d244fa55d18c}\label{classcostmap__2d_1_1ObstacleLayer_a55c8ebe46b6d32861819d244fa55d18c}} 
+bool {\bfseries rolling\+\_\+window\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a78167cc2c7d1ea1ea46a96de5870a1a2}\label{classcostmap__2d_1_1ObstacleLayer_a78167cc2c7d1ea1ea46a96de5870a1a2}} 
+dynamic\+\_\+reconfigure\+::\+Server$<$ costmap\+\_\+2d\+::\+Obstacle\+Plugin\+Config $>$ $\ast$ {\bfseries dsrv\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a5409807e0d5da47a5594b6558eb86e35}\label{classcostmap__2d_1_1ObstacleLayer_a5409807e0d5da47a5594b6558eb86e35}} 
+int {\bfseries combination\+\_\+method\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ac36f129eecc398e3fd4c235078be29e4}\label{classcostmap__2d_1_1ObstacleLayer_ac36f129eecc398e3fd4c235078be29e4}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!getClearingObservations@{getClearingObservations}}
+\index{getClearingObservations@{getClearingObservations}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{getClearingObservations()}{getClearingObservations()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::get\+Clearing\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&}]{clearing\+\_\+observations }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the observations used to clear space 
+
+
+\begin{DoxyParams}{参数}
+{\em clearing\+\_\+observations} & A reference to a vector that will be populated with the observations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if all the observation buffers are current, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ad697514e2077c33ec3e50ed7ef661d19}\label{classcostmap__2d_1_1ObstacleLayer_ad697514e2077c33ec3e50ed7ef661d19}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!getMarkingObservations@{getMarkingObservations}}
+\index{getMarkingObservations@{getMarkingObservations}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{getMarkingObservations()}{getMarkingObservations()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::get\+Marking\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&}]{marking\+\_\+observations }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the observations used to mark space 
+
+
+\begin{DoxyParams}{参数}
+{\em marking\+\_\+observations} & A reference to a vector that will be populated with the observations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if all the observation buffers are current, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_adf9bf6f5d231ae52d012320dd18fe047}\label{classcostmap__2d_1_1ObstacleLayer_adf9bf6f5d231ae52d012320dd18fe047}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!laserScanCallback@{laserScanCallback}}
+\index{laserScanCallback@{laserScanCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{laserScanCallback()}{laserScanCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::laser\+Scan\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+A callback to handle buffering Laser\+Scan messages 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_ae83ee29b89e126ffbfb477aff5fafe92}\label{classcostmap__2d_1_1ObstacleLayer_ae83ee29b89e126ffbfb477aff5fafe92}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!laserScanValidInfCallback@{laserScanValidInfCallback}}
+\index{laserScanValidInfCallback@{laserScanValidInfCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{laserScanValidInfCallback()}{laserScanValidInfCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::laser\+Scan\+Valid\+Inf\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+A callback to handle buffering Laser\+Scan messages which need filtering to turn Inf values into range\+\_\+max. 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_afa8dfe916a99f404d60883e0537d1c30}\label{classcostmap__2d_1_1ObstacleLayer_afa8dfe916a99f404d60883e0537d1c30}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of initialize(). Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_a0263cac691c382ac738ca0ea5b8280e2}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_aa8d27200c8f888b3bda5c4fc087f59a9}\label{classcostmap__2d_1_1ObstacleLayer_aa8d27200c8f888b3bda5c4fc087f59a9}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!pointCloud2Callback@{pointCloud2Callback}}
+\index{pointCloud2Callback@{pointCloud2Callback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{pointCloud2Callback()}{pointCloud2Callback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::point\+Cloud2\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+A callback to handle buffering Point\+Cloud2 messages 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_acad6bfccd40caba4e3357e7b48981c2a}\label{classcostmap__2d_1_1ObstacleLayer_acad6bfccd40caba4e3357e7b48981c2a}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!pointCloudCallback@{pointCloudCallback}}
+\index{pointCloudCallback@{pointCloudCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{pointCloudCallback()}{pointCloudCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::point\+Cloud\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+A callback to handle buffering Point\+Cloud messages 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a0312369a5c0031f8eabb24fad0a79c73}\label{classcostmap__2d_1_1ObstacleLayer_a0312369a5c0031f8eabb24fad0a79c73}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!raytraceFreespace@{raytraceFreespace}}
+\index{raytraceFreespace@{raytraceFreespace}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{raytraceFreespace()}{raytraceFreespace()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::raytrace\+Freespace (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} \&}]{clearing\+\_\+observation,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Clear freespace based on one observation 
+
+
+\begin{DoxyParams}{参数}
+{\em clearing\+\_\+observation} & The observation used to raytrace \\
+\hline
+{\em min\+\_\+x} & \\
+\hline
+{\em min\+\_\+y} & \\
+\hline
+{\em max\+\_\+x} & \\
+\hline
+{\em max\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1ObstacleLayer_a864faf45bfefe8cd22aaf8ddc4218be6}\label{classcostmap__2d_1_1ObstacleLayer_a864faf45bfefe8cd22aaf8ddc4218be6}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_ac455c1c2ca05e9112242b9d822351ac0}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/obstacle\+\_\+layer.\+h\end{DoxyCompactItemize}

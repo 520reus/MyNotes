@@ -1,0 +1,52 @@
+\hypertarget{classbase__local__planner_1_1TrajectorySearch}{}\doxysection{base\+\_\+local\+\_\+planner\+::Trajectory\+Search类 参考}
+\label{classbase__local__planner_1_1TrajectorySearch}\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+
+
+Interface for modules finding a trajectory to use for navigation commands next  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+search.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Trajectory\+Search 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1TrajectorySearch}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectorySearch_a75fd0f1e0c72b6ba6f6edabe569e8271}{find\+Best\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} $>$ $\ast$all\+\_\+explored)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Interface for modules finding a trajectory to use for navigation commands next 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectorySearch_a75fd0f1e0c72b6ba6f6edabe569e8271}\label{classbase__local__planner_1_1TrajectorySearch_a75fd0f1e0c72b6ba6f6edabe569e8271}} 
+\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}!findBestTrajectory@{findBestTrajectory}}
+\index{findBestTrajectory@{findBestTrajectory}!base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+\doxysubsubsection{\texorpdfstring{findBestTrajectory()}{findBestTrajectory()}}
+{\footnotesize\ttfamily virtual bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search\+::find\+Best\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} $>$ $\ast$}]{all\+\_\+explored }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+searches the space of allowed trajectory and returns one considered the optimal given the constraints of the particular search.
+
+
+\begin{DoxyParams}{参数}
+{\em traj} & The container to write the result to \\
+\hline
+{\em all\+\_\+explored} & pass NULL or a container to collect all trajectories for debugging (has a penalty) \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classbase__local__planner_1_1SimpleScoredSamplingPlanner_ad1a365b0504879a2e57f1a9d713acdc4}{base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/trajectory\+\_\+search.\+h\end{DoxyCompactItemize}

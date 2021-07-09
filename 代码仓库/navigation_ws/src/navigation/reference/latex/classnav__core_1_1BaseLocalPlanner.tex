@@ -1,0 +1,126 @@
+\hypertarget{classnav__core_1_1BaseLocalPlanner}{}\doxysection{nav\+\_\+core\+::Base\+Local\+Planner类 参考}
+\label{classnav__core_1_1BaseLocalPlanner}\index{nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}}
+
+
+Provides an interface for local planners used in navigation. All local planners written as plugins for the navigation stack must adhere to this interface.  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+local\+\_\+planner.\+h$>$}
+
+类 nav\+\_\+core\+::Base\+Local\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.408805cm]{classnav__core_1_1BaseLocalPlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_aa02dad5e3be910ae7d5159b7a53c0188}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)=0
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a27b2312d3218496be06a298767b26716}{is\+Goal\+Reached}} ()=0
+\begin{DoxyCompactList}\small\item\em Check if the goal pose has been achieved by the local planner \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_ac30adc27a5c123f129ef7046ffbb0f3e}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)=0
+\begin{DoxyCompactList}\small\item\em Set the plan that the local planner is following \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a488521ac3d0ff67000aed87ab3fea84b}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)=0
+\begin{DoxyCompactList}\small\item\em Constructs the local planner \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnav__core_1_1BaseLocalPlanner_ad5526e4d50be56e27bf5a11a2c177453}\label{classnav__core_1_1BaseLocalPlanner_ad5526e4d50be56e27bf5a11a2c177453}} 
+virtual \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_ad5526e4d50be56e27bf5a11a2c177453}{$\sim$\+Base\+Local\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides an interface for local planners used in navigation. All local planners written as plugins for the navigation stack must adhere to this interface. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnav__core_1_1BaseLocalPlanner_aa02dad5e3be910ae7d5159b7a53c0188}\label{classnav__core_1_1BaseLocalPlanner_aa02dad5e3be910ae7d5159b7a53c0188}} 
+\index{nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}}
+{\footnotesize\ttfamily virtual bool nav\+\_\+core\+::\+Base\+Local\+Planner\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid velocity command was found, false otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7b303000c90b6b314e6a312aa6c8d5c8}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS}}, \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a700178e32159b614d328326b6ba5f8b0}{dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS}} , 以及 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_adb2d96332da31a154db84930754409af}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1BaseLocalPlanner_a488521ac3d0ff67000aed87ab3fea84b}\label{classnav__core_1_1BaseLocalPlanner_a488521ac3d0ff67000aed87ab3fea84b}} 
+\index{nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void nav\+\_\+core\+::\+Base\+Local\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Constructs the local planner 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to give this instance of the local planner \\
+\hline
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em costmap\+\_\+ros} & The cost map to use for assigning costs to local plans \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a14c42d9f2840e1a78e74cbe8a3cc5b40}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS}}, \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a61c4737a8e5eb82f4c2407326e411d85}{dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS}} , 以及 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a9a758c9bd9cb0202ed06c07c5aa49c03}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1BaseLocalPlanner_a27b2312d3218496be06a298767b26716}\label{classnav__core_1_1BaseLocalPlanner_a27b2312d3218496be06a298767b26716}} 
+\index{nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily virtual bool nav\+\_\+core\+::\+Base\+Local\+Planner\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the goal pose has been achieved by the local planner 
+
+\begin{DoxyReturn}{返回}
+True if achieved, false otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ae7fe90aa17f7042d8a29b5340da80455}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS}}, \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a847c1877d967acd515d7ddf1ac246941}{dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS}} , 以及 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a5196b75a728ab7c37d6bdd99faa7b541}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1BaseLocalPlanner_ac30adc27a5c123f129ef7046ffbb0f3e}\label{classnav__core_1_1BaseLocalPlanner_ac30adc27a5c123f129ef7046ffbb0f3e}} 
+\index{nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!nav\_core::BaseLocalPlanner@{nav\_core::BaseLocalPlanner}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily virtual bool nav\+\_\+core\+::\+Base\+Local\+Planner\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the plan that the local planner is following 
+
+
+\begin{DoxyParams}{参数}
+{\em plan} & The plan to pass to the local planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the plan was updated successfully, false otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_addfffa93ebc72c920adfb495723a4973}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS}}, \mbox{\hyperlink{classdwa__local__planner_1_1DWAPlannerROS_a0cfcf517c3112678a7eabeb498d9b2ce}{dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS}} , 以及 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_af3a0c8be5746b1e1d8657f6b867ea934}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+nav\+\_\+core/include/nav\+\_\+core/base\+\_\+local\+\_\+planner.\+h\end{DoxyCompactItemize}

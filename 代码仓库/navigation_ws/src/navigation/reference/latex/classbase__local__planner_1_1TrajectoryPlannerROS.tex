@@ -1,0 +1,211 @@
+\hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS}{}\doxysection{base\+\_\+local\+\_\+planner\+::Trajectory\+Planner\+ROS类 参考}
+\label{classbase__local__planner_1_1TrajectoryPlannerROS}\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+
+
+A ROS wrapper for the trajectory controller that queries the param server to construct a controller  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+planner\+\_\+ros.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Trajectory\+Planner\+ROS 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1TrajectoryPlannerROS}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a3b6817c8d9f2a49b00ccdda3bc166548}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a3b6817c8d9f2a49b00ccdda3bc166548}} 
+\mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a3b6817c8d9f2a49b00ccdda3bc166548}{Trajectory\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the ros wrapper \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a0ea81ba7bfd31aaa999477ae8f9e0d0f}{Trajectory\+Planner\+ROS}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Constructs the ros wrapper \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a9a758c9bd9cb0202ed06c07c5aa49c03}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Constructs the ros wrapper \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a79384acb51a894dbcec4447bee1ca90f}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a79384acb51a894dbcec4447bee1ca90f}} 
+\mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a79384acb51a894dbcec4447bee1ca90f}{$\sim$\+Trajectory\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the wrapper \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_adb2d96332da31a154db84930754409af}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_af3a0c8be5746b1e1d8657f6b867ea934}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Set the plan that the controller is following \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a5196b75a728ab7c37d6bdd99faa7b541}{is\+Goal\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em Check if the goal pose has been achieved \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a9155bebb3d073ae4b19b8d0da87478a6}{check\+Trajectory}} (double vx\+\_\+samp, double vy\+\_\+samp, double vtheta\+\_\+samp, bool update\+\_\+map=true)
+\begin{DoxyCompactList}\small\item\em Generate and score a single trajectory \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_af883fc515db5a2234cd6b6d366ca31a5}{score\+Trajectory}} (double vx\+\_\+samp, double vy\+\_\+samp, double vtheta\+\_\+samp, bool update\+\_\+map=true)
+\begin{DoxyCompactList}\small\item\em Generate and score a single trajectory \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a99bc029d01fb414521862b83f81aa5c9}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a99bc029d01fb414521862b83f81aa5c9}} 
+bool {\bfseries is\+Initialized} ()
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a4194c8585ff580730a97d0a0a02481fa}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a4194c8585ff580730a97d0a0a02481fa}} 
+\mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlanner}{Trajectory\+Planner}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a4194c8585ff580730a97d0a0a02481fa}{get\+Planner}} () const
+\begin{DoxyCompactList}\small\item\em Return the inner \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlanner}{Trajectory\+Planner}} object. Only valid after \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryPlannerROS_a9a758c9bd9cb0202ed06c07c5aa49c03}{initialize()}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A ROS wrapper for the trajectory controller that queries the param server to construct a controller 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a0ea81ba7bfd31aaa999477ae8f9e0d0f}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a0ea81ba7bfd31aaa999477ae8f9e0d0f}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!TrajectoryPlannerROS@{TrajectoryPlannerROS}}
+\index{TrajectoryPlannerROS@{TrajectoryPlannerROS}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{TrajectoryPlannerROS()}{TrajectoryPlannerROS()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::\+Trajectory\+Planner\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Constructs the ros wrapper 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to give this instance of the trajectory planner \\
+\hline
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em costmap} & The cost map to use for assigning costs to trajectories \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a9155bebb3d073ae4b19b8d0da87478a6}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a9155bebb3d073ae4b19b8d0da87478a6}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{double}]{vx\+\_\+samp,  }\item[{double}]{vy\+\_\+samp,  }\item[{double}]{vtheta\+\_\+samp,  }\item[{bool}]{update\+\_\+map = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Generate and score a single trajectory 
+
+
+\begin{DoxyParams}{参数}
+{\em vx\+\_\+samp} & The x velocity used to seed the trajectory \\
+\hline
+{\em vy\+\_\+samp} & The y velocity used to seed the trajectory \\
+\hline
+{\em vtheta\+\_\+samp} & The theta velocity used to seed the trajectory \\
+\hline
+{\em update\+\_\+map} & Whether or not to update the map for the planner when computing the legality of the trajectory, this is useful to set to false if you\textquotesingle{}re going to be doing a lot of trajectory checking over a short period of time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the trajectory is legal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_adb2d96332da31a154db84930754409af}\label{classbase__local__planner_1_1TrajectoryPlannerROS_adb2d96332da31a154db84930754409af}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_aa02dad5e3be910ae7d5159b7a53c0188}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a9a758c9bd9cb0202ed06c07c5aa49c03}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a9a758c9bd9cb0202ed06c07c5aa49c03}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!initialize@{initialize}}
+\index{initialize@{initialize}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Constructs the ros wrapper 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to give this instance of the trajectory planner \\
+\hline
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em costmap} & The cost map to use for assigning costs to trajectories \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a488521ac3d0ff67000aed87ab3fea84b}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_a5196b75a728ab7c37d6bdd99faa7b541}\label{classbase__local__planner_1_1TrajectoryPlannerROS_a5196b75a728ab7c37d6bdd99faa7b541}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the goal pose has been achieved 
+
+\begin{DoxyReturn}{返回}
+True if achieved, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_a27b2312d3218496be06a298767b26716}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_af883fc515db5a2234cd6b6d366ca31a5}\label{classbase__local__planner_1_1TrajectoryPlannerROS_af883fc515db5a2234cd6b6d366ca31a5}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{double}]{vx\+\_\+samp,  }\item[{double}]{vy\+\_\+samp,  }\item[{double}]{vtheta\+\_\+samp,  }\item[{bool}]{update\+\_\+map = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Generate and score a single trajectory 
+
+
+\begin{DoxyParams}{参数}
+{\em vx\+\_\+samp} & The x velocity used to seed the trajectory \\
+\hline
+{\em vy\+\_\+samp} & The y velocity used to seed the trajectory \\
+\hline
+{\em vtheta\+\_\+samp} & The theta velocity used to seed the trajectory \\
+\hline
+{\em update\+\_\+map} & Whether or not to update the map for the planner when computing the legality of the trajectory, this is useful to set to false if you\textquotesingle{}re going to be doing a lot of trajectory checking over a short period of time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+score of trajectory (double) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1TrajectoryPlannerROS_af3a0c8be5746b1e1d8657f6b867ea934}\label{classbase__local__planner_1_1TrajectoryPlannerROS_af3a0c8be5746b1e1d8657f6b867ea934}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the plan that the controller is following 
+
+
+\begin{DoxyParams}{参数}
+{\em orig\+\_\+global\+\_\+plan} & The plan to pass to the controller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the plan was updated successfully, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseLocalPlanner_ac30adc27a5c123f129ef7046ffbb0f3e}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/trajectory\+\_\+planner\+\_\+ros.\+h\end{DoxyCompactItemize}

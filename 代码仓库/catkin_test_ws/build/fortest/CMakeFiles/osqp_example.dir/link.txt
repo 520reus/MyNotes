@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/osqp_example.dir/src/osqp_example.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/osqp_example  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -losqp 

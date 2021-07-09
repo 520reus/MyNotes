@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+fortest/CMakeFiles/dy_test.dir/rule:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/dy_test.dir/rule
+.PHONY : fortest/CMakeFiles/dy_test.dir/rule
+
+# Convenience name for target.
+dy_test: fortest/CMakeFiles/dy_test.dir/rule
+
+.PHONY : dy_test
+
+# fast build rule for target.
+dy_test/fast:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/build
+.PHONY : dy_test/fast
+
+# Convenience name for target.
 fortest/CMakeFiles/discrete_points_main.dir/rule:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/discrete_points_main.dir/rule
 .PHONY : fortest/CMakeFiles/discrete_points_main.dir/rule
@@ -181,6 +196,21 @@ discrete_points_main: fortest/CMakeFiles/discrete_points_main.dir/rule
 discrete_points_main/fast:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/discrete_points_main.dir/build.make fortest/CMakeFiles/discrete_points_main.dir/build
 .PHONY : discrete_points_main/fast
+
+# Convenience name for target.
+fortest/CMakeFiles/test2.dir/rule:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/test2.dir/rule
+.PHONY : fortest/CMakeFiles/test2.dir/rule
+
+# Convenience name for target.
+test2: fortest/CMakeFiles/test2.dir/rule
+
+.PHONY : test2
+
+# fast build rule for target.
+test2/fast:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
+.PHONY : test2/fast
 
 # Convenience name for target.
 fortest/CMakeFiles/dataType_trans.dir/rule:
@@ -213,21 +243,6 @@ generate_discrete_points/fast:
 .PHONY : generate_discrete_points/fast
 
 # Convenience name for target.
-fortest/CMakeFiles/test2.dir/rule:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/test2.dir/rule
-.PHONY : fortest/CMakeFiles/test2.dir/rule
-
-# Convenience name for target.
-test2: fortest/CMakeFiles/test2.dir/rule
-
-.PHONY : test2
-
-# fast build rule for target.
-test2/fast:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
-.PHONY : test2/fast
-
-# Convenience name for target.
 fortest/CMakeFiles/ipopt_nlp.dir/rule:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/ipopt_nlp.dir/rule
 .PHONY : fortest/CMakeFiles/ipopt_nlp.dir/rule
@@ -258,19 +273,19 @@ test3/fast:
 .PHONY : test3/fast
 
 # Convenience name for target.
-fortest/CMakeFiles/mytest.dir/rule:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/mytest.dir/rule
-.PHONY : fortest/CMakeFiles/mytest.dir/rule
+fortest/CMakeFiles/osqp_example.dir/rule:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/osqp_example.dir/rule
+.PHONY : fortest/CMakeFiles/osqp_example.dir/rule
 
 # Convenience name for target.
-mytest: fortest/CMakeFiles/mytest.dir/rule
+osqp_example: fortest/CMakeFiles/osqp_example.dir/rule
 
-.PHONY : mytest
+.PHONY : osqp_example
 
 # fast build rule for target.
-mytest/fast:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/build
-.PHONY : mytest/fast
+osqp_example/fast:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/build
+.PHONY : osqp_example/fast
 
 # Convenience name for target.
 fortest/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
@@ -511,21 +526,6 @@ std_msgs_generate_messages_py: fortest/CMakeFiles/std_msgs_generate_messages_py.
 std_msgs_generate_messages_py/fast:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/std_msgs_generate_messages_py.dir/build.make fortest/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-fortest/CMakeFiles/cppad_mytest.dir/rule:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/cppad_mytest.dir/rule
-.PHONY : fortest/CMakeFiles/cppad_mytest.dir/rule
-
-# Convenience name for target.
-cppad_mytest: fortest/CMakeFiles/cppad_mytest.dir/rule
-
-.PHONY : cppad_mytest
-
-# fast build rule for target.
-cppad_mytest/fast:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/build
-.PHONY : cppad_mytest/fast
 
 # Convenience name for target.
 fortest/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
@@ -1124,33 +1124,6 @@ src/cppad_example.cpp.s:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/cppad_example.dir/build.make fortest/CMakeFiles/cppad_example.dir/src/cppad_example.cpp.s
 .PHONY : src/cppad_example.cpp.s
 
-src/cppad_mytest.o: src/cppad_mytest.cpp.o
-
-.PHONY : src/cppad_mytest.o
-
-# target to build an object file
-src/cppad_mytest.cpp.o:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/src/cppad_mytest.cpp.o
-.PHONY : src/cppad_mytest.cpp.o
-
-src/cppad_mytest.i: src/cppad_mytest.cpp.i
-
-.PHONY : src/cppad_mytest.i
-
-# target to preprocess a source file
-src/cppad_mytest.cpp.i:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/src/cppad_mytest.cpp.i
-.PHONY : src/cppad_mytest.cpp.i
-
-src/cppad_mytest.s: src/cppad_mytest.cpp.s
-
-.PHONY : src/cppad_mytest.s
-
-# target to generate assembly for a file
-src/cppad_mytest.cpp.s:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/src/cppad_mytest.cpp.s
-.PHONY : src/cppad_mytest.cpp.s
-
 src/dataType_trans.o: src/dataType_trans.cpp.o
 
 .PHONY : src/dataType_trans.o
@@ -1259,6 +1232,33 @@ src/discrete_points_smoother.cpp.s:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/discrete_points_smoothing.dir/build.make fortest/CMakeFiles/discrete_points_smoothing.dir/src/discrete_points_smoother.cpp.s
 .PHONY : src/discrete_points_smoother.cpp.s
 
+src/dy_test.o: src/dy_test.cpp.o
+
+.PHONY : src/dy_test.o
+
+# target to build an object file
+src/dy_test.cpp.o:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/src/dy_test.cpp.o
+.PHONY : src/dy_test.cpp.o
+
+src/dy_test.i: src/dy_test.cpp.i
+
+.PHONY : src/dy_test.i
+
+# target to preprocess a source file
+src/dy_test.cpp.i:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/src/dy_test.cpp.i
+.PHONY : src/dy_test.cpp.i
+
+src/dy_test.s: src/dy_test.cpp.s
+
+.PHONY : src/dy_test.s
+
+# target to generate assembly for a file
+src/dy_test.cpp.s:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/src/dy_test.cpp.s
+.PHONY : src/dy_test.cpp.s
+
 src/generate_discrete_points.o: src/generate_discrete_points.cpp.o
 
 .PHONY : src/generate_discrete_points.o
@@ -1340,32 +1340,32 @@ src/hs071_nlp.cpp.s:
 	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/ipopt_nlp.dir/build.make fortest/CMakeFiles/ipopt_nlp.dir/src/hs071_nlp.cpp.s
 .PHONY : src/hs071_nlp.cpp.s
 
-src/mytest.o: src/mytest.cpp.o
+src/osqp_example.o: src/osqp_example.cpp.o
 
-.PHONY : src/mytest.o
+.PHONY : src/osqp_example.o
 
 # target to build an object file
-src/mytest.cpp.o:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/src/mytest.cpp.o
-.PHONY : src/mytest.cpp.o
+src/osqp_example.cpp.o:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/src/osqp_example.cpp.o
+.PHONY : src/osqp_example.cpp.o
 
-src/mytest.i: src/mytest.cpp.i
+src/osqp_example.i: src/osqp_example.cpp.i
 
-.PHONY : src/mytest.i
+.PHONY : src/osqp_example.i
 
 # target to preprocess a source file
-src/mytest.cpp.i:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/src/mytest.cpp.i
-.PHONY : src/mytest.cpp.i
+src/osqp_example.cpp.i:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/src/osqp_example.cpp.i
+.PHONY : src/osqp_example.cpp.i
 
-src/mytest.s: src/mytest.cpp.s
+src/osqp_example.s: src/osqp_example.cpp.s
 
-.PHONY : src/mytest.s
+.PHONY : src/osqp_example.s
 
 # target to generate assembly for a file
-src/mytest.cpp.s:
-	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/src/mytest.cpp.s
-.PHONY : src/mytest.cpp.s
+src/osqp_example.cpp.s:
+	cd /home/wu/catkin_test_ws/build && $(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/src/osqp_example.cpp.s
+.PHONY : src/osqp_example.cpp.s
 
 src/test2.o: src/test2.cpp.o
 
@@ -1430,13 +1430,14 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... dy_test"
 	@echo "... discrete_points_main"
+	@echo "... test2"
 	@echo "... dataType_trans"
 	@echo "... generate_discrete_points"
-	@echo "... test2"
 	@echo "... ipopt_nlp"
 	@echo "... test3"
-	@echo "... mytest"
+	@echo "... osqp_example"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
@@ -1454,7 +1455,6 @@ help:
 	@echo "... ipopt_example"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... cppad_mytest"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -1499,9 +1499,6 @@ help:
 	@echo "... src/cppad_example.o"
 	@echo "... src/cppad_example.i"
 	@echo "... src/cppad_example.s"
-	@echo "... src/cppad_mytest.o"
-	@echo "... src/cppad_mytest.i"
-	@echo "... src/cppad_mytest.s"
 	@echo "... src/dataType_trans.o"
 	@echo "... src/dataType_trans.i"
 	@echo "... src/dataType_trans.s"
@@ -1514,6 +1511,9 @@ help:
 	@echo "... src/discrete_points_smoother.o"
 	@echo "... src/discrete_points_smoother.i"
 	@echo "... src/discrete_points_smoother.s"
+	@echo "... src/dy_test.o"
+	@echo "... src/dy_test.i"
+	@echo "... src/dy_test.s"
 	@echo "... src/generate_discrete_points.o"
 	@echo "... src/generate_discrete_points.i"
 	@echo "... src/generate_discrete_points.s"
@@ -1523,9 +1523,9 @@ help:
 	@echo "... src/hs071_nlp.o"
 	@echo "... src/hs071_nlp.i"
 	@echo "... src/hs071_nlp.s"
-	@echo "... src/mytest.o"
-	@echo "... src/mytest.i"
-	@echo "... src/mytest.s"
+	@echo "... src/osqp_example.o"
+	@echo "... src/osqp_example.i"
+	@echo "... src/osqp_example.s"
 	@echo "... src/test2.o"
 	@echo "... src/test2.i"
 	@echo "... src/test2.s"

@@ -1,0 +1,242 @@
+\hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons}{}\doxysection{costmap\+\_\+converter\+::Base\+Costmap\+To\+Polygons类 参考}
+\label{classcostmap__converter_1_1BaseCostmapToPolygons}\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+
+
+This abstract class defines the interface for plugins that convert the costmap into polygon types  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+converter\+\_\+interface.\+h$>$}
+
+类 costmap\+\_\+converter\+::Base\+Costmap\+To\+Polygons 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.213873cm]{classcostmap__converter_1_1BaseCostmapToPolygons}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a5e9d598f3a5913f754cc91c10fa70672}{initialize}} (ros\+::\+Node\+Handle nh)=0
+\begin{DoxyCompactList}\small\item\em Initialize the plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a3bee32afc15401220df123bce1a87921}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a3bee32afc15401220df123bce1a87921}} 
+virtual \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a3bee32afc15401220df123bce1a87921}{$\sim$\+Base\+Costmap\+To\+Polygons}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{set\+Costmap2D}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap)=0
+\begin{DoxyCompactList}\small\item\em Pass a pointer to the costap to the plugin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}{update\+Costmap2D}} ()=0
+\begin{DoxyCompactList}\small\item\em Get updated data from the previously set Costmap2D \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}\label{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}} 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}{compute}} ()=0
+\begin{DoxyCompactList}\small\item\em This method performs the actual work (conversion of the costmap to polygons) \end{DoxyCompactList}\item 
+virtual Polygon\+Container\+Const\+Ptr \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons}} ()
+\begin{DoxyCompactList}\small\item\em Get a shared instance of the current polygon container \end{DoxyCompactList}\item 
+virtual Obstacle\+Array\+Const\+Ptr \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a568d60474400d08a40218d0674b46fed}{get\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Get a shared instance of the current obstacle container If this method is not overwritten by the underlying plugin, the obstacle container just imports \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons()}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_ae2913087d659654c55f5869397f8e2c5}{set\+Odom\+Topic}} (const std\+::string \&odom\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Set name of robot\textquotesingle{}s odometry topic \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a5f42b7263fcfdde112b09c73429e55be}{stacked\+Costmap\+Conversion}} ()
+\begin{DoxyCompactList}\small\item\em Determines whether an additional plugin for subsequent costmap conversion is specified \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker}} (ros\+::\+Rate rate, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, bool spin\+\_\+thread=false)
+\begin{DoxyCompactList}\small\item\em Instantiate a worker that repeatedly coverts the most recent costmap to polygons. The worker is implemented as a timer event that is invoked at a specific {\ttfamily rate}. The passed {\ttfamily costmap} pointer must be valid at the complete time and must be lockable. By specifying the argument {\ttfamily spin\+\_\+thread} the timer event is invoked in a separate thread and callback queue or otherwise it is called from the global callback queue (of the node in which the plugin is used). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a7e5b367499223999167be752208eb59f}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a7e5b367499223999167be752208eb59f}} 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a7e5b367499223999167be752208eb59f}{stop\+Worker}} ()
+\begin{DoxyCompactList}\small\item\em Stop the worker that repeatedly converts the costmap to polygons \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_aed9851c00b8d93e88bb8ee79b95a23d9}\label{classcostmap__converter_1_1BaseCostmapToPolygons_aed9851c00b8d93e88bb8ee79b95a23d9}} 
+\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_aed9851c00b8d93e88bb8ee79b95a23d9}{Base\+Costmap\+To\+Polygons}} ()
+\begin{DoxyCompactList}\small\item\em Protected constructor that should be called by subclasses \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_aa39c0f13e7ad5bddade4cfc86324abb3}\label{classcostmap__converter_1_1BaseCostmapToPolygons_aa39c0f13e7ad5bddade4cfc86324abb3}} 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_aa39c0f13e7ad5bddade4cfc86324abb3}{spin\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Blocking method that checks for new timer events (active if \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} is called with spin\+\_\+thread enabled) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a128417cea22b02d1b021102ee25c30dd}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a128417cea22b02d1b021102ee25c30dd}} 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a128417cea22b02d1b021102ee25c30dd}{worker\+Callback}} (const ros\+::\+Timer\+Event \&)
+\begin{DoxyCompactList}\small\item\em The callback of the worker that performs the actual work (updating the costmap and converting it to polygons) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This abstract class defines the interface for plugins that convert the costmap into polygon types 
+
+Plugins must accept a \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} datatype as information source. The interface provides two different use cases\+:
+\begin{DoxyEnumerate}
+\item Manual call to conversion routines\+: \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{set\+Costmap2\+D()}}, \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}{compute()}} and \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons()}} (in subsequent calls \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{set\+Costmap2\+D()}} can be substituted by \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}{update\+Costmap2\+D()}})
+\item Repeatedly process costmap with a specific rate (\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} and \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a7e5b367499223999167be752208eb59f}{stop\+Worker()}})\+: Make sure that the costmap is valid while the worker is active (you can specify your own spinner or activate a threaded spinner). Costmaps can be obtained by invoking \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons()}}. 
+\end{DoxyEnumerate}
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a568d60474400d08a40218d0674b46fed}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a568d60474400d08a40218d0674b46fed}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!getObstacles@{getObstacles}}
+\index{getObstacles@{getObstacles}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{getObstacles()}{getObstacles()}}
+{\footnotesize\ttfamily virtual Obstacle\+Array\+Const\+Ptr costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::get\+Obstacles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a shared instance of the current obstacle container If this method is not overwritten by the underlying plugin, the obstacle container just imports \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons()}}. 
+
+\begin{DoxyRemark}{备注}
+If \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}{compute()}} or \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} has not been called before, this method returns an empty instance! 
+\end{DoxyRemark}
+\begin{DoxyWarning}{警告}
+The underlying plugin must ensure that this method is thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{返回}
+Shared instance of the current obstacle container 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}{get\+Polygons}} 
+\end{DoxySeeAlso}
+
+
+被 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}{costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles}} 重载.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a8e68cedfe4acd986b555edbcf5fe6d44}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!getPolygons@{getPolygons}}
+\index{getPolygons@{getPolygons}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{getPolygons()}{getPolygons()}}
+{\footnotesize\ttfamily virtual Polygon\+Container\+Const\+Ptr costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::get\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a shared instance of the current polygon container 
+
+If this method is not implemented by any subclass (plugin) the returned shared pointer is empty. \begin{DoxyRemark}{备注}
+If \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_abec3dc10bc44341b73d5fc4e635be01f}{compute()}} or \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} has not been called before, this method returns an empty instance! 
+\end{DoxyRemark}
+\begin{DoxyWarning}{警告}
+The underlying plugin must ensure that this method is thread safe. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{返回}
+Shared instance of the current polygon container 
+\end{DoxyReturn}
+
+
+被 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aa6d70bea1ba80d5ad84c221846e9ea62}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} 重载.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a5e9d598f3a5913f754cc91c10fa70672}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a5e9d598f3a5913f754cc91c10fa70672}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialize the plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Nodehandle that defines the namespace for parameters \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull_a9ee7a0ff34e7da8a850953963c17f733}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSConcave\+Hull}}, \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}}, \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a7d4d748eb406363f923deba89d412bcc}{costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC}}, \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_aac61c254df219ed217b148665e81e04f}{costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSMCCH}} , 以及 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a81dcd29642c7576617086cd27033d392}{costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles}} 内被实现.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!setCostmap2D@{setCostmap2D}}
+\index{setCostmap2D@{setCostmap2D}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{setCostmap2D()}{setCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::set\+Costmap2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pass a pointer to the costap to the plugin. 
+
+\begin{DoxyWarning}{警告}
+The plugin should handle the costmap\textquotesingle{}s mutex locking. 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}{update\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em costmap} & Pointer to the costmap2d source \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_aed33709b3251194bf95b0f611ac606a3}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} , 以及 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a01610c9d9ec802d11c991379a1b6a99e}{costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles}} 内被实现.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_ae2913087d659654c55f5869397f8e2c5}\label{classcostmap__converter_1_1BaseCostmapToPolygons_ae2913087d659654c55f5869397f8e2c5}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!setOdomTopic@{setOdomTopic}}
+\index{setOdomTopic@{setOdomTopic}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{setOdomTopic()}{setOdomTopic()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::set\+Odom\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{odom\+\_\+topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set name of robot\textquotesingle{}s odometry topic 
+
+Some plugins might require odometry information to compensate the robot\textquotesingle{}s ego motion 
+\begin{DoxyParams}{参数}
+{\em odom\+\_\+topic} & topic name \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a610ef9b8c4bb18fedce04eeabf666198}{costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles}} 重载.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a5f42b7263fcfdde112b09c73429e55be}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a5f42b7263fcfdde112b09c73429e55be}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!stackedCostmapConversion@{stackedCostmapConversion}}
+\index{stackedCostmapConversion@{stackedCostmapConversion}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{stackedCostmapConversion()}{stackedCostmapConversion()}}
+{\footnotesize\ttfamily virtual bool costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::stacked\+Costmap\+Conversion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an additional plugin for subsequent costmap conversion is specified 
+
+\begin{DoxyReturn}{返回}
+false, since all plugins for static costmap conversion are independent 
+\end{DoxyReturn}
+
+
+被 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a314f921603fc71c47bb1666de9a577f5}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles}} 重载.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}\label{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!startWorker@{startWorker}}
+\index{startWorker@{startWorker}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{startWorker()}{startWorker()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::start\+Worker (\begin{DoxyParamCaption}\item[{ros\+::\+Rate}]{rate,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{bool}]{spin\+\_\+thread = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instantiate a worker that repeatedly coverts the most recent costmap to polygons. The worker is implemented as a timer event that is invoked at a specific {\ttfamily rate}. The passed {\ttfamily costmap} pointer must be valid at the complete time and must be lockable. By specifying the argument {\ttfamily spin\+\_\+thread} the timer event is invoked in a separate thread and callback queue or otherwise it is called from the global callback queue (of the node in which the plugin is used). 
+
+
+\begin{DoxyParams}{参数}
+{\em rate} & The rate that specifies how often the costmap should be updated \\
+\hline
+{\em costmap} & Pointer to the underlying costmap (must be valid and lockable as long as the worker is active \\
+\hline
+{\em spin\+\_\+thread} & if {\ttfamily true},the timer is invoked in a separate thread, otherwise in the default callback queue) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}\label{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}} 
+\index{costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}!updateCostmap2D@{updateCostmap2D}}
+\index{updateCostmap2D@{updateCostmap2D}!costmap\_converter::BaseCostmapToPolygons@{costmap\_converter::BaseCostmapToPolygons}}
+\doxysubsubsection{\texorpdfstring{updateCostmap2D()}{updateCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons\+::update\+Costmap2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get updated data from the previously set Costmap2D 
+
+\begin{DoxyWarning}{警告}
+The plugin should handle the costmap\textquotesingle{}s mutex locking. 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{set\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+
+在 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a722070f9f4e331ce6576b61b1e0baf05}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} , 以及 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a0ddccd62ad3d089f69f204ea5226821a}{costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+converter\+\_\+interface.\+h\end{DoxyCompactItemize}

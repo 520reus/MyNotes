@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libcurve1d_set.so -o /home/wu/catkin_test_ws/src/fortest/lib/libcurve1d_set.so CMakeFiles/curve1d_set.dir/src/curve1d/quintic_polynomial_curve1d.cpp.o  -L/usr/local/lib 

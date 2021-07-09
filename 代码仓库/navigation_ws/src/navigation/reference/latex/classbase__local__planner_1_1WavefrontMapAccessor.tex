@@ -1,0 +1,30 @@
+\hypertarget{classbase__local__planner_1_1WavefrontMapAccessor}{}\doxysection{base\+\_\+local\+\_\+planner\+::Wavefront\+Map\+Accessor类 参考}
+\label{classbase__local__planner_1_1WavefrontMapAccessor}\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+
+
+{\ttfamily \#include $<$wavefront\+\_\+map\+\_\+accessor.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Wavefront\+Map\+Accessor 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1WavefrontMapAccessor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1WavefrontMapAccessor_a31116ccd4b8c9fa55916c57bd5e80c6e}\label{classbase__local__planner_1_1WavefrontMapAccessor_a31116ccd4b8c9fa55916c57bd5e80c6e}} 
+{\bfseries Wavefront\+Map\+Accessor} (\mbox{\hyperlink{classbase__local__planner_1_1MapGrid}{Map\+Grid}} $\ast$map, double outer\+\_\+radius)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1WavefrontMapAccessor_a22a6ea335309603f580cac039bc8871c}\label{classbase__local__planner_1_1WavefrontMapAccessor_a22a6ea335309603f580cac039bc8871c}} 
+void {\bfseries synchronize} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Map\+\_\+grids rely on costmaps to identify obstacles. We need a costmap that we can easily manipulate for unit tests. This class has a grid map where we can set grid cell state, and a synchronize method to make the costmap match. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/test/wavefront\+\_\+map\+\_\+accessor.\+h\end{DoxyCompactItemize}

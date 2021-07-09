@@ -1,0 +1,81 @@
+\hypertarget{classbase__local__planner_1_1FootprintHelper}{}\doxysection{base\+\_\+local\+\_\+planner\+::Footprint\+Helper类 参考}
+\label{classbase__local__planner_1_1FootprintHelper}\index{base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ base\+\_\+local\+\_\+planner\+::\+Position2\+DInt $>$ \mbox{\hyperlink{classbase__local__planner_1_1FootprintHelper_a4d655df0f69d5f7901cfcbbed70af4b6}{get\+Footprint\+Cells}} (Eigen\+::\+Vector3f pos, std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ footprint\+\_\+spec, const \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&, bool fill)
+\begin{DoxyCompactList}\small\item\em Used to get the cells that make up the footprint of the robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1FootprintHelper_ab65128ff1acf0eb1d8b398ad0741ee55}{get\+Line\+Cells}} (int x0, int x1, int y0, int y1, std\+::vector$<$ base\+\_\+local\+\_\+planner\+::\+Position2\+DInt $>$ \&pts)
+\begin{DoxyCompactList}\small\item\em Use Bresenham\textquotesingle{}s algorithm to trace a line between two points in a grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1FootprintHelper_a6bb46e8dcf95d5694a1aa5b03ab83892}{get\+Fill\+Cells}} (std\+::vector$<$ base\+\_\+local\+\_\+planner\+::\+Position2\+DInt $>$ \&footprint)
+\begin{DoxyCompactList}\small\item\em Fill the outline of a polygon, in this case the robot footprint, in a grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1FootprintHelper_a6bb46e8dcf95d5694a1aa5b03ab83892}\label{classbase__local__planner_1_1FootprintHelper_a6bb46e8dcf95d5694a1aa5b03ab83892}} 
+\index{base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}!getFillCells@{getFillCells}}
+\index{getFillCells@{getFillCells}!base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}}
+\doxysubsubsection{\texorpdfstring{getFillCells()}{getFillCells()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Footprint\+Helper\+::get\+Fill\+Cells (\begin{DoxyParamCaption}\item[{std\+::vector$<$ base\+\_\+local\+\_\+planner\+::\+Position2\+DInt $>$ \&}]{footprint }\end{DoxyParamCaption})}
+
+
+
+Fill the outline of a polygon, in this case the robot footprint, in a grid 
+
+
+\begin{DoxyParams}{参数}
+{\em footprint} & The list of cells making up the footprint in the grid, will be modified to include all cells inside the footprint \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1FootprintHelper_a4d655df0f69d5f7901cfcbbed70af4b6}\label{classbase__local__planner_1_1FootprintHelper_a4d655df0f69d5f7901cfcbbed70af4b6}} 
+\index{base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}!getFootprintCells@{getFootprintCells}}
+\index{getFootprintCells@{getFootprintCells}!base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}}
+\doxysubsubsection{\texorpdfstring{getFootprintCells()}{getFootprintCells()}}
+{\footnotesize\ttfamily std\+::vector$<$base\+\_\+local\+\_\+planner\+::\+Position2\+DInt$>$ base\+\_\+local\+\_\+planner\+::\+Footprint\+Helper\+::get\+Footprint\+Cells (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3f}]{pos,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$}]{footprint\+\_\+spec,  }\item[{const \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{,  }\item[{bool}]{fill }\end{DoxyParamCaption})}
+
+
+
+Used to get the cells that make up the footprint of the robot 
+
+
+\begin{DoxyParams}{参数}
+{\em x\+\_\+i} & The x position of the robot \\
+\hline
+{\em y\+\_\+i} & The y position of the robot \\
+\hline
+{\em theta\+\_\+i} & The orientation of the robot \\
+\hline
+{\em fill} & If true\+: returns all cells in the footprint of the robot. If false\+: returns only the cells that make up the outline of the footprint. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The cells that make up either the outline or entire footprint of the robot depending on fill 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1FootprintHelper_ab65128ff1acf0eb1d8b398ad0741ee55}\label{classbase__local__planner_1_1FootprintHelper_ab65128ff1acf0eb1d8b398ad0741ee55}} 
+\index{base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}!getLineCells@{getLineCells}}
+\index{getLineCells@{getLineCells}!base\_local\_planner::FootprintHelper@{base\_local\_planner::FootprintHelper}}
+\doxysubsubsection{\texorpdfstring{getLineCells()}{getLineCells()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Footprint\+Helper\+::get\+Line\+Cells (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{std\+::vector$<$ base\+\_\+local\+\_\+planner\+::\+Position2\+DInt $>$ \&}]{pts }\end{DoxyParamCaption})}
+
+
+
+Use Bresenham\textquotesingle{}s algorithm to trace a line between two points in a grid 
+
+
+\begin{DoxyParams}{参数}
+{\em x0} & The x coordinate of the first point \\
+\hline
+{\em x1} & The x coordinate of the second point \\
+\hline
+{\em y0} & The y coordinate of the first point \\
+\hline
+{\em y1} & The y coordinate of the second point \\
+\hline
+{\em pts} & Will be filled with the cells that lie on the line in the grid \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/footprint\+\_\+helper.\+h\end{DoxyCompactItemize}

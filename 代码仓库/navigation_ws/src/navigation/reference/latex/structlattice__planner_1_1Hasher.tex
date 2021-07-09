@@ -1,0 +1,106 @@
+\hypertarget{structlattice__planner_1_1Hasher}{}\doxysection{lattice\+\_\+planner\+::Hasher结构体 参考}
+\label{structlattice__planner_1_1Hasher}\index{lattice\_planner::Hasher@{lattice\_planner::Hasher}}
+
+
+provides methods to generate unique hash values (keys) for \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} objects  
+
+
+
+
+{\ttfamily \#include $<$hasher.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{structlattice__planner_1_1Hasher_a38316033eba48234f62b6c192c161337}{operator()}} (const \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \&index) const
+\begin{DoxyCompactList}\small\item\em function operator to create a hash value from a \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structlattice__planner_1_1Hasher_a20b9d3a319e9732cafaf9f5d6ea85f9f}{set\+Limits}} (int num\+\_\+gridcells, int num\+\_\+orientations, int num\+\_\+vels\+\_\+x, int num\+\_\+vels\+\_\+w)
+\begin{DoxyCompactList}\small\item\em set\+Limits set the limits for the properties of the \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} objects to generate unique hashes \end{DoxyCompactList}\item 
+static size\+\_\+t \mbox{\hyperlink{structlattice__planner_1_1Hasher_a3c44a184acab6ff89e0c33906ea13be7}{get\+Hash}} (const \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \&index)
+\begin{DoxyCompactList}\small\item\em generate a (unique) hash value from a \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_a67dd52250443d66433faa62192236c58}\label{structlattice__planner_1_1Hasher_a67dd52250443d66433faa62192236c58}} 
+static int \mbox{\hyperlink{structlattice__planner_1_1Hasher_a67dd52250443d66433faa62192236c58}{num\+\_\+gridcells\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total number of grid cells in the map \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_a5fcbf88c6e74f511cb383a3d349ec240}\label{structlattice__planner_1_1Hasher_a5fcbf88c6e74f511cb383a3d349ec240}} 
+static int \mbox{\hyperlink{structlattice__planner_1_1Hasher_a5fcbf88c6e74f511cb383a3d349ec240}{num\+\_\+orientations\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total number of allowed discrete angles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_ae6ab3dbf64e24552eb3908d3e8152553}\label{structlattice__planner_1_1Hasher_ae6ab3dbf64e24552eb3908d3e8152553}} 
+static int \mbox{\hyperlink{structlattice__planner_1_1Hasher_ae6ab3dbf64e24552eb3908d3e8152553}{num\+\_\+vels\+\_\+x\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total number of allowed discrete forward velocities \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_aa2741fde4432297c2ce8d92a04a01aa3}\label{structlattice__planner_1_1Hasher_aa2741fde4432297c2ce8d92a04a01aa3}} 
+static int \mbox{\hyperlink{structlattice__planner_1_1Hasher_aa2741fde4432297c2ce8d92a04a01aa3}{num\+\_\+vels\+\_\+w\+\_\+}}
+\begin{DoxyCompactList}\small\item\em total number of allowed discrete angular velocities \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+provides methods to generate unique hash values (keys) for \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} objects 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_a3c44a184acab6ff89e0c33906ea13be7}\label{structlattice__planner_1_1Hasher_a3c44a184acab6ff89e0c33906ea13be7}} 
+\index{lattice\_planner::Hasher@{lattice\_planner::Hasher}!getHash@{getHash}}
+\index{getHash@{getHash}!lattice\_planner::Hasher@{lattice\_planner::Hasher}}
+\doxysubsubsection{\texorpdfstring{getHash()}{getHash()}}
+{\footnotesize\ttfamily static size\+\_\+t lattice\+\_\+planner\+::\+Hasher\+::get\+Hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+generate a (unique) hash value from a \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} object 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & hashed object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+hash value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_a38316033eba48234f62b6c192c161337}\label{structlattice__planner_1_1Hasher_a38316033eba48234f62b6c192c161337}} 
+\index{lattice\_planner::Hasher@{lattice\_planner::Hasher}!operator()@{operator()}}
+\index{operator()@{operator()}!lattice\_planner::Hasher@{lattice\_planner::Hasher}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t lattice\+\_\+planner\+::\+Hasher\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+function operator to create a hash value from a \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} object 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & hashed object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+hash value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1Hasher_a20b9d3a319e9732cafaf9f5d6ea85f9f}\label{structlattice__planner_1_1Hasher_a20b9d3a319e9732cafaf9f5d6ea85f9f}} 
+\index{lattice\_planner::Hasher@{lattice\_planner::Hasher}!setLimits@{setLimits}}
+\index{setLimits@{setLimits}!lattice\_planner::Hasher@{lattice\_planner::Hasher}}
+\doxysubsubsection{\texorpdfstring{setLimits()}{setLimits()}}
+{\footnotesize\ttfamily static void lattice\+\_\+planner\+::\+Hasher\+::set\+Limits (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+gridcells,  }\item[{int}]{num\+\_\+orientations,  }\item[{int}]{num\+\_\+vels\+\_\+x,  }\item[{int}]{num\+\_\+vels\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Limits set the limits for the properties of the \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} objects to generate unique hashes 
+
+
+\begin{DoxyParams}{参数}
+{\em num\+\_\+gridcells} & total number of grid cells in the map \\
+\hline
+{\em num\+\_\+orientations} & total number of allowed discrete angles \\
+\hline
+{\em num\+\_\+vels\+\_\+x} & total number of allowed discrete forward velocities \\
+\hline
+{\em num\+\_\+vels\+\_\+w} & total number of allowed discrete angular velocities \\
+\hline
+\end{DoxyParams}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/hasher.\+h\end{DoxyCompactItemize}

@@ -10,6 +10,9 @@ find_package(catkin REQUIRED COMPONENTS
   tf2
   dynamic_reconfigure
 )
+#eigen
+find_package(Eigen3)
+include_directories(${${EIGEN3_INCLUDE_DIR}})
 
 #set(CMAKE_LIBRARY_PATH "/usr/local/lib")
 #set(Ipopt_lib_path "/usr/local/lib")
@@ -17,7 +20,6 @@ find_package(catkin REQUIRED COMPONENTS
 #find_package(Eigen REQUIRED)
 #INCLUDE_DIRECTORIES(${Eigen_INCLUDE_DIRS})
 
-include_directories( "/usr/include/eigen3/Eigen")
 
 catkin_package(
 #  INCLUDE_DIRS include
@@ -31,14 +33,15 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+find_package(serial REQUIRED)
 
-add_executable(mytest src/mytest.cpp)
-target_link_libraries(mytest ${catkin_LIBRARIES})
+#add_executable(gnss_dy_rs422 src/gnss_dy_rs422.cpp)
+#target_link_libraries(gnss_dy_rs422 ${catkin_LIBRARIES} ${serial_LIBRARIES})
 
 add_executable(test3 src/test3.cpp)
-target_link_libraries(test3 ${catkin_LIBRARIES} ${Eigen_LIBRARIES})
+target_link_libraries(test3 ${catkin_LIBRARIES} ${Eigen3_LIBRARIES})
 
-############ipopt#################
+############ipopt#################3
 set(IPOPT_LIBRARY_DIRS /usr/local/lib)
 set(IPOPT_INCLUDE_DIRS /usr/local/include/coin)
 
@@ -57,17 +60,13 @@ add_executable(ipopt_example src/hs071_main.cpp)
 target_link_libraries(ipopt_example ipopt_nlp)
 target_link_libraries(ipopt_example ipopt)   #此句一定要写！
 
-add_executable(test2 src/test2.cpp)
-target_link_libraries(test2 ${catkin_LIBRARIES} ipopt)
 
 #target_link_libraries(ipopt_example ${ALL_TARGET_LIBRARIES}) 
 #############Cppad#################
 add_executable(cppad_example src/cppad_example.cpp)
 target_link_libraries(cppad_example ipopt) #cppad依赖于ipopt求解器，因此一定要链接才不会出错
 
-# mytest
-add_executable(cppad_mytest src/cppad_mytest.cpp)
-target_link_libraries(cppad_mytest ipopt)
+
 
 ##############generate_discrete_points-matplotlib#############
 
@@ -78,6 +77,12 @@ target_include_directories(generate_discrete_points PRIVATE ${PYTHON_INCLUDE_DIR
 target_link_libraries(generate_discrete_points ${PYTHON_LIBRARIES} ipopt)
 
 add_executable(dataType_trans src/dataType_trans.cpp)
+
+add_executable(test2 src/test2.cpp)
+target_link_libraries(test2 ${catkin_LIBRARIES} ${Eigen_LIBRARIES})
+target_include_directories(test2 PRIVATE ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(test2 ${PYTHON_LIBRARIES} ipopt)
+
 ##############discrete_points_smoother-ipopt#############
 set(ADOLC_LIBRARY_DIRS "/usr/lib/x86_64-linux-gnu") # libadolc.so所在位置
 link_directories(${ADOLC_LIBRARY_DIRS})
@@ -92,7 +97,18 @@ add_executable(discrete_points_main src/discrete_points_main.cpp)
 target_include_directories(discrete_points_main PRIVATE ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(discrete_points_main ${PYTHON_LIBRARIES} ${Eigen_LIBRARIES} discrete_points_smoothing)
 
+##############osqp##################################
+add_executable(osqp_example src/osqp_example.cpp)
+target_link_libraries(osqp_example osqp)
 
 
 
+add_executable(dy_test src/dy_test.cpp)
+target_link_libraries(dy_test ${catkin_LIBRARIES})
+###############curve1d##############################
+#include_directories(include/curve1d)
+#add_library(curve1d_set src/curve1d/quintic_polynomial_curve1d.cpp)
+#target_link_libraries(curve1d_set)
 
+#add_executable(curve1d_main src/curve1d/curve1d_main.cpp)
+#target_link_libraries(curve1d_main curve1d_set)

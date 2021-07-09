@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_converter/include/costmap_converter/costmap_to_lines_ransac.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6872cdf95a15c52392bd00077aa39749.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_b215af9620d2fab195e8eeff09d07a8f.html">include</a></li><li class="navelem"><a class="el" href="dir_00533556fe5a7fea50e7a79c1e58a365.html">costmap_converter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">costmap_to_lines_ransac.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef COSTMAP_TO_LINES_RANSAC_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define COSTMAP_TO_LINES_RANSAC_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_converter_interface.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_to_polygons.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/misc.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;boost/random.hpp&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/CostmapToLinesDBSRANSACConfig.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span>costmap_converter</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html">   71</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html">CostmapToLinesDBSRANSAC</a> : <span class="keyword">public</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">CostmapToPolygonsDBSMCCH</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ab68b6d612e221e07df93055bdc6e68b0">   78</a></span>&#160;    <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ab68b6d612e221e07df93055bdc6e68b0">CostmapToLinesDBSRANSAC</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;       </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#aaf5d9b6eb2956b26f5dc5848b799b53e">   83</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#aaf5d9b6eb2956b26f5dc5848b799b53e">~CostmapToLinesDBSRANSAC</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a7d4d748eb406363f923deba89d412bcc">   89</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a7d4d748eb406363f923deba89d412bcc">initialize</a>(ros::NodeHandle nh);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a58d638577ac6c9c1d1ad7da7aa75300a">   94</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a58d638577ac6c9c1d1ad7da7aa75300a">compute</a>();   </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>, <span class="keyword">typename</span> LinePo<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a565e9766fd65a1028a4480a9230e6825">isInlier</a>(<span class="keyword">const</span> Point&amp; point, <span class="keyword">const</span> LinePoint&amp; line_start, <span class="keyword">const</span> LinePoint&amp; line_end, <span class="keywordtype">double</span> min_distance);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a106bc0a90f9d67fbe1b40de1ca0b4fe5">  112</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a106bc0a90f9d67fbe1b40de1ca0b4fe5">ransac_inlier_distance_</a>; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ae5d794c62c5db1943998bc2d62a7c491">  113</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ae5d794c62c5db1943998bc2d62a7c491">ransac_min_inliers_</a>; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a2a7b082e5065664815dd7aa956116cfc">  114</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a2a7b082e5065664815dd7aa956116cfc">ransac_no_iterations_</a>; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a6b41a5167d7d9a3a2c1083f3a816973d">  115</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a6b41a5167d7d9a3a2c1083f3a816973d">ransac_remainig_outliers_</a>; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a046b4c8909d2eaf36318bac044414893">  116</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a046b4c8909d2eaf36318bac044414893">ransac_convert_outlier_pts_</a>; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a501e7bec141e37a4f58bc6429e10b340">  117</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a501e7bec141e37a4f58bc6429e10b340">ransac_filter_remaining_outlier_pts_</a>; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;   </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a22fede266d9bd4df6a43b25c5af1920e">  120</a></span>&#160;   boost::random::mt19937 <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a22fede266d9bd4df6a43b25c5af1920e">rnd_generator_</a>; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ac8c02d0aadbd0ee0b80561100e0a9b02">  134</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ac8c02d0aadbd0ee0b80561100e0a9b02">lineRansac</a>(<span class="keyword">const</span> std::vector&lt;KeyPoint&gt;&amp; data, <span class="keywordtype">double</span> inlier_distance, <span class="keywordtype">int</span> no_iterations, <span class="keywordtype">int</span> min_inliers,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    std::pair&lt;KeyPoint, KeyPoint&gt;&amp; best_model, std::vector&lt;KeyPoint&gt;* inliers = NULL,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                     std::vector&lt;KeyPoint&gt;* outliers = NULL);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a660a2dc34185b389e3ff269f6285eb51">  147</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a660a2dc34185b389e3ff269f6285eb51">linearRegression</a>(<span class="keyword">const</span> std::vector&lt;KeyPoint&gt;&amp; data, <span class="keywordtype">double</span>&amp; slope, <span class="keywordtype">double</span>&amp; intercept,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                          <span class="keywordtype">double</span>* mean_x_out = NULL, <span class="keywordtype">double</span>* mean_y_out = NULL);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">//     void adjustLineLength(const std::vector&lt;KeyPoint&gt;&amp; data, const KeyPoint&amp; linept1, const KeyPoint&amp; linept2, </span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">//                           KeyPoint&amp; line_start, KeyPoint&amp; line_end);</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> reconfigureCB(CostmapToLinesDBSRANSACConfig&amp; config, uint32_t level);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    dynamic_reconfigure::Server&lt;CostmapToLinesDBSRANSACConfig&gt;* dynamic_recfg_; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  };  </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Po<span class="keywordtype">int</span>, <span class="keyword">typename</span> LinePo<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a565e9766fd65a1028a4480a9230e6825">  173</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a565e9766fd65a1028a4480a9230e6825">CostmapToLinesDBSRANSAC::isInlier</a>(<span class="keyword">const</span> Point&amp; point, <span class="keyword">const</span> LinePoint&amp; line_start, <span class="keyword">const</span> LinePoint&amp; line_end, <span class="keywordtype">double</span> min_distance)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">bool</span> is_inbetween = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">double</span> distance = computeDistanceToLineSegment(point, line_start, line_end, &amp;is_inbetween);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">if</span> (!is_inbetween)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span> (distance &lt;= min_distance)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;     </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;} <span class="comment">//end namespace teb_local_planner</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* COSTMAP_TO_LINES_RANSAC_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html">costmap_converter::CostmapToLinesDBSRANSAC</a></div><div class="ttdoc">This class converts the costmap_2d into a set of lines (and points)</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:72</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a046b4c8909d2eaf36318bac044414893"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a046b4c8909d2eaf36318bac044414893">costmap_converter::CostmapToLinesDBSRANSAC::ransac_convert_outlier_pts_</a></div><div class="ttdeci">bool ransac_convert_outlier_pts_</div><div class="ttdoc">If true, convert remaining outliers to single points.</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:116</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a106bc0a90f9d67fbe1b40de1ca0b4fe5"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a106bc0a90f9d67fbe1b40de1ca0b4fe5">costmap_converter::CostmapToLinesDBSRANSAC::ransac_inlier_distance_</a></div><div class="ttdeci">double ransac_inlier_distance_</div><div class="ttdoc">Maximum distance to the line segment for inliers</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:112</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a22fede266d9bd4df6a43b25c5af1920e"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a22fede266d9bd4df6a43b25c5af1920e">costmap_converter::CostmapToLinesDBSRANSAC::rnd_generator_</a></div><div class="ttdeci">boost::random::mt19937 rnd_generator_</div><div class="ttdoc">Random number generator for ransac with default seed</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:120</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a2a7b082e5065664815dd7aa956116cfc"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a2a7b082e5065664815dd7aa956116cfc">costmap_converter::CostmapToLinesDBSRANSAC::ransac_no_iterations_</a></div><div class="ttdeci">int ransac_no_iterations_</div><div class="ttdoc">Number of ransac iterations</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:114</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a501e7bec141e37a4f58bc6429e10b340"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a501e7bec141e37a4f58bc6429e10b340">costmap_converter::CostmapToLinesDBSRANSAC::ransac_filter_remaining_outlier_pts_</a></div><div class="ttdeci">bool ransac_filter_remaining_outlier_pts_</div><div class="ttdoc">If true, filter the interior of remaining outliers and keep only keypoints of their convex hull</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:117</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a565e9766fd65a1028a4480a9230e6825"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a565e9766fd65a1028a4480a9230e6825">costmap_converter::CostmapToLinesDBSRANSAC::isInlier</a></div><div class="ttdeci">static bool isInlier(const Point &amp;point, const LinePoint &amp;line_start, const LinePoint &amp;line_end, double min_distance)</div><div class="ttdoc">Check if the candidate point is an inlier.</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:173</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a58d638577ac6c9c1d1ad7da7aa75300a"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a58d638577ac6c9c1d1ad7da7aa75300a">costmap_converter::CostmapToLinesDBSRANSAC::compute</a></div><div class="ttdeci">virtual void compute()</div><div class="ttdoc">This method performs the actual work (conversion of the costmap to polygons)</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a660a2dc34185b389e3ff269f6285eb51"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a660a2dc34185b389e3ff269f6285eb51">costmap_converter::CostmapToLinesDBSRANSAC::linearRegression</a></div><div class="ttdeci">bool linearRegression(const std::vector&lt; KeyPoint &gt; &amp;data, double &amp;slope, double &amp;intercept, double *mean_x_out=NULL, double *mean_y_out=NULL)</div><div class="ttdoc">Perform a simple linear regression in order to fit a straight line 'y = slope*x + intercept'</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a6b41a5167d7d9a3a2c1083f3a816973d"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a6b41a5167d7d9a3a2c1083f3a816973d">costmap_converter::CostmapToLinesDBSRANSAC::ransac_remainig_outliers_</a></div><div class="ttdeci">int ransac_remainig_outliers_</div><div class="ttdoc">Repeat ransac until the number of outliers is as specified here</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:115</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_a7d4d748eb406363f923deba89d412bcc"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#a7d4d748eb406363f923deba89d412bcc">costmap_converter::CostmapToLinesDBSRANSAC::initialize</a></div><div class="ttdeci">virtual void initialize(ros::NodeHandle nh)</div><div class="ttdoc">Initialize the plugin</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_aaf5d9b6eb2956b26f5dc5848b799b53e"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#aaf5d9b6eb2956b26f5dc5848b799b53e">costmap_converter::CostmapToLinesDBSRANSAC::~CostmapToLinesDBSRANSAC</a></div><div class="ttdeci">virtual ~CostmapToLinesDBSRANSAC()</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_ab68b6d612e221e07df93055bdc6e68b0"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ab68b6d612e221e07df93055bdc6e68b0">costmap_converter::CostmapToLinesDBSRANSAC::CostmapToLinesDBSRANSAC</a></div><div class="ttdeci">CostmapToLinesDBSRANSAC()</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_ac8c02d0aadbd0ee0b80561100e0a9b02"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ac8c02d0aadbd0ee0b80561100e0a9b02">costmap_converter::CostmapToLinesDBSRANSAC::lineRansac</a></div><div class="ttdeci">bool lineRansac(const std::vector&lt; KeyPoint &gt; &amp;data, double inlier_distance, int no_iterations, int min_inliers, std::pair&lt; KeyPoint, KeyPoint &gt; &amp;best_model, std::vector&lt; KeyPoint &gt; *inliers=NULL, std::vector&lt; KeyPoint &gt; *outliers=NULL)</div><div class="ttdoc">Find a straight line segment in a point cloud with RANSAC (without linear regression).</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToLinesDBSRANSAC_html_ae5d794c62c5db1943998bc2d62a7c491"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToLinesDBSRANSAC.html#ae5d794c62c5db1943998bc2d62a7c491">costmap_converter::CostmapToLinesDBSRANSAC::ransac_min_inliers_</a></div><div class="ttdeci">int ransac_min_inliers_</div><div class="ttdoc">Minimum numer of inliers required to form a line</div><div class="ttdef"><b>Definition:</b> costmap_to_lines_ransac.h:113</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></div><div class="ttdoc">This class converts the costmap_2d into a set of convex polygons (and points)</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:80</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

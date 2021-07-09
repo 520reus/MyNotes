@@ -408,28 +408,29 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory fortest
 
 # Convenience name for "all" pass in the directory.
+fortest/all: fortest/CMakeFiles/dy_test.dir/all
 fortest/all: fortest/CMakeFiles/discrete_points_main.dir/all
+fortest/all: fortest/CMakeFiles/test2.dir/all
 fortest/all: fortest/CMakeFiles/dataType_trans.dir/all
 fortest/all: fortest/CMakeFiles/generate_discrete_points.dir/all
-fortest/all: fortest/CMakeFiles/test2.dir/all
 fortest/all: fortest/CMakeFiles/ipopt_nlp.dir/all
 fortest/all: fortest/CMakeFiles/test3.dir/all
-fortest/all: fortest/CMakeFiles/mytest.dir/all
+fortest/all: fortest/CMakeFiles/osqp_example.dir/all
 fortest/all: fortest/CMakeFiles/ipopt_example.dir/all
-fortest/all: fortest/CMakeFiles/cppad_mytest.dir/all
 fortest/all: fortest/CMakeFiles/discrete_points_smoothing.dir/all
 fortest/all: fortest/CMakeFiles/cppad_example.dir/all
 
 .PHONY : fortest/all
 
 # Convenience name for "clean" pass in the directory.
+fortest/clean: fortest/CMakeFiles/dy_test.dir/clean
 fortest/clean: fortest/CMakeFiles/discrete_points_main.dir/clean
+fortest/clean: fortest/CMakeFiles/test2.dir/clean
 fortest/clean: fortest/CMakeFiles/dataType_trans.dir/clean
 fortest/clean: fortest/CMakeFiles/generate_discrete_points.dir/clean
-fortest/clean: fortest/CMakeFiles/test2.dir/clean
 fortest/clean: fortest/CMakeFiles/ipopt_nlp.dir/clean
 fortest/clean: fortest/CMakeFiles/test3.dir/clean
-fortest/clean: fortest/CMakeFiles/mytest.dir/clean
+fortest/clean: fortest/CMakeFiles/osqp_example.dir/clean
 fortest/clean: fortest/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 fortest/clean: fortest/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
 fortest/clean: fortest/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
@@ -446,7 +447,6 @@ fortest/clean: fortest/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clea
 fortest/clean: fortest/CMakeFiles/ipopt_example.dir/clean
 fortest/clean: fortest/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 fortest/clean: fortest/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-fortest/clean: fortest/CMakeFiles/cppad_mytest.dir/clean
 fortest/clean: fortest/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 fortest/clean: fortest/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 fortest/clean: fortest/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
@@ -494,13 +494,50 @@ fortest/preinstall:
 .PHONY : fortest/preinstall
 
 #=============================================================================
+# Target rules for target fortest/CMakeFiles/dy_test.dir
+
+# All Build rule for target.
+fortest/CMakeFiles/dy_test.dir/all:
+	$(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/depend
+	$(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=15,16 "Built target dy_test"
+.PHONY : fortest/CMakeFiles/dy_test.dir/all
+
+# Include target in all.
+all: fortest/CMakeFiles/dy_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+fortest/CMakeFiles/dy_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/dy_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 0
+.PHONY : fortest/CMakeFiles/dy_test.dir/rule
+
+# Convenience name for target.
+dy_test: fortest/CMakeFiles/dy_test.dir/rule
+
+.PHONY : dy_test
+
+# clean rule for target.
+fortest/CMakeFiles/dy_test.dir/clean:
+	$(MAKE) -f fortest/CMakeFiles/dy_test.dir/build.make fortest/CMakeFiles/dy_test.dir/clean
+.PHONY : fortest/CMakeFiles/dy_test.dir/clean
+
+# clean rule for target.
+clean: fortest/CMakeFiles/dy_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target fortest/CMakeFiles/discrete_points_main.dir
 
 # All Build rule for target.
 fortest/CMakeFiles/discrete_points_main.dir/all: fortest/CMakeFiles/discrete_points_smoothing.dir/all
 	$(MAKE) -f fortest/CMakeFiles/discrete_points_main.dir/build.make fortest/CMakeFiles/discrete_points_main.dir/depend
 	$(MAKE) -f fortest/CMakeFiles/discrete_points_main.dir/build.make fortest/CMakeFiles/discrete_points_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=12,13 "Built target discrete_points_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=10,11 "Built target discrete_points_main"
 .PHONY : fortest/CMakeFiles/discrete_points_main.dir/all
 
 # Include target in all.
@@ -531,13 +568,50 @@ clean: fortest/CMakeFiles/discrete_points_main.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target fortest/CMakeFiles/test2.dir
+
+# All Build rule for target.
+fortest/CMakeFiles/test2.dir/all:
+	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/depend
+	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=57,58 "Built target test2"
+.PHONY : fortest/CMakeFiles/test2.dir/all
+
+# Include target in all.
+all: fortest/CMakeFiles/test2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+fortest/CMakeFiles/test2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/test2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 0
+.PHONY : fortest/CMakeFiles/test2.dir/rule
+
+# Convenience name for target.
+test2: fortest/CMakeFiles/test2.dir/rule
+
+.PHONY : test2
+
+# clean rule for target.
+fortest/CMakeFiles/test2.dir/clean:
+	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/clean
+.PHONY : fortest/CMakeFiles/test2.dir/clean
+
+# clean rule for target.
+clean: fortest/CMakeFiles/test2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target fortest/CMakeFiles/dataType_trans.dir
 
 # All Build rule for target.
 fortest/CMakeFiles/dataType_trans.dir/all:
 	$(MAKE) -f fortest/CMakeFiles/dataType_trans.dir/build.make fortest/CMakeFiles/dataType_trans.dir/depend
 	$(MAKE) -f fortest/CMakeFiles/dataType_trans.dir/build.make fortest/CMakeFiles/dataType_trans.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=10,11 "Built target dataType_trans"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=8,9 "Built target dataType_trans"
 .PHONY : fortest/CMakeFiles/dataType_trans.dir/all
 
 # Include target in all.
@@ -601,43 +675,6 @@ fortest/CMakeFiles/generate_discrete_points.dir/clean:
 
 # clean rule for target.
 clean: fortest/CMakeFiles/generate_discrete_points.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target fortest/CMakeFiles/test2.dir
-
-# All Build rule for target.
-fortest/CMakeFiles/test2.dir/all:
-	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/depend
-	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=57,58 "Built target test2"
-.PHONY : fortest/CMakeFiles/test2.dir/all
-
-# Include target in all.
-all: fortest/CMakeFiles/test2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-fortest/CMakeFiles/test2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/test2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 0
-.PHONY : fortest/CMakeFiles/test2.dir/rule
-
-# Convenience name for target.
-test2: fortest/CMakeFiles/test2.dir/rule
-
-.PHONY : test2
-
-# clean rule for target.
-fortest/CMakeFiles/test2.dir/clean:
-	$(MAKE) -f fortest/CMakeFiles/test2.dir/build.make fortest/CMakeFiles/test2.dir/clean
-.PHONY : fortest/CMakeFiles/test2.dir/clean
-
-# clean rule for target.
-clean: fortest/CMakeFiles/test2.dir/clean
 
 .PHONY : clean
 
@@ -716,39 +753,39 @@ clean: fortest/CMakeFiles/test3.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target fortest/CMakeFiles/mytest.dir
+# Target rules for target fortest/CMakeFiles/osqp_example.dir
 
 # All Build rule for target.
-fortest/CMakeFiles/mytest.dir/all:
-	$(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/depend
-	$(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=45,46 "Built target mytest"
-.PHONY : fortest/CMakeFiles/mytest.dir/all
+fortest/CMakeFiles/osqp_example.dir/all:
+	$(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/depend
+	$(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=53,54 "Built target osqp_example"
+.PHONY : fortest/CMakeFiles/osqp_example.dir/all
 
 # Include target in all.
-all: fortest/CMakeFiles/mytest.dir/all
+all: fortest/CMakeFiles/osqp_example.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-fortest/CMakeFiles/mytest.dir/rule: cmake_check_build_system
+fortest/CMakeFiles/osqp_example.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/mytest.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/osqp_example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 0
-.PHONY : fortest/CMakeFiles/mytest.dir/rule
+.PHONY : fortest/CMakeFiles/osqp_example.dir/rule
 
 # Convenience name for target.
-mytest: fortest/CMakeFiles/mytest.dir/rule
+osqp_example: fortest/CMakeFiles/osqp_example.dir/rule
 
-.PHONY : mytest
-
-# clean rule for target.
-fortest/CMakeFiles/mytest.dir/clean:
-	$(MAKE) -f fortest/CMakeFiles/mytest.dir/build.make fortest/CMakeFiles/mytest.dir/clean
-.PHONY : fortest/CMakeFiles/mytest.dir/clean
+.PHONY : osqp_example
 
 # clean rule for target.
-clean: fortest/CMakeFiles/mytest.dir/clean
+fortest/CMakeFiles/osqp_example.dir/clean:
+	$(MAKE) -f fortest/CMakeFiles/osqp_example.dir/build.make fortest/CMakeFiles/osqp_example.dir/clean
+.PHONY : fortest/CMakeFiles/osqp_example.dir/clean
+
+# clean rule for target.
+clean: fortest/CMakeFiles/osqp_example.dir/clean
 
 .PHONY : clean
 
@@ -1270,43 +1307,6 @@ clean: fortest/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target fortest/CMakeFiles/cppad_mytest.dir
-
-# All Build rule for target.
-fortest/CMakeFiles/cppad_mytest.dir/all:
-	$(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/depend
-	$(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=6,7 "Built target cppad_mytest"
-.PHONY : fortest/CMakeFiles/cppad_mytest.dir/all
-
-# Include target in all.
-all: fortest/CMakeFiles/cppad_mytest.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-fortest/CMakeFiles/cppad_mytest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 fortest/CMakeFiles/cppad_mytest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wu/catkin_test_ws/build/CMakeFiles 0
-.PHONY : fortest/CMakeFiles/cppad_mytest.dir/rule
-
-# Convenience name for target.
-cppad_mytest: fortest/CMakeFiles/cppad_mytest.dir/rule
-
-.PHONY : cppad_mytest
-
-# clean rule for target.
-fortest/CMakeFiles/cppad_mytest.dir/clean:
-	$(MAKE) -f fortest/CMakeFiles/cppad_mytest.dir/build.make fortest/CMakeFiles/cppad_mytest.dir/clean
-.PHONY : fortest/CMakeFiles/cppad_mytest.dir/clean
-
-# clean rule for target.
-clean: fortest/CMakeFiles/cppad_mytest.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target fortest/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -1601,7 +1601,7 @@ clean: fortest/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 fortest/CMakeFiles/discrete_points_smoothing.dir/all:
 	$(MAKE) -f fortest/CMakeFiles/discrete_points_smoothing.dir/build.make fortest/CMakeFiles/discrete_points_smoothing.dir/depend
 	$(MAKE) -f fortest/CMakeFiles/discrete_points_smoothing.dir/build.make fortest/CMakeFiles/discrete_points_smoothing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=14,15,16 "Built target discrete_points_smoothing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=12,13,14 "Built target discrete_points_smoothing"
 .PHONY : fortest/CMakeFiles/discrete_points_smoothing.dir/all
 
 # Include target in all.
@@ -3494,7 +3494,7 @@ tutorial_multi_thread/preinstall:
 tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/all:
 	$(MAKE) -f tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/build.make tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/depend
 	$(MAKE) -f tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/build.make tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=8,9 "Built target create_multi_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=6,7 "Built target create_multi_thread"
 .PHONY : tutorial_multi_thread/CMakeFiles/create_multi_thread.dir/all
 
 # Include target in all.
@@ -3674,7 +3674,7 @@ tutorial_namespaceROS/CMakeFiles/namespace_node.dir/all: fortest/CMakeFiles/rosc
 tutorial_namespaceROS/CMakeFiles/namespace_node.dir/all: fortest/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(MAKE) -f tutorial_namespaceROS/CMakeFiles/namespace_node.dir/build.make tutorial_namespaceROS/CMakeFiles/namespace_node.dir/depend
 	$(MAKE) -f tutorial_namespaceROS/CMakeFiles/namespace_node.dir/build.make tutorial_namespaceROS/CMakeFiles/namespace_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=47,48 "Built target namespace_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=45,46 "Built target namespace_node"
 .PHONY : tutorial_namespaceROS/CMakeFiles/namespace_node.dir/all
 
 # Include target in all.
@@ -3822,7 +3822,7 @@ learning_veddha/CMakeFiles/odom_select.dir/all: learning_veddha/CMakeFiles/nav_m
 learning_veddha/CMakeFiles/odom_select.dir/all: learning_veddha/CMakeFiles/learning_veddha_generate_messages_eus.dir/all
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_select.dir/build.make learning_veddha/CMakeFiles/odom_select.dir/depend
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_select.dir/build.make learning_veddha/CMakeFiles/odom_select.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=53,54 "Built target odom_select"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=51,52 "Built target odom_select"
 .PHONY : learning_veddha/CMakeFiles/odom_select.dir/all
 
 # Include target in all.
@@ -3919,7 +3919,7 @@ learning_veddha/CMakeFiles/odom_gps.dir/all: learning_veddha/CMakeFiles/nav_msgs
 learning_veddha/CMakeFiles/odom_gps.dir/all: learning_veddha/CMakeFiles/learning_veddha_generate_messages_eus.dir/all
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_gps.dir/build.make learning_veddha/CMakeFiles/odom_gps.dir/depend
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_gps.dir/build.make learning_veddha/CMakeFiles/odom_gps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=49,50 "Built target odom_gps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=47,48 "Built target odom_gps"
 .PHONY : learning_veddha/CMakeFiles/odom_gps.dir/all
 
 # Include target in all.
@@ -4664,7 +4664,7 @@ learning_veddha/CMakeFiles/odom_pub.dir/all: learning_veddha/CMakeFiles/nav_msgs
 learning_veddha/CMakeFiles/odom_pub.dir/all: learning_veddha/CMakeFiles/learning_veddha_generate_messages_eus.dir/all
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_pub.dir/build.make learning_veddha/CMakeFiles/odom_pub.dir/depend
 	$(MAKE) -f learning_veddha/CMakeFiles/odom_pub.dir/build.make learning_veddha/CMakeFiles/odom_pub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=51,52 "Built target odom_pub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=49,50 "Built target odom_pub"
 .PHONY : learning_veddha/CMakeFiles/odom_pub.dir/all
 
 # Include target in all.

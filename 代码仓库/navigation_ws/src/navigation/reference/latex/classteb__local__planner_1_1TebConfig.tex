@@ -1,0 +1,159 @@
+\hypertarget{classteb__local__planner_1_1TebConfig}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config类 参考}
+\label{classteb__local__planner_1_1TebConfig}\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+
+
+Config class for the teb\+\_\+local\+\_\+planner and its components.  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+config.\+h$>$}
+
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1GoalTolerance}{Goal\+Tolerance}}
+\begin{DoxyCompactList}\small\item\em Goal tolerance related parameters \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses}{Homotopy\+Classes}}
+\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles}{Obstacles}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} related parameters \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} related parameters \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery}{Recovery}}
+\begin{DoxyCompactList}\small\item\em Recovery/backup related parameters \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Robot}{Robot}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Robot}{Robot}} related parameters \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{Trajectory}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{Trajectory}} related parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1TebConfig_af68a846700cdebcf7bb21841506fafbd}{Teb\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Construct the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} using default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_ac68bbf7bdb863b9b5ee513a90445a5d6}{load\+Ros\+Param\+From\+Node\+Handle}} (const ros\+::\+Node\+Handle \&nh)
+\begin{DoxyCompactList}\small\item\em Load parmeters from the ros param server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_afea6cade3c9a078716b5f0b388ce087e}{reconfigure}} (Teb\+Local\+Planner\+Reconfigure\+Config \&cfg)
+\begin{DoxyCompactList}\small\item\em Reconfigure parameters from the dynamic\+\_\+reconfigure config. Change parameters dynamically (e.\+g. with {\ttfamily rosrun rqt\+\_\+reconfigure rqt\+\_\+reconfigure}). A reconfigure server needs to be instantiated that calls this method in it\textquotesingle{}s callback. In case of the plugin {\itshape teb\+\_\+local\+\_\+planner} default values are defined in {\itshape PROJECT\+\_\+\+SRC/cfg/\+Teb\+Local\+Planner\+Reconfigure.\+cfg}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_ab22baefa8ef59187c50a27c9f5671187}{check\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Check parameters and print warnings in case of discrepancies \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a723c4348431f42ab5f66c5caeebe8413}{check\+Deprecated}} (const ros\+::\+Node\+Handle \&nh) const
+\begin{DoxyCompactList}\small\item\em Check if some deprecated parameters are found and print warnings \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a78724ec500e98a260c848e7b56a51757}\label{classteb__local__planner_1_1TebConfig_a78724ec500e98a260c848e7b56a51757}} 
+boost\+::mutex \& \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a78724ec500e98a260c848e7b56a51757}{config\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em Return the internal config mutex \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_adf74e4c2c064b1fd275bed6596e90344}\label{classteb__local__planner_1_1TebConfig_adf74e4c2c064b1fd275bed6596e90344}} 
+std\+::string \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_adf74e4c2c064b1fd275bed6596e90344}{odom\+\_\+topic}}
+\begin{DoxyCompactList}\small\item\em Topic name of the odometry message, provided by the robot driver or simulator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_aea25b03584f4ba6b7f0406670a685aba}\label{classteb__local__planner_1_1TebConfig_aea25b03584f4ba6b7f0406670a685aba}} 
+std\+::string \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_aea25b03584f4ba6b7f0406670a685aba}{map\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em Global planning frame \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a0d1821f67925bb11f4dff771ee3c157f}\label{classteb__local__planner_1_1TebConfig_a0d1821f67925bb11f4dff771ee3c157f}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Trajectory}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a0d1821f67925bb11f4dff771ee3c157f}{trajectory}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{Trajectory}} related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a092492e3bcf83ddd13dc311553902a4b}\label{classteb__local__planner_1_1TebConfig_a092492e3bcf83ddd13dc311553902a4b}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Robot}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Robot}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a092492e3bcf83ddd13dc311553902a4b}{robot}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Robot}{Robot}} related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_aa2f19063a5e47d646c4b4a33d1091238}\label{classteb__local__planner_1_1TebConfig_aa2f19063a5e47d646c4b4a33d1091238}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1GoalTolerance}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Goal\+Tolerance}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_aa2f19063a5e47d646c4b4a33d1091238}{goal\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em Goal tolerance related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a5405a3abdb78c886f500ee57943a6582}\label{classteb__local__planner_1_1TebConfig_a5405a3abdb78c886f500ee57943a6582}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Obstacles}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a5405a3abdb78c886f500ee57943a6582}{obstacles}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_ab86fc083498a98c5a598bdc4c75e5cc6}\label{classteb__local__planner_1_1TebConfig_ab86fc083498a98c5a598bdc4c75e5cc6}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Optimization}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_ab86fc083498a98c5a598bdc4c75e5cc6}{optim}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_ab26ff2eddd76192c8cf649bde2c994b3}\label{classteb__local__planner_1_1TebConfig_ab26ff2eddd76192c8cf649bde2c994b3}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Homotopy\+Classes}} {\bfseries hcp}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a2aca9bc8e2b37146ab4f5d2384245eaf}\label{classteb__local__planner_1_1TebConfig_a2aca9bc8e2b37146ab4f5d2384245eaf}} 
+struct \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Recovery}} \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_a2aca9bc8e2b37146ab4f5d2384245eaf}{recovery}}
+\begin{DoxyCompactList}\small\item\em Parameters related to recovery and backup strategies \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Config class for the teb\+\_\+local\+\_\+planner and its components. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_af68a846700cdebcf7bb21841506fafbd}\label{classteb__local__planner_1_1TebConfig_af68a846700cdebcf7bb21841506fafbd}} 
+\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}!TebConfig@{TebConfig}}
+\index{TebConfig@{TebConfig}!teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+\doxysubsubsection{\texorpdfstring{TebConfig()}{TebConfig()}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Teb\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} using default values. 
+
+\begin{DoxyWarning}{警告}
+If the {\bfseries{rosparam}} server or/and {\bfseries{dynamic\+\_\+reconfigure}} (rqt\+\_\+reconfigure) node are used, the default variables will be overwritten\+: ~\newline
+ E.\+g. if {\itshape base\+\_\+local\+\_\+planner} is utilized as plugin for the navigation stack, the initialize() method will register a dynamic\+\_\+reconfigure server. A subset (not all but most) of the parameters are considered for dynamic modifications. All parameters considered by the dynamic\+\_\+reconfigure server (and their {\bfseries{default}} values) are set in {\itshape PROJECT\+\_\+\+SRC/cfg/\+Teb\+Local\+Planner\+Reconfigure.\+cfg}. ~\newline
+ In addition the rosparam server can be queried to get parameters e.\+g. defiend in a launch file. The plugin source (or a possible binary source) can call \mbox{\hyperlink{classteb__local__planner_1_1TebConfig_ac68bbf7bdb863b9b5ee513a90445a5d6}{load\+Ros\+Param\+From\+Node\+Handle()}} to update the parameters. In {\itshape summary}, default parameters are loaded in the following order (the right one overrides the left ones)\+: ~\newline
+ {\bfseries{\mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} Constructor defaults $<$$<$ dynamic\+\_\+reconfigure defaults $<$$<$ rosparam server defaults}} 
+\end{DoxyWarning}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_a723c4348431f42ab5f66c5caeebe8413}\label{classteb__local__planner_1_1TebConfig_a723c4348431f42ab5f66c5caeebe8413}} 
+\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}!checkDeprecated@{checkDeprecated}}
+\index{checkDeprecated@{checkDeprecated}!teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+\doxysubsubsection{\texorpdfstring{checkDeprecated()}{checkDeprecated()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::check\+Deprecated (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption}) const}
+
+
+
+Check if some deprecated parameters are found and print warnings 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & const reference to the local ros\+::\+Node\+Handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_ab22baefa8ef59187c50a27c9f5671187}\label{classteb__local__planner_1_1TebConfig_ab22baefa8ef59187c50a27c9f5671187}} 
+\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}!checkParameters@{checkParameters}}
+\index{checkParameters@{checkParameters}!teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+\doxysubsubsection{\texorpdfstring{checkParameters()}{checkParameters()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::check\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check parameters and print warnings in case of discrepancies 
+
+Call this method whenever parameters are changed using public interfaces to inform the user about some improper uses. \mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_ac68bbf7bdb863b9b5ee513a90445a5d6}\label{classteb__local__planner_1_1TebConfig_ac68bbf7bdb863b9b5ee513a90445a5d6}} 
+\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}!loadRosParamFromNodeHandle@{loadRosParamFromNodeHandle}}
+\index{loadRosParamFromNodeHandle@{loadRosParamFromNodeHandle}!teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+\doxysubsubsection{\texorpdfstring{loadRosParamFromNodeHandle()}{loadRosParamFromNodeHandle()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::load\+Ros\+Param\+From\+Node\+Handle (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})}
+
+
+
+Load parmeters from the ros param server. 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & const reference to the local ros\+::\+Node\+Handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebConfig_afea6cade3c9a078716b5f0b388ce087e}\label{classteb__local__planner_1_1TebConfig_afea6cade3c9a078716b5f0b388ce087e}} 
+\index{teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}!reconfigure@{reconfigure}}
+\index{reconfigure@{reconfigure}!teb\_local\_planner::TebConfig@{teb\_local\_planner::TebConfig}}
+\doxysubsubsection{\texorpdfstring{reconfigure()}{reconfigure()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::reconfigure (\begin{DoxyParamCaption}\item[{Teb\+Local\+Planner\+Reconfigure\+Config \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Reconfigure parameters from the dynamic\+\_\+reconfigure config. Change parameters dynamically (e.\+g. with {\ttfamily rosrun rqt\+\_\+reconfigure rqt\+\_\+reconfigure}). A reconfigure server needs to be instantiated that calls this method in it\textquotesingle{}s callback. In case of the plugin {\itshape teb\+\_\+local\+\_\+planner} default values are defined in {\itshape PROJECT\+\_\+\+SRC/cfg/\+Teb\+Local\+Planner\+Reconfigure.\+cfg}. 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & Config class autogenerated by dynamic\+\_\+reconfigure according to the cfg-\/file mentioned above. \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

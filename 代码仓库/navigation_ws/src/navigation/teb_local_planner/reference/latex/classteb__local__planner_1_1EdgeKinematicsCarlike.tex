@@ -1,0 +1,54 @@
+\hypertarget{classteb__local__planner_1_1EdgeKinematicsCarlike}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Kinematics\+Carlike类 参考}
+\label{classteb__local__planner_1_1EdgeKinematicsCarlike}\index{teb\_local\_planner::EdgeKinematicsCarlike@{teb\_local\_planner::EdgeKinematicsCarlike}}
+
+
+Edge defining the cost function for satisfying the non-\/holonomic kinematics of a carlike mobile robot.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+kinematics.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Kinematics\+Carlike 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeKinematicsCarlike}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeKinematicsCarlike_a6fdc9a407e3466b20b932b3deff17e6c}\label{classteb__local__planner_1_1EdgeKinematicsCarlike_a6fdc9a407e3466b20b932b3deff17e6c}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsCarlike_a6fdc9a407e3466b20b932b3deff17e6c}{Edge\+Kinematics\+Carlike}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeKinematicsCarlike_a8373e56be6f0dfeeb3ea95f00d49a621}\label{classteb__local__planner_1_1EdgeKinematicsCarlike_a8373e56be6f0dfeeb3ea95f00d49a621}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsCarlike_a8373e56be6f0dfeeb3ea95f00d49a621}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for satisfying the non-\/holonomic kinematics of a carlike mobile robot. 
+
+The edge depends on two vertices $ \mathbf{s}_i, \mathbf{s}_{ip1} $ and minimizes a geometric interpretation of the non-\/holonomic constraint\+:
+\begin{DoxyItemize}
+\item C. Rösmann et al.\+: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.
+\end{DoxyItemize}
+
+The definition is identically to the one of the differential drive robot. Additionally, this edge incorporates a minimum turning radius that is required by carlike robots. The turning radius is defined by $ r=v/omega $.
+
+The {\itshape weight} can be set using set\+Information()\+: Matrix element 1,1\+: (Choose a very high value\+: $\sim$1000). ~\newline
+The second equation enforces a minimum turning radius. The {\itshape weight} can be set using set\+Information()\+: Matrix element 2,2. ~\newline
+The dimension of the error / cost vector is 3\+: the first component represents the nonholonomic constraint cost, the second one backward-\/drive cost and the third one the minimum turning radius \begin{DoxySeeAlso}{参见}
+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Kinematics, \mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsDiffDrive}{Edge\+Kinematics\+Diff\+Drive}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Bounding the turning radius from below is not affected by the penalty\+\_\+epsilon parameter, the user might add an extra margin to the min\+\_\+turning\+\_\+radius param. 
+
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebBinaryEdge_a84e5a381aac4fba85204ae1af0494198}{set\+Teb\+Config()}} 
+\end{DoxyRemark}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+kinematics.\+h\end{DoxyCompactItemize}

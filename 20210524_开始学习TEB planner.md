@@ -785,6 +785,12 @@ TEB是在全局规划路径的基础上（A*的结果）进行局部规划的，
 
 但是实际上local costmap范围很小，全局目标位置大概率不会在local costmap内，如果无法处理该情况就想办法改进。
 
+目标点选在local costmap外倒车很低效与规划逻辑有关，因为在跟踪全局路径的过程中都会以局部全局路径段作为参考，并且选取其终点作为局部目标
+
+<img src="图片/20210524_开始学习TEB planner/2021-07-08 22-18-02 的屏幕截图.png" style="zoom:80%;" />
+
+
+
 #### **TEB跟踪全局路径原理**
 
 现在已经知道TEB是固定起点与终点来进行优化求解规划轨迹的，但是起点与终点在哪？是不是一直变化的？下面就根据代码解决该问题。
@@ -840,6 +846,152 @@ teb接收全局路径规划结果，并保存在变量globa_plan_中。在TEB封
 ![](图片/20210524_开始学习TEB planner/2021-06-08 16-31-39 的屏幕截图.png)
 
 
+
+## 对TEB的改进或作者在论文中没有提到的点（论文创新点）
+
+### idea
+
+**目前选取特定场景下，即狭窄道路下的轨迹规划，利用TEB并对其进行改进来完成窄路通行任务就是我论文要解决的实际问题。**
+
+1. teb未考虑位姿点序列整体的平滑性，考虑将平滑代价作为误差项封装成g2o的超图的边进行图优化。实验结果可以对比优化前后的点序列的曲率（创新）
+
+2. 时间不一致是基于优化求解的曲线生成方法普遍存在的问题，而在狭窄道路场景中，时间不一致导致车辆在每个规划周期的规划结果都无法与上一周期保持一致，随着规划的进行，车辆实际运行的路线与第一时刻的规划结果之间将出现越来越大的误差，在狭窄道路环境下规划失效的概率将大大增加，从而导致发生碰撞等安全问题。
+
+   updateAndPruneTEB剪枝方法虽然能够提供下一规划周期的暖启动，因为在每个周期进行规划时，规划起点位于上一周期的规划结果上，但是规划终点随车辆向前移动，这种边界条件的变化将导致最优化计算结果的变化，从而使得新规划结果逐渐偏离原始规划结果。
+
+   论文中提到，一种折中的办法是根据Belleman优化原理，锁定目标位置不变保证了前后曲线一致，当车辆接近目标位置时，周期性的切换到下一个目标位置重新生成路径。
+
+   为了实现该方法，可以更改TEB剪枝原理，即在固定当前local costmap下的最远全局参考路径终点不变，当车辆走到该终点时再更新到下一个local costmap的最远全局路径终点。
+
+   除了固定终点，还可以参考前述apollo在处理轨迹拼接遇到时间一致性问题是如何选取下一帧规划起点的。
+
+   另外可以通过多个规划周期路径点坐标的变化来衡量时间一致性满足的程度，比如我观察10s的TEB局部规划结果，然后对这10s的相邻规划路径坐标作差，然后取和，作为衡量时间一致性的指标。（创新）
+
+3. 速度的正方向判断（未提到）
+
+4. 调试记录所述倒车问题
+
+5. 结合问题2与4，可以类似局部目标点的概念，即**暂时固定**不变的点，比如中继点，这个概念可以同时解决问题2与4。中继点概念的解释：行军中为变换路线而设置的点。先走到那里，再到目的地。
+
+6. 中继点概念的提出同时解决了时间一致性的问题与倒车问题，扩展了TEB的应用场景，可以仅利用一个局部规划器来完成大地图导航、狭窄路段倒车、掉头、倒车避障等多个场景的导航的任务，这样就不用再利用上层状态机来切换不同场景下的局部规划器，使得鲁棒性与安全性增强。
+
+### 实现
+
+1. 时间一致性问题的解决（teb_local_planner_ros.cpp）
+
+   目前是通过选取局部代价地图中全局路径段中最后一个点作为当前的局部目标，如果到达局部目标就更新局部目标为到达时刻局部代价地图中全局路径段中最后一个点，一直进行下去直到达到全局目标。通过固定局部目标使得优化求解的终点固定，从而满足Bellman最优原，防止了轨迹的突变并且满足时间一致性。目前考虑下一个思路，即通过定时器定时更新局部目标，这种优化方法理论上更加灵活，因为上一种方法一定要到达局部目标附近才会更新，如果突然一个动态障碍物走到车与局部目标的中间，那么车辆可能规划失效或者规划出的轨迹非常低效（表现在轨迹变长，时间变多）。目前处于待实现状态！
+
+2. 倒车问题的解决
+
+   在使用teb作为局部轨迹规划器时，如果车辆后方设置目标点，并且目标点不在local costmap内，则无法实现“直觉”上的倒车，而是很“傻”的先掉头再走，是个很大的问题。
+
+   
+
+   
+
+## TEB参数
+
+| 参数                                                         | 类型   | 含义                                                         | 单位    | 最小  | 默认   | 最大    |
+| ------------------------------------------------------------ | ------ | ------------------------------------------------------------ | ------- | ----- | ------ | ------- |
+| teb_autosize                                                 | bool   | 优化期间允许根据下述参数调整轨迹点序列（增加或删除轨迹点）   |         |       | True   |         |
+| dt_ref（对规划效率有显著影响）                               | double | 局部轨迹规划的解析度，即轨迹点之间的时间间隔，决定轨迹点的密集程度与规划效率，通常设置为1/control rate | s       | 0.01  | 0.3    | 1.0     |
+| dt_hysteresis                                                | double | 允许改变的时域解析度的浮动范围，一般为dt_ref的10%            | s       | 0.002 | 0.1    | 0.5     |
+| global_plan_overwrite_orientation                            | bool   | 覆盖全局路径中局部路径段的局部目标的朝向                     |         |       | True   |         |
+| allow_init_with_backwards_motion                             | bool   | 当目标在车辆后方且在局部代价地图中，允许向后运动的轨迹初始化，为了实现倒车，设置为True |         |       | False  |         |
+| max_global_plan_lookahead_dist（前瞻距离需要依赖实际地图大小） | double | 最远前瞻距离，是考虑优化的全局路径段在局部代价地图中的最大长度，为累计欧式距离 | m       | 0.0   | 3.0    | 50.0    |
+| force_reinit_new_goal_dist                                   | double | 如果上一个目标的间隔超过指定的米数（跳过热启动），则强制规划器重新初始化轨迹 | m       | 0.0   | 1.0    | 10.0    |
+| feasibility_check_no_poses                                   | int    | 可行性检查时每个采样间隔考虑的相关位姿数量                   |         | 0     | 5      | 50      |
+| exact_arc_length                                             | bool   | 如果为真，规划器在速度、加速度和转弯率计算中使用精确的弧长[->增加的CPU时间]，否则使用欧几里德近似 |         |       | False  |         |
+| publish_feedback                                             | bool   | 发布action提供的反馈信息                                     |         |       | False  |         |
+| global_plan_viapoint_sep                                     | double | 从全局计划中提取的每两个连续通过点之间的最小间隔[如果为负：禁用] |         | -0.1  | -0.1   | 5.0     |
+| via_points_ordered                                           | bool   | 如果为真，规划器遵循存储容器中通过点的顺序                   |         |       | Fasle  |         |
+| max_vel_x                                                    | double | 最大x前向速度                                                | m/s     | 0.01  | 0.4    | 100.0   |
+| max_vel_x_backwards                                          | double | 最大x后退速度                                                | m/s     | 0.01  | 0.2    | 100.0   |
+| max_vel_theta                                                | double | 最大转向角速度                                               | rad/s   | 0.01  | 0.3    | 100.0   |
+| acc_lim_x                                                    | double | 最大x加速度                                                  | m/s^2   | 0.01  | 0.5    | 100.0   |
+| acc_lim_theta                                                | double | 最大角速度                                                   | rad/s^2 | 0.01  | 0.5    | 100.0   |
+| is_footprint_dynamic                                         | bool   | 如果为真，在轨迹可行性检查前更新footprint轮廓模型            |         |       | False  |         |
+| min_turning_radius                                           | double | 车辆的最小转弯半径（diff-drive robot:zero）                  | m       | 0.0   | 0.0    | 50.0    |
+| wheelbase                                                    | double | 轴距                                                         | m       | -10.0 | 1.0    | 10.0    |
+| max_vel_y                                                    | double | 最大y方向速度（非完整型约必须为0！）                         | m/s     | 0.0   | 0.0    | 100.0   |
+| acc_lim_y                                                    | double | 最大y方向加速度                                              | m/s^2   | 0.01  | 0.5    | 100.0   |
+| xy_goal_tolerance                                            | double | 目标xy偏移容忍度                                             | m       | 0.001 | 0.2    | 10.0    |
+| yaw_goal_tolerance                                           | double | 目标角度偏移容忍度                                           | rad     | 0.001 | 0.1    | 3.2     |
+| free_goal_vel                                                | bool   | 允许机器人以最大速度驶向目的地                               |         |       | False  |         |
+| min_obstacle_dist                                            | double | 和障碍物的最小距离                                           | m       | 0.0   | 0.5    | 10.0    |
+| inflation_dist                                               | double | 障碍物膨胀距离，需要大于min_obstacle_dist才能生效            | m       | 0.0   | 0.6    | 15.0    |
+| dynamic_obstacle_inflation_dist                              | double | 动态障碍物的膨胀距离，需要大于min_obstacle_dist才能生效      | m       | 0.0   | 0.6    | 15.0    |
+| include_dynamic_obstacles                                    | bool   | 是否将动态障碍物预测为速度模型                               |         |       | False  |         |
+| include_costmap_obstacles                                    | bool   | costmap 中的障碍物是否被直接考虑                             |         |       | True   |         |
+| legacy_obstacle_association                                  | bool   | 如果为真，则使用老的碰撞检测方法（for each obstacle, find the nearest TEB pose），否则使用新方法(or each teb pose, find only ‘relevant’ obstacles) |         |       | False  |         |
+| costmap_obstacles_behind_robot_dist                          | double | 考虑车辆身后多远距离以内的障碍物                             | m       | 0.0   | 1.5    | 20.0    |
+| obstacle_poses_affected                                      | int    | 考虑障碍物最近点附近的多少个轨迹点是否发生碰撞               |         | 0     | 30     | 50      |
+| no_inner_iterations                                          | int    | 被外循环调用后内循环执行优化次数                             |         | 1     | 5      | 100     |
+| no_outer_iterations                                          | int    | 执行的外循环的优化次数                                       |         | 1     | 4      | 100     |
+| optimization_activate                                        | bool   | 激活优化                                                     |         |       | True   |         |
+| optimization_verbose                                         | bool   | 打印节点信息                                                 |         |       | False  |         |
+| penalty_epsilon                                              | double | 对于硬约束近似，在惩罚函数中添加安全裕量                     | scaler  | 0.0   | 0.1    | 1.0     |
+| weight_max_vel_x                                             | double | 最大x速度权重                                                |         | 0.0   | 2.0    | 1000.0  |
+| weight_max_vel_y                                             | double | 最大y速度权重                                                |         | 0.0   | 2.0    | 1000.0  |
+| weight_max_vel_theta                                         | double | 最大角速度权重                                               |         | 0.0   | 1.0    | 1000.0  |
+| weight_acc_lim_x                                             | double | 最大x 加速度权重                                             |         | 0.0   | 1.0    | 1000.0  |
+| weight_acc_lim_y                                             | double | 最大y加速度权重                                              |         | 0.0   | 1.0    | 1000.0  |
+| weight_acc_lim_theta                                         | double | 最大角速度权重                                               |         | 0.0   | 1.0    | 1000.0  |
+| weight_kinematics_nh                                         | double | 非完整型约束权重                                             |         | 0.0   | 1000.0 | 10000.0 |
+| weight_kinematics_forward_drive                              | double | 优化过程中，迫使机器人只选择前进方向，差速轮适用             |         | 0.0   | 1.0    | 1000.0  |
+| weight_kinematics_turning_radius                             | double | 优化过程中，车型机器人的最小转弯半径的权重                   |         | 0.0   | 1.0    | 1000.0  |
+| weight_optimaltime                                           | double | 优化过程中，基于轨迹的时间上的权重，                         |         | 0.0   | 1.0    | 1000.0  |
+| weight_obstacle                                              | double | 优化过程中，和障碍物最小距离的权重                           |         | 0.0   | 50.0   | 1000.0  |
+| weight_inflation                                             | double | 优化过程中， 膨胀区的权重                                    |         | 0.0   | 0.1    | 10.0    |
+| weight_dynamic_obstacle                                      | double | 优化过程中，和动态障碍物最小距离的权重                       |         | 0.0   | 50.0   | 1000.0  |
+| weight_dynamic_obstacle_inflation                            | double | 优化过程中，和动态障碍物膨胀区的权重                         |         | 0.0   | 0.1    | 10.0    |
+| weight_viapoint                                              | double | 优化过程中，和全局路径采样点距离的权重                       |         | 0.0   | 1.0    | 1000.0  |
+| enable_multithreading                                        | bool   | 允许多线程并行处理                                           |         |       | True   |         |
+| max_number_classes                                           | int    | 允许的线程数                                                 |         | 1     | 5      | 100     |
+| selection_cost_hysteresis                                    | double |                                                              |         | 0.0   | 1.0    | 2.0     |
+| selection_prefer_initial_plan                                | double |                                                              |         | 0.0   | 0.95   | 1.0     |
+| selection_obst_cost_scale                                    | double |                                                              |         | 0.0   | 100.0  | 1000.0  |
+| selection_viapoint_cost_scale                                | double |                                                              |         | 0.0   | 1.0    | 100.0   |
+| selection_alternative_time_cost                              | bool   |                                                              |         |       | False  |         |
+| switching_blocking_period                                    | double |                                                              |         |       | 0.0    |         |
+| roadmap_graph_no_samples                                     | int    |                                                              |         | 1     | 15     | 100     |
+| roadmap_graph_area_width                                     | double |                                                              |         | 0.1   | 5.0    | 20.0    |
+| roadmap_graph_area_length_scale                              | double |                                                              |         | 0.5   | 1.0    | 2.0     |
+| h_signature_prescaler                                        | double |                                                              |         | 0.2   | 1.0    | 1.0     |
+| h_signature_threshold                                        | double |                                                              |         | 0.0   | 0.1    | 1.0     |
+| obstacle_heading_threshold                                   | double |                                                              |         | 0.0   | 0.45   | 1.0     |
+| viapoints_all_candidates                                     | bool   |                                                              |         |       | True   |         |
+| visualize_hc_graph                                           | bool   |                                                              |         |       | False  |         |
+| shrink_horizon_backup                                        | bool   |                                                              |         |       | True   |         |
+| oscillation_recovery                                         | bool   |                                                              |         |       | True   |         |
+
+**footprint model**
+
+```
+footprint_model: # types: “point”, “circular”, “two_circles”, “line”, “polygon”
+type: “point” 选择车辆轮廓模型类型，对障碍物检测十分重要
+radius: 0.36 # for type “circular”
+line_start: [-0.3, 0.0] # for type “line” 线模型起始坐标
+line_end: [0.3, 0.0] # for type “line” 线模型尾部坐标
+front_offset: 0.2 # for type “two_circles” 前圆心坐标
+front_radius: 0.2 # for type “two_circles” 前圆半径
+rear_offset: 0.2 # for type “two_circles” 后圆心坐标
+rear_radius: 0.2 # for type “two_circles” 后圆半径
+vertices: [ [0.25, -0.05], [0.18, -0.05], [0.18, -0.18], [-0.19, -0.18], [-0.25,  0], [-0.19, 0.18], [0.18, 0.18], [0.18, 0.05], [0.25, 0.05] ] # for type "polygon"多边形边界点
+```
+
+
+
+## 尚未解决的问题
+
+1. 为什么有的边不用求一阶雅克比矩阵？不是后面计算的时候一定会遇到么？
+2. edge_velocity里面的速度正负是怎么判断的？
+3. 误差目标函数的形式？雅克比矩阵？
+4. *class* EdgeObstacle : *public* BaseTebUnaryEdge<1, *const* Obstacle*, VertexPose>，为什么这里的数据类型是*const* Obstacle*？与障碍物的距离不应该是double类型么？
+5. TebOptimalPlanner类中的成员变量obstacles_per_vertex_是什么？
+6. 动态障碍物如何处理？
+7. 全局规划结果传给局部规划的是什么样的路径（坐标系怎么变换的）？是只传入整条全局路径的一部分还是全部？
+8. TEB在全局参考路径上向前规划了多长的轨迹？其长度是固定的还是变化的？与dt_ref有关么？
 
 ## g2o
 
@@ -1369,16 +1521,7 @@ https://blog.csdn.net/weixin_34945803/article/details/107592706?spm=1001.2014.30
 
 <img src="图片/20210524_开始学习TEB planner/20200726170337570.png" alt="img" style="zoom:67%;" />
 
-## 尚未解决的问题
 
-1. 为什么有的边不用求一阶雅克比矩阵？不是后面计算的时候一定会遇到么？
-2. edge_velocity里面的速度正负是怎么判断的？
-3. 误差目标函数的形式？雅克比矩阵？
-4. *class* EdgeObstacle : *public* BaseTebUnaryEdge<1, *const* Obstacle*, VertexPose>，为什么这里的数据类型是*const* Obstacle*？与障碍物的距离不应该是double类型么？
-5. TebOptimalPlanner类中的成员变量obstacles_per_vertex_是什么？
-6. 动态障碍物如何处理？
-7. 全局规划结果传给局部规划的是什么样的路径（坐标系怎么变换的）？是只传入整条全局路径的一部分还是全部？
-8. TEB在全局参考路径上向前规划了多长的轨迹？其长度是固定的还是变化的？与dt_ref有关么？
 
 
 
@@ -1387,28 +1530,6 @@ https://blog.csdn.net/weixin_34945803/article/details/107592706?spm=1001.2014.30
 1.在作者论文中找到g2o框架可以自动利用数值近似求得雅克比矩阵<img src="图片/20210524_开始学习TEB planner/2021-06-01 11-04-05 的屏幕截图.png" style="zoom:80%;" />
 
 
-
-## 对TEB的改进或作者在论文中没有提到的点（论文创新点）
-
-**目前选取特定场景下，即狭窄道路下的轨迹规划，利用TEB并对其进行改进来完成窄路通行任务就是我论文要解决的实际问题。**
-
-1. teb未考虑位姿点序列整体的平滑性，考虑将平滑代价作为误差项封装成g2o的超图的边进行图优化。实验结果可以对比优化前后的点序列的曲率（创新）
-
-2. 时间不一致是基于优化求解的曲线生成方法普遍存在的问题，而在狭窄道路场景中，时间不一致导致车辆在每个规划周期的规划结果都无法与上一周期保持一致，随着规划的进行，车辆实际运行的路线与第一时刻的规划结果之间将出现越来越大的误差，在狭窄道路环境下规划失效的概率将大大增加，从而导致发生碰撞等安全问题。
-
-   updateAndPruneTEB剪枝方法虽然能够提供下一规划周期的暖启动，因为在每个周期进行规划时，规划起点位于上一周期的规划结果上，但是规划终点随车辆向前移动，这种边界条件的变化将导致最优化计算结果的变化，从而使得新规划结果逐渐偏离原始规划结果。
-
-   论文中提到，一种折中的办法是根据Belleman优化原理，锁定目标位置不变保证了前后曲线一致，当车辆接近目标位置时，周期性的切换到下一个目标位置重新生成路径。
-
-   为了实现该方法，可以更改TEB剪枝原理，即在固定当前local costmap下的最远全局参考路径终点不变，当车辆走到该终点时再更新到下一个local costmap的最远全局路径终点。
-
-   除了固定终点，还可以参考前述apollo在处理轨迹拼接遇到时间一致性问题是如何选取下一帧规划起点的。
-
-   另外可以通过多个规划周期路径点坐标的变化来衡量时间一致性满足的程度，比如我观察10s的TEB局部规划结果，然后对这10s的相邻规划路径坐标作差，然后取和，作为衡量时间一致性的指标。（创新）
-
-3. 
-
-4. 速度的正方向判断（未提到）
 
 
 

@@ -114,6 +114,12 @@ mytest_EXTERNAL_OBJECTS =
 /home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /home/wu/vd_ws/devel/lib/libserial.so
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/librt.so
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /home/wu/vd_ws/devel/lib/libserial.so
+/home/wu/catkin_test_ws/devel/lib/fortest/mytest: /usr/lib/x86_64-linux-gnu/librt.so
 /home/wu/catkin_test_ws/devel/lib/fortest/mytest: fortest/CMakeFiles/mytest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wu/catkin_test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/wu/catkin_test_ws/devel/lib/fortest/mytest"
 	cd /home/wu/catkin_test_ws/build/fortest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mytest.dir/link.txt --verbose=$(VERBOSE)
