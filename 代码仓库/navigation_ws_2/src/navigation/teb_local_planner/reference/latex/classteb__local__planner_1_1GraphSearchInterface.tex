@@ -1,0 +1,88 @@
+\hypertarget{classteb__local__planner_1_1GraphSearchInterface}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Graph\+Search\+Interface类 参考}
+\label{classteb__local__planner_1_1GraphSearchInterface}\index{teb\_local\_planner::GraphSearchInterface@{teb\_local\_planner::GraphSearchInterface}}
+
+
+Base class for graph based path planning / homotopy class sampling  
+
+
+
+
+{\ttfamily \#include $<$graph\+\_\+search.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Graph\+Search\+Interface 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1GraphSearchInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_aa01825c4574dd9cf17895e2602f26828}\label{classteb__local__planner_1_1GraphSearchInterface_aa01825c4574dd9cf17895e2602f26828}} 
+virtual void {\bfseries create\+Graph} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, double dist\+\_\+to\+\_\+obst, double obstacle\+\_\+heading\+\_\+threshold, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)=0
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_aa46ec22a5eb00ebcdf67c5ff0cceb218}\label{classteb__local__planner_1_1GraphSearchInterface_aa46ec22a5eb00ebcdf67c5ff0cceb218}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_aa46ec22a5eb00ebcdf67c5ff0cceb218}{clear\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Clear any existing graph of the homotopy class search \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_a4837d2cc6bb18eec7b0766b30da2d09a}\label{classteb__local__planner_1_1GraphSearchInterface_a4837d2cc6bb18eec7b0766b30da2d09a}} 
+Hc\+Graph \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_a4837d2cc6bb18eec7b0766b30da2d09a}{graph\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the graph that is utilized to find alternative homotopy classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_a42c8333e943be02f8b4600e5ade94f27}\label{classteb__local__planner_1_1GraphSearchInterface_a42c8333e943be02f8b4600e5ade94f27}} 
+\mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_a42c8333e943be02f8b4600e5ade94f27}{Graph\+Search\+Interface}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} $\ast$hcp)
+\begin{DoxyCompactList}\small\item\em Protected constructor that should be called by subclasses \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_a989d9733ff0b97536835c6382322878a}{Depth\+First}} (Hc\+Graph \&g, std\+::vector$<$ Hc\+Graph\+Vertex\+Type $>$ \&visited, const Hc\+Graph\+Vertex\+Type \&goal, double start\+\_\+orientation, double goal\+\_\+orientation, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Depth First Search implementation to find all paths between the start and the specified goal vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_a930374f399d52430a9ad2dfe10f36f6a}\label{classteb__local__planner_1_1GraphSearchInterface_a930374f399d52430a9ad2dfe10f36f6a}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_a930374f399d52430a9ad2dfe10f36f6a}{cfg\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Config class that stores and manages all related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_a123b37779738c378666e20e6875ba3dd}\label{classteb__local__planner_1_1GraphSearchInterface_a123b37779738c378666e20e6875ba3dd}} 
+\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} $\ast$const \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface_a123b37779738c378666e20e6875ba3dd}{hcp\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Raw pointer to the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}}. The \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} itself is guaranteed to outlive the graph search class it is holding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Base class for graph based path planning / homotopy class sampling 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1GraphSearchInterface_a989d9733ff0b97536835c6382322878a}\label{classteb__local__planner_1_1GraphSearchInterface_a989d9733ff0b97536835c6382322878a}} 
+\index{teb\_local\_planner::GraphSearchInterface@{teb\_local\_planner::GraphSearchInterface}!DepthFirst@{DepthFirst}}
+\index{DepthFirst@{DepthFirst}!teb\_local\_planner::GraphSearchInterface@{teb\_local\_planner::GraphSearchInterface}}
+\doxysubsubsection{\texorpdfstring{DepthFirst()}{DepthFirst()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Graph\+Search\+Interface\+::\+Depth\+First (\begin{DoxyParamCaption}\item[{Hc\+Graph \&}]{g,  }\item[{std\+::vector$<$ Hc\+Graph\+Vertex\+Type $>$ \&}]{visited,  }\item[{const Hc\+Graph\+Vertex\+Type \&}]{goal,  }\item[{double}]{start\+\_\+orientation,  }\item[{double}]{goal\+\_\+orientation,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Depth First Search implementation to find all paths between the start and the specified goal vertex. 
+
+Complete paths are stored to the internal path container. \begin{DoxySeeAlso}{参见}
+\href{http://www.technical-recipes.com/2011/a-recursive-algorithm-to-find-all-paths-between-two-given-nodes/}{\texttt{ http\+://www.\+technical-\/recipes.\+com/2011/a-\/recursive-\/algorithm-\/to-\/find-\/all-\/paths-\/between-\/two-\/given-\/nodes/}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em g} & Graph on which the depth first should be performed \\
+\hline
+{\em visited} & A container that stores visited vertices (pass an empty container, it will be filled inside during recursion). \\
+\hline
+{\em goal} & Desired goal vertex \\
+\hline
+{\em start\+\_\+orientation} & Orientation of the first trajectory pose, required to initialize the trajectory/\+TEB \\
+\hline
+{\em goal\+\_\+orientation} & Orientation of the goal trajectory pose, required to initialize the trajectory/\+TEB \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/graph\+\_\+search.\+h\end{DoxyCompactItemize}

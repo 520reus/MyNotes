@@ -1,0 +1,84 @@
+\hypertarget{classlattice__planner_1_1AStarLattice}{}\doxysection{lattice\+\_\+planner\+::AStar\+Lattice类 参考}
+\label{classlattice__planner_1_1AStarLattice}\index{lattice\_planner::AStarLattice@{lattice\_planner::AStarLattice}}
+
+
+This class implements a time-\/bounded A$\ast$ lattice planner for time dependent planning on a layered, dynamic cost map.  
+
+
+
+
+{\ttfamily \#include $<$tb\+\_\+lattice.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1AStarLattice_af63e98f889152271640ff0cd0013f48c}{AStar\+Lattice}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1AStarLattice_a317948db32e6df1986a27f981ec1b589}\label{classlattice__planner_1_1AStarLattice_a317948db32e6df1986a27f981ec1b589}} 
+\mbox{\hyperlink{classlattice__planner_1_1AStarLattice_a317948db32e6df1986a27f981ec1b589}{$\sim$\+AStar\+Lattice}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1AStarLattice_a137de5f79a5e4ef8c1a615152e813398}{get\+Path}} (geometry\+\_\+msgs\+::\+Pose\+Stamped start, geometry\+\_\+msgs\+::\+Pose\+Stamped goal, bool replanning, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\begin{DoxyCompactList}\small\item\em generate a path from a start pose to a goal pose. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class implements a time-\/bounded A$\ast$ lattice planner for time dependent planning on a layered, dynamic cost map. 
+
+The time-\/bounded lattice planner is designed to plan time dependent, dynamically feasible navigation paths for robots with differential drive constraints. Planning is conducted on a layered dynamic cost map which is based on the ROS costmap representation. The lattice planner uses motion primitives as actions for the tree search. The motion primitives each represent constant acceleration, deceleration and constant motion, respectively, within a constant time interval. The A$\ast$ lattice planner searches for the optimal path according to a defined cost function. A heuristic is used to estimate the remaining costs to reach the goal. The planner uses a planning timeout to limit the time allocated for planning and ensure a constant planning frequency. Once the planning time runs out, the algorithm returns the path to the best expanded state, which ideally is the goal state. If the goal state was not reached during search, it returns the lowest cost path that reached the goal at any orientation and velocity. In case no state reached the goal position, the algorithm chooses the path to the state that would be expanded next during search. Since A$\ast$ always expands the state that produces the lowest expected costs to reach the goal, the selected path is the most promising to advance to the goal.
+
+The planner is described in more detail for the application of time dependent planning in populated environment in the following paper\+:
+
+M. Kollmitz, K. Hsiao, J. Gaa, W. Burgard\+: \textquotesingle{}Time Dependent Planning on a Layered Social Cost Map for Human-\/\+Aware Robot Navigation\textquotesingle{}. 2015 European Conference on Mobile Robotics (ECMR) (to appear) 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1AStarLattice_af63e98f889152271640ff0cd0013f48c}\label{classlattice__planner_1_1AStarLattice_af63e98f889152271640ff0cd0013f48c}} 
+\index{lattice\_planner::AStarLattice@{lattice\_planner::AStarLattice}!AStarLattice@{AStarLattice}}
+\index{AStarLattice@{AStarLattice}!lattice\_planner::AStarLattice@{lattice\_planner::AStarLattice}}
+\doxysubsubsection{\texorpdfstring{AStarLattice()}{AStarLattice()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+AStar\+Lattice\+::\+AStar\+Lattice (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & planner name \\
+\hline
+{\em costmap} & 2D static cost map as provided by the ros navigation stack \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1AStarLattice_a137de5f79a5e4ef8c1a615152e813398}\label{classlattice__planner_1_1AStarLattice_a137de5f79a5e4ef8c1a615152e813398}} 
+\index{lattice\_planner::AStarLattice@{lattice\_planner::AStarLattice}!getPath@{getPath}}
+\index{getPath@{getPath}!lattice\_planner::AStarLattice@{lattice\_planner::AStarLattice}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+AStar\+Lattice\+::get\+Path (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped}]{start,  }\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped}]{goal,  }\item[{bool}]{replanning,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path }\end{DoxyParamCaption})}
+
+
+
+generate a path from a start pose to a goal pose. 
+
+This method is called from the planner core once a goal is send to move\+\_\+base. If the certain navigation goal is set for the first time, a plan has to be planned from the current robot position and zero velocity. During the frequent replanning, the plan has to be generated from a waypoint in the future, since the planning takes a certain amount of time. The \textquotesingle{}replanning\textquotesingle{} parameter specifies if the planning request is meant to generate an initial, new plan or if it is a replanning request. If it is a replanning request, the start waypoint for planning is calculated according to the specified planning timeout (ros parameter move\+\_\+base/\+TBPlanner/planning\+\_\+timeout)
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em start} & start pose of the robot \\
+\hline
+ & {\em goal} & desired goal pose \\
+\hline
+ & {\em replanning} & whether an initial, new plan is requested or replanning \\
+\hline
+\mbox{\texttt{ out}}  & {\em path} & the planned navigation path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether a plan to the goal position could be found 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/tb\+\_\+lattice.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: global_planner::OrientationFilter类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>global_planner</b></li><li class="navelem"><a class="el" href="classglobal__planner_1_1OrientationFilter.html">OrientationFilter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">global_planner::OrientationFilter类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1f8a4d31098b93db822cf4d2173a9188"><td class="memItemLeft" align="right" valign="top"><a id="a1f8a4d31098b93db822cf4d2173a9188"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processPath</b> (const geometry_msgs::PoseStamped &amp;start, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</td></tr>
+<tr class="separator:a1f8a4d31098b93db822cf4d2173a9188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59770ba7f30c0e87e62b407bc44feda1"><td class="memItemLeft" align="right" valign="top"><a id="a59770ba7f30c0e87e62b407bc44feda1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAngleBasedOnPositionDerivative</b> (std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path, int index)</td></tr>
+<tr class="separator:a59770ba7f30c0e87e62b407bc44feda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36817535ca10c2662b6cc2d0919576bf"><td class="memItemLeft" align="right" valign="top"><a id="a36817535ca10c2662b6cc2d0919576bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>interpolate</b> (std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path, int start_index, int end_index)</td></tr>
+<tr class="separator:a36817535ca10c2662b6cc2d0919576bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1934b57509ac8d2074695bee82c8e178"><td class="memItemLeft" align="right" valign="top"><a id="a1934b57509ac8d2074695bee82c8e178"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMode</b> (OrientationMode new_mode)</td></tr>
+<tr class="separator:a1934b57509ac8d2074695bee82c8e178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7419925acb4ebb8b67bf1ae95f9c4333"><td class="memItemLeft" align="right" valign="top"><a id="a7419925acb4ebb8b67bf1ae95f9c4333"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMode</b> (int new_mode)</td></tr>
+<tr class="separator:a7419925acb4ebb8b67bf1ae95f9c4333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2026f87791f87970220d7a42e42422"><td class="memItemLeft" align="right" valign="top"><a id="acf2026f87791f87970220d7a42e42422"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWindowSize</b> (size_t window_size)</td></tr>
+<tr class="separator:acf2026f87791f87970220d7a42e42422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a5f155f74ab99402aaaee9f23d8a5741c"><td class="memItemLeft" align="right" valign="top"><a id="a5f155f74ab99402aaaee9f23d8a5741c"></a>
+OrientationMode&#160;</td><td class="memItemRight" valign="bottom"><b>omode_</b></td></tr>
+<tr class="separator:a5f155f74ab99402aaaee9f23d8a5741c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9456a588e42436e590db2a4f0c98dc"><td class="memItemLeft" align="right" valign="top"><a id="aed9456a588e42436e590db2a4f0c98dc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>window_size_</b></td></tr>
+<tr class="separator:aed9456a588e42436e590db2a4f0c98dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="orientation__filter_8h_source.html">orientation_filter.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

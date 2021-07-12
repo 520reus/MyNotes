@@ -1,0 +1,138 @@
+\hypertarget{classlattice__planner_1_1TrajectoryRollout}{}\doxysection{lattice\+\_\+planner\+::Trajectory\+Rollout类 参考}
+\label{classlattice__planner_1_1TrajectoryRollout}\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+
+
+trajectory rollout class for a non-\/holonomic robot with differential drive constraints  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+rollout.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout_adc80a37d613e54cddb3de10007f5cf59}{Trajectory\+Rollout}} (\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} motion\+\_\+constraints)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} \mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout_a9d1e047f59fb0c7b464c4e564ce9da5d}{get\+Motion\+Constraints}} ()
+\begin{DoxyCompactList}\small\item\em get the defined velocity and acceleration limits of the robot \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} $>$ \mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout_ae195cf9977cf733f8bc8efca078e6bdf}{get\+Reachable\+Velocities}} (\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} current\+\_\+velocity, double time\+\_\+delta)
+\begin{DoxyCompactList}\small\item\em calculate the next reachable velocities within a time interval, given the robot\textquotesingle{}s acceleration and its velocity limits \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout_a0880208e194b3387ebea4543c916755d}{get\+Next\+Pose}} (\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} current, \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} travel\+\_\+vel, double time\+\_\+delta)
+\begin{DoxyCompactList}\small\item\em obtain the next robot pose after traveling with a certain velocity from a current position for a certain time, assuming constant motion during the time interval \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout_ae1a10719e1c79fad4f57859642429da3}{find\+Trajectory\+Indeces}} (\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$begin, \mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$end, \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} travel\+\_\+vel, \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer}{State\+Discretizer}} $\ast$discretizer, double time\+\_\+inkr, double time\+\_\+delta)
+\begin{DoxyCompactList}\small\item\em get the map indeces of the cells that are traversed by the trajectory from one state to another, according to a defined motion \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+trajectory rollout class for a non-\/holonomic robot with differential drive constraints 
+
+The \mbox{\hyperlink{classlattice__planner_1_1TrajectoryRollout}{Trajectory\+Rollout}} class provides methods to calculate the next position and velocity from an initial position and velocity, according to the robot\textquotesingle{}s acceleration and velocity limits. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TrajectoryRollout_adc80a37d613e54cddb3de10007f5cf59}\label{classlattice__planner_1_1TrajectoryRollout_adc80a37d613e54cddb3de10007f5cf59}} 
+\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}!TrajectoryRollout@{TrajectoryRollout}}
+\index{TrajectoryRollout@{TrajectoryRollout}!lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+\doxysubsubsection{\texorpdfstring{TrajectoryRollout()}{TrajectoryRollout()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Trajectory\+Rollout\+::\+Trajectory\+Rollout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}}}]{motion\+\_\+constraints }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em motion\+\_\+constraints} & velocity and acceleration limits of the robot \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TrajectoryRollout_ae1a10719e1c79fad4f57859642429da3}\label{classlattice__planner_1_1TrajectoryRollout_ae1a10719e1c79fad4f57859642429da3}} 
+\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}!findTrajectoryIndeces@{findTrajectoryIndeces}}
+\index{findTrajectoryIndeces@{findTrajectoryIndeces}!lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+\doxysubsubsection{\texorpdfstring{findTrajectoryIndeces()}{findTrajectoryIndeces()}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ lattice\+\_\+planner\+::\+Trajectory\+Rollout\+::find\+Trajectory\+Indeces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{begin,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{end,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{travel\+\_\+vel,  }\item[{\mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer}{State\+Discretizer}} $\ast$}]{discretizer,  }\item[{double}]{time\+\_\+inkr,  }\item[{double}]{time\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+get the map indeces of the cells that are traversed by the trajectory from one state to another, according to a defined motion 
+
+
+\begin{DoxyParams}{参数}
+{\em begin} & start state of the trajectory \\
+\hline
+{\em end} & end state of the trajectory \\
+\hline
+{\em travel\+\_\+vel} & constant travel velocity of the trajectory \\
+\hline
+{\em discretizer} & state discretizer with discrete state properties \\
+\hline
+{\em time\+\_\+inkr} & increment to devide the trajectory into smaller steps to obtain the underlying map index \\
+\hline
+{\em time\+\_\+delta} & time interval for the motion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+a set of map indeces that are traversed by the trajectory between two states 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TrajectoryRollout_a9d1e047f59fb0c7b464c4e564ce9da5d}\label{classlattice__planner_1_1TrajectoryRollout_a9d1e047f59fb0c7b464c4e564ce9da5d}} 
+\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}!getMotionConstraints@{getMotionConstraints}}
+\index{getMotionConstraints@{getMotionConstraints}!lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+\doxysubsubsection{\texorpdfstring{getMotionConstraints()}{getMotionConstraints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} lattice\+\_\+planner\+::\+Trajectory\+Rollout\+::get\+Motion\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the defined velocity and acceleration limits of the robot 
+
+\begin{DoxyReturn}{返回}
+the robot\textquotesingle{}s motion constraints 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TrajectoryRollout_a0880208e194b3387ebea4543c916755d}\label{classlattice__planner_1_1TrajectoryRollout_a0880208e194b3387ebea4543c916755d}} 
+\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}!getNextPose@{getNextPose}}
+\index{getNextPose@{getNextPose}!lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+\doxysubsubsection{\texorpdfstring{getNextPose()}{getNextPose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} lattice\+\_\+planner\+::\+Trajectory\+Rollout\+::get\+Next\+Pose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{current,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{travel\+\_\+vel,  }\item[{double}]{time\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+obtain the next robot pose after traveling with a certain velocity from a current position for a certain time, assuming constant motion during the time interval 
+
+
+\begin{DoxyParams}{参数}
+{\em current} & the current robot position \\
+\hline
+{\em travel\+\_\+vel} & the constant travel velocity \\
+\hline
+{\em time\+\_\+delta} & time interval for the motion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The next pose after the defined motion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TrajectoryRollout_ae195cf9977cf733f8bc8efca078e6bdf}\label{classlattice__planner_1_1TrajectoryRollout_ae195cf9977cf733f8bc8efca078e6bdf}} 
+\index{lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}!getReachableVelocities@{getReachableVelocities}}
+\index{getReachableVelocities@{getReachableVelocities}!lattice\_planner::TrajectoryRollout@{lattice\_planner::TrajectoryRollout}}
+\doxysubsubsection{\texorpdfstring{getReachableVelocities()}{getReachableVelocities()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}$>$ lattice\+\_\+planner\+::\+Trajectory\+Rollout\+::get\+Reachable\+Velocities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{current\+\_\+velocity,  }\item[{double}]{time\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+calculate the next reachable velocities within a time interval, given the robot\textquotesingle{}s acceleration and its velocity limits 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+velocity} & robot\textquotesingle{}s current velocity \\
+\hline
+{\em time\+\_\+delta} & time interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+a set of the velocities that are reachable within the given time interval 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/trajectory\+\_\+rollout.\+h\end{DoxyCompactItemize}

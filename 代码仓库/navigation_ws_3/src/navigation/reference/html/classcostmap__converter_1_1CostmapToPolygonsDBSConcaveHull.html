@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_converter::CostmapToPolygonsDBSConcaveHull类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>costmap_converter</b></li><li class="navelem"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html">CostmapToPolygonsDBSConcaveHull</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">costmap_converter::CostmapToPolygonsDBSConcaveHull类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class converts the <a class="el" href="namespacecostmap__2d.html">costmap_2d</a> into a set of non-convex polygons (and points)  
+ <a href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="costmap__to__polygons__concave_8h_source.html">costmap_to_polygons_concave.h</a>&gt;</code></p>
+<div class="dynheader">
+类 costmap_converter::CostmapToPolygonsDBSConcaveHull 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.png" usemap="#costmap_5Fconverter::CostmapToPolygonsDBSConcaveHull_map" alt=""/>
+  <map id="costmap_5Fconverter::CostmapToPolygonsDBSConcaveHull_map" name="costmap_5Fconverter::CostmapToPolygonsDBSConcaveHull_map">
+<area href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html" title="This class converts the costmap_2d into a set of convex polygons (and points)" alt="costmap_converter::CostmapToPolygonsDBSMCCH" shape="rect" coords="0,56,338,80"/>
+<area href="classcostmap__converter_1_1BaseCostmapToPolygons.html" title="This abstract class defines the interface for plugins that convert the costmap into polygon types" alt="costmap_converter::BaseCostmapToPolygons" shape="rect" coords="0,0,338,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad61fefa1264d1422b874ead6f329698f"><td class="memItemLeft" align="right" valign="top"><a id="ad61fefa1264d1422b874ead6f329698f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#ad61fefa1264d1422b874ead6f329698f">CostmapToPolygonsDBSConcaveHull</a> ()</td></tr>
+<tr class="memdesc:ad61fefa1264d1422b874ead6f329698f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor <br /></td></tr>
+<tr class="separator:ad61fefa1264d1422b874ead6f329698f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c4122758a66e11b7914420c9776bcf"><td class="memItemLeft" align="right" valign="top"><a id="af9c4122758a66e11b7914420c9776bcf"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#af9c4122758a66e11b7914420c9776bcf">~CostmapToPolygonsDBSConcaveHull</a> ()</td></tr>
+<tr class="memdesc:af9c4122758a66e11b7914420c9776bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor <br /></td></tr>
+<tr class="separator:af9c4122758a66e11b7914420c9776bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee7a0ff34e7da8a850953963c17f733"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#a9ee7a0ff34e7da8a850953963c17f733">initialize</a> (ros::NodeHandle nh)</td></tr>
+<tr class="memdesc:a9ee7a0ff34e7da8a850953963c17f733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the plugin  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#a9ee7a0ff34e7da8a850953963c17f733">更多...</a><br /></td></tr>
+<tr class="separator:a9ee7a0ff34e7da8a850953963c17f733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339fd4a76be5f107181f67eb539ecdcf"><td class="memItemLeft" align="right" valign="top"><a id="a339fd4a76be5f107181f67eb539ecdcf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#a339fd4a76be5f107181f67eb539ecdcf">compute</a> ()</td></tr>
+<tr class="memdesc:a339fd4a76be5f107181f67eb539ecdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the actual work (conversion of the costmap to polygons) <br /></td></tr>
+<tr class="separator:a339fd4a76be5f107181f67eb539ecdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></td></tr>
+<tr class="memitem:aa221aa769dc1d82db848a47fddfe6b51 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="aa221aa769dc1d82db848a47fddfe6b51"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa221aa769dc1d82db848a47fddfe6b51">CostmapToPolygonsDBSMCCH</a> ()</td></tr>
+<tr class="memdesc:aa221aa769dc1d82db848a47fddfe6b51 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor <br /></td></tr>
+<tr class="separator:aa221aa769dc1d82db848a47fddfe6b51 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14113894b97b32b6c467642392a1d1cd inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a14113894b97b32b6c467642392a1d1cd"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a14113894b97b32b6c467642392a1d1cd">~CostmapToPolygonsDBSMCCH</a> ()</td></tr>
+<tr class="memdesc:a14113894b97b32b6c467642392a1d1cd inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor <br /></td></tr>
+<tr class="separator:a14113894b97b32b6c467642392a1d1cd inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed33709b3251194bf95b0f611ac606a3 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aed33709b3251194bf95b0f611ac606a3">setCostmap2D</a> (<a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap)</td></tr>
+<tr class="memdesc:aed33709b3251194bf95b0f611ac606a3 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a pointer to the costap to the plugin.  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aed33709b3251194bf95b0f611ac606a3">更多...</a><br /></td></tr>
+<tr class="separator:aed33709b3251194bf95b0f611ac606a3 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722070f9f4e331ce6576b61b1e0baf05 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05">updateCostmap2D</a> ()</td></tr>
+<tr class="memdesc:a722070f9f4e331ce6576b61b1e0baf05 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get updated data from the previously set Costmap2D  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05">更多...</a><br /></td></tr>
+<tr class="separator:a722070f9f4e331ce6576b61b1e0baf05 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d70bea1ba80d5ad84c221846e9ea62 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">PolygonContainerConstPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62">getPolygons</a> ()</td></tr>
+<tr class="memdesc:aa6d70bea1ba80d5ad84c221846e9ea62 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a shared instance of the current polygon container  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62">更多...</a><br /></td></tr>
+<tr class="separator:aa6d70bea1ba80d5ad84c221846e9ea62 inherit pub_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html">costmap_converter::BaseCostmapToPolygons</a></td></tr>
+<tr class="memitem:a3bee32afc15401220df123bce1a87921 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top"><a id="a3bee32afc15401220df123bce1a87921"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a3bee32afc15401220df123bce1a87921">~BaseCostmapToPolygons</a> ()</td></tr>
+<tr class="memdesc:a3bee32afc15401220df123bce1a87921 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor <br /></td></tr>
+<tr class="separator:a3bee32afc15401220df123bce1a87921 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568d60474400d08a40218d0674b46fed inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top">virtual ObstacleArrayConstPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a568d60474400d08a40218d0674b46fed">getObstacles</a> ()</td></tr>
+<tr class="memdesc:a568d60474400d08a40218d0674b46fed inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a shared instance of the current obstacle container If this method is not overwritten by the underlying plugin, the obstacle container just imports <a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a8e68cedfe4acd986b555edbcf5fe6d44" title="Get a shared instance of the current polygon container">getPolygons()</a>.  <a href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a568d60474400d08a40218d0674b46fed">更多...</a><br /></td></tr>
+<tr class="separator:a568d60474400d08a40218d0674b46fed inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2913087d659654c55f5869397f8e2c5 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#ae2913087d659654c55f5869397f8e2c5">setOdomTopic</a> (const std::string &amp;odom_topic)</td></tr>
+<tr class="memdesc:ae2913087d659654c55f5869397f8e2c5 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of robot's odometry topic  <a href="classcostmap__converter_1_1BaseCostmapToPolygons.html#ae2913087d659654c55f5869397f8e2c5">更多...</a><br /></td></tr>
+<tr class="separator:ae2913087d659654c55f5869397f8e2c5 inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f42b7263fcfdde112b09c73429e55be inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a5f42b7263fcfdde112b09c73429e55be">stackedCostmapConversion</a> ()</td></tr>
+<tr class="memdesc:a5f42b7263fcfdde112b09c73429e55be inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether an additional plugin for subsequent costmap conversion is specified  <a href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a5f42b7263fcfdde112b09c73429e55be">更多...</a><br /></td></tr>
+<tr class="separator:a5f42b7263fcfdde112b09c73429e55be inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1732365a108103565920d277aa1d0e inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#add1732365a108103565920d277aa1d0e">startWorker</a> (ros::Rate rate, <a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, bool spin_thread=false)</td></tr>
+<tr class="memdesc:add1732365a108103565920d277aa1d0e inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a worker that repeatedly coverts the most recent costmap to polygons. The worker is implemented as a timer event that is invoked at a specific <code>rate</code>. The passed <code>costmap</code> pointer must be valid at the complete time and must be lockable. By specifying the argument <code>spin_thread</code> the timer event is invoked in a separate thread and callback queue or otherwise it is called from the global callback queue (of the node in which the plugin is used).  <a href="classcostmap__converter_1_1BaseCostmapToPolygons.html#add1732365a108103565920d277aa1d0e">更多...</a><br /></td></tr>
+<tr class="separator:add1732365a108103565920d277aa1d0e inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5b367499223999167be752208eb59f inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top"><a id="a7e5b367499223999167be752208eb59f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a7e5b367499223999167be752208eb59f">stopWorker</a> ()</td></tr>
+<tr class="memdesc:a7e5b367499223999167be752208eb59f inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the worker that repeatedly converts the costmap to polygons <br /></td></tr>
+<tr class="separator:a7e5b367499223999167be752208eb59f inherit pub_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a2d5498ef6261dc2cd55fc9b5b77f4f55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#a2d5498ef6261dc2cd55fc9b5b77f4f55">concaveHull</a> (std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &amp;cluster, double depth, geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:a2d5498ef6261dc2cd55fc9b5b77f4f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the concave hull for a single cluster  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull.html#a2d5498ef6261dc2cd55fc9b5b77f4f55">更多...</a><br /></td></tr>
+<tr class="separator:a2d5498ef6261dc2cd55fc9b5b77f4f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbcf5ace9d1f5763e68c39550025b3e"><td class="memItemLeft" align="right" valign="top"><a id="a1dbcf5ace9d1f5763e68c39550025b3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>concaveHullClusterCut</b> (std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &amp;cluster, double depth, geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="separator:a1dbcf5ace9d1f5763e68c39550025b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7f958e615b639dc088b09f02f229be"><td class="memTemplParams" colspan="2"><a id="a0c7f958e615b639dc088b09f02f229be"></a>
+template&lt;typename PointLine , typename PointCluster , typename PointHull &gt; </td></tr>
+<tr class="memitem:a0c7f958e615b639dc088b09f02f229be"><td class="memTemplItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>findNearestInnerPoint</b> (PointLine line_start, PointLine line_end, const std::vector&lt; PointCluster &gt; &amp;cluster, const std::vector&lt; PointHull &gt; &amp;hull, bool *found)</td></tr>
+<tr class="separator:a0c7f958e615b639dc088b09f02f229be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a14e98f068a4f18314c58f1f9102ef"><td class="memTemplParams" colspan="2"><a id="a32a14e98f068a4f18314c58f1f9102ef"></a>
+template&lt;typename Point1 , typename Point2 , typename Point3 , typename Point4 &gt; </td></tr>
+<tr class="memitem:a32a14e98f068a4f18314c58f1f9102ef"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>checkLineIntersection</b> (const Point1 &amp;line1_start, const Point2 &amp;line1_end, const Point3 &amp;line2_start, const Point4 &amp;line2_end)</td></tr>
+<tr class="separator:a32a14e98f068a4f18314c58f1f9102ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bb8828ef0b5a28baa07d6affaa0369"><td class="memTemplParams" colspan="2"><a id="a74bb8828ef0b5a28baa07d6affaa0369"></a>
+template&lt;typename PointHull , typename Point1 , typename Point2 , typename Point3 , typename Point4 &gt; </td></tr>
+<tr class="memitem:a74bb8828ef0b5a28baa07d6affaa0369"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>checkLineIntersection</b> (const std::vector&lt; PointHull &gt; &amp;hull, const Point1 &amp;current_line_start, const Point2 &amp;current_line_end, const Point3 &amp;test_line_start, const Point4 &amp;test_line_end)</td></tr>
+<tr class="separator:a74bb8828ef0b5a28baa07d6affaa0369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></td></tr>
+<tr class="memitem:a0cd5aaaba9344ff25b5c3feb6faa534c inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a0cd5aaaba9344ff25b5c3feb6faa534c">dbScan</a> (std::vector&lt; std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &gt; &amp;clusters)</td></tr>
+<tr class="memdesc:a0cd5aaaba9344ff25b5c3feb6faa534c inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBSCAN algorithm for clustering  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a0cd5aaaba9344ff25b5c3feb6faa534c">更多...</a><br /></td></tr>
+<tr class="separator:a0cd5aaaba9344ff25b5c3feb6faa534c inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c9e455820f8193735362f325e0de60 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a30c9e455820f8193735362f325e0de60">regionQuery</a> (int curr_index, std::vector&lt; int &gt; &amp;neighbor_indices)</td></tr>
+<tr class="memdesc:a30c9e455820f8193735362f325e0de60 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for dbScan to search for neighboring points  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a30c9e455820f8193735362f325e0de60">更多...</a><br /></td></tr>
+<tr class="separator:a30c9e455820f8193735362f325e0de60 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb264f67eb63e68e8d5183f1f0ca4ad inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a4fb264f67eb63e68e8d5183f1f0ca4ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a4fb264f67eb63e68e8d5183f1f0ca4ad">addPoint</a> (double x, double y)</td></tr>
+<tr class="memdesc:a4fb264f67eb63e68e8d5183f1f0ca4ad inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper function for adding a point to the lookup data structures <br /></td></tr>
+<tr class="separator:a4fb264f67eb63e68e8d5183f1f0ca4ad inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3b5ea703ba4487deb9171842938ccc inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9a3b5ea703ba4487deb9171842938ccc">convexHull</a> (std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &amp;cluster, geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:a9a3b5ea703ba4487deb9171842938ccc inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull for a single cluster (monotone chain algorithm)  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9a3b5ea703ba4487deb9171842938ccc">更多...</a><br /></td></tr>
+<tr class="separator:a9a3b5ea703ba4487deb9171842938ccc inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c45bf9acf6fcaae63dfb51871895bc3 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6c45bf9acf6fcaae63dfb51871895bc3">convexHull2</a> (std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &amp;cluster, geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:a6c45bf9acf6fcaae63dfb51871895bc3 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull for a single cluster  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6c45bf9acf6fcaae63dfb51871895bc3">更多...</a><br /></td></tr>
+<tr class="separator:a6c45bf9acf6fcaae63dfb51871895bc3 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980a39de9a8e2aad76f3e72d221de173 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a980a39de9a8e2aad76f3e72d221de173">simplifyPolygon</a> (geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:a980a39de9a8e2aad76f3e72d221de173 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplify a polygon by removing points.  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a980a39de9a8e2aad76f3e72d221de173">更多...</a><br /></td></tr>
+<tr class="separator:a980a39de9a8e2aad76f3e72d221de173 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeed7c6af5b0b8420f0988d6213c3f61 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memTemplParams" colspan="2">template&lt;typename P1 , typename P2 , typename P3 &gt; </td></tr>
+<tr class="memitem:aaeed7c6af5b0b8420f0988d6213c3f61 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memTemplItemLeft" align="right" valign="top">long double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aaeed7c6af5b0b8420f0988d6213c3f61">cross</a> (const P1 &amp;O, const P2 &amp;A, const P3 &amp;B)</td></tr>
+<tr class="memdesc:aaeed7c6af5b0b8420f0988d6213c3f61 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D Cross product of two vectors defined by two points and a common origin  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aaeed7c6af5b0b8420f0988d6213c3f61">更多...</a><br /></td></tr>
+<tr class="separator:aaeed7c6af5b0b8420f0988d6213c3f61 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a09ea3e7b78271f0b9f1f7e13933479 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a8a09ea3e7b78271f0b9f1f7e13933479">updatePolygonContainer</a> (PolygonContainerPtr polygons)</td></tr>
+<tr class="memdesc:a8a09ea3e7b78271f0b9f1f7e13933479 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-safe update of the internal polygon container (that is shared using <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62" title="Get a shared instance of the current polygon container">getPolygons()</a> from outside this class)  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a8a09ea3e7b78271f0b9f1f7e13933479">更多...</a><br /></td></tr>
+<tr class="separator:a8a09ea3e7b78271f0b9f1f7e13933479 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d233727263d3f89d007f9fb8754744 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">neighborCellsToIndex</a> (int cx, int cy)</td></tr>
+<tr class="memdesc:a55d233727263d3f89d007f9fb8754744 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">offset [meters] in y for the lookup grid  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">更多...</a><br /></td></tr>
+<tr class="separator:a55d233727263d3f89d007f9fb8754744 inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c350a82dd0b45084b05701e3094caf inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">pointToNeighborCells</a> (const <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &amp;kp, int &amp;cx, int &amp;cy)</td></tr>
+<tr class="memdesc:a44c350a82dd0b45084b05701e3094caf inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the cell indices of a keypoint  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">更多...</a><br /></td></tr>
+<tr class="separator:a44c350a82dd0b45084b05701e3094caf inherit pro_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html">costmap_converter::BaseCostmapToPolygons</a></td></tr>
+<tr class="memitem:aed9851c00b8d93e88bb8ee79b95a23d9 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top"><a id="aed9851c00b8d93e88bb8ee79b95a23d9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#aed9851c00b8d93e88bb8ee79b95a23d9">BaseCostmapToPolygons</a> ()</td></tr>
+<tr class="memdesc:aed9851c00b8d93e88bb8ee79b95a23d9 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor that should be called by subclasses <br /></td></tr>
+<tr class="separator:aed9851c00b8d93e88bb8ee79b95a23d9 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39c0f13e7ad5bddade4cfc86324abb3 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top"><a id="aa39c0f13e7ad5bddade4cfc86324abb3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#aa39c0f13e7ad5bddade4cfc86324abb3">spinThread</a> ()</td></tr>
+<tr class="memdesc:aa39c0f13e7ad5bddade4cfc86324abb3 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocking method that checks for new timer events (active if <a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#add1732365a108103565920d277aa1d0e" title="Instantiate a worker that repeatedly coverts the most recent costmap to polygons. The worker is imple...">startWorker()</a> is called with spin_thread enabled) <br /></td></tr>
+<tr class="separator:aa39c0f13e7ad5bddade4cfc86324abb3 inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128417cea22b02d1b021102ee25c30dd inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memItemLeft" align="right" valign="top"><a id="a128417cea22b02d1b021102ee25c30dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1BaseCostmapToPolygons.html#a128417cea22b02d1b021102ee25c30dd">workerCallback</a> (const ros::TimerEvent &amp;)</td></tr>
+<tr class="memdesc:a128417cea22b02d1b021102ee25c30dd inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback of the worker that performs the actual work (updating the costmap and converting it to polygons) <br /></td></tr>
+<tr class="separator:a128417cea22b02d1b021102ee25c30dd inherit pro_methods_classcostmap__converter_1_1BaseCostmapToPolygons"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a76f056d429e3e49a2cbe73961c5fd135"><td class="memItemLeft" align="right" valign="top"><a id="a76f056d429e3e49a2cbe73961c5fd135"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>concave_hull_depth_</b></td></tr>
+<tr class="separator:a76f056d429e3e49a2cbe73961c5fd135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></td></tr>
+<tr class="memitem:af086dcaa5d4d7196a94552105bc9b868 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="af086dcaa5d4d7196a94552105bc9b868"></a>
+std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">occupied_cells_</a></td></tr>
+<tr class="memdesc:af086dcaa5d4d7196a94552105bc9b868 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of occupied cells in the current map (updated by <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05" title="Get updated data from the previously set Costmap2D">updateCostmap2D()</a>) <br /></td></tr>
+<tr class="separator:af086dcaa5d4d7196a94552105bc9b868 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1492bab030a0fe2236a9f531d8178b86 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a1492bab030a0fe2236a9f531d8178b86"></a>
+std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>neighbor_lookup_</b></td></tr>
+<tr class="separator:a1492bab030a0fe2236a9f531d8178b86 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9933aaeb5d7249fe8d4f466771fb677f inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a9933aaeb5d7249fe8d4f466771fb677f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">neighbor_size_x_</a></td></tr>
+<tr class="memdesc:a9933aaeb5d7249fe8d4f466771fb677f inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of cells for neighbor lookup <br /></td></tr>
+<tr class="separator:a9933aaeb5d7249fe8d4f466771fb677f inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e2a22cfd9b4a35129dab677980e12b inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a71e2a22cfd9b4a35129dab677980e12b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a71e2a22cfd9b4a35129dab677980e12b">neighbor_size_y_</a></td></tr>
+<tr class="memdesc:a71e2a22cfd9b4a35129dab677980e12b inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of the neighbour lookup in x (number of cells) <br /></td></tr>
+<tr class="separator:a71e2a22cfd9b4a35129dab677980e12b inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68009a61efee912fa6f53c88216d2a28 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a68009a61efee912fa6f53c88216d2a28"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a68009a61efee912fa6f53c88216d2a28">offset_x_</a></td></tr>
+<tr class="memdesc:a68009a61efee912fa6f53c88216d2a28 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of the neighbour lookup in y (number of cells) <br /></td></tr>
+<tr class="separator:a68009a61efee912fa6f53c88216d2a28 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40315680a42482e8a81367f802c73545 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a40315680a42482e8a81367f802c73545"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a40315680a42482e8a81367f802c73545">offset_y_</a></td></tr>
+<tr class="memdesc:a40315680a42482e8a81367f802c73545 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">offset [meters] in x for the lookup grid <br /></td></tr>
+<tr class="separator:a40315680a42482e8a81367f802c73545 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacda867bb50b071838a331f98527559c inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="aacda867bb50b071838a331f98527559c"></a>
+<a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parameter_</b></td></tr>
+<tr class="separator:aacda867bb50b071838a331f98527559c inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a194d849ba7beb3f455fee560e5b42 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a80a194d849ba7beb3f455fee560e5b42"></a>
+<a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parameter_buffered_</b></td></tr>
+<tr class="separator:a80a194d849ba7beb3f455fee560e5b42 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d471167f2abe46d792f8e8479e1bc1 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memItemLeft" align="right" valign="top"><a id="a86d471167f2abe46d792f8e8479e1bc1"></a>
+boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a86d471167f2abe46d792f8e8479e1bc1">parameter_mutex_</a></td></tr>
+<tr class="memdesc:a86d471167f2abe46d792f8e8479e1bc1 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex that keeps track about the ownership of the shared polygon instance <br /></td></tr>
+<tr class="separator:a86d471167f2abe46d792f8e8479e1bc1 inherit pro_attribs_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></td></tr>
+<tr class="memitem:a6ea25c3ebd002c376481a6167acd10a0 inherit pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memTemplParams" colspan="2">template&lt;typename Point &gt; </td></tr>
+<tr class="memitem:a6ea25c3ebd002c376481a6167acd10a0 inherit pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6ea25c3ebd002c376481a6167acd10a0">convertPointToPolygon</a> (const Point &amp;point, geometry_msgs::Polygon &amp;polygon)</td></tr>
+<tr class="memdesc:a6ea25c3ebd002c376481a6167acd10a0 inherit pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a generi point type to a geometry_msgs::Polygon  <a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6ea25c3ebd002c376481a6167acd10a0">更多...</a><br /></td></tr>
+<tr class="separator:a6ea25c3ebd002c376481a6167acd10a0 inherit pub_static_methods_classcostmap__converter_1_1CostmapToPolygonsDBSMCCH"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class converts the <a class="el" href="namespacecostmap__2d.html">costmap_2d</a> into a set of non-convex polygons (and points) </p>
+<p>All single points that do not define a cluster (noise) are also treated as polygon (represented as a single vertex) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">待办事项:</a></b></dt><dd>change the class hierarchy to a clearer and more generic one </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a2d5498ef6261dc2cd55fc9b5b77f4f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5498ef6261dc2cd55fc9b5b77f4f55">&#9670;&nbsp;</a></span>concaveHull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_converter::CostmapToPolygonsDBSConcaveHull::concaveHull </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cluster</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Polygon &amp;&#160;</td>
+          <td class="paramname"><em>polygon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the concave hull for a single cluster </p>
+<dl class="section remark"><dt>备注</dt><dd>The last point is the same as the first one </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">cluster</td><td>list of keypoints that should be converted into a polygon </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">depth</td><td>Smaller depth: sharper surface, depth -&gt; high value: convex hull </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">polygon</td><td>the resulting convex polygon </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ee7a0ff34e7da8a850953963c17f733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee7a0ff34e7da8a850953963c17f733">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void costmap_converter::CostmapToPolygonsDBSConcaveHull::initialize </td>
+          <td>(</td>
+          <td class="paramtype">ros::NodeHandle&#160;</td>
+          <td class="paramname"><em>nh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the plugin </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nh</td><td>Nodehandle that defines the namespace for parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#ab10c4b289420d6c65fcfbd446634fd22">costmap_converter::CostmapToPolygonsDBSMCCH</a> .</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_converter/include/costmap_converter/<a class="el" href="costmap__to__polygons__concave_8h_source.html">costmap_to_polygons_concave.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

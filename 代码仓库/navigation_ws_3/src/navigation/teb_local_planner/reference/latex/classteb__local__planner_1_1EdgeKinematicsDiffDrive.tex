@@ -1,0 +1,51 @@
+\hypertarget{classteb__local__planner_1_1EdgeKinematicsDiffDrive}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Kinematics\+Diff\+Drive类 参考}
+\label{classteb__local__planner_1_1EdgeKinematicsDiffDrive}\index{teb\_local\_planner::EdgeKinematicsDiffDrive@{teb\_local\_planner::EdgeKinematicsDiffDrive}}
+
+
+Edge defining the cost function for satisfying the non-\/holonomic kinematics of a differential drive mobile robot.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+kinematics.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Kinematics\+Diff\+Drive 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeKinematicsDiffDrive}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a7505d0486ebec12f973ce2135b0954b6}\label{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a7505d0486ebec12f973ce2135b0954b6}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a7505d0486ebec12f973ce2135b0954b6}{Edge\+Kinematics\+Diff\+Drive}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a10a5bcc5753d9dda3b2e524112c21579}\label{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a10a5bcc5753d9dda3b2e524112c21579}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsDiffDrive_a10a5bcc5753d9dda3b2e524112c21579}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for satisfying the non-\/holonomic kinematics of a differential drive mobile robot. 
+
+The edge depends on two vertices $ \mathbf{s}_i, \mathbf{s}_{ip1} $ and minimizes a geometric interpretation of the non-\/holonomic constraint\+:
+\begin{DoxyItemize}
+\item C. Rösmann et al.\+: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.
+\end{DoxyItemize}
+
+The {\itshape weight} can be set using set\+Information()\+: Matrix element 1,1\+: (Choose a very high value\+: $\sim$1000). ~\newline
+A second equation is implemented to penalize backward motions (second element of the error /cost vector). ~\newline
+The {\itshape weight} can be set using set\+Information()\+: Matrix element 2,2\+: (A value $\sim$1 allows backward driving, but penalizes it slighly). ~\newline
+The dimension of the error / cost vector is 2\+: the first component represents the nonholonomic constraint cost, the second one backward-\/drive cost. \begin{DoxySeeAlso}{参见}
+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Kinematics, \mbox{\hyperlink{classteb__local__planner_1_1EdgeKinematicsCarlike}{Edge\+Kinematics\+Carlike}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebBinaryEdge_a84e5a381aac4fba85204ae1af0494198}{set\+Teb\+Config()}} 
+\end{DoxyRemark}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+kinematics.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: navfn::NavfnROS类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>navfn</b></li><li class="navelem"><a class="el" href="classnavfn_1_1NavfnROS.html">NavfnROS</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">navfn::NavfnROS类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides a ROS wrapper for the navfn planner which runs a fast, interpolated navigation function on a costmap.  
+ <a href="classnavfn_1_1NavfnROS.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="navfn__ros_8h_source.html">navfn_ros.h</a>&gt;</code></p>
+<div class="dynheader">
+类 navfn::NavfnROS 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classnavfn_1_1NavfnROS.png" usemap="#navfn::NavfnROS_map" alt=""/>
+  <map id="navfn::NavfnROS_map" name="navfn::NavfnROS_map">
+<area href="classnav__core_1_1BaseGlobalPlanner.html" title="Provides an interface for global planners used in navigation. All global planners written as plugins ..." alt="nav_core::BaseGlobalPlanner" shape="rect" coords="0,0,180,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1b21c7105bc040df6e5d8f6c8adfb6a6"><td class="memItemLeft" align="right" valign="top"><a id="a1b21c7105bc040df6e5d8f6c8adfb6a6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a1b21c7105bc040df6e5d8f6c8adfb6a6">NavfnROS</a> ()</td></tr>
+<tr class="memdesc:a1b21c7105bc040df6e5d8f6c8adfb6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the NavFnROS object <br /></td></tr>
+<tr class="separator:a1b21c7105bc040df6e5d8f6c8adfb6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ba0ae6bd1cac9ee89110290c5b86e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a06ba0ae6bd1cac9ee89110290c5b86e6">NavfnROS</a> (std::string name, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a06ba0ae6bd1cac9ee89110290c5b86e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the NavFnROS object  <a href="classnavfn_1_1NavfnROS.html#a06ba0ae6bd1cac9ee89110290c5b86e6">更多...</a><br /></td></tr>
+<tr class="separator:a06ba0ae6bd1cac9ee89110290c5b86e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af405588d08b37d071e72d85dc33c6523"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#af405588d08b37d071e72d85dc33c6523">NavfnROS</a> (std::string name, <a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, std::string global_frame)</td></tr>
+<tr class="memdesc:af405588d08b37d071e72d85dc33c6523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the NavFnROS object  <a href="classnavfn_1_1NavfnROS.html#af405588d08b37d071e72d85dc33c6523">更多...</a><br /></td></tr>
+<tr class="separator:af405588d08b37d071e72d85dc33c6523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1e06b4e3b390aaaa3e4733a0668c4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a7f1e06b4e3b390aaaa3e4733a0668c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the NavFnROS object  <a href="classnavfn_1_1NavfnROS.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">更多...</a><br /></td></tr>
+<tr class="separator:a7f1e06b4e3b390aaaa3e4733a0668c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935ac2d5a76a101a3521cb078ee4ba4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a935ac2d5a76a101a3521cb078ee4ba4d">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, std::string global_frame)</td></tr>
+<tr class="memdesc:a935ac2d5a76a101a3521cb078ee4ba4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the NavFnROS object  <a href="classnavfn_1_1NavfnROS.html#a935ac2d5a76a101a3521cb078ee4ba4d">更多...</a><br /></td></tr>
+<tr class="separator:a935ac2d5a76a101a3521cb078ee4ba4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cec6d49a902ace7e71ffc7125b29a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#aa8cec6d49a902ace7e71ffc7125b29a9">makePlan</a> (const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:aa8cec6d49a902ace7e71ffc7125b29a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a goal pose in the world, compute a plan  <a href="classnavfn_1_1NavfnROS.html#aa8cec6d49a902ace7e71ffc7125b29a9">更多...</a><br /></td></tr>
+<tr class="separator:aa8cec6d49a902ace7e71ffc7125b29a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1925183250dd36115daadd91b14656aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a1925183250dd36115daadd91b14656aa">makePlan</a> (const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, double tolerance, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:a1925183250dd36115daadd91b14656aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a goal pose in the world, compute a plan  <a href="classnavfn_1_1NavfnROS.html#a1925183250dd36115daadd91b14656aa">更多...</a><br /></td></tr>
+<tr class="separator:a1925183250dd36115daadd91b14656aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01635a5d9947ae1b51ce70603db0c843"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a01635a5d9947ae1b51ce70603db0c843">computePotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a01635a5d9947ae1b51ce70603db0c843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the full navigation function for the map given a point in the world to start from  <a href="classnavfn_1_1NavfnROS.html#a01635a5d9947ae1b51ce70603db0c843">更多...</a><br /></td></tr>
+<tr class="separator:a01635a5d9947ae1b51ce70603db0c843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad645a775f99aa2a120bb0b7f6cd08fd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#ad645a775f99aa2a120bb0b7f6cd08fd5">getPlanFromPotential</a> (const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:ad645a775f99aa2a120bb0b7f6cd08fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a plan to a goal after the potential for a start point has already been computed (Note: You should call computePotential first)  <a href="classnavfn_1_1NavfnROS.html#ad645a775f99aa2a120bb0b7f6cd08fd5">更多...</a><br /></td></tr>
+<tr class="separator:ad645a775f99aa2a120bb0b7f6cd08fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f40b93d0f1c181f94fb7da28a476e2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a51f40b93d0f1c181f94fb7da28a476e2">getPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a51f40b93d0f1c181f94fb7da28a476e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the potential, or naviagation cost, at a given point in the world (Note: You should call computePotential first)  <a href="classnavfn_1_1NavfnROS.html#a51f40b93d0f1c181f94fb7da28a476e2">更多...</a><br /></td></tr>
+<tr class="separator:a51f40b93d0f1c181f94fb7da28a476e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b915897586064db5c861658133e909"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#ad2b915897586064db5c861658133e909">validPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:ad2b915897586064db5c861658133e909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid potential value at a given point in the world (Note: You should call computePotential first)  <a href="classnavfn_1_1NavfnROS.html#ad2b915897586064db5c861658133e909">更多...</a><br /></td></tr>
+<tr class="separator:ad2b915897586064db5c861658133e909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df71f9e257d604ba8cf630848eb3529"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a2df71f9e257d604ba8cf630848eb3529">validPointPotential</a> (const geometry_msgs::Point &amp;world_point, double tolerance)</td></tr>
+<tr class="memdesc:a2df71f9e257d604ba8cf630848eb3529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid potential value at a given point in the world (Note: You should call computePotential first)  <a href="classnavfn_1_1NavfnROS.html#a2df71f9e257d604ba8cf630848eb3529">更多...</a><br /></td></tr>
+<tr class="separator:a2df71f9e257d604ba8cf630848eb3529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b4ca9b40c385791f4cb7be8237e4bb"><td class="memItemLeft" align="right" valign="top"><a id="a05b4ca9b40c385791f4cb7be8237e4bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#a05b4ca9b40c385791f4cb7be8237e4bb">publishPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path, double r, double g, double b, double a)</td></tr>
+<tr class="memdesc:a05b4ca9b40c385791f4cb7be8237e4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a path for visualization purposes <br /></td></tr>
+<tr class="separator:a05b4ca9b40c385791f4cb7be8237e4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81643ac812bc02a5652f691c30834c27"><td class="memItemLeft" align="right" valign="top"><a id="a81643ac812bc02a5652f691c30834c27"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>makePlanService</b> (nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp)</td></tr>
+<tr class="separator:a81643ac812bc02a5652f691c30834c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1BaseGlobalPlanner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1BaseGlobalPlanner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1BaseGlobalPlanner.html">nav_core::BaseGlobalPlanner</a></td></tr>
+<tr class="memitem:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a> (const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</td></tr>
+<tr class="memdesc:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a goal pose in the world, compute a plan  <a href="classnav__core_1_1BaseGlobalPlanner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">更多...</a><br /></td></tr>
+<tr class="separator:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="memItemLeft" align="right" valign="top"><a id="a98120c1d76f7a5badb74adef9694a06d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for the interface <br /></td></tr>
+<tr class="separator:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1BaseGlobalPlanner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:aee612188ce6bbae6daa19353499bcf1c"><td class="memItemLeft" align="right" valign="top"><a id="aee612188ce6bbae6daa19353499bcf1c"></a>
+<a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1NavfnROS.html#aee612188ce6bbae6daa19353499bcf1c">costmap_</a></td></tr>
+<tr class="memdesc:aee612188ce6bbae6daa19353499bcf1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a copy of the current costmap in <em>costmap</em>. Called by makePlan. <br /></td></tr>
+<tr class="separator:aee612188ce6bbae6daa19353499bcf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ba1f9fa50ad74e2c41a8c93f9b74e0"><td class="memItemLeft" align="right" valign="top"><a id="a36ba1f9fa50ad74e2c41a8c93f9b74e0"></a>
+boost::shared_ptr&lt; <a class="el" href="classnavfn_1_1NavFn.html">NavFn</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>planner_</b></td></tr>
+<tr class="separator:a36ba1f9fa50ad74e2c41a8c93f9b74e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7e371d85298da82ad4e2f7965efe4f"><td class="memItemLeft" align="right" valign="top"><a id="a2e7e371d85298da82ad4e2f7965efe4f"></a>
+ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><b>plan_pub_</b></td></tr>
+<tr class="separator:a2e7e371d85298da82ad4e2f7965efe4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa70e7aeb1abdcbcd0787a87d11c464"><td class="memItemLeft" align="right" valign="top"><a id="a2fa70e7aeb1abdcbcd0787a87d11c464"></a>
+ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><b>potarr_pub_</b></td></tr>
+<tr class="separator:a2fa70e7aeb1abdcbcd0787a87d11c464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd08548cdff16315eef20424b1203dc"><td class="memItemLeft" align="right" valign="top"><a id="affd08548cdff16315eef20424b1203dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialized_</b></td></tr>
+<tr class="separator:affd08548cdff16315eef20424b1203dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4003d3313fc2e0ede53223559c0ed9c5"><td class="memItemLeft" align="right" valign="top"><a id="a4003d3313fc2e0ede53223559c0ed9c5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_unknown_</b></td></tr>
+<tr class="separator:a4003d3313fc2e0ede53223559c0ed9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cf4a3a4d61adfc9276cc2ef7cc5f4d"><td class="memItemLeft" align="right" valign="top"><a id="a17cf4a3a4d61adfc9276cc2ef7cc5f4d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>visualize_potential_</b></td></tr>
+<tr class="separator:a17cf4a3a4d61adfc9276cc2ef7cc5f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Provides a ROS wrapper for the navfn planner which runs a fast, interpolated navigation function on a costmap. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a06ba0ae6bd1cac9ee89110290c5b86e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ba0ae6bd1cac9ee89110290c5b86e6">&#9670;&nbsp;</a></span>NavfnROS() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">navfn::NavfnROS::NavfnROS </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the NavFnROS object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of this planner </td></tr>
+    <tr><td class="paramname">costmap</td><td>A pointer to the ROS wrapper of the costmap to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af405588d08b37d071e72d85dc33c6523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af405588d08b37d071e72d85dc33c6523">&#9670;&nbsp;</a></span>NavfnROS() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">navfn::NavfnROS::NavfnROS </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>global_frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the NavFnROS object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of this planner </td></tr>
+    <tr><td class="paramname">costmap</td><td>A pointer to the costmap to use </td></tr>
+    <tr><td class="paramname">global_frame</td><td>The global frame of the costmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a01635a5d9947ae1b51ce70603db0c843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01635a5d9947ae1b51ce70603db0c843">&#9670;&nbsp;</a></span>computePotential()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::computePotential </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>world_point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the full navigation function for the map given a point in the world to start from </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_point</td><td>The point to use for seeding the navigation function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the navigation function was computed successfully, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad645a775f99aa2a120bb0b7f6cd08fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad645a775f99aa2a120bb0b7f6cd08fd5">&#9670;&nbsp;</a></span>getPlanFromPotential()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::getPlanFromPotential </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute a plan to a goal after the potential for a start point has already been computed (Note: You should call computePotential first) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal</td><td>The goal pose to create a plan to </td></tr>
+    <tr><td class="paramname">plan</td><td>The plan... filled by the planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid plan was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a51f40b93d0f1c181f94fb7da28a476e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f40b93d0f1c181f94fb7da28a476e2">&#9670;&nbsp;</a></span>getPointPotential()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double navfn::NavfnROS::getPointPotential </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>world_point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the potential, or naviagation cost, at a given point in the world (Note: You should call computePotential first) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_point</td><td>The point to get the potential for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The navigation function's value at that point in the world </dd></dl>
+
+</div>
+</div>
+<a id="a935ac2d5a76a101a3521cb078ee4ba4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935ac2d5a76a101a3521cb078ee4ba4d">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavfnROS::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>global_frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialization function for the NavFnROS object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of this planner </td></tr>
+    <tr><td class="paramname">costmap</td><td>A pointer to the costmap to use for planning </td></tr>
+    <tr><td class="paramname">global_frame</td><td>The global frame of the costmap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f1e06b4e3b390aaaa3e4733a0668c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1e06b4e3b390aaaa3e4733a0668c4d">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavfnROS::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialization function for the NavFnROS object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of this planner </td></tr>
+    <tr><td class="paramname">costmap</td><td>A pointer to the ROS wrapper of the costmap to use for planning </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#a485461ff314103dac95744f771107c43">nav_core::BaseGlobalPlanner</a>.</p>
+
+</div>
+</div>
+<a id="a1925183250dd36115daadd91b14656aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1925183250dd36115daadd91b14656aa">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a goal pose in the world, compute a plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start pose </td></tr>
+    <tr><td class="paramname">goal</td><td>The goal pose </td></tr>
+    <tr><td class="paramname">tolerance</td><td>The tolerance on the goal point for the planner </td></tr>
+    <tr><td class="paramname">plan</td><td>The plan... filled by the planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid plan was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aa8cec6d49a902ace7e71ffc7125b29a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cec6d49a902ace7e71ffc7125b29a9">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a goal pose in the world, compute a plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start pose </td></tr>
+    <tr><td class="paramname">goal</td><td>The goal pose </td></tr>
+    <tr><td class="paramname">plan</td><td>The plan... filled by the planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid plan was found, false otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1BaseGlobalPlanner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">nav_core::BaseGlobalPlanner</a>.</p>
+
+</div>
+</div>
+<a id="ad2b915897586064db5c861658133e909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b915897586064db5c861658133e909">&#9670;&nbsp;</a></span>validPointPotential() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::validPointPotential </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>world_point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for a valid potential value at a given point in the world (Note: You should call computePotential first) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_point</td><td>The point to get the potential for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the navigation function is valid at that point in the world, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a2df71f9e257d604ba8cf630848eb3529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df71f9e257d604ba8cf630848eb3529">&#9670;&nbsp;</a></span>validPointPotential() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnROS::validPointPotential </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>world_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for a valid potential value at a given point in the world (Note: You should call computePotential first) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world_point</td><td>The point to get the potential for </td></tr>
+    <tr><td class="paramname">tolerance</td><td>The tolerance on searching around the world_point specified </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the navigation function is valid at that point in the world, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>navfn/include/navfn/<a class="el" href="navfn__ros_8h_source.html">navfn_ros.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

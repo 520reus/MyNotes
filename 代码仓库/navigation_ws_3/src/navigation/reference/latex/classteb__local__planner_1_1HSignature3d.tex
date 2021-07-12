@@ -1,0 +1,170 @@
+\hypertarget{classteb__local__planner_1_1HSignature3d}{}\doxysection{teb\+\_\+local\+\_\+planner\+::HSignature3d类 参考}
+\label{classteb__local__planner_1_1HSignature3d}\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+
+
+The H-\/signature in three dimensions (here\+: x-\/y-\/t) defines an equivalence relation based on homology using theorems from electro magnetism.  
+
+
+
+
+{\ttfamily \#include $<$h\+\_\+signature.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::HSignature3d 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1HSignature3d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_ab02627ac2aa07c2c37ff01f0d0fd2d15}{HSignature3d}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Constructor accepting a \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Bidir\+Iter , typename Fun $>$ }\\void \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a58e1746c14bbd2d321cd563edcf7363f}{calculate\+HSignature}} (Bidir\+Iter path\+\_\+start, Bidir\+Iter path\+\_\+end, Fun fun\+\_\+cplx\+\_\+point, const Obst\+Container $\ast$obstacles, boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$ timediff\+\_\+start, boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$ timediff\+\_\+end)
+\begin{DoxyCompactList}\small\item\em Calculate the H-\/\+Signature of a path \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a0e4b1416456fd96d65a22aa5293280f3}{is\+Equal}} (const \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if two candidate classes are equivalent \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a7d9b77c526c10768ecfa028c3fb26942}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Check if the equivalence value is detected correctly \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a20174912c0ce8a6c342681da959d3845}{is\+Reasonable}} () const
+\begin{DoxyCompactList}\small\item\em Check if the trajectory is non-\/looping around any obstacle. Values greater than 1 indicate a looping trajectory. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_ab480fe8c443893fdad67d1f0fec32aca}{values}} () const
+\begin{DoxyCompactList}\small\item\em Get the current h-\/signature (read-\/only) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+The H-\/signature in three dimensions (here\+: x-\/y-\/t) defines an equivalence relation based on homology using theorems from electro magnetism. 
+
+The H-\/\+Signature depends on the obstacle configuration and can be utilized to check whether two trajectores belong to the same homology class. Refer to\+: ~\newline
+
+\begin{DoxyItemize}
+\item S. Bhattacharya et al.\+: Identification and Representation of Homotopy Classes of Trajectories for Search-\/based Path Planning in 3D, 2011 
+\end{DoxyItemize}
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_ab02627ac2aa07c2c37ff01f0d0fd2d15}\label{classteb__local__planner_1_1HSignature3d_ab02627ac2aa07c2c37ff01f0d0fd2d15}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!HSignature3d@{HSignature3d}}
+\index{HSignature3d@{HSignature3d}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{HSignature3d()}{HSignature3d()}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::\+HSignature3d (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting a \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} storing some user configuration options \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_a58e1746c14bbd2d321cd563edcf7363f}\label{classteb__local__planner_1_1HSignature3d_a58e1746c14bbd2d321cd563edcf7363f}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!calculateHSignature@{calculateHSignature}}
+\index{calculateHSignature@{calculateHSignature}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{calculateHSignature()}{calculateHSignature()}}
+{\footnotesize\ttfamily template$<$typename Bidir\+Iter , typename Fun $>$ \\
+void teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::calculate\+HSignature (\begin{DoxyParamCaption}\item[{Bidir\+Iter}]{path\+\_\+start,  }\item[{Bidir\+Iter}]{path\+\_\+end,  }\item[{Fun}]{fun\+\_\+cplx\+\_\+point,  }\item[{const Obst\+Container $\ast$}]{obstacles,  }\item[{boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$}]{timediff\+\_\+start,  }\item[{boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$}]{timediff\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the H-\/\+Signature of a path 
+
+The implemented function accepts generic path descriptions that are restricted to the following structure\+: ~\newline
+The path is composed of points T and is represented by a std\+::vector$<$ T $>$ or similar type (std\+::list, std\+::deque, ...). ~\newline
+Provide a unary function with the following signature {\ttfamily  std\+::complex$<$ long double $>$ (const T\& point\+\_\+type) } that returns a complex value for the position (Re($\ast$)=x, Im($\ast$)=y).
+
+T could also be a pointer type, if the passed function also accepts a const T$\ast$ point\+\_\+\+Type.
+
+
+\begin{DoxyParams}{参数}
+{\em path\+\_\+start} & Iterator to the first element in the path \\
+\hline
+{\em path\+\_\+end} & Iterator to the last element in the path \\
+\hline
+{\em obstacles} & obstacle container \\
+\hline
+{\em fun\+\_\+cplx\+\_\+point} & function accepting the dereference iterator type and that returns the position as complex number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Bidir\+Iter} & Bidirectional iterator type \\
+\hline
+{\em Fun} & function of the form std\+::complex$<$ long double $>$ (const T\& point\+\_\+type) \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_a0e4b1416456fd96d65a22aa5293280f3}\label{classteb__local__planner_1_1HSignature3d_a0e4b1416456fd96d65a22aa5293280f3}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if two candidate classes are equivalent 
+
+If the absolute value of the H-\/\+Signature is equal or greater than 1, a loop (in x-\/y) around the obstacle is indicated. Positive H-\/\+Signature\+: \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} lies on the left hand side of the planned trajectory Negative H-\/\+Signature\+: \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} lies on the right hand side of the planned trajectory H-\/\+Signature equals zero\+: \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} lies in infinity, has no influence on trajectory
+
+
+\begin{DoxyParams}{参数}
+{\em other} & The other equivalence class to test with \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_a7e289b0f8bd72e2f82f4efa480e5803f}{teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_a20174912c0ce8a6c342681da959d3845}\label{classteb__local__planner_1_1HSignature3d_a20174912c0ce8a6c342681da959d3845}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!isReasonable@{isReasonable}}
+\index{isReasonable@{isReasonable}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{isReasonable()}{isReasonable()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::is\+Reasonable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if the trajectory is non-\/looping around any obstacle. Values greater than 1 indicate a looping trajectory. 
+
+\begin{DoxyReturn}{返回}
+Returns false, if the trajectory loops around an obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_ac688c64b4a1bbdbb25313a6bce01751f}{teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_a7d9b77c526c10768ecfa028c3fb26942}\label{classteb__local__planner_1_1HSignature3d_a7d9b77c526c10768ecfa028c3fb26942}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!isValid@{isValid}}
+\index{isValid@{isValid}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if the equivalence value is detected correctly 
+
+\begin{DoxyReturn}{返回}
+Returns false, if the equivalence class detection failed, e.\+g. if nan-\/ or inf values occur. 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_adb6d033b42cf00ee5c62e47c9c12819c}{teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HSignature3d_ab480fe8c443893fdad67d1f0fec32aca}\label{classteb__local__planner_1_1HSignature3d_ab480fe8c443893fdad67d1f0fec32aca}} 
+\index{teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}!values@{values}}
+\index{values@{values}!teb\_local\_planner::HSignature3d@{teb\_local\_planner::HSignature3d}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$\& teb\+\_\+local\+\_\+planner\+::\+HSignature3d\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current h-\/signature (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+h-\/signature in complex-\/number format 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/h\+\_\+signature.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,916 @@
+\hypertarget{classteb__local__planner_1_1HomotopyClassPlanner}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Homotopy\+Class\+Planner类 参考}
+\label{classteb__local__planner_1_1HomotopyClassPlanner}\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+
+
+Local planner that explores alternative homotopy classes, create a plan for each alternative and finally return the robot controls for the current best path (repeated in each sampling interval)  
+
+
+
+
+{\ttfamily \#include $<$homotopy\+\_\+class\+\_\+planner.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Homotopy\+Class\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1HomotopyClassPlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ae442ea3920a7cb7735733515201bea7e}\label{classteb__local__planner_1_1HomotopyClassPlanner_ae442ea3920a7cb7735733515201bea7e}} 
+using {\bfseries Equivalence\+Class\+Container} = std\+::vector$<$ std\+::pair$<$ Equivalence\+Class\+Ptr, bool $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a2110f239b27e401ee3bcb5136eac89b0}\label{classteb__local__planner_1_1HomotopyClassPlanner_a2110f239b27e401ee3bcb5136eac89b0}} 
+\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a2110f239b27e401ee3bcb5136eac89b0}{Homotopy\+Class\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac767cbafaf5058ee83ff99114d24fb92}{Homotopy\+Class\+Planner}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, Obst\+Container $\ast$\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}{obstacles}}=NULL, Robot\+Footprint\+Model\+Ptr robot\+\_\+model=boost\+::make\+\_\+shared$<$ \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}} $>$(), Teb\+Visualization\+Ptr visualization=Teb\+Visualization\+Ptr(), const Via\+Point\+Container $\ast$via\+\_\+points=NULL)
+\begin{DoxyCompactList}\small\item\em Construct and initialize the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_aefc0acb32746fca0df98ed24c0338452}\label{classteb__local__planner_1_1HomotopyClassPlanner_aefc0acb32746fca0df98ed24c0338452}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_aefc0acb32746fca0df98ed24c0338452}{$\sim$\+Homotopy\+Class\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Destruct the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a8116edc25c55704e5ec640e062ba622f}{initialize}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, Obst\+Container $\ast$\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}{obstacles}}=NULL, Robot\+Footprint\+Model\+Ptr robot\+\_\+model=boost\+::make\+\_\+shared$<$ \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}} $>$(), Teb\+Visualization\+Ptr visualization=Teb\+Visualization\+Ptr(), const Via\+Point\+Container $\ast$via\+\_\+points=NULL)
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Plan a trajectory}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&initial\+\_\+plan, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory based on an initial reference plan. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac1c2fae1eafa197bd5d787180c036992}{plan}} (const tf\+::\+Pose \&start, const tf\+::\+Pose \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose (tf\+::\+Pose version). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a8cf7d641444293d5a51f90d7c02d7d8d}{plan}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a3e8f7fa1c3dbc5037a552024101f0c47}{get\+Velocity\+Command}} (double \&vx, double \&vy, double \&omega, int look\+\_\+ahead\+\_\+poses) const
+\begin{DoxyCompactList}\small\item\em Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a9f202e1abac76b8afa467700a3de5cf6}{best\+Teb}} () const
+\begin{DoxyCompactList}\small\item\em Access current best trajectory candidate (that relates to the \char`\"{}best\char`\"{} homotopy class). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab5ed26e5b1a0978e6d2c43082a15caea}{is\+Trajectory\+Feasible}} (base\+\_\+local\+\_\+planner\+::\+Costmap\+Model $\ast$costmap\+\_\+model, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0, int look\+\_\+ahead\+\_\+idx=-\/1)
+\begin{DoxyCompactList}\small\item\em Check whether the planned trajectory is feasible or not. \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a27c4eedef91c7647ead76facc4e7d560}{find\+Best\+Teb}} ()
+\begin{DoxyCompactList}\small\item\em In case of empty best teb, scores again the available plans to find the best one. The best\+\_\+teb\+\_\+ variable is updated consequently. \end{DoxyCompactList}\item 
+Teb\+Opt\+Planner\+Container\+::iterator \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a28cb841ab6621305160622d2cb4767c5}{remove\+Teb}} (Teb\+Optimal\+Planner\+Ptr \&teb)
+\begin{DoxyCompactList}\small\item\em Removes the specified teb and the corresponding homotopy class from the list of available ones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Visualization}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a7c5eb7412271b533e774a309fa6abd05}{set\+Visualization}} (Teb\+Visualization\+Ptr visualization)
+\begin{DoxyCompactList}\small\item\em Register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class to enable visiualization routines (e.\+g. publish the local plan and pose sequence) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a718510bcffcce3b6a4714495658a911c}{visualize}} ()
+\begin{DoxyCompactList}\small\item\em Publish the local plan, pose sequence and additional information via ros topics (e.\+g. subscribe with rviz). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Explore new paths and keep only a single one for each homotopy class}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a8fadf170bebb98e4c39a07af8afdced4}\label{classteb__local__planner_1_1HomotopyClassPlanner_a8fadf170bebb98e4c39a07af8afdced4}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a8fadf170bebb98e4c39a07af8afdced4}{cfg\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Config class that stores and manages all related parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a2d9c4645bb20e68df3bf1a47738da40f}\label{classteb__local__planner_1_1HomotopyClassPlanner_a2d9c4645bb20e68df3bf1a47738da40f}} 
+Obst\+Container $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a2d9c4645bb20e68df3bf1a47738da40f}{obstacles\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store obstacles that are relevant for planning \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a815890db7b340b937cc8ba135a244571}\label{classteb__local__planner_1_1HomotopyClassPlanner_a815890db7b340b937cc8ba135a244571}} 
+const Via\+Point\+Container $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a815890db7b340b937cc8ba135a244571}{via\+\_\+points\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the current list of via-\/points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a282c59b32905b7a567070f518d45bdc0}\label{classteb__local__planner_1_1HomotopyClassPlanner_a282c59b32905b7a567070f518d45bdc0}} 
+Teb\+Visualization\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a282c59b32905b7a567070f518d45bdc0}{visualization\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Instance of the visualization class (local/global plan, obstacles, ...) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a2ed5825c67604ca73379301672ddae20}\label{classteb__local__planner_1_1HomotopyClassPlanner_a2ed5825c67604ca73379301672ddae20}} 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a2ed5825c67604ca73379301672ddae20}{best\+\_\+teb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the current best teb. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_aaf2d67a9747834ea58132b34bdfbf57f}\label{classteb__local__planner_1_1HomotopyClassPlanner_aaf2d67a9747834ea58132b34bdfbf57f}} 
+Robot\+Footprint\+Model\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_aaf2d67a9747834ea58132b34bdfbf57f}{robot\+\_\+model\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Robot model shared instance \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a27e3caa202d4fa614427c30aa49d093a}\label{classteb__local__planner_1_1HomotopyClassPlanner_a27e3caa202d4fa614427c30aa49d093a}} 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a27e3caa202d4fa614427c30aa49d093a}{initial\+\_\+plan\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the initial plan if available for a better trajectory initialization \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a3671752d49c4f668e5f569002f6b5335}\label{classteb__local__planner_1_1HomotopyClassPlanner_a3671752d49c4f668e5f569002f6b5335}} 
+Equivalence\+Class\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a3671752d49c4f668e5f569002f6b5335}{initial\+\_\+plan\+\_\+eq\+\_\+class\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the equivalence class of the initial plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a6cfcbc87e5e75cc98759ca95c66cb097}\label{classteb__local__planner_1_1HomotopyClassPlanner_a6cfcbc87e5e75cc98759ca95c66cb097}} 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a6cfcbc87e5e75cc98759ca95c66cb097}{initial\+\_\+plan\+\_\+teb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store pointer to the TEB related to the initial plan (use method \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a21bcd95064e5325e9ce850d01b91b824}{get\+Initial\+Plan\+TEB()}} since it checks if initial\+\_\+plan\+\_\+teb\+\_\+ is still included in tebs\+\_\+.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a3312042b11d8f9606676e8e2793fdc57}\label{classteb__local__planner_1_1HomotopyClassPlanner_a3312042b11d8f9606676e8e2793fdc57}} 
+Teb\+Opt\+Planner\+Container \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a3312042b11d8f9606676e8e2793fdc57}{tebs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Container that stores multiple local teb planners (for alternative equivalence classes) and their corresponding costs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a05f8b540ac16eae5f0977fd45e7c1402}\label{classteb__local__planner_1_1HomotopyClassPlanner_a05f8b540ac16eae5f0977fd45e7c1402}} 
+Equivalence\+Class\+Container \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a05f8b540ac16eae5f0977fd45e7c1402}{equivalence\+\_\+classes\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store all known quivalence classes (e.\+g. h-\/signatures) to allow checking for duplicates after finding and adding new ones. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a8e83e0367082007f321e93ffdcea4668}\label{classteb__local__planner_1_1HomotopyClassPlanner_a8e83e0367082007f321e93ffdcea4668}} 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface}{Graph\+Search\+Interface}} $>$ {\bfseries graph\+\_\+search\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_afb0e2ee798e219abd59363f6abd66e7f}\label{classteb__local__planner_1_1HomotopyClassPlanner_afb0e2ee798e219abd59363f6abd66e7f}} 
+ros\+::\+Time \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_afb0e2ee798e219abd59363f6abd66e7f}{last\+\_\+eq\+\_\+class\+\_\+switching\+\_\+time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the time at which the equivalence class changed recently \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a933fdb7d462403912283bec9eaf414be}\label{classteb__local__planner_1_1HomotopyClassPlanner_a933fdb7d462403912283bec9eaf414be}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a933fdb7d462403912283bec9eaf414be}{initialized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Keeps track about the correct initialization of this class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a7b224d3aa6d562724d25941e55464a1d}\label{classteb__local__planner_1_1HomotopyClassPlanner_a7b224d3aa6d562724d25941e55464a1d}} 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a7b224d3aa6d562724d25941e55464a1d}{last\+\_\+best\+\_\+teb\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Points to the plan used in the previous control cycle \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a53da39498920840cd960fca10cde8b6c}{has\+Equivalence\+Class}} (const Equivalence\+Class\+Ptr \&eq\+\_\+class) const
+\begin{DoxyCompactList}\small\item\em Check if a h-\/signature exists already. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab67f5d38e08e1fd6a63ee1f06bf652f1}{renew\+And\+Analyze\+Old\+Tebs}} (bool delete\+\_\+detours)
+\begin{DoxyCompactList}\small\item\em Renew all found h-\/signatures for the new planning step based on existing TEBs. Optionally detours can be discarded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a87bba235037c6769b5882ba5714e882a}{update\+Reference\+Trajectory\+Via\+Points}} (bool all\+\_\+trajectories)
+\begin{DoxyCompactList}\small\item\em Associate trajectories with via-\/points \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Important steps that are called during planning}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ace1e52b129419eb3bd5a7e95ff460bf4}{explore\+Equivalence\+Classes\+And\+Init\+Tebs}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, double dist\+\_\+to\+\_\+obst, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Explore paths in new equivalence classes (e.\+g. homotopy classes) and initialize TEBs from them. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Bidir\+Iter , typename Fun $>$ }\\Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a0e423322d2a35a3083b797f96439396d}{add\+And\+Init\+New\+Teb}} (Bidir\+Iter path\+\_\+start, Bidir\+Iter path\+\_\+end, Fun fun\+\_\+position, double start\+\_\+orientation, double goal\+\_\+orientation, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it using a generic 2D reference path \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a0c06e0c0ea750787a521644997816021}{add\+And\+Init\+New\+Teb}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it with a simple straight line between a given start and goal \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_aa3f5db987493ea8a052c2727c32bd40f}{add\+And\+Init\+New\+Teb}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&initial\+\_\+plan, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Add a new Teb to the internal trajectory container , if this teb constitutes a new equivalence class. Initialize it using a Pose\+Stamped container \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a431ea70eca1620cf991b5154d0c27adc}{update\+All\+TEBs}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} $\ast$start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} $\ast$goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Update TEBs with new pose, goal and current velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a1c141e147ddb669f5c7155b075f0dce7}{optimize\+All\+TEBs}} (int iter\+\_\+innerloop, int iter\+\_\+outerloop)
+\begin{DoxyCompactList}\small\item\em Optimize all available trajectories by invoking the optimizer on each one. \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a21bcd95064e5325e9ce850d01b91b824}{get\+Initial\+Plan\+TEB}} ()
+\begin{DoxyCompactList}\small\item\em Returns a shared pointer to the TEB related to the initial plan \end{DoxyCompactList}\item 
+Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac8377a6481cfd1a7e9c08c556bb0a5e7}{select\+Best\+Teb}} ()
+\begin{DoxyCompactList}\small\item\em In case of multiple, internally stored, alternative trajectories, select the best one according to their cost values. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ad0a350b637fac6eca4e2daf56e4f6d12}{clear\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Reset the planner. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac131c3d9f6de5ea8d9b67cb7dd2a6a4b}{set\+Preferred\+Turning\+Dir}} (Rot\+Type dir)
+\begin{DoxyCompactList}\small\item\em Prefer a desired initial turning direction (by penalizing the opposing one) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Bidir\+Iter , typename Fun $>$ }\\Equivalence\+Class\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_abcfc48c321ae75cb39d7a5bdcb9509f5}{calculate\+Equivalence\+Class}} (Bidir\+Iter path\+\_\+start, Bidir\+Iter path\+\_\+end, Fun fun\+\_\+cplx\+\_\+point, const Obst\+Container $\ast$\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}{obstacles}}=NULL, boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$ timediff\+\_\+start=boost\+::none, boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$ timediff\+\_\+end=boost\+::none)
+\begin{DoxyCompactList}\small\item\em Calculate the equivalence class of a path \end{DoxyCompactList}\item 
+const Teb\+Opt\+Planner\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_aa9424a2705655140407701399e032b7c}{get\+Trajectory\+Container}} () const
+\begin{DoxyCompactList}\small\item\em Read-\/only access to the internal trajectory container. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a762d67ecc885aab5899bfe15f091f94f}{compute\+Current\+Cost}} (std\+::vector$<$ double $>$ \&cost, double obst\+\_\+cost\+\_\+scale=1.\+0, double viapoint\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_adc6d4bf3972789b3072f1ec87def82ab}{delete\+Plans\+Detouring\+Backwards}} (const double orient\+\_\+threshold, const double len\+\_\+orientation\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Checks if the orientation of the computed trajectories differs from that of the best plan of more than the specified threshold and eventually deletes them. Also deletes detours with a duration much bigger than the duration of the best\+\_\+teb (duration / best duration $>$ max\+\_\+ratio\+\_\+detours\+\_\+duration\+\_\+best\+\_\+duration). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_aee36dd180fff314c4eede79051eb3e1b}{compute\+Start\+Orientation}} (const Teb\+Optimal\+Planner\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan}}, const double len\+\_\+orientation\+\_\+vector, double \&orientation)
+\begin{DoxyCompactList}\small\item\em Given a plan, computes its start orientation using a vector of length $>$= len\+\_\+orientation\+\_\+vector starting from the initial pose. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ad7cf5fe454ad9509143443a59c4f6e07}{config}} () const
+\begin{DoxyCompactList}\small\item\em Access config (read-\/only) \end{DoxyCompactList}\item 
+const Obst\+Container $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}{obstacles}} () const
+\begin{DoxyCompactList}\small\item\em Access current obstacle container (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_add39bc798cfe55db6191f822fced5d49}\label{classteb__local__planner_1_1HomotopyClassPlanner_add39bc798cfe55db6191f822fced5d49}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_add39bc798cfe55db6191f822fced5d49}{is\+Initialized}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the planner is initialized \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a6ab8d25cf2d6053608d3ee3e8c55235a}\label{classteb__local__planner_1_1HomotopyClassPlanner_a6ab8d25cf2d6053608d3ee3e8c55235a}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a6ab8d25cf2d6053608d3ee3e8c55235a}{clear\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Clear any existing graph of the homotopy class search \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac738eed8b28471741852c954e21f90a1}{best\+Teb\+Idx}} () const
+\begin{DoxyCompactList}\small\item\em find the index of the currently best TEB in the container \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a66d76f3d1b94cd294b8295f88249f99a}{add\+Equivalence\+Class\+If\+New}} (const Equivalence\+Class\+Ptr \&eq\+\_\+class, bool lock=false)
+\begin{DoxyCompactList}\small\item\em Internal helper function that adds a new equivalence class to the list of known classes only if it is unique. \end{DoxyCompactList}\item 
+const Equivalence\+Class\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a664259ee8e2be5ea5d680c69bd7adaa9}{get\+Equivalence\+Class\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Return the current set of equivalence erelations (read-\/only) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab4759ac6ac07fee46625ba45ab9fb7d2}{is\+HSignature\+Similar}} (const std\+::complex$<$ long double $>$ \&h1, const std\+::complex$<$ long double $>$ \&h2, double threshold)
+\begin{DoxyCompactList}\small\item\em Check if two h-\/signatures are similar (w.\+r.\+t. a certain threshold) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Local planner that explores alternative homotopy classes, create a plan for each alternative and finally return the robot controls for the current best path (repeated in each sampling interval) 
+
+Equivalence classes (e.\+g. homotopy) are explored using the help of a search-\/graph. ~\newline
+A couple of possible candidates are sampled / generated and filtered afterwards such that only a single candidate per homotopy class remain. Filtering is applied using the H-\/\+Signature, a homotopy (resp. homology) invariant\+: ~\newline
+
+\begin{DoxyItemize}
+\item S. Bhattacharya et al.\+: Search-\/based Path Planning with Homotopy Class Constraints, AAAI, 2010
+\item C. Rösmann et al.\+: Planning of Multiple Robot Trajectories in Distinctive Topologies, ECMR, 2015.
+\end{DoxyItemize}
+
+Followed by the homotopy class search, each candidate is used as an initialization for the underlying trajectory optimization (in this case utilizing the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class with the \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}). ~\newline
+Depending on the config parameters, the optimization is performed in parallel. ~\newline
+After the optimization is completed, the best optimized candidate is selected w.\+r.\+t. to trajectory cost, since the cost already contains important features like clearance from obstacles and transition time. ~\newline
+ Everyhting is performed by calling one of the overloaded \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan()}} methods. ~\newline
+Afterwards the velocity command to control the robot is obtained from the \char`\"{}best\char`\"{} candidate via \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a3e8f7fa1c3dbc5037a552024101f0c47}{get\+Velocity\+Command()}}. ~\newline
+ All steps are repeated in the subsequent sampling interval with the exception, that already planned (optimized) trajectories are preferred against new path initilizations in order to improve the hot-\/starting capability. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ac767cbafaf5058ee83ff99114d24fb92}\label{classteb__local__planner_1_1HomotopyClassPlanner_ac767cbafaf5058ee83ff99114d24fb92}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!HomotopyClassPlanner@{HomotopyClassPlanner}}
+\index{HomotopyClassPlanner@{HomotopyClassPlanner}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{HomotopyClassPlanner()}{HomotopyClassPlanner()}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::\+Homotopy\+Class\+Planner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg,  }\item[{Obst\+Container $\ast$}]{obstacles = {\ttfamily NULL},  }\item[{Robot\+Footprint\+Model\+Ptr}]{robot\+\_\+model = {\ttfamily boost\+:\+:make\+\_\+shared$<$~\mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}}~$>$()},  }\item[{Teb\+Visualization\+Ptr}]{visualization = {\ttfamily TebVisualizationPtr()},  }\item[{const Via\+Point\+Container $\ast$}]{via\+\_\+points = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Construct and initialize the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & Const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for internal parameters \\
+\hline
+{\em obstacles} & Container storing all relevant obstacles (see \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}}) \\
+\hline
+{\em robot\+\_\+model} & Shared pointer to the robot shape model used for optimization (optional) \\
+\hline
+{\em visualization} & Shared pointer to the \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class (optional) \\
+\hline
+{\em via\+\_\+points} & Container storing via-\/points (optional) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a0e423322d2a35a3083b797f96439396d}\label{classteb__local__planner_1_1HomotopyClassPlanner_a0e423322d2a35a3083b797f96439396d}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!addAndInitNewTeb@{addAndInitNewTeb}}
+\index{addAndInitNewTeb@{addAndInitNewTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{addAndInitNewTeb()}{addAndInitNewTeb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Bidir\+Iter , typename Fun $>$ \\
+Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::add\+And\+Init\+New\+Teb (\begin{DoxyParamCaption}\item[{Bidir\+Iter}]{path\+\_\+start,  }\item[{Bidir\+Iter}]{path\+\_\+end,  }\item[{Fun}]{fun\+\_\+position,  }\item[{double}]{start\+\_\+orientation,  }\item[{double}]{goal\+\_\+orientation,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it using a generic 2D reference path 
+
+Refer to Timed\+Elastic\+Band\+::init\+TEBto\+Goal() for more details about the template parameters. 
+\begin{DoxyParams}{参数}
+{\em path\+\_\+start} & start iterator of a generic 2d path \\
+\hline
+{\em path\+\_\+end} & end iterator of a generic 2d path \\
+\hline
+{\em fun\+\_\+position} & unary function that returns the Eigen\+::\+Vector2d object \\
+\hline
+{\em start\+\_\+orientation} & Orientation of the first pose of the trajectory (optional, otherwise use goal heading) \\
+\hline
+{\em goal\+\_\+orientation} & Orientation of the last pose of the trajectory (optional, otherwise use goal heading) \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Bidir\+Iter} & Bidirectional iterator type \\
+\hline
+{\em Fun} & unyary function that transforms the dereferenced iterator into an Eigen\+::\+Vector2d \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+Shared pointer to the newly created teb optimal planner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a0c06e0c0ea750787a521644997816021}\label{classteb__local__planner_1_1HomotopyClassPlanner_a0c06e0c0ea750787a521644997816021}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!addAndInitNewTeb@{addAndInitNewTeb}}
+\index{addAndInitNewTeb@{addAndInitNewTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{addAndInitNewTeb()}{addAndInitNewTeb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::add\+And\+Init\+New\+Teb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Add a new Teb to the internal trajectory container, if this teb constitutes a new equivalence class. Initialize it with a simple straight line between a given start and goal 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & start pose \\
+\hline
+{\em goal} & goal pose \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Shared pointer to the newly created teb optimal planner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_aa3f5db987493ea8a052c2727c32bd40f}\label{classteb__local__planner_1_1HomotopyClassPlanner_aa3f5db987493ea8a052c2727c32bd40f}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!addAndInitNewTeb@{addAndInitNewTeb}}
+\index{addAndInitNewTeb@{addAndInitNewTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{addAndInitNewTeb()}{addAndInitNewTeb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::add\+And\+Init\+New\+Teb (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{initial\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Add a new Teb to the internal trajectory container , if this teb constitutes a new equivalence class. Initialize it using a Pose\+Stamped container 
+
+
+\begin{DoxyParams}{参数}
+{\em initial\+\_\+plan} & container of poses (start and goal orientation should be valid!) \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Shared pointer to the newly created teb optimal planner 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a66d76f3d1b94cd294b8295f88249f99a}\label{classteb__local__planner_1_1HomotopyClassPlanner_a66d76f3d1b94cd294b8295f88249f99a}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!addEquivalenceClassIfNew@{addEquivalenceClassIfNew}}
+\index{addEquivalenceClassIfNew@{addEquivalenceClassIfNew}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{addEquivalenceClassIfNew()}{addEquivalenceClassIfNew()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::add\+Equivalence\+Class\+If\+New (\begin{DoxyParamCaption}\item[{const Equivalence\+Class\+Ptr \&}]{eq\+\_\+class,  }\item[{bool}]{lock = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Internal helper function that adds a new equivalence class to the list of known classes only if it is unique. 
+
+
+\begin{DoxyParams}{参数}
+{\em eq\+\_\+class} & equivalence class that should be tested \\
+\hline
+{\em lock} & if {\ttfamily true}, exclude the H-\/signature from deletion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the h-\/signature was added and no duplicate was found, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a9f202e1abac76b8afa467700a3de5cf6}\label{classteb__local__planner_1_1HomotopyClassPlanner_a9f202e1abac76b8afa467700a3de5cf6}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!bestTeb@{bestTeb}}
+\index{bestTeb@{bestTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{bestTeb()}{bestTeb()}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::best\+Teb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access current best trajectory candidate (that relates to the \char`\"{}best\char`\"{} homotopy class). 
+
+If no trajectory is available, the pointer will be empty. If only a single trajectory is available, return it. Otherwise return the best one, but call \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac8377a6481cfd1a7e9c08c556bb0a5e7}{select\+Best\+Teb()}} before to perform the actual selection (part of the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan()}} methods). \begin{DoxyReturn}{返回}
+Shared pointer to the best \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} that contains the selected trajectory (\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ac738eed8b28471741852c954e21f90a1}\label{classteb__local__planner_1_1HomotopyClassPlanner_ac738eed8b28471741852c954e21f90a1}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!bestTebIdx@{bestTebIdx}}
+\index{bestTebIdx@{bestTebIdx}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{bestTebIdx()}{bestTebIdx()}}
+{\footnotesize\ttfamily int teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::best\+Teb\+Idx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+find the index of the currently best TEB in the container 
+
+\begin{DoxyRemark}{备注}
+\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a9f202e1abac76b8afa467700a3de5cf6}{best\+Teb()}} should be preferred whenever possible 
+\end{DoxyRemark}
+\begin{DoxyReturn}{返回}
+index of the best TEB obtained with best\+TEB(), if no TEB is avaiable, it returns -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_abcfc48c321ae75cb39d7a5bdcb9509f5}\label{classteb__local__planner_1_1HomotopyClassPlanner_abcfc48c321ae75cb39d7a5bdcb9509f5}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!calculateEquivalenceClass@{calculateEquivalenceClass}}
+\index{calculateEquivalenceClass@{calculateEquivalenceClass}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{calculateEquivalenceClass()}{calculateEquivalenceClass()}}
+{\footnotesize\ttfamily template$<$typename Bidir\+Iter , typename Fun $>$ \\
+Equivalence\+Class\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::calculate\+Equivalence\+Class (\begin{DoxyParamCaption}\item[{Bidir\+Iter}]{path\+\_\+start,  }\item[{Bidir\+Iter}]{path\+\_\+end,  }\item[{Fun}]{fun\+\_\+cplx\+\_\+point,  }\item[{const Obst\+Container $\ast$}]{obstacles = {\ttfamily NULL},  }\item[{boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$}]{timediff\+\_\+start = {\ttfamily boost\+:\+:none},  }\item[{boost\+::optional$<$ Time\+Diff\+Sequence\+::iterator $>$}]{timediff\+\_\+end = {\ttfamily boost\+:\+:none} }\end{DoxyParamCaption})}
+
+
+
+Calculate the equivalence class of a path 
+
+Currently, only the H-\/signature (refer to \mbox{\hyperlink{classteb__local__planner_1_1HSignature}{HSignature}}) is implemented.
+
+
+\begin{DoxyParams}{参数}
+{\em path\+\_\+start} & Iterator to the first element in the path \\
+\hline
+{\em path\+\_\+end} & Iterator to the last element in the path \\
+\hline
+{\em obstacles} & obstacle container \\
+\hline
+{\em fun\+\_\+cplx\+\_\+point} & function accepting the dereference iterator type and that returns the position as complex number. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Bidir\+Iter} & Bidirectional iterator type \\
+\hline
+{\em Fun} & function of the form std\+::complex$<$ long double $>$ (const T\& point\+\_\+type) \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+pointer to the equivalence class base type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ad0a350b637fac6eca4e2daf56e4f6d12}\label{classteb__local__planner_1_1HomotopyClassPlanner_ad0a350b637fac6eca4e2daf56e4f6d12}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!clearPlanner@{clearPlanner}}
+\index{clearPlanner@{clearPlanner}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{clearPlanner()}{clearPlanner()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::clear\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the planner. 
+
+Clear all previously found H-\/signatures, paths, tebs and the hcgraph. 
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aab4b2a774a41d5d98a6eed6bdde81298}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a762d67ecc885aab5899bfe15f091f94f}\label{classteb__local__planner_1_1HomotopyClassPlanner_a762d67ecc885aab5899bfe15f091f94f}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!computeCurrentCost@{computeCurrentCost}}
+\index{computeCurrentCost@{computeCurrentCost}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{computeCurrentCost()}{computeCurrentCost()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::compute\+Current\+Cost (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{cost,  }\item[{double}]{obst\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{double}]{viapoint\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{bool}]{alternative\+\_\+time\+\_\+cost = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Compute and return the cost of the current optimization graph (supports multiple trajectories) 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em cost} & current cost value for each trajectory \mbox{[}for a planner with just a single trajectory\+: size=1, vector will not be cleared\mbox{]} \\
+\hline
+ & {\em obst\+\_\+cost\+\_\+scale} & Specify extra scaling for obstacle costs \\
+\hline
+ & {\em viapoint\+\_\+cost\+\_\+scale} & Specify extra scaling for via points. \\
+\hline
+ & {\em alternative\+\_\+time\+\_\+cost} & Replace the cost for the time optimal objective by the actual (weighted) transition time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_aee36dd180fff314c4eede79051eb3e1b}\label{classteb__local__planner_1_1HomotopyClassPlanner_aee36dd180fff314c4eede79051eb3e1b}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!computeStartOrientation@{computeStartOrientation}}
+\index{computeStartOrientation@{computeStartOrientation}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{computeStartOrientation()}{computeStartOrientation()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::compute\+Start\+Orientation (\begin{DoxyParamCaption}\item[{const Teb\+Optimal\+Planner\+Ptr}]{plan,  }\item[{const double}]{len\+\_\+orientation\+\_\+vector,  }\item[{double \&}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Given a plan, computes its start orientation using a vector of length $>$= len\+\_\+orientation\+\_\+vector starting from the initial pose. 
+
+
+\begin{DoxyParams}{参数}
+{\em plan} & Teb to be analyzed \\
+\hline
+{\em len\+\_\+orientation\+\_\+vector} & min length of the vector used to compute the start orientation \\
+\hline
+{\em orientation} & computed start orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\+: Could the vector for the orientation check be computed? (False if the plan has no pose with a distance $>$ len\+\_\+orientation\+\_\+vector from the start poseq) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ad7cf5fe454ad9509143443a59c4f6e07}\label{classteb__local__planner_1_1HomotopyClassPlanner_ad7cf5fe454ad9509143443a59c4f6e07}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!config@{config}}
+\index{config@{config}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{config()}{config()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}}$\ast$ teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access config (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const pointer to the config instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_adc6d4bf3972789b3072f1ec87def82ab}\label{classteb__local__planner_1_1HomotopyClassPlanner_adc6d4bf3972789b3072f1ec87def82ab}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!deletePlansDetouringBackwards@{deletePlansDetouringBackwards}}
+\index{deletePlansDetouringBackwards@{deletePlansDetouringBackwards}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{deletePlansDetouringBackwards()}{deletePlansDetouringBackwards()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::delete\+Plans\+Detouring\+Backwards (\begin{DoxyParamCaption}\item[{const double}]{orient\+\_\+threshold,  }\item[{const double}]{len\+\_\+orientation\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Checks if the orientation of the computed trajectories differs from that of the best plan of more than the specified threshold and eventually deletes them. Also deletes detours with a duration much bigger than the duration of the best\+\_\+teb (duration / best duration $>$ max\+\_\+ratio\+\_\+detours\+\_\+duration\+\_\+best\+\_\+duration). 
+
+
+\begin{DoxyParams}{参数}
+{\em orient\+\_\+threshold} & Threshold paramter for allowed orientation changes in radians \\
+\hline
+{\em len\+\_\+orientation\+\_\+vector} & length of the vector used to compute the start orientation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ace1e52b129419eb3bd5a7e95ff460bf4}\label{classteb__local__planner_1_1HomotopyClassPlanner_ace1e52b129419eb3bd5a7e95ff460bf4}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!exploreEquivalenceClassesAndInitTebs@{exploreEquivalenceClassesAndInitTebs}}
+\index{exploreEquivalenceClassesAndInitTebs@{exploreEquivalenceClassesAndInitTebs}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{exploreEquivalenceClassesAndInitTebs()}{exploreEquivalenceClassesAndInitTebs()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::explore\+Equivalence\+Classes\+And\+Init\+Tebs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{double}]{dist\+\_\+to\+\_\+obst,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel }\end{DoxyParamCaption})}
+
+
+
+Explore paths in new equivalence classes (e.\+g. homotopy classes) and initialize TEBs from them. 
+
+This \char`\"{}all-\/in-\/one\char`\"{} method creates a graph with position keypoints from which feasible paths (with clearance from obstacles) are extracted. ~\newline
+All obtained paths are filted to only keep a single path for each equivalence class. ~\newline
+Each time a new equivalence class is explored (by means of {\bfseries{no}} previous trajectory/\+TEB remain in that equivalence class), a new trajectory/\+TEB will be initialized. ~\newline
+ Everything is prepared now for the optimization step\+: see \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a1c141e147ddb669f5c7155b075f0dce7}{optimize\+All\+TEBs()}}. 
+\begin{DoxyParams}{参数}
+{\em start} & Current start pose (e.\+g. pose of the robot) \\
+\hline
+{\em goal} & Goal pose (e.\+g. robot\textquotesingle{}s goal) \\
+\hline
+{\em dist\+\_\+to\+\_\+obst} & Allowed distance to obstacles\+: if not satisfying, the path will be rejected (note, this is not the distance used for optimization). \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a27c4eedef91c7647ead76facc4e7d560}\label{classteb__local__planner_1_1HomotopyClassPlanner_a27c4eedef91c7647ead76facc4e7d560}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!findBestTeb@{findBestTeb}}
+\index{findBestTeb@{findBestTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{findBestTeb()}{findBestTeb()}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::find\+Best\+Teb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+In case of empty best teb, scores again the available plans to find the best one. The best\+\_\+teb\+\_\+ variable is updated consequently. 
+
+\begin{DoxyReturn}{返回}
+Shared pointer to the best \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} that contains the selected trajectory (\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}). An empty pointer is returned if no plan is available. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a664259ee8e2be5ea5d680c69bd7adaa9}\label{classteb__local__planner_1_1HomotopyClassPlanner_a664259ee8e2be5ea5d680c69bd7adaa9}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!getEquivalenceClassRef@{getEquivalenceClassRef}}
+\index{getEquivalenceClassRef@{getEquivalenceClassRef}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{getEquivalenceClassRef()}{getEquivalenceClassRef()}}
+{\footnotesize\ttfamily const Equivalence\+Class\+Container\& teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::get\+Equivalence\+Class\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the current set of equivalence erelations (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+reference to the internal set of currently tracked equivalence relations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a21bcd95064e5325e9ce850d01b91b824}\label{classteb__local__planner_1_1HomotopyClassPlanner_a21bcd95064e5325e9ce850d01b91b824}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!getInitialPlanTEB@{getInitialPlanTEB}}
+\index{getInitialPlanTEB@{getInitialPlanTEB}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{getInitialPlanTEB()}{getInitialPlanTEB()}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::get\+Initial\+Plan\+TEB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a shared pointer to the TEB related to the initial plan 
+
+\begin{DoxyReturn}{返回}
+A non-\/empty shared ptr is returned if a match was found; Otherwise the shared ptr is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_aa9424a2705655140407701399e032b7c}\label{classteb__local__planner_1_1HomotopyClassPlanner_aa9424a2705655140407701399e032b7c}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!getTrajectoryContainer@{getTrajectoryContainer}}
+\index{getTrajectoryContainer@{getTrajectoryContainer}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{getTrajectoryContainer()}{getTrajectoryContainer()}}
+{\footnotesize\ttfamily const Teb\+Opt\+Planner\+Container\& teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::get\+Trajectory\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read-\/only access to the internal trajectory container. 
+
+\begin{DoxyReturn}{返回}
+read-\/only reference to the teb container. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a3e8f7fa1c3dbc5037a552024101f0c47}\label{classteb__local__planner_1_1HomotopyClassPlanner_a3e8f7fa1c3dbc5037a552024101f0c47}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!getVelocityCommand@{getVelocityCommand}}
+\index{getVelocityCommand@{getVelocityCommand}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{getVelocityCommand()}{getVelocityCommand()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::get\+Velocity\+Command (\begin{DoxyParamCaption}\item[{double \&}]{vx,  }\item[{double \&}]{vy,  }\item[{double \&}]{omega,  }\item[{int}]{look\+\_\+ahead\+\_\+poses }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. 
+
+\begin{DoxyWarning}{警告}
+Call \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan()}} first and check if the generated plan is feasible. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em vx} & translational velocity \mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em vy} & strafing velocity which can be nonzero for holonomic robots \mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em omega} & rotational velocity \mbox{[}rad/s\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em look\+\_\+ahead\+\_\+poses} & index of the final pose used to compute the velocity command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if command is valid, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afcaba6e2a81b5a9ff4c0103ca73c1d66}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a53da39498920840cd960fca10cde8b6c}\label{classteb__local__planner_1_1HomotopyClassPlanner_a53da39498920840cd960fca10cde8b6c}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!hasEquivalenceClass@{hasEquivalenceClass}}
+\index{hasEquivalenceClass@{hasEquivalenceClass}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{hasEquivalenceClass()}{hasEquivalenceClass()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::has\+Equivalence\+Class (\begin{DoxyParamCaption}\item[{const Equivalence\+Class\+Ptr \&}]{eq\+\_\+class }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if a h-\/signature exists already. 
+
+
+\begin{DoxyParams}{参数}
+{\em eq\+\_\+class} & equivalence class that should be tested \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the h-\/signature is found, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a8116edc25c55704e5ec640e062ba622f}\label{classteb__local__planner_1_1HomotopyClassPlanner_a8116edc25c55704e5ec640e062ba622f}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg,  }\item[{Obst\+Container $\ast$}]{obstacles = {\ttfamily NULL},  }\item[{Robot\+Footprint\+Model\+Ptr}]{robot\+\_\+model = {\ttfamily boost\+:\+:make\+\_\+shared$<$~\mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}}~$>$()},  }\item[{Teb\+Visualization\+Ptr}]{visualization = {\ttfamily TebVisualizationPtr()},  }\item[{const Via\+Point\+Container $\ast$}]{via\+\_\+points = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Initialize the \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & Const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for internal parameters \\
+\hline
+{\em obstacles} & Container storing all relevant obstacles (see \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}}) \\
+\hline
+{\em robot\+\_\+model} & Shared pointer to the robot shape model used for optimization (optional) \\
+\hline
+{\em visualization} & Shared pointer to the \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class (optional) \\
+\hline
+{\em via\+\_\+points} & Container storing via-\/points (optional) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ab4759ac6ac07fee46625ba45ab9fb7d2}\label{classteb__local__planner_1_1HomotopyClassPlanner_ab4759ac6ac07fee46625ba45ab9fb7d2}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!isHSignatureSimilar@{isHSignatureSimilar}}
+\index{isHSignatureSimilar@{isHSignatureSimilar}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{isHSignatureSimilar()}{isHSignatureSimilar()}}
+{\footnotesize\ttfamily static bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::is\+HSignature\+Similar (\begin{DoxyParamCaption}\item[{const std\+::complex$<$ long double $>$ \&}]{h1,  }\item[{const std\+::complex$<$ long double $>$ \&}]{h2,  }\item[{double}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if two h-\/signatures are similar (w.\+r.\+t. a certain threshold) 
+
+
+\begin{DoxyParams}{参数}
+{\em h1} & first h-\/signature \\
+\hline
+{\em h2} & second h-\/signature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if both h-\/signatures are similar, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ab5ed26e5b1a0978e6d2c43082a15caea}\label{classteb__local__planner_1_1HomotopyClassPlanner_ab5ed26e5b1a0978e6d2c43082a15caea}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!isTrajectoryFeasible@{isTrajectoryFeasible}}
+\index{isTrajectoryFeasible@{isTrajectoryFeasible}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{isTrajectoryFeasible()}{isTrajectoryFeasible()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::is\+Trajectory\+Feasible (\begin{DoxyParamCaption}\item[{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model $\ast$}]{costmap\+\_\+model,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec,  }\item[{double}]{inscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{double}]{circumscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{int}]{look\+\_\+ahead\+\_\+idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the planned trajectory is feasible or not. 
+
+This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal Obstacle\+Container. 
+\begin{DoxyParams}{参数}
+{\em costmap\+\_\+model} & Pointer to the costmap model \\
+\hline
+{\em footprint\+\_\+spec} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+{\em look\+\_\+ahead\+\_\+idx} & Number of poses along the trajectory that should be verified, if -\/1, the complete trajectory will be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a6c0c90babc218d68f88135335e3019f6}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}\label{classteb__local__planner_1_1HomotopyClassPlanner_a522aa8954809bebe2417b24f9cb5062e}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{obstacles()}{obstacles()}}
+{\footnotesize\ttfamily const Obst\+Container$\ast$ teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::obstacles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access current obstacle container (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const pointer to the obstacle container instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a1c141e147ddb669f5c7155b075f0dce7}\label{classteb__local__planner_1_1HomotopyClassPlanner_a1c141e147ddb669f5c7155b075f0dce7}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!optimizeAllTEBs@{optimizeAllTEBs}}
+\index{optimizeAllTEBs@{optimizeAllTEBs}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{optimizeAllTEBs()}{optimizeAllTEBs()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::optimize\+All\+TEBs (\begin{DoxyParamCaption}\item[{int}]{iter\+\_\+innerloop,  }\item[{int}]{iter\+\_\+outerloop }\end{DoxyParamCaption})}
+
+
+
+Optimize all available trajectories by invoking the optimizer on each one. 
+
+Depending on the configuration parameters, the optimization is performed either single or multi threaded. 
+\begin{DoxyParams}{参数}
+{\em iter\+\_\+innerloop} & Number of inner iterations (see \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{Teb\+Optimal\+Planner\+::optimize\+TEB()}}) \\
+\hline
+{\em iter\+\_\+outerloop} & Number of outer iterations (see \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{Teb\+Optimal\+Planner\+::optimize\+TEB()}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a8cf7d641444293d5a51f90d7c02d7d8d}\label{classteb__local__planner_1_1HomotopyClassPlanner_a8cf7d641444293d5a51f90d7c02d7d8d}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose. 
+
+Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. 
+\begin{DoxyParams}{参数}
+{\em start} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the start pose of the trajectory \\
+\hline
+{\em goal} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Initial velocity at the start pose (twist message containing the translational and angular velocity). \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_ade0509d13cf81df5ad503987ce0ab2cd}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}\label{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{initial\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory based on an initial reference plan. 
+
+Provide this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). \begin{DoxyWarning}{警告}
+The current implementation extracts only the start and goal pose and calls the overloaded \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{plan()}} 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{参数}
+{\em initial\+\_\+plan} & vector of geometry\+\_\+msgs\+::\+Pose\+Stamped (must be valid until \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ad0a350b637fac6eca4e2daf56e4f6d12}{clear\+Planner()}} is called!) \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x, linear.\+y (holonomic) and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ac1c2fae1eafa197bd5d787180c036992}\label{classteb__local__planner_1_1HomotopyClassPlanner_ac1c2fae1eafa197bd5d787180c036992}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const tf\+::\+Pose \&}]{start,  }\item[{const tf\+::\+Pose \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose (tf\+::\+Pose version). 
+
+Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. 
+\begin{DoxyParams}{参数}
+{\em start} & tf\+::\+Pose containing the start pose of the trajectory \\
+\hline
+{\em goal} & tf\+::\+Pose containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x, linear.\+y (holonomic) and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a35f325b8dd40da1fd8cce699550bf8a2}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a28cb841ab6621305160622d2cb4767c5}\label{classteb__local__planner_1_1HomotopyClassPlanner_a28cb841ab6621305160622d2cb4767c5}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!removeTeb@{removeTeb}}
+\index{removeTeb@{removeTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{removeTeb()}{removeTeb()}}
+{\footnotesize\ttfamily Teb\+Opt\+Planner\+Container\+::iterator teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::remove\+Teb (\begin{DoxyParamCaption}\item[{Teb\+Optimal\+Planner\+Ptr \&}]{teb }\end{DoxyParamCaption})}
+
+
+
+Removes the specified teb and the corresponding homotopy class from the list of available ones. 
+
+
+\begin{DoxyParams}{参数}
+{\em pointer} & to the teb Band to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Iterator to the next valid teb if available, else to the end of the tebs container. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ab67f5d38e08e1fd6a63ee1f06bf652f1}\label{classteb__local__planner_1_1HomotopyClassPlanner_ab67f5d38e08e1fd6a63ee1f06bf652f1}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!renewAndAnalyzeOldTebs@{renewAndAnalyzeOldTebs}}
+\index{renewAndAnalyzeOldTebs@{renewAndAnalyzeOldTebs}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{renewAndAnalyzeOldTebs()}{renewAndAnalyzeOldTebs()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::renew\+And\+Analyze\+Old\+Tebs (\begin{DoxyParamCaption}\item[{bool}]{delete\+\_\+detours }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Renew all found h-\/signatures for the new planning step based on existing TEBs. Optionally detours can be discarded. 
+
+Calling this method in each new planning interval is really important. First all old h-\/signatures are deleted, since they could be invalid for this planning step (obstacle position may changed). Afterwards the h-\/signatures are calculated for each existing TEB/trajectory and is inserted to the list of known h-\/signatures. Doing this is important to prefer already optimized trajectories in contrast to initialize newly explored coarse paths. 
+\begin{DoxyParams}{参数}
+{\em delete\+\_\+detours} & if this param is {\ttfamily true}, all existing TEBs are cleared from detour-\/candidates calling delete\+Plans\+Going\+Backwards(). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ac8377a6481cfd1a7e9c08c556bb0a5e7}\label{classteb__local__planner_1_1HomotopyClassPlanner_ac8377a6481cfd1a7e9c08c556bb0a5e7}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!selectBestTeb@{selectBestTeb}}
+\index{selectBestTeb@{selectBestTeb}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{selectBestTeb()}{selectBestTeb()}}
+{\footnotesize\ttfamily Teb\+Optimal\+Planner\+Ptr teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::select\+Best\+Teb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+In case of multiple, internally stored, alternative trajectories, select the best one according to their cost values. 
+
+The trajectory cost includes features such as transition time and clearance from obstacles. ~\newline
+The best trajectory can be accessed later by \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a9f202e1abac76b8afa467700a3de5cf6}{best\+Teb()}} within the current sampling interval in order to avoid unessary recalculations. \begin{DoxyReturn}{返回}
+Shared pointer to the best \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} that contains the selected trajectory (\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_ac131c3d9f6de5ea8d9b67cb7dd2a6a4b}\label{classteb__local__planner_1_1HomotopyClassPlanner_ac131c3d9f6de5ea8d9b67cb7dd2a6a4b}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!setPreferredTurningDir@{setPreferredTurningDir}}
+\index{setPreferredTurningDir@{setPreferredTurningDir}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{setPreferredTurningDir()}{setPreferredTurningDir()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::set\+Preferred\+Turning\+Dir (\begin{DoxyParamCaption}\item[{Rot\+Type}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prefer a desired initial turning direction (by penalizing the opposing one) 
+
+A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. 
+\begin{DoxyParams}{参数}
+{\em dir} & This parameter might be Rot\+Type\+::left (prefer left), Rot\+Type\+::right (prefer right) or Rot\+Type\+::none (prefer none) \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a0df0a82d50a58e7e42ed3e27f5a3b382}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}} .
+
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a7c5eb7412271b533e774a309fa6abd05}\label{classteb__local__planner_1_1HomotopyClassPlanner_a7c5eb7412271b533e774a309fa6abd05}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!setVisualization@{setVisualization}}
+\index{setVisualization@{setVisualization}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{setVisualization()}{setVisualization()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::set\+Visualization (\begin{DoxyParamCaption}\item[{Teb\+Visualization\+Ptr}]{visualization }\end{DoxyParamCaption})}
+
+
+
+Register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class to enable visiualization routines (e.\+g. publish the local plan and pose sequence) 
+
+
+\begin{DoxyParams}{参数}
+{\em visualization} & shared pointer to a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参见}
+visualize\+Teb 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a431ea70eca1620cf991b5154d0c27adc}\label{classteb__local__planner_1_1HomotopyClassPlanner_a431ea70eca1620cf991b5154d0c27adc}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!updateAllTEBs@{updateAllTEBs}}
+\index{updateAllTEBs@{updateAllTEBs}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{updateAllTEBs()}{updateAllTEBs()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::update\+All\+TEBs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} $\ast$}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} $\ast$}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Update TEBs with new pose, goal and current velocity. 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & New start pose (optional) \\
+\hline
+{\em goal} & New goal pose (optional) \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a87bba235037c6769b5882ba5714e882a}\label{classteb__local__planner_1_1HomotopyClassPlanner_a87bba235037c6769b5882ba5714e882a}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!updateReferenceTrajectoryViaPoints@{updateReferenceTrajectoryViaPoints}}
+\index{updateReferenceTrajectoryViaPoints@{updateReferenceTrajectoryViaPoints}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{updateReferenceTrajectoryViaPoints()}{updateReferenceTrajectoryViaPoints()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::update\+Reference\+Trajectory\+Via\+Points (\begin{DoxyParamCaption}\item[{bool}]{all\+\_\+trajectories }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Associate trajectories with via-\/points 
+
+If {\ttfamily all\+\_\+trajectories} is true, all trajectory candidates are connected with the set of via\+\_\+points, otherwise only the trajectory sharing the homotopy class of the initial/global plan (and all via-\/points from alternative trajectories are removed) \begin{DoxyRemark}{备注}
+Requires that the plan method is called with an initial plan provided and that via-\/points are enabled (config) 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em all\+\_\+trajectories} & see method description \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1HomotopyClassPlanner_a718510bcffcce3b6a4714495658a911c}\label{classteb__local__planner_1_1HomotopyClassPlanner_a718510bcffcce3b6a4714495658a911c}} 
+\index{teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}!visualize@{visualize}}
+\index{visualize@{visualize}!teb\_local\_planner::HomotopyClassPlanner@{teb\_local\_planner::HomotopyClassPlanner}}
+\doxysubsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner\+::visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Publish the local plan, pose sequence and additional information via ros topics (e.\+g. subscribe with rviz). 
+
+Make sure to register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} instance before using \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a7c5eb7412271b533e774a309fa6abd05}{set\+Visualization()}} or an overlaoded constructor. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a7c5eb7412271b533e774a309fa6abd05}{set\+Visualization}} 
+\end{DoxySeeAlso}
+
+
+重载 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afeeda8f566d59ee83c02077d2ff6c241}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/homotopy\+\_\+class\+\_\+planner.\+h\end{DoxyCompactItemize}

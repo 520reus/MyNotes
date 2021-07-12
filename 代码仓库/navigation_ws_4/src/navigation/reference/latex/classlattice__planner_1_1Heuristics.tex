@@ -1,0 +1,270 @@
+\hypertarget{classlattice__planner_1_1Heuristics}{}\doxysection{lattice\+\_\+planner\+::Heuristics类 参考}
+\label{classlattice__planner_1_1Heuristics}\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+
+
+calculates and manages the heuristics (estimated costs from a state to reach the goal) for path planning.  
+
+
+
+
+{\ttfamily \#include $<$heuristics.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1Heuristics_a16d9e263eda7314d45545579fd4cb14b}{Heuristics}} (\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$costmap, \mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Manager\+::\+Cost\+Factors}} cost\+\_\+factors, \mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} motion\+\_\+constraints)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_aea1835120118d94df67e36b2096b0329}{estimate\+Additional}} (bool estimate\+\_\+deceleration\+\_\+at\+\_\+goal, bool estimate\+\_\+rotation\+\_\+to\+\_\+goal\+\_\+orientation, double estimation\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em to specify whether or not the optional estimations for the deceleration to zero velocity and the remaining angle to reach the goal orientation are included in the heuristic. Violates the optimality criterion of path planning, but is a lot faster \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_a917227785e9af06b39725007701f94b6}{set\+Neutral\+Cost}} (float neutral\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em set neutral cost for Dijkstra expansion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_a782ce1285527069a8f7dffe43ddd299e}{set\+Has\+Unknown}} (bool allow\+\_\+unknown)
+\begin{DoxyCompactList}\small\item\em specify whether the Dijkstra expansion should explore unknown map regions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_af23efa10ab63f34d9c1878a10a3a9348}{set\+Lethal\+Cost}} (float lethal\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em set the lethal cost value -\/ the cost value from which states are pruned \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1Heuristics_af581ecb5f74d8da47dc66cee8ef66b87}{expand}} (int goal\+\_\+x, int goal\+\_\+y)
+\begin{DoxyCompactList}\small\item\em do the Dijkstra expansion on the map \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlattice__planner_1_1Heuristics_a6298e14bc534271e39c1148ab3220ad7}{get\+Heuristic}} (\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$state, \mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} goal\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em after the heuristic was expanded, it returns the estimated costs from a state to reach the goal \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Heuristics_a5a5e2108dd9dd74cf63b4f3cd0b57c39}{estimate\+Turn\+To\+Goal}} (\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$state, \mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} goal\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em estimates the costs according to the time the robot would need to turn to the goal orientation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Heuristics_a1ebca14c3799eb9fa6270dcb0e5ba2e3}{estimate\+Deceleration\+At\+Goal}} (\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$state, \mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} goal\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em estimates the costs according to the time the robot would need to decelerate to zero velocity at the goal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_abefea41dbe100c0160b3fc63967f470e}{init\+Publisher}} (std\+::string topic\+\_\+name, int publish\+\_\+scale=100)
+\begin{DoxyCompactList}\small\item\em initialize the heuristics publisher, if desired \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_ae4078ff381b43fb91c0a3624f5c7ed28}{publish\+Heuristic}} (float $\ast$heuristic)
+\begin{DoxyCompactList}\small\item\em publish a heuristics map \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_af50a891ef8d7f8e2b25fcc773ef3bdf7}\label{classlattice__planner_1_1Heuristics_af50a891ef8d7f8e2b25fcc773ef3bdf7}} 
+void \mbox{\hyperlink{classlattice__planner_1_1Heuristics_af50a891ef8d7f8e2b25fcc773ef3bdf7}{publish\+Heuristic}} ()
+\begin{DoxyCompactList}\small\item\em publish the heuristic managed by this class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+calculates and manages the heuristics (estimated costs from a state to reach the goal) for path planning. 
+
+The heuristics are estimated based on the following simplifications of the path planning problem\+:
+\begin{DoxyItemize}
+\item no dynamic obstacles
+\item robot is holonomic and has no inertial constraints A planar, eight-\/connected Dijkstra expansion is conducted on the static layer of the dynamic cost map to find the shortest possible path to the goal and the minimal static environment costs in the abscence of dynamic obstacles. The minimum time to reach the goal is estimated by assuming that the robot can execute the minimum distance path at maximum forward velocity.
+\end{DoxyItemize}
+
+Furthermore, two optional estimations can be included in the heuristic estimation\+: The minimum time to decelerate from a state to zero velocity and the minimum time to rotate from a state to the goal orientation. Both properties are only estimated correctly close to the goal, outside the goal region always the worst-\/case time value is returned. Both estimations result in finding the goal (much) quicker. However, the heuristic will not be consistent and admissible any more with the estimations, therefore the planning algorithm is no longer guaranteed to find the optimal solution. In practise, the optional estimations will cause the robot to advance straight to the goal and turn to the goal orientation on the spot rather than driving a curve to reach the goal orientation, thus maybe taking a bit longer to reach the goal for some goal configurations. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a16d9e263eda7314d45545579fd4cb14b}\label{classlattice__planner_1_1Heuristics_a16d9e263eda7314d45545579fd4cb14b}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!Heuristics@{Heuristics}}
+\index{Heuristics@{Heuristics}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{Heuristics()}{Heuristics()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Heuristics\+::\+Heuristics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$}]{costmap,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Manager\+::\+Cost\+Factors}}}]{cost\+\_\+factors,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}}}]{motion\+\_\+constraints }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em costmap} & dynamic cost map used for planning \\
+\hline
+{\em cost\+\_\+factors} & weights of the cost aspects in the defined cost function \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classlattice__planner_1_1CostManager}{Cost\+Manager}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em motion\+\_\+constraints} & velocity and acceleration limits of the robot \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_aea1835120118d94df67e36b2096b0329}\label{classlattice__planner_1_1Heuristics_aea1835120118d94df67e36b2096b0329}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!estimateAdditional@{estimateAdditional}}
+\index{estimateAdditional@{estimateAdditional}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{estimateAdditional()}{estimateAdditional()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::estimate\+Additional (\begin{DoxyParamCaption}\item[{bool}]{estimate\+\_\+deceleration\+\_\+at\+\_\+goal,  }\item[{bool}]{estimate\+\_\+rotation\+\_\+to\+\_\+goal\+\_\+orientation,  }\item[{double}]{estimation\+\_\+radius }\end{DoxyParamCaption})}
+
+
+
+to specify whether or not the optional estimations for the deceleration to zero velocity and the remaining angle to reach the goal orientation are included in the heuristic. Violates the optimality criterion of path planning, but is a lot faster 
+
+
+\begin{DoxyParams}{参数}
+{\em estimate\+\_\+deceleration\+\_\+at\+\_\+goal} & whether the necessary time to decelerate to zero velocity should be considered in the heuristic \\
+\hline
+{\em estimate\+\_\+rotation\+\_\+to\+\_\+goal\+\_\+orientation} & whether the necessary time to rotate to the goal orientation should be considered in the heuristic \\
+\hline
+{\em estimation\+\_\+radius} & radius around the goal inside which the costs are estimated correctly. Outside the estimation\+\_\+radius, always the worst-\/ case costs are estimated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a1ebca14c3799eb9fa6270dcb0e5ba2e3}\label{classlattice__planner_1_1Heuristics_a1ebca14c3799eb9fa6270dcb0e5ba2e3}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!estimateDecelerationAtGoal@{estimateDecelerationAtGoal}}
+\index{estimateDecelerationAtGoal@{estimateDecelerationAtGoal}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{estimateDecelerationAtGoal()}{estimateDecelerationAtGoal()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Heuristics\+::estimate\+Deceleration\+At\+Goal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{goal\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+estimates the costs according to the time the robot would need to decelerate to zero velocity at the goal. 
+
+Optional heuristic estimation, accelerates the search but might confine the optimality of the path search
+
+
+\begin{DoxyParams}{参数}
+{\em state} & state for which the heuristic is queried \\
+\hline
+{\em goal\+\_\+pose} & the goal pose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+additional estimated time costs for decelerating to zero at the goal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a5a5e2108dd9dd74cf63b4f3cd0b57c39}\label{classlattice__planner_1_1Heuristics_a5a5e2108dd9dd74cf63b4f3cd0b57c39}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!estimateTurnToGoal@{estimateTurnToGoal}}
+\index{estimateTurnToGoal@{estimateTurnToGoal}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{estimateTurnToGoal()}{estimateTurnToGoal()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Heuristics\+::estimate\+Turn\+To\+Goal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{goal\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+estimates the costs according to the time the robot would need to turn to the goal orientation. 
+
+Optional heuristic estimation, accelerates the search but might confine the optimality of the path search
+
+
+\begin{DoxyParams}{参数}
+{\em state} & state for which the heuristic is queried \\
+\hline
+{\em goal\+\_\+pose} & the goal pose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+additional estimated time costs for turning in place at the goal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_af581ecb5f74d8da47dc66cee8ef66b87}\label{classlattice__planner_1_1Heuristics_af581ecb5f74d8da47dc66cee8ef66b87}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!expand@{expand}}
+\index{expand@{expand}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{expand()}{expand()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+Heuristics\+::expand (\begin{DoxyParamCaption}\item[{int}]{goal\+\_\+x,  }\item[{int}]{goal\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+do the Dijkstra expansion on the map 
+
+expand from the goal outwards, wavefront style, to find the shortest possible path and minimal environment costs from each state in the map to the goal
+
+
+\begin{DoxyParams}{参数}
+{\em goal\+\_\+x} & goal x coordinate in map \\
+\hline
+{\em goal\+\_\+y} & goal y coordinate in map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether or not the expansion was successfull (could fail if goal is inside obstacle etc.) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a6298e14bc534271e39c1148ab3220ad7}\label{classlattice__planner_1_1Heuristics_a6298e14bc534271e39c1148ab3220ad7}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!getHeuristic@{getHeuristic}}
+\index{getHeuristic@{getHeuristic}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{getHeuristic()}{getHeuristic()}}
+{\footnotesize\ttfamily float lattice\+\_\+planner\+::\+Heuristics\+::get\+Heuristic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{goal\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+after the heuristic was expanded, it returns the estimated costs from a state to reach the goal 
+
+
+\begin{DoxyParams}{参数}
+{\em state} & state for which the heuristic is queried \\
+\hline
+{\em goal\+\_\+pose} & the goal pose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+the estimated remaining costs from the state to the goal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_abefea41dbe100c0160b3fc63967f470e}\label{classlattice__planner_1_1Heuristics_abefea41dbe100c0160b3fc63967f470e}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!initPublisher@{initPublisher}}
+\index{initPublisher@{initPublisher}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{initPublisher()}{initPublisher()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::init\+Publisher (\begin{DoxyParamCaption}\item[{std\+::string}]{topic\+\_\+name,  }\item[{int}]{publish\+\_\+scale = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+initialize the heuristics publisher, if desired 
+
+
+\begin{DoxyParams}{参数}
+{\em topic\+\_\+name} & rostopic name on which to publish \\
+\hline
+{\em publish\+\_\+scale} & maximum value of the published cost map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_ae4078ff381b43fb91c0a3624f5c7ed28}\label{classlattice__planner_1_1Heuristics_ae4078ff381b43fb91c0a3624f5c7ed28}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!publishHeuristic@{publishHeuristic}}
+\index{publishHeuristic@{publishHeuristic}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{publishHeuristic()}{publishHeuristic()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::publish\+Heuristic (\begin{DoxyParamCaption}\item[{float $\ast$}]{heuristic }\end{DoxyParamCaption})}
+
+
+
+publish a heuristics map 
+
+The heuristic map has to be of the same size than the dynamic cost map and have the same global frame id
+
+
+\begin{DoxyParams}{参数}
+{\em heuristic} & a heuristics map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a782ce1285527069a8f7dffe43ddd299e}\label{classlattice__planner_1_1Heuristics_a782ce1285527069a8f7dffe43ddd299e}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!setHasUnknown@{setHasUnknown}}
+\index{setHasUnknown@{setHasUnknown}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{setHasUnknown()}{setHasUnknown()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::set\+Has\+Unknown (\begin{DoxyParamCaption}\item[{bool}]{allow\+\_\+unknown }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+specify whether the Dijkstra expansion should explore unknown map regions 
+
+
+\begin{DoxyParams}{参数}
+{\em allow\+\_\+unknown} & whether or not to explore unknown map regions \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_af23efa10ab63f34d9c1878a10a3a9348}\label{classlattice__planner_1_1Heuristics_af23efa10ab63f34d9c1878a10a3a9348}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!setLethalCost@{setLethalCost}}
+\index{setLethalCost@{setLethalCost}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{setLethalCost()}{setLethalCost()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::set\+Lethal\+Cost (\begin{DoxyParamCaption}\item[{float}]{lethal\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the lethal cost value -\/ the cost value from which states are pruned 
+
+
+\begin{DoxyParams}{参数}
+{\em lethal\+\_\+cost} & lethal cost value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Heuristics_a917227785e9af06b39725007701f94b6}\label{classlattice__planner_1_1Heuristics_a917227785e9af06b39725007701f94b6}} 
+\index{lattice\_planner::Heuristics@{lattice\_planner::Heuristics}!setNeutralCost@{setNeutralCost}}
+\index{setNeutralCost@{setNeutralCost}!lattice\_planner::Heuristics@{lattice\_planner::Heuristics}}
+\doxysubsubsection{\texorpdfstring{setNeutralCost()}{setNeutralCost()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Heuristics\+::set\+Neutral\+Cost (\begin{DoxyParamCaption}\item[{float}]{neutral\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set neutral cost for Dijkstra expansion 
+
+
+\begin{DoxyParams}{参数}
+{\em neutral\+\_\+cost} & neutral cost \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/heuristics.\+h\end{DoxyCompactItemize}

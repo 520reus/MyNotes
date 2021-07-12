@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_2d::ObservationBuffer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></li><li class="navelem"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html">ObservationBuffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">costmap_2d::ObservationBuffer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Takes in point clouds from sensors, transforms them to the desired frame, and stores them  
+ <a href="classcostmap__2d_1_1ObservationBuffer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="observation__buffer_8h_source.html">observation_buffer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6a6840d481c0f6fabf5f9b2788bbd205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#a6a6840d481c0f6fabf5f9b2788bbd205">ObservationBuffer</a> (std::string topic_name, double observation_keep_time, double expected_update_rate, double min_obstacle_height, double max_obstacle_height, double obstacle_range, double raytrace_range, tf2_ros::Buffer &amp;tf2_buffer, std::string global_frame, std::string sensor_frame, double tf_tolerance)</td></tr>
+<tr class="memdesc:a6a6840d481c0f6fabf5f9b2788bbd205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an observation buffer  <a href="classcostmap__2d_1_1ObservationBuffer.html#a6a6840d481c0f6fabf5f9b2788bbd205">更多...</a><br /></td></tr>
+<tr class="separator:a6a6840d481c0f6fabf5f9b2788bbd205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14ce56a9f57bddfecd87d0c2cc2201d"><td class="memItemLeft" align="right" valign="top"><a id="ad14ce56a9f57bddfecd87d0c2cc2201d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#ad14ce56a9f57bddfecd87d0c2cc2201d">~ObservationBuffer</a> ()</td></tr>
+<tr class="memdesc:ad14ce56a9f57bddfecd87d0c2cc2201d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor... cleans up <br /></td></tr>
+<tr class="separator:ad14ce56a9f57bddfecd87d0c2cc2201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078a1fab09eb0501fa9f205f818c4c73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#a078a1fab09eb0501fa9f205f818c4c73">setGlobalFrame</a> (const std::string new_global_frame)</td></tr>
+<tr class="memdesc:a078a1fab09eb0501fa9f205f818c4c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame  <a href="classcostmap__2d_1_1ObservationBuffer.html#a078a1fab09eb0501fa9f205f818c4c73">更多...</a><br /></td></tr>
+<tr class="separator:a078a1fab09eb0501fa9f205f818c4c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bdb755c1ed181b2108fc26826bc273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#af1bdb755c1ed181b2108fc26826bc273">bufferCloud</a> (const sensor_msgs::PointCloud2 &amp;cloud)</td></tr>
+<tr class="memdesc:af1bdb755c1ed181b2108fc26826bc273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a PointCloud to the global frame and buffers it <b>Note: The burden is on the user to make sure the transform is available... ie they should use a MessageNotifier</b>  <a href="classcostmap__2d_1_1ObservationBuffer.html#af1bdb755c1ed181b2108fc26826bc273">更多...</a><br /></td></tr>
+<tr class="separator:af1bdb755c1ed181b2108fc26826bc273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89ff474cd6785349e3c0b2f49e2d738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#aa89ff474cd6785349e3c0b2f49e2d738">getObservations</a> (std::vector&lt; <a class="el" href="classcostmap__2d_1_1Observation.html">Observation</a> &gt; &amp;observations)</td></tr>
+<tr class="memdesc:aa89ff474cd6785349e3c0b2f49e2d738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes copies of all current observations onto the end of the vector passed in  <a href="classcostmap__2d_1_1ObservationBuffer.html#aa89ff474cd6785349e3c0b2f49e2d738">更多...</a><br /></td></tr>
+<tr class="separator:aa89ff474cd6785349e3c0b2f49e2d738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a169930366d75cae5d78e7b069be4a042"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#a169930366d75cae5d78e7b069be4a042">isCurrent</a> () const</td></tr>
+<tr class="memdesc:a169930366d75cae5d78e7b069be4a042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the observation buffer is being update at its expected rate  <a href="classcostmap__2d_1_1ObservationBuffer.html#a169930366d75cae5d78e7b069be4a042">更多...</a><br /></td></tr>
+<tr class="separator:a169930366d75cae5d78e7b069be4a042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e43c89ccb0db68cd1bad60108a8167"><td class="memItemLeft" align="right" valign="top"><a id="af6e43c89ccb0db68cd1bad60108a8167"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#af6e43c89ccb0db68cd1bad60108a8167">lock</a> ()</td></tr>
+<tr class="memdesc:af6e43c89ccb0db68cd1bad60108a8167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the observation buffer <br /></td></tr>
+<tr class="separator:af6e43c89ccb0db68cd1bad60108a8167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccb558d025fd254ab9e1bf89f6d82d8"><td class="memItemLeft" align="right" valign="top"><a id="a5ccb558d025fd254ab9e1bf89f6d82d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#a5ccb558d025fd254ab9e1bf89f6d82d8">unlock</a> ()</td></tr>
+<tr class="memdesc:a5ccb558d025fd254ab9e1bf89f6d82d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the observation buffer <br /></td></tr>
+<tr class="separator:a5ccb558d025fd254ab9e1bf89f6d82d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb595ff9e1f56003644f4b0743020cd3"><td class="memItemLeft" align="right" valign="top"><a id="aeb595ff9e1f56003644f4b0743020cd3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1ObservationBuffer.html#aeb595ff9e1f56003644f4b0743020cd3">resetLastUpdated</a> ()</td></tr>
+<tr class="memdesc:aeb595ff9e1f56003644f4b0743020cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset last updated timestamp <br /></td></tr>
+<tr class="separator:aeb595ff9e1f56003644f4b0743020cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Takes in point clouds from sensors, transforms them to the desired frame, and stores them </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6a6840d481c0f6fabf5f9b2788bbd205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6840d481c0f6fabf5f9b2788bbd205">&#9670;&nbsp;</a></span>ObservationBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::ObservationBuffer::ObservationBuffer </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>topic_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>observation_keep_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>expected_update_rate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_obstacle_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_obstacle_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obstacle_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>raytrace_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf2_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>global_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sensor_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tf_tolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an observation buffer </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>The topic of the observations, used as an identifier for error and warning messages </td></tr>
+    <tr><td class="paramname">observation_keep_time</td><td>Defines the persistence of observations in seconds, 0 means only keep the latest </td></tr>
+    <tr><td class="paramname">expected_update_rate</td><td>How often this buffer is expected to be updated, 0 means there is no limit </td></tr>
+    <tr><td class="paramname">min_obstacle_height</td><td>The minimum height of a hitpoint to be considered legal </td></tr>
+    <tr><td class="paramname">max_obstacle_height</td><td>The minimum height of a hitpoint to be considered legal </td></tr>
+    <tr><td class="paramname">obstacle_range</td><td>The range to which the sensor should be trusted for inserting obstacles </td></tr>
+    <tr><td class="paramname">raytrace_range</td><td>The range to which the sensor should be trusted for raytracing to clear out space </td></tr>
+    <tr><td class="paramname">tf2_buffer</td><td>A reference to a tf2 Buffer </td></tr>
+    <tr><td class="paramname">global_frame</td><td>The frame to transform PointClouds into </td></tr>
+    <tr><td class="paramname">sensor_frame</td><td>The frame of the origin of the sensor, can be left blank to be read from the messages </td></tr>
+    <tr><td class="paramname">tf_tolerance</td><td>The amount of time to wait for a transform to be available when setting a new global frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af1bdb755c1ed181b2108fc26826bc273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bdb755c1ed181b2108fc26826bc273">&#9670;&nbsp;</a></span>bufferCloud()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::ObservationBuffer::bufferCloud </td>
+          <td>(</td>
+          <td class="paramtype">const sensor_msgs::PointCloud2 &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms a PointCloud to the global frame and buffers it <b>Note: The burden is on the user to make sure the transform is available... ie they should use a MessageNotifier</b> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cloud</td><td>The cloud to be buffered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa89ff474cd6785349e3c0b2f49e2d738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89ff474cd6785349e3c0b2f49e2d738">&#9670;&nbsp;</a></span>getObservations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::ObservationBuffer::getObservations </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcostmap__2d_1_1Observation.html">Observation</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>observations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pushes copies of all current observations onto the end of the vector passed in </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observations</td><td>The vector to be filled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a169930366d75cae5d78e7b069be4a042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169930366d75cae5d78e7b069be4a042">&#9670;&nbsp;</a></span>isCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::ObservationBuffer::isCurrent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the observation buffer is being update at its expected rate </p>
+<dl class="section return"><dt>返回</dt><dd>True if it is being updated at the expected rate, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a078a1fab09eb0501fa9f205f818c4c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078a1fab09eb0501fa9f205f818c4c73">&#9670;&nbsp;</a></span>setGlobalFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::ObservationBuffer::setGlobalFrame </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>new_global_frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_global_frame</td><td>The name of the new global frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the operation succeeds, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_2d/include/costmap_2d/<a class="el" href="observation__buffer_8h_source.html">observation_buffer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

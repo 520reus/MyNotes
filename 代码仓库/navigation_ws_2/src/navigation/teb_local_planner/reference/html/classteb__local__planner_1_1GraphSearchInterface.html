@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::GraphSearchInterface类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html">GraphSearchInterface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">成员变量</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::GraphSearchInterface类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base class for graph based path planning / homotopy class sampling  
+ <a href="classteb__local__planner_1_1GraphSearchInterface.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="graph__search_8h_source.html">graph_search.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::GraphSearchInterface 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1GraphSearchInterface.png" usemap="#teb_5Flocal_5Fplanner::GraphSearchInterface_map" alt=""/>
+  <map id="teb_5Flocal_5Fplanner::GraphSearchInterface_map" name="teb_5Flocal_5Fplanner::GraphSearchInterface_map">
+<area href="classteb__local__planner_1_1ProbRoadmapGraph.html" alt="teb_local_planner::ProbRoadmapGraph" shape="rect" coords="0,56,245,80"/>
+<area href="classteb__local__planner_1_1lrKeyPointGraph.html" alt="teb_local_planner::lrKeyPointGraph" shape="rect" coords="255,56,500,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa01825c4574dd9cf17895e2602f26828"><td class="memItemLeft" align="right" valign="top"><a id="aa01825c4574dd9cf17895e2602f26828"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createGraph</b> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, double dist_to_obst, double obstacle_heading_threshold, const geometry_msgs::Twist *start_velocity)=0</td></tr>
+<tr class="separator:aa01825c4574dd9cf17895e2602f26828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46ec22a5eb00ebcdf67c5ff0cceb218"><td class="memItemLeft" align="right" valign="top"><a id="aa46ec22a5eb00ebcdf67c5ff0cceb218"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#aa46ec22a5eb00ebcdf67c5ff0cceb218">clearGraph</a> ()</td></tr>
+<tr class="memdesc:aa46ec22a5eb00ebcdf67c5ff0cceb218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear any existing graph of the homotopy class search <br /></td></tr>
+<tr class="separator:aa46ec22a5eb00ebcdf67c5ff0cceb218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a4837d2cc6bb18eec7b0766b30da2d09a"><td class="memItemLeft" align="right" valign="top"><a id="a4837d2cc6bb18eec7b0766b30da2d09a"></a>
+HcGraph&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#a4837d2cc6bb18eec7b0766b30da2d09a">graph_</a></td></tr>
+<tr class="memdesc:a4837d2cc6bb18eec7b0766b30da2d09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the graph that is utilized to find alternative homotopy classes. <br /></td></tr>
+<tr class="separator:a4837d2cc6bb18eec7b0766b30da2d09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a42c8333e943be02f8b4600e5ade94f27"><td class="memItemLeft" align="right" valign="top"><a id="a42c8333e943be02f8b4600e5ade94f27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#a42c8333e943be02f8b4600e5ade94f27">GraphSearchInterface</a> (const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;cfg, <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html">HomotopyClassPlanner</a> *hcp)</td></tr>
+<tr class="memdesc:a42c8333e943be02f8b4600e5ade94f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected constructor that should be called by subclasses <br /></td></tr>
+<tr class="separator:a42c8333e943be02f8b4600e5ade94f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989d9733ff0b97536835c6382322878a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#a989d9733ff0b97536835c6382322878a">DepthFirst</a> (HcGraph &amp;g, std::vector&lt; HcGraphVertexType &gt; &amp;visited, const HcGraphVertexType &amp;goal, double start_orientation, double goal_orientation, const geometry_msgs::Twist *start_velocity)</td></tr>
+<tr class="memdesc:a989d9733ff0b97536835c6382322878a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth First Search implementation to find all paths between the start and the specified goal vertex.  <a href="classteb__local__planner_1_1GraphSearchInterface.html#a989d9733ff0b97536835c6382322878a">更多...</a><br /></td></tr>
+<tr class="separator:a989d9733ff0b97536835c6382322878a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a930374f399d52430a9ad2dfe10f36f6a"><td class="memItemLeft" align="right" valign="top"><a id="a930374f399d52430a9ad2dfe10f36f6a"></a>
+const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#a930374f399d52430a9ad2dfe10f36f6a">cfg_</a></td></tr>
+<tr class="memdesc:a930374f399d52430a9ad2dfe10f36f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config class that stores and manages all related parameters <br /></td></tr>
+<tr class="separator:a930374f399d52430a9ad2dfe10f36f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123b37779738c378666e20e6875ba3dd"><td class="memItemLeft" align="right" valign="top"><a id="a123b37779738c378666e20e6875ba3dd"></a>
+<a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html">HomotopyClassPlanner</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1GraphSearchInterface.html#a123b37779738c378666e20e6875ba3dd">hcp_</a></td></tr>
+<tr class="memdesc:a123b37779738c378666e20e6875ba3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw pointer to the <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a>. The <a class="el" href="classteb__local__planner_1_1HomotopyClassPlanner.html" title="Local planner that explores alternative homotopy classes, create a plan for each alternative and fina...">HomotopyClassPlanner</a> itself is guaranteed to outlive the graph search class it is holding. <br /></td></tr>
+<tr class="separator:a123b37779738c378666e20e6875ba3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Base class for graph based path planning / homotopy class sampling </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a989d9733ff0b97536835c6382322878a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989d9733ff0b97536835c6382322878a">&#9670;&nbsp;</a></span>DepthFirst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::GraphSearchInterface::DepthFirst </td>
+          <td>(</td>
+          <td class="paramtype">HcGraph &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; HcGraphVertexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>visited</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const HcGraphVertexType &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Depth First Search implementation to find all paths between the start and the specified goal vertex. </p>
+<p>Complete paths are stored to the internal path container. </p><dl class="section see"><dt>参见</dt><dd><a href="http://www.technical-recipes.com/2011/a-recursive-algorithm-to-find-all-paths-between-two-given-nodes/">http://www.technical-recipes.com/2011/a-recursive-algorithm-to-find-all-paths-between-two-given-nodes/</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Graph on which the depth first should be performed </td></tr>
+    <tr><td class="paramname">visited</td><td>A container that stores visited vertices (pass an empty container, it will be filled inside during recursion). </td></tr>
+    <tr><td class="paramname">goal</td><td>Desired goal vertex </td></tr>
+    <tr><td class="paramname">start_orientation</td><td>Orientation of the first trajectory pose, required to initialize the trajectory/TEB </td></tr>
+    <tr><td class="paramname">goal_orientation</td><td>Orientation of the goal trajectory pose, required to initialize the trajectory/TEB </td></tr>
+    <tr><td class="paramname">start_velocity</td><td>start velocity (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/teb_local_planner/<a class="el" href="graph__search_8h_source.html">graph_search.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

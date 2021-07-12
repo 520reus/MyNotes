@@ -1,0 +1,176 @@
+\hypertarget{classteb__local__planner_1_1VertexTimeDiff}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Vertex\+Time\+Diff类 参考}
+\label{classteb__local__planner_1_1VertexTimeDiff}\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+
+
+This class stores and wraps a time difference $ \Delta T $ into a vertex that can be optimized via g2o  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+timediff.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Vertex\+Time\+Diff 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1VertexTimeDiff}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a34d4e36349f0e1ccb4f890a4d6c3275f}{Vertex\+Time\+Diff}} (bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a7702b278dcd2c793cce1666e1d42a22d}{Vertex\+Time\+Diff}} (double \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a102f241efe7d210058a527e22826cd83}{dt}}, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Construct the Time\+Diff vertex with a value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a5d289b8492b7d0e74b949859a64b7079}\label{classteb__local__planner_1_1VertexTimeDiff_a5d289b8492b7d0e74b949859a64b7079}} 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a5d289b8492b7d0e74b949859a64b7079}{$\sim$\+Vertex\+Time\+Diff}} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff}{Vertex\+Time\+Diff}} \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a102f241efe7d210058a527e22826cd83}{dt}} ()
+\begin{DoxyCompactList}\small\item\em Access the timediff value of the vertex \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a6b10d2ad953967085f4714a0ac6b2802}{dt}} () const
+\begin{DoxyCompactList}\small\item\em Access the timediff value of the vertex (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_aabe03cb818ae2a377058d0da4c127c63}\label{classteb__local__planner_1_1VertexTimeDiff_aabe03cb818ae2a377058d0da4c127c63}} 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_aabe03cb818ae2a377058d0da4c127c63}{set\+To\+Origin\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Set the underlying Time\+Diff estimate $ \Delta T $ to default. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_ae35d778f653c78aba5098e49c81340ef}{oplus\+Impl}} (const double $\ast$update)
+\begin{DoxyCompactList}\small\item\em Define the update increment $ \Delta T_{k+1} = \Delta T_k + update $. A simple addition implements what we want. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_af9b00162dfa246d460a7d43e80e2d75e}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Read an estimate of $ \Delta T $ from an input stream \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff_a587861c98bedcc2575e050e849662fcd}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Write the estimate $ \Delta T $ to an output stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class stores and wraps a time difference $ \Delta T $ into a vertex that can be optimized via g2o 
+
+\begin{DoxySeeAlso}{参见}
+Vertex\+Point\+XY 
+
+Vertex\+Orientation 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a34d4e36349f0e1ccb4f890a4d6c3275f}\label{classteb__local__planner_1_1VertexTimeDiff_a34d4e36349f0e1ccb4f890a4d6c3275f}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!VertexTimeDiff@{VertexTimeDiff}}
+\index{VertexTimeDiff@{VertexTimeDiff}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{VertexTimeDiff()}{VertexTimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::\+Vertex\+Time\+Diff (\begin{DoxyParamCaption}\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a7702b278dcd2c793cce1666e1d42a22d}\label{classteb__local__planner_1_1VertexTimeDiff_a7702b278dcd2c793cce1666e1d42a22d}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!VertexTimeDiff@{VertexTimeDiff}}
+\index{VertexTimeDiff@{VertexTimeDiff}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{VertexTimeDiff()}{VertexTimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::\+Vertex\+Time\+Diff (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct the Time\+Diff vertex with a value 
+
+
+\begin{DoxyParams}{参数}
+{\em dt} & time difference value of the vertex \\
+\hline
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a102f241efe7d210058a527e22826cd83}\label{classteb__local__planner_1_1VertexTimeDiff_a102f241efe7d210058a527e22826cd83}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!dt@{dt}}
+\index{dt@{dt}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{dt()}{dt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::dt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the timediff value of the vertex 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+reference to dt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a6b10d2ad953967085f4714a0ac6b2802}\label{classteb__local__planner_1_1VertexTimeDiff_a6b10d2ad953967085f4714a0ac6b2802}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!dt@{dt}}
+\index{dt@{dt}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{dt()}{dt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::dt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the timediff value of the vertex (read-\/only) 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+const reference to dt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_ae35d778f653c78aba5098e49c81340ef}\label{classteb__local__planner_1_1VertexTimeDiff_ae35d778f653c78aba5098e49c81340ef}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!oplusImpl@{oplusImpl}}
+\index{oplusImpl@{oplusImpl}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{oplusImpl()}{oplusImpl()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::oplus\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Define the update increment $ \Delta T_{k+1} = \Delta T_k + update $. A simple addition implements what we want. 
+
+
+\begin{DoxyParams}{参数}
+{\em update} & increment that should be added to the previous esimate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_af9b00162dfa246d460a7d43e80e2d75e}\label{classteb__local__planner_1_1VertexTimeDiff_af9b00162dfa246d460a7d43e80e2d75e}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!read@{read}}
+\index{read@{read}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Read an estimate of $ \Delta T $ from an input stream 
+
+
+\begin{DoxyParams}{参数}
+{\em is} & input stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+always {\ttfamily true} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexTimeDiff_a587861c98bedcc2575e050e849662fcd}\label{classteb__local__planner_1_1VertexTimeDiff_a587861c98bedcc2575e050e849662fcd}} 
+\index{teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}!write@{write}}
+\index{write@{write}!teb\_local\_planner::VertexTimeDiff@{teb\_local\_planner::VertexTimeDiff}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Vertex\+Time\+Diff\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Write the estimate $ \Delta T $ to an output stream 
+
+
+\begin{DoxyParams}{参数}
+{\em os} & output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the export was successful, otherwise {\ttfamily false} 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/vertex\+\_\+timediff.\+h\end{DoxyCompactItemize}

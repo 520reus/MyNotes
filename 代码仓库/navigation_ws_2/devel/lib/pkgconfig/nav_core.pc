@@ -1,0 +1,8 @@
+prefix=/home/wu/navigation_ws_1/devel
+
+Name: nav_core
+Description: Description of nav_core
+Version: 1.16.7
+Cflags: -I/home/wu/navigation_ws_1/src/navigation/nav_core/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs geometry_msgs tf2_ros costmap_2d

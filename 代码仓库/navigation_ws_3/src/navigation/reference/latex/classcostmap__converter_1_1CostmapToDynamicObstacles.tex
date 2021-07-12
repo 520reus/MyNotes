@@ -1,0 +1,230 @@
+\hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles}{}\doxysection{costmap\+\_\+converter\+::Costmap\+To\+Dynamic\+Obstacles类 参考}
+\label{classcostmap__converter_1_1CostmapToDynamicObstacles}\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+
+
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into dynamic obstacles.  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles.\+h$>$}
+
+类 costmap\+\_\+converter\+::Costmap\+To\+Dynamic\+Obstacles 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcostmap__converter_1_1CostmapToDynamicObstacles}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a6d9b6be74490be79f24584f2fe81a8c7}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a6d9b6be74490be79f24584f2fe81a8c7}} 
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a6d9b6be74490be79f24584f2fe81a8c7}{Costmap\+To\+Dynamic\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_aec087af33f4b65c449a86193e0596983}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_aec087af33f4b65c449a86193e0596983}} 
+virtual \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_aec087af33f4b65c449a86193e0596983}{$\sim$\+Costmap\+To\+Dynamic\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a81dcd29642c7576617086cd27033d392}{initialize}} (ros\+::\+Node\+Handle nh)
+\begin{DoxyCompactList}\small\item\em Initialize the plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_abe455a3abf0457e705c94b42a815075b}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_abe455a3abf0457e705c94b42a815075b}} 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_abe455a3abf0457e705c94b42a815075b}{compute}} ()
+\begin{DoxyCompactList}\small\item\em This method performs the actual work (conversion of the costmap to obstacles) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a01610c9d9ec802d11c991379a1b6a99e}{set\+Costmap2D}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap)
+\begin{DoxyCompactList}\small\item\em Pass a pointer to the costmap to the plugin. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a0ddccd62ad3d089f69f204ea5226821a}{update\+Costmap2D}} ()
+\begin{DoxyCompactList}\small\item\em Get updated data from the previously set Costmap2D \end{DoxyCompactList}\item 
+Obstacle\+Array\+Const\+Ptr \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}{get\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Get a shared instance of the current obstacle container \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a610ef9b8c4bb18fedce04eeabf666198}{set\+Odom\+Topic}} (const std\+::string \&odom\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Set name of robot\textquotesingle{}s odometry topic \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a7e325eac22dc6f36d9d1b23aa3919bb2}{visualize}} (const std\+::string \&name, const cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Open\+CV Visualization \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+Point\+\_\+t \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a559e0bd1e917ad8ea215bbaab7aa7e8b}{get\+Estimated\+Velocity\+Of\+Object}} (unsigned int idx)
+\begin{DoxyCompactList}\small\item\em Converts the estimated velocity of a tracked object to m/s and returns it \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a717439d17250ca6be69644913894c9cd}{get\+Contour}} (unsigned int idx, std\+::vector$<$ Point\+\_\+t $>$ \&contour)
+\begin{DoxyCompactList}\small\item\em Gets the last observed contour of a object and converts it from \mbox{[}px\mbox{]} to \mbox{[}m\mbox{]} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a424cda0d40055d322c45e6731ee74f3f}{update\+Obstacle\+Container}} (Obstacle\+Array\+Ptr obstacles)
+\begin{DoxyCompactList}\small\item\em Thread-\/safe update of the internal obstacle container (that is shared using \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}{get\+Obstacles()}} from outside this class) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into dynamic obstacles. 
+
+Static obstacles are treated as point obstacles. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a717439d17250ca6be69644913894c9cd}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a717439d17250ca6be69644913894c9cd}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!getContour@{getContour}}
+\index{getContour@{getContour}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{getContour()}{getContour()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::get\+Contour (\begin{DoxyParamCaption}\item[{unsigned int}]{idx,  }\item[{std\+::vector$<$ Point\+\_\+t $>$ \&}]{contour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Gets the last observed contour of a object and converts it from \mbox{[}px\mbox{]} to \mbox{[}m\mbox{]} 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em idx} & Index of the tracked object in the tracker \\
+\hline
+\mbox{\texttt{ out}}  & {\em contour} & vector of Point\+\_\+t, which represents the last observed contour in \mbox{[}m\mbox{]} in x,y,z coordinates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a559e0bd1e917ad8ea215bbaab7aa7e8b}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a559e0bd1e917ad8ea215bbaab7aa7e8b}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!getEstimatedVelocityOfObject@{getEstimatedVelocityOfObject}}
+\index{getEstimatedVelocityOfObject@{getEstimatedVelocityOfObject}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{getEstimatedVelocityOfObject()}{getEstimatedVelocityOfObject()}}
+{\footnotesize\ttfamily Point\+\_\+t costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::get\+Estimated\+Velocity\+Of\+Object (\begin{DoxyParamCaption}\item[{unsigned int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Converts the estimated velocity of a tracked object to m/s and returns it 
+
+
+\begin{DoxyParams}{参数}
+{\em idx} & Index of the tracked object in the tracker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Point\+\_\+t, which represents velocity in \mbox{[}m/s\mbox{]} of object(idx) in x,y,z coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!getObstacles@{getObstacles}}
+\index{getObstacles@{getObstacles}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{getObstacles()}{getObstacles()}}
+{\footnotesize\ttfamily Obstacle\+Array\+Const\+Ptr costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::get\+Obstacles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get a shared instance of the current obstacle container 
+
+\begin{DoxyRemark}{备注}
+If \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_abe455a3abf0457e705c94b42a815075b}{compute()}} or \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_add1732365a108103565920d277aa1d0e}{start\+Worker()}} has not been called before, this method returns an empty instance! 
+\end{DoxyRemark}
+\begin{DoxyReturn}{返回}
+Shared instance of the current obstacle container 
+\end{DoxyReturn}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a568d60474400d08a40218d0674b46fed}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}} .
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a81dcd29642c7576617086cd27033d392}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a81dcd29642c7576617086cd27033d392}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Nodehandle that defines the namespace for parameters \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a5e9d598f3a5913f754cc91c10fa70672}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a01610c9d9ec802d11c991379a1b6a99e}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a01610c9d9ec802d11c991379a1b6a99e}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!setCostmap2D@{setCostmap2D}}
+\index{setCostmap2D@{setCostmap2D}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{setCostmap2D()}{setCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::set\+Costmap2D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pass a pointer to the costmap to the plugin. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a0ddccd62ad3d089f69f204ea5226821a}{update\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em costmap} & Pointer to the costmap2d source \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a9b645e854e76c6d36475a9a0ecf0ddd8}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a610ef9b8c4bb18fedce04eeabf666198}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a610ef9b8c4bb18fedce04eeabf666198}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!setOdomTopic@{setOdomTopic}}
+\index{setOdomTopic@{setOdomTopic}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{setOdomTopic()}{setOdomTopic()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::set\+Odom\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{odom\+\_\+topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set name of robot\textquotesingle{}s odometry topic 
+
+\begin{DoxyWarning}{警告}
+The method must be called before \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a81dcd29642c7576617086cd27033d392}{initialize()}}
+\end{DoxyWarning}
+Some plugins might require odometry information to compensate the robot\textquotesingle{}s ego motion 
+\begin{DoxyParams}{参数}
+{\em odom\+\_\+topic} & topic name \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_ae2913087d659654c55f5869397f8e2c5}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}} .
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a0ddccd62ad3d089f69f204ea5226821a}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a0ddccd62ad3d089f69f204ea5226821a}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!updateCostmap2D@{updateCostmap2D}}
+\index{updateCostmap2D@{updateCostmap2D}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{updateCostmap2D()}{updateCostmap2D()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::update\+Costmap2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get updated data from the previously set Costmap2D 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_a01610c9d9ec802d11c991379a1b6a99e}{set\+Costmap2D}} 
+\end{DoxySeeAlso}
+
+
+实现了 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a83f5e0c6c9954c6cf54a25e4f0de5b6c}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}}.
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a424cda0d40055d322c45e6731ee74f3f}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a424cda0d40055d322c45e6731ee74f3f}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!updateObstacleContainer@{updateObstacleContainer}}
+\index{updateObstacleContainer@{updateObstacleContainer}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{updateObstacleContainer()}{updateObstacleContainer()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::update\+Obstacle\+Container (\begin{DoxyParamCaption}\item[{Obstacle\+Array\+Ptr}]{obstacles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Thread-\/safe update of the internal obstacle container (that is shared using \mbox{\hyperlink{classcostmap__converter_1_1CostmapToDynamicObstacles_aea474a66f2b23002e1390b2e156d3255}{get\+Obstacles()}} from outside this class) 
+
+
+\begin{DoxyParams}{参数}
+{\em obstacles} & Updated obstacle container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToDynamicObstacles_a7e325eac22dc6f36d9d1b23aa3919bb2}\label{classcostmap__converter_1_1CostmapToDynamicObstacles_a7e325eac22dc6f36d9d1b23aa3919bb2}} 
+\index{costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}!visualize@{visualize}}
+\index{visualize@{visualize}!costmap\_converter::CostmapToDynamicObstacles@{costmap\_converter::CostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Dynamic\+Obstacles\+::visualize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Open\+CV Visualization 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & Id/name of the opencv window \\
+\hline
+{\em image} & Image to be visualized \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles/costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles.\+h\end{DoxyCompactItemize}

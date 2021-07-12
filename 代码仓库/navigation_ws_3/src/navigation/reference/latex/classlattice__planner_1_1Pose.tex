@@ -1,0 +1,229 @@
+\hypertarget{classlattice__planner_1_1Pose}{}\doxysection{lattice\+\_\+planner\+::Pose类 参考}
+\label{classlattice__planner_1_1Pose}\index{lattice\_planner::Pose@{lattice\_planner::Pose}}
+
+
+container for the (3D planar) robot pose and pose related properties, conversions and calculations  
+
+
+
+
+{\ttfamily \#include $<$pose.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1Pose_af89d60ea5d70676029146e057a45bb20}{Pose}} (double x, double y, double theta)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a364be04902c46512f485ec20d54b9bed}\label{classlattice__planner_1_1Pose_a364be04902c46512f485ec20d54b9bed}} 
+\mbox{\hyperlink{classlattice__planner_1_1Pose_a364be04902c46512f485ec20d54b9bed}{Pose}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Pose_a308196d8f74d55f94e2a7c6822af5707}{setX}} (double x)
+\begin{DoxyCompactList}\small\item\em specify the x position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Pose_add6b1944a409b4a235f414441a4dedf0}{setY}} (double y)
+\begin{DoxyCompactList}\small\item\em specify the y position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1Pose_a9bdbe278d30c2df3b7fcdcbc023fd8c3}{set\+Theta}} (double theta)
+\begin{DoxyCompactList}\small\item\em specify the orientation \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Pose_a2a29faa1c932cda3190e3b2150a82911}{getX}} ()
+\begin{DoxyCompactList}\small\item\em get x position \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Pose_ad811878b4439bfdb003e7e3364251557}{getY}} ()
+\begin{DoxyCompactList}\small\item\em get y position \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Pose_aa4300d0992974b0335c1a18a07d448d9}{get\+Theta}} ()
+\begin{DoxyCompactList}\small\item\em get orientation around z-\/axis \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Pose \mbox{\hyperlink{classlattice__planner_1_1Pose_a9ed649673e1b2263a2af95f8c3990394}{get\+Geom\+Pose}} ()
+\begin{DoxyCompactList}\small\item\em get geometry\+\_\+msgs\+::\+Pose version of the pose \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classlattice__planner_1_1Pose_afcd0568bf6188ed13eac891fa61b073f}{get\+Stamped\+Pose}} (std\+::string frame\+\_\+id, ros\+::\+Time time)
+\begin{DoxyCompactList}\small\item\em get geometry\+\_\+msgs\+::\+Pose\+Stamped version of the pose \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Pose_a94098349948de81e506a11b3c857e8c8}{get\+Distance}} (\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \&other)
+\begin{DoxyCompactList}\small\item\em calculates the Cartesian distance between two poses \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1Pose_a273529e8728fb4921f0652e8cb50bc38}{get\+Rot\+Distance}} (\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \&other)
+\begin{DoxyCompactList}\small\item\em calculates the difference in orientation between two poses \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+container for the (3D planar) robot pose and pose related properties, conversions and calculations 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_af89d60ea5d70676029146e057a45bb20}\label{classlattice__planner_1_1Pose_af89d60ea5d70676029146e057a45bb20}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!Pose@{Pose}}
+\index{Pose@{Pose}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Pose\+::\+Pose (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em theta} & orientation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a94098349948de81e506a11b3c857e8c8}\label{classlattice__planner_1_1Pose_a94098349948de81e506a11b3c857e8c8}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Pose\+::get\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the Cartesian distance between two poses 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & pose to which the distance is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+distance between the poses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a9ed649673e1b2263a2af95f8c3990394}\label{classlattice__planner_1_1Pose_a9ed649673e1b2263a2af95f8c3990394}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getGeomPose@{getGeomPose}}
+\index{getGeomPose@{getGeomPose}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getGeomPose()}{getGeomPose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose lattice\+\_\+planner\+::\+Pose\+::get\+Geom\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get geometry\+\_\+msgs\+::\+Pose version of the pose 
+
+\begin{DoxyReturn}{返回}
+pose wrapped into geometry\+\_\+msgs\+::\+Pose type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a273529e8728fb4921f0652e8cb50bc38}\label{classlattice__planner_1_1Pose_a273529e8728fb4921f0652e8cb50bc38}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getRotDistance@{getRotDistance}}
+\index{getRotDistance@{getRotDistance}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getRotDistance()}{getRotDistance()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Pose\+::get\+Rot\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the difference in orientation between two poses 
+
+returned orientation difference is always positive and reflects the minimum angular distance between the poses.
+
+
+\begin{DoxyParams}{参数}
+{\em other} & pose to which the orientation distance is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+orientation difference between the poses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_afcd0568bf6188ed13eac891fa61b073f}\label{classlattice__planner_1_1Pose_afcd0568bf6188ed13eac891fa61b073f}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getStampedPose@{getStampedPose}}
+\index{getStampedPose@{getStampedPose}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getStampedPose()}{getStampedPose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped lattice\+\_\+planner\+::\+Pose\+::get\+Stamped\+Pose (\begin{DoxyParamCaption}\item[{std\+::string}]{frame\+\_\+id,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get geometry\+\_\+msgs\+::\+Pose\+Stamped version of the pose 
+
+
+\begin{DoxyParams}{参数}
+{\em frame\+\_\+id} & frame id for the pose \\
+\hline
+{\em time} & time stamp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+pose wrapped into geometry\+\_\+msgs\+::\+Pose\+Stamped type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_aa4300d0992974b0335c1a18a07d448d9}\label{classlattice__planner_1_1Pose_aa4300d0992974b0335c1a18a07d448d9}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getTheta@{getTheta}}
+\index{getTheta@{getTheta}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getTheta()}{getTheta()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Pose\+::get\+Theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get orientation around z-\/axis 
+
+\begin{DoxyReturn}{返回}
+orientation around z-\/axis, between 0 and 2PI 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a2a29faa1c932cda3190e3b2150a82911}\label{classlattice__planner_1_1Pose_a2a29faa1c932cda3190e3b2150a82911}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getX@{getX}}
+\index{getX@{getX}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Pose\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get x position 
+
+\begin{DoxyReturn}{返回}
+x position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_ad811878b4439bfdb003e7e3364251557}\label{classlattice__planner_1_1Pose_ad811878b4439bfdb003e7e3364251557}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!getY@{getY}}
+\index{getY@{getY}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Pose\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get y position 
+
+\begin{DoxyReturn}{返回}
+y position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a9bdbe278d30c2df3b7fcdcbc023fd8c3}\label{classlattice__planner_1_1Pose_a9bdbe278d30c2df3b7fcdcbc023fd8c3}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!setTheta@{setTheta}}
+\index{setTheta@{setTheta}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{setTheta()}{setTheta()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Pose\+::set\+Theta (\begin{DoxyParamCaption}\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+specify the orientation 
+
+if necessary, the orientation is forced to be between 0 and 2PI
+
+
+\begin{DoxyParams}{参数}
+{\em theta} & orientation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_a308196d8f74d55f94e2a7c6822af5707}\label{classlattice__planner_1_1Pose_a308196d8f74d55f94e2a7c6822af5707}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!setX@{setX}}
+\index{setX@{setX}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Pose\+::setX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+specify the x position 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1Pose_add6b1944a409b4a235f414441a4dedf0}\label{classlattice__planner_1_1Pose_add6b1944a409b4a235f414441a4dedf0}} 
+\index{lattice\_planner::Pose@{lattice\_planner::Pose}!setY@{setY}}
+\index{setY@{setY}!lattice\_planner::Pose@{lattice\_planner::Pose}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Pose\+::setY (\begin{DoxyParamCaption}\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+specify the y position 
+
+
+\begin{DoxyParams}{参数}
+{\em y} & y position \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/pose.\+h\end{DoxyCompactItemize}

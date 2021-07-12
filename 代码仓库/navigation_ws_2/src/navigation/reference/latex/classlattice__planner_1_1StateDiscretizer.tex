@@ -1,0 +1,210 @@
+\hypertarget{classlattice__planner_1_1StateDiscretizer}{}\doxysection{lattice\+\_\+planner\+::State\+Discretizer类 参考}
+\label{classlattice__planner_1_1StateDiscretizer}\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+
+
+calculations and conversions between a continuous and its discrete state representation  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+discretizer.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_a97cb8c045d4538ed836b9fc8ffac57ac}{State\+Discretizer}} (\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$costmap, \mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} motion\+\_\+constraints)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_a326ab159e31dd7b48315dbec80091fcc}{get\+Num\+Discrete\+Angles}} (double acc\+\_\+w, double time\+\_\+delta)
+\begin{DoxyCompactList}\small\item\em calculate the number of discrete angles necessary to represent the configuration space \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_a6f93b8fa02d6b391d67cae49a9ad3563}{discretize\+State}} (\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} pose, \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} vel, int time\+\_\+step)
+\begin{DoxyCompactList}\small\item\em find the discrete representation for a given state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_a9aca1249de99d4d5309ed3e24c87daa0}{get\+Cell\+Position}} (double x, double y, unsigned int \&x\+\_\+i, unsigned int \&y\+\_\+i, unsigned int \&index)
+\begin{DoxyCompactList}\small\item\em calculate the map coordinates and map index from a continuous position \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_ac5824f2e3df38145f8f13cedfd0538d3}{get\+Discrete\+Orientation}} (double angle)
+\begin{DoxyCompactList}\small\item\em get discretized orientation from a given continuous representation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_aee2065d389a9fdfd502b6aa9235b1491}{get\+Discrete\+Velocity}} (\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} vel, unsigned int \&vel\+\_\+x\+\_\+i, unsigned int \&vel\+\_\+w\+\_\+i)
+\begin{DoxyCompactList}\small\item\em get discretized velocity from a given continuous representation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_aa4438c6e43b6e45d6707efb5208c8285}{get\+Limits}} (int \&num\+\_\+gridcells, int \&num\+\_\+orientations, int \&num\+\_\+vels\+\_\+x, int \&num\+\_\+vels\+\_\+w)
+\begin{DoxyCompactList}\small\item\em get the discretization limits\+: amount of discrete steps available for each state dimension to represent the continuous state space \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} \mbox{\hyperlink{classlattice__planner_1_1StateDiscretizer_a68ca81e173a4c792c9aa65e2d59ad021}{get\+Velocity}} (unsigned int vel\+\_\+x\+\_\+i, unsigned int vel\+\_\+w\+\_\+i)
+\begin{DoxyCompactList}\small\item\em get corresponding continuous velocity to a given discrete representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+calculations and conversions between a continuous and its discrete state representation 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_a97cb8c045d4538ed836b9fc8ffac57ac}\label{classlattice__planner_1_1StateDiscretizer_a97cb8c045d4538ed836b9fc8ffac57ac}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!StateDiscretizer@{StateDiscretizer}}
+\index{StateDiscretizer@{StateDiscretizer}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{StateDiscretizer()}{StateDiscretizer()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+State\+Discretizer\+::\+State\+Discretizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$}]{costmap,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}}}]{motion\+\_\+constraints }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em costmap} & dynamic costmap for planning \\
+\hline
+{\em motion\+\_\+constraints} & velocity and acceleration limits of the robot \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_a6f93b8fa02d6b391d67cae49a9ad3563}\label{classlattice__planner_1_1StateDiscretizer_a6f93b8fa02d6b391d67cae49a9ad3563}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!discretizeState@{discretizeState}}
+\index{discretizeState@{discretizeState}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{discretizeState()}{discretizeState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} lattice\+\_\+planner\+::\+State\+Discretizer\+::discretize\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{pose,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{vel,  }\item[{int}]{time\+\_\+step }\end{DoxyParamCaption})}
+
+
+
+find the discrete representation for a given state 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & the pose of the state \\
+\hline
+{\em vel} & the state\textquotesingle{}s velocity \\
+\hline
+{\em time\+\_\+step} & the state\textquotesingle{}s discrete time step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+discretized state representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_a9aca1249de99d4d5309ed3e24c87daa0}\label{classlattice__planner_1_1StateDiscretizer_a9aca1249de99d4d5309ed3e24c87daa0}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getCellPosition@{getCellPosition}}
+\index{getCellPosition@{getCellPosition}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getCellPosition()}{getCellPosition()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Cell\+Position (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{unsigned int \&}]{x\+\_\+i,  }\item[{unsigned int \&}]{y\+\_\+i,  }\item[{unsigned int \&}]{index }\end{DoxyParamCaption})}
+
+
+
+calculate the map coordinates and map index from a continuous position 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em x} & continuous x coordinate \\
+\hline
+ & {\em y} & continuous y coordinate \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+i} & discrete x coordinate in the map \\
+\hline
+\mbox{\texttt{ out}}  & {\em y\+\_\+i} & discrete y coordinate in the map \\
+\hline
+\mbox{\texttt{ out}}  & {\em index} & discrete map index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether the queried position is inside the map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_ac5824f2e3df38145f8f13cedfd0538d3}\label{classlattice__planner_1_1StateDiscretizer_ac5824f2e3df38145f8f13cedfd0538d3}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getDiscreteOrientation@{getDiscreteOrientation}}
+\index{getDiscreteOrientation@{getDiscreteOrientation}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getDiscreteOrientation()}{getDiscreteOrientation()}}
+{\footnotesize\ttfamily unsigned int lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Discrete\+Orientation (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+get discretized orientation from a given continuous representation 
+
+
+\begin{DoxyParams}{参数}
+{\em angle} & continuous orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+discretized orientation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_aee2065d389a9fdfd502b6aa9235b1491}\label{classlattice__planner_1_1StateDiscretizer_aee2065d389a9fdfd502b6aa9235b1491}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getDiscreteVelocity@{getDiscreteVelocity}}
+\index{getDiscreteVelocity@{getDiscreteVelocity}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getDiscreteVelocity()}{getDiscreteVelocity()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Discrete\+Velocity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{vel,  }\item[{unsigned int \&}]{vel\+\_\+x\+\_\+i,  }\item[{unsigned int \&}]{vel\+\_\+w\+\_\+i }\end{DoxyParamCaption})}
+
+
+
+get discretized velocity from a given continuous representation 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em vel} & continuous velocity \\
+\hline
+\mbox{\texttt{ out}}  & {\em vel\+\_\+x\+\_\+i} & discretized forward velocity component \\
+\hline
+\mbox{\texttt{ out}}  & {\em vel\+\_\+w\+\_\+i} & discretized angular velocity component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_aa4438c6e43b6e45d6707efb5208c8285}\label{classlattice__planner_1_1StateDiscretizer_aa4438c6e43b6e45d6707efb5208c8285}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getLimits@{getLimits}}
+\index{getLimits@{getLimits}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Limits (\begin{DoxyParamCaption}\item[{int \&}]{num\+\_\+gridcells,  }\item[{int \&}]{num\+\_\+orientations,  }\item[{int \&}]{num\+\_\+vels\+\_\+x,  }\item[{int \&}]{num\+\_\+vels\+\_\+w }\end{DoxyParamCaption})}
+
+
+
+get the discretization limits\+: amount of discrete steps available for each state dimension to represent the continuous state space 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em num\+\_\+gridcells} & number of grid cells in the discrete map \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+\_\+orientations} & number of discrete orientations \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+\_\+vels\+\_\+x} & number of discrete forward velocities \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+\_\+vels\+\_\+w} & number of discrete angular velocities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_a326ab159e31dd7b48315dbec80091fcc}\label{classlattice__planner_1_1StateDiscretizer_a326ab159e31dd7b48315dbec80091fcc}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getNumDiscreteAngles@{getNumDiscreteAngles}}
+\index{getNumDiscreteAngles@{getNumDiscreteAngles}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getNumDiscreteAngles()}{getNumDiscreteAngles()}}
+{\footnotesize\ttfamily int lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Num\+Discrete\+Angles (\begin{DoxyParamCaption}\item[{double}]{acc\+\_\+w,  }\item[{double}]{time\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+calculate the number of discrete angles necessary to represent the configuration space 
+
+
+\begin{DoxyParams}{参数}
+{\em acc\+\_\+w} & angular acceleration of the robot \\
+\hline
+{\em time\+\_\+delta} & time resolution of the configuration space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+number of discrete angles necessary to fully represent the configuration space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1StateDiscretizer_a68ca81e173a4c792c9aa65e2d59ad021}\label{classlattice__planner_1_1StateDiscretizer_a68ca81e173a4c792c9aa65e2d59ad021}} 
+\index{lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!lattice\_planner::StateDiscretizer@{lattice\_planner::StateDiscretizer}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} lattice\+\_\+planner\+::\+State\+Discretizer\+::get\+Velocity (\begin{DoxyParamCaption}\item[{unsigned int}]{vel\+\_\+x\+\_\+i,  }\item[{unsigned int}]{vel\+\_\+w\+\_\+i }\end{DoxyParamCaption})}
+
+
+
+get corresponding continuous velocity to a given discrete representation. 
+
+\begin{DoxyVerb}   mostly used to avoid rounding errors when calculating velocities inside
+   the continuous configuration space
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{参数}
+{\em vel\+\_\+x\+\_\+i} & discrete forward velocity \\
+\hline
+{\em vel\+\_\+w\+\_\+i} & discrete angular velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+continuous velocity 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/state\+\_\+discretizer.\+h\end{DoxyCompactItemize}

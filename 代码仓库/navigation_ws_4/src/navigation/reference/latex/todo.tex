@@ -1,0 +1,68 @@
+
+\begin{DoxyRefList}
+\item[全局 \mbox{\hyperlink{classBlobDetector_aeee7a975ec0f91694540d8aef773302d}{Blob\+Detector\+::detect}} (const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, const cv\+::\+Mat \&mask=cv\+::\+Mat())]\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+The mask option is currently not implemented. 
+\item[类 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSConcaveHull}{costmap\+\_\+converter\+::Costmap\+To\+Polygons\+DBSConcave\+Hull}} ]\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+change the class hierarchy to a clearer and more generic one  
+\item[全局 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{costmap\+\_\+converter\+::Costmap\+To\+Polygons\+DBSMCCH\+::convex\+Hull}} (std\+::vector$<$ Key\+Point $>$ \&cluster, geometry\+\_\+msgs\+::\+Polygon \&polygon)]\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Evaluate and figure out whether \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{convex\+Hull()}} or \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2()}} is better suited (performance, quality, ...)  
+\item[全局 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{costmap\+\_\+converter\+::Costmap\+To\+Polygons\+DBSMCCH\+::convex\+Hull2}} (std\+::vector$<$ Key\+Point $>$ \&cluster, geometry\+\_\+msgs\+::\+Polygon \&polygon)]\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+Evaluate and figure out whether \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a9a3b5ea703ba4487deb9171842938ccc}{convex\+Hull()}} or \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_a6c45bf9acf6fcaae63dfb51871895bc3}{convex\+Hull2()}} is better suited (performance, quality, ...)  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a49e25c8aaa6ee8db42f5463694bddaf3}{teb\+\_\+local\+\_\+planner\+::Pose\+SE2\+::operator=}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)]\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+exception safe version of the assignment operator  
+\item[类 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS}{teb\+\_\+local\+\_\+planner\+::Teb\+Local\+Planner\+ROS}} ]\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Escape behavior, more efficient obstacle handling  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}{teb\+\_\+local\+\_\+planner\+::Teb\+Local\+Planner\+ROS\+::update\+Obstacle\+Container\+With\+Costmap}} ()]\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Include temporal coherence among obstacle msgs (id vector) 
+
+Include properties for dynamic obstacles (e.\+g. using constant velocity model)  
+\item[类 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner}} ]\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+\+: Call \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph()}} only if the teb structure has been modified to speed up hot-\/starting from previous solutions. 
+
+\+: We introduced the non-\/fast mode with the support of dynamic obstacles (which leads to better results in terms of x-\/y-\/t homotopy planning). However, we have not tested this mode intensively yet, so we keep the legacy fast mode as default until we finish our tests.  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a0361f9f5c2fb8cd561cdf1b34db9a32b}{teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner\+::Add\+Edges\+Dynamic\+Obstacles}} (double weight\+\_\+multiplier=1.\+0)]\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+Should we also add neighbors to decrease jiggling/oscillations  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}{teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner\+::compute\+Current\+Cost}} (double obst\+\_\+cost\+\_\+scale=1.\+0, double viapoint\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)]\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+Remove the scaling term for the alternative time cost. 
+
+Can we use the last error (chi2) calculated from g2o instead of calculating it by ourself?  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a6853f051df0dfde21f1e6a2c4e15974c}{teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner\+::get\+Full\+Trajectory}} (std\+::vector$<$ Trajectory\+Point\+Msg $>$ \&trajectory) const]\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
+The acceleration profile is not added at the moment.  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization_a4265504ad80d52ea050dc3c60f267bff}{teb\+\_\+local\+\_\+planner\+::Teb\+Visualization\+::publish\+Obstacles}} (const Obst\+Container \&obstacles) const]\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Move filling of the marker message to polygon class in order to avoid checking types.  
+\item[类 \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band}} ]\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+Move decision if the start or goal state should be marked as fixed or unfixed for the optimization to the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class.  
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_aaae3fcdccc1f539b16ef6d4a3cab0ae7}{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+point, double $\ast$distance=NULL, int begin\+\_\+idx=0) const]\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory. 
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a21b422124633a6952e74fe14062929f1}{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+line\+\_\+start, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+line\+\_\+end, double $\ast$distance=NULL) const]\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory. 
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a0c33751be8735fb910738827d1da3f94}{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose}} (const Point2d\+Container \&vertices, double $\ast$distance=NULL) const]\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory. 
+\item[全局 \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band\+::update\+And\+Prune\+TEB}} (boost\+::optional$<$ const Pose\+SE2 \& $>$ new\+\_\+start, boost\+::optional$<$ const Pose\+SE2 \& $>$ new\+\_\+goal, int min\+\_\+samples=3)]\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+Smooth the trajectory here and test the performance improvement of the optimization. 
+
+Implement a update\+And\+Prune\+TEB based on a new reference path / pose sequence.
+\end{DoxyRefList}

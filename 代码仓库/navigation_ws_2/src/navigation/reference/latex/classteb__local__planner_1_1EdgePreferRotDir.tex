@@ -1,0 +1,78 @@
+\hypertarget{classteb__local__planner_1_1EdgePreferRotDir}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Prefer\+Rot\+Dir类 参考}
+\label{classteb__local__planner_1_1EdgePreferRotDir}\index{teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}}
+
+
+Edge defining the cost function for penalzing a specified turning direction, in particular left resp. right turns  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+prefer\+\_\+rotdir.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Prefer\+Rot\+Dir 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgePreferRotDir}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgePreferRotDir_ae0dde6dc09c3ee0064f27e8b4ebb8178}\label{classteb__local__planner_1_1EdgePreferRotDir_ae0dde6dc09c3ee0064f27e8b4ebb8178}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgePreferRotDir_ae0dde6dc09c3ee0064f27e8b4ebb8178}{Edge\+Prefer\+Rot\+Dir}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgePreferRotDir_a207d12239a16387f930ae6ff91bd2ab0}\label{classteb__local__planner_1_1EdgePreferRotDir_a207d12239a16387f930ae6ff91bd2ab0}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgePreferRotDir_a207d12239a16387f930ae6ff91bd2ab0}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgePreferRotDir_a86ebf506db75785e720e8441cde87a92}{set\+Rot\+Dir}} (double dir)
+\begin{DoxyCompactList}\small\item\em Specify the prefered direction of rotation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgePreferRotDir_a8bc169a02bb70ad7bc94ad2d8ada31be}{prefer\+Right}} ()
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgePreferRotDir_a9a404e7329d53dbc24af26b6701f0410}{prefer\+Left}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for penalzing a specified turning direction, in particular left resp. right turns 
+
+The edge depends on two consecutive vertices $ \mathbf{s}_i, \mathbf{s}_{i+1} $ and penalizes a given rotation direction based on the {\itshape weight} and {\itshape dir} ( $ dir \in \{-1,1\} $) {\itshape dir} should be +1 to prefer left rotations and -\/1 to prefer right rotations ~\newline
+{\itshape weight} can be set using set\+Information(). ~\newline
+\begin{DoxySeeAlso}{参见}
+Teb\+Optimal\+Planner\+::\+Add\+Edge\+Prefer\+Rot\+Dir 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgePreferRotDir_a9a404e7329d53dbc24af26b6701f0410}\label{classteb__local__planner_1_1EdgePreferRotDir_a9a404e7329d53dbc24af26b6701f0410}} 
+\index{teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}!preferLeft@{preferLeft}}
+\index{preferLeft@{preferLeft}!teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}}
+\doxysubsubsection{\texorpdfstring{preferLeft()}{preferLeft()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Prefer\+Rot\+Dir\+::prefer\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prefer rotations to the right \mbox{\Hypertarget{classteb__local__planner_1_1EdgePreferRotDir_a8bc169a02bb70ad7bc94ad2d8ada31be}\label{classteb__local__planner_1_1EdgePreferRotDir_a8bc169a02bb70ad7bc94ad2d8ada31be}} 
+\index{teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}!preferRight@{preferRight}}
+\index{preferRight@{preferRight}!teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}}
+\doxysubsubsection{\texorpdfstring{preferRight()}{preferRight()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Prefer\+Rot\+Dir\+::prefer\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prefer rotations to the right \mbox{\Hypertarget{classteb__local__planner_1_1EdgePreferRotDir_a86ebf506db75785e720e8441cde87a92}\label{classteb__local__planner_1_1EdgePreferRotDir_a86ebf506db75785e720e8441cde87a92}} 
+\index{teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}!setRotDir@{setRotDir}}
+\index{setRotDir@{setRotDir}!teb\_local\_planner::EdgePreferRotDir@{teb\_local\_planner::EdgePreferRotDir}}
+\doxysubsubsection{\texorpdfstring{setRotDir()}{setRotDir()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Prefer\+Rot\+Dir\+::set\+Rot\+Dir (\begin{DoxyParamCaption}\item[{double}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specify the prefered direction of rotation 
+
+
+\begin{DoxyParams}{参数}
+{\em dir} & +1 to prefer the left side, -\/1 to prefer the right side \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+prefer\+\_\+rotdir.\+h\end{DoxyCompactItemize}

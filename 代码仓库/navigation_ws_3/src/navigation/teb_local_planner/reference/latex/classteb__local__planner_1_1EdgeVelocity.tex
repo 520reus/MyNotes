@@ -1,0 +1,49 @@
+\hypertarget{classteb__local__planner_1_1EdgeVelocity}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Velocity类 参考}
+\label{classteb__local__planner_1_1EdgeVelocity}\index{teb\_local\_planner::EdgeVelocity@{teb\_local\_planner::EdgeVelocity}}
+
+
+Edge defining the cost function for limiting the translational and rotational velocity.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+velocity.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Velocity 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeVelocity}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeVelocity_a95e44ad1d7b2dfbe3b5b68990e95e7a9}\label{classteb__local__planner_1_1EdgeVelocity_a95e44ad1d7b2dfbe3b5b68990e95e7a9}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeVelocity_a95e44ad1d7b2dfbe3b5b68990e95e7a9}{Edge\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeVelocity_a3410a1cc820fcd2336064c89373b2526}\label{classteb__local__planner_1_1EdgeVelocity_a3410a1cc820fcd2336064c89373b2526}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeVelocity_a3410a1cc820fcd2336064c89373b2526}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for limiting the translational and rotational velocity. 
+
+The edge depends on three vertices $ \mathbf{s}_i, \mathbf{s}_{ip1}, \Delta T_i $ and minimizes\+: ~\newline
+ $ \min \textrm{penaltyInterval}( [v,omega]^T ) \cdot weight $. ~\newline
+{\itshape v} is calculated using the difference quotient and the position parts of both poses. ~\newline
+{\itshape omega} is calculated using the difference quotient of both yaw angles followed by a normalization to \mbox{[}-\/pi, pi\mbox{]}. ~\newline
+{\itshape weight} can be set using set\+Information(). ~\newline
+{\itshape penalty\+Interval} denotes the penalty function, see penalty\+Bound\+To\+Interval(). ~\newline
+The dimension of the error / cost vector is 2\+: the first component represents the translational velocity and the second one the rotational velocity. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a472b1e7242f295eae693e428861bbfc1}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Velocity}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebMultiEdge_a8b22d7b41874fae70ac737b4b33d47e2}{set\+Teb\+Config()}} 
+\end{DoxyRemark}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+velocity.\+h\end{DoxyCompactItemize}

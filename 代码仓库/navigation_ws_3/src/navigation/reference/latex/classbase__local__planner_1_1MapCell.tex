@@ -1,0 +1,63 @@
+\hypertarget{classbase__local__planner_1_1MapCell}{}\doxysection{base\+\_\+local\+\_\+planner\+::Map\+Cell类 参考}
+\label{classbase__local__planner_1_1MapCell}\index{base\_local\_planner::MapCell@{base\_local\_planner::MapCell}}
+
+
+Stores path distance and goal distance information used for scoring trajectories  
+
+
+
+
+{\ttfamily \#include $<$map\+\_\+cell.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_ada59458e3cdc2553803bf35584595f46}\label{classbase__local__planner_1_1MapCell_ada59458e3cdc2553803bf35584595f46}} 
+\mbox{\hyperlink{classbase__local__planner_1_1MapCell_ada59458e3cdc2553803bf35584595f46}{Map\+Cell}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1MapCell_a1d929fa3b4ae25ed966b7f35b3239a3a}{Map\+Cell}} (const \mbox{\hyperlink{classbase__local__planner_1_1MapCell}{Map\+Cell}} \&mc)
+\begin{DoxyCompactList}\small\item\em Copy constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_a125980ac0566ea4b5417948ba90a5c87}\label{classbase__local__planner_1_1MapCell_a125980ac0566ea4b5417948ba90a5c87}} 
+unsigned int {\bfseries cx}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_aed4f9439e3feb2233a9fa754e3cf9cad}\label{classbase__local__planner_1_1MapCell_aed4f9439e3feb2233a9fa754e3cf9cad}} 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1MapCell_aed4f9439e3feb2233a9fa754e3cf9cad}{cy}}
+\begin{DoxyCompactList}\small\item\em Cell index in the grid map \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_a46148743bb5a42aee297adf23d5294e1}\label{classbase__local__planner_1_1MapCell_a46148743bb5a42aee297adf23d5294e1}} 
+double \mbox{\hyperlink{classbase__local__planner_1_1MapCell_a46148743bb5a42aee297adf23d5294e1}{target\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Distance to planner\textquotesingle{}s path \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_a89505b522bf7d89995ec388129c58d01}\label{classbase__local__planner_1_1MapCell_a89505b522bf7d89995ec388129c58d01}} 
+bool \mbox{\hyperlink{classbase__local__planner_1_1MapCell_a89505b522bf7d89995ec388129c58d01}{target\+\_\+mark}}
+\begin{DoxyCompactList}\small\item\em Marks for computing path/goal distances \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_a341c7e17d945f03f5b02def775b7aa88}\label{classbase__local__planner_1_1MapCell_a341c7e17d945f03f5b02def775b7aa88}} 
+bool \mbox{\hyperlink{classbase__local__planner_1_1MapCell_a341c7e17d945f03f5b02def775b7aa88}{within\+\_\+robot}}
+\begin{DoxyCompactList}\small\item\em Mark for cells within the robot footprint \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Stores path distance and goal distance information used for scoring trajectories 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1MapCell_a1d929fa3b4ae25ed966b7f35b3239a3a}\label{classbase__local__planner_1_1MapCell_a1d929fa3b4ae25ed966b7f35b3239a3a}} 
+\index{base\_local\_planner::MapCell@{base\_local\_planner::MapCell}!MapCell@{MapCell}}
+\index{MapCell@{MapCell}!base\_local\_planner::MapCell@{base\_local\_planner::MapCell}}
+\doxysubsubsection{\texorpdfstring{MapCell()}{MapCell()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Cell\+::\+Map\+Cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbase__local__planner_1_1MapCell}{Map\+Cell}} \&}]{mc }\end{DoxyParamCaption})}
+
+
+
+Copy constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em mc} & The \mbox{\hyperlink{classbase__local__planner_1_1MapCell}{Map\+Cell}} to be copied \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/map\+\_\+cell.\+h\end{DoxyCompactItemize}

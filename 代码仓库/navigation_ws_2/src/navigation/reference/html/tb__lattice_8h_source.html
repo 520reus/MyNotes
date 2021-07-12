@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner/include/lattice_planner/tb_lattice.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d4608036c0a5873288108ca7a6c056e0.html">lattice_planner</a></li><li class="navelem"><a class="el" href="dir_c69004a54815449a25c4300975d14d9f.html">include</a></li><li class="navelem"><a class="el" href="dir_8627c29d6f32bf739f086a6fbb89b9cb.html">lattice_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">tb_lattice.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2015 Marina Kollmitz</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * 3. Neither the name of the copyright holder nor the names of its contributors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * may be used to endorse or promote products derived from this software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Author: Marina Kollmitz</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef _TBLATTICE_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define _TBLATTICE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/OccupancyGrid.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseArray.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;visualization_msgs/MarkerArray.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;geometry_msgs/PoseStamped.h&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/pose.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/velocity.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/discrete_state.h&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/state.h&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/heuristics.h&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/state_discretizer.h&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/trajectory_rollout.h&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/hasher.h&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/Path.h&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/cost_manager.h&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/dynamic_costmap.h&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define SQRT2 1.414213562</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//#define DEBUG</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">namespace </span>lattice_planner</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1AStarLattice.html">  102</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlattice__planner_1_1AStarLattice.html">AStarLattice</a></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1AStarLattice.html#af63e98f889152271640ff0cd0013f48c">  111</a></span>&#160;  <a class="code" href="classlattice__planner_1_1AStarLattice.html#af63e98f889152271640ff0cd0013f48c">AStarLattice</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1AStarLattice.html#a317948db32e6df1986a27f981ec1b589">  116</a></span>&#160;  <a class="code" href="classlattice__planner_1_1AStarLattice.html#a317948db32e6df1986a27f981ec1b589">~AStarLattice</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1AStarLattice.html#a137de5f79a5e4ef8c1a615152e813398">  137</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1AStarLattice.html#a137de5f79a5e4ef8c1a615152e813398">getPath</a>(geometry_msgs::PoseStamped start, geometry_msgs::PoseStamped goal,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;               <span class="keywordtype">bool</span> replanning, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> plannerTimeoutCallback(<span class="keyword">const</span> ros::TimerEvent&amp; event);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">bool</span> findReplanningWaypoint(ros::Time plan_release_time,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                              geometry_msgs::PoseStamped&amp; replanning_start_pose,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                              geometry_msgs::Twist&amp; replanning_start_vel);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">void</span> expandCircleAtStart(<a class="code" href="structlattice__planner_1_1State.html">State</a> *start);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">bool</span> addState(<a class="code" href="structlattice__planner_1_1State.html">State</a>* state);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="structlattice__planner_1_1State.html">State</a>* getFirstPrioElement();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordtype">bool</span> expandLattice(<a class="code" href="structlattice__planner_1_1State.html">State</a> *&amp;<span class="keyword">final</span>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">void</span> expandNode(<a class="code" href="structlattice__planner_1_1State.html">State</a>* node, <a class="code" href="structlattice__planner_1_1State.html">State</a>*&amp; current_best, <span class="keywordtype">bool</span>&amp; is_goal);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <a class="code" href="structlattice__planner_1_1State.html">State</a>* createState(<a class="code" href="structlattice__planner_1_1State.html">State</a>* current, <a class="code" href="structlattice__planner_1_1Velocity.html">Velocity</a> new_vel);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  lattice_planner::Path retracePath(<a class="code" href="structlattice__planner_1_1State.html">State</a> *state);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">//planner preferences</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordtype">bool</span> allow_unknown_; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">double</span> xy_goal_tolerance_; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="keywordtype">double</span> yaw_goal_tolerance_; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">double</span> time_resolution_; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">double</span> map_index_check_time_inkr_; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">int</span> max_timesteps_; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">double</span> planning_timeout_; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">bool</span> passive_navigation_; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordtype">bool</span> publish_expanded_; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">//flags for easing path finding - violate optimality but necessary for quick</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="comment">//calculation</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordtype">bool</span> easy_deceleration_; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">bool</span> easy_turn_at_start_; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keywordtype">bool</span> easy_turn_at_goal_; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">//properties of current path finding run</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <a class="code" href="classlattice__planner_1_1Pose.html">Pose</a> start_pose_; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <a class="code" href="classlattice__planner_1_1Pose.html">Pose</a> goal_pose_; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  ros::Time path_time_; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  lattice_planner::Path current_plan_; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  nav_msgs::Path expanded_paths_; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordtype">bool</span> planning_timed_out_; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">//auxiliary classes</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <a class="code" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a>* dynamic_costmap_; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <a class="code" href="classlattice__planner_1_1StateDiscretizer.html">StateDiscretizer</a>* discretizer_; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <a class="code" href="classlattice__planner_1_1TrajectoryRollout.html">TrajectoryRollout</a>* trajectory_rollout_; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <a class="code" href="classlattice__planner_1_1Heuristics.html">Heuristics</a>* heuristic_calc_; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <a class="code" href="classlattice__planner_1_1CostManager.html">CostManager</a>* cost_calc_; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="comment">//containers for expanded states</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  std::vector&lt;State*&gt; queue_; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  std::vector&lt; std::unordered_map&lt;DiscreteState, State*,Hasher&gt;* &gt; expanded_states_; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="comment">//ros stuff</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  ros::NodeHandle nh_; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  ros::Publisher expanded_paths_pub_; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  ros::Publisher vel_path_pub_; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="comment">//debug things</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  ros::Publisher current_node_pub_; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  ros::Publisher new_node_pub_; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  ros::Publisher all_expanded_pub_; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordtype">bool</span> debug_no_interrupt_; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;};</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;} <span class="comment">//namespace lattice_planner</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1AStarLattice_html"><div class="ttname"><a href="classlattice__planner_1_1AStarLattice.html">lattice_planner::AStarLattice</a></div><div class="ttdoc">This class implements a time-bounded A* lattice planner for time dependent planning on a layered,...</div><div class="ttdef"><b>Definition:</b> tb_lattice.h:103</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1AStarLattice_html_a137de5f79a5e4ef8c1a615152e813398"><div class="ttname"><a href="classlattice__planner_1_1AStarLattice.html#a137de5f79a5e4ef8c1a615152e813398">lattice_planner::AStarLattice::getPath</a></div><div class="ttdeci">bool getPath(geometry_msgs::PoseStamped start, geometry_msgs::PoseStamped goal, bool replanning, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</div><div class="ttdoc">generate a path from a start pose to a goal pose.</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1AStarLattice_html_a317948db32e6df1986a27f981ec1b589"><div class="ttname"><a href="classlattice__planner_1_1AStarLattice.html#a317948db32e6df1986a27f981ec1b589">lattice_planner::AStarLattice::~AStarLattice</a></div><div class="ttdeci">~AStarLattice()</div><div class="ttdoc">destructor</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1AStarLattice_html_af63e98f889152271640ff0cd0013f48c"><div class="ttname"><a href="classlattice__planner_1_1AStarLattice.html#af63e98f889152271640ff0cd0013f48c">lattice_planner::AStarLattice::AStarLattice</a></div><div class="ttdeci">AStarLattice(std::string name, costmap_2d::Costmap2DROS *costmap)</div><div class="ttdoc">constructor</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1CostManager_html"><div class="ttname"><a href="classlattice__planner_1_1CostManager.html">lattice_planner::CostManager</a></div><div class="ttdoc">Class for cost calculation for path search</div><div class="ttdef"><b>Definition:</b> cost_manager.h:62</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1DynamicCostmap_html"><div class="ttname"><a href="classlattice__planner_1_1DynamicCostmap.html">lattice_planner::DynamicCostmap</a></div><div class="ttdoc">The DynamicCostmap class defines a layered dynamic cost map representation for time dependent plannin...</div><div class="ttdef"><b>Definition:</b> dynamic_costmap.h:59</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Heuristics_html"><div class="ttname"><a href="classlattice__planner_1_1Heuristics.html">lattice_planner::Heuristics</a></div><div class="ttdoc">calculates and manages the heuristics (estimated costs from a state to reach the goal) for path plann...</div><div class="ttdef"><b>Definition:</b> heuristics.h:79</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html"><div class="ttname"><a href="classlattice__planner_1_1Pose.html">lattice_planner::Pose</a></div><div class="ttdoc">container for the (3D planar) robot pose and pose related properties, conversions and calculations</div><div class="ttdef"><b>Definition:</b> pose.h:51</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html">lattice_planner::StateDiscretizer</a></div><div class="ttdoc">calculations and conversions between a continuous and its discrete state representation</div><div class="ttdef"><b>Definition:</b> state_discretizer.h:55</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TrajectoryRollout_html"><div class="ttname"><a href="classlattice__planner_1_1TrajectoryRollout.html">lattice_planner::TrajectoryRollout</a></div><div class="ttdoc">trajectory rollout class for a non-holonomic robot with differential drive constraints</div><div class="ttdef"><b>Definition:</b> trajectory_rollout.h:59</div></div>
+<div class="ttc" id="astructlattice__planner_1_1State_html"><div class="ttname"><a href="structlattice__planner_1_1State.html">lattice_planner::State</a></div><div class="ttdoc">data container for the properties of a planning state in the configuration space and methods for stat...</div><div class="ttdef"><b>Definition:</b> state.h:53</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Velocity_html"><div class="ttname"><a href="structlattice__planner_1_1Velocity.html">lattice_planner::Velocity</a></div><div class="ttdoc">data structure for velocity information</div><div class="ttdef"><b>Definition:</b> velocity.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

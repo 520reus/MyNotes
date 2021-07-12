@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: dwa_local_planner::DWAPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>dwa_local_planner</b></li><li class="navelem"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html">DWAPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">dwa_local_planner::DWAPlanner类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class implementing a local planner using the Dynamic Window Approach  
+ <a href="classdwa__local__planner_1_1DWAPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dwa__planner_8h_source.html">dwa_planner.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab2c1143a3a54638d0dc38f9b6fa16e53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#ab2c1143a3a54638d0dc38f9b6fa16e53">DWAPlanner</a> (std::string name, <a class="el" href="classbase__local__planner_1_1LocalPlannerUtil.html">base_local_planner::LocalPlannerUtil</a> *planner_util)</td></tr>
+<tr class="memdesc:ab2c1143a3a54638d0dc38f9b6fa16e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the planner  <a href="classdwa__local__planner_1_1DWAPlanner.html#ab2c1143a3a54638d0dc38f9b6fa16e53">更多...</a><br /></td></tr>
+<tr class="separator:ab2c1143a3a54638d0dc38f9b6fa16e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9388b62309f6148c697aef4ebf5fe20a"><td class="memItemLeft" align="right" valign="top"><a id="a9388b62309f6148c697aef4ebf5fe20a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#a9388b62309f6148c697aef4ebf5fe20a">reconfigure</a> (DWAPlannerConfig &amp;cfg)</td></tr>
+<tr class="memdesc:a9388b62309f6148c697aef4ebf5fe20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconfigures the trajectory planner <br /></td></tr>
+<tr class="separator:a9388b62309f6148c697aef4ebf5fe20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1200e7b997f2acd8c3b912bed37e69d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#a1200e7b997f2acd8c3b912bed37e69d5">checkTrajectory</a> (const Eigen::Vector3f pos, const Eigen::Vector3f vel, const Eigen::Vector3f vel_samples)</td></tr>
+<tr class="memdesc:a1200e7b997f2acd8c3b912bed37e69d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a trajectory is legal for a position/velocity pair  <a href="classdwa__local__planner_1_1DWAPlanner.html#a1200e7b997f2acd8c3b912bed37e69d5">更多...</a><br /></td></tr>
+<tr class="separator:a1200e7b997f2acd8c3b912bed37e69d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf862f4cbfd701bacf1eb359cd05892f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1Trajectory.html">base_local_planner::Trajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#acf862f4cbfd701bacf1eb359cd05892f">findBestPath</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;global_vel, geometry_msgs::PoseStamped &amp;drive_velocities)</td></tr>
+<tr class="memdesc:acf862f4cbfd701bacf1eb359cd05892f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the current position and velocity of the robot, find the best trajectory to exectue  <a href="classdwa__local__planner_1_1DWAPlanner.html#acf862f4cbfd701bacf1eb359cd05892f">更多...</a><br /></td></tr>
+<tr class="separator:acf862f4cbfd701bacf1eb359cd05892f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa681debca2e138a957652e9451893f67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#aa681debca2e138a957652e9451893f67">updatePlanAndLocalCosts</a> (const geometry_msgs::PoseStamped &amp;global_pose, const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;new_plan, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec)</td></tr>
+<tr class="memdesc:aa681debca2e138a957652e9451893f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the cost functions before planning  <a href="classdwa__local__planner_1_1DWAPlanner.html#aa681debca2e138a957652e9451893f67">更多...</a><br /></td></tr>
+<tr class="separator:aa681debca2e138a957652e9451893f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943ce6facaf2c7602709ed4d0e9c9c54"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#a943ce6facaf2c7602709ed4d0e9c9c54">getSimPeriod</a> ()</td></tr>
+<tr class="memdesc:a943ce6facaf2c7602709ed4d0e9c9c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the period at which the local planner is expected to run  <a href="classdwa__local__planner_1_1DWAPlanner.html#a943ce6facaf2c7602709ed4d0e9c9c54">更多...</a><br /></td></tr>
+<tr class="separator:a943ce6facaf2c7602709ed4d0e9c9c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62d6664d13e90e42327de34a2ed1cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#ab62d6664d13e90e42327de34a2ed1cfb">getCellCosts</a> (int cx, int cy, float &amp;path_cost, float &amp;goal_cost, float &amp;occ_cost, float &amp;total_cost)</td></tr>
+<tr class="memdesc:ab62d6664d13e90e42327de34a2ed1cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the components and total cost for a map grid cell  <a href="classdwa__local__planner_1_1DWAPlanner.html#ab62d6664d13e90e42327de34a2ed1cfb">更多...</a><br /></td></tr>
+<tr class="separator:ab62d6664d13e90e42327de34a2ed1cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ab6d668b0b9e867ca2ba3ec2f235bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1DWAPlanner.html#ac0ab6d668b0b9e867ca2ba3ec2f235bf">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</td></tr>
+<tr class="separator:ac0ab6d668b0b9e867ca2ba3ec2f235bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A class implementing a local planner using the Dynamic Window Approach </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab2c1143a3a54638d0dc38f9b6fa16e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c1143a3a54638d0dc38f9b6fa16e53">&#9670;&nbsp;</a></span>DWAPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dwa_local_planner::DWAPlanner::DWAPlanner </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1LocalPlannerUtil.html">base_local_planner::LocalPlannerUtil</a> *&#160;</td>
+          <td class="paramname"><em>planner_util</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the planner </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the planner </td></tr>
+    <tr><td class="paramname">costmap_ros</td><td>A pointer to the costmap instance the planner should use </td></tr>
+    <tr><td class="paramname">global_frame</td><td>the frame id of the tf frame to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1200e7b997f2acd8c3b912bed37e69d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1200e7b997f2acd8c3b912bed37e69d5">&#9670;&nbsp;</a></span>checkTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlanner::checkTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>vel_samples</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a trajectory is legal for a position/velocity pair </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The robot's position </td></tr>
+    <tr><td class="paramname">vel</td><td>The robot's velocity </td></tr>
+    <tr><td class="paramname">vel_samples</td><td>The desired velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the trajectory is valid, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="acf862f4cbfd701bacf1eb359cd05892f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf862f4cbfd701bacf1eb359cd05892f">&#9670;&nbsp;</a></span>findBestPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1Trajectory.html">base_local_planner::Trajectory</a> dwa_local_planner::DWAPlanner::findBestPath </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>drive_velocities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given the current position and velocity of the robot, find the best trajectory to exectue </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>The current position of the robot </td></tr>
+    <tr><td class="paramname">global_vel</td><td>The current velocity of the robot </td></tr>
+    <tr><td class="paramname">drive_velocities</td><td>The velocities to send to the robot base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The highest scoring trajectory. A cost &gt;= 0 means the trajectory is legal to execute. </dd></dl>
+
+</div>
+</div>
+<a id="ab62d6664d13e90e42327de34a2ed1cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62d6664d13e90e42327de34a2ed1cfb">&#9670;&nbsp;</a></span>getCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlanner::getCellCosts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>path_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>goal_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>occ_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>total_cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the components and total cost for a map grid cell </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cx</td><td>The x coordinate of the cell in the map grid </td></tr>
+    <tr><td class="paramname">cy</td><td>The y coordinate of the cell in the map grid </td></tr>
+    <tr><td class="paramname">path_cost</td><td>Will be set to the path distance component of the cost function </td></tr>
+    <tr><td class="paramname">goal_cost</td><td>Will be set to the goal distance component of the cost function </td></tr>
+    <tr><td class="paramname">occ_cost</td><td>Will be set to the costmap value of the cell </td></tr>
+    <tr><td class="paramname">total_cost</td><td>Will be set to the value of the overall cost function, taking into account the scaling parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the cell is traversible and therefore a legal location for the robot to move to </dd></dl>
+
+</div>
+</div>
+<a id="a943ce6facaf2c7602709ed4d0e9c9c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943ce6facaf2c7602709ed4d0e9c9c54">&#9670;&nbsp;</a></span>getSimPeriod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dwa_local_planner::DWAPlanner::getSimPeriod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the period at which the local planner is expected to run </p>
+<dl class="section return"><dt>返回</dt><dd>The simulation period </dd></dl>
+
+</div>
+</div>
+<a id="ac0ab6d668b0b9e867ca2ba3ec2f235bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ab6d668b0b9e867ca2ba3ec2f235bf">&#9670;&nbsp;</a></span>setPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlanner::setPlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>orig_global_plan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>sets new plan and resets state </p>
+
+</div>
+</div>
+<a id="aa681debca2e138a957652e9451893f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa681debca2e138a957652e9451893f67">&#9670;&nbsp;</a></span>updatePlanAndLocalCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dwa_local_planner::DWAPlanner::updatePlanAndLocalCosts </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the cost functions before planning </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>The robot's current pose </td></tr>
+    <tr><td class="paramname">new_plan</td><td>The new global plan </td></tr>
+    <tr><td class="paramname">footprint_spec</td><td>The robot's footprint</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The obstacle cost function gets the footprint. The path and goal cost functions get the global_plan The alignment cost functions get a version of the global plan that is modified based on the global_pose </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>dwa_local_planner/include/dwa_local_planner/<a class="el" href="dwa__planner_8h_source.html">dwa_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

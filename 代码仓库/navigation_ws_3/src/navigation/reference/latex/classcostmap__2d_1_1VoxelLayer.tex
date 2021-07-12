@@ -1,0 +1,93 @@
+\hypertarget{classcostmap__2d_1_1VoxelLayer}{}\doxysection{costmap\+\_\+2d\+::Voxel\+Layer类 参考}
+\label{classcostmap__2d_1_1VoxelLayer}\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+类 costmap\+\_\+2d\+::Voxel\+Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcostmap__2d_1_1VoxelLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_a0263cac691c382ac738ca0ea5b8280e2}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of initialize(). Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_ac455c1c2ca05e9112242b9d822351ac0}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_a91dc901da59c768aea0b25037bf46fef}{update\+Origin}} (double new\+\_\+origin\+\_\+x, double new\+\_\+origin\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Move the origin of the costmap to a new location.... keeping data when it can \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_a3987d72bcc1891335c474b060e404329}\label{classcostmap__2d_1_1VoxelLayer_a3987d72bcc1891335c474b060e404329}} 
+bool {\bfseries is\+Discretized} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_a9715a464b2935a0bfb41ab5ed870c3b6}\label{classcostmap__2d_1_1VoxelLayer_a9715a464b2935a0bfb41ab5ed870c3b6}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_a9715a464b2935a0bfb41ab5ed870c3b6}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_a4d52126197dd2c39c00585e09f9e91be}\label{classcostmap__2d_1_1VoxelLayer_a4d52126197dd2c39c00585e09f9e91be}} 
+virtual void {\bfseries reset} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_ade8a38f17877568ebffa05e6c80585aa}\label{classcostmap__2d_1_1VoxelLayer_ade8a38f17877568ebffa05e6c80585aa}} 
+virtual void {\bfseries setup\+Dynamic\+Reconfigure} (ros\+::\+Node\+Handle \&nh)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_aa700bce7bf6b21859c32ae8485eaf0f8}\label{classcostmap__2d_1_1VoxelLayer_aa700bce7bf6b21859c32ae8485eaf0f8}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_aa700bce7bf6b21859c32ae8485eaf0f8}{reset\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Resets the costmap and static\+\_\+map to be unknown space \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_a0263cac691c382ac738ca0ea5b8280e2}\label{classcostmap__2d_1_1VoxelLayer_a0263cac691c382ac738ca0ea5b8280e2}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Voxel\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of initialize(). Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_afa8dfe916a99f404d60883e0537d1c30}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_ac455c1c2ca05e9112242b9d822351ac0}\label{classcostmap__2d_1_1VoxelLayer_ac455c1c2ca05e9112242b9d822351ac0}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Voxel\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a864faf45bfefe8cd22aaf8ddc4218be6}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+\mbox{\Hypertarget{classcostmap__2d_1_1VoxelLayer_a91dc901da59c768aea0b25037bf46fef}\label{classcostmap__2d_1_1VoxelLayer_a91dc901da59c768aea0b25037bf46fef}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!updateOrigin@{updateOrigin}}
+\index{updateOrigin@{updateOrigin}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{updateOrigin()}{updateOrigin()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::update\+Origin (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+origin\+\_\+x,  }\item[{double}]{new\+\_\+origin\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move the origin of the costmap to a new location.... keeping data when it can 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+origin\+\_\+x} & The x coordinate of the new origin \\
+\hline
+{\em new\+\_\+origin\+\_\+y} & The y coordinate of the new origin \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D_a05f4ac37ffefde76d0844464005f371f}{costmap\+\_\+2d\+::\+Costmap2D}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/voxel\+\_\+layer.\+h\end{DoxyCompactItemize}

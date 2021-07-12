@@ -1,0 +1,309 @@
+\hypertarget{classnavfn_1_1NavfnROS}{}\doxysection{navfn\+::Navfn\+ROS类 参考}
+\label{classnavfn_1_1NavfnROS}\index{navfn::NavfnROS@{navfn::NavfnROS}}
+
+
+Provides a ROS wrapper for the navfn planner which runs a fast, interpolated navigation function on a costmap.  
+
+
+
+
+{\ttfamily \#include $<$navfn\+\_\+ros.\+h$>$}
+
+类 navfn\+::Navfn\+ROS 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnavfn_1_1NavfnROS}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a1b21c7105bc040df6e5d8f6c8adfb6a6}\label{classnavfn_1_1NavfnROS_a1b21c7105bc040df6e5d8f6c8adfb6a6}} 
+\mbox{\hyperlink{classnavfn_1_1NavfnROS_a1b21c7105bc040df6e5d8f6c8adfb6a6}{Navfn\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the Nav\+Fn\+ROS object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnavfn_1_1NavfnROS_a06ba0ae6bd1cac9ee89110290c5b86e6}{Navfn\+ROS}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Constructor for the Nav\+Fn\+ROS object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnavfn_1_1NavfnROS_af405588d08b37d071e72d85dc33c6523}{Navfn\+ROS}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Constructor for the Nav\+Fn\+ROS object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavfnROS_a7f1e06b4e3b390aaaa3e4733a0668c4d}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Initialization function for the Nav\+Fn\+ROS object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1NavfnROS_a935ac2d5a76a101a3521cb078ee4ba4d}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Initialization function for the Nav\+Fn\+ROS object \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_aa8cec6d49a902ace7e71ffc7125b29a9}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_a1925183250dd36115daadd91b14656aa}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, double tolerance, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_a01635a5d9947ae1b51ce70603db0c843}{compute\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Computes the full navigation function for the map given a point in the world to start from \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_ad645a775f99aa2a120bb0b7f6cd08fd5}{get\+Plan\+From\+Potential}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classnavfn_1_1NavfnROS_a51f40b93d0f1c181f94fb7da28a476e2}{get\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_ad2b915897586064db5c861658133e909}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1NavfnROS_a2df71f9e257d604ba8cf630848eb3529}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point, double tolerance)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a05b4ca9b40c385791f4cb7be8237e4bb}\label{classnavfn_1_1NavfnROS_a05b4ca9b40c385791f4cb7be8237e4bb}} 
+void \mbox{\hyperlink{classnavfn_1_1NavfnROS_a05b4ca9b40c385791f4cb7be8237e4bb}{publish\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, double r, double g, double b, double a)
+\begin{DoxyCompactList}\small\item\em Publish a path for visualization purposes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a81643ac812bc02a5652f691c30834c27}\label{classnavfn_1_1NavfnROS_a81643ac812bc02a5652f691c30834c27}} 
+bool {\bfseries make\+Plan\+Service} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_aee612188ce6bbae6daa19353499bcf1c}\label{classnavfn_1_1NavfnROS_aee612188ce6bbae6daa19353499bcf1c}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classnavfn_1_1NavfnROS_aee612188ce6bbae6daa19353499bcf1c}{costmap\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store a copy of the current costmap in {\itshape costmap}. Called by make\+Plan. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a36ba1f9fa50ad74e2c41a8c93f9b74e0}\label{classnavfn_1_1NavfnROS_a36ba1f9fa50ad74e2c41a8c93f9b74e0}} 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnavfn_1_1NavFn}{Nav\+Fn}} $>$ {\bfseries planner\+\_\+}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a2e7e371d85298da82ad4e2f7965efe4f}\label{classnavfn_1_1NavfnROS_a2e7e371d85298da82ad4e2f7965efe4f}} 
+ros\+::\+Publisher {\bfseries plan\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a2fa70e7aeb1abdcbcd0787a87d11c464}\label{classnavfn_1_1NavfnROS_a2fa70e7aeb1abdcbcd0787a87d11c464}} 
+ros\+::\+Publisher {\bfseries potarr\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_affd08548cdff16315eef20424b1203dc}\label{classnavfn_1_1NavfnROS_affd08548cdff16315eef20424b1203dc}} 
+bool {\bfseries initialized\+\_\+}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a4003d3313fc2e0ede53223559c0ed9c5}\label{classnavfn_1_1NavfnROS_a4003d3313fc2e0ede53223559c0ed9c5}} 
+bool {\bfseries allow\+\_\+unknown\+\_\+}
+\item 
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}\label{classnavfn_1_1NavfnROS_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}} 
+bool {\bfseries visualize\+\_\+potential\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides a ROS wrapper for the navfn planner which runs a fast, interpolated navigation function on a costmap. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a06ba0ae6bd1cac9ee89110290c5b86e6}\label{classnavfn_1_1NavfnROS_a06ba0ae6bd1cac9ee89110290c5b86e6}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!NavfnROS@{NavfnROS}}
+\index{NavfnROS@{NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{NavfnROS()}{NavfnROS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::\+Navfn\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Constructor for the Nav\+Fn\+ROS object 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap} & A pointer to the ROS wrapper of the costmap to use \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_af405588d08b37d071e72d85dc33c6523}\label{classnavfn_1_1NavfnROS_af405588d08b37d071e72d85dc33c6523}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!NavfnROS@{NavfnROS}}
+\index{NavfnROS@{NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{NavfnROS()}{NavfnROS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::\+Navfn\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Constructor for the Nav\+Fn\+ROS object 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap} & A pointer to the costmap to use \\
+\hline
+{\em global\+\_\+frame} & The global frame of the costmap \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a01635a5d9947ae1b51ce70603db0c843}\label{classnavfn_1_1NavfnROS_a01635a5d9947ae1b51ce70603db0c843}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!computePotential@{computePotential}}
+\index{computePotential@{computePotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{computePotential()}{computePotential()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::compute\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Computes the full navigation function for the map given a point in the world to start from 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to use for seeding the navigation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function was computed successfully, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_ad645a775f99aa2a120bb0b7f6cd08fd5}\label{classnavfn_1_1NavfnROS_ad645a775f99aa2a120bb0b7f6cd08fd5}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!getPlanFromPotential@{getPlanFromPotential}}
+\index{getPlanFromPotential@{getPlanFromPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{getPlanFromPotential()}{getPlanFromPotential()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::get\+Plan\+From\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em goal} & The goal pose to create a plan to \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a51f40b93d0f1c181f94fb7da28a476e2}\label{classnavfn_1_1NavfnROS_a51f40b93d0f1c181f94fb7da28a476e2}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!getPointPotential@{getPointPotential}}
+\index{getPointPotential@{getPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{getPointPotential()}{getPointPotential()}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::get\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The navigation function\textquotesingle{}s value at that point in the world 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a935ac2d5a76a101a3521cb078ee4ba4d}\label{classnavfn_1_1NavfnROS_a935ac2d5a76a101a3521cb078ee4ba4d}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!initialize@{initialize}}
+\index{initialize@{initialize}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Initialization function for the Nav\+Fn\+ROS object 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap} & A pointer to the costmap to use for planning \\
+\hline
+{\em global\+\_\+frame} & The global frame of the costmap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a7f1e06b4e3b390aaaa3e4733a0668c4d}\label{classnavfn_1_1NavfnROS_a7f1e06b4e3b390aaaa3e4733a0668c4d}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!initialize@{initialize}}
+\index{initialize@{initialize}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization function for the Nav\+Fn\+ROS object 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap} & A pointer to the ROS wrapper of the costmap to use for planning \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_a485461ff314103dac95744f771107c43}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a1925183250dd36115daadd91b14656aa}\label{classnavfn_1_1NavfnROS_a1925183250dd36115daadd91b14656aa}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{double}]{tolerance,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Given a goal pose in the world, compute a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em tolerance} & The tolerance on the goal point for the planner \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_aa8cec6d49a902ace7e71ffc7125b29a9}\label{classnavfn_1_1NavfnROS_aa8cec6d49a902ace7e71ffc7125b29a9}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Given a goal pose in the world, compute a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_ae34a7c7cf96ebdfaf6b33f24a646156c}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_ad2b915897586064db5c861658133e909}\label{classnavfn_1_1NavfnROS_ad2b915897586064db5c861658133e909}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnavfn_1_1NavfnROS_a2df71f9e257d604ba8cf630848eb3529}\label{classnavfn_1_1NavfnROS_a2df71f9e257d604ba8cf630848eb3529}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point,  }\item[{double}]{tolerance }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+{\em tolerance} & The tolerance on searching around the world\+\_\+point specified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+navfn/include/navfn/navfn\+\_\+ros.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+prefix=/home/wu/navigation_ws_1/install
+
+Name: lattice_planner
+Description: Description of lattice_planner
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -llattice_planner
+Requires: 

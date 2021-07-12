@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$ \mathbf{s}_i, \mathbf{s}_{ip1}, \mathbf{s}_{ip2}, \Delta T_i, \Delta T_{ip1} $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [a, omegadot } ]^T ) \cdot weight $
+\pagebreak
+
+$ \mathbf{s}_i, \mathbf{s}_{ip1}, \Delta T_i $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [a, omegadot ]^T ) \cdot weight $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [ax, ay, omegadot } ]^T ) \cdot weight $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [ax, ay, omegadot ]^T ) \cdot weight $
+\pagebreak
+
+$ \mathbf{s}_i, \Delta T_i $
+\pagebreak
+
+$ \min \textrm{penaltyBelow}( dist2obstacle) \cdot weight $
+\pagebreak
+
+$ \mathbf{s}_i, \mathbf{s}_{ip1} $
+\pagebreak
+
+$ r=v/omega $
+\pagebreak
+
+$ \mathbf{s}_i $
+\pagebreak
+
+$ \min \textrm{penaltyBelow}( dist2point ) \cdot weight $
+\pagebreak
+
+$ \min \textrm{penaltyBelow}( dist2point, min_obstacle_dist ) \cdot weight_inflation $
+\pagebreak
+
+$ \min \textrm{penaltyBelow}( dist2point, inflation_dist ) \cdot weight_inflation $
+\pagebreak
+
+$ \mathbf{s}_i, \mathbf{s}_{i+1} $
+\pagebreak
+
+$ dir \in \{-1,1\} $
+\pagebreak
+
+$ \Delta T_i $
+\pagebreak
+
+$ \min \Delta T_i^2 \cdot scale \cdot weight $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [v,omega]^T ) \cdot weight $
+\pagebreak
+
+$ \min \textrm{penaltyInterval}( [vx,vy,omega]^T ) \cdot weight $
+\pagebreak
+
+$ \min dist2point \cdot weight $
+\pagebreak
+
+$ -a < var < a $
+\pagebreak
+
+$ a < var < b $
+\pagebreak
+
+$ a < var $
+\pagebreak
+
+$ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $
+\pagebreak
+
+$ [-\pi \pi] $
+\pagebreak
+
+$ \Delta T $
+\pagebreak
+
+$ \Delta T_{k+1} = \Delta T_k + update $
+\pagebreak
+
+$ x / (1 + |x|) $
+\pagebreak
+
+$ \sum_i \Delta T_i^2 $
+\pagebreak
+
+$ \sum_i \Delta T_i $
+\pagebreak
+
+$ \mathbb{R}^2 \times S^1 $
+\pagebreak
+
+$ R = v/omega $
+\pagebreak
+
+$ tan(\phi) = L/R $
+\pagebreak
+
+$ Q = \lbrace \mathbf{s}_i \rbrace_{i=0...n},\ n \in \mathbb{N} $
+\pagebreak
+
+$ \mathbf{s}_i = [x_i, y_i, \beta_i]^T \in \mathbb{R}^2 \times S^1 $
+\pagebreak
+
+$ \tau = \lbrace \Delta T_i \rbrace_{i=0...n-1} $
+\pagebreak
+
+$ \Delta T_i < \Delta T_{ref} - \Delta T_{hyst} $
+\pagebreak
+
+\end{document}

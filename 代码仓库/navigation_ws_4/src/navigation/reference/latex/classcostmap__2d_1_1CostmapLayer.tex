@@ -1,0 +1,97 @@
+\hypertarget{classcostmap__2d_1_1CostmapLayer}{}\doxysection{costmap\+\_\+2d\+::Costmap\+Layer类 参考}
+\label{classcostmap__2d_1_1CostmapLayer}\index{costmap\_2d::CostmapLayer@{costmap\_2d::CostmapLayer}}
+类 costmap\+\_\+2d\+::Costmap\+Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcostmap__2d_1_1CostmapLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_a7a595c59ef61a168c71e63360b9b1501}\label{classcostmap__2d_1_1CostmapLayer_a7a595c59ef61a168c71e63360b9b1501}} 
+bool {\bfseries is\+Discretized} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_acb0672342e10f789fc35535d257cabf4}\label{classcostmap__2d_1_1CostmapLayer_acb0672342e10f789fc35535d257cabf4}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1CostmapLayer_acb0672342e10f789fc35535d257cabf4}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_aa0f2df53509f71caeab682ae64fac547}\label{classcostmap__2d_1_1CostmapLayer_aa0f2df53509f71caeab682ae64fac547}} 
+virtual void {\bfseries clear\+Area} (int start\+\_\+x, int start\+\_\+y, int end\+\_\+x, int end\+\_\+y)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1CostmapLayer_acc0f84edaa1742899a9a96b06ad8f683}{add\+Extra\+Bounds}} (double mx0, double my0, double mx1, double my1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_adc52dfe36cea8be621d560231e861dbd}\label{classcostmap__2d_1_1CostmapLayer_adc52dfe36cea8be621d560231e861dbd}} 
+void {\bfseries update\+With\+True\+Overwrite} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_ac01cf9ead24877e522dece2254c87632}\label{classcostmap__2d_1_1CostmapLayer_ac01cf9ead24877e522dece2254c87632}} 
+void {\bfseries update\+With\+Overwrite} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_acd9d236d8d16c8b4a004ae3b1709aa92}\label{classcostmap__2d_1_1CostmapLayer_acd9d236d8d16c8b4a004ae3b1709aa92}} 
+void {\bfseries update\+With\+Max} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_ab76205b8052d66f0096e5942a3ed1530}\label{classcostmap__2d_1_1CostmapLayer_ab76205b8052d66f0096e5942a3ed1530}} 
+void {\bfseries update\+With\+Addition} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1CostmapLayer_a7ae82ac5b75c5627ded6cda139849f6c}{touch}} (double x, double y, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_aeca7c78b12489bcfff974cd60753a6f1}\label{classcostmap__2d_1_1CostmapLayer_aeca7c78b12489bcfff974cd60753a6f1}} 
+void {\bfseries use\+Extra\+Bounds} (double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_aa38d857976a16df71fbc47a353114a8a}\label{classcostmap__2d_1_1CostmapLayer_aa38d857976a16df71fbc47a353114a8a}} 
+bool {\bfseries has\+\_\+extra\+\_\+bounds\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_acc0f84edaa1742899a9a96b06ad8f683}\label{classcostmap__2d_1_1CostmapLayer_acc0f84edaa1742899a9a96b06ad8f683}} 
+\index{costmap\_2d::CostmapLayer@{costmap\_2d::CostmapLayer}!addExtraBounds@{addExtraBounds}}
+\index{addExtraBounds@{addExtraBounds}!costmap\_2d::CostmapLayer@{costmap\_2d::CostmapLayer}}
+\doxysubsubsection{\texorpdfstring{addExtraBounds()}{addExtraBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap\+Layer\+::add\+Extra\+Bounds (\begin{DoxyParamCaption}\item[{double}]{mx0,  }\item[{double}]{my0,  }\item[{double}]{mx1,  }\item[{double}]{my1 }\end{DoxyParamCaption})}
+
+If an external source changes values in the costmap, it should call this method with the area that it changed to ensure that the costmap includes this region as well. 
+\begin{DoxyParams}{参数}
+{\em mx0} & Minimum x value of the bounding box \\
+\hline
+{\em my0} & Minimum y value of the bounding box \\
+\hline
+{\em mx1} & Maximum x value of the bounding box \\
+\hline
+{\em my1} & Maximum y value of the bounding box \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1CostmapLayer_a7ae82ac5b75c5627ded6cda139849f6c}\label{classcostmap__2d_1_1CostmapLayer_a7ae82ac5b75c5627ded6cda139849f6c}} 
+\index{costmap\_2d::CostmapLayer@{costmap\_2d::CostmapLayer}!touch@{touch}}
+\index{touch@{touch}!costmap\_2d::CostmapLayer@{costmap\_2d::CostmapLayer}}
+\doxysubsubsection{\texorpdfstring{touch()}{touch()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap\+Layer\+::touch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates the bounding box specified in the parameters to include the location (x,y)
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate to include \\
+\hline
+{\em y} & y-\/coordinate to include \\
+\hline
+{\em min\+\_\+x} & bounding box \\
+\hline
+{\em min\+\_\+y} & bounding box \\
+\hline
+{\em max\+\_\+x} & bounding box \\
+\hline
+{\em max\+\_\+y} & bounding box \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/costmap\+\_\+layer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,1189 @@
+\hypertarget{classteb__local__planner_1_1TebOptimalPlanner}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner类 参考}
+\label{classteb__local__planner_1_1TebOptimalPlanner}\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+
+
+This class optimizes an internal Timed Elastic Band trajectory using the g2o-\/framework.  
+
+
+
+
+{\ttfamily \#include $<$optimal\+\_\+planner.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Teb\+Optimal\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1TebOptimalPlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a0ba04283a62fcb7c529606c2f9b7c803}\label{classteb__local__planner_1_1TebOptimalPlanner_a0ba04283a62fcb7c529606c2f9b7c803}} 
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a0ba04283a62fcb7c529606c2f9b7c803}{Teb\+Optimal\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a9f6766218fd9b01629195513fc3db499}{Teb\+Optimal\+Planner}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, Obst\+Container $\ast$obstacles=NULL, Robot\+Footprint\+Model\+Ptr robot\+\_\+model=boost\+::make\+\_\+shared$<$ \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}} $>$(), Teb\+Visualization\+Ptr visual=Teb\+Visualization\+Ptr(), const Via\+Point\+Container $\ast$via\+\_\+points=NULL)
+\begin{DoxyCompactList}\small\item\em Construct and initialize the TEB optimal planner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a65d6e6f285a39d6f7ed05d1ce1df569b}\label{classteb__local__planner_1_1TebOptimalPlanner_a65d6e6f285a39d6f7ed05d1ce1df569b}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a65d6e6f285a39d6f7ed05d1ce1df569b}{$\sim$\+Teb\+Optimal\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Destruct the optimal planner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a0c8f8c41393753abb7bd2eaef6bf58df}{initialize}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, Obst\+Container $\ast$obstacles=NULL, Robot\+Footprint\+Model\+Ptr robot\+\_\+model=boost\+::make\+\_\+shared$<$ \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}} $>$(), Teb\+Visualization\+Ptr visual=Teb\+Visualization\+Ptr(), const Via\+Point\+Container $\ast$via\+\_\+points=NULL)
+\begin{DoxyCompactList}\small\item\em Initializes the optimal planner \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Plan a trajectory $<$br$>$}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&initial\+\_\+plan, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory based on an initial reference plan. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a6354ce8a27d063d531fd27f270e4556b}{plan}} (const tf\+::\+Pose \&start, const tf\+::\+Pose \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose (tf\+::\+Pose version) \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a17c9a979df9bf2d24652d9b06c332c35}{plan}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}{get\+Velocity\+Command}} (double \&vx, double \&vy, double \&omega, int look\+\_\+ahead\+\_\+poses) const
+\begin{DoxyCompactList}\small\item\em Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{optimize\+TEB}} (int iterations\+\_\+innerloop, int iterations\+\_\+outerloop, bool compute\+\_\+cost\+\_\+afterwards=false, double obst\+\_\+cost\+\_\+scale=1.\+0, double viapoint\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)
+\begin{DoxyCompactList}\small\item\em Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimize\+TEB implements the main optimization loop. ~\newline
+It consist of two nested loops\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Desired initial and final velocity}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ab121ccfc26b010915bf81e4c367c4b68}{set\+Velocity\+Start}} (const geometry\+\_\+msgs\+::\+Twist \&vel\+\_\+start)
+\begin{DoxyCompactList}\small\item\em Set the initial velocity at the trajectory\textquotesingle{}s start pose (e.\+g. the robot\textquotesingle{}s velocity) \mbox{[}twist overload\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aec2bbed3f93347aebfce658e921d11c4}{set\+Velocity\+Goal}} (const geometry\+\_\+msgs\+::\+Twist \&vel\+\_\+goal)
+\begin{DoxyCompactList}\small\item\em Set the desired final velocity at the trajectory\textquotesingle{}s goal pose. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a7f8fcd3c73563ede8f4e300d65c02a63}{set\+Velocity\+Goal\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Set the desired final velocity at the trajectory\textquotesingle{}s goal pose to be the maximum velocity limit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Take obstacles into account}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a9e23e475b8c0c6175129cc9333fd9396}{set\+Obst\+Vector}} (Obst\+Container $\ast$obst\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Assign a new set of obstacles \end{DoxyCompactList}\item 
+const Obst\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae5adf49662d6bb349c714f99e74606f8}{get\+Obst\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Access the internal obstacle container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Take via-\/points into account}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2912d5630763073946c4993be5255d2d}{set\+Via\+Points}} (const Via\+Point\+Container $\ast$via\+\_\+points)
+\begin{DoxyCompactList}\small\item\em Assign a new set of via-\/points \end{DoxyCompactList}\item 
+const Via\+Point\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aeba17a7fd491cd7b15241180a7e865aa}{get\+Via\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Access the internal via-\/point container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Visualization}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ad7d2a6a5baf060b2501fbda38d4fefea}{set\+Visualization}} (Teb\+Visualization\+Ptr visualization)
+\begin{DoxyCompactList}\small\item\em Register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class to enable visiualization routines (e.\+g. publish the local plan and pose sequence) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac7c1e72aa9ec203450458368fb6b1b97}{visualize}} ()
+\begin{DoxyCompactList}\small\item\em Publish the local plan and pose sequence via ros topics (e.\+g. subscribe with rviz). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Hyper-\/\+Graph creation and optimization}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a8455e6300b1b02d0a16ce3174ce9f673}\label{classteb__local__planner_1_1TebOptimalPlanner_a8455e6300b1b02d0a16ce3174ce9f673}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ {\bfseries cfg\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aa9e885d06c3effab5c129687c3d77953}\label{classteb__local__planner_1_1TebOptimalPlanner_aa9e885d06c3effab5c129687c3d77953}} 
+Obst\+Container $\ast$ {\bfseries obstacles\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aaceedc4c110d45e895509e14b083540b}\label{classteb__local__planner_1_1TebOptimalPlanner_aaceedc4c110d45e895509e14b083540b}} 
+const Via\+Point\+Container $\ast$ {\bfseries via\+\_\+points\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a87e9a024cb3720022683cf47bcb1a206}\label{classteb__local__planner_1_1TebOptimalPlanner_a87e9a024cb3720022683cf47bcb1a206}} 
+std\+::vector$<$ Obst\+Container $>$ {\bfseries obstacles\+\_\+per\+\_\+vertex\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a841d6785ed5c68d1ef00218697987e58}\label{classteb__local__planner_1_1TebOptimalPlanner_a841d6785ed5c68d1ef00218697987e58}} 
+double {\bfseries cost\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ae0d48be92ddd0d3e9c8ac7ef49a6d036}\label{classteb__local__planner_1_1TebOptimalPlanner_ae0d48be92ddd0d3e9c8ac7ef49a6d036}} 
+Rot\+Type {\bfseries prefer\+\_\+rotdir\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ae6c0e9ab32c5c4b51c5e603fc607407d}\label{classteb__local__planner_1_1TebOptimalPlanner_ae6c0e9ab32c5c4b51c5e603fc607407d}} 
+Teb\+Visualization\+Ptr {\bfseries visualization\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a801394856b20e94b3f81dc8d60cf9e14}\label{classteb__local__planner_1_1TebOptimalPlanner_a801394856b20e94b3f81dc8d60cf9e14}} 
+\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} {\bfseries teb\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ac4080b9d944dd849f818be2ffb197c6d}\label{classteb__local__planner_1_1TebOptimalPlanner_ac4080b9d944dd849f818be2ffb197c6d}} 
+Robot\+Footprint\+Model\+Ptr {\bfseries robot\+\_\+model\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a50b43b65c9427ddb7d210830ed34fe49}\label{classteb__local__planner_1_1TebOptimalPlanner_a50b43b65c9427ddb7d210830ed34fe49}} 
+boost\+::shared\+\_\+ptr$<$ g2o\+::\+Sparse\+Optimizer $>$ {\bfseries optimizer\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aff60efe55052e8dafc7f6a71245c3669}\label{classteb__local__planner_1_1TebOptimalPlanner_aff60efe55052e8dafc7f6a71245c3669}} 
+std\+::pair$<$ bool, geometry\+\_\+msgs\+::\+Twist $>$ {\bfseries vel\+\_\+start\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a776fa3b9572a9772b7cacf21ab6ac1bc}\label{classteb__local__planner_1_1TebOptimalPlanner_a776fa3b9572a9772b7cacf21ab6ac1bc}} 
+std\+::pair$<$ bool, geometry\+\_\+msgs\+::\+Twist $>$ {\bfseries vel\+\_\+goal\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a64906f916610fb60eb7a6128f97f0094}\label{classteb__local__planner_1_1TebOptimalPlanner_a64906f916610fb60eb7a6128f97f0094}} 
+bool {\bfseries initialized\+\_\+}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a5bf0e611c4f633d96e3f848a5a90f236}\label{classteb__local__planner_1_1TebOptimalPlanner_a5bf0e611c4f633d96e3f848a5a90f236}} 
+bool {\bfseries optimized\+\_\+}
+\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} (double weight\+\_\+multiplier=1.\+0)
+\begin{DoxyCompactList}\small\item\em Build the hyper-\/graph representing the TEB optimization problem. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} (int no\+\_\+iterations, bool clear\+\_\+after=true)
+\begin{DoxyCompactList}\small\item\em Optimize the previously constructed hyper-\/graph to deform / optimize the TEB. ! important This method invokes the g2o framework to solve the optimization problem considering dedicated sparsity patterns. ~\newline
+The current implementation calls a non-\/constrained sparse Levenberg-\/\+Marquardt algorithm. Constraints are considered by utilizing penalty approximations. Refer to the literature cited in the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}{clear\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Clear an existing internal hyper-\/graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a90337a5bf178e33a33aa6147ebf7a8ef}{Add\+TEBVertices}} ()
+\begin{DoxyCompactList}\small\item\em Add all relevant vertices to the hyper-\/graph as optimizable variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a472b1e7242f295eae693e428861bbfc1}{Add\+Edges\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for limiting the translational and angular velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}{Add\+Edges\+Acceleration}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for limiting the translational and angular acceleration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af23eb93b4e4ff117e18bb60e37eec02c}{Add\+Edges\+Time\+Optimal}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a08bda7f323f46b792a67cca3c38d3980}{Add\+Edges\+Shortest\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for minimizing the path length \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a65977ce4df05c24315742b9486cfc6b0}{Add\+Edges\+Obstacles}} (double weight\+\_\+multiplier=1.\+0)
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) related to keeping a distance from static obstacles \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a812147eae7e393fd8fded8f25fbb4997}{Add\+Edges\+Obstacles\+Legacy}} (double weight\+\_\+multiplier=1.\+0)
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) related to keeping a distance from static obstacles (legacy association strategy) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3f3b5a2cfe4ef2bb35a6d940cb6ba343}{Add\+Edges\+Via\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) related to minimizing the distance to via-\/points \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a0361f9f5c2fb8cd561cdf1b34db9a32b}{Add\+Edges\+Dynamic\+Obstacles}} (double weight\+\_\+multiplier=1.\+0)
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ab79bc03a4d6833462aa86f779bfa0a96}{Add\+Edges\+Kinematics\+Diff\+Drive}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a7a3ade5bc750a68b96a46e88802898d0}{Add\+Edges\+Kinematics\+Carlike}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa82d52230299209794fbe543156dbd7e}{Add\+Edges\+Prefer\+Rot\+Dir}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost functions) for prefering a specifiy turning direction (by penalizing the other one) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a6167d79f6ba1e565cc1ace9b3943fe77}{Add\+Edges\+Velocity\+Obstacle\+Ratio}} ()
+\begin{DoxyCompactList}\small\item\em Add all edges (local cost function) for reducing the velocity of a vertex due to its associated obstacles \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ g2o\+::\+Sparse\+Optimizer $>$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa55a7a04c4a95985723e9a4eb00eaec0}{init\+Optimizer}} ()
+\begin{DoxyCompactList}\small\item\em Initialize and configure the g2o sparse optimizer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Utility methods and more}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a3f28e3eaabb07fcf641fa4bd32108709}\label{classteb__local__planner_1_1TebOptimalPlanner_a3f28e3eaabb07fcf641fa4bd32108709}} 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3f28e3eaabb07fcf641fa4bd32108709}{clear\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Reset the planner by clearing the internal graph and trajectory. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac9153dd5c3985fba990263f071d1b6a9}{set\+Preferred\+Turning\+Dir}} (Rot\+Type dir)
+\begin{DoxyCompactList}\small\item\em Prefer a desired initial turning direction (by penalizing the opposing one) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} \& \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ad64a76a129fc5804862d3af4ad177337}{teb}} ()
+\begin{DoxyCompactList}\small\item\em Access the internal \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} trajectory. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} \& \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54cdd44c5b86ae8e1e20a48fedbc4267}{teb}} () const
+\begin{DoxyCompactList}\small\item\em Access the internal \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} trajectory (read-\/only). \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ g2o\+::\+Sparse\+Optimizer $>$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a47ab876d763e8732821ae3dac56f0d59}{optimizer}} ()
+\begin{DoxyCompactList}\small\item\em Access the internal g2o optimizer. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ const g2o\+::\+Sparse\+Optimizer $>$ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a32a17deafef39f0b646f69aa15dfb6bd}{optimizer}} () const
+\begin{DoxyCompactList}\small\item\em Access the internal g2o optimizer (read-\/only). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ab600de8322392a73580662422056d235}{is\+Optimized}} () const
+\begin{DoxyCompactList}\small\item\em Check if last optimization was successful \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}{compute\+Current\+Cost}} (double obst\+\_\+cost\+\_\+scale=1.\+0, double viapoint\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)
+\begin{DoxyCompactList}\small\item\em Compute the cost vector of a given optimization problen (hyper-\/graph must exist). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a7811a28ae0551d44dd0d529e68a6e57f}{compute\+Current\+Cost}} (std\+::vector$<$ double $>$ \&cost, double obst\+\_\+cost\+\_\+scale=1.\+0, double viapoint\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)
+\item 
+double \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a4d045641148bff5ed2399f68fc82b768}{get\+Current\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Access the cost vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_afd65a41266ebbd57a03a8d76dd1f0ab5}{extract\+Velocity}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose1, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose2, double dt, double \&vx, double \&vy, double \&omega) const
+\begin{DoxyCompactList}\small\item\em Extract the velocity from consecutive poses and a time difference (including strafing velocity for holonomic robots) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a40c67743fd9c065c3addb8b67aa2b775}{get\+Velocity\+Profile}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Twist $>$ \&velocity\+\_\+profile) const
+\begin{DoxyCompactList}\small\item\em Compute the velocity profile of the trajectory This method computes the translational and rotational velocity for the complete planned trajectory. The first velocity is the one that is provided as initial velocity (fixed). Velocities at index k=2...end-\/1 are related to the transition from pose\+\_\+\{k-\/1\} to pose\+\_\+k. The last velocity is the final velocity (fixed). The number of Twist objects is therefore size\+Poses()+1; In summary\+: v\mbox{[}0\mbox{]} = v\+\_\+start, v\mbox{[}1,...end-\/1\mbox{]} = +-\/(pose\+\_\+\{k+1\}-\/pose\{k\})/dt, v(end) = v\+\_\+goal It can be used for evaluation and debugging purposes or for open-\/loop control. For computing the velocity required for controlling the robot to the next step refer to \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}{get\+Velocity\+Command()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a6853f051df0dfde21f1e6a2c4e15974c}{get\+Full\+Trajectory}} (std\+::vector$<$ Trajectory\+Point\+Msg $>$ \&trajectory) const
+\begin{DoxyCompactList}\small\item\em Return the complete trajectory including poses, velocity profiles and temporal information \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac6b8c704d39d8edd35d6200a4673a532}{is\+Trajectory\+Feasible}} (base\+\_\+local\+\_\+planner\+::\+Costmap\+Model $\ast$costmap\+\_\+model, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0, int look\+\_\+ahead\+\_\+idx=-\/1)
+\begin{DoxyCompactList}\small\item\em Check whether the planned trajectory is feasible or not. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a0fb6d6ff85b7230cc48b360ee223472e}{register\+G2\+OTypes}} ()
+\begin{DoxyCompactList}\small\item\em Register the vertices and edges defined for the TEB to the g2o\+::\+Factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class optimizes an internal Timed Elastic Band trajectory using the g2o-\/framework. 
+
+For an introduction and further details about the TEB optimization problem refer to\+:
+\begin{DoxyItemize}
+\item C. Rösmann et al.\+: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.
+\item C. Rösmann et al.\+: Efficient trajectory optimization using a sparse model, ECMR, 2013.
+\item R. Kümmerle et al.\+: G2o\+: A general framework for graph optimization, ICRA, 2011.
+\end{DoxyItemize}
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000001}{待办事项}}]\+: Call \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph()}} only if the teb structure has been modified to speed up hot-\/starting from previous solutions. 
+
+\+: We introduced the non-\/fast mode with the support of dynamic obstacles (which leads to better results in terms of x-\/y-\/t homotopy planning). However, we have not tested this mode intensively yet, so we keep the legacy fast mode as default until we finish our tests. \end{DoxyRefDesc}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a9f6766218fd9b01629195513fc3db499}\label{classteb__local__planner_1_1TebOptimalPlanner_a9f6766218fd9b01629195513fc3db499}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!TebOptimalPlanner@{TebOptimalPlanner}}
+\index{TebOptimalPlanner@{TebOptimalPlanner}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{TebOptimalPlanner()}{TebOptimalPlanner()}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Teb\+Optimal\+Planner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg,  }\item[{Obst\+Container $\ast$}]{obstacles = {\ttfamily NULL},  }\item[{Robot\+Footprint\+Model\+Ptr}]{robot\+\_\+model = {\ttfamily boost\+:\+:make\+\_\+shared$<$~\mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}}~$>$()},  }\item[{Teb\+Visualization\+Ptr}]{visual = {\ttfamily TebVisualizationPtr()},  }\item[{const Via\+Point\+Container $\ast$}]{via\+\_\+points = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Construct and initialize the TEB optimal planner. 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & Const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for internal parameters \\
+\hline
+{\em obstacles} & Container storing all relevant obstacles (see \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}}) \\
+\hline
+{\em robot\+\_\+model} & Shared pointer to the robot shape model used for optimization (optional) \\
+\hline
+{\em visual} & Shared pointer to the \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class (optional) \\
+\hline
+{\em via\+\_\+points} & Container storing via-\/points (optional) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}\label{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesAcceleration@{AddEdgesAcceleration}}
+\index{AddEdgesAcceleration@{AddEdgesAcceleration}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesAcceleration()}{AddEdgesAcceleration()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for limiting the translational and angular acceleration. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAcceleration}{Edge\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart}{Edge\+Acceleration\+Start}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal}{Edge\+Acceleration\+Goal}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a0361f9f5c2fb8cd561cdf1b34db9a32b}\label{classteb__local__planner_1_1TebOptimalPlanner_a0361f9f5c2fb8cd561cdf1b34db9a32b}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesDynamicObstacles@{AddEdgesDynamicObstacles}}
+\index{AddEdgesDynamicObstacles@{AddEdgesDynamicObstacles}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesDynamicObstacles()}{AddEdgesDynamicObstacles()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Dynamic\+Obstacles (\begin{DoxyParamCaption}\item[{double}]{weight\+\_\+multiplier = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles. 
+
+\begin{DoxyWarning}{警告}
+experimental 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000004}{待办事项}}]Should we also add neighbors to decrease jiggling/oscillations \end{DoxyRefDesc}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeDynamicObstacle}{Edge\+Dynamic\+Obstacle}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em weight\+\_\+multiplier} & Specify an additional weight multipler (in addition to the the config weight) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a7a3ade5bc750a68b96a46e88802898d0}\label{classteb__local__planner_1_1TebOptimalPlanner_a7a3ade5bc750a68b96a46e88802898d0}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesKinematicsCarlike@{AddEdgesKinematicsCarlike}}
+\index{AddEdgesKinematicsCarlike@{AddEdgesKinematicsCarlike}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesKinematicsCarlike()}{AddEdgesKinematicsCarlike()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Kinematics\+Carlike (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot 
+
+\begin{DoxyWarning}{警告}
+do not combine with \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ab79bc03a4d6833462aa86f779bfa0a96}{Add\+Edges\+Kinematics\+Diff\+Drive()}} 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ab79bc03a4d6833462aa86f779bfa0a96}{Add\+Edges\+Kinematics\+Diff\+Drive}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ab79bc03a4d6833462aa86f779bfa0a96}\label{classteb__local__planner_1_1TebOptimalPlanner_ab79bc03a4d6833462aa86f779bfa0a96}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesKinematicsDiffDrive@{AddEdgesKinematicsDiffDrive}}
+\index{AddEdgesKinematicsDiffDrive@{AddEdgesKinematicsDiffDrive}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesKinematicsDiffDrive()}{AddEdgesKinematicsDiffDrive()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Kinematics\+Diff\+Drive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive robot 
+
+\begin{DoxyWarning}{警告}
+do not combine with \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a7a3ade5bc750a68b96a46e88802898d0}{Add\+Edges\+Kinematics\+Carlike()}} 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a7a3ade5bc750a68b96a46e88802898d0}{Add\+Edges\+Kinematics\+Carlike}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a65977ce4df05c24315742b9486cfc6b0}\label{classteb__local__planner_1_1TebOptimalPlanner_a65977ce4df05c24315742b9486cfc6b0}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesObstacles@{AddEdgesObstacles}}
+\index{AddEdgesObstacles@{AddEdgesObstacles}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesObstacles()}{AddEdgesObstacles()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Obstacles (\begin{DoxyParamCaption}\item[{double}]{weight\+\_\+multiplier = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) related to keeping a distance from static obstacles 
+
+\begin{DoxyWarning}{警告}
+do not combine with Add\+Edges\+Inflated\+Obstacles 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeObstacle}{Edge\+Obstacle}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em weight\+\_\+multiplier} & Specify an additional weight multipler (in addition to the the config weight) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a812147eae7e393fd8fded8f25fbb4997}\label{classteb__local__planner_1_1TebOptimalPlanner_a812147eae7e393fd8fded8f25fbb4997}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesObstaclesLegacy@{AddEdgesObstaclesLegacy}}
+\index{AddEdgesObstaclesLegacy@{AddEdgesObstaclesLegacy}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesObstaclesLegacy()}{AddEdgesObstaclesLegacy()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Obstacles\+Legacy (\begin{DoxyParamCaption}\item[{double}]{weight\+\_\+multiplier = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) related to keeping a distance from static obstacles (legacy association strategy) 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeObstacle}{Edge\+Obstacle}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em weight\+\_\+multiplier} & Specify an additional weight multipler (in addition to the the config weight) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aa82d52230299209794fbe543156dbd7e}\label{classteb__local__planner_1_1TebOptimalPlanner_aa82d52230299209794fbe543156dbd7e}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesPreferRotDir@{AddEdgesPreferRotDir}}
+\index{AddEdgesPreferRotDir@{AddEdgesPreferRotDir}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesPreferRotDir()}{AddEdgesPreferRotDir()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Prefer\+Rot\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for prefering a specifiy turning direction (by penalizing the other one) 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a08bda7f323f46b792a67cca3c38d3980}\label{classteb__local__planner_1_1TebOptimalPlanner_a08bda7f323f46b792a67cca3c38d3980}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesShortestPath@{AddEdgesShortestPath}}
+\index{AddEdgesShortestPath@{AddEdgesShortestPath}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesShortestPath()}{AddEdgesShortestPath()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Shortest\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for minimizing the path length 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeShortestPath}{Edge\+Shortest\+Path}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_af23eb93b4e4ff117e18bb60e37eec02c}\label{classteb__local__planner_1_1TebOptimalPlanner_af23eb93b4e4ff117e18bb60e37eec02c}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesTimeOptimal@{AddEdgesTimeOptimal}}
+\index{AddEdgesTimeOptimal@{AddEdgesTimeOptimal}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesTimeOptimal()}{AddEdgesTimeOptimal()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Time\+Optimal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences) 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeTimeOptimal}{Edge\+Time\+Optimal}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a472b1e7242f295eae693e428861bbfc1}\label{classteb__local__planner_1_1TebOptimalPlanner_a472b1e7242f295eae693e428861bbfc1}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesVelocity@{AddEdgesVelocity}}
+\index{AddEdgesVelocity@{AddEdgesVelocity}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesVelocity()}{AddEdgesVelocity()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) for limiting the translational and angular velocity. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeVelocity}{Edge\+Velocity}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a6167d79f6ba1e565cc1ace9b3943fe77}\label{classteb__local__planner_1_1TebOptimalPlanner_a6167d79f6ba1e565cc1ace9b3943fe77}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesVelocityObstacleRatio@{AddEdgesVelocityObstacleRatio}}
+\index{AddEdgesVelocityObstacleRatio@{AddEdgesVelocityObstacleRatio}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesVelocityObstacleRatio()}{AddEdgesVelocityObstacleRatio()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Velocity\+Obstacle\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost function) for reducing the velocity of a vertex due to its associated obstacles 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a3f3b5a2cfe4ef2bb35a6d940cb6ba343}\label{classteb__local__planner_1_1TebOptimalPlanner_a3f3b5a2cfe4ef2bb35a6d940cb6ba343}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddEdgesViaPoints@{AddEdgesViaPoints}}
+\index{AddEdgesViaPoints@{AddEdgesViaPoints}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddEdgesViaPoints()}{AddEdgesViaPoints()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+Edges\+Via\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all edges (local cost functions) related to minimizing the distance to via-\/points 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeViaPoint}{Edge\+Via\+Point}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a90337a5bf178e33a33aa6147ebf7a8ef}\label{classteb__local__planner_1_1TebOptimalPlanner_a90337a5bf178e33a33aa6147ebf7a8ef}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!AddTEBVertices@{AddTEBVertices}}
+\index{AddTEBVertices@{AddTEBVertices}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{AddTEBVertices()}{AddTEBVertices()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::\+Add\+TEBVertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add all relevant vertices to the hyper-\/graph as optimizable variables. 
+
+Vertices (if unfixed) represent the variables that will be optimized. ~\newline
+ In case of the Timed-\/\+Elastic-\/\+Band poses and time differences form the vertices of the hyper-\/graph. ~\newline
+ The order of insertion of vertices (to the graph) is important for efficiency, since it affect the sparsity pattern of the underlying hessian computed for optimization. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose}{Vertex\+Pose}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff}{Vertex\+Time\+Diff}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}\label{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!buildGraph@{buildGraph}}
+\index{buildGraph@{buildGraph}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{buildGraph()}{buildGraph()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::build\+Graph (\begin{DoxyParamCaption}\item[{double}]{weight\+\_\+multiplier = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Build the hyper-\/graph representing the TEB optimization problem. 
+
+! important
+
+This method creates the optimization problem according to the hyper-\/graph formulation. ~\newline
+For more details refer to the literature cited in the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class description. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}{clear\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em weight\+\_\+multiplier} & Specify a weight multipler for selected weights in optimize\+Graph This might be used for weight adapation strategies. Currently, only obstacle collision weights are considered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if the graph was created successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}\label{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!clearGraph@{clearGraph}}
+\index{clearGraph@{clearGraph}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{clearGraph()}{clearGraph()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::clear\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clear an existing internal hyper-\/graph. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}\label{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!computeCurrentCost@{computeCurrentCost}}
+\index{computeCurrentCost@{computeCurrentCost}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{computeCurrentCost()}{computeCurrentCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::compute\+Current\+Cost (\begin{DoxyParamCaption}\item[{double}]{obst\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{double}]{viapoint\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{bool}]{alternative\+\_\+time\+\_\+cost = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Compute the cost vector of a given optimization problen (hyper-\/graph must exist). 
+
+Use this method to obtain information about the current edge errors / costs (local cost functions). ~\newline
+The vector of cost values is composed according to the different edge types (time\+\_\+optimal, obstacles, ...). ~\newline
+Refer to the method declaration for the detailed composition. ~\newline
+The cost for the edges that minimize time differences (\mbox{\hyperlink{classteb__local__planner_1_1EdgeTimeOptimal}{Edge\+Time\+Optimal}}) corresponds to the sum of all single squared time differneces\+: $ \sum_i \Delta T_i^2 $. Sometimes, the user may want to get a value that is proportional or identical to the actual trajectory transition time $ \sum_i \Delta T_i $. ~\newline
+Set {\ttfamily alternative\+\_\+time\+\_\+cost} to true in order to get the cost calculated using the latter equation, but check the implemented definition, if the value is scaled to match the magnitude of other cost values.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000002}{待办事项}}]Remove the scaling term for the alternative time cost. 
+
+Can we use the last error (chi2) calculated from g2o instead of calculating it by ourself? \end{DoxyRefDesc}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a4d045641148bff5ed2399f68fc82b768}{get\+Current\+Cost}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{optimize\+TEB}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em obst\+\_\+cost\+\_\+scale} & Specify extra scaling for obstacle costs. \\
+\hline
+{\em viapoint\+\_\+cost\+\_\+scale} & Specify extra scaling for via points. \\
+\hline
+{\em alternative\+\_\+time\+\_\+cost} & Replace the cost for the time optimal objective by the actual (weighted) transition time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Teb\+Cost\+Vec containing the cost values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a7811a28ae0551d44dd0d529e68a6e57f}\label{classteb__local__planner_1_1TebOptimalPlanner_a7811a28ae0551d44dd0d529e68a6e57f}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!computeCurrentCost@{computeCurrentCost}}
+\index{computeCurrentCost@{computeCurrentCost}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{computeCurrentCost()}{computeCurrentCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::compute\+Current\+Cost (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{cost,  }\item[{double}]{obst\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{double}]{viapoint\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{bool}]{alternative\+\_\+time\+\_\+cost = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Compute and return the cost of the current optimization graph (supports multiple trajectories) 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em cost} & current cost value for each trajectory \mbox{[}for a planner with just a single trajectory\+: size=1, vector will not be cleared\mbox{]} \\
+\hline
+ & {\em obst\+\_\+cost\+\_\+scale} & Specify extra scaling for obstacle costs \\
+\hline
+ & {\em viapoint\+\_\+cost\+\_\+scale} & Specify extra scaling for via points. \\
+\hline
+ & {\em alternative\+\_\+time\+\_\+cost} & Replace the cost for the time optimal objective by the actual (weighted) transition time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_afd65a41266ebbd57a03a8d76dd1f0ab5}\label{classteb__local__planner_1_1TebOptimalPlanner_afd65a41266ebbd57a03a8d76dd1f0ab5}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!extractVelocity@{extractVelocity}}
+\index{extractVelocity@{extractVelocity}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{extractVelocity()}{extractVelocity()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::extract\+Velocity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose1,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose2,  }\item[{double}]{dt,  }\item[{double \&}]{vx,  }\item[{double \&}]{vy,  }\item[{double \&}]{omega }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Extract the velocity from consecutive poses and a time difference (including strafing velocity for holonomic robots) 
+
+! important
+
+The velocity is extracted using finite differences. The direction of the translational velocity is also determined. 
+\begin{DoxyParams}[1]{参数}
+ & {\em pose1} & pose at time k \\
+\hline
+ & {\em pose2} & consecutive pose at time k+1 \\
+\hline
+ & {\em dt} & actual time difference between k and k+1 (must be $>$0 !!!) \\
+\hline
+\mbox{\texttt{ out}}  & {\em vx} & translational velocity \\
+\hline
+\mbox{\texttt{ out}}  & {\em vy} & strafing velocity which can be nonzero for holonomic robots \\
+\hline
+\mbox{\texttt{ out}}  & {\em omega} & rotational velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a4d045641148bff5ed2399f68fc82b768}\label{classteb__local__planner_1_1TebOptimalPlanner_a4d045641148bff5ed2399f68fc82b768}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getCurrentCost@{getCurrentCost}}
+\index{getCurrentCost@{getCurrentCost}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getCurrentCost()}{getCurrentCost()}}
+{\footnotesize\ttfamily double teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Current\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the cost vector. 
+
+The accumulated cost value previously calculated using compute\+Current\+Cost or by calling optimize\+TEB with enabled cost flag. \begin{DoxyReturn}{返回}
+const reference to the Teb\+Cost\+Vec. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a6853f051df0dfde21f1e6a2c4e15974c}\label{classteb__local__planner_1_1TebOptimalPlanner_a6853f051df0dfde21f1e6a2c4e15974c}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getFullTrajectory@{getFullTrajectory}}
+\index{getFullTrajectory@{getFullTrajectory}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getFullTrajectory()}{getFullTrajectory()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Full\+Trajectory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Trajectory\+Point\+Msg $>$ \&}]{trajectory }\end{DoxyParamCaption}) const}
+
+
+
+Return the complete trajectory including poses, velocity profiles and temporal information 
+
+! important
+
+It is useful for evaluation and debugging purposes or for open-\/loop control. Since the velocity obtained using difference quotients is the mean velocity between consecutive poses, the velocity at each pose at time stamp k is obtained by taking the average between both velocities. The velocity of the first pose is v\+\_\+start (provided initial value) and the last one is v\+\_\+goal (usually zero, if free\+\_\+goal\+\_\+vel is off). See \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a40c67743fd9c065c3addb8b67aa2b775}{get\+Velocity\+Profile()}} for the list of velocities between consecutive points. \begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000003}{待办事项}}]The acceleration profile is not added at the moment. \end{DoxyRefDesc}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em trajectory} & the resulting trajectory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ae5adf49662d6bb349c714f99e74606f8}\label{classteb__local__planner_1_1TebOptimalPlanner_ae5adf49662d6bb349c714f99e74606f8}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getObstVector@{getObstVector}}
+\index{getObstVector@{getObstVector}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getObstVector()}{getObstVector()}}
+{\footnotesize\ttfamily const Obst\+Container\& teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Obst\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal obstacle container. 
+
+\begin{DoxyReturn}{返回}
+Const reference to the obstacle container 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}\label{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getVelocityCommand@{getVelocityCommand}}
+\index{getVelocityCommand@{getVelocityCommand}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getVelocityCommand()}{getVelocityCommand()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Velocity\+Command (\begin{DoxyParamCaption}\item[{double \&}]{vx,  }\item[{double \&}]{vy,  }\item[{double \&}]{omega,  }\item[{int}]{look\+\_\+ahead\+\_\+poses }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. 
+
+\begin{DoxyWarning}{警告}
+Call \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan()}} first and check if the generated plan is feasible. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em vx} & translational velocity \mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em vy} & strafing velocity which can be nonzero for holonomic robots\mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em omega} & rotational velocity \mbox{[}rad/s\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em look\+\_\+ahead\+\_\+poses} & index of the final pose used to compute the velocity command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if command is valid, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afcaba6e2a81b5a9ff4c0103ca73c1d66}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a40c67743fd9c065c3addb8b67aa2b775}\label{classteb__local__planner_1_1TebOptimalPlanner_a40c67743fd9c065c3addb8b67aa2b775}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getVelocityProfile@{getVelocityProfile}}
+\index{getVelocityProfile@{getVelocityProfile}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getVelocityProfile()}{getVelocityProfile()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Velocity\+Profile (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Twist $>$ \&}]{velocity\+\_\+profile }\end{DoxyParamCaption}) const}
+
+
+
+Compute the velocity profile of the trajectory This method computes the translational and rotational velocity for the complete planned trajectory. The first velocity is the one that is provided as initial velocity (fixed). Velocities at index k=2...end-\/1 are related to the transition from pose\+\_\+\{k-\/1\} to pose\+\_\+k. The last velocity is the final velocity (fixed). The number of Twist objects is therefore size\+Poses()+1; In summary\+: v\mbox{[}0\mbox{]} = v\+\_\+start, v\mbox{[}1,...end-\/1\mbox{]} = +-\/(pose\+\_\+\{k+1\}-\/pose\{k\})/dt, v(end) = v\+\_\+goal It can be used for evaluation and debugging purposes or for open-\/loop control. For computing the velocity required for controlling the robot to the next step refer to \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}{get\+Velocity\+Command()}}. 
+
+! important 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em velocity\+\_\+profile} & velocity profile will be written to this vector (after clearing any existing content) with the size=no\+\_\+poses+1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aeba17a7fd491cd7b15241180a7e865aa}\label{classteb__local__planner_1_1TebOptimalPlanner_aeba17a7fd491cd7b15241180a7e865aa}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!getViaPoints@{getViaPoints}}
+\index{getViaPoints@{getViaPoints}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{getViaPoints()}{getViaPoints()}}
+{\footnotesize\ttfamily const Via\+Point\+Container\& teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::get\+Via\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal via-\/point container. 
+
+\begin{DoxyReturn}{返回}
+Const reference to the via-\/point container 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a0c8f8c41393753abb7bd2eaef6bf58df}\label{classteb__local__planner_1_1TebOptimalPlanner_a0c8f8c41393753abb7bd2eaef6bf58df}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg,  }\item[{Obst\+Container $\ast$}]{obstacles = {\ttfamily NULL},  }\item[{Robot\+Footprint\+Model\+Ptr}]{robot\+\_\+model = {\ttfamily boost\+:\+:make\+\_\+shared$<$~\mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint}{Point\+Robot\+Footprint}}~$>$()},  }\item[{Teb\+Visualization\+Ptr}]{visual = {\ttfamily TebVisualizationPtr()},  }\item[{const Via\+Point\+Container $\ast$}]{via\+\_\+points = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Initializes the optimal planner 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & Const reference to the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for internal parameters \\
+\hline
+{\em obstacles} & Container storing all relevant obstacles (see \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}}) \\
+\hline
+{\em robot\+\_\+model} & Shared pointer to the robot shape model used for optimization (optional) \\
+\hline
+{\em visual} & Shared pointer to the \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class (optional) \\
+\hline
+{\em via\+\_\+points} & Container storing via-\/points (optional) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aa55a7a04c4a95985723e9a4eb00eaec0}\label{classteb__local__planner_1_1TebOptimalPlanner_aa55a7a04c4a95985723e9a4eb00eaec0}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!initOptimizer@{initOptimizer}}
+\index{initOptimizer@{initOptimizer}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{initOptimizer()}{initOptimizer()}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$g2o\+::\+Sparse\+Optimizer$>$ teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::init\+Optimizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialize and configure the g2o sparse optimizer. 
+
+\begin{DoxyReturn}{返回}
+shared pointer to the g2o\+::\+Sparse\+Optimizer instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ab600de8322392a73580662422056d235}\label{classteb__local__planner_1_1TebOptimalPlanner_ab600de8322392a73580662422056d235}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!isOptimized@{isOptimized}}
+\index{isOptimized@{isOptimized}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{isOptimized()}{isOptimized()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::is\+Optimized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if last optimization was successful 
+
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the last optimization returned without errors, otherwise {\ttfamily false} (also if no optimization has been called before). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ac6b8c704d39d8edd35d6200a4673a532}\label{classteb__local__planner_1_1TebOptimalPlanner_ac6b8c704d39d8edd35d6200a4673a532}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!isTrajectoryFeasible@{isTrajectoryFeasible}}
+\index{isTrajectoryFeasible@{isTrajectoryFeasible}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{isTrajectoryFeasible()}{isTrajectoryFeasible()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::is\+Trajectory\+Feasible (\begin{DoxyParamCaption}\item[{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model $\ast$}]{costmap\+\_\+model,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec,  }\item[{double}]{inscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{double}]{circumscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{int}]{look\+\_\+ahead\+\_\+idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the planned trajectory is feasible or not. 
+
+! important
+
+This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal Obstacle\+Container. 
+\begin{DoxyParams}{参数}
+{\em costmap\+\_\+model} & Pointer to the costmap model \\
+\hline
+{\em footprint\+\_\+spec} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+{\em look\+\_\+ahead\+\_\+idx} & Number of poses along the trajectory that should be verified, if -\/1, the complete trajectory will be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a6c0c90babc218d68f88135335e3019f6}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}\label{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!optimizeGraph@{optimizeGraph}}
+\index{optimizeGraph@{optimizeGraph}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{optimizeGraph()}{optimizeGraph()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::optimize\+Graph (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+iterations,  }\item[{bool}]{clear\+\_\+after = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Optimize the previously constructed hyper-\/graph to deform / optimize the TEB. ! important This method invokes the g2o framework to solve the optimization problem considering dedicated sparsity patterns. ~\newline
+The current implementation calls a non-\/constrained sparse Levenberg-\/\+Marquardt algorithm. Constraints are considered by utilizing penalty approximations. Refer to the literature cited in the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class description. 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a2b9ad598cec60b56906806603fa45497}{build\+Graph}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}{clear\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em no\+\_\+iterations} & Number of solver iterations \\
+\hline
+{\em clear\+\_\+after} & Clear the graph after optimization. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if optimization terminates successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a47ab876d763e8732821ae3dac56f0d59}\label{classteb__local__planner_1_1TebOptimalPlanner_a47ab876d763e8732821ae3dac56f0d59}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!optimizer@{optimizer}}
+\index{optimizer@{optimizer}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{optimizer()}{optimizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$g2o\+::\+Sparse\+Optimizer$>$ teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::optimizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal g2o optimizer. 
+
+\begin{DoxyWarning}{警告}
+In general, the underlying optimizer must not be modified directly. Use with care... 
+\end{DoxyWarning}
+\begin{DoxyReturn}{返回}
+const shared pointer to the g2o sparse optimizer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a32a17deafef39f0b646f69aa15dfb6bd}\label{classteb__local__planner_1_1TebOptimalPlanner_a32a17deafef39f0b646f69aa15dfb6bd}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!optimizer@{optimizer}}
+\index{optimizer@{optimizer}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{optimizer()}{optimizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$const g2o\+::\+Sparse\+Optimizer$>$ teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::optimizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal g2o optimizer (read-\/only). 
+
+\begin{DoxyReturn}{返回}
+const shared pointer to the g2o sparse optimizer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}\label{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!optimizeTEB@{optimizeTEB}}
+\index{optimizeTEB@{optimizeTEB}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{optimizeTEB()}{optimizeTEB()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::optimize\+TEB (\begin{DoxyParamCaption}\item[{int}]{iterations\+\_\+innerloop,  }\item[{int}]{iterations\+\_\+outerloop,  }\item[{bool}]{compute\+\_\+cost\+\_\+afterwards = {\ttfamily false},  }\item[{double}]{obst\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{double}]{viapoint\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{bool}]{alternative\+\_\+time\+\_\+cost = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimize\+TEB implements the main optimization loop. ~\newline
+It consist of two nested loops\+: 
+
+
+\begin{DoxyItemize}
+\item The outer loop resizes the trajectory according to the temporal resolution by invoking \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_afa43c55427a4b275e8eaba7a9d723b6a}{Timed\+Elastic\+Band\+::auto\+Resize()}}. Afterwards the internal method \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae991fe9022fb0c823a1e313669882cc5}{optimize\+Graph()}} is called that constitutes the innerloop.
+\item The inner loop calls the solver (g2o framework, resp. sparse Levenberg-\/\+Marquardt) and iterates a specified number of optimization calls ({\ttfamily iterations\+\_\+innerloop}).
+\end{DoxyItemize}
+
+The outer loop is repeated {\ttfamily iterations\+\_\+outerloop} times. ~\newline
+ The ratio of inner and outer loop iterations significantly defines the contraction behavior and convergence rate of the trajectory optimization. Based on our experiences, 2-\/6 innerloop iterations are sufficient. ~\newline
+ The number of outer loop iterations should be determined by considering the maximum CPU time required to match the control rate. ~\newline
+Optionally, the cost vector can be calculated by specifying {\ttfamily compute\+\_\+cost\+\_\+afterwards}, see \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}{compute\+Current\+Cost()}}. \begin{DoxyRemark}{备注}
+This method is usually called from a \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan()}} method 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em iterations\+\_\+innerloop} & Number of iterations for the actual solver loop \\
+\hline
+{\em iterations\+\_\+outerloop} & Specifies how often the trajectory should be resized followed by the inner solver loop. \\
+\hline
+{\em compute\+\_\+cost\+\_\+afterwards} & if {\ttfamily true} Calculate the cost vector according to \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}{compute\+Current\+Cost()}}, the vector can be accessed afterwards using \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a4d045641148bff5ed2399f68fc82b768}{get\+Current\+Cost()}}. \\
+\hline
+{\em obst\+\_\+cost\+\_\+scale} & Specify extra scaling for obstacle costs (only used if {\ttfamily compute\+\_\+cost\+\_\+afterwards} is true) \\
+\hline
+{\em viapoint\+\_\+cost\+\_\+scale} & Specify extra scaling for via-\/point costs (only used if {\ttfamily compute\+\_\+cost\+\_\+afterwards} is true) \\
+\hline
+{\em alternative\+\_\+time\+\_\+cost} & Replace the cost for the time optimal objective by the actual (weighted) transition time (only used if {\ttfamily compute\+\_\+cost\+\_\+afterwards} is true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the optimization terminates successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a17c9a979df9bf2d24652d9b06c332c35}\label{classteb__local__planner_1_1TebOptimalPlanner_a17c9a979df9bf2d24652d9b06c332c35}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose 
+
+Call this method to create and optimize a trajectory that is initialized between a given start and goal pose. ~\newline
+The method supports hot-\/starting from previous solutions, if avaiable\+: ~\newline
+
+\begin{DoxyItemize}
+\item If no trajectory exist yet, a new trajectory is initialized between start and goal poses \begin{DoxySeeAlso}{参见}
+Timed\+Elastic\+Band\+::init\+TEBto\+Goal
+\end{DoxySeeAlso}
+
+\item If a previous solution is avaiable, update the trajectory \begin{DoxySeeAlso}{参见}
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}{Timed\+Elastic\+Band\+::update\+And\+Prune\+TEB}}
+\end{DoxySeeAlso}
+
+\item Afterwards optimize the recently initialized or updated trajectory by calling \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{optimize\+TEB()}} and invoking g2o 
+\begin{DoxyParams}{参数}
+{\em start} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the start pose of the trajectory \\
+\hline
+{\em goal} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Initial velocity at the start pose (twist message containing the translational and angular velocity). \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_ade0509d13cf81df5ad503987ce0ab2cd}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}\label{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{initial\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory based on an initial reference plan. 
+
+! important
+
+Call this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). ~\newline
+ The method supports hot-\/starting from previous solutions, if avaiable\+: ~\newline
+
+\begin{DoxyItemize}
+\item If no trajectory exist yet, a new trajectory is initialized based on the initial plan, see Timed\+Elastic\+Band\+::init\+TEBto\+Goal
+\item If a previous solution is avaiable, update the trajectory based on the initial plan, see bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}{Timed\+Elastic\+Band\+::update\+And\+Prune\+TEB}}
+\item Afterwards optimize the recently initialized or updated trajectory by calling \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{optimize\+TEB()}} and invoking g2o 
+\begin{DoxyParams}{参数}
+{\em initial\+\_\+plan} & vector of geometry\+\_\+msgs\+::\+Pose\+Stamped \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x, linear.\+y (holonomic) and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a6354ce8a27d063d531fd27f270e4556b}\label{classteb__local__planner_1_1TebOptimalPlanner_a6354ce8a27d063d531fd27f270e4556b}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const tf\+::\+Pose \&}]{start,  }\item[{const tf\+::\+Pose \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose (tf\+::\+Pose version) 
+
+Call this method to create and optimize a trajectory that is initialized between a given start and goal pose. ~\newline
+The method supports hot-\/starting from previous solutions, if avaiable\+: ~\newline
+
+\begin{DoxyItemize}
+\item If no trajectory exist yet, a new trajectory is initialized between start and goal poses, see Timed\+Elastic\+Band\+::init\+TEBto\+Goal
+\item If a previous solution is avaiable, update the trajectory \begin{DoxySeeAlso}{参见}
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}{Timed\+Elastic\+Band\+::update\+And\+Prune\+TEB}}
+\end{DoxySeeAlso}
+
+\item Afterwards optimize the recently initialized or updated trajectory by calling \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_aa3cfecf3e37a6e1e9fa6becf61afc756}{optimize\+TEB()}} and invoking g2o 
+\begin{DoxyParams}{参数}
+{\em start} & tf\+::\+Pose containing the start pose of the trajectory \\
+\hline
+{\em goal} & tf\+::\+Pose containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x, linear.\+y (holonomic) and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a35f325b8dd40da1fd8cce699550bf8a2}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a0fb6d6ff85b7230cc48b360ee223472e}\label{classteb__local__planner_1_1TebOptimalPlanner_a0fb6d6ff85b7230cc48b360ee223472e}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!registerG2OTypes@{registerG2OTypes}}
+\index{registerG2OTypes@{registerG2OTypes}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{registerG2OTypes()}{registerG2OTypes()}}
+{\footnotesize\ttfamily static void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::register\+G2\+OTypes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register the vertices and edges defined for the TEB to the g2o\+::\+Factory. 
+
+This allows the user to export the internal graph to a text file for instance. Access the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a47ab876d763e8732821ae3dac56f0d59}{optimizer()}} for more details. \mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a9e23e475b8c0c6175129cc9333fd9396}\label{classteb__local__planner_1_1TebOptimalPlanner_a9e23e475b8c0c6175129cc9333fd9396}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setObstVector@{setObstVector}}
+\index{setObstVector@{setObstVector}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setObstVector()}{setObstVector()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Obst\+Vector (\begin{DoxyParamCaption}\item[{Obst\+Container $\ast$}]{obst\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign a new set of obstacles 
+
+
+\begin{DoxyParams}{参数}
+{\em obst\+\_\+vector} & pointer to an obstacle container (can also be a nullptr) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{备注}
+This method overrids the obstacle container optinally assigned in the constructor. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ac9153dd5c3985fba990263f071d1b6a9}\label{classteb__local__planner_1_1TebOptimalPlanner_ac9153dd5c3985fba990263f071d1b6a9}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setPreferredTurningDir@{setPreferredTurningDir}}
+\index{setPreferredTurningDir@{setPreferredTurningDir}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setPreferredTurningDir()}{setPreferredTurningDir()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Preferred\+Turning\+Dir (\begin{DoxyParamCaption}\item[{Rot\+Type}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prefer a desired initial turning direction (by penalizing the opposing one) 
+
+A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. 
+\begin{DoxyParams}{参数}
+{\em dir} & This parameter might be Rot\+Type\+::left (prefer left), Rot\+Type\+::right (prefer right) or Rot\+Type\+::none (prefer none) \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a0df0a82d50a58e7e42ed3e27f5a3b382}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}} .
+
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_aec2bbed3f93347aebfce658e921d11c4}\label{classteb__local__planner_1_1TebOptimalPlanner_aec2bbed3f93347aebfce658e921d11c4}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setVelocityGoal@{setVelocityGoal}}
+\index{setVelocityGoal@{setVelocityGoal}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setVelocityGoal()}{setVelocityGoal()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Velocity\+Goal (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist \&}]{vel\+\_\+goal }\end{DoxyParamCaption})}
+
+
+
+Set the desired final velocity at the trajectory\textquotesingle{}s goal pose. 
+
+\begin{DoxyRemark}{备注}
+Call this function only if a non-\/zero velocity is desired and if {\ttfamily free\+\_\+goal\+\_\+vel} is set to {\ttfamily false} in \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan()}} 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em vel\+\_\+goal} & twist message containing the translational and angular final velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a7f8fcd3c73563ede8f4e300d65c02a63}\label{classteb__local__planner_1_1TebOptimalPlanner_a7f8fcd3c73563ede8f4e300d65c02a63}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setVelocityGoalFree@{setVelocityGoalFree}}
+\index{setVelocityGoalFree@{setVelocityGoalFree}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setVelocityGoalFree()}{setVelocityGoalFree()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Velocity\+Goal\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the desired final velocity at the trajectory\textquotesingle{}s goal pose to be the maximum velocity limit 
+
+\begin{DoxyRemark}{备注}
+Calling this function is not neccessary if {\ttfamily free\+\_\+goal\+\_\+vel} is set to {\ttfamily false} in \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan()}} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ab121ccfc26b010915bf81e4c367c4b68}\label{classteb__local__planner_1_1TebOptimalPlanner_ab121ccfc26b010915bf81e4c367c4b68}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setVelocityStart@{setVelocityStart}}
+\index{setVelocityStart@{setVelocityStart}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setVelocityStart()}{setVelocityStart()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Velocity\+Start (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist \&}]{vel\+\_\+start }\end{DoxyParamCaption})}
+
+
+
+Set the initial velocity at the trajectory\textquotesingle{}s start pose (e.\+g. the robot\textquotesingle{}s velocity) \mbox{[}twist overload\mbox{]}. 
+
+\begin{DoxyRemark}{备注}
+Calling this function is not neccessary if the initial velocity is passed via the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{plan()}} method 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em vel\+\_\+start} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x and angular.\+z are used, for holonomic robots also linear.\+y) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a2912d5630763073946c4993be5255d2d}\label{classteb__local__planner_1_1TebOptimalPlanner_a2912d5630763073946c4993be5255d2d}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setViaPoints@{setViaPoints}}
+\index{setViaPoints@{setViaPoints}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setViaPoints()}{setViaPoints()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Via\+Points (\begin{DoxyParamCaption}\item[{const Via\+Point\+Container $\ast$}]{via\+\_\+points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign a new set of via-\/points 
+
+
+\begin{DoxyParams}{参数}
+{\em via\+\_\+points} & pointer to a via\+\_\+point container (can also be a nullptr)\\
+\hline
+\end{DoxyParams}
+Any previously set container will be overwritten. \mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ad7d2a6a5baf060b2501fbda38d4fefea}\label{classteb__local__planner_1_1TebOptimalPlanner_ad7d2a6a5baf060b2501fbda38d4fefea}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!setVisualization@{setVisualization}}
+\index{setVisualization@{setVisualization}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{setVisualization()}{setVisualization()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::set\+Visualization (\begin{DoxyParamCaption}\item[{Teb\+Visualization\+Ptr}]{visualization }\end{DoxyParamCaption})}
+
+
+
+Register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} class to enable visiualization routines (e.\+g. publish the local plan and pose sequence) 
+
+
+\begin{DoxyParams}{参数}
+{\em visualization} & shared pointer to a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac7c1e72aa9ec203450458368fb6b1b97}{visualize}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ad64a76a129fc5804862d3af4ad177337}\label{classteb__local__planner_1_1TebOptimalPlanner_ad64a76a129fc5804862d3af4ad177337}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!teb@{teb}}
+\index{teb@{teb}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{teb()}{teb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}\& teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::teb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} trajectory. 
+
+\begin{DoxyWarning}{警告}
+In general, the underlying teb must not be modified directly. Use with care... 
+\end{DoxyWarning}
+\begin{DoxyReturn}{返回}
+reference to the teb 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_a54cdd44c5b86ae8e1e20a48fedbc4267}\label{classteb__local__planner_1_1TebOptimalPlanner_a54cdd44c5b86ae8e1e20a48fedbc4267}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!teb@{teb}}
+\index{teb@{teb}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{teb()}{teb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}}\& teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::teb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the internal \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand}{Timed\+Elastic\+Band}} trajectory (read-\/only). 
+
+\begin{DoxyReturn}{返回}
+const reference to the teb 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebOptimalPlanner_ac7c1e72aa9ec203450458368fb6b1b97}\label{classteb__local__planner_1_1TebOptimalPlanner_ac7c1e72aa9ec203450458368fb6b1b97}} 
+\index{teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}!visualize@{visualize}}
+\index{visualize@{visualize}!teb\_local\_planner::TebOptimalPlanner@{teb\_local\_planner::TebOptimalPlanner}}
+\doxysubsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner\+::visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Publish the local plan and pose sequence via ros topics (e.\+g. subscribe with rviz). 
+
+Make sure to register a \mbox{\hyperlink{classteb__local__planner_1_1TebVisualization}{Teb\+Visualization}} instance before using \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ad7d2a6a5baf060b2501fbda38d4fefea}{set\+Visualization()}} or an overlaoded constructor. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ad7d2a6a5baf060b2501fbda38d4fefea}{set\+Visualization}} 
+\end{DoxySeeAlso}
+
+
+重载 \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afeeda8f566d59ee83c02077d2ff6c241}{teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/optimal\+\_\+planner.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classteb__local__planner_1_1EdgeAccelerationHolonomic}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Holonomic类 参考}
+\label{classteb__local__planner_1_1EdgeAccelerationHolonomic}\index{teb\_local\_planner::EdgeAccelerationHolonomic@{teb\_local\_planner::EdgeAccelerationHolonomic}}
+
+
+Edge defining the cost function for limiting the translational and rotational acceleration.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+acceleration.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Holonomic 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeAccelerationHolonomic}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationHolonomic_a98a7b426eff600c190d0fa0cf93113bf}\label{classteb__local__planner_1_1EdgeAccelerationHolonomic_a98a7b426eff600c190d0fa0cf93113bf}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationHolonomic_a98a7b426eff600c190d0fa0cf93113bf}{Edge\+Acceleration\+Holonomic}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationHolonomic_a3148ff42f3c6f658720c191d425c79e6}\label{classteb__local__planner_1_1EdgeAccelerationHolonomic_a3148ff42f3c6f658720c191d425c79e6}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationHolonomic_a3148ff42f3c6f658720c191d425c79e6}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for limiting the translational and rotational acceleration. 
+
+The edge depends on five vertices $ \mathbf{s}_i, \mathbf{s}_{ip1}, \mathbf{s}_{ip2}, \Delta T_i, \Delta T_{ip1} $ and minimizes\+: $ \min \textrm{penaltyInterval}( [ax, ay, omegadot } ]^T ) \cdot weight $. ~\newline
+{\itshape ax} is calculated using the difference quotient (twice) and the x position parts of all three poses ~\newline
+{\itshape ay} is calculated using the difference quotient (twice) and the y position parts of all three poses ~\newline
+{\itshape omegadot} is calculated using the difference quotient of the yaw angles followed by a normalization to \mbox{[}-\/pi, pi\mbox{]}. ~\newline
+ {\itshape weight} can be set using set\+Information() ~\newline
+{\itshape penalty\+Interval} denotes the penalty function, see penalty\+Bound\+To\+Interval() ~\newline
+The dimension of the error / cost vector is 3\+: the first component represents the translational acceleration (x-\/dir), the second one the strafing acceleration and the third one the rotational acceleration. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationHolonomicStart}{Edge\+Acceleration\+Holonomic\+Start}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationHolonomicGoal}{Edge\+Acceleration\+Holonomic\+Goal}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebMultiEdge_a8b22d7b41874fae70ac737b4b33d47e2}{set\+Teb\+Config()}} 
+
+Refer to Edge\+Acceleration\+Holonomic\+Start() and Edge\+Acceleration\+Holonomic\+Goal() for defining boundary values! 
+\end{DoxyRemark}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+acceleration.\+h\end{DoxyCompactItemize}

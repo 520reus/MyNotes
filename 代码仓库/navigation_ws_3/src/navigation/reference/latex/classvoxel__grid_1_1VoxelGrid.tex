@@ -1,0 +1,124 @@
+\hypertarget{classvoxel__grid_1_1VoxelGrid}{}\doxysection{voxel\+\_\+grid\+::Voxel\+Grid类 参考}
+\label{classvoxel__grid_1_1VoxelGrid}\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvoxel__grid_1_1VoxelGrid_ab674638e79996f82163a46f610fdbedd}{Voxel\+Grid}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Constructor for a voxel grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1VoxelGrid_a87cc6954e9cf89c8595e05d5723f65bb}{resize}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Resizes a voxel grid to the desired size \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a6ea8d3ec01958752a8b50b7f6d446b89}\label{classvoxel__grid_1_1VoxelGrid_a6ea8d3ec01958752a8b50b7f6d446b89}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_afcc0de2e9f8b839d75906de96dfc4b66}\label{classvoxel__grid_1_1VoxelGrid_afcc0de2e9f8b839d75906de96dfc4b66}} 
+uint32\+\_\+t $\ast$ {\bfseries get\+Data} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_af05c08221c341915183f8b78bb267b89}\label{classvoxel__grid_1_1VoxelGrid_af05c08221c341915183f8b78bb267b89}} 
+void {\bfseries mark\+Voxel} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a115003f6d22524e8221e286eae51b784}\label{classvoxel__grid_1_1VoxelGrid_a115003f6d22524e8221e286eae51b784}} 
+bool {\bfseries mark\+Voxel\+In\+Map} (unsigned int x, unsigned int y, unsigned int z, unsigned int marked\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_ac90c8569576f1fa952070af6576b92f7}\label{classvoxel__grid_1_1VoxelGrid_ac90c8569576f1fa952070af6576b92f7}} 
+void {\bfseries clear\+Voxel} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a74857af17abfe3158048a169ee87252a}\label{classvoxel__grid_1_1VoxelGrid_a74857af17abfe3158048a169ee87252a}} 
+void {\bfseries clear\+Voxel\+Column} (unsigned int index)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a744c735aea9d22e68c43c07baa88d9fa}\label{classvoxel__grid_1_1VoxelGrid_a744c735aea9d22e68c43c07baa88d9fa}} 
+void {\bfseries clear\+Voxel\+In\+Map} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a2063758dd2b12bbb08c90257fa4a3cd2}\label{classvoxel__grid_1_1VoxelGrid_a2063758dd2b12bbb08c90257fa4a3cd2}} 
+bool {\bfseries bits\+Below\+Threshold} (unsigned int n, unsigned int bit\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a20b2a31afc499e79f2d2b5234b7f5a77}\label{classvoxel__grid_1_1VoxelGrid_a20b2a31afc499e79f2d2b5234b7f5a77}} 
+void {\bfseries mark\+Voxel\+Line} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a69d808068713475c0dd06a989f986c1f}\label{classvoxel__grid_1_1VoxelGrid_a69d808068713475c0dd06a989f986c1f}} 
+void {\bfseries clear\+Voxel\+Line} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a8a50e96f12f305ddabf523916869ff1f}\label{classvoxel__grid_1_1VoxelGrid_a8a50e96f12f305ddabf523916869ff1f}} 
+void {\bfseries clear\+Voxel\+Line\+In\+Map} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned char $\ast$map\+\_\+2d, unsigned int unknown\+\_\+threshold, unsigned int mark\+\_\+threshold, unsigned char free\+\_\+cost=0, unsigned char unknown\+\_\+cost=255, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a5ed2df976617fcbe0bbf602c0a79b1ab}\label{classvoxel__grid_1_1VoxelGrid_a5ed2df976617fcbe0bbf602c0a79b1ab}} 
+Voxel\+Status {\bfseries get\+Voxel} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a7cf9b3b725b9406b795db06357a5d9a6}\label{classvoxel__grid_1_1VoxelGrid_a7cf9b3b725b9406b795db06357a5d9a6}} 
+Voxel\+Status {\bfseries get\+Voxel\+Column} (unsigned int x, unsigned int y, unsigned int unknown\+\_\+threshold=0, unsigned int marked\+\_\+threshold=0)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_afb8f95554f0e49458c4757a17d97fb7e}\label{classvoxel__grid_1_1VoxelGrid_afb8f95554f0e49458c4757a17d97fb7e}} 
+void {\bfseries print\+Voxel\+Grid} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a73d40336183a3e1801c890f4511be4c1}\label{classvoxel__grid_1_1VoxelGrid_a73d40336183a3e1801c890f4511be4c1}} 
+void {\bfseries print\+Column\+Grid} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_aeaabf312e5b77a2ef3def7c6559b91a5}\label{classvoxel__grid_1_1VoxelGrid_aeaabf312e5b77a2ef3def7c6559b91a5}} 
+unsigned int {\bfseries sizeX} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_aff88112f7d79c7af52e519201040dc22}\label{classvoxel__grid_1_1VoxelGrid_aff88112f7d79c7af52e519201040dc22}} 
+unsigned int {\bfseries sizeY} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_ae332ec25d1b45bc275fdc61c8d8eb53c}\label{classvoxel__grid_1_1VoxelGrid_ae332ec25d1b45bc275fdc61c8d8eb53c}} 
+unsigned int {\bfseries sizeZ} ()
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_abde2d6af5b3bd1c027171c1553308cc2}\label{classvoxel__grid_1_1VoxelGrid_abde2d6af5b3bd1c027171c1553308cc2}} 
+{\footnotesize template$<$class Action\+Type $>$ }\\void {\bfseries raytrace\+Line} (Action\+Type at, double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_aa2bd3d5ac9d1b1aaea15728978b203db}\label{classvoxel__grid_1_1VoxelGrid_aa2bd3d5ac9d1b1aaea15728978b203db}} 
+static unsigned int {\bfseries num\+Bits} (unsigned int n)
+\item 
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a82798a1492156f1c23801e0c486743a3}\label{classvoxel__grid_1_1VoxelGrid_a82798a1492156f1c23801e0c486743a3}} 
+static Voxel\+Status {\bfseries get\+Voxel} (unsigned int x, unsigned int y, unsigned int z, unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z, const uint32\+\_\+t $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_ab674638e79996f82163a46f610fdbedd}\label{classvoxel__grid_1_1VoxelGrid_ab674638e79996f82163a46f610fdbedd}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!VoxelGrid@{VoxelGrid}}
+\index{VoxelGrid@{VoxelGrid}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{VoxelGrid()}{VoxelGrid()}}
+{\footnotesize\ttfamily voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Voxel\+Grid (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{unsigned int}]{size\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Constructor for a voxel grid 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the grid \\
+\hline
+{\em size\+\_\+y} & The y size of the grid \\
+\hline
+{\em size\+\_\+z} & The z size of the grid, only sizes $<$= 16 are supported \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1VoxelGrid_a87cc6954e9cf89c8595e05d5723f65bb}\label{classvoxel__grid_1_1VoxelGrid_a87cc6954e9cf89c8595e05d5723f65bb}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!resize@{resize}}
+\index{resize@{resize}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{unsigned int}]{size\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Resizes a voxel grid to the desired size 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the grid \\
+\hline
+{\em size\+\_\+y} & The y size of the grid \\
+\hline
+{\em size\+\_\+z} & The z size of the grid, only sizes $<$= 16 are supported \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+voxel\+\_\+grid/include/voxel\+\_\+grid/voxel\+\_\+grid.\+h\end{DoxyCompactItemize}

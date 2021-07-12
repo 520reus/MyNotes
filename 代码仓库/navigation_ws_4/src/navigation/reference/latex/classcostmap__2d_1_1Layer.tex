@@ -1,0 +1,114 @@
+\hypertarget{classcostmap__2d_1_1Layer}{}\doxysection{costmap\+\_\+2d\+::Layer类 参考}
+\label{classcostmap__2d_1_1Layer}\index{costmap\_2d::Layer@{costmap\_2d::Layer}}
+类 costmap\+\_\+2d\+::Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classcostmap__2d_1_1Layer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_af6c7a09667d7cc23e207e0121e60ba4b}\label{classcostmap__2d_1_1Layer_af6c7a09667d7cc23e207e0121e60ba4b}} 
+void {\bfseries initialize} (\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} $\ast$parent, std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf)
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a56528644ba7d534b15ca3d73615dc12e}\label{classcostmap__2d_1_1Layer_a56528644ba7d534b15ca3d73615dc12e}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a56528644ba7d534b15ca3d73615dc12e}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a8238b7e03dc09bade9543a23addc65e2}\label{classcostmap__2d_1_1Layer_a8238b7e03dc09bade9543a23addc65e2}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a8238b7e03dc09bade9543a23addc65e2}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Stop publishers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a83cb399475b5536ae8e278569756d68b}\label{classcostmap__2d_1_1Layer_a83cb399475b5536ae8e278569756d68b}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a83cb399475b5536ae8e278569756d68b}{activate}} ()
+\begin{DoxyCompactList}\small\item\em Restart publishers if they\textquotesingle{}ve been stopped. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a7e57e2de15f2ac5104465da537b60ada}\label{classcostmap__2d_1_1Layer_a7e57e2de15f2ac5104465da537b60ada}} 
+virtual void {\bfseries reset} ()
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1Layer_a3331b68fc4db5ca14dcc31de179fd75f}{is\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a2e0a0cf4fb307699c098507d718af7ff}\label{classcostmap__2d_1_1Layer_a2e0a0cf4fb307699c098507d718af7ff}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a2e0a0cf4fb307699c098507d718af7ff}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_af85315764d007012838b33516999a727}\label{classcostmap__2d_1_1Layer_af85315764d007012838b33516999a727}} 
+std\+::string {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_afd164562392c1e243a4d4a5a23c27cb0}\label{classcostmap__2d_1_1Layer_afd164562392c1e243a4d4a5a23c27cb0}} 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& \mbox{\hyperlink{classcostmap__2d_1_1Layer_afd164562392c1e243a4d4a5a23c27cb0}{get\+Footprint}} () const
+\begin{DoxyCompactList}\small\item\em Convenience function for layered\+\_\+costmap\+\_\+-\/$>$\mbox{\hyperlink{classcostmap__2d_1_1Layer_afd164562392c1e243a4d4a5a23c27cb0}{get\+Footprint()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_ab65a9d55987f504e8c658bc64f61181e}\label{classcostmap__2d_1_1Layer_ab65a9d55987f504e8c658bc64f61181e}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_ab65a9d55987f504e8c658bc64f61181e}{on\+Footprint\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of initialize(). Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a4cebd6c53e8089f863f16cee9a0a2184}\label{classcostmap__2d_1_1Layer_a4cebd6c53e8089f863f16cee9a0a2184}} 
+\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} $\ast$ {\bfseries layered\+\_\+costmap\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_af67484d6f9573d583f3ad809375e976a}\label{classcostmap__2d_1_1Layer_af67484d6f9573d583f3ad809375e976a}} 
+bool {\bfseries current\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_ab61b2a3e01353b97258c207a397977fe}\label{classcostmap__2d_1_1Layer_ab61b2a3e01353b97258c207a397977fe}} 
+bool \mbox{\hyperlink{classcostmap__2d_1_1Layer_ab61b2a3e01353b97258c207a397977fe}{enabled\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Currently this var is managed by subclasses. TODO\+: make this managed by this class and/or container class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_ac1fa1f64ebd9d39af5947c738202e248}\label{classcostmap__2d_1_1Layer_ac1fa1f64ebd9d39af5947c738202e248}} 
+std\+::string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a4a977acd639966f447262b5c8837a40f}\label{classcostmap__2d_1_1Layer_a4a977acd639966f447262b5c8837a40f}} 
+tf2\+\_\+ros\+::\+Buffer $\ast$ {\bfseries tf\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a3331b68fc4db5ca14dcc31de179fd75f}\label{classcostmap__2d_1_1Layer_a3331b68fc4db5ca14dcc31de179fd75f}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!isCurrent@{isCurrent}}
+\index{isCurrent@{isCurrent}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{isCurrent()}{isCurrent()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Layer\+::is\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know. 
+
+A layer\textquotesingle{}s current state should be managed by the protected variable current\+\_\+. \begin{DoxyReturn}{返回}
+Whether the data in the layer is up to date. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}\label{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This is called at the end of initialize(). Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_a0263cac691c382ac738ca0ea5b8280e2}{costmap\+\_\+2d\+::\+Voxel\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_a37a85eb64cf7caead7c7ac67dd2e57e8}{costmap\+\_\+2d\+::\+Static\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_afa8dfe916a99f404d60883e0537d1c30}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_afa192475f613ad4663f17eb099f698aa}{costmap\+\_\+2d\+::\+Inflation\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}\label{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer_ac455c1c2ca05e9112242b9d822351ac0}{costmap\+\_\+2d\+::\+Voxel\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_ae0bb0fa15c5dcb223992a1bd837cda83}{costmap\+\_\+2d\+::\+Static\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer_a864faf45bfefe8cd22aaf8ddc4218be6}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer_a9fb359aaee3f5ed1b3617515a9f001e6}{costmap\+\_\+2d\+::\+Inflation\+Layer}} 重载.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/layer.\+h\end{DoxyCompactItemize}

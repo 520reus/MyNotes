@@ -1,0 +1,104 @@
+\hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Base\+Teb\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$ 模板类 参考}
+\label{classteb__local__planner_1_1BaseTebUnaryEdge}\index{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}}
+
+
+Base edge connecting a single vertex in the TEB optimization problem  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+teb\+\_\+edges.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Base\+Teb\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$ 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1BaseTebUnaryEdge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_ae53530a6040e7aec4e5ea17f0ac132d5}\label{classteb__local__planner_1_1BaseTebUnaryEdge_ae53530a6040e7aec4e5ea17f0ac132d5}} 
+\mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_ae53530a6040e7aec4e5ea17f0ac132d5}{Base\+Teb\+Unary\+Edge}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a7c51383e9806f5cccbcd9dedee470abf}{$\sim$\+Base\+Teb\+Unary\+Edge}} ()
+\begin{DoxyCompactList}\small\item\em Destruct edge. \end{DoxyCompactList}\item 
+Error\+Vector \& \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_ab7c50511e366f1725bb8c1e1c44d6cea}{get\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Compute and return error / cost value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_afa956129fcb3b930e833273e285b4eae}\label{classteb__local__planner_1_1BaseTebUnaryEdge_afa956129fcb3b930e833273e285b4eae}} 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_afa956129fcb3b930e833273e285b4eae}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Read values from input stream \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_a1059455e3d51e5ba697ecd1acf032943}\label{classteb__local__planner_1_1BaseTebUnaryEdge_a1059455e3d51e5ba697ecd1acf032943}} 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a1059455e3d51e5ba697ecd1acf032943}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Write values to an output stream \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a7be295bcbe7ad6ef8dcaefe11aa1be3f}{set\+Teb\+Config}} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Assign the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_a74a26d9eb532fd12dbb488ecb810f4aa}\label{classteb__local__planner_1_1BaseTebUnaryEdge_a74a26d9eb532fd12dbb488ecb810f4aa}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a74a26d9eb532fd12dbb488ecb810f4aa}{cfg\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\subsubsection*{template$<$int D, typename E, typename Vertex\+Xi$>$\newline
+class teb\+\_\+local\+\_\+planner\+::\+Base\+Teb\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}
+
+Base edge connecting a single vertex in the TEB optimization problem 
+
+This edge defines a base edge type for the TEB optimization problem. It is derived from the corresponding g2o base classes augmented with additional information for the dedicated TEB problem (e.\+g. config). The destructor erases the edge in all attached vertices in order to allow keeping the vertices valid in subsequent g2o optimization calls. Memory of edges should be freed by calling the clear\+Edge method of the g2o optimzier class. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1BaseTebMultiEdge}{Base\+Teb\+Multi\+Edge}}, \mbox{\hyperlink{classteb__local__planner_1_1BaseTebBinaryEdge}{Base\+Teb\+Binary\+Edge}}, g2o\+::\+Base\+Binary\+Edge, g2o\+::\+Base\+Unary\+Edge, g2o\+::\+Base\+Multi\+Edge 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_a7c51383e9806f5cccbcd9dedee470abf}\label{classteb__local__planner_1_1BaseTebUnaryEdge_a7c51383e9806f5cccbcd9dedee470abf}} 
+\index{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}!````~BaseTebUnaryEdge@{$\sim$BaseTebUnaryEdge}}
+\index{````~BaseTebUnaryEdge@{$\sim$BaseTebUnaryEdge}!teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BaseTebUnaryEdge()}{~BaseTebUnaryEdge()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi $>$ \\
+virtual \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge}{teb\+\_\+local\+\_\+planner\+::\+Base\+Teb\+Unary\+Edge}}$<$ D, E, Vertex\+Xi $>$\+::$\sim$\mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge}{Base\+Teb\+Unary\+Edge}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destruct edge. 
+
+We need to erase vertices manually, since we want to keep them even if \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ae6793ab24a3714cd6fd297a5ebc38631}{Teb\+Optimal\+Planner\+::clear\+Graph()}} is called. This is necessary since the vertices are managed by the Timed\+\_\+\+Elastic\+\_\+\+Band class. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_ab7c50511e366f1725bb8c1e1c44d6cea}\label{classteb__local__planner_1_1BaseTebUnaryEdge_ab7c50511e366f1725bb8c1e1c44d6cea}} 
+\index{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}!getError@{getError}}
+\index{getError@{getError}!teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi $>$ \\
+Error\+Vector\& \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge}{teb\+\_\+local\+\_\+planner\+::\+Base\+Teb\+Unary\+Edge}}$<$ D, E, Vertex\+Xi $>$\+::get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute and return error / cost value. 
+
+This method is called by \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af1821ce3262ce2c607d482b40eccaa57}{Teb\+Optimal\+Planner\+::compute\+Current\+Cost}} to obtain the current cost. \begin{DoxyReturn}{返回}
+2D Cost / error vector \mbox{[}nh cost, backward drive dir cost\mbox{]}$^\wedge$T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseTebUnaryEdge_a7be295bcbe7ad6ef8dcaefe11aa1be3f}\label{classteb__local__planner_1_1BaseTebUnaryEdge_a7be295bcbe7ad6ef8dcaefe11aa1be3f}} 
+\index{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}!setTebConfig@{setTebConfig}}
+\index{setTebConfig@{setTebConfig}!teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$@{teb\_local\_planner::BaseTebUnaryEdge$<$ D, E, VertexXi $>$}}
+\doxysubsubsection{\texorpdfstring{setTebConfig()}{setTebConfig()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi $>$ \\
+void \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge}{teb\+\_\+local\+\_\+planner\+::\+Base\+Teb\+Unary\+Edge}}$<$ D, E, Vertex\+Xi $>$\+::set\+Teb\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&}]{cfg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign the \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class for parameters. 
+
+
+\begin{DoxyParams}{参数}
+{\em cfg} & \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} class \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/base\+\_\+teb\+\_\+edges.\+h\end{DoxyCompactItemize}

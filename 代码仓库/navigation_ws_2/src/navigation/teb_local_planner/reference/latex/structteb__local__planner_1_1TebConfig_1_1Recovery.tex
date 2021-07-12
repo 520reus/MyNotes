@@ -1,0 +1,43 @@
+\hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config\+::Recovery结构体 参考}
+\label{structteb__local__planner_1_1TebConfig_1_1Recovery}\index{teb\_local\_planner::TebConfig::Recovery@{teb\_local\_planner::TebConfig::Recovery}}
+
+
+Recovery/backup related parameters  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+config.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_a5d185445cfb2a8faaef2e8a791aab949}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_a5d185445cfb2a8faaef2e8a791aab949}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_a5d185445cfb2a8faaef2e8a791aab949}{shrink\+\_\+horizon\+\_\+backup}}
+\begin{DoxyCompactList}\small\item\em Allows the planner to shrink the horizon temporary (50\%) in case of automatically detected issues. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_ac5404c1d86dc2ee57dadf0dfb8534f7a}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_ac5404c1d86dc2ee57dadf0dfb8534f7a}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_ac5404c1d86dc2ee57dadf0dfb8534f7a}{shrink\+\_\+horizon\+\_\+min\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em Specify minimum duration for the reduced horizon in case an infeasible trajectory is detected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_a35af438921fb1df11d444dd822a5018b}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_a35af438921fb1df11d444dd822a5018b}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_a35af438921fb1df11d444dd822a5018b}{oscillation\+\_\+recovery}}
+\begin{DoxyCompactList}\small\item\em Try to detect and resolve oscillations between multiple solutions in the same equivalence class (robot frequently switches between left/right/forward/backwards) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_abcb00bcfd7ed45ea010fe33e632a8221}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_abcb00bcfd7ed45ea010fe33e632a8221}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_abcb00bcfd7ed45ea010fe33e632a8221}{oscillation\+\_\+v\+\_\+eps}}
+\begin{DoxyCompactList}\small\item\em Threshold for the average normalized linear velocity\+: if oscillation\+\_\+v\+\_\+eps and oscillation\+\_\+omega\+\_\+eps are not exceeded both, a possible oscillation is detected \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_a93e97ac203e850b198d01837ce5788cf}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_a93e97ac203e850b198d01837ce5788cf}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_a93e97ac203e850b198d01837ce5788cf}{oscillation\+\_\+omega\+\_\+eps}}
+\begin{DoxyCompactList}\small\item\em Threshold for the average normalized angular velocity\+: if oscillation\+\_\+v\+\_\+eps and oscillation\+\_\+omega\+\_\+eps are not exceeded both, a possible oscillation is detected \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_acd07cbe70872052f358d03925f5b0098}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_acd07cbe70872052f358d03925f5b0098}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_acd07cbe70872052f358d03925f5b0098}{oscillation\+\_\+recovery\+\_\+min\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em Minumum duration \mbox{[}sec\mbox{]} for which the recovery mode is activated after an oscillation is detected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Recovery_a706e44b5b311b01cd63ab972fc406ee4}\label{structteb__local__planner_1_1TebConfig_1_1Recovery_a706e44b5b311b01cd63ab972fc406ee4}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Recovery_a706e44b5b311b01cd63ab972fc406ee4}{oscillation\+\_\+filter\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em Filter length/duration \mbox{[}sec\mbox{]} for the detection of oscillations \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Recovery/backup related parameters 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

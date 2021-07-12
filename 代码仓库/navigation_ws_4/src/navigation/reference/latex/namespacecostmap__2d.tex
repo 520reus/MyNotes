@@ -1,0 +1,185 @@
+\hypertarget{namespacecostmap__2d}{}\doxysection{costmap\+\_\+2d 命名空间参考}
+\label{namespacecostmap__2d}\index{costmap\_2d@{costmap\_2d}}
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcostmap__2d_1_1MapLocation}{Map\+Location}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}}
+\begin{DoxyCompactList}\small\item\em A 2D costmap provides a mapping between points in the world and their associated \char`\"{}costs\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher}{Costmap2\+DPublisher}}
+\begin{DoxyCompactList}\small\item\em A tool to periodically publish visualization data from a \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{Costmap2\+DROS}}
+\begin{DoxyCompactList}\small\item\em A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacles in either the form of Point\+Cloud or Laser\+Scan messages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1CostmapLayer}{Costmap\+Layer}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1CellData}{Cell\+Data}}
+\begin{DoxyCompactList}\small\item\em Storage for cell information used during obstacle inflation \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1InflationLayer}{Inflation\+Layer}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1Layer}{Layer}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}}
+\begin{DoxyCompactList}\small\item\em Instantiates different layer plugins and aggregates them into one score \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1Observation}{Observation}}
+\begin{DoxyCompactList}\small\item\em Stores an observation in terms of a point cloud and the origin of the source \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1ObservationBuffer}{Observation\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Takes in point clouds from sensors, transforms them to the desired frame, and stores them \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1ObstacleLayer}{Obstacle\+Layer}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer}{Static\+Layer}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1VoxelLayer}{Voxel\+Layer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{namespacecostmap__2d_a34301602c4ae14de02aa3b629782d339}{parse\+VVF}} (const std\+::string \&input, std\+::string \&error\+\_\+return)
+\begin{DoxyCompactList}\small\item\em Parse a vector of vectors of floats from a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecostmap__2d_a6eeafbd231ad1ec2de69e61754773742}{calculate\+Min\+And\+Max\+Distances}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double \&min\+\_\+dist, double \&max\+\_\+dist)
+\begin{DoxyCompactList}\small\item\em Calculate the extreme distances for the footprint \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a9ffe4eb45b6230a18f56723b49cb0047}\label{namespacecostmap__2d_a9ffe4eb45b6230a18f56723b49cb0047}} 
+geometry\+\_\+msgs\+::\+Point \mbox{\hyperlink{namespacecostmap__2d_a9ffe4eb45b6230a18f56723b49cb0047}{to\+Point}} (geometry\+\_\+msgs\+::\+Point32 pt)
+\begin{DoxyCompactList}\small\item\em Convert Point32 to Point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a50f77e1c7e28435a7707e1991b9a82a1}\label{namespacecostmap__2d_a50f77e1c7e28435a7707e1991b9a82a1}} 
+geometry\+\_\+msgs\+::\+Point32 \mbox{\hyperlink{namespacecostmap__2d_a50f77e1c7e28435a7707e1991b9a82a1}{to\+Point32}} (geometry\+\_\+msgs\+::\+Point pt)
+\begin{DoxyCompactList}\small\item\em Convert Point to Point32 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a137137a824a6a667fbf9a850c762c6ec}\label{namespacecostmap__2d_a137137a824a6a667fbf9a850c762c6ec}} 
+geometry\+\_\+msgs\+::\+Polygon \mbox{\hyperlink{namespacecostmap__2d_a137137a824a6a667fbf9a850c762c6ec}{to\+Polygon}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ pts)
+\begin{DoxyCompactList}\small\item\em Convert vector of Points to Polygon msg \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_aa2a13f5a5752dea716a3f76423a0f3c5}\label{namespacecostmap__2d_aa2a13f5a5752dea716a3f76423a0f3c5}} 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{namespacecostmap__2d_aa2a13f5a5752dea716a3f76423a0f3c5}{to\+Point\+Vector}} (geometry\+\_\+msgs\+::\+Polygon polygon)
+\begin{DoxyCompactList}\small\item\em Convert Polygon msg to vector of Points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecostmap__2d_a0928255ee5f8797cece2ab99f3eb310b}{transform\+Footprint}} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&oriented\+\_\+footprint)
+\begin{DoxyCompactList}\small\item\em Given a pose and base footprint, build the oriented footprint of the robot (list of Points) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecostmap__2d_aaaa46e7b32e85f73ee55de25d4c6616d}{transform\+Footprint}} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, geometry\+\_\+msgs\+::\+Polygon\+Stamped \&oriented\+\_\+footprint)
+\begin{DoxyCompactList}\small\item\em Given a pose and base footprint, build the oriented footprint of the robot (Polygon\+Stamped) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a16dd6a7064ce2ed191b40c7009512489}\label{namespacecostmap__2d_a16dd6a7064ce2ed191b40c7009512489}} 
+void \mbox{\hyperlink{namespacecostmap__2d_a16dd6a7064ce2ed191b40c7009512489}{pad\+Footprint}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double padding)
+\begin{DoxyCompactList}\small\item\em Adds the specified amount of padding to the footprint (in place) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a14f9fef4a7ebe0d6fd6e4ff7759c2448}\label{namespacecostmap__2d_a14f9fef4a7ebe0d6fd6e4ff7759c2448}} 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{namespacecostmap__2d_a14f9fef4a7ebe0d6fd6e4ff7759c2448}{make\+Footprint\+From\+Radius}} (double radius)
+\begin{DoxyCompactList}\small\item\em Create a circular footprint from a given radius \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacecostmap__2d_a0c5b34c84596c37289f90800701d5aa2}{make\+Footprint\+From\+String}} (const std\+::string \&footprint\+\_\+string, std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint)
+\begin{DoxyCompactList}\small\item\em Make the footprint from the given string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_a0baced3e5daa7a83aee56e3b49ab7b12}\label{namespacecostmap__2d_a0baced3e5daa7a83aee56e3b49ab7b12}} 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{namespacecostmap__2d_a0baced3e5daa7a83aee56e3b49ab7b12}{make\+Footprint\+From\+Params}} (ros\+::\+Node\+Handle \&nh)
+\begin{DoxyCompactList}\small\item\em Read the ros-\/params \char`\"{}footprint\char`\"{} and/or \char`\"{}robot\+\_\+radius\char`\"{} from the given Node\+Handle using search\+Param() to go up the tree. \end{DoxyCompactList}\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{namespacecostmap__2d_ae37a15b51dd27900fd42c5d0601ae37c}{make\+Footprint\+From\+XMLRPC}} (Xml\+Rpc\+::\+Xml\+Rpc\+Value \&footprint\+\_\+xmlrpc, const std\+::string \&full\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Create the footprint from the given Xml\+Rpc\+Value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacecostmap__2d_ae02b98da234ff50b2ef1e3fa6d53f33b}\label{namespacecostmap__2d_ae02b98da234ff50b2ef1e3fa6d53f33b}} 
+void \mbox{\hyperlink{namespacecostmap__2d_ae02b98da234ff50b2ef1e3fa6d53f33b}{write\+Footprint\+To\+Param}} (ros\+::\+Node\+Handle \&nh, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint)
+\begin{DoxyCompactList}\small\item\em Write the current unpadded\+\_\+footprint\+\_\+ to the \char`\"{}footprint\char`\"{} parameter of the given Node\+Handle so that dynamic\+\_\+reconfigure will see the new value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides a mapping for often used cost values 
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{namespacecostmap__2d_a6eeafbd231ad1ec2de69e61754773742}\label{namespacecostmap__2d_a6eeafbd231ad1ec2de69e61754773742}} 
+\index{costmap\_2d@{costmap\_2d}!calculateMinAndMaxDistances@{calculateMinAndMaxDistances}}
+\index{calculateMinAndMaxDistances@{calculateMinAndMaxDistances}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{calculateMinAndMaxDistances()}{calculateMinAndMaxDistances()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::calculate\+Min\+And\+Max\+Distances (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double \&}]{min\+\_\+dist,  }\item[{double \&}]{max\+\_\+dist }\end{DoxyParamCaption})}
+
+
+
+Calculate the extreme distances for the footprint 
+
+
+\begin{DoxyParams}{参数}
+{\em footprint} & The footprint to examine \\
+\hline
+{\em min\+\_\+dist} & Output parameter of the minimum distance \\
+\hline
+{\em max\+\_\+dist} & Output parameter of the maximum distance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacecostmap__2d_a0c5b34c84596c37289f90800701d5aa2}\label{namespacecostmap__2d_a0c5b34c84596c37289f90800701d5aa2}} 
+\index{costmap\_2d@{costmap\_2d}!makeFootprintFromString@{makeFootprintFromString}}
+\index{makeFootprintFromString@{makeFootprintFromString}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{makeFootprintFromString()}{makeFootprintFromString()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::make\+Footprint\+From\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{footprint\+\_\+string,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint }\end{DoxyParamCaption})}
+
+
+
+Make the footprint from the given string. 
+
+Format should be bracketed array of arrays of floats, like so\+: \mbox{[}\mbox{[}1.\+0, 2.\+2\mbox{]}, \mbox{[}3.\+3, 4.\+2\mbox{]}, ...\mbox{]} \mbox{\Hypertarget{namespacecostmap__2d_ae37a15b51dd27900fd42c5d0601ae37c}\label{namespacecostmap__2d_ae37a15b51dd27900fd42c5d0601ae37c}} 
+\index{costmap\_2d@{costmap\_2d}!makeFootprintFromXMLRPC@{makeFootprintFromXMLRPC}}
+\index{makeFootprintFromXMLRPC@{makeFootprintFromXMLRPC}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{makeFootprintFromXMLRPC()}{makeFootprintFromXMLRPC()}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::make\+Footprint\+From\+XMLRPC (\begin{DoxyParamCaption}\item[{Xml\+Rpc\+::\+Xml\+Rpc\+Value \&}]{footprint\+\_\+xmlrpc,  }\item[{const std\+::string \&}]{full\+\_\+param\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Create the footprint from the given Xml\+Rpc\+Value. 
+
+
+\begin{DoxyParams}{参数}
+{\em footprint\+\_\+xmlrpc} & should be an array of arrays, where the top-\/level array should have 3 or more elements, and the sub-\/arrays should all have exactly 2 elements (x and y coordinates).\\
+\hline
+{\em full\+\_\+param\+\_\+name} & this is the full name of the rosparam from which the footprint\+\_\+xmlrpc value came. It is used only for reporting errors. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacecostmap__2d_a34301602c4ae14de02aa3b629782d339}\label{namespacecostmap__2d_a34301602c4ae14de02aa3b629782d339}} 
+\index{costmap\_2d@{costmap\_2d}!parseVVF@{parseVVF}}
+\index{parseVVF@{parseVVF}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{parseVVF()}{parseVVF()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$float$>$ $>$ costmap\+\_\+2d\+::parse\+VVF (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input,  }\item[{std\+::string \&}]{error\+\_\+return }\end{DoxyParamCaption})}
+
+
+
+Parse a vector of vectors of floats from a string. 
+
+
+\begin{DoxyParams}{参数}
+{\em error\+\_\+return} & If no error, error\+\_\+return is set to \char`\"{}\char`\"{}. If error, error\+\_\+return will describe the error. Syntax is \mbox{[}\mbox{[}1.\+0, 2.\+0\mbox{]}, \mbox{[}3.\+3, 4.\+4, 5.\+5\mbox{]}, ...\mbox{]}\\
+\hline
+\end{DoxyParams}
+On error, error\+\_\+return is set and the return value could be anything, like part of a successful parse. \mbox{\Hypertarget{namespacecostmap__2d_aaaa46e7b32e85f73ee55de25d4c6616d}\label{namespacecostmap__2d_aaaa46e7b32e85f73ee55de25d4c6616d}} 
+\index{costmap\_2d@{costmap\_2d}!transformFootprint@{transformFootprint}}
+\index{transformFootprint@{transformFootprint}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{transformFootprint()}{transformFootprint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::transform\+Footprint (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec,  }\item[{geometry\+\_\+msgs\+::\+Polygon\+Stamped \&}]{oriented\+\_\+footprint }\end{DoxyParamCaption})}
+
+
+
+Given a pose and base footprint, build the oriented footprint of the robot (Polygon\+Stamped) 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The x position of the robot \\
+\hline
+{\em y} & The y position of the robot \\
+\hline
+{\em theta} & The orientation of the robot \\
+\hline
+{\em footprint\+\_\+spec} & Basic shape of the footprint \\
+\hline
+{\em oriented\+\_\+footprint} & Will be filled with the points in the oriented footprint of the robot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacecostmap__2d_a0928255ee5f8797cece2ab99f3eb310b}\label{namespacecostmap__2d_a0928255ee5f8797cece2ab99f3eb310b}} 
+\index{costmap\_2d@{costmap\_2d}!transformFootprint@{transformFootprint}}
+\index{transformFootprint@{transformFootprint}!costmap\_2d@{costmap\_2d}}
+\doxysubsubsection{\texorpdfstring{transformFootprint()}{transformFootprint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::transform\+Footprint (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{oriented\+\_\+footprint }\end{DoxyParamCaption})}
+
+
+
+Given a pose and base footprint, build the oriented footprint of the robot (list of Points) 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The x position of the robot \\
+\hline
+{\em y} & The y position of the robot \\
+\hline
+{\em theta} & The orientation of the robot \\
+\hline
+{\em footprint\+\_\+spec} & Basic shape of the footprint \\
+\hline
+{\em oriented\+\_\+footprint} & Will be filled with the points in the oriented footprint of the robot \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,137 @@
+\hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Base\+Robot\+Footprint\+Model类 参考}
+\label{classteb__local__planner_1_1BaseRobotFootprintModel}\index{teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}}
+
+
+Abstract class that defines the interface for robot footprint/contour models  
+
+
+
+
+{\ttfamily \#include $<$robot\+\_\+footprint\+\_\+model.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Base\+Robot\+Footprint\+Model 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.823529cm]{classteb__local__planner_1_1BaseRobotFootprintModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_a276e41b148ee2eaa19f5611e8380695e}\label{classteb__local__planner_1_1BaseRobotFootprintModel_a276e41b148ee2eaa19f5611e8380695e}} 
+\mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a276e41b148ee2eaa19f5611e8380695e}{Base\+Robot\+Footprint\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor of the abstract obstacle class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_a7178ea660f72955a12efe8f13b5eab91}\label{classteb__local__planner_1_1BaseRobotFootprintModel_a7178ea660f72955a12efe8f13b5eab91}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a7178ea660f72955a12efe8f13b5eab91}{$\sim$\+Base\+Robot\+Footprint\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_ae6336b7e84aa421a1a54c29fd36c1090}{calculate\+Distance}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle) const =0
+\begin{DoxyCompactList}\small\item\em Calculate the distance between the robot and an obstacle \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a0e51cdaecc5fbae067d2e6bd3780f339}{estimate\+Spatio\+Temporal\+Distance}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle, double t) const =0
+\begin{DoxyCompactList}\small\item\em Estimate the distance between the robot and the predicted location of an obstacle at time t \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a8185bccad3e8f40d89e284d4178bfe9d}{visualize\+Robot}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, std\+::vector$<$ visualization\+\_\+msgs\+::\+Marker $>$ \&markers, const std\+\_\+msgs\+::\+Color\+RGBA \&color) const
+\begin{DoxyCompactList}\small\item\em Visualize the robot using a markers \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a98af59319058aed548ea173605e58d9d}{get\+Inscribed\+Radius}} ()=0
+\begin{DoxyCompactList}\small\item\em Compute the inscribed radius of the footprint model \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Abstract class that defines the interface for robot footprint/contour models 
+
+The robot model class is currently used in optimization only, since taking the navigation stack footprint into account might be inefficient. The footprint is only used for checking feasibility. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_ae6336b7e84aa421a1a54c29fd36c1090}\label{classteb__local__planner_1_1BaseRobotFootprintModel_ae6336b7e84aa421a1a54c29fd36c1090}} 
+\index{teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate the distance between the robot and an obstacle 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & Current robot pose \\
+\hline
+{\em obstacle} & Pointer to the obstacle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Euclidean distance to the robot 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1PolygonRobotFootprint_a2a10b4adc6fb7596ea94caa7352b617d}{teb\+\_\+local\+\_\+planner\+::\+Polygon\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1LineRobotFootprint_a5bdb68e28dd61d3bd758480ffafa7965}{teb\+\_\+local\+\_\+planner\+::\+Line\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1TwoCirclesRobotFootprint_a713f0abe443316b003bedb0098d68f5e}{teb\+\_\+local\+\_\+planner\+::\+Two\+Circles\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1CircularRobotFootprint_a3045ccae12f203819c8542f98914f0e1}{teb\+\_\+local\+\_\+planner\+::\+Circular\+Robot\+Footprint}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_ab0b9f073f7eb9354e9533e8626874c49}{teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_a0e51cdaecc5fbae067d2e6bd3780f339}\label{classteb__local__planner_1_1BaseRobotFootprintModel_a0e51cdaecc5fbae067d2e6bd3780f339}} 
+\index{teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}!estimateSpatioTemporalDistance@{estimateSpatioTemporalDistance}}
+\index{estimateSpatioTemporalDistance@{estimateSpatioTemporalDistance}!teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}}
+\doxysubsubsection{\texorpdfstring{estimateSpatioTemporalDistance()}{estimateSpatioTemporalDistance()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model\+::estimate\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Estimate the distance between the robot and the predicted location of an obstacle at time t 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & robot pose, from which the distance to the obstacle is estimated \\
+\hline
+{\em obstacle} & Pointer to the dynamic obstacle (constant velocity model is assumed) \\
+\hline
+{\em t} & time, for which the predicted distance to the obstacle is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Euclidean distance to the robot 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1PolygonRobotFootprint_aa586f6c69b42a9a7c0a132230f578206}{teb\+\_\+local\+\_\+planner\+::\+Polygon\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1LineRobotFootprint_a08897be48121e11234845be66227d769}{teb\+\_\+local\+\_\+planner\+::\+Line\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1TwoCirclesRobotFootprint_a9cb191f97744f76ea1205af27c55d8fa}{teb\+\_\+local\+\_\+planner\+::\+Two\+Circles\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1CircularRobotFootprint_aede7b34bbcdf87880674b44cdafd9373}{teb\+\_\+local\+\_\+planner\+::\+Circular\+Robot\+Footprint}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_ad51a5bef836cbf47f4be9a61ae7c6afd}{teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_a98af59319058aed548ea173605e58d9d}\label{classteb__local__planner_1_1BaseRobotFootprintModel_a98af59319058aed548ea173605e58d9d}} 
+\index{teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}!getInscribedRadius@{getInscribedRadius}}
+\index{getInscribedRadius@{getInscribedRadius}!teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}}
+\doxysubsubsection{\texorpdfstring{getInscribedRadius()}{getInscribedRadius()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model\+::get\+Inscribed\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compute the inscribed radius of the footprint model 
+
+\begin{DoxyReturn}{返回}
+inscribed radius 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1PolygonRobotFootprint_aa48a4a3bb9da49300fcb854ee47b405e}{teb\+\_\+local\+\_\+planner\+::\+Polygon\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1LineRobotFootprint_a8827631f84fdb056ea60f6d64e6a4bfc}{teb\+\_\+local\+\_\+planner\+::\+Line\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1TwoCirclesRobotFootprint_affb216e1cd3cd866ad737d89044a5e50}{teb\+\_\+local\+\_\+planner\+::\+Two\+Circles\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1CircularRobotFootprint_a49d17823fc078f82d2965c0a620b58dc}{teb\+\_\+local\+\_\+planner\+::\+Circular\+Robot\+Footprint}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_a4e768c89f8a3906f88c5a906d47e6297}{teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1BaseRobotFootprintModel_a8185bccad3e8f40d89e284d4178bfe9d}\label{classteb__local__planner_1_1BaseRobotFootprintModel_a8185bccad3e8f40d89e284d4178bfe9d}} 
+\index{teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}!visualizeRobot@{visualizeRobot}}
+\index{visualizeRobot@{visualizeRobot}!teb\_local\_planner::BaseRobotFootprintModel@{teb\_local\_planner::BaseRobotFootprintModel}}
+\doxysubsubsection{\texorpdfstring{visualizeRobot()}{visualizeRobot()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model\+::visualize\+Robot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{std\+::vector$<$ visualization\+\_\+msgs\+::\+Marker $>$ \&}]{markers,  }\item[{const std\+\_\+msgs\+::\+Color\+RGBA \&}]{color }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Visualize the robot using a markers 
+
+Fill a marker message with all necessary information (type, pose, scale and color). The header, namespace, id and marker lifetime will be overwritten. 
+\begin{DoxyParams}[1]{参数}
+ & {\em current\+\_\+pose} & Current robot pose \\
+\hline
+\mbox{\texttt{ out}}  & {\em markers} & container of marker messages describing the robot shape \\
+\hline
+ & {\em color} & Color of the footprint \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classteb__local__planner_1_1PolygonRobotFootprint_ad05f96b9cefee993eda7dbf06379c0e3}{teb\+\_\+local\+\_\+planner\+::\+Polygon\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1LineRobotFootprint_a23eda7c76e0c9eadcb7a4ffb26e47be9}{teb\+\_\+local\+\_\+planner\+::\+Line\+Robot\+Footprint}}, \mbox{\hyperlink{classteb__local__planner_1_1TwoCirclesRobotFootprint_a56c9ce12df8170bb4723910413be1c7f}{teb\+\_\+local\+\_\+planner\+::\+Two\+Circles\+Robot\+Footprint}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1CircularRobotFootprint_a47b8c1c966ab0787c6ac11e4c0213b02}{teb\+\_\+local\+\_\+planner\+::\+Circular\+Robot\+Footprint}} 重载.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/robot\+\_\+footprint\+\_\+model.\+h\end{DoxyCompactItemize}

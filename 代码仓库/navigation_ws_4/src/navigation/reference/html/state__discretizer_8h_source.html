@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner/include/lattice_planner/state_discretizer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d4608036c0a5873288108ca7a6c056e0.html">lattice_planner</a></li><li class="navelem"><a class="el" href="dir_c69004a54815449a25c4300975d14d9f.html">include</a></li><li class="navelem"><a class="el" href="dir_8627c29d6f32bf739f086a6fbb89b9cb.html">lattice_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">state_discretizer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2015 Marina Kollmitz</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * 3. Neither the name of the copyright holder nor the names of its contributors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * may be used to endorse or promote products derived from this software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Author: Marina Kollmitz</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef _STATEDISCRETIZER_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define _STATEDISCRETIZER_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/pose.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/velocity.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/discrete_state.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/motion_constraints.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/dynamic_costmap.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span>lattice_planner</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlattice__planner_1_1StateDiscretizer.html">StateDiscretizer</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#a97cb8c045d4538ed836b9fc8ffac57ac">   64</a></span>&#160;  <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#a97cb8c045d4538ed836b9fc8ffac57ac">StateDiscretizer</a>(<a class="code" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a>* costmap, <a class="code" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a> motion_constraints);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#a326ab159e31dd7b48315dbec80091fcc">   75</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#a326ab159e31dd7b48315dbec80091fcc">getNumDiscreteAngles</a>(<span class="keywordtype">double</span> acc_w, <span class="keywordtype">double</span> time_delta);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#a6f93b8fa02d6b391d67cae49a9ad3563">   85</a></span>&#160;  <a class="code" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#a6f93b8fa02d6b391d67cae49a9ad3563">discretizeState</a>(<a class="code" href="classlattice__planner_1_1Pose.html">Pose</a> pose, <a class="code" href="structlattice__planner_1_1Velocity.html">Velocity</a> vel, <span class="keywordtype">int</span> time_step);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#a9aca1249de99d4d5309ed3e24c87daa0">   97</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#a9aca1249de99d4d5309ed3e24c87daa0">getCellPosition</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;x_i, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;y_i,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;index);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#ac5824f2e3df38145f8f13cedfd0538d3">  106</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#ac5824f2e3df38145f8f13cedfd0538d3">getDiscreteOrientation</a>(<span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#aee2065d389a9fdfd502b6aa9235b1491">  115</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#aee2065d389a9fdfd502b6aa9235b1491">getDiscreteVelocity</a>(<a class="code" href="structlattice__planner_1_1Velocity.html">Velocity</a> vel, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;vel_x_i, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp;vel_w_i);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#aa4438c6e43b6e45d6707efb5208c8285">  126</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#aa4438c6e43b6e45d6707efb5208c8285">getLimits</a>(<span class="keywordtype">int</span> &amp;num_gridcells, <span class="keywordtype">int</span> &amp;num_orientations, <span class="keywordtype">int</span> &amp; num_vels_x,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                 <span class="keywordtype">int</span> &amp;num_vels_w);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1StateDiscretizer.html#a68ca81e173a4c792c9aa65e2d59ad021">  139</a></span>&#160;  <a class="code" href="structlattice__planner_1_1Velocity.html">Velocity</a> <a class="code" href="classlattice__planner_1_1StateDiscretizer.html#a68ca81e173a4c792c9aa65e2d59ad021">getVelocity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vel_x_i, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vel_w_i);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="classlattice__planner_1_1StateDiscretizer.html">StateDiscretizer</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <a class="code" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a> motion_constraints_; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a>* costmap_; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">int</span> num_gridcells_; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordtype">int</span> num_orientations_; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">int</span> num_vel_x_; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">int</span> num_vel_phi_; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">double</span> time_resolution_; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">double</span> vel_step_x_; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordtype">double</span> vel_step_phi_; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;} <span class="comment">//namespace lattice_planner</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasslattice__planner_1_1DynamicCostmap_html"><div class="ttname"><a href="classlattice__planner_1_1DynamicCostmap.html">lattice_planner::DynamicCostmap</a></div><div class="ttdoc">The DynamicCostmap class defines a layered dynamic cost map representation for time dependent plannin...</div><div class="ttdef"><b>Definition:</b> dynamic_costmap.h:59</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html"><div class="ttname"><a href="classlattice__planner_1_1Pose.html">lattice_planner::Pose</a></div><div class="ttdoc">container for the (3D planar) robot pose and pose related properties, conversions and calculations</div><div class="ttdef"><b>Definition:</b> pose.h:51</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html">lattice_planner::StateDiscretizer</a></div><div class="ttdoc">calculations and conversions between a continuous and its discrete state representation</div><div class="ttdef"><b>Definition:</b> state_discretizer.h:55</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_a326ab159e31dd7b48315dbec80091fcc"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#a326ab159e31dd7b48315dbec80091fcc">lattice_planner::StateDiscretizer::getNumDiscreteAngles</a></div><div class="ttdeci">int getNumDiscreteAngles(double acc_w, double time_delta)</div><div class="ttdoc">calculate the number of discrete angles necessary to represent the configuration space</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_a68ca81e173a4c792c9aa65e2d59ad021"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#a68ca81e173a4c792c9aa65e2d59ad021">lattice_planner::StateDiscretizer::getVelocity</a></div><div class="ttdeci">Velocity getVelocity(unsigned int vel_x_i, unsigned int vel_w_i)</div><div class="ttdoc">get corresponding continuous velocity to a given discrete representation.</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_a6f93b8fa02d6b391d67cae49a9ad3563"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#a6f93b8fa02d6b391d67cae49a9ad3563">lattice_planner::StateDiscretizer::discretizeState</a></div><div class="ttdeci">DiscreteState discretizeState(Pose pose, Velocity vel, int time_step)</div><div class="ttdoc">find the discrete representation for a given state</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_a97cb8c045d4538ed836b9fc8ffac57ac"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#a97cb8c045d4538ed836b9fc8ffac57ac">lattice_planner::StateDiscretizer::StateDiscretizer</a></div><div class="ttdeci">StateDiscretizer(DynamicCostmap *costmap, MotionConstraints motion_constraints)</div><div class="ttdoc">constructor</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_a9aca1249de99d4d5309ed3e24c87daa0"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#a9aca1249de99d4d5309ed3e24c87daa0">lattice_planner::StateDiscretizer::getCellPosition</a></div><div class="ttdeci">bool getCellPosition(double x, double y, unsigned int &amp;x_i, unsigned int &amp;y_i, unsigned int &amp;index)</div><div class="ttdoc">calculate the map coordinates and map index from a continuous position</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_aa4438c6e43b6e45d6707efb5208c8285"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#aa4438c6e43b6e45d6707efb5208c8285">lattice_planner::StateDiscretizer::getLimits</a></div><div class="ttdeci">void getLimits(int &amp;num_gridcells, int &amp;num_orientations, int &amp;num_vels_x, int &amp;num_vels_w)</div><div class="ttdoc">get the discretization limits: amount of discrete steps available for each state dimension to represe...</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_ac5824f2e3df38145f8f13cedfd0538d3"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#ac5824f2e3df38145f8f13cedfd0538d3">lattice_planner::StateDiscretizer::getDiscreteOrientation</a></div><div class="ttdeci">unsigned int getDiscreteOrientation(double angle)</div><div class="ttdoc">get discretized orientation from a given continuous representation</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1StateDiscretizer_html_aee2065d389a9fdfd502b6aa9235b1491"><div class="ttname"><a href="classlattice__planner_1_1StateDiscretizer.html#aee2065d389a9fdfd502b6aa9235b1491">lattice_planner::StateDiscretizer::getDiscreteVelocity</a></div><div class="ttdeci">void getDiscreteVelocity(Velocity vel, unsigned int &amp;vel_x_i, unsigned int &amp;vel_w_i)</div><div class="ttdoc">get discretized velocity from a given continuous representation</div></div>
+<div class="ttc" id="astructlattice__planner_1_1DiscreteState_html"><div class="ttname"><a href="structlattice__planner_1_1DiscreteState.html">lattice_planner::DiscreteState</a></div><div class="ttdoc">Data container for the discrete representation of a planning state</div><div class="ttdef"><b>Definition:</b> discrete_state.h:47</div></div>
+<div class="ttc" id="astructlattice__planner_1_1MotionConstraints_html"><div class="ttname"><a href="structlattice__planner_1_1MotionConstraints.html">lattice_planner::MotionConstraints</a></div><div class="ttdoc">container for the motion constraints of the robot</div><div class="ttdef"><b>Definition:</b> motion_constraints.h:47</div></div>
+<div class="ttc" id="astructlattice__planner_1_1Velocity_html"><div class="ttname"><a href="structlattice__planner_1_1Velocity.html">lattice_planner::Velocity</a></div><div class="ttdoc">data structure for velocity information</div><div class="ttdef"><b>Definition:</b> velocity.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

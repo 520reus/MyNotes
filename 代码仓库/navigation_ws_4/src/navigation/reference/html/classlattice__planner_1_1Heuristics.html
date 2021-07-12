@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner::Heuristics类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>lattice_planner</b></li><li class="navelem"><a class="el" href="classlattice__planner_1_1Heuristics.html">Heuristics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">lattice_planner::Heuristics类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>calculates and manages the heuristics (estimated costs from a state to reach the goal) for path planning.  
+ <a href="classlattice__planner_1_1Heuristics.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="heuristics_8h_source.html">heuristics.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a16d9e263eda7314d45545579fd4cb14b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a16d9e263eda7314d45545579fd4cb14b">Heuristics</a> (<a class="el" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a> *costmap, <a class="el" href="structlattice__planner_1_1CostManager_1_1CostFactors.html">CostManager::CostFactors</a> cost_factors, <a class="el" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a> motion_constraints)</td></tr>
+<tr class="memdesc:a16d9e263eda7314d45545579fd4cb14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classlattice__planner_1_1Heuristics.html#a16d9e263eda7314d45545579fd4cb14b">更多...</a><br /></td></tr>
+<tr class="separator:a16d9e263eda7314d45545579fd4cb14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1835120118d94df67e36b2096b0329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#aea1835120118d94df67e36b2096b0329">estimateAdditional</a> (bool estimate_deceleration_at_goal, bool estimate_rotation_to_goal_orientation, double estimation_radius)</td></tr>
+<tr class="memdesc:aea1835120118d94df67e36b2096b0329"><td class="mdescLeft">&#160;</td><td class="mdescRight">to specify whether or not the optional estimations for the deceleration to zero velocity and the remaining angle to reach the goal orientation are included in the heuristic. Violates the optimality criterion of path planning, but is a lot faster  <a href="classlattice__planner_1_1Heuristics.html#aea1835120118d94df67e36b2096b0329">更多...</a><br /></td></tr>
+<tr class="separator:aea1835120118d94df67e36b2096b0329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a917227785e9af06b39725007701f94b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a917227785e9af06b39725007701f94b6">setNeutralCost</a> (float neutral_cost)</td></tr>
+<tr class="memdesc:a917227785e9af06b39725007701f94b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set neutral cost for Dijkstra expansion  <a href="classlattice__planner_1_1Heuristics.html#a917227785e9af06b39725007701f94b6">更多...</a><br /></td></tr>
+<tr class="separator:a917227785e9af06b39725007701f94b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782ce1285527069a8f7dffe43ddd299e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a782ce1285527069a8f7dffe43ddd299e">setHasUnknown</a> (bool allow_unknown)</td></tr>
+<tr class="memdesc:a782ce1285527069a8f7dffe43ddd299e"><td class="mdescLeft">&#160;</td><td class="mdescRight">specify whether the Dijkstra expansion should explore unknown map regions  <a href="classlattice__planner_1_1Heuristics.html#a782ce1285527069a8f7dffe43ddd299e">更多...</a><br /></td></tr>
+<tr class="separator:a782ce1285527069a8f7dffe43ddd299e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23efa10ab63f34d9c1878a10a3a9348"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#af23efa10ab63f34d9c1878a10a3a9348">setLethalCost</a> (float lethal_cost)</td></tr>
+<tr class="memdesc:af23efa10ab63f34d9c1878a10a3a9348"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the lethal cost value - the cost value from which states are pruned  <a href="classlattice__planner_1_1Heuristics.html#af23efa10ab63f34d9c1878a10a3a9348">更多...</a><br /></td></tr>
+<tr class="separator:af23efa10ab63f34d9c1878a10a3a9348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af581ecb5f74d8da47dc66cee8ef66b87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#af581ecb5f74d8da47dc66cee8ef66b87">expand</a> (int goal_x, int goal_y)</td></tr>
+<tr class="memdesc:af581ecb5f74d8da47dc66cee8ef66b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">do the Dijkstra expansion on the map  <a href="classlattice__planner_1_1Heuristics.html#af581ecb5f74d8da47dc66cee8ef66b87">更多...</a><br /></td></tr>
+<tr class="separator:af581ecb5f74d8da47dc66cee8ef66b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6298e14bc534271e39c1148ab3220ad7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a6298e14bc534271e39c1148ab3220ad7">getHeuristic</a> (<a class="el" href="structlattice__planner_1_1State.html">State</a> *state, <a class="el" href="classlattice__planner_1_1Pose.html">Pose</a> goal_pose)</td></tr>
+<tr class="memdesc:a6298e14bc534271e39c1148ab3220ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">after the heuristic was expanded, it returns the estimated costs from a state to reach the goal  <a href="classlattice__planner_1_1Heuristics.html#a6298e14bc534271e39c1148ab3220ad7">更多...</a><br /></td></tr>
+<tr class="separator:a6298e14bc534271e39c1148ab3220ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5e2108dd9dd74cf63b4f3cd0b57c39"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a5a5e2108dd9dd74cf63b4f3cd0b57c39">estimateTurnToGoal</a> (<a class="el" href="structlattice__planner_1_1State.html">State</a> *state, <a class="el" href="classlattice__planner_1_1Pose.html">Pose</a> goal_pose)</td></tr>
+<tr class="memdesc:a5a5e2108dd9dd74cf63b4f3cd0b57c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">estimates the costs according to the time the robot would need to turn to the goal orientation.  <a href="classlattice__planner_1_1Heuristics.html#a5a5e2108dd9dd74cf63b4f3cd0b57c39">更多...</a><br /></td></tr>
+<tr class="separator:a5a5e2108dd9dd74cf63b4f3cd0b57c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebca14c3799eb9fa6270dcb0e5ba2e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#a1ebca14c3799eb9fa6270dcb0e5ba2e3">estimateDecelerationAtGoal</a> (<a class="el" href="structlattice__planner_1_1State.html">State</a> *state, <a class="el" href="classlattice__planner_1_1Pose.html">Pose</a> goal_pose)</td></tr>
+<tr class="memdesc:a1ebca14c3799eb9fa6270dcb0e5ba2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">estimates the costs according to the time the robot would need to decelerate to zero velocity at the goal.  <a href="classlattice__planner_1_1Heuristics.html#a1ebca14c3799eb9fa6270dcb0e5ba2e3">更多...</a><br /></td></tr>
+<tr class="separator:a1ebca14c3799eb9fa6270dcb0e5ba2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abefea41dbe100c0160b3fc63967f470e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#abefea41dbe100c0160b3fc63967f470e">initPublisher</a> (std::string topic_name, int publish_scale=100)</td></tr>
+<tr class="memdesc:abefea41dbe100c0160b3fc63967f470e"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the heuristics publisher, if desired  <a href="classlattice__planner_1_1Heuristics.html#abefea41dbe100c0160b3fc63967f470e">更多...</a><br /></td></tr>
+<tr class="separator:abefea41dbe100c0160b3fc63967f470e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4078ff381b43fb91c0a3624f5c7ed28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#ae4078ff381b43fb91c0a3624f5c7ed28">publishHeuristic</a> (float *heuristic)</td></tr>
+<tr class="memdesc:ae4078ff381b43fb91c0a3624f5c7ed28"><td class="mdescLeft">&#160;</td><td class="mdescRight">publish a heuristics map  <a href="classlattice__planner_1_1Heuristics.html#ae4078ff381b43fb91c0a3624f5c7ed28">更多...</a><br /></td></tr>
+<tr class="separator:ae4078ff381b43fb91c0a3624f5c7ed28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50a891ef8d7f8e2b25fcc773ef3bdf7"><td class="memItemLeft" align="right" valign="top"><a id="af50a891ef8d7f8e2b25fcc773ef3bdf7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1Heuristics.html#af50a891ef8d7f8e2b25fcc773ef3bdf7">publishHeuristic</a> ()</td></tr>
+<tr class="memdesc:af50a891ef8d7f8e2b25fcc773ef3bdf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">publish the heuristic managed by this class <br /></td></tr>
+<tr class="separator:af50a891ef8d7f8e2b25fcc773ef3bdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>calculates and manages the heuristics (estimated costs from a state to reach the goal) for path planning. </p>
+<p>The heuristics are estimated based on the following simplifications of the path planning problem:</p><ul>
+<li>no dynamic obstacles</li>
+<li>robot is holonomic and has no inertial constraints A planar, eight-connected Dijkstra expansion is conducted on the static layer of the dynamic cost map to find the shortest possible path to the goal and the minimal static environment costs in the abscence of dynamic obstacles. The minimum time to reach the goal is estimated by assuming that the robot can execute the minimum distance path at maximum forward velocity.</li>
+</ul>
+<p>Furthermore, two optional estimations can be included in the heuristic estimation: The minimum time to decelerate from a state to zero velocity and the minimum time to rotate from a state to the goal orientation. Both properties are only estimated correctly close to the goal, outside the goal region always the worst-case time value is returned. Both estimations result in finding the goal (much) quicker. However, the heuristic will not be consistent and admissible any more with the estimations, therefore the planning algorithm is no longer guaranteed to find the optimal solution. In practise, the optional estimations will cause the robot to advance straight to the goal and turn to the goal orientation on the spot rather than driving a curve to reach the goal orientation, thus maybe taking a bit longer to reach the goal for some goal configurations. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a16d9e263eda7314d45545579fd4cb14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d9e263eda7314d45545579fd4cb14b">&#9670;&nbsp;</a></span>Heuristics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lattice_planner::Heuristics::Heuristics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1CostManager_1_1CostFactors.html">CostManager::CostFactors</a>&#160;</td>
+          <td class="paramname"><em>cost_factors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a>&#160;</td>
+          <td class="paramname"><em>motion_constraints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap</td><td>dynamic cost map used for planning </td></tr>
+    <tr><td class="paramname">cost_factors</td><td>weights of the cost aspects in the defined cost function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classlattice__planner_1_1CostManager.html" title="Class for cost calculation for path search">CostManager</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">motion_constraints</td><td>velocity and acceleration limits of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aea1835120118d94df67e36b2096b0329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1835120118d94df67e36b2096b0329">&#9670;&nbsp;</a></span>estimateAdditional()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::estimateAdditional </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>estimate_deceleration_at_goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>estimate_rotation_to_goal_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>estimation_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>to specify whether or not the optional estimations for the deceleration to zero velocity and the remaining angle to reach the goal orientation are included in the heuristic. Violates the optimality criterion of path planning, but is a lot faster </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">estimate_deceleration_at_goal</td><td>whether the necessary time to decelerate to zero velocity should be considered in the heuristic </td></tr>
+    <tr><td class="paramname">estimate_rotation_to_goal_orientation</td><td>whether the necessary time to rotate to the goal orientation should be considered in the heuristic </td></tr>
+    <tr><td class="paramname">estimation_radius</td><td>radius around the goal inside which the costs are estimated correctly. Outside the estimation_radius, always the worst- case costs are estimated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ebca14c3799eb9fa6270dcb0e5ba2e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebca14c3799eb9fa6270dcb0e5ba2e3">&#9670;&nbsp;</a></span>estimateDecelerationAtGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lattice_planner::Heuristics::estimateDecelerationAtGoal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1State.html">State</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td>
+          <td class="paramname"><em>goal_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>estimates the costs according to the time the robot would need to decelerate to zero velocity at the goal. </p>
+<p>Optional heuristic estimation, accelerates the search but might confine the optimality of the path search</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>state for which the heuristic is queried </td></tr>
+    <tr><td class="paramname">goal_pose</td><td>the goal pose </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>additional estimated time costs for decelerating to zero at the goal </dd></dl>
+
+</div>
+</div>
+<a id="a5a5e2108dd9dd74cf63b4f3cd0b57c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5e2108dd9dd74cf63b4f3cd0b57c39">&#9670;&nbsp;</a></span>estimateTurnToGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lattice_planner::Heuristics::estimateTurnToGoal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1State.html">State</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td>
+          <td class="paramname"><em>goal_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>estimates the costs according to the time the robot would need to turn to the goal orientation. </p>
+<p>Optional heuristic estimation, accelerates the search but might confine the optimality of the path search</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>state for which the heuristic is queried </td></tr>
+    <tr><td class="paramname">goal_pose</td><td>the goal pose </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>additional estimated time costs for turning in place at the goal </dd></dl>
+
+</div>
+</div>
+<a id="af581ecb5f74d8da47dc66cee8ef66b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af581ecb5f74d8da47dc66cee8ef66b87">&#9670;&nbsp;</a></span>expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lattice_planner::Heuristics::expand </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>goal_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>goal_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>do the Dijkstra expansion on the map </p>
+<p>expand from the goal outwards, wavefront style, to find the shortest possible path and minimal environment costs from each state in the map to the goal</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal_x</td><td>goal x coordinate in map </td></tr>
+    <tr><td class="paramname">goal_y</td><td>goal y coordinate in map </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>whether or not the expansion was successfull (could fail if goal is inside obstacle etc.) </dd></dl>
+
+</div>
+</div>
+<a id="a6298e14bc534271e39c1148ab3220ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6298e14bc534271e39c1148ab3220ad7">&#9670;&nbsp;</a></span>getHeuristic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float lattice_planner::Heuristics::getHeuristic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1State.html">State</a> *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td>
+          <td class="paramname"><em>goal_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>after the heuristic was expanded, it returns the estimated costs from a state to reach the goal </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>state for which the heuristic is queried </td></tr>
+    <tr><td class="paramname">goal_pose</td><td>the goal pose </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>the estimated remaining costs from the state to the goal </dd></dl>
+
+</div>
+</div>
+<a id="abefea41dbe100c0160b3fc63967f470e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefea41dbe100c0160b3fc63967f470e">&#9670;&nbsp;</a></span>initPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::initPublisher </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>topic_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>publish_scale</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize the heuristics publisher, if desired </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>rostopic name on which to publish </td></tr>
+    <tr><td class="paramname">publish_scale</td><td>maximum value of the published cost map </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4078ff381b43fb91c0a3624f5c7ed28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4078ff381b43fb91c0a3624f5c7ed28">&#9670;&nbsp;</a></span>publishHeuristic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::publishHeuristic </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>heuristic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>publish a heuristics map </p>
+<p>The heuristic map has to be of the same size than the dynamic cost map and have the same global frame id</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heuristic</td><td>a heuristics map </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a782ce1285527069a8f7dffe43ddd299e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782ce1285527069a8f7dffe43ddd299e">&#9670;&nbsp;</a></span>setHasUnknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::setHasUnknown </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allow_unknown</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>specify whether the Dijkstra expansion should explore unknown map regions </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allow_unknown</td><td>whether or not to explore unknown map regions </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af23efa10ab63f34d9c1878a10a3a9348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23efa10ab63f34d9c1878a10a3a9348">&#9670;&nbsp;</a></span>setLethalCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::setLethalCost </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lethal_cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the lethal cost value - the cost value from which states are pruned </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lethal_cost</td><td>lethal cost value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a917227785e9af06b39725007701f94b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917227785e9af06b39725007701f94b6">&#9670;&nbsp;</a></span>setNeutralCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::Heuristics::setNeutralCost </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>neutral_cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set neutral cost for Dijkstra expansion </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">neutral_cost</td><td>neutral cost </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>lattice_planner/include/lattice_planner/<a class="el" href="heuristics_8h_source.html">heuristics.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

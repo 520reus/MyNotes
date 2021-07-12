@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_2d/include/costmap_2d/costmap_2d.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_9023f81029f0cf9e898f85623bcdf0cf.html">include</a></li><li class="navelem"><a class="el" href="dir_16510bf0b8e4dfa92912bb2cd2c73724.html">costmap_2d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">costmap_2d.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef COSTMAP_2D_COSTMAP_2D_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define COSTMAP_2D_COSTMAP_2D_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Point.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecostmap__2d.html">costmap_2d</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// convenient for storing x/y point pairs</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structcostmap__2d_1_1MapLocation.html">   50</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcostmap__2d_1_1MapLocation.html">MapLocation</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>CostmapTester;  <span class="comment">// Need this for gtest to work correctly</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a5c41d42532693430c002c16258925d82">   73</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a5c41d42532693430c002c16258925d82">Costmap2D</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cells_size_x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cells_size_y, <span class="keywordtype">double</span> resolution,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordtype">double</span> origin_x, <span class="keywordtype">double</span> origin_y, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> default_value = 0);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a430191c66018db89e5a65fb823db35d8">   80</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a430191c66018db89e5a65fb823db35d8">Costmap2D</a>(<span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; map);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a3ab5d3eb9d9faf88e9ee419923eb0cef">   87</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a3ab5d3eb9d9faf88e9ee419923eb0cef">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; map);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a8fb9538b17743071ea041b32bcc3b381">   97</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a8fb9538b17743071ea041b32bcc3b381">copyCostmapWindow</a>(<span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; map, <span class="keywordtype">double</span> win_origin_x, <span class="keywordtype">double</span> win_origin_y, <span class="keywordtype">double</span> win_size_x,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                         <span class="keywordtype">double</span> win_size_y);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a1ec52799b2b673306902fcfe01285d7a">  103</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a1ec52799b2b673306902fcfe01285d7a">Costmap2D</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a265b202f83cd63385a5a430850ba29ba">  108</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a265b202f83cd63385a5a430850ba29ba">~Costmap2D</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27">  116</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27">getCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#ae1703900adbbf1e0d929cec0735a8b0e">  124</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#ae1703900adbbf1e0d929cec0735a8b0e">setCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cost);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a8e39feaa7ee4446347674b3701a1394c">  133</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a8e39feaa7ee4446347674b3701a1394c">mapToWorld</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my, <span class="keywordtype">double</span>&amp; wx, <span class="keywordtype">double</span>&amp; wy) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a9a2c824d4cd3bcad3ac3435d81982986">  143</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a9a2c824d4cd3bcad3ac3435d81982986">worldToMap</a>(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; my) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a2da39cb06d192795614df9c2bf00692f">  153</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a2da39cb06d192795614df9c2bf00692f">worldToMapNoBounds</a>(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">int</span>&amp; my) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#ae412173f42af7edba9996f86754b7cbf">  163</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#ae412173f42af7edba9996f86754b7cbf">worldToMapEnforceBounds</a>(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">int</span>&amp; my) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a57d2ea3f3a039d72640c159cd149ff9d">  171</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a57d2ea3f3a039d72640c159cd149ff9d">getIndex</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> my * <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a> + mx;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#aa10c1734472f485473302598113fcddc">  182</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa10c1734472f485473302598113fcddc">indexToCells</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>&amp; my)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    my = index / <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    mx = index - (my * <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a4164849ea26d493c10394056e8c74984">  192</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a4164849ea26d493c10394056e8c74984">getCharMap</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a615a4186649d8970111f8a356906b320">  198</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a615a4186649d8970111f8a356906b320">getSizeInCellsX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a702f4ed109f94c8513500cf97ff066a4">  204</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a702f4ed109f94c8513500cf97ff066a4">getSizeInCellsY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a645ea4720d5cab8bcf662687cc81d087">  210</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a645ea4720d5cab8bcf662687cc81d087">getSizeInMetersX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#afb1d6cdc01d77452175487955e6aff4d">  216</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#afb1d6cdc01d77452175487955e6aff4d">getSizeInMetersY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a9aae81be964f5fff675f9a10c3bf2e82">  222</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a9aae81be964f5fff675f9a10c3bf2e82">getOriginX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a686124b010e121eb87629ff17a032d7f">  228</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a686124b010e121eb87629ff17a032d7f">getOriginY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#ade55f512e27c62cec28a3de5ca775759">  234</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#ade55f512e27c62cec28a3de5ca775759">getResolution</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">void</span> setDefaultValue(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    default_value_ = c;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> getDefaultValue()</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">return</span> default_value_;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#afb8a42c3810e796107ed04c0ca3cbf90">  252</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#afb8a42c3810e796107ed04c0ca3cbf90">setConvexPolygonCost</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::Point&gt;&amp; polygon, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cost_value);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#ad0c6f7cb8e11569a02f873c545acec90">  259</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#ad0c6f7cb8e11569a02f873c545acec90">polygonOutlineCells</a>(<span class="keyword">const</span> std::vector&lt;MapLocation&gt;&amp; polygon, std::vector&lt;MapLocation&gt;&amp; polygon_cells);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#aa3c49f2d63f6edfb7396d1b0c79a4b12">  266</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa3c49f2d63f6edfb7396d1b0c79a4b12">convexFillCells</a>(<span class="keyword">const</span> std::vector&lt;MapLocation&gt;&amp; polygon, std::vector&lt;MapLocation&gt;&amp; polygon_cells);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a05f4ac37ffefde76d0844464005f371f">  273</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a05f4ac37ffefde76d0844464005f371f">updateOrigin</a>(<span class="keywordtype">double</span> new_origin_x, <span class="keywordtype">double</span> new_origin_y);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a04cd3558a672159a3ad1b151b1d19661">  279</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a04cd3558a672159a3ad1b151b1d19661">saveMap</a>(std::string file_name);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">void</span> resizeMap(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_y, <span class="keywordtype">double</span> resolution, <span class="keywordtype">double</span> origin_x,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                 <span class="keywordtype">double</span> origin_y);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordtype">void</span> resetMap(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x0, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y0, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> xn, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> yn);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#abffbb5c7d49fae947d70c4e6d0fbeae9">  291</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#abffbb5c7d49fae947d70c4e6d0fbeae9">cellDistance</a>(<span class="keywordtype">double</span> world_dist);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="comment">// Provide a typedef to ease future code maintenance</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keyword">typedef</span> boost::recursive_mutex mutex_t;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  mutex_t* getMutex()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> access_;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> data_type&gt;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#ab857ec41de2e14d601b85bbf6497b612">  315</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#ab857ec41de2e14d601b85bbf6497b612">copyMapRegion</a>(data_type* source_map, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sm_lower_left_x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sm_lower_left_y,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sm_size_x, data_type* dest_map, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dm_lower_left_x,</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dm_lower_left_y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dm_size_x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> region_size_x,</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                       <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> region_size_y)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="comment">// we&#39;ll first need to compute the starting points for each map</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      data_type* sm_index = source_map + (sm_lower_left_y * sm_size_x + sm_lower_left_x);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      data_type* dm_index = dest_map + (dm_lower_left_y * dm_size_x + dm_lower_left_x);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="comment">// now, we&#39;ll copy the source map into the destination map</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; region_size_y; ++i)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        memcpy(dm_index, sm_index, region_size_x * <span class="keyword">sizeof</span>(data_type));</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        sm_index += sm_size_x;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        dm_index += dm_size_x;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#adfd5431722fd1de28d0c07127dd9ab86">  336</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#adfd5431722fd1de28d0c07127dd9ab86">deleteMaps</a>();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a95e0e609980e33c62621b08b7863a492">  341</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a95e0e609980e33c62621b08b7863a492">resetMaps</a>();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#a492d393ac60ad5b9f06a5ac785b7029b">  348</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#a492d393ac60ad5b9f06a5ac785b7029b">initMaps</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_y);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> ActionType&gt;</div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#af1d619d9b49b6851cb0a33de4e39ec78">  360</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#af1d619d9b49b6851cb0a33de4e39ec78">raytraceLine</a>(ActionType at, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x0, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y0, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y1,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_length = UINT_MAX)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      <span class="keywordtype">int</span> dx = x1 - x0;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keywordtype">int</span> dy = y1 - y0;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> abs_dx = abs(dx);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> abs_dy = abs(dy);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <span class="keywordtype">int</span> offset_dx = sign(dx);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordtype">int</span> offset_dy = sign(dy) * <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset = y0 * <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a> + x0;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      <span class="comment">// we need to chose how much to scale our dominant dimension, based on the maximum length of the line</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keywordtype">double</span> dist = hypot(dx, dy);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;      <span class="keywordtype">double</span> scale = (dist == 0.0) ? 1.0 : std::min(1.0, max_length / dist);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      <span class="comment">// if x is dominant</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keywordflow">if</span> (abs_dx &gt;= abs_dy)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">int</span> error_y = abs_dx / 2;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        bresenham2D(at, abs_dx, abs_dy, error_y, offset_dx, offset_dy, offset, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)(scale * abs_dx));</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      <span class="comment">// otherwise y is dominant</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordtype">int</span> error_x = abs_dy / 2;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      bresenham2D(at, abs_dy, abs_dx, error_x, offset_dy, offset_dx, offset, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)(scale * abs_dy));</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> ActionType&gt;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> bresenham2D(ActionType at, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> abs_da, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> abs_db, <span class="keywordtype">int</span> error_b, <span class="keywordtype">int</span> offset_a,</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                            <span class="keywordtype">int</span> offset_b, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_length)</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> end = std::min(max_length, abs_da);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; end; ++i)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      {</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        at(offset);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        offset += offset_a;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        error_b += abs_db;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">if</span> ((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)error_b &gt;= abs_da)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;          offset += offset_b;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;          error_b -= abs_da;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;      at(offset);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">int</span> sign(<span class="keywordtype">int</span> x)</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">return</span> x &gt; 0 ? 1.0 : -1.0;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  mutex_t* access_;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">  430</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">size_x_</a>;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size_y_;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keywordtype">double</span> resolution_;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keywordtype">double</span> origin_x_;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="keywordtype">double</span> origin_y_;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costmap_;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> default_value_;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D_1_1MarkCell.html">  438</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classcostmap__2d_1_1Costmap2D_1_1MarkCell.html">MarkCell</a></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  {</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <a class="code" href="classcostmap__2d_1_1Costmap2D_1_1MarkCell.html">MarkCell</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costmap, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value) :</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        costmap_(costmap), value_(value)</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    {</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> operator()(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset)</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      costmap_[offset] = value_;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costmap_;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value_;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  };</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno"><a class="line" href="classcostmap__2d_1_1Costmap2D_1_1PolygonOutlineCells.html">  454</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classcostmap__2d_1_1Costmap2D_1_1PolygonOutlineCells.html">PolygonOutlineCells</a></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <a class="code" href="classcostmap__2d_1_1Costmap2D_1_1PolygonOutlineCells.html">PolygonOutlineCells</a>(<span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; costmap, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* char_map, std::vector&lt;MapLocation&gt;&amp; cells) :</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        costmap_(costmap), char_map_(char_map), cells_(cells)</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    {</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">// just push the relevant cells back onto the list</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> operator()(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> offset)</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;      <a class="code" href="structcostmap__2d_1_1MapLocation.html">MapLocation</a> loc;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      costmap_.indexToCells(offset, loc.x, loc.y);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;      cells_.push_back(loc);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    }</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">Costmap2D</a>&amp; costmap_;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* char_map_;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    std::vector&lt;MapLocation&gt;&amp; cells_;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  };</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;};</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}  <span class="comment">// namespace costmap_2d</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// COSTMAP_2D_COSTMAP_2D_H</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_1_1MarkCell_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D_1_1MarkCell.html">costmap_2d::Costmap2D::MarkCell</a></div><div class="ttdef"><b>Definition:</b> costmap_2d.h:439</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_1_1PolygonOutlineCells_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D_1_1PolygonOutlineCells.html">costmap_2d::Costmap2D::PolygonOutlineCells</a></div><div class="ttdef"><b>Definition:</b> costmap_2d.h:455</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a04cd3558a672159a3ad1b151b1d19661"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a04cd3558a672159a3ad1b151b1d19661">costmap_2d::Costmap2D::saveMap</a></div><div class="ttdeci">bool saveMap(std::string file_name)</div><div class="ttdoc">Save the costmap out to a pgm file</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a05f4ac37ffefde76d0844464005f371f"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a05f4ac37ffefde76d0844464005f371f">costmap_2d::Costmap2D::updateOrigin</a></div><div class="ttdeci">virtual void updateOrigin(double new_origin_x, double new_origin_y)</div><div class="ttdoc">Move the origin of the costmap to a new location.... keeping data when it can</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a1ec52799b2b673306902fcfe01285d7a"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a1ec52799b2b673306902fcfe01285d7a">costmap_2d::Costmap2D::Costmap2D</a></div><div class="ttdeci">Costmap2D()</div><div class="ttdoc">Default constructor</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a265b202f83cd63385a5a430850ba29ba"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a265b202f83cd63385a5a430850ba29ba">costmap_2d::Costmap2D::~Costmap2D</a></div><div class="ttdeci">virtual ~Costmap2D()</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a2a8ad2c3fc3aa47be8d2d0f9ae113c27"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27">costmap_2d::Costmap2D::getCost</a></div><div class="ttdeci">unsigned char getCost(unsigned int mx, unsigned int my) const</div><div class="ttdoc">Get the cost of a cell in the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a2da39cb06d192795614df9c2bf00692f"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a2da39cb06d192795614df9c2bf00692f">costmap_2d::Costmap2D::worldToMapNoBounds</a></div><div class="ttdeci">void worldToMapNoBounds(double wx, double wy, int &amp;mx, int &amp;my) const</div><div class="ttdoc">Convert from world coordinates to map coordinates without checking for legal bounds</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a3ab5d3eb9d9faf88e9ee419923eb0cef"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a3ab5d3eb9d9faf88e9ee419923eb0cef">costmap_2d::Costmap2D::operator=</a></div><div class="ttdeci">Costmap2D &amp; operator=(const Costmap2D &amp;map)</div><div class="ttdoc">Overloaded assignment operator</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a4164849ea26d493c10394056e8c74984"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a4164849ea26d493c10394056e8c74984">costmap_2d::Costmap2D::getCharMap</a></div><div class="ttdeci">unsigned char * getCharMap() const</div><div class="ttdoc">Will return a pointer to the underlying unsigned char array used as the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a430191c66018db89e5a65fb823db35d8"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a430191c66018db89e5a65fb823db35d8">costmap_2d::Costmap2D::Costmap2D</a></div><div class="ttdeci">Costmap2D(const Costmap2D &amp;map)</div><div class="ttdoc">Copy constructor for a costmap, creates a copy efficiently</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a492d393ac60ad5b9f06a5ac785b7029b"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a492d393ac60ad5b9f06a5ac785b7029b">costmap_2d::Costmap2D::initMaps</a></div><div class="ttdeci">virtual void initMaps(unsigned int size_x, unsigned int size_y)</div><div class="ttdoc">Initializes the costmap, static_map, and markers data structures</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a57d2ea3f3a039d72640c159cd149ff9d"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a57d2ea3f3a039d72640c159cd149ff9d">costmap_2d::Costmap2D::getIndex</a></div><div class="ttdeci">unsigned int getIndex(unsigned int mx, unsigned int my) const</div><div class="ttdoc">Given two map coordinates... compute the associated index</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:171</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a5c41d42532693430c002c16258925d82"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a5c41d42532693430c002c16258925d82">costmap_2d::Costmap2D::Costmap2D</a></div><div class="ttdeci">Costmap2D(unsigned int cells_size_x, unsigned int cells_size_y, double resolution, double origin_x, double origin_y, unsigned char default_value=0)</div><div class="ttdoc">Constructor for a costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a615a4186649d8970111f8a356906b320"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a615a4186649d8970111f8a356906b320">costmap_2d::Costmap2D::getSizeInCellsX</a></div><div class="ttdeci">unsigned int getSizeInCellsX() const</div><div class="ttdoc">Accessor for the x size of the costmap in cells</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a645ea4720d5cab8bcf662687cc81d087"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a645ea4720d5cab8bcf662687cc81d087">costmap_2d::Costmap2D::getSizeInMetersX</a></div><div class="ttdeci">double getSizeInMetersX() const</div><div class="ttdoc">Accessor for the x size of the costmap in meters</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a686124b010e121eb87629ff17a032d7f"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a686124b010e121eb87629ff17a032d7f">costmap_2d::Costmap2D::getOriginY</a></div><div class="ttdeci">double getOriginY() const</div><div class="ttdoc">Accessor for the y origin of the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a702f4ed109f94c8513500cf97ff066a4"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a702f4ed109f94c8513500cf97ff066a4">costmap_2d::Costmap2D::getSizeInCellsY</a></div><div class="ttdeci">unsigned int getSizeInCellsY() const</div><div class="ttdoc">Accessor for the y size of the costmap in cells</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a8e39feaa7ee4446347674b3701a1394c"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a8e39feaa7ee4446347674b3701a1394c">costmap_2d::Costmap2D::mapToWorld</a></div><div class="ttdeci">void mapToWorld(unsigned int mx, unsigned int my, double &amp;wx, double &amp;wy) const</div><div class="ttdoc">Convert from map coordinates to world coordinates</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a8fb9538b17743071ea041b32bcc3b381"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a8fb9538b17743071ea041b32bcc3b381">costmap_2d::Costmap2D::copyCostmapWindow</a></div><div class="ttdeci">bool copyCostmapWindow(const Costmap2D &amp;map, double win_origin_x, double win_origin_y, double win_size_x, double win_size_y)</div><div class="ttdoc">Turn this costmap into a copy of a window of a costmap passed in</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a95e0e609980e33c62621b08b7863a492"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a95e0e609980e33c62621b08b7863a492">costmap_2d::Costmap2D::resetMaps</a></div><div class="ttdeci">virtual void resetMaps()</div><div class="ttdoc">Resets the costmap and static_map to be unknown space</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a9a2c824d4cd3bcad3ac3435d81982986"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a9a2c824d4cd3bcad3ac3435d81982986">costmap_2d::Costmap2D::worldToMap</a></div><div class="ttdeci">bool worldToMap(double wx, double wy, unsigned int &amp;mx, unsigned int &amp;my) const</div><div class="ttdoc">Convert from world coordinates to map coordinates</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_a9aae81be964f5fff675f9a10c3bf2e82"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#a9aae81be964f5fff675f9a10c3bf2e82">costmap_2d::Costmap2D::getOriginX</a></div><div class="ttdeci">double getOriginX() const</div><div class="ttdoc">Accessor for the x origin of the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_aa10c1734472f485473302598113fcddc"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#aa10c1734472f485473302598113fcddc">costmap_2d::Costmap2D::indexToCells</a></div><div class="ttdeci">void indexToCells(unsigned int index, unsigned int &amp;mx, unsigned int &amp;my) const</div><div class="ttdoc">Given an index... compute the associated map coordinates</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:182</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_aa3c49f2d63f6edfb7396d1b0c79a4b12"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#aa3c49f2d63f6edfb7396d1b0c79a4b12">costmap_2d::Costmap2D::convexFillCells</a></div><div class="ttdeci">void convexFillCells(const std::vector&lt; MapLocation &gt; &amp;polygon, std::vector&lt; MapLocation &gt; &amp;polygon_cells)</div><div class="ttdoc">Get the map cells that fill a convex polygon</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_aa71bf88a183222496f17b3a95e852e75"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#aa71bf88a183222496f17b3a95e852e75">costmap_2d::Costmap2D::size_x_</a></div><div class="ttdeci">unsigned int size_x_</div><div class="ttdoc">Constructor for a costmap</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:430</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_ab857ec41de2e14d601b85bbf6497b612"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#ab857ec41de2e14d601b85bbf6497b612">costmap_2d::Costmap2D::copyMapRegion</a></div><div class="ttdeci">void copyMapRegion(data_type *source_map, unsigned int sm_lower_left_x, unsigned int sm_lower_left_y, unsigned int sm_size_x, data_type *dest_map, unsigned int dm_lower_left_x, unsigned int dm_lower_left_y, unsigned int dm_size_x, unsigned int region_size_x, unsigned int region_size_y)</div><div class="ttdoc">Copy a region of a source map into a destination map</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:315</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_abffbb5c7d49fae947d70c4e6d0fbeae9"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#abffbb5c7d49fae947d70c4e6d0fbeae9">costmap_2d::Costmap2D::cellDistance</a></div><div class="ttdeci">unsigned int cellDistance(double world_dist)</div><div class="ttdoc">Given distance in the world... convert it to cells</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_ad0c6f7cb8e11569a02f873c545acec90"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#ad0c6f7cb8e11569a02f873c545acec90">costmap_2d::Costmap2D::polygonOutlineCells</a></div><div class="ttdeci">void polygonOutlineCells(const std::vector&lt; MapLocation &gt; &amp;polygon, std::vector&lt; MapLocation &gt; &amp;polygon_cells)</div><div class="ttdoc">Get the map cells that make up the outline of a polygon</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_ade55f512e27c62cec28a3de5ca775759"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#ade55f512e27c62cec28a3de5ca775759">costmap_2d::Costmap2D::getResolution</a></div><div class="ttdeci">double getResolution() const</div><div class="ttdoc">Accessor for the resolution of the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_adfd5431722fd1de28d0c07127dd9ab86"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#adfd5431722fd1de28d0c07127dd9ab86">costmap_2d::Costmap2D::deleteMaps</a></div><div class="ttdeci">virtual void deleteMaps()</div><div class="ttdoc">Deletes the costmap, static_map, and markers data structures</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_ae1703900adbbf1e0d929cec0735a8b0e"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#ae1703900adbbf1e0d929cec0735a8b0e">costmap_2d::Costmap2D::setCost</a></div><div class="ttdeci">void setCost(unsigned int mx, unsigned int my, unsigned char cost)</div><div class="ttdoc">Set the cost of a cell in the costmap</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_ae412173f42af7edba9996f86754b7cbf"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#ae412173f42af7edba9996f86754b7cbf">costmap_2d::Costmap2D::worldToMapEnforceBounds</a></div><div class="ttdeci">void worldToMapEnforceBounds(double wx, double wy, int &amp;mx, int &amp;my) const</div><div class="ttdoc">Convert from world coordinates to map coordinates, constraining results to legal bounds.</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_af1d619d9b49b6851cb0a33de4e39ec78"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#af1d619d9b49b6851cb0a33de4e39ec78">costmap_2d::Costmap2D::raytraceLine</a></div><div class="ttdeci">void raytraceLine(ActionType at, unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int max_length=UINT_MAX)</div><div class="ttdoc">Raytrace a line and apply some action at each step</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:360</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_afb1d6cdc01d77452175487955e6aff4d"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#afb1d6cdc01d77452175487955e6aff4d">costmap_2d::Costmap2D::getSizeInMetersY</a></div><div class="ttdeci">double getSizeInMetersY() const</div><div class="ttdoc">Accessor for the y size of the costmap in meters</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html_afb8a42c3810e796107ed04c0ca3cbf90"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html#afb8a42c3810e796107ed04c0ca3cbf90">costmap_2d::Costmap2D::setConvexPolygonCost</a></div><div class="ttdeci">bool setConvexPolygonCost(const std::vector&lt; geometry_msgs::Point &gt; &amp;polygon, unsigned char cost_value)</div><div class="ttdoc">Sets the cost of a convex polygon to a desired value</div></div>
+<div class="ttc" id="anamespacecostmap__2d_html"><div class="ttname"><a href="namespacecostmap__2d.html">costmap_2d</a></div><div class="ttdef"><b>Definition:</b> array_parser.h:38</div></div>
+<div class="ttc" id="astructcostmap__2d_1_1MapLocation_html"><div class="ttname"><a href="structcostmap__2d_1_1MapLocation.html">costmap_2d::MapLocation</a></div><div class="ttdef"><b>Definition:</b> costmap_2d.h:51</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,79 @@
+\hypertarget{classclear__costmap__recovery_1_1ClearCostmapRecovery}{}\doxysection{clear\+\_\+costmap\+\_\+recovery\+::Clear\+Costmap\+Recovery类 参考}
+\label{classclear__costmap__recovery_1_1ClearCostmapRecovery}\index{clear\_costmap\_recovery::ClearCostmapRecovery@{clear\_costmap\_recovery::ClearCostmapRecovery}}
+
+
+A recovery behavior that reverts the navigation stack\textquotesingle{}s costmaps to the static map outside of a user-\/specified region.  
+
+
+
+
+{\ttfamily \#include $<$clear\+\_\+costmap\+\_\+recovery.\+h$>$}
+
+类 clear\+\_\+costmap\+\_\+recovery\+::Clear\+Costmap\+Recovery 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classclear__costmap__recovery_1_1ClearCostmapRecovery}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5c2de7ddc82d620bc4d74d56a1177c98}{Clear\+Costmap\+Recovery}} ()
+\begin{DoxyCompactList}\small\item\em Constructor, make sure to call initialize in addition to actually initialize the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5b0e81f3ad151bb9d4058a36c9411efd}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$global\+\_\+costmap, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)
+\begin{DoxyCompactList}\small\item\em Initialization function for the \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery}{Clear\+Costmap\+Recovery}} recovery behavior \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classclear__costmap__recovery_1_1ClearCostmapRecovery_a7306f9a6b3db7e909e07e7fac7ee84a4}\label{classclear__costmap__recovery_1_1ClearCostmapRecovery_a7306f9a6b3db7e909e07e7fac7ee84a4}} 
+void \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery_a7306f9a6b3db7e909e07e7fac7ee84a4}{run\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em Run the \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery}{Clear\+Costmap\+Recovery}} recovery behavior. Reverts the costmap to the static map outside of a user-\/specified window and clears unknown space around the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A recovery behavior that reverts the navigation stack\textquotesingle{}s costmaps to the static map outside of a user-\/specified region. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5c2de7ddc82d620bc4d74d56a1177c98}\label{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5c2de7ddc82d620bc4d74d56a1177c98}} 
+\index{clear\_costmap\_recovery::ClearCostmapRecovery@{clear\_costmap\_recovery::ClearCostmapRecovery}!ClearCostmapRecovery@{ClearCostmapRecovery}}
+\index{ClearCostmapRecovery@{ClearCostmapRecovery}!clear\_costmap\_recovery::ClearCostmapRecovery@{clear\_costmap\_recovery::ClearCostmapRecovery}}
+\doxysubsubsection{\texorpdfstring{ClearCostmapRecovery()}{ClearCostmapRecovery()}}
+{\footnotesize\ttfamily clear\+\_\+costmap\+\_\+recovery\+::\+Clear\+Costmap\+Recovery\+::\+Clear\+Costmap\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor, make sure to call initialize in addition to actually initialize the object 
+
+
+\begin{DoxyParams}{参数}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5b0e81f3ad151bb9d4058a36c9411efd}\label{classclear__costmap__recovery_1_1ClearCostmapRecovery_a5b0e81f3ad151bb9d4058a36c9411efd}} 
+\index{clear\_costmap\_recovery::ClearCostmapRecovery@{clear\_costmap\_recovery::ClearCostmapRecovery}!initialize@{initialize}}
+\index{initialize@{initialize}!clear\_costmap\_recovery::ClearCostmapRecovery@{clear\_costmap\_recovery::ClearCostmapRecovery}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void clear\+\_\+costmap\+\_\+recovery\+::\+Clear\+Costmap\+Recovery\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{global\+\_\+costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization function for the \mbox{\hyperlink{classclear__costmap__recovery_1_1ClearCostmapRecovery}{Clear\+Costmap\+Recovery}} recovery behavior 
+
+
+\begin{DoxyParams}{参数}
+{\em tf} & A pointer to a transform listener \\
+\hline
+{\em global\+\_\+costmap} & A pointer to the global\+\_\+costmap used by the navigation stack \\
+\hline
+{\em local\+\_\+costmap} & A pointer to the local\+\_\+costmap used by the navigation stack \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1RecoveryBehavior_ab35332f465b3d2509c9e73d4d95c7b5d}{nav\+\_\+core\+::\+Recovery\+Behavior}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+clear\+\_\+costmap\+\_\+recovery/include/clear\+\_\+costmap\+\_\+recovery/clear\+\_\+costmap\+\_\+recovery.\+h\end{DoxyCompactItemize}

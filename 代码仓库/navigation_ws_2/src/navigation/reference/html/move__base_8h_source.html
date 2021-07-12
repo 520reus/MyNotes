@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: move_base/include/move_base/move_base.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ca01faf8a5b6701256cb9f5f72cc6d19.html">move_base</a></li><li class="navelem"><a class="el" href="dir_084f5c198682d9b1396f3a35e4bd7470.html">include</a></li><li class="navelem"><a class="el" href="dir_6d9c8c81343ed7e1362d34a0053428d3.html">move_base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">move_base.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*  are met:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">*     with the distribution.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">*   * Neither the name of the Willow Garage nor the names of its</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*********************************************************************/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef NAV_MOVE_BASE_ACTION_H_</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define NAV_MOVE_BASE_ACTION_H_</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;actionlib/server/simple_action_server.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;move_base_msgs/MoveBaseAction.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_local_planner.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_global_planner.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;nav_core/recovery_behavior.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d_ros.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/GetPlan.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;pluginlib/class_loader.hpp&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;std_srvs/Empty.h&gt;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;move_base/MoveBaseConfig.h&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">namespace </span>move_base {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">//typedefs to help us out with the action server so that we don&#39;t hace to type so much</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">typedef</span> actionlib::SimpleActionServer&lt;move_base_msgs::MoveBaseAction&gt; MoveBaseActionServer;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">enum</span> MoveBaseState {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    PLANNING,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    CONTROLLING,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    CLEARING</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">enum</span> RecoveryTrigger</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    PLANNING_R,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    CONTROLLING_R,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    OSCILLATION_R</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classmove__base_1_1MoveBase.html">   83</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classmove__base_1_1MoveBase.html">MoveBase</a> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classmove__base_1_1MoveBase.html#a1132ccb47b3c514d52be347805eb31f5">   90</a></span>&#160;      <a class="code" href="classmove__base_1_1MoveBase.html#a1132ccb47b3c514d52be347805eb31f5">MoveBase</a>(tf2_ros::Buffer&amp; tf);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classmove__base_1_1MoveBase.html#a8afc8f7c7f940d87a7a81e508ec99e6d">   95</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="classmove__base_1_1MoveBase.html#a8afc8f7c7f940d87a7a81e508ec99e6d">~MoveBase</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classmove__base_1_1MoveBase.html#a217b7185de670a1ee56bb59433ee54d2">  103</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="classmove__base_1_1MoveBase.html#a217b7185de670a1ee56bb59433ee54d2">executeCycle</a>(geometry_msgs::PoseStamped&amp; goal, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; global_plan);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordtype">bool</span> clearCostmapsService(std_srvs::Empty::Request &amp;req, std_srvs::Empty::Response &amp;resp);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordtype">bool</span> planService(nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">bool</span> makePlan(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordtype">bool</span> loadRecoveryBehaviors(ros::NodeHandle node);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordtype">void</span> loadDefaultRecoveryBehaviors();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">void</span> clearCostmapWindows(<span class="keywordtype">double</span> size_x, <span class="keywordtype">double</span> size_y);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordtype">void</span> publishZeroVelocity();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="keywordtype">void</span> resetState();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">void</span> goalCB(<span class="keyword">const</span> geometry_msgs::PoseStamped::ConstPtr&amp; goal);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordtype">void</span> planThread();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordtype">void</span> executeCb(<span class="keyword">const</span> move_base_msgs::MoveBaseGoalConstPtr&amp; move_base_goal);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordtype">bool</span> isQuaternionValid(<span class="keyword">const</span> geometry_msgs::Quaternion&amp; q);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordtype">bool</span> getRobotPose(geometry_msgs::PoseStamped&amp; global_pose, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keywordtype">double</span> distance(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; p1, <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; p2);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      geometry_msgs::PoseStamped goalToGlobalFrame(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal_pose_msg);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="keywordtype">void</span> wakePlanner(<span class="keyword">const</span> ros::TimerEvent&amp; event);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      tf2_ros::Buffer&amp; tf_;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      MoveBaseActionServer* as_;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      boost::shared_ptr&lt;nav_core::BaseLocalPlanner&gt; tc_;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* planner_costmap_ros_, *controller_costmap_ros_;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      boost::shared_ptr&lt;nav_core::BaseGlobalPlanner&gt; planner_;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      std::string robot_base_frame_, global_frame_;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      std::vector&lt;boost::shared_ptr&lt;nav_core::RecoveryBehavior&gt; &gt; recovery_behaviors_;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> recovery_index_;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      geometry_msgs::PoseStamped global_pose_;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keywordtype">double</span> planner_frequency_, controller_frequency_, inscribed_radius_, circumscribed_radius_;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordtype">double</span> planner_patience_, controller_patience_;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      int32_t max_planning_retries_;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      uint32_t planning_retries_;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">double</span> conservative_reset_dist_, clearing_radius_;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      ros::Publisher current_goal_pub_, vel_pub_, action_goal_pub_;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      ros::Subscriber goal_sub_;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      ros::ServiceServer make_plan_srv_, clear_costmaps_srv_, switch_path_srv_;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordtype">bool</span> shutdown_costmaps_, clearing_rotation_allowed_, recovery_behavior_enabled_;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordtype">bool</span> make_plan_clear_costmap_, make_plan_add_unreachable_goal_;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="keywordtype">double</span> oscillation_timeout_, oscillation_distance_;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      MoveBaseState state_;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      RecoveryTrigger recovery_trigger_;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      ros::Time last_valid_plan_, last_valid_control_, last_oscillation_reset_;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      geometry_msgs::PoseStamped oscillation_pose_;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      pluginlib::ClassLoader&lt;nav_core::BaseGlobalPlanner&gt; bgp_loader_;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      pluginlib::ClassLoader&lt;nav_core::BaseLocalPlanner&gt; blp_loader_;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      pluginlib::ClassLoader&lt;nav_core::RecoveryBehavior&gt; recovery_loader_;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="comment">//set up plan triple buffer</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      std::vector&lt;geometry_msgs::PoseStamped&gt;* planner_plan_;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      std::vector&lt;geometry_msgs::PoseStamped&gt;* latest_plan_;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      std::vector&lt;geometry_msgs::PoseStamped&gt;* controller_plan_;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="comment">//set up the planner&#39;s thread</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordtype">bool</span> runPlanner_;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      boost::recursive_mutex planner_mutex_;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      boost::condition_variable_any planner_cond_;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      geometry_msgs::PoseStamped planner_goal_;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      boost::thread* planner_thread_;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      boost::recursive_mutex configuration_mutex_;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      dynamic_reconfigure::Server&lt;move_base::MoveBaseConfig&gt; *dsrv_;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordtype">void</span> reconfigureCB(move_base::MoveBaseConfig &amp;config, uint32_t level);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      move_base::MoveBaseConfig last_config_;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      move_base::MoveBaseConfig default_config_;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordtype">bool</span> setup_, p_freq_change_, c_freq_change_;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordtype">bool</span> new_global_plan_;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  };</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;};</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassmove__base_1_1MoveBase_html"><div class="ttname"><a href="classmove__base_1_1MoveBase.html">move_base::MoveBase</a></div><div class="ttdoc">A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location.</div><div class="ttdef"><b>Definition:</b> move_base.h:83</div></div>
+<div class="ttc" id="aclassmove__base_1_1MoveBase_html_a1132ccb47b3c514d52be347805eb31f5"><div class="ttname"><a href="classmove__base_1_1MoveBase.html#a1132ccb47b3c514d52be347805eb31f5">move_base::MoveBase::MoveBase</a></div><div class="ttdeci">MoveBase(tf2_ros::Buffer &amp;tf)</div><div class="ttdoc">Constructor for the actions</div></div>
+<div class="ttc" id="aclassmove__base_1_1MoveBase_html_a217b7185de670a1ee56bb59433ee54d2"><div class="ttname"><a href="classmove__base_1_1MoveBase.html#a217b7185de670a1ee56bb59433ee54d2">move_base::MoveBase::executeCycle</a></div><div class="ttdeci">bool executeCycle(geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan)</div><div class="ttdoc">Performs a control cycle</div></div>
+<div class="ttc" id="aclassmove__base_1_1MoveBase_html_a8afc8f7c7f940d87a7a81e508ec99e6d"><div class="ttname"><a href="classmove__base_1_1MoveBase.html#a8afc8f7c7f940d87a7a81e508ec99e6d">move_base::MoveBase::~MoveBase</a></div><div class="ttdeci">virtual ~MoveBase()</div><div class="ttdoc">Destructor - Cleans up</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

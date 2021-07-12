@@ -1,0 +1,195 @@
+\hypertarget{classbase__local__planner_1_1VoxelGridModel}{}\doxysection{base\+\_\+local\+\_\+planner\+::Voxel\+Grid\+Model类 参考}
+\label{classbase__local__planner_1_1VoxelGridModel}\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+
+
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide grid based collision checks for the trajectory controller using a 3D voxel grid.  
+
+
+
+
+{\ttfamily \#include $<$voxel\+\_\+grid\+\_\+model.\+h$>$}
+
+类 base\+\_\+local\+\_\+planner\+::Voxel\+Grid\+Model 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1VoxelGridModel}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_a41482cba0c408053ef433d486693d8b4}{Voxel\+Grid\+Model}} (double size\+\_\+x, double size\+\_\+y, double size\+\_\+z, double xy\+\_\+resolution, double z\+\_\+resolution, double origin\+\_\+x, double origin\+\_\+y, double origin\+\_\+z, double max\+\_\+z, double obstacle\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel}{Voxel\+Grid\+Model}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_ab9d0a3a6fa8ea481c8b3911b90236c3b}\label{classbase__local__planner_1_1VoxelGridModel_ab9d0a3a6fa8ea481c8b3911b90236c3b}} 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_ab9d0a3a6fa8ea481c8b3911b90236c3b}{$\sim$\+Voxel\+Grid\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the world model \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_aa6bc3668327838938f7881a6f553b521}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_a3a5b2c042a813dc06a9fdbfcd0bd6291}{update\+World}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, const std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&observations, const std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} $>$ \&laser\+\_\+scans)
+\begin{DoxyCompactList}\small\item\em The costmap already keeps track of world observations, so for this world model this method does nothing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_ae64342a63e8e7360997aba566b5f0ed1}{get\+Points}} (sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Function copying the Voxel points into a point cloud \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_a36d4c808bc441e2b87b0ac038099993a}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius)=0
+\begin{DoxyCompactList}\small\item\em Subclass will implement this method to check a footprint at a given position and orientation for legality in the world \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}\label{classbase__local__planner_1_1VoxelGridModel_ac7e8dc9c77a2dd2fa77f5a27d812fd43}} 
+double {\bfseries footprint\+Cost} (double x, double y, double theta, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel_a358fe0d75fefe46dda134ee6e3305f71}{footprint\+Cost}} (const geometry\+\_\+msgs\+::\+Point \&position, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint, double inscribed\+\_\+radius, double circumscribed\+\_\+radius, double extra)
+\begin{DoxyCompactList}\small\item\em Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class that implements the \mbox{\hyperlink{classbase__local__planner_1_1WorldModel}{World\+Model}} interface to provide grid based collision checks for the trajectory controller using a 3D voxel grid. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_a41482cba0c408053ef433d486693d8b4}\label{classbase__local__planner_1_1VoxelGridModel_a41482cba0c408053ef433d486693d8b4}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!VoxelGridModel@{VoxelGridModel}}
+\index{VoxelGridModel@{VoxelGridModel}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{VoxelGridModel()}{VoxelGridModel()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Voxel\+Grid\+Model\+::\+Voxel\+Grid\+Model (\begin{DoxyParamCaption}\item[{double}]{size\+\_\+x,  }\item[{double}]{size\+\_\+y,  }\item[{double}]{size\+\_\+z,  }\item[{double}]{xy\+\_\+resolution,  }\item[{double}]{z\+\_\+resolution,  }\item[{double}]{origin\+\_\+x,  }\item[{double}]{origin\+\_\+y,  }\item[{double}]{origin\+\_\+z,  }\item[{double}]{max\+\_\+z,  }\item[{double}]{obstacle\+\_\+range }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classbase__local__planner_1_1VoxelGridModel}{Voxel\+Grid\+Model}} 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the map \\
+\hline
+{\em size\+\_\+y} & The y size of the map \\
+\hline
+{\em size\+\_\+z} & The z size of the map... up to 32 cells \\
+\hline
+{\em xy\+\_\+resolution} & The horizontal resolution of the map in meters/cell \\
+\hline
+{\em z\+\_\+resolution} & The vertical resolution of the map in meters/cell \\
+\hline
+{\em origin\+\_\+x} & The x value of the origin of the map \\
+\hline
+{\em origin\+\_\+y} & The y value of the origin of the map \\
+\hline
+{\em origin\+\_\+z} & The z value of the origin of the map \\
+\hline
+{\em max\+\_\+z} & The maximum height for an obstacle to be added to the grid \\
+\hline
+{\em obstacle\+\_\+range} & The maximum distance for obstacles to be added to the grid \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_aa6bc3668327838938f7881a6f553b521}\label{classbase__local__planner_1_1VoxelGridModel_aa6bc3668327838938f7881a6f553b521}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+Voxel\+Grid\+Model\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{position,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{double}]{inscribed\+\_\+radius,  }\item[{double}]{circumscribed\+\_\+radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1WorldModel_a36d4c808bc441e2b87b0ac038099993a}{base\+\_\+local\+\_\+planner\+::\+World\+Model}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_a36d4c808bc441e2b87b0ac038099993a}\label{classbase__local__planner_1_1VoxelGridModel_a36d4c808bc441e2b87b0ac038099993a}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost}
+
+
+
+Subclass will implement this method to check a footprint at a given position and orientation for legality in the world 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise\+: -\/1 if footprint covers at least a lethal obstacle cell, or -\/2 if footprint covers at least a no-\/information cell, or -\/3 if footprint is partially or totally outside of the map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_a358fe0d75fefe46dda134ee6e3305f71}\label{classbase__local__planner_1_1VoxelGridModel_a358fe0d75fefe46dda134ee6e3305f71}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+World\+Model\+::footprint\+Cost\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & The position of the robot in world coordinates \\
+\hline
+{\em footprint} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Positive if all the points lie outside the footprint, negative otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_ae64342a63e8e7360997aba566b5f0ed1}\label{classbase__local__planner_1_1VoxelGridModel_ae64342a63e8e7360997aba566b5f0ed1}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Voxel\+Grid\+Model\+::get\+Points (\begin{DoxyParamCaption}\item[{sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud }\end{DoxyParamCaption})}
+
+
+
+Function copying the Voxel points into a point cloud 
+
+
+\begin{DoxyParams}{参数}
+{\em cloud} & the point cloud to copy data to. It has the usual x,y,z channels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1VoxelGridModel_a3a5b2c042a813dc06a9fdbfcd0bd6291}\label{classbase__local__planner_1_1VoxelGridModel_a3a5b2c042a813dc06a9fdbfcd0bd6291}} 
+\index{base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}!updateWorld@{updateWorld}}
+\index{updateWorld@{updateWorld}!base\_local\_planner::VoxelGridModel@{base\_local\_planner::VoxelGridModel}}
+\doxysubsubsection{\texorpdfstring{updateWorld()}{updateWorld()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Voxel\+Grid\+Model\+::update\+World (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1Observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&}]{observations,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1PlanarLaserScan}{Planar\+Laser\+Scan}} $>$ \&}]{laser\+\_\+scans }\end{DoxyParamCaption})}
+
+
+
+The costmap already keeps track of world observations, so for this world model this method does nothing 
+
+
+\begin{DoxyParams}{参数}
+{\em footprint} & The footprint of the robot in its current location \\
+\hline
+{\em observations} & The observations from various sensors \\
+\hline
+{\em laser\+\_\+scan} & The scans used to clear freespace \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/voxel\+\_\+grid\+\_\+model.\+h\end{DoxyCompactItemize}

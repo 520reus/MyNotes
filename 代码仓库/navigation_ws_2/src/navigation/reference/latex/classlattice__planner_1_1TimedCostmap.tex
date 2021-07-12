@@ -1,0 +1,252 @@
+\hypertarget{classlattice__planner_1_1TimedCostmap}{}\doxysection{lattice\+\_\+planner\+::Timed\+Costmap类 参考}
+\label{classlattice__planner_1_1TimedCostmap}\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+
+
+Container for one dynamic layer of the dynamic cost map  
+
+
+
+
+{\ttfamily \#include $<$timed\+\_\+costmap.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a19d2c4727f058980e6e61e487fc78679}{Timed\+Costmap}} (int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ad426e25ccff4e98c1199a4c9ec68bd4c}{size\+\_\+x}}, int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a8f12b6857ab3749b3dc4696fe3c5a3cf}{size\+\_\+y}}, double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a6e0dadb22b2937c4bc1884f854dbdbcf}{origin\+\_\+x}}, double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a56a5309b9ce5f20960e3e1064d8e6eff}{origin\+\_\+y}}, double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_abe6f1a466abf893314bd535bcb2ac23d}{resolution}}, unsigned char $\ast$\mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_aff1a0185d58f55348d94f174f82b0112}{costmap}}, std\+::string \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a916deaed4a027b57d6ca8ec7f1bd5e30}{frame\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_afa83efb68abd19b38f73fdda659a5ead}{get\+Index}} (int mx, int my)
+\begin{DoxyCompactList}\small\item\em calculate 1D cell index from 2D indeces in x and y \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a755da02382f44ab7e44fb53b46fac470}{index\+To\+Cells}} (unsigned int index, int \&mx, int \&my)
+\begin{DoxyCompactList}\small\item\em calculate 2D cell indeces from 1D index \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a0ac8c7639ae800bd1c61327e314c3aaf}{get\+Cost}} (int mx, int my)
+\begin{DoxyCompactList}\small\item\em get cost value from cost map \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a7bebaf343e49455021d163f4ab0973a6}{get\+Cost}} (int index)
+\begin{DoxyCompactList}\small\item\em get cost value from cost map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ae9d823b7f042f1dffd1ec75aae439266}{set\+Cost}} (int index, unsigned char cost)
+\begin{DoxyCompactList}\small\item\em set the cost value of a cell \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ad05ee470f1eebe726bf589ff9d5a7438}{set\+Cost}} (int mx, int my, unsigned char cost)
+\begin{DoxyCompactList}\small\item\em set the cost value of a cell \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a3742f64af5f474cc2f7bd946a2bd71fd}{fill}} (unsigned char value)
+\begin{DoxyCompactList}\small\item\em fill the costmap with a specific value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_aed862da81e46f219df635b2151b0927c}\label{classlattice__planner_1_1TimedCostmap_aed862da81e46f219df635b2151b0927c}} 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_aed862da81e46f219df635b2151b0927c}{publish\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em publish the cost map for visualization \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_ac6c5d1ee7d4d4aa79c078865a2e608de}\label{classlattice__planner_1_1TimedCostmap_ac6c5d1ee7d4d4aa79c078865a2e608de}} 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ac6c5d1ee7d4d4aa79c078865a2e608de}{publish\+Cost\+Cloud}} ()
+\begin{DoxyCompactList}\small\item\em publish the cost cloud (3D bell curves) for visualization. The height of the 3D points represents the cost value of the cell \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_afa98ef2e35412a66970d3ac7bb79af3c}{save\+As\+Map\+Image}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em save the cost map as an image for visualization \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_ab78a8d8cb044d95f44c810bfb2ad6809}\label{classlattice__planner_1_1TimedCostmap_ab78a8d8cb044d95f44c810bfb2ad6809}} 
+ros\+::\+Time \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ab78a8d8cb044d95f44c810bfb2ad6809}{time}}
+\begin{DoxyCompactList}\small\item\em time represented by layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a225870761fc6264384e4e334cf5dbb89}\label{classlattice__planner_1_1TimedCostmap_a225870761fc6264384e4e334cf5dbb89}} 
+int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a225870761fc6264384e4e334cf5dbb89}{time\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em time index (time step) of layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_ad426e25ccff4e98c1199a4c9ec68bd4c}\label{classlattice__planner_1_1TimedCostmap_ad426e25ccff4e98c1199a4c9ec68bd4c}} 
+int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_ad426e25ccff4e98c1199a4c9ec68bd4c}{size\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em number of cells in x \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a8f12b6857ab3749b3dc4696fe3c5a3cf}\label{classlattice__planner_1_1TimedCostmap_a8f12b6857ab3749b3dc4696fe3c5a3cf}} 
+int \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a8f12b6857ab3749b3dc4696fe3c5a3cf}{size\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em number of cells in y \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a6e0dadb22b2937c4bc1884f854dbdbcf}\label{classlattice__planner_1_1TimedCostmap_a6e0dadb22b2937c4bc1884f854dbdbcf}} 
+double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a6e0dadb22b2937c4bc1884f854dbdbcf}{origin\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em map origin in x \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a56a5309b9ce5f20960e3e1064d8e6eff}\label{classlattice__planner_1_1TimedCostmap_a56a5309b9ce5f20960e3e1064d8e6eff}} 
+double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a56a5309b9ce5f20960e3e1064d8e6eff}{origin\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em map origin in y \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_abe6f1a466abf893314bd535bcb2ac23d}\label{classlattice__planner_1_1TimedCostmap_abe6f1a466abf893314bd535bcb2ac23d}} 
+double \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_abe6f1a466abf893314bd535bcb2ac23d}{resolution}}
+\begin{DoxyCompactList}\small\item\em map resolution \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_aff1a0185d58f55348d94f174f82b0112}\label{classlattice__planner_1_1TimedCostmap_aff1a0185d58f55348d94f174f82b0112}} 
+unsigned char $\ast$ \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_aff1a0185d58f55348d94f174f82b0112}{costmap}}
+\begin{DoxyCompactList}\small\item\em array costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a916deaed4a027b57d6ca8ec7f1bd5e30}\label{classlattice__planner_1_1TimedCostmap_a916deaed4a027b57d6ca8ec7f1bd5e30}} 
+std\+::string \mbox{\hyperlink{classlattice__planner_1_1TimedCostmap_a916deaed4a027b57d6ca8ec7f1bd5e30}{frame\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em global frame id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Container for one dynamic layer of the dynamic cost map 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a19d2c4727f058980e6e61e487fc78679}\label{classlattice__planner_1_1TimedCostmap_a19d2c4727f058980e6e61e487fc78679}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!TimedCostmap@{TimedCostmap}}
+\index{TimedCostmap@{TimedCostmap}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{TimedCostmap()}{TimedCostmap()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Timed\+Costmap\+::\+Timed\+Costmap (\begin{DoxyParamCaption}\item[{int}]{size\+\_\+x,  }\item[{int}]{size\+\_\+y,  }\item[{double}]{origin\+\_\+x,  }\item[{double}]{origin\+\_\+y,  }\item[{double}]{resolution,  }\item[{unsigned char $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & number of cells in x \\
+\hline
+{\em size\+\_\+y} & number of cells in y \\
+\hline
+{\em origin\+\_\+x} & map origin in x \\
+\hline
+{\em origin\+\_\+y} & map origin in y \\
+\hline
+{\em resolution} & map resolution \\
+\hline
+{\em costmap} & the char array costmap \\
+\hline
+{\em frame\+\_\+id} & global frame id \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a3742f64af5f474cc2f7bd946a2bd71fd}\label{classlattice__planner_1_1TimedCostmap_a3742f64af5f474cc2f7bd946a2bd71fd}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!fill@{fill}}
+\index{fill@{fill}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Timed\+Costmap\+::fill (\begin{DoxyParamCaption}\item[{unsigned char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+fill the costmap with a specific value 
+
+
+\begin{DoxyParams}{参数}
+{\em value} & value to fill \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a7bebaf343e49455021d163f4ab0973a6}\label{classlattice__planner_1_1TimedCostmap_a7bebaf343e49455021d163f4ab0973a6}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Timed\+Costmap\+::get\+Cost (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from cost map 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & map index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a0ac8c7639ae800bd1c61327e314c3aaf}\label{classlattice__planner_1_1TimedCostmap_a0ac8c7639ae800bd1c61327e314c3aaf}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Timed\+Costmap\+::get\+Cost (\begin{DoxyParamCaption}\item[{int}]{mx,  }\item[{int}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from cost map 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & map cell index in x \\
+\hline
+{\em my} & map cell index in y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_afa83efb68abd19b38f73fdda659a5ead}\label{classlattice__planner_1_1TimedCostmap_afa83efb68abd19b38f73fdda659a5ead}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily int lattice\+\_\+planner\+::\+Timed\+Costmap\+::get\+Index (\begin{DoxyParamCaption}\item[{int}]{mx,  }\item[{int}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate 1D cell index from 2D indeces in x and y 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & map cell index in x \\
+\hline
+{\em my} & map cell index in y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+map index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_a755da02382f44ab7e44fb53b46fac470}\label{classlattice__planner_1_1TimedCostmap_a755da02382f44ab7e44fb53b46fac470}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!indexToCells@{indexToCells}}
+\index{indexToCells@{indexToCells}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{indexToCells()}{indexToCells()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Timed\+Costmap\+::index\+To\+Cells (\begin{DoxyParamCaption}\item[{unsigned int}]{index,  }\item[{int \&}]{mx,  }\item[{int \&}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate 2D cell indeces from 1D index 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em index} & map index \\
+\hline
+\mbox{\texttt{ out}}  & {\em mx} & map cell index in x \\
+\hline
+\mbox{\texttt{ out}}  & {\em my} & map cell index in y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_afa98ef2e35412a66970d3ac7bb79af3c}\label{classlattice__planner_1_1TimedCostmap_afa98ef2e35412a66970d3ac7bb79af3c}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!saveAsMapImage@{saveAsMapImage}}
+\index{saveAsMapImage@{saveAsMapImage}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{saveAsMapImage()}{saveAsMapImage()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Timed\+Costmap\+::save\+As\+Map\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+save the cost map as an image for visualization 
+
+
+\begin{DoxyParams}{参数}
+{\em path} & path to save \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_ae9d823b7f042f1dffd1ec75aae439266}\label{classlattice__planner_1_1TimedCostmap_ae9d823b7f042f1dffd1ec75aae439266}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!setCost@{setCost}}
+\index{setCost@{setCost}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Timed\+Costmap\+::set\+Cost (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{unsigned char}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the cost value of a cell 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & map index \\
+\hline
+{\em cost} & cost value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TimedCostmap_ad05ee470f1eebe726bf589ff9d5a7438}\label{classlattice__planner_1_1TimedCostmap_ad05ee470f1eebe726bf589ff9d5a7438}} 
+\index{lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}!setCost@{setCost}}
+\index{setCost@{setCost}!lattice\_planner::TimedCostmap@{lattice\_planner::TimedCostmap}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+Timed\+Costmap\+::set\+Cost (\begin{DoxyParamCaption}\item[{int}]{mx,  }\item[{int}]{my,  }\item[{unsigned char}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the cost value of a cell 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & map cell index in x \\
+\hline
+{\em my} & map cell index in y \\
+\hline
+{\em cost} & cost value \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/timed\+\_\+costmap.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classlattice__planner_1_1CostManager}{}\doxysection{lattice\+\_\+planner\+::Cost\+Manager类 参考}
+\label{classlattice__planner_1_1CostManager}\index{lattice\_planner::CostManager@{lattice\_planner::CostManager}}
+
+
+Class for cost calculation for path search  
+
+
+
+
+{\ttfamily \#include $<$cost\+\_\+manager.\+h$>$}
+
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Factors}}
+\begin{DoxyCompactList}\small\item\em Container for the cost factors (weights) of the cost components \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1CostManager_abd0bfb753cf6b7e8471a012449189a28}{Cost\+Manager}} (\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$dynamic\+\_\+costmap, \mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}} motion\+\_\+constaints, \mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Factors}} cost\+\_\+factors)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classlattice__planner_1_1CostManager_a1d5af1683ea904e2ed8f283f77e157b1}{get\+Trajectory\+Cost}} (\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em calculates the costs produced by following the trajectory to a state from its ancestor, according to the defined cost function \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Factors}} \mbox{\hyperlink{classlattice__planner_1_1CostManager_a8f34ae8f1769fa906d6a2870e4754357}{get\+Cost\+Factors}} ()
+\begin{DoxyCompactList}\small\item\em get cost function weights \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Class for cost calculation for path search 
+
+Calculates the costs of a path (or path segment) according to a given cost function. The cost function is a weighted sum of different cost aspects\+:
+
+
+\begin{DoxyItemize}
+\item execution time\+: cost according to the time it takes to follow the plan.
+\item path length\+: costs according to the traveled distance along a path.
+\item environmental costs\+: costs defined in the dynamic environment, obtained from a layered dynamic cost map.
+\item necessary turns\+: costs according to the rotation the robot has to execute to follow the path. 
+\end{DoxyItemize}
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1CostManager_abd0bfb753cf6b7e8471a012449189a28}\label{classlattice__planner_1_1CostManager_abd0bfb753cf6b7e8471a012449189a28}} 
+\index{lattice\_planner::CostManager@{lattice\_planner::CostManager}!CostManager@{CostManager}}
+\index{CostManager@{CostManager}!lattice\_planner::CostManager@{lattice\_planner::CostManager}}
+\doxysubsubsection{\texorpdfstring{CostManager()}{CostManager()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Cost\+Manager\+::\+Cost\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} $\ast$}]{dynamic\+\_\+costmap,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1MotionConstraints}{Motion\+Constraints}}}]{motion\+\_\+constaints,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Factors}}}]{cost\+\_\+factors }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em dynamic\+\_\+costmap} & dynamic cost map with time layers \\
+\hline
+{\em motion\+\_\+constaints} & velocity and acceleration limits of the robot \\
+\hline
+{\em cost\+\_\+factors} & weights for the individual cost components of the defined cost function \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1CostManager_a8f34ae8f1769fa906d6a2870e4754357}\label{classlattice__planner_1_1CostManager_a8f34ae8f1769fa906d6a2870e4754357}} 
+\index{lattice\_planner::CostManager@{lattice\_planner::CostManager}!getCostFactors@{getCostFactors}}
+\index{getCostFactors@{getCostFactors}!lattice\_planner::CostManager@{lattice\_planner::CostManager}}
+\doxysubsubsection{\texorpdfstring{getCostFactors()}{getCostFactors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlattice__planner_1_1CostManager_1_1CostFactors}{Cost\+Factors}} lattice\+\_\+planner\+::\+Cost\+Manager\+::get\+Cost\+Factors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost function weights 
+
+\begin{DoxyReturn}{返回}
+cost function weights 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1CostManager_a1d5af1683ea904e2ed8f283f77e157b1}\label{classlattice__planner_1_1CostManager_a1d5af1683ea904e2ed8f283f77e157b1}} 
+\index{lattice\_planner::CostManager@{lattice\_planner::CostManager}!getTrajectoryCost@{getTrajectoryCost}}
+\index{getTrajectoryCost@{getTrajectoryCost}!lattice\_planner::CostManager@{lattice\_planner::CostManager}}
+\doxysubsubsection{\texorpdfstring{getTrajectoryCost()}{getTrajectoryCost()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Cost\+Manager\+::get\+Trajectory\+Cost (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+calculates the costs produced by following the trajectory to a state from its ancestor, according to the defined cost function 
+
+
+\begin{DoxyParams}{参数}
+{\em state} & current state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+the cost of the trajectory, according to the defined cost function 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/cost\+\_\+manager.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{classcostmap__2d_1_1Costmap2DPublisher}{}\doxysection{costmap\+\_\+2d\+::Costmap2\+DPublisher类 参考}
+\label{classcostmap__2d_1_1Costmap2DPublisher}\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+
+
+A tool to periodically publish visualization data from a \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}}  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+2d\+\_\+publisher.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DPublisher_a56d27ca488f09b70a8698b2491d036e7}\label{classcostmap__2d_1_1Costmap2DPublisher_a56d27ca488f09b70a8698b2491d036e7}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher_a56d27ca488f09b70a8698b2491d036e7}{Costmap2\+DPublisher}} (ros\+::\+Node\+Handle $\ast$ros\+\_\+node, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame, std\+::string topic\+\_\+name, bool always\+\_\+send\+\_\+full\+\_\+costmap=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher}{Costmap2\+DPublisher}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DPublisher_a38077dace67c7ca6aff8fb09ac81e17d}\label{classcostmap__2d_1_1Costmap2DPublisher_a38077dace67c7ca6aff8fb09ac81e17d}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher_a38077dace67c7ca6aff8fb09ac81e17d}{$\sim$\+Costmap2\+DPublisher}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DPublisher_a51c026184908fb427babad570150df30}\label{classcostmap__2d_1_1Costmap2DPublisher_a51c026184908fb427babad570150df30}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher_a51c026184908fb427babad570150df30}{update\+Bounds}} (unsigned int x0, unsigned int xn, unsigned int y0, unsigned int yn)
+\begin{DoxyCompactList}\small\item\em Include the given bounds in the changed-\/rectangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DPublisher_a47e5b5d93113f39786112919a6981953}\label{classcostmap__2d_1_1Costmap2DPublisher_a47e5b5d93113f39786112919a6981953}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher_a47e5b5d93113f39786112919a6981953}{publish\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the visualization data over ROS \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DPublisher_a3948a48e3f77d44f0600077470788c38}{active}} ()
+\begin{DoxyCompactList}\small\item\em Check if the publisher is active \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A tool to periodically publish visualization data from a \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DPublisher_a3948a48e3f77d44f0600077470788c38}\label{classcostmap__2d_1_1Costmap2DPublisher_a3948a48e3f77d44f0600077470788c38}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!active@{active}}
+\index{active@{active}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the publisher is active 
+
+\begin{DoxyReturn}{返回}
+True if the frequency for the publisher is non-\/zero, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/costmap\+\_\+2d\+\_\+publisher.\+h\end{DoxyCompactItemize}

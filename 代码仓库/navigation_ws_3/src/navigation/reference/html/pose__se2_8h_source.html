@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/pose_se2.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pose_se2.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef POSE_SE2_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define POSE_SE2_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;g2o/stuff/misc.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/misc.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Pose.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;tf/transform_datatypes.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a31e51f12e4bda8732cd7d78b886709e4">   67</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a31e51f12e4bda8732cd7d78b886709e4">PoseSE2</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ad71f174d2dbf27cefc343040fe04c854">setZero</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ac413011a1c3597529899eb7802bb0c19">   77</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ac413011a1c3597529899eb7802bb0c19">PoseSE2</a>(<span class="keyword">const</span> Eigen::Ref&lt;const Eigen::Vector2d&gt;&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ace95441452603c3b30f8e5cfe6a7e491">position</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">theta</a>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      _position = <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ace95441452603c3b30f8e5cfe6a7e491">position</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      _theta = <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">theta</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#af8e702a6d665f711d6f45cee9659f21c">   89</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#af8e702a6d665f711d6f45cee9659f21c">PoseSE2</a>(<span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#af8bf1a6846fb12b168bb4f8e1fb1f2b6">x</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a3fad831f48e070b8693408eb58ca2d3a">y</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">theta</a>)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      _position.coeffRef(0) = <a class="code" href="classteb__local__planner_1_1PoseSE2.html#af8bf1a6846fb12b168bb4f8e1fb1f2b6">x</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      _position.coeffRef(1) = <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a3fad831f48e070b8693408eb58ca2d3a">y</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      _theta = <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">theta</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#aaf8b08d0067a6af0f2dc8ec625e48818">  100</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aaf8b08d0067a6af0f2dc8ec625e48818">PoseSE2</a>(<span class="keyword">const</span> geometry_msgs::Pose&amp; pose)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      _position.coeffRef(0) = pose.position.x;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      _position.coeffRef(1) = pose.position.y;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      _theta = tf::getYaw( pose.orientation );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#afa90996d08e9647fde7307ddebd61887">  111</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#afa90996d08e9647fde7307ddebd61887">PoseSE2</a>(<span class="keyword">const</span> tf::Pose&amp; pose)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      _position.coeffRef(0) = pose.getOrigin().getX();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      _position.coeffRef(1) = pose.getOrigin().getY();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      _theta = tf::getYaw( pose.getRotation() );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#aa772df8b96c681106cf6f0cc49654cb9">  122</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aa772df8b96c681106cf6f0cc49654cb9">PoseSE2</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      _position = pose._position;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      _theta = pose._theta;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ad42d8fbf6ed274974b1a7cf8fdbac913">  134</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ad42d8fbf6ed274974b1a7cf8fdbac913">~PoseSE2</a>() {}                </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ace95441452603c3b30f8e5cfe6a7e491">  145</a></span>&#160;  Eigen::Vector2d&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ace95441452603c3b30f8e5cfe6a7e491">position</a>() {<span class="keywordflow">return</span> _position;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a2d6ee53bf31ca54ef0e01542ea34eaf0">  152</a></span>&#160;  <span class="keyword">const</span> Eigen::Vector2d&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a2d6ee53bf31ca54ef0e01542ea34eaf0">position</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _position;}</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#af8bf1a6846fb12b168bb4f8e1fb1f2b6">  158</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#af8bf1a6846fb12b168bb4f8e1fb1f2b6">x</a>() {<span class="keywordflow">return</span> _position.coeffRef(0);}</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ab14b372ffb4154a273522861d175bb79">  164</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ab14b372ffb4154a273522861d175bb79">x</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _position.coeffRef(0);}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a3fad831f48e070b8693408eb58ca2d3a">  170</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a3fad831f48e070b8693408eb58ca2d3a">y</a>() {<span class="keywordflow">return</span> _position.coeffRef(1);}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#aa9fb660e5cd68dede013a774658abb8c">  176</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aa9fb660e5cd68dede013a774658abb8c">y</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _position.coeffRef(1);}</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">  182</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">theta</a>() {<span class="keywordflow">return</span> _theta;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a44563757fe517d03487835761d39c5ca">  188</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a44563757fe517d03487835761d39c5ca">theta</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _theta;}</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ad71f174d2dbf27cefc343040fe04c854">  193</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ad71f174d2dbf27cefc343040fe04c854">setZero</a>()</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    _position.setZero();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    _theta = 0;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a667bc7698678de9bd0104c42bfc1fe8e">  203</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a667bc7698678de9bd0104c42bfc1fe8e">toPoseMsg</a>(geometry_msgs::Pose&amp; pose)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    pose.position.x = _position.x();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    pose.position.y = _position.y();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    pose.position.z = 0;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    pose.orientation = tf::createQuaternionMsgFromYaw(_theta);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a0ec1e0ced58b47886053b6fa891cd65f">  215</a></span>&#160;  Eigen::Vector2d <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a0ec1e0ced58b47886053b6fa891cd65f">orientationUnitVec</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> Eigen::Vector2d(std::cos(_theta), std::sin(_theta));}</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ac2ed43ac7455f584f465e72f16bf284f">  227</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ac2ed43ac7455f584f465e72f16bf284f">scale</a>(<span class="keywordtype">double</span> factor)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    _position *= factor;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    _theta = g2o::normalize_theta( _theta*factor );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      </div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ac1e93aa9e54eee6c5108f521e5a53e80">  238</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ac1e93aa9e54eee6c5108f521e5a53e80">plus</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* pose_as_array)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    _position.coeffRef(0) += pose_as_array[0];</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    _position.coeffRef(1) += pose_as_array[1];</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    _theta = g2o::normalize_theta( _theta + pose_as_array[2] );</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a9073884205b9dace6e7cf863b40a4c1c">  252</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a9073884205b9dace6e7cf863b40a4c1c">averageInPlace</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose1, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose2)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    _position = (pose1._position + pose2._position)/2;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    _theta = g2o::average_angle(pose1._theta, pose2._theta);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  </div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#acd9bc48a5371e9d3f3ed994d0da77bf9">  266</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#acd9bc48a5371e9d3f3ed994d0da77bf9">average</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose1, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose2)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a31e51f12e4bda8732cd7d78b886709e4">PoseSE2</a>( (pose1._position + pose2._position)/2 , g2o::average_angle(pose1._theta, pose2._theta) );</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#abf6b166cb742c48ac22de3175ff075b1">  279</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#abf6b166cb742c48ac22de3175ff075b1">rotateGlobal</a>(<span class="keywordtype">double</span> angle, <span class="keywordtype">bool</span> adjust_theta=<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordtype">double</span> new_x = std::cos(angle)*_position.x() - std::sin(angle)*_position.y();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">double</span> new_y = std::sin(angle)*_position.x() + std::cos(angle)*_position.y();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    _position.x() = new_x;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    _position.y() = new_y;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (adjust_theta)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        _theta = g2o::normalize_theta(_theta+angle);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  </div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a49e25c8aaa6ee8db42f5463694bddaf3">  300</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a49e25c8aaa6ee8db42f5463694bddaf3">operator=</a>( <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; rhs ) </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (&amp;rhs != <span class="keyword">this</span>)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    _position = rhs._position;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    _theta = rhs._theta;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#af34c041436acc48dca71fda9cfeaf7d3">  314</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#af34c041436acc48dca71fda9cfeaf7d3">operator+=</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; rhs)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    _position += rhs._position;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    _theta = g2o::normalize_theta(_theta + rhs._theta);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  </div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ad2feff1efe471ef77a28a95463ccfd21">  326</a></span>&#160;  <span class="keyword">friend</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ad2feff1efe471ef77a28a95463ccfd21">operator+</a>(<a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> lhs, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; rhs) </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">return</span> lhs += rhs;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  </div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#ab6c37c43b644107f94811d68d7a6ff16">  335</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#ab6c37c43b644107f94811d68d7a6ff16">operator-=</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; rhs)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    _position -= rhs._position;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    _theta = g2o::normalize_theta(_theta - rhs._theta);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  </div>
+<div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#aa796492e15f987b1968b2baf8ac677a0">  347</a></span>&#160;  <span class="keyword">friend</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#aa796492e15f987b1968b2baf8ac677a0">operator-</a>(<a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> lhs, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; rhs) </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">return</span> lhs -= rhs;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  </div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a8a35a58b7adbc796b3de8eabd2b47323">  359</a></span>&#160;  <span class="keyword">friend</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a8a35a58b7adbc796b3de8eabd2b47323">operator*</a>(<a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> pose, <span class="keywordtype">double</span> scalar) </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    pose._position *= scalar;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    pose._theta *= scalar;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span> pose;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  </div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#adc5f91393ae2f50311bb6a950fc4bf98">  373</a></span>&#160;  <span class="keyword">friend</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> <a class="code" href="classteb__local__planner_1_1PoseSE2.html#adc5f91393ae2f50311bb6a950fc4bf98">operator*</a>(<span class="keywordtype">double</span> scalar, <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> pose) </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    pose._position *= scalar;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    pose._theta *= scalar;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">return</span> pose;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  </div>
+<div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1PoseSE2.html#a2c487bf5a6b472f7109a1cd12300e653">  385</a></span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classteb__local__planner_1_1PoseSE2.html#a2c487bf5a6b472f7109a1cd12300e653">operator&lt;&lt; </a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; pose)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        stream &lt;&lt; <span class="stringliteral">&quot;x: &quot;</span> &lt;&lt; pose._position[0] &lt;&lt; <span class="stringliteral">&quot; y: &quot;</span> &lt;&lt; pose._position[1] &lt;&lt; <span class="stringliteral">&quot; theta: &quot;</span> &lt;&lt; pose._theta;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  Eigen::Vector2d _position; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="keywordtype">double</span> _theta;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW  </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;};</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;} <span class="comment">// namespace teb_local_planner</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// POSE_SE2_H_</span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html">teb_local_planner::PoseSE2</a></div><div class="ttdoc">This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:58</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a0ec1e0ced58b47886053b6fa891cd65f"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a0ec1e0ced58b47886053b6fa891cd65f">teb_local_planner::PoseSE2::orientationUnitVec</a></div><div class="ttdeci">Eigen::Vector2d orientationUnitVec() const</div><div class="ttdoc">Return the unit vector of the current orientation</div><div class="ttdef"><b>Definition:</b> pose_se2.h:215</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a2c487bf5a6b472f7109a1cd12300e653"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a2c487bf5a6b472f7109a1cd12300e653">teb_local_planner::PoseSE2::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;stream, const PoseSE2 &amp;pose)</div><div class="ttdoc">Output stream operator</div><div class="ttdef"><b>Definition:</b> pose_se2.h:385</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a2d6ee53bf31ca54ef0e01542ea34eaf0"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a2d6ee53bf31ca54ef0e01542ea34eaf0">teb_local_planner::PoseSE2::position</a></div><div class="ttdeci">const Eigen::Vector2d &amp; position() const</div><div class="ttdoc">Access the 2D position part (read-only)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:152</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a31e51f12e4bda8732cd7d78b886709e4"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a31e51f12e4bda8732cd7d78b886709e4">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2()</div><div class="ttdoc">Default constructor</div><div class="ttdef"><b>Definition:</b> pose_se2.h:67</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a3fad831f48e070b8693408eb58ca2d3a"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a3fad831f48e070b8693408eb58ca2d3a">teb_local_planner::PoseSE2::y</a></div><div class="ttdeci">double &amp; y()</div><div class="ttdoc">Access the y-coordinate the pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:170</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a44563757fe517d03487835761d39c5ca"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a44563757fe517d03487835761d39c5ca">teb_local_planner::PoseSE2::theta</a></div><div class="ttdeci">const double &amp; theta() const</div><div class="ttdoc">Access the orientation part (yaw angle) of the pose (read-only)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:188</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a49e25c8aaa6ee8db42f5463694bddaf3"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a49e25c8aaa6ee8db42f5463694bddaf3">teb_local_planner::PoseSE2::operator=</a></div><div class="ttdeci">PoseSE2 &amp; operator=(const PoseSE2 &amp;rhs)</div><div class="ttdoc">Asignment operator</div><div class="ttdef"><b>Definition:</b> pose_se2.h:300</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a667bc7698678de9bd0104c42bfc1fe8e"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a667bc7698678de9bd0104c42bfc1fe8e">teb_local_planner::PoseSE2::toPoseMsg</a></div><div class="ttdeci">void toPoseMsg(geometry_msgs::Pose &amp;pose) const</div><div class="ttdoc">Convert PoseSE2 to a geometry_msgs::Pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:203</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a8a35a58b7adbc796b3de8eabd2b47323"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a8a35a58b7adbc796b3de8eabd2b47323">teb_local_planner::PoseSE2::operator*</a></div><div class="ttdeci">friend PoseSE2 operator*(PoseSE2 pose, double scalar)</div><div class="ttdoc">Multiply pose with scalar and return copy without normalizing theta This operator is useful for calcu...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:359</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_a9073884205b9dace6e7cf863b40a4c1c"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#a9073884205b9dace6e7cf863b40a4c1c">teb_local_planner::PoseSE2::averageInPlace</a></div><div class="ttdeci">void averageInPlace(const PoseSE2 &amp;pose1, const PoseSE2 &amp;pose2)</div><div class="ttdoc">Get the mean / average of two poses and store it in the caller class For the position part: 0....</div><div class="ttdef"><b>Definition:</b> pose_se2.h:252</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_aa772df8b96c681106cf6f0cc49654cb9"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#aa772df8b96c681106cf6f0cc49654cb9">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2(const PoseSE2 &amp;pose)</div><div class="ttdoc">Copy constructor</div><div class="ttdef"><b>Definition:</b> pose_se2.h:122</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_aa796492e15f987b1968b2baf8ac677a0"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#aa796492e15f987b1968b2baf8ac677a0">teb_local_planner::PoseSE2::operator-</a></div><div class="ttdeci">friend PoseSE2 operator-(PoseSE2 lhs, const PoseSE2 &amp;rhs)</div><div class="ttdoc">Arithmetic operator overload for subtractions</div><div class="ttdef"><b>Definition:</b> pose_se2.h:347</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_aa9fb660e5cd68dede013a774658abb8c"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#aa9fb660e5cd68dede013a774658abb8c">teb_local_planner::PoseSE2::y</a></div><div class="ttdeci">const double &amp; y() const</div><div class="ttdoc">Access the y-coordinate the pose (read-only)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:176</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_aaf8b08d0067a6af0f2dc8ec625e48818"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#aaf8b08d0067a6af0f2dc8ec625e48818">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2(const geometry_msgs::Pose &amp;pose)</div><div class="ttdoc">Construct pose using a geometry_msgs::Pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:100</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ab14b372ffb4154a273522861d175bb79"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ab14b372ffb4154a273522861d175bb79">teb_local_planner::PoseSE2::x</a></div><div class="ttdeci">const double &amp; x() const</div><div class="ttdoc">Access the x-coordinate the pose (read-only)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:164</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ab6c37c43b644107f94811d68d7a6ff16"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ab6c37c43b644107f94811d68d7a6ff16">teb_local_planner::PoseSE2::operator-=</a></div><div class="ttdeci">PoseSE2 &amp; operator-=(const PoseSE2 &amp;rhs)</div><div class="ttdoc">Compound assignment operator (subtraction)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:335</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_abf6b166cb742c48ac22de3175ff075b1"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#abf6b166cb742c48ac22de3175ff075b1">teb_local_planner::PoseSE2::rotateGlobal</a></div><div class="ttdeci">void rotateGlobal(double angle, bool adjust_theta=true)</div><div class="ttdoc">Rotate pose globally</div><div class="ttdef"><b>Definition:</b> pose_se2.h:279</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ac1e93aa9e54eee6c5108f521e5a53e80"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ac1e93aa9e54eee6c5108f521e5a53e80">teb_local_planner::PoseSE2::plus</a></div><div class="ttdeci">void plus(const double *pose_as_array)</div><div class="ttdoc">Increment the pose by adding a double[3] array The angle is normalized afterwards</div><div class="ttdef"><b>Definition:</b> pose_se2.h:238</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ac2ed43ac7455f584f465e72f16bf284f"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ac2ed43ac7455f584f465e72f16bf284f">teb_local_planner::PoseSE2::scale</a></div><div class="ttdeci">void scale(double factor)</div><div class="ttdoc">Scale all SE2 components (x,y,theta) and normalize theta afterwards to [-pi, pi]</div><div class="ttdef"><b>Definition:</b> pose_se2.h:227</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ac413011a1c3597529899eb7802bb0c19"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ac413011a1c3597529899eb7802bb0c19">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta)</div><div class="ttdoc">Construct pose given a position vector and an angle theta</div><div class="ttdef"><b>Definition:</b> pose_se2.h:77</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_acd9bc48a5371e9d3f3ed994d0da77bf9"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#acd9bc48a5371e9d3f3ed994d0da77bf9">teb_local_planner::PoseSE2::average</a></div><div class="ttdeci">static PoseSE2 average(const PoseSE2 &amp;pose1, const PoseSE2 &amp;pose2)</div><div class="ttdoc">Get the mean / average of two poses and return the result (static) For the position part: 0....</div><div class="ttdef"><b>Definition:</b> pose_se2.h:266</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ace95441452603c3b30f8e5cfe6a7e491"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ace95441452603c3b30f8e5cfe6a7e491">teb_local_planner::PoseSE2::position</a></div><div class="ttdeci">Eigen::Vector2d &amp; position()</div><div class="ttdoc">Access the 2D position part</div><div class="ttdef"><b>Definition:</b> pose_se2.h:145</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ad2feff1efe471ef77a28a95463ccfd21"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ad2feff1efe471ef77a28a95463ccfd21">teb_local_planner::PoseSE2::operator+</a></div><div class="ttdeci">friend PoseSE2 operator+(PoseSE2 lhs, const PoseSE2 &amp;rhs)</div><div class="ttdoc">Arithmetic operator overload for additions</div><div class="ttdef"><b>Definition:</b> pose_se2.h:326</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ad42d8fbf6ed274974b1a7cf8fdbac913"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ad42d8fbf6ed274974b1a7cf8fdbac913">teb_local_planner::PoseSE2::~PoseSE2</a></div><div class="ttdeci">~PoseSE2()</div><div class="ttdoc">Destructs the PoseSE2</div><div class="ttdef"><b>Definition:</b> pose_se2.h:134</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_ad71f174d2dbf27cefc343040fe04c854"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#ad71f174d2dbf27cefc343040fe04c854">teb_local_planner::PoseSE2::setZero</a></div><div class="ttdeci">void setZero()</div><div class="ttdoc">Set pose to [0,0,0]</div><div class="ttdef"><b>Definition:</b> pose_se2.h:193</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_adc5f91393ae2f50311bb6a950fc4bf98"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#adc5f91393ae2f50311bb6a950fc4bf98">teb_local_planner::PoseSE2::operator*</a></div><div class="ttdeci">friend PoseSE2 operator*(double scalar, PoseSE2 pose)</div><div class="ttdoc">Multiply pose with scalar and return copy without normalizing theta This operator is useful for calcu...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:373</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_aee2f963dc9e88115f3979d1aa192efed"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#aee2f963dc9e88115f3979d1aa192efed">teb_local_planner::PoseSE2::theta</a></div><div class="ttdeci">double &amp; theta()</div><div class="ttdoc">Access the orientation part (yaw angle) of the pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:182</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_af34c041436acc48dca71fda9cfeaf7d3"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#af34c041436acc48dca71fda9cfeaf7d3">teb_local_planner::PoseSE2::operator+=</a></div><div class="ttdeci">PoseSE2 &amp; operator+=(const PoseSE2 &amp;rhs)</div><div class="ttdoc">Compound assignment operator (addition)</div><div class="ttdef"><b>Definition:</b> pose_se2.h:314</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_af8bf1a6846fb12b168bb4f8e1fb1f2b6"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#af8bf1a6846fb12b168bb4f8e1fb1f2b6">teb_local_planner::PoseSE2::x</a></div><div class="ttdeci">double &amp; x()</div><div class="ttdoc">Access the x-coordinate the pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:158</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_af8e702a6d665f711d6f45cee9659f21c"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#af8e702a6d665f711d6f45cee9659f21c">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2(double x, double y, double theta)</div><div class="ttdoc">Construct pose using single components x, y, and the yaw angle</div><div class="ttdef"><b>Definition:</b> pose_se2.h:89</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html_afa90996d08e9647fde7307ddebd61887"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html#afa90996d08e9647fde7307ddebd61887">teb_local_planner::PoseSE2::PoseSE2</a></div><div class="ttdeci">PoseSE2(const tf::Pose &amp;pose)</div><div class="ttdoc">Construct pose using a tf::Pose</div><div class="ttdef"><b>Definition:</b> pose_se2.h:111</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

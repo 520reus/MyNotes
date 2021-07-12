@@ -1,0 +1,75 @@
+\hypertarget{classteb__local__planner_1_1EdgeAccelerationStart}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Start类 参考}
+\label{classteb__local__planner_1_1EdgeAccelerationStart}\index{teb\_local\_planner::EdgeAccelerationStart@{teb\_local\_planner::EdgeAccelerationStart}}
+
+
+Edge defining the cost function for limiting the translational and rotational acceleration at the beginning of the trajectory.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+acceleration.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Start 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeAccelerationStart}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationStart_aa5dd3dceca8ae553fbad560a7e5eb87b}\label{classteb__local__planner_1_1EdgeAccelerationStart_aa5dd3dceca8ae553fbad560a7e5eb87b}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart_aa5dd3dceca8ae553fbad560a7e5eb87b}{Edge\+Acceleration\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationStart_a53b6dcd233c98555cb969cc291ff70d1}\label{classteb__local__planner_1_1EdgeAccelerationStart_a53b6dcd233c98555cb969cc291ff70d1}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart_a53b6dcd233c98555cb969cc291ff70d1}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart_afbfa122209fada1dd217a1e99effd761}{set\+Initial\+Velocity}} (const geometry\+\_\+msgs\+::\+Twist \&vel\+\_\+start)
+\begin{DoxyCompactList}\small\item\em Set the initial velocity that is taken into account for calculating the acceleration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for limiting the translational and rotational acceleration at the beginning of the trajectory. 
+
+The edge depends on three vertices $ \mathbf{s}_i, \mathbf{s}_{ip1}, \Delta T_i $, an initial velocity defined by \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart_afbfa122209fada1dd217a1e99effd761}{set\+Initial\+Velocity()}} and minimizes\+: ~\newline
+ $ \min \textrm{penaltyInterval}( [a, omegadot ]^T ) \cdot weight $. ~\newline
+{\itshape a} is calculated using the difference quotient (twice) and the position parts of the poses. ~\newline
+{\itshape omegadot} is calculated using the difference quotient of the yaw angles followed by a normalization to \mbox{[}-\/pi, pi\mbox{]}. ~\newline
+{\itshape weight} can be set using set\+Information(). ~\newline
+{\itshape penalty\+Interval} denotes the penalty function, see penalty\+Bound\+To\+Interval(). ~\newline
+The dimension of the error / cost vector is 2\+: the first component represents the translational acceleration and the second one the rotational acceleration. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAcceleration}{Edge\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal}{Edge\+Acceleration\+Goal}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebMultiEdge_a8b22d7b41874fae70ac737b4b33d47e2}{set\+Teb\+Config()}} 
+
+Refer to Edge\+Acceleration\+Goal() for defining boundary values at the end of the trajectory! 
+\end{DoxyRemark}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationStart_afbfa122209fada1dd217a1e99effd761}\label{classteb__local__planner_1_1EdgeAccelerationStart_afbfa122209fada1dd217a1e99effd761}} 
+\index{teb\_local\_planner::EdgeAccelerationStart@{teb\_local\_planner::EdgeAccelerationStart}!setInitialVelocity@{setInitialVelocity}}
+\index{setInitialVelocity@{setInitialVelocity}!teb\_local\_planner::EdgeAccelerationStart@{teb\_local\_planner::EdgeAccelerationStart}}
+\doxysubsubsection{\texorpdfstring{setInitialVelocity()}{setInitialVelocity()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Acceleration\+Start\+::set\+Initial\+Velocity (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist \&}]{vel\+\_\+start }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial velocity that is taken into account for calculating the acceleration 
+
+
+\begin{DoxyParams}{参数}
+{\em vel\+\_\+start} & twist message containing the translational and rotational velocity \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+acceleration.\+h\end{DoxyCompactItemize}

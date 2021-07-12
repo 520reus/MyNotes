@@ -1,0 +1,67 @@
+\hypertarget{classcostmap__2d_1_1StaticLayer}{}\doxysection{costmap\+\_\+2d\+::Static\+Layer类 参考}
+\label{classcostmap__2d_1_1StaticLayer}\index{costmap\_2d::StaticLayer@{costmap\_2d::StaticLayer}}
+类 costmap\+\_\+2d\+::Static\+Layer 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcostmap__2d_1_1StaticLayer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_a37a85eb64cf7caead7c7ac67dd2e57e8}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of initialize(). Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_a6678b0c98e0c235c9297af4f09a4fa09}\label{classcostmap__2d_1_1StaticLayer_a6678b0c98e0c235c9297af4f09a4fa09}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_a6678b0c98e0c235c9297af4f09a4fa09}{activate}} ()
+\begin{DoxyCompactList}\small\item\em Restart publishers if they\textquotesingle{}ve been stopped. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_a8f550e1482c9561c898827a59ffbd603}\label{classcostmap__2d_1_1StaticLayer_a8f550e1482c9561c898827a59ffbd603}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_a8f550e1482c9561c898827a59ffbd603}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Stop publishers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_a146032a7bb671caeeda91b1162a3053f}\label{classcostmap__2d_1_1StaticLayer_a146032a7bb671caeeda91b1162a3053f}} 
+virtual void {\bfseries reset} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_ae0bb0fa15c5dcb223992a1bd837cda83}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_a557b5649a4fb20b8f0f94d1f268d98c9}\label{classcostmap__2d_1_1StaticLayer_a557b5649a4fb20b8f0f94d1f268d98c9}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_a557b5649a4fb20b8f0f94d1f268d98c9}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_ac398e580270fb19fd31aa21f589b6e02}\label{classcostmap__2d_1_1StaticLayer_ac398e580270fb19fd31aa21f589b6e02}} 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1StaticLayer_ac398e580270fb19fd31aa21f589b6e02}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_a37a85eb64cf7caead7c7ac67dd2e57e8}\label{classcostmap__2d_1_1StaticLayer_a37a85eb64cf7caead7c7ac67dd2e57e8}} 
+\index{costmap\_2d::StaticLayer@{costmap\_2d::StaticLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::StaticLayer@{costmap\_2d::StaticLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Static\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of initialize(). Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a97888a23e12ab5b798a854c2f590ae71}{costmap\+\_\+2d\+::\+Layer}} .
+
+\mbox{\Hypertarget{classcostmap__2d_1_1StaticLayer_ae0bb0fa15c5dcb223992a1bd837cda83}\label{classcostmap__2d_1_1StaticLayer_ae0bb0fa15c5dcb223992a1bd837cda83}} 
+\index{costmap\_2d::StaticLayer@{costmap\_2d::StaticLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::StaticLayer@{costmap\_2d::StaticLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Static\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1Layer_a978fb5288265b293a6fd08787314f2f1}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/static\+\_\+layer.\+h\end{DoxyCompactItemize}

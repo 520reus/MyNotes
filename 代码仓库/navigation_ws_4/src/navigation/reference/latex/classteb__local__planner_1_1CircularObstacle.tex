@@ -1,0 +1,424 @@
+\hypertarget{classteb__local__planner_1_1CircularObstacle}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Circular\+Obstacle类 参考}
+\label{classteb__local__planner_1_1CircularObstacle}\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+
+
+Implements a 2D circular obstacle (point obstacle plus radius)  
+
+
+
+
+{\ttfamily \#include $<$obstacles.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Circular\+Obstacle 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1CircularObstacle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_ac32cef3b9ebc04ffcb5478e2c2663d47}\label{classteb__local__planner_1_1CircularObstacle_ac32cef3b9ebc04ffcb5478e2c2663d47}} 
+\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ac32cef3b9ebc04ffcb5478e2c2663d47}{Circular\+Obstacle}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor of the circular obstacle class \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a5144c4e3aa8eb7d21ec45065d9eada89}{Circular\+Obstacle}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}}, double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ae62b92714127e40ec9f84e9fcdc9d3f4}{radius}})
+\begin{DoxyCompactList}\small\item\em Construct \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle}{Circular\+Obstacle}} using a 2d center position vector and radius \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a9e6a7598eaab87d7d6eb2894b58158f2}{Circular\+Obstacle}} (double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a80fd5dbdcc3f5c3240fbd0e4b97b02d4}{x}}, double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a283459cb7d429eb86315e7bb15a3f104}{y}}, double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ae62b92714127e40ec9f84e9fcdc9d3f4}{radius}})
+\begin{DoxyCompactList}\small\item\em Construct \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle}{Circular\+Obstacle}} using x-\/ and y-\/center-\/coordinates and radius \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a4596cd60468184830a8ab60b17d8262e}{check\+Collision}} (const Eigen\+::\+Vector2d \&point, double min\+\_\+dist) const
+\begin{DoxyCompactList}\small\item\em Check if a given point collides with the obstacle \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a64d728e88779c2f4179ed0246eed61c8}{check\+Line\+Intersection}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end, double min\+\_\+dist=0) const
+\begin{DoxyCompactList}\small\item\em Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance {\ttfamily min\+\_\+dist}) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ad6ea5bfe6d0fea60264f7ee7f4ddbecc}{get\+Minimum\+Distance}} (const Eigen\+::\+Vector2d \&\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}}) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (point as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a785dfd2d834027041476addfc63b9259}{get\+Minimum\+Distance}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (line as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a644a18f42dfd19e470bfe78a6632e7d5}{get\+Minimum\+Distance}} (const Point2d\+Container \&polygon) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (polygon as reference) \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ab68d2c910cca4f08acd2e78337ca1df5}{get\+Closest\+Point}} (const Eigen\+::\+Vector2d \&\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}}) const
+\begin{DoxyCompactList}\small\item\em Get the closest point on the boundary of the obstacle w.\+r.\+t. a specified reference position \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a60215be409e2efa604bc04ed55d82960}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Eigen\+::\+Vector2d \&\mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}}, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a3fc4213302d08d896d405734f70f66bf}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aac21f90690fbdfaa45e55533e24f4b9e}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Point2d\+Container \&polygon, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a278992dd800efeebe53af630417f4891}{predict\+Centroid\+Constant\+Velocity}} (double t, Eigen\+::\+Ref$<$ Eigen\+::\+Vector2d $>$ \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}}) const
+\begin{DoxyCompactList}\small\item\em Predict position of the centroid assuming a constant velocity model \end{DoxyCompactList}\item 
+virtual const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_afe0c7c3a3b65dee6ebe2d32942295d2e}{get\+Centroid}} () const
+\begin{DoxyCompactList}\small\item\em Get centroid coordinates of the obstacle \end{DoxyCompactList}\item 
+virtual std\+::complex$<$ double $>$ \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa9b00725c765f6bbaaf988948826f2af}{get\+Centroid\+Cplx}} () const
+\begin{DoxyCompactList}\small\item\em Get centroid coordinates of the obstacle as complex number \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}\label{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}} 
+const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_aa863e93d2c125d99d36fff11ac709027}{position}} () const
+\begin{DoxyCompactList}\small\item\em Return the current position of the obstacle (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a28f487ab6e5470b32b0ab4cf1b4421b6}\label{classteb__local__planner_1_1CircularObstacle_a28f487ab6e5470b32b0ab4cf1b4421b6}} 
+Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a28f487ab6e5470b32b0ab4cf1b4421b6}{position}} ()
+\begin{DoxyCompactList}\small\item\em Return the current position of the obstacle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a80fd5dbdcc3f5c3240fbd0e4b97b02d4}\label{classteb__local__planner_1_1CircularObstacle_a80fd5dbdcc3f5c3240fbd0e4b97b02d4}} 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a80fd5dbdcc3f5c3240fbd0e4b97b02d4}{x}} ()
+\begin{DoxyCompactList}\small\item\em Return the current x-\/coordinate of the obstacle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_acf4a95e42248c7c7a654785d5eef77b8}\label{classteb__local__planner_1_1CircularObstacle_acf4a95e42248c7c7a654785d5eef77b8}} 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_acf4a95e42248c7c7a654785d5eef77b8}{x}} () const
+\begin{DoxyCompactList}\small\item\em Return the current y-\/coordinate of the obstacle (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a283459cb7d429eb86315e7bb15a3f104}\label{classteb__local__planner_1_1CircularObstacle_a283459cb7d429eb86315e7bb15a3f104}} 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a283459cb7d429eb86315e7bb15a3f104}{y}} ()
+\begin{DoxyCompactList}\small\item\em Return the current x-\/coordinate of the obstacle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_ae34ddd9bc11b22cc3147ac42bbf9f8a7}\label{classteb__local__planner_1_1CircularObstacle_ae34ddd9bc11b22cc3147ac42bbf9f8a7}} 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ae34ddd9bc11b22cc3147ac42bbf9f8a7}{y}} () const
+\begin{DoxyCompactList}\small\item\em Return the current y-\/coordinate of the obstacle (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_ae62b92714127e40ec9f84e9fcdc9d3f4}\label{classteb__local__planner_1_1CircularObstacle_ae62b92714127e40ec9f84e9fcdc9d3f4}} 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_ae62b92714127e40ec9f84e9fcdc9d3f4}{radius}} ()
+\begin{DoxyCompactList}\small\item\em Return the current radius of the obstacle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_af8a6a80a7e0ef509930eeb2fd19ade3e}\label{classteb__local__planner_1_1CircularObstacle_af8a6a80a7e0ef509930eeb2fd19ade3e}} 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_af8a6a80a7e0ef509930eeb2fd19ade3e}{radius}} () const
+\begin{DoxyCompactList}\small\item\em Return the current radius of the obstacle \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a88a0c179c2ada65fee93385178f36be5}{to\+Polygon\+Msg}} (geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Convert the obstacle to a polygon message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_af2d4e9cf94f12c79bc01757c5f67f11a}\label{classteb__local__planner_1_1CircularObstacle_af2d4e9cf94f12c79bc01757c5f67f11a}} 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_af2d4e9cf94f12c79bc01757c5f67f11a}{pos\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the center position of the \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle}{Circular\+Obstacle}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a85b31b7df16ffe0d57c2f4c716554e15}\label{classteb__local__planner_1_1CircularObstacle_a85b31b7df16ffe0d57c2f4c716554e15}} 
+double \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle_a85b31b7df16ffe0d57c2f4c716554e15}{radius\+\_\+}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Radius of the obstacle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Implements a 2D circular obstacle (point obstacle plus radius) 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a5144c4e3aa8eb7d21ec45065d9eada89}\label{classteb__local__planner_1_1CircularObstacle_a5144c4e3aa8eb7d21ec45065d9eada89}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!CircularObstacle@{CircularObstacle}}
+\index{CircularObstacle@{CircularObstacle}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{CircularObstacle()}{CircularObstacle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::\+Circular\+Obstacle (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle}{Circular\+Obstacle}} using a 2d center position vector and radius 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2d position that defines the current obstacle position \\
+\hline
+{\em radius} & radius of the obstacle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a9e6a7598eaab87d7d6eb2894b58158f2}\label{classteb__local__planner_1_1CircularObstacle_a9e6a7598eaab87d7d6eb2894b58158f2}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!CircularObstacle@{CircularObstacle}}
+\index{CircularObstacle@{CircularObstacle}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{CircularObstacle()}{CircularObstacle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::\+Circular\+Obstacle (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct \mbox{\hyperlink{classteb__local__planner_1_1CircularObstacle}{Circular\+Obstacle}} using x-\/ and y-\/center-\/coordinates and radius 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate \\
+\hline
+{\em y} & y-\/coordinate \\
+\hline
+{\em radius} & radius of the obstacle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a4596cd60468184830a8ab60b17d8262e}\label{classteb__local__planner_1_1CircularObstacle_a4596cd60468184830a8ab60b17d8262e}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::check\+Collision (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position,  }\item[{double}]{min\+\_\+dist }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a given point collides with the obstacle 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2D reference position that should be checked \\
+\hline
+{\em min\+\_\+dist} & Minimum distance allowed to the obstacle to be collision free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if position is inside the region of the obstacle or if the minimum distance is lower than min\+\_\+dist 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_af2487bf6752ca520032608e95a016223}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a64d728e88779c2f4179ed0246eed61c8}\label{classteb__local__planner_1_1CircularObstacle_a64d728e88779c2f4179ed0246eed61c8}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!checkLineIntersection@{checkLineIntersection}}
+\index{checkLineIntersection@{checkLineIntersection}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{checkLineIntersection()}{checkLineIntersection()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::check\+Line\+Intersection (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end,  }\item[{double}]{min\+\_\+dist = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance {\ttfamily min\+\_\+dist}) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2D point for the end of the reference line \\
+\hline
+{\em line\+\_\+end} & 2D point for the end of the reference line \\
+\hline
+{\em min\+\_\+dist} & Minimum distance allowed to the obstacle to be collision/intersection free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if given line intersects the region of the obstacle or if the minimum distance is lower than min\+\_\+dist 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_af94e4f86ac2c6d26fccb6022d4b3c457}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_afe0c7c3a3b65dee6ebe2d32942295d2e}\label{classteb__local__planner_1_1CircularObstacle_afe0c7c3a3b65dee6ebe2d32942295d2e}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getCentroid@{getCentroid}}
+\index{getCentroid@{getCentroid}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getCentroid()}{getCentroid()}}
+{\footnotesize\ttfamily virtual const Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Centroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get centroid coordinates of the obstacle 
+
+\begin{DoxyReturn}{返回}
+Eigen\+::\+Vector2d containing the centroid 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a6960c8404759401120d53a44ec2155cc}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_aa9b00725c765f6bbaaf988948826f2af}\label{classteb__local__planner_1_1CircularObstacle_aa9b00725c765f6bbaaf988948826f2af}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getCentroidCplx@{getCentroidCplx}}
+\index{getCentroidCplx@{getCentroidCplx}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getCentroidCplx()}{getCentroidCplx()}}
+{\footnotesize\ttfamily virtual std\+::complex$<$double$>$ teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Centroid\+Cplx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get centroid coordinates of the obstacle as complex number 
+
+\begin{DoxyReturn}{返回}
+std\+::complex containing the centroid coordinate 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_abb48a94476235acde6ff31fd6607b35c}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_ab68d2c910cca4f08acd2e78337ca1df5}\label{classteb__local__planner_1_1CircularObstacle_ab68d2c910cca4f08acd2e78337ca1df5}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getClosestPoint@{getClosestPoint}}
+\index{getClosestPoint@{getClosestPoint}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getClosestPoint()}{getClosestPoint()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector2d teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Closest\+Point (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the closest point on the boundary of the obstacle w.\+r.\+t. a specified reference position 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & reference 2d position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+closest point on the obstacle boundary 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ab16489bf4a8a5a1dd116b7714f8d04a9}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a785dfd2d834027041476addfc63b9259}\label{classteb__local__planner_1_1CircularObstacle_a785dfd2d834027041476addfc63b9259}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (line as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2d position of the begin of the reference line \\
+\hline
+{\em line\+\_\+end} & 2d position of the end of the reference line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ad0318a1d12949d41f72109477e002587}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_ad6ea5bfe6d0fea60264f7ee7f4ddbecc}\label{classteb__local__planner_1_1CircularObstacle_ad6ea5bfe6d0fea60264f7ee7f4ddbecc}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (point as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2d reference position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_aa402c55336629cea9eb2abf34cffc013}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a644a18f42dfd19e470bfe78a6632e7d5}\label{classteb__local__planner_1_1CircularObstacle_a644a18f42dfd19e470bfe78a6632e7d5}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Point2d\+Container \&}]{polygon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (polygon as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & Vertices (2D points) describing a closed polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a252167bfbe5e08dea1ea3c5d3ed94ca3}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a3fc4213302d08d896d405734f70f66bf}\label{classteb__local__planner_1_1CircularObstacle_a3fc4213302d08d896d405734f70f66bf}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2d position of the begin of the reference line \\
+\hline
+{\em line\+\_\+end} & 2d position of the end of the reference line \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a1a36926f6b2c9554ada188ad431d919c}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a60215be409e2efa604bc04ed55d82960}\label{classteb__local__planner_1_1CircularObstacle_a60215be409e2efa604bc04ed55d82960}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2d reference position \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a39a81893ed6f8acb5c0bea07f26788a3}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_aac21f90690fbdfaa45e55533e24f4b9e}\label{classteb__local__planner_1_1CircularObstacle_aac21f90690fbdfaa45e55533e24f4b9e}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Point2d\+Container \&}]{polygon,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & Vertices (2D points) describing a closed polygon \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ae70483f0255fed37cef35b9c60b2f001}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a278992dd800efeebe53af630417f4891}\label{classteb__local__planner_1_1CircularObstacle_a278992dd800efeebe53af630417f4891}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!predictCentroidConstantVelocity@{predictCentroidConstantVelocity}}
+\index{predictCentroidConstantVelocity@{predictCentroidConstantVelocity}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{predictCentroidConstantVelocity()}{predictCentroidConstantVelocity()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::predict\+Centroid\+Constant\+Velocity (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector2d $>$}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Predict position of the centroid assuming a constant velocity model 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em t} & time in seconds for the prediction (t$>$=0) \\
+\hline
+\mbox{\texttt{ out}}  & {\em position} & predicted 2d position of the centroid \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a6ddd791a3a9424cbfce4843e8cb51198}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}} .
+
+\mbox{\Hypertarget{classteb__local__planner_1_1CircularObstacle_a88a0c179c2ada65fee93385178f36be5}\label{classteb__local__planner_1_1CircularObstacle_a88a0c179c2ada65fee93385178f36be5}} 
+\index{teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}!toPolygonMsg@{toPolygonMsg}}
+\index{toPolygonMsg@{toPolygonMsg}!teb\_local\_planner::CircularObstacle@{teb\_local\_planner::CircularObstacle}}
+\doxysubsubsection{\texorpdfstring{toPolygonMsg()}{toPolygonMsg()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Circular\+Obstacle\+::to\+Polygon\+Msg (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Convert the obstacle to a polygon message 
+
+Convert the obstacle to a corresponding polygon msg. Point obstacles have one vertex, lines have two vertices and polygons might are implictly closed such that the start vertex must not be repeated. 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em polygon} & the polygon message \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a13d46bddd41ab00dbcc968da213424d4}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/obstacles.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::MapGridCostFunction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html">MapGridCostFunction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::MapGridCostFunction类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="map__grid__cost__function_8h_source.html">map_grid_cost_function.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::MapGridCostFunction 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1MapGridCostFunction.png" usemap="#base_5Flocal_5Fplanner::MapGridCostFunction_map" alt=""/>
+  <map id="base_5Flocal_5Fplanner::MapGridCostFunction_map" name="base_5Flocal_5Fplanner::MapGridCostFunction_map">
+<area href="classbase__local__planner_1_1TrajectoryCostFunction.html" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="base_local_planner::TrajectoryCostFunction" shape="rect" coords="0,0,261,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a37e0fd0048db78bb703946b56daafe25"><td class="memItemLeft" align="right" valign="top"><a id="a37e0fd0048db78bb703946b56daafe25"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MapGridCostFunction</b> (<a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, double xshift=0.0, double yshift=0.0, bool is_local_goal_function=false, CostAggregationType aggregationType=Last)</td></tr>
+<tr class="separator:a37e0fd0048db78bb703946b56daafe25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f336c23114bcd9ea8fa24462465277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a07f336c23114bcd9ea8fa24462465277">setTargetPoses</a> (std::vector&lt; geometry_msgs::PoseStamped &gt; target_poses)</td></tr>
+<tr class="separator:a07f336c23114bcd9ea8fa24462465277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3d73260adc793dde0317b532b29f8a"><td class="memItemLeft" align="right" valign="top"><a id="a7a3d73260adc793dde0317b532b29f8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setXShift</b> (double xshift)</td></tr>
+<tr class="separator:a7a3d73260adc793dde0317b532b29f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fbe47f2c31ea241b86d5e61b47428a"><td class="memItemLeft" align="right" valign="top"><a id="a08fbe47f2c31ea241b86d5e61b47428a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setYShift</b> (double yshift)</td></tr>
+<tr class="separator:a08fbe47f2c31ea241b86d5e61b47428a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c1cdf742342db135a15eaaad3a8d86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a02c1cdf742342db135a15eaaad3a8d86">setStopOnFailure</a> (bool stop_on_failure)</td></tr>
+<tr class="memdesc:a02c1cdf742342db135a15eaaad3a8d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, failures along the path cause the entire path to be rejected.  <a href="classbase__local__planner_1_1MapGridCostFunction.html#a02c1cdf742342db135a15eaaad3a8d86">更多...</a><br /></td></tr>
+<tr class="separator:a02c1cdf742342db135a15eaaad3a8d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f80d67ddeefec5871b4828ddafb5dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#af3f80d67ddeefec5871b4828ddafb5dc">prepare</a> ()</td></tr>
+<tr class="separator:af3f80d67ddeefec5871b4828ddafb5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4332b1fd1c72795c87fb5d3a427df476"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a4332b1fd1c72795c87fb5d3a427df476">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:a4332b1fd1c72795c87fb5d3a427df476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14783081aef0e5f4702edf317a10c167"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a14783081aef0e5f4702edf317a10c167">obstacleCosts</a> ()</td></tr>
+<tr class="separator:a14783081aef0e5f4702edf317a10c167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e561793dbbb51118834f19673e17892"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1MapGridCostFunction.html#a9e561793dbbb51118834f19673e17892">unreachableCellCosts</a> ()</td></tr>
+<tr class="separator:a9e561793dbbb51118834f19673e17892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"><td class="memItemLeft" align="right" valign="top"><a id="a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getCellCosts</b> (unsigned int cx, unsigned int cy)</td></tr>
+<tr class="separator:a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1TrajectoryCostFunction')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memItemLeft" align="right" valign="top"><a id="abaae8d899bd41d8baf02bf7aa175ded9"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>getScale</b> ()</td></tr>
+<tr class="separator:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memItemLeft" align="right" valign="top"><a id="a816da4ed3c9be419fc00abb271d5a8b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b> (double scale)</td></tr>
+<tr class="separator:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1TrajectoryCostFunction')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memItemLeft" align="right" valign="top"><a id="a5a80d6bb3fade55e28d8cb234936c43a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TrajectoryCostFunction</b> (double scale=1.0)</td></tr>
+<tr class="separator:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1TrajectoryCostFunction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class provides cost based on a map_grid of a small area of the world. The map_grid covers a the costmap, the costmap containing the information about sensed obstacles. The map_grid is used by setting certain cells to distance 0, and then propagating distances around them, filling up the area reachable around them.</p>
+<p>The approach using grid_maps is used for computational efficiency, allowing to score hundreds of trajectories very quickly.</p>
+<p>This can be used to favor trajectories which stay on a given path, or which approach a given goal. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap_ros</td><td>Reference to object giving updates of obstacles around robot </td></tr>
+    <tr><td class="paramname">xshift</td><td>where the scoring point is with respect to robot center pose </td></tr>
+    <tr><td class="paramname">yshift</td><td>where the scoring point is with respect to robot center pose </td></tr>
+    <tr><td class="paramname">is_local_goal_function,scores</td><td>for local goal rather than whole path </td></tr>
+    <tr><td class="paramname">aggregationType</td><td>how to combine costs along trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a14783081aef0e5f4702edf317a10c167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14783081aef0e5f4702edf317a10c167">&#9670;&nbsp;</a></span>obstacleCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::obstacleCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return a value that indicates cell is in obstacle </p>
+
+</div>
+</div>
+<a id="af3f80d67ddeefec5871b4828ddafb5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f80d67ddeefec5871b4828ddafb5dc">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::MapGridCostFunction::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>propagate distances </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html#a351dddca226f210a09bd10c151e2975f">base_local_planner::TrajectoryCostFunction</a>.</p>
+
+</div>
+</div>
+<a id="a4332b1fd1c72795c87fb5d3a427df476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4332b1fd1c72795c87fb5d3a427df476">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1Trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>return a score for trajectory traj </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1TrajectoryCostFunction.html#a6908a8071270b455fc25b48db76e2d3c">base_local_planner::TrajectoryCostFunction</a>.</p>
+
+</div>
+</div>
+<a id="a02c1cdf742342db135a15eaaad3a8d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c1cdf742342db135a15eaaad3a8d86">&#9670;&nbsp;</a></span>setStopOnFailure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setStopOnFailure </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stop_on_failure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, failures along the path cause the entire path to be rejected. </p>
+<p>Default is true. </p>
+
+</div>
+</div>
+<a id="a07f336c23114bcd9ea8fa24462465277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f336c23114bcd9ea8fa24462465277">&#9670;&nbsp;</a></span>setTargetPoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setTargetPoses </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt;&#160;</td>
+          <td class="paramname"><em>target_poses</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set line segments on the grid with distance 0, resets the grid </p>
+
+</div>
+</div>
+<a id="a9e561793dbbb51118834f19673e17892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e561793dbbb51118834f19673e17892">&#9670;&nbsp;</a></span>unreachableCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::unreachableCellCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>returns a value indicating cell was not reached by wavefront propagation of set cells. (is behind walls, regarding the region covered by grid) </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="map__grid__cost__function_8h_source.html">map_grid_cost_function.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

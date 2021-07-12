@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner::StateDiscretizer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>lattice_planner</b></li><li class="navelem"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html">StateDiscretizer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">lattice_planner::StateDiscretizer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>calculations and conversions between a continuous and its discrete state representation  
+ <a href="classlattice__planner_1_1StateDiscretizer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="state__discretizer_8h_source.html">state_discretizer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a97cb8c045d4538ed836b9fc8ffac57ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#a97cb8c045d4538ed836b9fc8ffac57ac">StateDiscretizer</a> (<a class="el" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a> *costmap, <a class="el" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a> motion_constraints)</td></tr>
+<tr class="memdesc:a97cb8c045d4538ed836b9fc8ffac57ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classlattice__planner_1_1StateDiscretizer.html#a97cb8c045d4538ed836b9fc8ffac57ac">更多...</a><br /></td></tr>
+<tr class="separator:a97cb8c045d4538ed836b9fc8ffac57ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326ab159e31dd7b48315dbec80091fcc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#a326ab159e31dd7b48315dbec80091fcc">getNumDiscreteAngles</a> (double acc_w, double time_delta)</td></tr>
+<tr class="memdesc:a326ab159e31dd7b48315dbec80091fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the number of discrete angles necessary to represent the configuration space  <a href="classlattice__planner_1_1StateDiscretizer.html#a326ab159e31dd7b48315dbec80091fcc">更多...</a><br /></td></tr>
+<tr class="separator:a326ab159e31dd7b48315dbec80091fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f93b8fa02d6b391d67cae49a9ad3563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#a6f93b8fa02d6b391d67cae49a9ad3563">discretizeState</a> (<a class="el" href="classlattice__planner_1_1Pose.html">Pose</a> pose, <a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a> vel, int time_step)</td></tr>
+<tr class="memdesc:a6f93b8fa02d6b391d67cae49a9ad3563"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the discrete representation for a given state  <a href="classlattice__planner_1_1StateDiscretizer.html#a6f93b8fa02d6b391d67cae49a9ad3563">更多...</a><br /></td></tr>
+<tr class="separator:a6f93b8fa02d6b391d67cae49a9ad3563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aca1249de99d4d5309ed3e24c87daa0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#a9aca1249de99d4d5309ed3e24c87daa0">getCellPosition</a> (double x, double y, unsigned int &amp;x_i, unsigned int &amp;y_i, unsigned int &amp;index)</td></tr>
+<tr class="memdesc:a9aca1249de99d4d5309ed3e24c87daa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the map coordinates and map index from a continuous position  <a href="classlattice__planner_1_1StateDiscretizer.html#a9aca1249de99d4d5309ed3e24c87daa0">更多...</a><br /></td></tr>
+<tr class="separator:a9aca1249de99d4d5309ed3e24c87daa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5824f2e3df38145f8f13cedfd0538d3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#ac5824f2e3df38145f8f13cedfd0538d3">getDiscreteOrientation</a> (double angle)</td></tr>
+<tr class="memdesc:ac5824f2e3df38145f8f13cedfd0538d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get discretized orientation from a given continuous representation  <a href="classlattice__planner_1_1StateDiscretizer.html#ac5824f2e3df38145f8f13cedfd0538d3">更多...</a><br /></td></tr>
+<tr class="separator:ac5824f2e3df38145f8f13cedfd0538d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2065d389a9fdfd502b6aa9235b1491"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#aee2065d389a9fdfd502b6aa9235b1491">getDiscreteVelocity</a> (<a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a> vel, unsigned int &amp;vel_x_i, unsigned int &amp;vel_w_i)</td></tr>
+<tr class="memdesc:aee2065d389a9fdfd502b6aa9235b1491"><td class="mdescLeft">&#160;</td><td class="mdescRight">get discretized velocity from a given continuous representation  <a href="classlattice__planner_1_1StateDiscretizer.html#aee2065d389a9fdfd502b6aa9235b1491">更多...</a><br /></td></tr>
+<tr class="separator:aee2065d389a9fdfd502b6aa9235b1491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4438c6e43b6e45d6707efb5208c8285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#aa4438c6e43b6e45d6707efb5208c8285">getLimits</a> (int &amp;num_gridcells, int &amp;num_orientations, int &amp;num_vels_x, int &amp;num_vels_w)</td></tr>
+<tr class="memdesc:aa4438c6e43b6e45d6707efb5208c8285"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the discretization limits: amount of discrete steps available for each state dimension to represent the continuous state space  <a href="classlattice__planner_1_1StateDiscretizer.html#aa4438c6e43b6e45d6707efb5208c8285">更多...</a><br /></td></tr>
+<tr class="separator:aa4438c6e43b6e45d6707efb5208c8285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ca81e173a4c792c9aa65e2d59ad021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlattice__planner_1_1StateDiscretizer.html#a68ca81e173a4c792c9aa65e2d59ad021">getVelocity</a> (unsigned int vel_x_i, unsigned int vel_w_i)</td></tr>
+<tr class="memdesc:a68ca81e173a4c792c9aa65e2d59ad021"><td class="mdescLeft">&#160;</td><td class="mdescRight">get corresponding continuous velocity to a given discrete representation.  <a href="classlattice__planner_1_1StateDiscretizer.html#a68ca81e173a4c792c9aa65e2d59ad021">更多...</a><br /></td></tr>
+<tr class="separator:a68ca81e173a4c792c9aa65e2d59ad021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>calculations and conversions between a continuous and its discrete state representation </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a97cb8c045d4538ed836b9fc8ffac57ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cb8c045d4538ed836b9fc8ffac57ac">&#9670;&nbsp;</a></span>StateDiscretizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lattice_planner::StateDiscretizer::StateDiscretizer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1DynamicCostmap.html">DynamicCostmap</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1MotionConstraints.html">MotionConstraints</a>&#160;</td>
+          <td class="paramname"><em>motion_constraints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap</td><td>dynamic costmap for planning </td></tr>
+    <tr><td class="paramname">motion_constraints</td><td>velocity and acceleration limits of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6f93b8fa02d6b391d67cae49a9ad3563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f93b8fa02d6b391d67cae49a9ad3563">&#9670;&nbsp;</a></span>discretizeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a> lattice_planner::StateDiscretizer::discretizeState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a>&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time_step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>find the discrete representation for a given state </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose</td><td>the pose of the state </td></tr>
+    <tr><td class="paramname">vel</td><td>the state's velocity </td></tr>
+    <tr><td class="paramname">time_step</td><td>the state's discrete time step </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>discretized state representation </dd></dl>
+
+</div>
+</div>
+<a id="a9aca1249de99d4d5309ed3e24c87daa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aca1249de99d4d5309ed3e24c87daa0">&#9670;&nbsp;</a></span>getCellPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lattice_planner::StateDiscretizer::getCellPosition </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>x_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>y_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the map coordinates and map index from a continuous position </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">x</td><td>continuous x coordinate </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">y</td><td>continuous y coordinate </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x_i</td><td>discrete x coordinate in the map </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y_i</td><td>discrete y coordinate in the map </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">index</td><td>discrete map index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>whether the queried position is inside the map </dd></dl>
+
+</div>
+</div>
+<a id="ac5824f2e3df38145f8f13cedfd0538d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5824f2e3df38145f8f13cedfd0538d3">&#9670;&nbsp;</a></span>getDiscreteOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int lattice_planner::StateDiscretizer::getDiscreteOrientation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get discretized orientation from a given continuous representation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>continuous orientation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>discretized orientation </dd></dl>
+
+</div>
+</div>
+<a id="aee2065d389a9fdfd502b6aa9235b1491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2065d389a9fdfd502b6aa9235b1491">&#9670;&nbsp;</a></span>getDiscreteVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::StateDiscretizer::getDiscreteVelocity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a>&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>vel_x_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>vel_w_i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get discretized velocity from a given continuous representation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">vel</td><td>continuous velocity </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vel_x_i</td><td>discretized forward velocity component </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vel_w_i</td><td>discretized angular velocity component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4438c6e43b6e45d6707efb5208c8285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4438c6e43b6e45d6707efb5208c8285">&#9670;&nbsp;</a></span>getLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::StateDiscretizer::getLimits </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_gridcells</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_orientations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_vels_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_vels_w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the discretization limits: amount of discrete steps available for each state dimension to represent the continuous state space </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_gridcells</td><td>number of grid cells in the discrete map </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_orientations</td><td>number of discrete orientations </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_vels_x</td><td>number of discrete forward velocities </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">num_vels_w</td><td>number of discrete angular velocities </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a326ab159e31dd7b48315dbec80091fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326ab159e31dd7b48315dbec80091fcc">&#9670;&nbsp;</a></span>getNumDiscreteAngles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lattice_planner::StateDiscretizer::getNumDiscreteAngles </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>acc_w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the number of discrete angles necessary to represent the configuration space </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">acc_w</td><td>angular acceleration of the robot </td></tr>
+    <tr><td class="paramname">time_delta</td><td>time resolution of the configuration space </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>number of discrete angles necessary to fully represent the configuration space </dd></dl>
+
+</div>
+</div>
+<a id="a68ca81e173a4c792c9aa65e2d59ad021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ca81e173a4c792c9aa65e2d59ad021">&#9670;&nbsp;</a></span>getVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a> lattice_planner::StateDiscretizer::getVelocity </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vel_x_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vel_w_i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get corresponding continuous velocity to a given discrete representation. </p>
+<pre class="fragment">   mostly used to avoid rounding errors when calculating velocities inside
+   the continuous configuration space
+</pre> <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vel_x_i</td><td>discrete forward velocity </td></tr>
+    <tr><td class="paramname">vel_w_i</td><td>discrete angular velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>continuous velocity </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>lattice_planner/include/lattice_planner/<a class="el" href="state__discretizer_8h_source.html">state_discretizer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,70 @@
+\hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config\+::Obstacles结构体 参考}
+\label{structteb__local__planner_1_1TebConfig_1_1Obstacles}\index{teb\_local\_planner::TebConfig::Obstacles@{teb\_local\_planner::TebConfig::Obstacles}}
+
+
+\mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} related parameters  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+config.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_ae3add2c68529da3636e673e4405d0271}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_ae3add2c68529da3636e673e4405d0271}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_ae3add2c68529da3636e673e4405d0271}{min\+\_\+obstacle\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Minimum desired separation from obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a6c55b35f7c351db756bd27c09a7e2770}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a6c55b35f7c351db756bd27c09a7e2770}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a6c55b35f7c351db756bd27c09a7e2770}{inflation\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em buffer zone around obstacles with non-\/zero penalty costs (should be larger than min\+\_\+obstacle\+\_\+dist in order to take effect) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a889f5292434e4541e25d9149e0696de5}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a889f5292434e4541e25d9149e0696de5}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a889f5292434e4541e25d9149e0696de5}{dynamic\+\_\+obstacle\+\_\+inflation\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Buffer zone around predicted locations of dynamic obstacles with non-\/zero penalty costs (should be larger than min\+\_\+obstacle\+\_\+dist in order to take effect) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a8189ac3c2978a9b15014eb1025ebb93b}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a8189ac3c2978a9b15014eb1025ebb93b}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a8189ac3c2978a9b15014eb1025ebb93b}{include\+\_\+dynamic\+\_\+obstacles}}
+\begin{DoxyCompactList}\small\item\em Specify whether the movement of dynamic obstacles should be predicted by a constant velocity model (this also effects homotopy class planning); If false, all obstacles are considered to be static. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab7414dda0ee7e62dc3cb17efb9979dcf}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab7414dda0ee7e62dc3cb17efb9979dcf}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab7414dda0ee7e62dc3cb17efb9979dcf}{include\+\_\+costmap\+\_\+obstacles}}
+\begin{DoxyCompactList}\small\item\em Specify whether the obstacles in the costmap should be taken into account directly \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_af768fc88a99d27773c08c6120e3a983b}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_af768fc88a99d27773c08c6120e3a983b}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_af768fc88a99d27773c08c6120e3a983b}{costmap\+\_\+obstacles\+\_\+behind\+\_\+robot\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Limit the occupied local costmap obstacles taken into account for planning behind the robot (specify distance in meters) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_af9749c8113db12b638cf7fad7a3e7a31}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_af9749c8113db12b638cf7fad7a3e7a31}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_af9749c8113db12b638cf7fad7a3e7a31}{obstacle\+\_\+poses\+\_\+affected}}
+\begin{DoxyCompactList}\small\item\em The obstacle position is attached to the closest pose on the trajectory to reduce computational effort, but take a number of neighbors into account as well \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab84e5c25341cdaad9e2f2db9aacb5d00}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab84e5c25341cdaad9e2f2db9aacb5d00}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_ab84e5c25341cdaad9e2f2db9aacb5d00}{legacy\+\_\+obstacle\+\_\+association}}
+\begin{DoxyCompactList}\small\item\em If true, the old association strategy is used (for each obstacle, find the nearest TEB pose), otherwise the new one (for each teb pose, find only \char`\"{}relevant\char`\"{} obstacles). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a48df5272f0127e9e93600f24de24dc95}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a48df5272f0127e9e93600f24de24dc95}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a48df5272f0127e9e93600f24de24dc95}{obstacle\+\_\+association\+\_\+force\+\_\+inclusion\+\_\+factor}}
+\begin{DoxyCompactList}\small\item\em The non-\/legacy obstacle association technique tries to connect only relevant obstacles with the discretized trajectory during optimization, all obstacles within a specifed distance are forced to be included (as a multiple of min\+\_\+obstacle\+\_\+dist), e.\+g. choose 2.\+0 in order to consider obstacles within a radius of 2.\+0$\ast$min\+\_\+obstacle\+\_\+dist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a67a736aa3a17cc9baaec46b401c7d867}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a67a736aa3a17cc9baaec46b401c7d867}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a67a736aa3a17cc9baaec46b401c7d867}{obstacle\+\_\+association\+\_\+cutoff\+\_\+factor}}
+\begin{DoxyCompactList}\small\item\em See obstacle\+\_\+association\+\_\+force\+\_\+inclusion\+\_\+factor, but beyond a multiple of \mbox{[}value\mbox{]}$\ast$min\+\_\+obstacle\+\_\+dist all obstacles are ignored during optimization. obstacle\+\_\+association\+\_\+force\+\_\+inclusion\+\_\+factor is processed first. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a7cf9febba0ca925dbb91d019591324a7}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a7cf9febba0ca925dbb91d019591324a7}} 
+std\+::string \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a7cf9febba0ca925dbb91d019591324a7}{costmap\+\_\+converter\+\_\+plugin}}
+\begin{DoxyCompactList}\small\item\em Define a plugin name of the costmap\+\_\+converter package (costmap cells are converted to points/lines/polygons) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a460721931f8a5188a671ee42e592558a}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a460721931f8a5188a671ee42e592558a}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a460721931f8a5188a671ee42e592558a}{costmap\+\_\+converter\+\_\+spin\+\_\+thread}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true}, the costmap converter invokes its callback queue in a different thread \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a74a2b910c33c30701c5299b85a994a47}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a74a2b910c33c30701c5299b85a994a47}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a74a2b910c33c30701c5299b85a994a47}{costmap\+\_\+converter\+\_\+rate}}
+\begin{DoxyCompactList}\small\item\em The rate that defines how often the costmap\+\_\+converter plugin processes the current costmap (the value should not be much higher than the costmap update rate) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_aeec2ad6b09a10e3eb62935e72a7a6537}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_aeec2ad6b09a10e3eb62935e72a7a6537}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_aeec2ad6b09a10e3eb62935e72a7a6537}{obstacle\+\_\+proximity\+\_\+ratio\+\_\+max\+\_\+vel}}
+\begin{DoxyCompactList}\small\item\em Ratio of the maximum velocities used as an upper bound when reducing the speed due to the proximity to a static obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_a528b6f8fd4495b946e9e86118dcf4037}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_a528b6f8fd4495b946e9e86118dcf4037}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_a528b6f8fd4495b946e9e86118dcf4037}{obstacle\+\_\+proximity\+\_\+lower\+\_\+bound}}
+\begin{DoxyCompactList}\small\item\em Distance to a static obstacle for which the velocity should be lower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Obstacles_ad5a39a721cddad0e4092277938cad072}\label{structteb__local__planner_1_1TebConfig_1_1Obstacles_ad5a39a721cddad0e4092277938cad072}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Obstacles_ad5a39a721cddad0e4092277938cad072}{obstacle\+\_\+proximity\+\_\+upper\+\_\+bound}}
+\begin{DoxyCompactList}\small\item\em Distance to a static obstacle for which the velocity should be higher \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} related parameters 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

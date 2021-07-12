@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/visualization.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">visualization.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef VISUALIZATION_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define VISUALIZATION_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// teb stuff</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/teb_config.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/timed_elastic_band.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/robot_footprint_model.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// ros stuff</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;ros/publisher.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/goal_functions.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// boost</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;boost/graph/adjacency_list.hpp&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;boost/graph/graph_traits.hpp&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// std</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// messages</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseArray.h&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;std_msgs/ColorRGBA.h&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &lt;tf/transform_datatypes.h&gt;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &lt;visualization_msgs/Marker.h&gt;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">class </span>TebOptimalPlanner; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html">   80</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1TebVisualization.html">TebVisualization</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#aef5a9cd43d591e0783c76583c8c8c6fd">   88</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1TebVisualization.html#aef5a9cd43d591e0783c76583c8c8c6fd">TebVisualization</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a65ccb482184b59aca0873299d3127d19">   95</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a65ccb482184b59aca0873299d3127d19">TebVisualization</a>(ros::NodeHandle&amp; nh, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>&amp; cfg);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a49d1739f756c17f4f496810da33614fe">  104</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a49d1739f756c17f4f496810da33614fe">initialize</a>(ros::NodeHandle&amp; nh, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>&amp; cfg);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#ad6439f2f5ebf7562ee665c6e8da39943">  114</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#ad6439f2f5ebf7562ee665c6e8da39943">publishGlobalPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; global_plan) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#aba7adf516553edb5e82b85308053bf5e">  120</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#aba7adf516553edb5e82b85308053bf5e">publishLocalPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; local_plan) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a4c800281a12b741d3a3437272d394d82">  129</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a4c800281a12b741d3a3437272d394d82">publishLocalPlanAndPoses</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a>&amp; teb) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#ac94196331b894f00f3778935318f15f8">  139</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#ac94196331b894f00f3778935318f15f8">publishRobotFootprintModel</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; current_pose, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>&amp; robot_model, <span class="keyword">const</span> std::string&amp; ns = <span class="stringliteral">&quot;RobotFootprintModel&quot;</span>,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                  <span class="keyword">const</span> std_msgs::ColorRGBA&amp; color = <a class="code" href="classteb__local__planner_1_1TebVisualization.html#ae5de511875afb55fea4cf167011bc741">toColorMsg</a>(0.5, 0.0, 0.8, 0.0));</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a11ee53ef4cf6cd3686d5b2f149547e1e">  148</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a11ee53ef4cf6cd3686d5b2f149547e1e">publishInfeasibleRobotPose</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; current_pose, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>&amp; robot_model);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a4265504ad80d52ea050dc3c60f267bff">  155</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a4265504ad80d52ea050dc3c60f267bff">publishObstacles</a>(<span class="keyword">const</span> ObstContainer&amp; obstacles) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a4063ba02b7136d3069c1fda29e00e674">  161</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a4063ba02b7136d3069c1fda29e00e674">publishViaPoints</a>(<span class="keyword">const</span> std::vector&lt; Eigen::Vector2d, Eigen::aligned_allocator&lt;Eigen::Vector2d&gt; &gt;&amp; via_points, <span class="keyword">const</span> std::string&amp; ns = <span class="stringliteral">&quot;ViaPoints&quot;</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> GraphType&gt;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#aca55fb9b7dc2f134d72623e94f924bfd">  172</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#aca55fb9b7dc2f134d72623e94f924bfd">publishGraph</a>(<span class="keyword">const</span> GraphType&amp; graph, <span class="keyword">const</span> std::string&amp; ns_prefix = <span class="stringliteral">&quot;Graph&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B<span class="keywordtype">id</span>irIter&gt;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#adf03c35c9cb3a3962f84f9f23821b699">  200</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#adf03c35c9cb3a3962f84f9f23821b699">publishPathContainer</a>(BidirIter first, BidirIter last, <span class="keyword">const</span> std::string&amp; ns = <span class="stringliteral">&quot;PathContainer&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a946a4976f93d94b15bf9dad8ab740f31">  208</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a946a4976f93d94b15bf9dad8ab740f31">publishTebContainer</a>(<span class="keyword">const</span> std::vector&lt; boost::shared_ptr&lt;TebOptimalPlanner&gt; &gt;&amp; teb_planner, <span class="keyword">const</span> std::string&amp; ns = <span class="stringliteral">&quot;TebContainer&quot;</span>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a699bdff50413e5e10a2f54b4e04af4d3">  220</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a699bdff50413e5e10a2f54b4e04af4d3">publishFeedbackMessage</a>(<span class="keyword">const</span> std::vector&lt; boost::shared_ptr&lt;TebOptimalPlanner&gt; &gt;&amp; teb_planners, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> selected_trajectory_idx, <span class="keyword">const</span> ObstContainer&amp; obstacles);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  </div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a9977a732816cab60a9786ace3c8ce08f">  231</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a9977a732816cab60a9786ace3c8ce08f">publishFeedbackMessage</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebOptimalPlanner.html">TebOptimalPlanner</a>&amp; teb_planner, <span class="keyword">const</span> ObstContainer&amp; obstacles);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#ae5de511875afb55fea4cf167011bc741">  243</a></span>&#160;  <span class="keyword">static</span> std_msgs::ColorRGBA <a class="code" href="classteb__local__planner_1_1TebVisualization.html#ae5de511875afb55fea4cf167011bc741">toColorMsg</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> r, <span class="keywordtype">double</span> g, <span class="keywordtype">double</span> b);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  </div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a40b6852b33e392bf72ee89414f8154c4">  251</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a40b6852b33e392bf72ee89414f8154c4">printErrorWhenNotInitialized</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#ab6bb0e00af25ffd4400c6487cd682707">  253</a></span>&#160;  ros::Publisher <a class="code" href="classteb__local__planner_1_1TebVisualization.html#ab6bb0e00af25ffd4400c6487cd682707">global_plan_pub_</a>; </div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a2a1e9119bed78330fec1129a861ab224">  254</a></span>&#160;  ros::Publisher <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a2a1e9119bed78330fec1129a861ab224">local_plan_pub_</a>; </div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#aeadc6afa476a68db637b4de82a41a9d9">  255</a></span>&#160;  ros::Publisher <a class="code" href="classteb__local__planner_1_1TebVisualization.html#aeadc6afa476a68db637b4de82a41a9d9">teb_poses_pub_</a>; </div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a205463ef81981df3ab3effa6d113d4da">  256</a></span>&#160;  ros::Publisher <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a205463ef81981df3ab3effa6d113d4da">teb_marker_pub_</a>; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a03084fdde86ced7a6883ef33140bb391">  257</a></span>&#160;  ros::Publisher <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a03084fdde86ced7a6883ef33140bb391">feedback_pub_</a>; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#afc63e3d89edc7e1e18fa9b7db32e1f61">  259</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>* <a class="code" href="classteb__local__planner_1_1TebVisualization.html#afc63e3d89edc7e1e18fa9b7db32e1f61">cfg_</a>; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  </div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebVisualization.html#a97e35e82878e70b00200e8cae5c6583a">  261</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebVisualization.html#a97e35e82878e70b00200e8cae5c6583a">initialized_</a>; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    EIGEN_MAKE_ALIGNED_OPERATOR_NEW    </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;};</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;TebVisualization&gt; TebVisualizationPtr;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;const TebVisualization&gt; TebVisualizationConstPtr;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;} <span class="comment">// namespace teb_local_planner</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">// Include template method implementations / definitions</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/visualization.hpp&gt;</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* VISUALIZATION_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseRobotFootprintModel_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseRobotFootprintModel.html">teb_local_planner::BaseRobotFootprintModel</a></div><div class="ttdoc">Abstract class that defines the interface for robot footprint/contour models</div><div class="ttdef"><b>Definition:</b> robot_footprint_model.h:59</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html">teb_local_planner::PoseSE2</a></div><div class="ttdoc">This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:58</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html">teb_local_planner::TebConfig</a></div><div class="ttdoc">Config class for the teb_local_planner and its components.</div><div class="ttdef"><b>Definition:</b> teb_config.h:62</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebOptimalPlanner_html"><div class="ttname"><a href="classteb__local__planner_1_1TebOptimalPlanner.html">teb_local_planner::TebOptimalPlanner</a></div><div class="ttdoc">This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.</div><div class="ttdef"><b>Definition:</b> optimal_planner.h:101</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html">teb_local_planner::TebVisualization</a></div><div class="ttdoc">Forward Declaration</div><div class="ttdef"><b>Definition:</b> visualization.h:81</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a03084fdde86ced7a6883ef33140bb391"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a03084fdde86ced7a6883ef33140bb391">teb_local_planner::TebVisualization::feedback_pub_</a></div><div class="ttdeci">ros::Publisher feedback_pub_</div><div class="ttdoc">Publisher for the feedback message for analysis and debug purposes</div><div class="ttdef"><b>Definition:</b> visualization.h:257</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a11ee53ef4cf6cd3686d5b2f149547e1e"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a11ee53ef4cf6cd3686d5b2f149547e1e">teb_local_planner::TebVisualization::publishInfeasibleRobotPose</a></div><div class="ttdeci">void publishInfeasibleRobotPose(const PoseSE2 &amp;current_pose, const BaseRobotFootprintModel &amp;robot_model)</div><div class="ttdoc">Publish the robot footprints related to infeasible poses</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a205463ef81981df3ab3effa6d113d4da"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a205463ef81981df3ab3effa6d113d4da">teb_local_planner::TebVisualization::teb_marker_pub_</a></div><div class="ttdeci">ros::Publisher teb_marker_pub_</div><div class="ttdoc">Publisher for visualization markers</div><div class="ttdef"><b>Definition:</b> visualization.h:256</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a2a1e9119bed78330fec1129a861ab224"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a2a1e9119bed78330fec1129a861ab224">teb_local_planner::TebVisualization::local_plan_pub_</a></div><div class="ttdeci">ros::Publisher local_plan_pub_</div><div class="ttdoc">Publisher for the local plan</div><div class="ttdef"><b>Definition:</b> visualization.h:254</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a4063ba02b7136d3069c1fda29e00e674"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a4063ba02b7136d3069c1fda29e00e674">teb_local_planner::TebVisualization::publishViaPoints</a></div><div class="ttdeci">void publishViaPoints(const std::vector&lt; Eigen::Vector2d, Eigen::aligned_allocator&lt; Eigen::Vector2d &gt; &gt; &amp;via_points, const std::string &amp;ns=&quot;ViaPoints&quot;) const</div><div class="ttdoc">Publish via-points to the ros topic ../../teb_markers</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a40b6852b33e392bf72ee89414f8154c4"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a40b6852b33e392bf72ee89414f8154c4">teb_local_planner::TebVisualization::printErrorWhenNotInitialized</a></div><div class="ttdeci">bool printErrorWhenNotInitialized() const</div><div class="ttdoc">Small helper function that checks if initialize() has been called and prints an error message if not.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a4265504ad80d52ea050dc3c60f267bff"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a4265504ad80d52ea050dc3c60f267bff">teb_local_planner::TebVisualization::publishObstacles</a></div><div class="ttdeci">void publishObstacles(const ObstContainer &amp;obstacles) const</div><div class="ttdoc">Publish obstacle positions to the ros topic ../../teb_markers</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a49d1739f756c17f4f496810da33614fe"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a49d1739f756c17f4f496810da33614fe">teb_local_planner::TebVisualization::initialize</a></div><div class="ttdeci">void initialize(ros::NodeHandle &amp;nh, const TebConfig &amp;cfg)</div><div class="ttdoc">Initializes the class and registers topics.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a4c800281a12b741d3a3437272d394d82"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a4c800281a12b741d3a3437272d394d82">teb_local_planner::TebVisualization::publishLocalPlanAndPoses</a></div><div class="ttdeci">void publishLocalPlanAndPoses(const TimedElasticBand &amp;teb) const</div><div class="ttdoc">Publish Timed_Elastic_Band related stuff (local plan, pose sequence).</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a65ccb482184b59aca0873299d3127d19"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a65ccb482184b59aca0873299d3127d19">teb_local_planner::TebVisualization::TebVisualization</a></div><div class="ttdeci">TebVisualization(ros::NodeHandle &amp;nh, const TebConfig &amp;cfg)</div><div class="ttdoc">Constructor that initializes the class and registers topics</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a699bdff50413e5e10a2f54b4e04af4d3"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a699bdff50413e5e10a2f54b4e04af4d3">teb_local_planner::TebVisualization::publishFeedbackMessage</a></div><div class="ttdeci">void publishFeedbackMessage(const std::vector&lt; boost::shared_ptr&lt; TebOptimalPlanner &gt; &gt; &amp;teb_planners, unsigned int selected_trajectory_idx, const ObstContainer &amp;obstacles)</div><div class="ttdoc">Publish a feedback message (multiple trajectory version)</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a946a4976f93d94b15bf9dad8ab740f31"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a946a4976f93d94b15bf9dad8ab740f31">teb_local_planner::TebVisualization::publishTebContainer</a></div><div class="ttdeci">void publishTebContainer(const std::vector&lt; boost::shared_ptr&lt; TebOptimalPlanner &gt; &gt; &amp;teb_planner, const std::string &amp;ns=&quot;TebContainer&quot;)</div><div class="ttdoc">Publish multiple Tebs from a container class (publish as marker message).</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a97e35e82878e70b00200e8cae5c6583a"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a97e35e82878e70b00200e8cae5c6583a">teb_local_planner::TebVisualization::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdoc">Keeps track about the correct initialization of this class</div><div class="ttdef"><b>Definition:</b> visualization.h:261</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_a9977a732816cab60a9786ace3c8ce08f"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#a9977a732816cab60a9786ace3c8ce08f">teb_local_planner::TebVisualization::publishFeedbackMessage</a></div><div class="ttdeci">void publishFeedbackMessage(const TebOptimalPlanner &amp;teb_planner, const ObstContainer &amp;obstacles)</div><div class="ttdoc">Publish a feedback message (single trajectory overload)</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_ab6bb0e00af25ffd4400c6487cd682707"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#ab6bb0e00af25ffd4400c6487cd682707">teb_local_planner::TebVisualization::global_plan_pub_</a></div><div class="ttdeci">ros::Publisher global_plan_pub_</div><div class="ttdoc">Publisher for the global plan</div><div class="ttdef"><b>Definition:</b> visualization.h:253</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_aba7adf516553edb5e82b85308053bf5e"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#aba7adf516553edb5e82b85308053bf5e">teb_local_planner::TebVisualization::publishLocalPlan</a></div><div class="ttdeci">void publishLocalPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;local_plan) const</div><div class="ttdoc">Publish a given local plan to the ros topic ../../local_plan</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_ac94196331b894f00f3778935318f15f8"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#ac94196331b894f00f3778935318f15f8">teb_local_planner::TebVisualization::publishRobotFootprintModel</a></div><div class="ttdeci">void publishRobotFootprintModel(const PoseSE2 &amp;current_pose, const BaseRobotFootprintModel &amp;robot_model, const std::string &amp;ns=&quot;RobotFootprintModel&quot;, const std_msgs::ColorRGBA &amp;color=toColorMsg(0.5, 0.0, 0.8, 0.0))</div><div class="ttdoc">Publish the visualization of the robot model</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_aca55fb9b7dc2f134d72623e94f924bfd"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#aca55fb9b7dc2f134d72623e94f924bfd">teb_local_planner::TebVisualization::publishGraph</a></div><div class="ttdeci">void publishGraph(const GraphType &amp;graph, const std::string &amp;ns_prefix=&quot;Graph&quot;)</div><div class="ttdoc">Publish a boost::adjacency_list (boost's graph datatype) via markers.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_ad6439f2f5ebf7562ee665c6e8da39943"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#ad6439f2f5ebf7562ee665c6e8da39943">teb_local_planner::TebVisualization::publishGlobalPlan</a></div><div class="ttdeci">void publishGlobalPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan) const</div><div class="ttdoc">Publish a given global plan to the ros topic ../../global_plan</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_adf03c35c9cb3a3962f84f9f23821b699"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#adf03c35c9cb3a3962f84f9f23821b699">teb_local_planner::TebVisualization::publishPathContainer</a></div><div class="ttdeci">void publishPathContainer(BidirIter first, BidirIter last, const std::string &amp;ns=&quot;PathContainer&quot;)</div><div class="ttdoc">Publish multiple 2D paths (each path given as a point sequence) from a container class.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_ae5de511875afb55fea4cf167011bc741"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#ae5de511875afb55fea4cf167011bc741">teb_local_planner::TebVisualization::toColorMsg</a></div><div class="ttdeci">static std_msgs::ColorRGBA toColorMsg(double a, double r, double g, double b)</div><div class="ttdoc">Helper function to generate a color message from single values</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_aeadc6afa476a68db637b4de82a41a9d9"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#aeadc6afa476a68db637b4de82a41a9d9">teb_local_planner::TebVisualization::teb_poses_pub_</a></div><div class="ttdeci">ros::Publisher teb_poses_pub_</div><div class="ttdoc">Publisher for the trajectory pose sequence</div><div class="ttdef"><b>Definition:</b> visualization.h:255</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_aef5a9cd43d591e0783c76583c8c8c6fd"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#aef5a9cd43d591e0783c76583c8c8c6fd">teb_local_planner::TebVisualization::TebVisualization</a></div><div class="ttdeci">TebVisualization()</div><div class="ttdoc">Default constructor</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebVisualization_html_afc63e3d89edc7e1e18fa9b7db32e1f61"><div class="ttname"><a href="classteb__local__planner_1_1TebVisualization.html#afc63e3d89edc7e1e18fa9b7db32e1f61">teb_local_planner::TebVisualization::cfg_</a></div><div class="ttdeci">const TebConfig * cfg_</div><div class="ttdoc">Config class that stores and manages all related parameters</div><div class="ttdef"><b>Definition:</b> visualization.h:259</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TimedElasticBand_html"><div class="ttname"><a href="classteb__local__planner_1_1TimedElasticBand.html">teb_local_planner::TimedElasticBand</a></div><div class="ttdoc">Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.</div><div class="ttdef"><b>Definition:</b> timed_elastic_band.h:87</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

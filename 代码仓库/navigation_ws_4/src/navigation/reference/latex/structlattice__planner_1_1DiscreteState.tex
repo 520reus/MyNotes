@@ -1,0 +1,149 @@
+\hypertarget{structlattice__planner_1_1DiscreteState}{}\doxysection{lattice\+\_\+planner\+::Discrete\+State结构体 参考}
+\label{structlattice__planner_1_1DiscreteState}\index{lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}}
+
+
+Data container for the discrete representation of a planning state  
+
+
+
+
+{\ttfamily \#include $<$discrete\+\_\+state.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a03b5b6b9662026275743696d8dd96acd}{Discrete\+State}} (int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a3f3cc72eaddcb38fa902ff480c099e5c}{grid\+\_\+cell}}, int grid\+\_\+x, int grid\+\_\+y, int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a5226ede4e868c3161fd155cc80936b34}{angle\+\_\+i}}, int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a712bb67a90d5a51ce71b6a59d80829fa}{time\+\_\+step}}, int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a3b58388a5b058125945d6c4b3e00c72a}{vel\+\_\+x\+\_\+i}}, int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a7efa6dcf169c05e67cc880e3e73bb506}{vel\+\_\+w\+\_\+i}}, bool \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a5720898e7c05c225dc8000f56e8dc5f8}{in\+\_\+map}})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_aa23aead1f307d6b3fefab124c93ff277}\label{structlattice__planner_1_1DiscreteState_aa23aead1f307d6b3fefab124c93ff277}} 
+\mbox{\hyperlink{structlattice__planner_1_1DiscreteState_aa23aead1f307d6b3fefab124c93ff277}{Discrete\+State}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a20b50a1725f1b57aacd1b1f83a06513b}{operator==}} (\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} const \&other) const
+\begin{DoxyCompactList}\small\item\em equal to operator for comparing discrete states. Two states are equal if they share the same grid cell and velocity \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_ae2b12febd38db31786e3afce60b1679c}{get\+Manhattan\+Distance}} (\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} other)
+\begin{DoxyCompactList}\small\item\em calculates the manhattan distance to another state. The manhattan distance is the sum of the absolute differences of both states\textquotesingle{} map coordinates and thus the cell distance if only straight motions are allowed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_ac557c7fa94ae0238327bd6c177626ef2}{get\+Diagonal\+Distance}} (\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} other)
+\begin{DoxyCompactList}\small\item\em calculates the diagonal distance to another state. The diagonal distance is comparable to the manhattan distance but includes straight and diagonal motions in the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a3f3cc72eaddcb38fa902ff480c099e5c}\label{structlattice__planner_1_1DiscreteState_a3f3cc72eaddcb38fa902ff480c099e5c}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a3f3cc72eaddcb38fa902ff480c099e5c}{grid\+\_\+cell}}
+\begin{DoxyCompactList}\small\item\em corresponding map index of a state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a32b8a1c29e5c5bad0aa0cffceb903a2b}\label{structlattice__planner_1_1DiscreteState_a32b8a1c29e5c5bad0aa0cffceb903a2b}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a32b8a1c29e5c5bad0aa0cffceb903a2b}{x\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em x map coordinate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a00711b0ac0c0e52adc0956ba4312adea}\label{structlattice__planner_1_1DiscreteState_a00711b0ac0c0e52adc0956ba4312adea}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a00711b0ac0c0e52adc0956ba4312adea}{y\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em y map coordinate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a5226ede4e868c3161fd155cc80936b34}\label{structlattice__planner_1_1DiscreteState_a5226ede4e868c3161fd155cc80936b34}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a5226ede4e868c3161fd155cc80936b34}{angle\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em discrete angle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a712bb67a90d5a51ce71b6a59d80829fa}\label{structlattice__planner_1_1DiscreteState_a712bb67a90d5a51ce71b6a59d80829fa}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a712bb67a90d5a51ce71b6a59d80829fa}{time\+\_\+step}}
+\begin{DoxyCompactList}\small\item\em discrete time step \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a3b58388a5b058125945d6c4b3e00c72a}\label{structlattice__planner_1_1DiscreteState_a3b58388a5b058125945d6c4b3e00c72a}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a3b58388a5b058125945d6c4b3e00c72a}{vel\+\_\+x\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em discrete forward velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a7efa6dcf169c05e67cc880e3e73bb506}\label{structlattice__planner_1_1DiscreteState_a7efa6dcf169c05e67cc880e3e73bb506}} 
+unsigned int \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a7efa6dcf169c05e67cc880e3e73bb506}{vel\+\_\+w\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em discrete angular velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a5720898e7c05c225dc8000f56e8dc5f8}\label{structlattice__planner_1_1DiscreteState_a5720898e7c05c225dc8000f56e8dc5f8}} 
+bool \mbox{\hyperlink{structlattice__planner_1_1DiscreteState_a5720898e7c05c225dc8000f56e8dc5f8}{in\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em whether the state is inside the map \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Data container for the discrete representation of a planning state 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a03b5b6b9662026275743696d8dd96acd}\label{structlattice__planner_1_1DiscreteState_a03b5b6b9662026275743696d8dd96acd}} 
+\index{lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}!DiscreteState@{DiscreteState}}
+\index{DiscreteState@{DiscreteState}!lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}}
+\doxysubsubsection{\texorpdfstring{DiscreteState()}{DiscreteState()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Discrete\+State\+::\+Discrete\+State (\begin{DoxyParamCaption}\item[{int}]{grid\+\_\+cell,  }\item[{int}]{grid\+\_\+x,  }\item[{int}]{grid\+\_\+y,  }\item[{int}]{angle\+\_\+i,  }\item[{int}]{time\+\_\+step,  }\item[{int}]{vel\+\_\+x\+\_\+i,  }\item[{int}]{vel\+\_\+w\+\_\+i,  }\item[{bool}]{in\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em grid\+\_\+cell} & state\textquotesingle{}s corresponding map index \\
+\hline
+{\em grid\+\_\+x} & state\textquotesingle{}s x coordinate in map \\
+\hline
+{\em grid\+\_\+y} & state\textquotesingle{}s y coordinate in map \\
+\hline
+{\em angle\+\_\+i} & discrete angle \\
+\hline
+{\em time\+\_\+step} & discrete time step \\
+\hline
+{\em vel\+\_\+x\+\_\+i} & discrete forward velocity \\
+\hline
+{\em vel\+\_\+w\+\_\+i} & discrete angular velocity \\
+\hline
+{\em in\+\_\+map} & whether the state is inside the map \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_ac557c7fa94ae0238327bd6c177626ef2}\label{structlattice__planner_1_1DiscreteState_ac557c7fa94ae0238327bd6c177626ef2}} 
+\index{lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}!getDiagonalDistance@{getDiagonalDistance}}
+\index{getDiagonalDistance@{getDiagonalDistance}!lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}}
+\doxysubsubsection{\texorpdfstring{getDiagonalDistance()}{getDiagonalDistance()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Discrete\+State\+::get\+Diagonal\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the diagonal distance to another state. The diagonal distance is comparable to the manhattan distance but includes straight and diagonal motions in the grid 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & state to which the diagonal distance is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+the diagonal distance between the state and \textquotesingle{}other\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_ae2b12febd38db31786e3afce60b1679c}\label{structlattice__planner_1_1DiscreteState_ae2b12febd38db31786e3afce60b1679c}} 
+\index{lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}!getManhattanDistance@{getManhattanDistance}}
+\index{getManhattanDistance@{getManhattanDistance}!lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}}
+\doxysubsubsection{\texorpdfstring{getManhattanDistance()}{getManhattanDistance()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+Discrete\+State\+::get\+Manhattan\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculates the manhattan distance to another state. The manhattan distance is the sum of the absolute differences of both states\textquotesingle{} map coordinates and thus the cell distance if only straight motions are allowed. 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & state to which the manhattan distance is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+the manhattan distance between the state and \textquotesingle{}other\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1DiscreteState_a20b50a1725f1b57aacd1b1f83a06513b}\label{structlattice__planner_1_1DiscreteState_a20b50a1725f1b57aacd1b1f83a06513b}} 
+\index{lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}!operator==@{operator==}}
+\index{operator==@{operator==}!lattice\_planner::DiscreteState@{lattice\_planner::DiscreteState}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+Discrete\+State\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} const \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+equal to operator for comparing discrete states. Two states are equal if they share the same grid cell and velocity 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & state to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether the state is equal to \textquotesingle{}other\textquotesingle{} 
+\end{DoxyReturn}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/discrete\+\_\+state.\+h\end{DoxyCompactItemize}

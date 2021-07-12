@@ -1,0 +1,53 @@
+\hypertarget{classbase__local__planner_1_1OscillationCostFunction}{}\doxysection{base\+\_\+local\+\_\+planner\+::Oscillation\+Cost\+Function类 参考}
+\label{classbase__local__planner_1_1OscillationCostFunction}\index{base\_local\_planner::OscillationCostFunction@{base\_local\_planner::OscillationCostFunction}}
+类 base\+\_\+local\+\_\+planner\+::Oscillation\+Cost\+Function 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbase__local__planner_1_1OscillationCostFunction}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1OscillationCostFunction_ac9fd440e97142115b8bbe81408eadc14}{score\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&traj)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1OscillationCostFunction_a1cc7c1cd4c49df97515da3c12400f4df}{prepare}} ()
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OscillationCostFunction_afb420d9a488660f3583e182cb1939ee1}\label{classbase__local__planner_1_1OscillationCostFunction_afb420d9a488660f3583e182cb1939ee1}} 
+void \mbox{\hyperlink{classbase__local__planner_1_1OscillationCostFunction_afb420d9a488660f3583e182cb1939ee1}{reset\+Oscillation\+Flags}} ()
+\begin{DoxyCompactList}\small\item\em Reset the oscillation flags for the local planner \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OscillationCostFunction_a2cd60c5b611d43697f3345e3c356f48f}\label{classbase__local__planner_1_1OscillationCostFunction_a2cd60c5b611d43697f3345e3c356f48f}} 
+void {\bfseries update\+Oscillation\+Flags} (Eigen\+::\+Vector3f pos, \mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} $\ast$traj, double min\+\_\+vel\+\_\+trans)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1OscillationCostFunction_a489f8c9c3f2322d6f24fe8aa1e39b118}\label{classbase__local__planner_1_1OscillationCostFunction_a489f8c9c3f2322d6f24fe8aa1e39b118}} 
+void {\bfseries set\+Oscillation\+Reset\+Dist} (double dist, double angle)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1OscillationCostFunction_a1cc7c1cd4c49df97515da3c12400f4df}\label{classbase__local__planner_1_1OscillationCostFunction_a1cc7c1cd4c49df97515da3c12400f4df}} 
+\index{base\_local\_planner::OscillationCostFunction@{base\_local\_planner::OscillationCostFunction}!prepare@{prepare}}
+\index{prepare@{prepare}!base\_local\_planner::OscillationCostFunction@{base\_local\_planner::OscillationCostFunction}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Oscillation\+Cost\+Function\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+General updating of context values if required. Subclasses may overwrite. Return false in case there is any error. 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction_a351dddca226f210a09bd10c151e2975f}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+\mbox{\Hypertarget{classbase__local__planner_1_1OscillationCostFunction_ac9fd440e97142115b8bbe81408eadc14}\label{classbase__local__planner_1_1OscillationCostFunction_ac9fd440e97142115b8bbe81408eadc14}} 
+\index{base\_local\_planner::OscillationCostFunction@{base\_local\_planner::OscillationCostFunction}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::OscillationCostFunction@{base\_local\_planner::OscillationCostFunction}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Oscillation\+Cost\+Function\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1Trajectory}{Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+return a score for trajectory traj 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1TrajectoryCostFunction_a6908a8071270b455fc25b48db76e2d3c}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/oscillation\+\_\+cost\+\_\+function.\+h\end{DoxyCompactItemize}

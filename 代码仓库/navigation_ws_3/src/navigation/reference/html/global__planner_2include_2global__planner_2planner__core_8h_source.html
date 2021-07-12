@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: global_planner/include/global_planner/planner_core.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_414b209fa36dd1433a9bb8cd280add1a.html">global_planner</a></li><li class="navelem"><a class="el" href="dir_7b76dca46bce552b8fb66bb9e9404d32.html">include</a></li><li class="navelem"><a class="el" href="dir_b2f73a2221e56eeb39c8f87f953e2d4b.html">global_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">planner_core.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _PLANNERCORE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _PLANNERCORE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define POT_HIGH 1.0e10        </span><span class="comment">// unassigned cell potential</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Point.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_global_planner.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/GetPlan.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;global_planner/potential_calculator.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;global_planner/expander.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;global_planner/traceback.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;global_planner/orientation_filter.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;global_planner/GlobalPlannerConfig.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">namespace </span>global_planner {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">class </span>Expander;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">class </span>GridPath;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classglobal__planner_1_1GlobalPlanner.html">GlobalPlanner</a> : <span class="keyword">public</span> <a class="code" href="classnav__core_1_1BaseGlobalPlanner.html">nav_core::BaseGlobalPlanner</a> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a69b66f59b51665f826a51587afa720ff">   71</a></span>&#160;        <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a69b66f59b51665f826a51587afa720ff">GlobalPlanner</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#aaeb34983765b053861cbef08e9614bb5">   79</a></span>&#160;        <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#aaeb34983765b053861cbef08e9614bb5">GlobalPlanner</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap, std::string frame_id);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#aa49ab75794afdbec6aa7c6c3902de4c0">   84</a></span>&#160;        <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#aa49ab75794afdbec6aa7c6c3902de4c0">~GlobalPlanner</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a280ebb6723d46b462eb66ec73a2fe266">   91</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a280ebb6723d46b462eb66ec73a2fe266">initialize</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a280ebb6723d46b462eb66ec73a2fe266">initialize</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap, std::string frame_id);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#abb7f40f6a851f88e6b7668a38571712a">  102</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#abb7f40f6a851f88e6b7668a38571712a">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; start, <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                      std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a4f6bfa5acf58670c01a5b8c684a2f20c">  113</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a4f6bfa5acf58670c01a5b8c684a2f20c">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; start, <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal, <span class="keywordtype">double</span> tolerance,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                      std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#aa64e1114c4a78980256bd04bd0e79efa">  121</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#aa64e1114c4a78980256bd04bd0e79efa">computePotential</a>(<span class="keyword">const</span> geometry_msgs::Point&amp; world_point);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a4bae9ef237ecc53aa3027abd3dc063b5">  133</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a4bae9ef237ecc53aa3027abd3dc063b5">getPlanFromPotential</a>(<span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> end_x, <span class="keywordtype">double</span> end_y,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                  <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                  std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a7f0a8eaf0e715f682480ef447a63cd67">  142</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a7f0a8eaf0e715f682480ef447a63cd67">getPointPotential</a>(<span class="keyword">const</span> geometry_msgs::Point&amp; world_point);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a7c50827ebb21a48825d55bda56dd38ac">  149</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a7c50827ebb21a48825d55bda56dd38ac">validPointPotential</a>(<span class="keyword">const</span> geometry_msgs::Point&amp; world_point);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a27405d9450075e6dcc7fc73bd56fb6dc">  157</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a27405d9450075e6dcc7fc73bd56fb6dc">validPointPotential</a>(<span class="keyword">const</span> geometry_msgs::Point&amp; world_point, <span class="keywordtype">double</span> tolerance);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a9844153b2bea9032522a2ed528be963f">  162</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a9844153b2bea9032522a2ed528be963f">publishPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span> makePlanService(nav_msgs::GetPlan::Request&amp; req, nav_msgs::GetPlan::Response&amp; resp);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1GlobalPlanner.html#a790fb19fb46e1a1edc15f98b1075e849">  171</a></span>&#160;        <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* <a class="code" href="classglobal__planner_1_1GlobalPlanner.html#a790fb19fb46e1a1edc15f98b1075e849">costmap_</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        std::string frame_id_;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        ros::Publisher plan_pub_;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">bool</span> initialized_, allow_unknown_;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">void</span> mapToWorld(<span class="keywordtype">double</span> mx, <span class="keywordtype">double</span> my, <span class="keywordtype">double</span>&amp; wx, <span class="keywordtype">double</span>&amp; wy);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">bool</span> worldToMap(<span class="keywordtype">double</span> wx, <span class="keywordtype">double</span> wy, <span class="keywordtype">double</span>&amp; mx, <span class="keywordtype">double</span>&amp; my);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">void</span> clearRobotCell(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; global_pose, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">void</span> publishPotential(<span class="keywordtype">float</span>* potential);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">double</span> planner_window_x_, planner_window_y_, default_tolerance_;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        boost::mutex mutex_;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        ros::ServiceServer make_plan_srv_;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a>* p_calc_;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="classglobal__planner_1_1Expander.html">Expander</a>* planner_;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="classglobal__planner_1_1Traceback.html">Traceback</a>* path_maker_;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="classglobal__planner_1_1OrientationFilter.html">OrientationFilter</a>* orientation_filter_;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">bool</span> publish_potential_;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        ros::Publisher potential_pub_;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordtype">int</span> publish_scale_;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordtype">void</span> outlineMap(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costarr, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">float</span>* potential_array_;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> start_x_, start_y_, end_x_, end_y_;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordtype">bool</span> old_navfn_behavior_;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">float</span> convert_offset_;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">bool</span> outline_map_;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        dynamic_reconfigure::Server&lt;global_planner::GlobalPlannerConfig&gt; *dsrv_;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordtype">void</span> reconfigureCB(global_planner::GlobalPlannerConfig &amp;config, uint32_t level);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;} <span class="comment">//end namespace global_planner</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1Expander_html"><div class="ttname"><a href="classglobal__planner_1_1Expander.html">global_planner::Expander</a></div><div class="ttdef"><b>Definition:</b> expander.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html">global_planner::GlobalPlanner</a></div><div class="ttdef"><b>Definition:</b> planner_core.h:66</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a27405d9450075e6dcc7fc73bd56fb6dc"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a27405d9450075e6dcc7fc73bd56fb6dc">global_planner::GlobalPlanner::validPointPotential</a></div><div class="ttdeci">bool validPointPotential(const geometry_msgs::Point &amp;world_point, double tolerance)</div><div class="ttdoc">Check for a valid potential value at a given point in the world (Note: You should call computePotenti...</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a280ebb6723d46b462eb66ec73a2fe266"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a280ebb6723d46b462eb66ec73a2fe266">global_planner::GlobalPlanner::initialize</a></div><div class="ttdeci">void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">Initialization function for the PlannerCore object</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a4bae9ef237ecc53aa3027abd3dc063b5"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a4bae9ef237ecc53aa3027abd3dc063b5">global_planner::GlobalPlanner::getPlanFromPotential</a></div><div class="ttdeci">bool getPlanFromPotential(double start_x, double start_y, double end_x, double end_y, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</div><div class="ttdoc">Compute a plan to a goal after the potential for a start point has already been computed (Note: You s...</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a4f6bfa5acf58670c01a5b8c684a2f20c"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a4f6bfa5acf58670c01a5b8c684a2f20c">global_planner::GlobalPlanner::makePlan</a></div><div class="ttdeci">bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, double tolerance, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</div><div class="ttdoc">Given a goal pose in the world, compute a plan</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a69b66f59b51665f826a51587afa720ff"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a69b66f59b51665f826a51587afa720ff">global_planner::GlobalPlanner::GlobalPlanner</a></div><div class="ttdeci">GlobalPlanner()</div><div class="ttdoc">Default constructor for the PlannerCore object</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a790fb19fb46e1a1edc15f98b1075e849"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a790fb19fb46e1a1edc15f98b1075e849">global_planner::GlobalPlanner::costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2D * costmap_</div><div class="ttdoc">Store a copy of the current costmap in costmap. Called by makePlan.</div><div class="ttdef"><b>Definition:</b> planner_core.h:171</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a7c50827ebb21a48825d55bda56dd38ac"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a7c50827ebb21a48825d55bda56dd38ac">global_planner::GlobalPlanner::validPointPotential</a></div><div class="ttdeci">bool validPointPotential(const geometry_msgs::Point &amp;world_point)</div><div class="ttdoc">Check for a valid potential value at a given point in the world (Note: You should call computePotenti...</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a7f0a8eaf0e715f682480ef447a63cd67"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a7f0a8eaf0e715f682480ef447a63cd67">global_planner::GlobalPlanner::getPointPotential</a></div><div class="ttdeci">double getPointPotential(const geometry_msgs::Point &amp;world_point)</div><div class="ttdoc">Get the potential, or naviagation cost, at a given point in the world (Note: You should call computeP...</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_a9844153b2bea9032522a2ed528be963f"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#a9844153b2bea9032522a2ed528be963f">global_planner::GlobalPlanner::publishPlan</a></div><div class="ttdeci">void publishPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</div><div class="ttdoc">Publish a path for visualization purposes</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_aa49ab75794afdbec6aa7c6c3902de4c0"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#aa49ab75794afdbec6aa7c6c3902de4c0">global_planner::GlobalPlanner::~GlobalPlanner</a></div><div class="ttdeci">~GlobalPlanner()</div><div class="ttdoc">Default deconstructor for the PlannerCore object</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_aa64e1114c4a78980256bd04bd0e79efa"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#aa64e1114c4a78980256bd04bd0e79efa">global_planner::GlobalPlanner::computePotential</a></div><div class="ttdeci">bool computePotential(const geometry_msgs::Point &amp;world_point)</div><div class="ttdoc">Computes the full navigation function for the map given a point in the world to start from</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_aaeb34983765b053861cbef08e9614bb5"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#aaeb34983765b053861cbef08e9614bb5">global_planner::GlobalPlanner::GlobalPlanner</a></div><div class="ttdeci">GlobalPlanner(std::string name, costmap_2d::Costmap2D *costmap, std::string frame_id)</div><div class="ttdoc">Constructor for the PlannerCore object</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1GlobalPlanner_html_abb7f40f6a851f88e6b7668a38571712a"><div class="ttname"><a href="classglobal__planner_1_1GlobalPlanner.html#abb7f40f6a851f88e6b7668a38571712a">global_planner::GlobalPlanner::makePlan</a></div><div class="ttdeci">bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</div><div class="ttdoc">Given a goal pose in the world, compute a plan</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1OrientationFilter_html"><div class="ttname"><a href="classglobal__planner_1_1OrientationFilter.html">global_planner::OrientationFilter</a></div><div class="ttdef"><b>Definition:</b> orientation_filter.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1PotentialCalculator_html"><div class="ttname"><a href="classglobal__planner_1_1PotentialCalculator.html">global_planner::PotentialCalculator</a></div><div class="ttdef"><b>Definition:</b> potential_calculator.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1Traceback_html"><div class="ttname"><a href="classglobal__planner_1_1Traceback.html">global_planner::Traceback</a></div><div class="ttdef"><b>Definition:</b> traceback.h:45</div></div>
+<div class="ttc" id="aclassnav__core_1_1BaseGlobalPlanner_html"><div class="ttname"><a href="classnav__core_1_1BaseGlobalPlanner.html">nav_core::BaseGlobalPlanner</a></div><div class="ttdoc">Provides an interface for global planners used in navigation. All global planners written as plugins ...</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

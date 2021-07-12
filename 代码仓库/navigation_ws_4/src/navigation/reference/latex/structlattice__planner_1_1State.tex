@@ -1,0 +1,144 @@
+\hypertarget{structlattice__planner_1_1State}{}\doxysection{lattice\+\_\+planner\+::State结构体 参考}
+\label{structlattice__planner_1_1State}\index{lattice\_planner::State@{lattice\_planner::State}}
+
+
+data container for the properties of a planning state in the configuration space and methods for state-\/related calculations and conversions  
+
+
+
+
+{\ttfamily \#include $<$state.\+h$>$}
+
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlattice__planner_1_1State_1_1greater}{greater}}
+\begin{DoxyCompactList}\small\item\em container for the ordering of priority queues from states \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlattice__planner_1_1State_ae6477724f9bdecc9958812965649a56a}{State}} (int \mbox{\hyperlink{structlattice__planner_1_1State_a1a67f398734e36fe371ff54db7a5e755}{id}}, \mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \mbox{\hyperlink{structlattice__planner_1_1State_a685f1159073bb78e25425d4f7ff5cb4e}{state\+\_\+i}}, \mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \mbox{\hyperlink{structlattice__planner_1_1State_aa1fbfb9889e2df33a59c6f01dea382f4}{pose}}, \mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} velocity, ros\+::\+Time \mbox{\hyperlink{structlattice__planner_1_1State_a7c9e7ee4488673d0555a3189b6466b31}{time}}, \mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$\mbox{\hyperlink{structlattice__planner_1_1State_aaeb91ade6dbf1915d2404df8c674c8ce}{ancestor}})
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structlattice__planner_1_1State_aae872ddfc5ca41c44bea746d8fff31dd}{set\+Costs}} (double \mbox{\hyperlink{structlattice__planner_1_1State_a2723eb1f2aeb552d2639f6bdff834d63}{way\+\_\+cost}}, double \mbox{\hyperlink{structlattice__planner_1_1State_a0eb534983f4a407f7cb0d493acea8e23}{cost\+\_\+to\+\_\+goal}})
+\begin{DoxyCompactList}\small\item\em set the cost values for the state \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structlattice__planner_1_1State_ad660ba32cae84fc8ecff7fd06323d805}{get\+Total\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em get the total cost of the state \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structlattice__planner_1_1State_a68065a76375ffc94408eb6d896807145}{get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em obtain a string description of a state, including its properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a1a67f398734e36fe371ff54db7a5e755}\label{structlattice__planner_1_1State_a1a67f398734e36fe371ff54db7a5e755}} 
+int \mbox{\hyperlink{structlattice__planner_1_1State_a1a67f398734e36fe371ff54db7a5e755}{id}}
+\begin{DoxyCompactList}\small\item\em state ID \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a685f1159073bb78e25425d4f7ff5cb4e}\label{structlattice__planner_1_1State_a685f1159073bb78e25425d4f7ff5cb4e}} 
+\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}} \mbox{\hyperlink{structlattice__planner_1_1State_a685f1159073bb78e25425d4f7ff5cb4e}{state\+\_\+i}}
+\begin{DoxyCompactList}\small\item\em discrete state representation of the state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_aa1fbfb9889e2df33a59c6f01dea382f4}\label{structlattice__planner_1_1State_aa1fbfb9889e2df33a59c6f01dea382f4}} 
+\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}} \mbox{\hyperlink{structlattice__planner_1_1State_aa1fbfb9889e2df33a59c6f01dea382f4}{pose}}
+\begin{DoxyCompactList}\small\item\em pose of the state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_aecd032a6e34310e553cf6543268e0a0c}\label{structlattice__planner_1_1State_aecd032a6e34310e553cf6543268e0a0c}} 
+\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}} \mbox{\hyperlink{structlattice__planner_1_1State_aecd032a6e34310e553cf6543268e0a0c}{vel}}
+\begin{DoxyCompactList}\small\item\em velocity of the state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a7c9e7ee4488673d0555a3189b6466b31}\label{structlattice__planner_1_1State_a7c9e7ee4488673d0555a3189b6466b31}} 
+ros\+::\+Time \mbox{\hyperlink{structlattice__planner_1_1State_a7c9e7ee4488673d0555a3189b6466b31}{time}}
+\begin{DoxyCompactList}\small\item\em the state\textquotesingle{}s time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a53b8ff1804ffac8f5923d88cb10de022}\label{structlattice__planner_1_1State_a53b8ff1804ffac8f5923d88cb10de022}} 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{structlattice__planner_1_1State_a53b8ff1804ffac8f5923d88cb10de022}{trajectory}}
+\begin{DoxyCompactList}\small\item\em cells touched by the traversed path to the state from its ancestor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a2723eb1f2aeb552d2639f6bdff834d63}\label{structlattice__planner_1_1State_a2723eb1f2aeb552d2639f6bdff834d63}} 
+double \mbox{\hyperlink{structlattice__planner_1_1State_a2723eb1f2aeb552d2639f6bdff834d63}{way\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em costs from the start to the state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_a0eb534983f4a407f7cb0d493acea8e23}\label{structlattice__planner_1_1State_a0eb534983f4a407f7cb0d493acea8e23}} 
+double \mbox{\hyperlink{structlattice__planner_1_1State_a0eb534983f4a407f7cb0d493acea8e23}{cost\+\_\+to\+\_\+goal}}
+\begin{DoxyCompactList}\small\item\em estimated costs from a state to reach the goal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_aa3275903254e4d7a421ffdc5794a3cc2}\label{structlattice__planner_1_1State_aa3275903254e4d7a421ffdc5794a3cc2}} 
+bool \mbox{\hyperlink{structlattice__planner_1_1State_aa3275903254e4d7a421ffdc5794a3cc2}{in\+\_\+goal\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em flag whether state is within the defined goal tolerance for planning \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structlattice__planner_1_1State_aaeb91ade6dbf1915d2404df8c674c8ce}\label{structlattice__planner_1_1State_aaeb91ade6dbf1915d2404df8c674c8ce}} 
+\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$ \mbox{\hyperlink{structlattice__planner_1_1State_aaeb91ade6dbf1915d2404df8c674c8ce}{ancestor}}
+\begin{DoxyCompactList}\small\item\em the state\textquotesingle{}s parent \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+data container for the properties of a planning state in the configuration space and methods for state-\/related calculations and conversions 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{structlattice__planner_1_1State_ae6477724f9bdecc9958812965649a56a}\label{structlattice__planner_1_1State_ae6477724f9bdecc9958812965649a56a}} 
+\index{lattice\_planner::State@{lattice\_planner::State}!State@{State}}
+\index{State@{State}!lattice\_planner::State@{lattice\_planner::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1DiscreteState}{Discrete\+State}}}]{state\+\_\+i,  }\item[{\mbox{\hyperlink{classlattice__planner_1_1Pose}{Pose}}}]{pose,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1Velocity}{Velocity}}}]{velocity,  }\item[{ros\+::\+Time}]{time,  }\item[{\mbox{\hyperlink{structlattice__planner_1_1State}{State}} $\ast$}]{ancestor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & state ID \\
+\hline
+{\em state\+\_\+i} & discrete state representation of the state \\
+\hline
+{\em pose} & the pose of the state \\
+\hline
+{\em velocity} & the velocity of the state \\
+\hline
+{\em time} & the state\textquotesingle{}s time \\
+\hline
+{\em ancestor} & the state\textquotesingle{}s parent \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{structlattice__planner_1_1State_a68065a76375ffc94408eb6d896807145}\label{structlattice__planner_1_1State_a68065a76375ffc94408eb6d896807145}} 
+\index{lattice\_planner::State@{lattice\_planner::State}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!lattice\_planner::State@{lattice\_planner::State}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily std\+::string lattice\+\_\+planner\+::\+State\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+obtain a string description of a state, including its properties. 
+
+\begin{DoxyReturn}{返回}
+string description of a state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1State_ad660ba32cae84fc8ecff7fd06323d805}\label{structlattice__planner_1_1State_ad660ba32cae84fc8ecff7fd06323d805}} 
+\index{lattice\_planner::State@{lattice\_planner::State}!getTotalCost@{getTotalCost}}
+\index{getTotalCost@{getTotalCost}!lattice\_planner::State@{lattice\_planner::State}}
+\doxysubsubsection{\texorpdfstring{getTotalCost()}{getTotalCost()}}
+{\footnotesize\ttfamily double lattice\+\_\+planner\+::\+State\+::get\+Total\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the total cost of the state 
+
+The total cost of a state is is made up off the way cost from the start to the state along the planned path and the estimated cost to reach the goal, according to a defined heuristic
+
+\begin{DoxyReturn}{返回}
+the total cost of the state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlattice__planner_1_1State_aae872ddfc5ca41c44bea746d8fff31dd}\label{structlattice__planner_1_1State_aae872ddfc5ca41c44bea746d8fff31dd}} 
+\index{lattice\_planner::State@{lattice\_planner::State}!setCosts@{setCosts}}
+\index{setCosts@{setCosts}!lattice\_planner::State@{lattice\_planner::State}}
+\doxysubsubsection{\texorpdfstring{setCosts()}{setCosts()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+State\+::set\+Costs (\begin{DoxyParamCaption}\item[{double}]{way\+\_\+cost,  }\item[{double}]{cost\+\_\+to\+\_\+goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the cost values for the state 
+
+
+\begin{DoxyParams}{参数}
+{\em way\+\_\+cost} & the (known) cost from the start to the state along the planned path \\
+\hline
+{\em cost\+\_\+to\+\_\+goal} & the estimated remaining cost from the state to reach the goal, according to a defined heuristic \\
+\hline
+\end{DoxyParams}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/state.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classBackgroundSubtractor}{}\doxysection{Background\+Subtractor类 参考}
+\label{classBackgroundSubtractor}\index{BackgroundSubtractor@{BackgroundSubtractor}}
+
+
+Perform background subtraction to extract the \char`\"{}moving\char`\"{} foreground  
+
+
+
+
+{\ttfamily \#include $<$background\+\_\+subtractor.\+h$>$}
+
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBackgroundSubtractor_1_1Params}{Params}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBackgroundSubtractor_ab0d0a02da5eeedc86cfc89f57e6e3db8}\label{classBackgroundSubtractor_ab0d0a02da5eeedc86cfc89f57e6e3db8}} 
+\mbox{\hyperlink{classBackgroundSubtractor_ab0d0a02da5eeedc86cfc89f57e6e3db8}{Background\+Subtractor}} (const \mbox{\hyperlink{structBackgroundSubtractor_1_1Params}{Params}} \&parameters)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts a specific parameter configuration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBackgroundSubtractor_a085944b991b9f7bad17ff89b37b2a073}{apply}} (const cv\+::\+Mat \&image, cv\+::\+Mat \&fg\+\_\+mask, int shift\+\_\+x=0, int shift\+\_\+y=0)
+\begin{DoxyCompactList}\small\item\em Computes a foreground mask \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBackgroundSubtractor_a7cb3ea6295bbdf9bd8696e2fb211b02b}{visualize}} (const std\+::string \&name, const cv\+::\+Mat \&image)
+\begin{DoxyCompactList}\small\item\em Open\+CV Visualization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBackgroundSubtractor_ae6df09eb6aadd1fbee09933049d59678}{write\+Mat\+To\+YAML}} (const std\+::string \&filename, const std\+::vector$<$ cv\+::\+Mat $>$ \&mat\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Export vector of matrices to yaml file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBackgroundSubtractor_a090063cdc2e7197b4f9079447695a008}\label{classBackgroundSubtractor_a090063cdc2e7197b4f9079447695a008}} 
+void \mbox{\hyperlink{classBackgroundSubtractor_a090063cdc2e7197b4f9079447695a008}{update\+Parameters}} (const \mbox{\hyperlink{structBackgroundSubtractor_1_1Params}{Params}} \&parameters)
+\begin{DoxyCompactList}\small\item\em Update internal parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Perform background subtraction to extract the \char`\"{}moving\char`\"{} foreground 
+
+This class is based on Open\+CV\textquotesingle{}s background subtraction class cv\+::\+Background\+Subtractor. It has been modified in order to incorporate a specialized bandpass filter.
+
+See \href{http://docs.opencv.org/3.2.0/d7/df6/classcv_1_1BackgroundSubtractor.html}{\texttt{ http\+://docs.\+opencv.\+org/3.\+2.\+0/d7/df6/classcv\+\_\+1\+\_\+1\+Background\+Subtractor.\+html}} for the original class. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classBackgroundSubtractor_a085944b991b9f7bad17ff89b37b2a073}\label{classBackgroundSubtractor_a085944b991b9f7bad17ff89b37b2a073}} 
+\index{BackgroundSubtractor@{BackgroundSubtractor}!apply@{apply}}
+\index{apply@{apply}!BackgroundSubtractor@{BackgroundSubtractor}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Background\+Subtractor\+::apply (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{cv\+::\+Mat \&}]{fg\+\_\+mask,  }\item[{int}]{shift\+\_\+x = {\ttfamily 0},  }\item[{int}]{shift\+\_\+y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Computes a foreground mask 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em image} & Next video frame \\
+\hline
+\mbox{\texttt{ out}}  & {\em fg\+\_\+mask} & Foreground mask as an 8-\/bit binary image \\
+\hline
+\mbox{\texttt{ in}}  & {\em shift\+\_\+x} & Translation along the x axis between the current and previous image \\
+\hline
+\mbox{\texttt{ in}}  & {\em shift\+\_\+y} & Translation along the y axis between the current and previous image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBackgroundSubtractor_a7cb3ea6295bbdf9bd8696e2fb211b02b}\label{classBackgroundSubtractor_a7cb3ea6295bbdf9bd8696e2fb211b02b}} 
+\index{BackgroundSubtractor@{BackgroundSubtractor}!visualize@{visualize}}
+\index{visualize@{visualize}!BackgroundSubtractor@{BackgroundSubtractor}}
+\doxysubsubsection{\texorpdfstring{visualize()}{visualize()}}
+{\footnotesize\ttfamily void Background\+Subtractor\+::visualize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const cv\+::\+Mat \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Open\+CV Visualization 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & Id/name of the opencv window \\
+\hline
+{\em image} & Image to be visualized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBackgroundSubtractor_ae6df09eb6aadd1fbee09933049d59678}\label{classBackgroundSubtractor_ae6df09eb6aadd1fbee09933049d59678}} 
+\index{BackgroundSubtractor@{BackgroundSubtractor}!writeMatToYAML@{writeMatToYAML}}
+\index{writeMatToYAML@{writeMatToYAML}!BackgroundSubtractor@{BackgroundSubtractor}}
+\doxysubsubsection{\texorpdfstring{writeMatToYAML()}{writeMatToYAML()}}
+{\footnotesize\ttfamily void Background\+Subtractor\+::write\+Mat\+To\+YAML (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{mat\+\_\+vec }\end{DoxyParamCaption})}
+
+
+
+Export vector of matrices to yaml file 
+
+\begin{DoxyRemark}{备注}
+This method is intended for debugging purposes 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em filename} & Desired filename including path and excluding file suffix \\
+\hline
+{\em mat\+\_\+vec} & Vector of cv\+::\+Mat to be exported \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles/background\+\_\+subtractor.\+h\end{DoxyCompactItemize}

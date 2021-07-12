@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner/include/lattice_planner/pose.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d4608036c0a5873288108ca7a6c056e0.html">lattice_planner</a></li><li class="navelem"><a class="el" href="dir_c69004a54815449a25c4300975d14d9f.html">include</a></li><li class="navelem"><a class="el" href="dir_8627c29d6f32bf739f086a6fbb89b9cb.html">lattice_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pose.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2015 Marina Kollmitz</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * 3. Neither the name of the copyright holder nor the names of its contributors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * may be used to endorse or promote products derived from this software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Author: Marina Kollmitz</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef _POSE_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define _POSE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include&lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include&lt;tf/tf.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>lattice_planner</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlattice__planner_1_1Pose.html">Pose</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#af89d60ea5d70676029146e057a45bb20">   61</a></span>&#160;  <a class="code" href="classlattice__planner_1_1Pose.html#af89d60ea5d70676029146e057a45bb20">Pose</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> theta) :</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    x_(x),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    y_(y)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classlattice__planner_1_1Pose.html#a9bdbe278d30c2df3b7fcdcbc023fd8c3">setTheta</a>(theta);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a364be04902c46512f485ec20d54b9bed">   71</a></span>&#160;  <a class="code" href="classlattice__planner_1_1Pose.html#a364be04902c46512f485ec20d54b9bed">Pose</a>() :</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    x_(0.0),</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    y_(0.0)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classlattice__planner_1_1Pose.html#a9bdbe278d30c2df3b7fcdcbc023fd8c3">setTheta</a>(0.0);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a308196d8f74d55f94e2a7c6822af5707">   83</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1Pose.html#a308196d8f74d55f94e2a7c6822af5707">setX</a>(<span class="keywordtype">double</span> x)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    this-&gt;x_ = x;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#add6b1944a409b4a235f414441a4dedf0">   93</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1Pose.html#add6b1944a409b4a235f414441a4dedf0">setY</a>(<span class="keywordtype">double</span> y)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    this-&gt;y_ = y;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a9bdbe278d30c2df3b7fcdcbc023fd8c3">  105</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1Pose.html#a9bdbe278d30c2df3b7fcdcbc023fd8c3">setTheta</a>(<span class="keywordtype">double</span> theta)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    this-&gt;theta_ = theta;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//make sure theta is between 0 and 2PI</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">while</span>(this-&gt;theta_ &lt; 0)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      this-&gt;theta_ += 2 * M_PI;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">while</span>(this-&gt;theta_ &gt;= 2 * M_PI)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      this-&gt;theta_ -= 2 * M_PI;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a2a29faa1c932cda3190e3b2150a82911">  122</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classlattice__planner_1_1Pose.html#a2a29faa1c932cda3190e3b2150a82911">getX</a>()</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> x_;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#ad811878b4439bfdb003e7e3364251557">  132</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classlattice__planner_1_1Pose.html#ad811878b4439bfdb003e7e3364251557">getY</a>()</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> y_;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#aa4300d0992974b0335c1a18a07d448d9">  142</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classlattice__planner_1_1Pose.html#aa4300d0992974b0335c1a18a07d448d9">getTheta</a>()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> theta_;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a9ed649673e1b2263a2af95f8c3990394">  152</a></span>&#160;  geometry_msgs::Pose <a class="code" href="classlattice__planner_1_1Pose.html#a9ed649673e1b2263a2af95f8c3990394">getGeomPose</a>()</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    geometry_msgs::Pose pose;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    pose.position.x = x_;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    pose.position.y = y_;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    pose.position.z = 0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    tf::quaternionTFToMsg(tf::createQuaternionFromYaw(theta_),</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                          pose.orientation);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> pose;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#afcd0568bf6188ed13eac891fa61b073f">  170</a></span>&#160;  geometry_msgs::PoseStamped <a class="code" href="classlattice__planner_1_1Pose.html#afcd0568bf6188ed13eac891fa61b073f">getStampedPose</a>(std::string frame_id,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                            ros::Time time)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    geometry_msgs::PoseStamped pose_stamped;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    pose_stamped.pose = <a class="code" href="classlattice__planner_1_1Pose.html#a9ed649673e1b2263a2af95f8c3990394">getGeomPose</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    pose_stamped.header.frame_id = frame_id;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    pose_stamped.header.stamp = time;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">return</span> pose_stamped;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a94098349948de81e506a11b3c857e8c8">  187</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classlattice__planner_1_1Pose.html#a94098349948de81e506a11b3c857e8c8">getDistance</a>(<a class="code" href="classlattice__planner_1_1Pose.html">Pose</a>&amp; other)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> hypot(x_ - other.<a class="code" href="classlattice__planner_1_1Pose.html#a2a29faa1c932cda3190e3b2150a82911">getX</a>(), y_ - other.<a class="code" href="classlattice__planner_1_1Pose.html#ad811878b4439bfdb003e7e3364251557">getY</a>());</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1Pose.html#a273529e8728fb4921f0652e8cb50bc38">  201</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classlattice__planner_1_1Pose.html#a273529e8728fb4921f0652e8cb50bc38">getRotDistance</a>(<a class="code" href="classlattice__planner_1_1Pose.html">Pose</a>&amp; other)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> std::min(fabs(theta_ - other.<a class="code" href="classlattice__planner_1_1Pose.html#aa4300d0992974b0335c1a18a07d448d9">getTheta</a>()),</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    fabs(fabs(theta_ - other.<a class="code" href="classlattice__planner_1_1Pose.html#aa4300d0992974b0335c1a18a07d448d9">getTheta</a>()) - 2 * M_PI));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">double</span> x_; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordtype">double</span> y_; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordtype">double</span> theta_; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;};</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}<span class="comment">//namespace lattice_planner</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html"><div class="ttname"><a href="classlattice__planner_1_1Pose.html">lattice_planner::Pose</a></div><div class="ttdoc">container for the (3D planar) robot pose and pose related properties, conversions and calculations</div><div class="ttdef"><b>Definition:</b> pose.h:51</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a273529e8728fb4921f0652e8cb50bc38"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a273529e8728fb4921f0652e8cb50bc38">lattice_planner::Pose::getRotDistance</a></div><div class="ttdeci">double getRotDistance(Pose &amp;other)</div><div class="ttdoc">calculates the difference in orientation between two poses</div><div class="ttdef"><b>Definition:</b> pose.h:201</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a2a29faa1c932cda3190e3b2150a82911"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a2a29faa1c932cda3190e3b2150a82911">lattice_planner::Pose::getX</a></div><div class="ttdeci">double getX()</div><div class="ttdoc">get x position</div><div class="ttdef"><b>Definition:</b> pose.h:122</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a308196d8f74d55f94e2a7c6822af5707"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a308196d8f74d55f94e2a7c6822af5707">lattice_planner::Pose::setX</a></div><div class="ttdeci">void setX(double x)</div><div class="ttdoc">specify the x position</div><div class="ttdef"><b>Definition:</b> pose.h:83</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a364be04902c46512f485ec20d54b9bed"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a364be04902c46512f485ec20d54b9bed">lattice_planner::Pose::Pose</a></div><div class="ttdeci">Pose()</div><div class="ttdoc">default constructor</div><div class="ttdef"><b>Definition:</b> pose.h:71</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a94098349948de81e506a11b3c857e8c8"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a94098349948de81e506a11b3c857e8c8">lattice_planner::Pose::getDistance</a></div><div class="ttdeci">double getDistance(Pose &amp;other)</div><div class="ttdoc">calculates the Cartesian distance between two poses</div><div class="ttdef"><b>Definition:</b> pose.h:187</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a9bdbe278d30c2df3b7fcdcbc023fd8c3"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a9bdbe278d30c2df3b7fcdcbc023fd8c3">lattice_planner::Pose::setTheta</a></div><div class="ttdeci">void setTheta(double theta)</div><div class="ttdoc">specify the orientation</div><div class="ttdef"><b>Definition:</b> pose.h:105</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_a9ed649673e1b2263a2af95f8c3990394"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#a9ed649673e1b2263a2af95f8c3990394">lattice_planner::Pose::getGeomPose</a></div><div class="ttdeci">geometry_msgs::Pose getGeomPose()</div><div class="ttdoc">get geometry_msgs::Pose version of the pose</div><div class="ttdef"><b>Definition:</b> pose.h:152</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_aa4300d0992974b0335c1a18a07d448d9"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#aa4300d0992974b0335c1a18a07d448d9">lattice_planner::Pose::getTheta</a></div><div class="ttdeci">double getTheta()</div><div class="ttdoc">get orientation around z-axis</div><div class="ttdef"><b>Definition:</b> pose.h:142</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_ad811878b4439bfdb003e7e3364251557"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#ad811878b4439bfdb003e7e3364251557">lattice_planner::Pose::getY</a></div><div class="ttdeci">double getY()</div><div class="ttdoc">get y position</div><div class="ttdef"><b>Definition:</b> pose.h:132</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_add6b1944a409b4a235f414441a4dedf0"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#add6b1944a409b4a235f414441a4dedf0">lattice_planner::Pose::setY</a></div><div class="ttdeci">void setY(double y)</div><div class="ttdoc">specify the y position</div><div class="ttdef"><b>Definition:</b> pose.h:93</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_af89d60ea5d70676029146e057a45bb20"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#af89d60ea5d70676029146e057a45bb20">lattice_planner::Pose::Pose</a></div><div class="ttdeci">Pose(double x, double y, double theta)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> pose.h:61</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1Pose_html_afcd0568bf6188ed13eac891fa61b073f"><div class="ttname"><a href="classlattice__planner_1_1Pose.html#afcd0568bf6188ed13eac891fa61b073f">lattice_planner::Pose::getStampedPose</a></div><div class="ttdeci">geometry_msgs::PoseStamped getStampedPose(std::string frame_id, ros::Time time)</div><div class="ttdoc">get geometry_msgs::PoseStamped version of the pose</div><div class="ttdef"><b>Definition:</b> pose.h:170</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

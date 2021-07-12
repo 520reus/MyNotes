@@ -1,0 +1,999 @@
+\hypertarget{classteb__local__planner_1_1TimedElasticBand}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Timed\+Elastic\+Band类 参考}
+\label{classteb__local__planner_1_1TimedElasticBand}\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+
+
+Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.  
+
+
+
+
+{\ttfamily \#include $<$timed\+\_\+elastic\+\_\+band.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_aeb15c5735bdf8852cc344da0657f3fc8}\label{classteb__local__planner_1_1TimedElasticBand_aeb15c5735bdf8852cc344da0657f3fc8}} 
+\mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_aeb15c5735bdf8852cc344da0657f3fc8}{Timed\+Elastic\+Band}} ()
+\begin{DoxyCompactList}\small\item\em Construct the class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a25c2c073edd5f3749ad08cd96f2d7a19}\label{classteb__local__planner_1_1TimedElasticBand_a25c2c073edd5f3749ad08cd96f2d7a19}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a25c2c073edd5f3749ad08cd96f2d7a19}{$\sim$\+Timed\+Elastic\+Band}} ()
+\begin{DoxyCompactList}\small\item\em Destruct the class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Access pose and timediff sequences}\par
+\begin{DoxyCompactItemize}
+\item 
+Pose\+Sequence \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ab65df05f563de4e1820ae0fcb191ec4d}{poses}} ()
+\begin{DoxyCompactList}\small\item\em Access the complete pose sequence \end{DoxyCompactList}\item 
+const Pose\+Sequence \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a61c56b02adc305f58cb52207841030ae}{poses}} () const
+\begin{DoxyCompactList}\small\item\em Access the complete pose sequence (read-\/only) \end{DoxyCompactList}\item 
+Time\+Diff\+Sequence \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a9852268ff781b9bfac3e71d0dfacc8bb}{timediffs}} ()
+\begin{DoxyCompactList}\small\item\em Access the complete timediff sequence \end{DoxyCompactList}\item 
+const Time\+Diff\+Sequence \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_afd7b3be659f16be7b45dac68f590d3da}{timediffs}} () const
+\begin{DoxyCompactList}\small\item\em Access the complete timediff sequence \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a7c27963869face67896a5115649cb978}{Time\+Diff}} (int index)
+\begin{DoxyCompactList}\small\item\em Access the time difference at pos {\ttfamily index} of the time sequence \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a608ccd48d4a63eb1c84b604ca624146d}{Time\+Diff}} (int index) const
+\begin{DoxyCompactList}\small\item\em Access the time difference at pos {\ttfamily index} of the time sequence (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a0419cba7f730da8edbe7c8555f4298b7}{Pose}} (int index)
+\begin{DoxyCompactList}\small\item\em Access the pose at pos {\ttfamily index} of the pose sequence \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a0525a5c1369b37c7da5d900425d0cd0e}{Pose}} (int index) const
+\begin{DoxyCompactList}\small\item\em Access the pose at pos {\ttfamily index} of the pose sequence (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_afe87f06b1e503fe5bd7491433e23ebcf}\label{classteb__local__planner_1_1TimedElasticBand_afe87f06b1e503fe5bd7491433e23ebcf}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_afe87f06b1e503fe5bd7491433e23ebcf}{Back\+Pose}} ()
+\begin{DoxyCompactList}\small\item\em Access the last \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} in the pose sequence \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a3dd083434acfeff5eaf29973249e3c24}\label{classteb__local__planner_1_1TimedElasticBand_a3dd083434acfeff5eaf29973249e3c24}} 
+const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a3dd083434acfeff5eaf29973249e3c24}{Back\+Pose}} () const
+\begin{DoxyCompactList}\small\item\em Access the last \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} in the pose sequence (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_af2477ed1a8d60df2b9cd5839e0928c51}\label{classteb__local__planner_1_1TimedElasticBand_af2477ed1a8d60df2b9cd5839e0928c51}} 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_af2477ed1a8d60df2b9cd5839e0928c51}{Back\+Time\+Diff}} ()
+\begin{DoxyCompactList}\small\item\em Access the last Time\+Diff in the time diff sequence \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ac17b6b00f6bed32aa74aaf0d45a33e58}\label{classteb__local__planner_1_1TimedElasticBand_ac17b6b00f6bed32aa74aaf0d45a33e58}} 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ac17b6b00f6bed32aa74aaf0d45a33e58}{Back\+Time\+Diff}} () const
+\begin{DoxyCompactList}\small\item\em Access the last Time\+Diff in the time diff sequence (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose}{Vertex\+Pose}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a8cf537eef7aeb0a535def3e2034e81c3}{Pose\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em Access the vertex of a pose at pos {\ttfamily index} for optimization purposes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff}{Vertex\+Time\+Diff}} $\ast$ \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a79d43e8c50679cc206d439f9ef615d7f}{Time\+Diff\+Vertex}} (int index)
+\begin{DoxyCompactList}\small\item\em Access the vertex of a time difference at pos {\ttfamily index} for optimization purposes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Append new elements to the pose and timediff sequences}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a5f5cf9388f7ebb9ecb1cbea6b235e60b}{add\+Pose}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Append a new pose vertex to the back of the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a55c7d2e403207c4af122c0cdf6ae2f3a}{add\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&position, double theta, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Append a new pose vertex to the back of the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a3cfd2758befcac90bc79e450afdc4c03}{add\+Pose}} (double x, double y, double theta, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Append a new pose vertex to the back of the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ab9ac72dac14283fc58f250a7e6d1808e}{add\+Time\+Diff}} (double dt, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Append a new time difference vertex to the back of the time diff sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a138751cfb05d5f1647bf32c7b6df69ed}{add\+Pose\+And\+Time\+Diff}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose, double dt)
+\begin{DoxyCompactList}\small\item\em Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a36032d2e8a0e15db1026c9e2452a8226}{add\+Pose\+And\+Time\+Diff}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&position, double theta, double dt)
+\begin{DoxyCompactList}\small\item\em Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a91fb6e1180497ad5fd31651a9a5df84d}{add\+Pose\+And\+Time\+Diff}} (double x, double y, double theta, double dt)
+\begin{DoxyCompactList}\small\item\em Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Insert new elements and remove elements of the pose and timediff sequences}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a3cae916cb21a284dc24e85dc2b35e599}{insert\+Pose}} (int index, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose)
+\begin{DoxyCompactList}\small\item\em Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a5cfa7201ccdbb68c39e3613e374a7224}{insert\+Pose}} (int index, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&position, double theta)
+\begin{DoxyCompactList}\small\item\em Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a9327fd3bad6ca9aeb8ee14c2efc62ac5}{insert\+Pose}} (int index, double x, double y, double theta)
+\begin{DoxyCompactList}\small\item\em Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a7adf1066f46e87b210d34dbfd6dad994}{insert\+Time\+Diff}} (int index, double dt)
+\begin{DoxyCompactList}\small\item\em Insert a new timediff vertex at pos. {\ttfamily index} to the timediff sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a18ee2ca1b9620fdc4d68e45848800f1c}{delete\+Pose}} (int index)
+\begin{DoxyCompactList}\small\item\em Delete pose at pos. {\ttfamily index} in the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a396017a9ef049b722e0cb331518ecc80}{delete\+Poses}} (int index, int number)
+\begin{DoxyCompactList}\small\item\em Delete multiple ({\ttfamily number}) poses starting at pos. {\ttfamily index} in the pose sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a1d2bc8affb6483a87e01b23c270becf0}{delete\+Time\+Diff}} (int index)
+\begin{DoxyCompactList}\small\item\em Delete pose at pos. {\ttfamily index} in the timediff sequence \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_aacd59478383ded51c3542080938d992f}{delete\+Time\+Diffs}} (int index, int number)
+\begin{DoxyCompactList}\small\item\em Delete multiple ({\ttfamily number}) time differences starting at pos. {\ttfamily index} in the timediff sequence \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Init the trajectory}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ab9164d1e5d518b35da94744705cdc339}{init\+Trajectory\+To\+Goal}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, double diststep=0, double max\+\_\+vel\+\_\+x=0.\+5, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\begin{DoxyCompactList}\small\item\em Initialize a trajectory between a given start and goal pose. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Bidir\+Iter , typename Fun $>$ }\\bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a9a3b9daa92a7a5bca6fd213fe47b71fd}{init\+Trajectory\+To\+Goal}} (Bidir\+Iter path\+\_\+start, Bidir\+Iter path\+\_\+end, Fun fun\+\_\+position, double max\+\_\+vel\+\_\+x, double max\+\_\+vel\+\_\+theta, boost\+::optional$<$ double $>$ max\+\_\+acc\+\_\+x, boost\+::optional$<$ double $>$ max\+\_\+acc\+\_\+theta, boost\+::optional$<$ double $>$ start\+\_\+orientation, boost\+::optional$<$ double $>$ goal\+\_\+orientation, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\begin{DoxyCompactList}\small\item\em Initialize a trajectory from a generic 2D reference path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_af98513600b5d2d929fa6fca5ec31af5f}{init\+Trajectory\+To\+Goal}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan, double max\+\_\+vel\+\_\+x, double max\+\_\+vel\+\_\+theta, bool estimate\+\_\+orient=false, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\begin{DoxyCompactList}\small\item\em Initialize a trajectory from a reference pose sequence (positions and orientations). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a646b2a8e88b85cda88dc0ebb772105f3}\label{classteb__local__planner_1_1TimedElasticBand_a646b2a8e88b85cda88dc0ebb772105f3}} 
+ROS\+\_\+\+DEPRECATED bool {\bfseries init\+TEBto\+Goal} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, double diststep=0, double timestep=1, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a145f9f3e6f25ffb86e06b419397687f4}\label{classteb__local__planner_1_1TimedElasticBand_a145f9f3e6f25ffb86e06b419397687f4}} 
+{\footnotesize template$<$typename Bidir\+Iter , typename Fun $>$ }\\ROS\+\_\+\+DEPRECATED bool {\bfseries init\+TEBto\+Goal} (Bidir\+Iter path\+\_\+start, Bidir\+Iter path\+\_\+end, Fun fun\+\_\+position, double max\+\_\+vel\+\_\+x, double max\+\_\+vel\+\_\+theta, boost\+::optional$<$ double $>$ max\+\_\+acc\+\_\+x, boost\+::optional$<$ double $>$ max\+\_\+acc\+\_\+theta, boost\+::optional$<$ double $>$ start\+\_\+orientation, boost\+::optional$<$ double $>$ goal\+\_\+orientation, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ae0ec1380b32638068e27427a081acf6c}\label{classteb__local__planner_1_1TimedElasticBand_ae0ec1380b32638068e27427a081acf6c}} 
+ROS\+\_\+\+DEPRECATED bool {\bfseries init\+TEBto\+Goal} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan, double dt, bool estimate\+\_\+orient=false, int min\+\_\+samples=3, bool guess\+\_\+backwards\+\_\+motion=false)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Update and modify the trajectory}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}{update\+And\+Prune\+TEB}} (boost\+::optional$<$ const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& $>$ new\+\_\+start, boost\+::optional$<$ const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& $>$ new\+\_\+goal, int min\+\_\+samples=3)
+\begin{DoxyCompactList}\small\item\em Hot-\/\+Start from an existing trajectory with updated start and goal poses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_afa43c55427a4b275e8eaba7a9d723b6a}{auto\+Resize}} (double dt\+\_\+ref, double dt\+\_\+hysteresis, int min\+\_\+samples=3, int max\+\_\+samples=1000, bool fast\+\_\+mode=false)
+\begin{DoxyCompactList}\small\item\em Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal resolution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ab39e9950fab1522eef115631efda6273}{set\+Pose\+Vertex\+Fixed}} (int index, bool status)
+\begin{DoxyCompactList}\small\item\em Set a pose vertex at pos {\ttfamily index} of the pose sequence to be fixed or unfixed during optimization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a0ae2815baa6eeb0215888e5f5b7dadc5}{set\+Time\+Diff\+Vertex\+Fixed}} (int index, bool status)
+\begin{DoxyCompactList}\small\item\em Set a timediff vertex at pos {\ttfamily index} of the timediff sequence to be fixed or unfixed during optimization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a4a342e52e49e691809bc7c19c3d6c48f}\label{classteb__local__planner_1_1TimedElasticBand_a4a342e52e49e691809bc7c19c3d6c48f}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a4a342e52e49e691809bc7c19c3d6c48f}{clear\+Timed\+Elastic\+Band}} ()
+\begin{DoxyCompactList}\small\item\em clear all poses and timediffs from the trajectory. The pose and timediff sequences will be empty and \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a6f7628ef2e474fbad656844467213f7e}{is\+Init()}} will return {\ttfamily false} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Utility and status methods}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a6d7b7cf9d858a1c20f64ec2489190758}\label{classteb__local__planner_1_1TimedElasticBand_a6d7b7cf9d858a1c20f64ec2489190758}} 
+Pose\+Sequence \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a6d7b7cf9d858a1c20f64ec2489190758}{pose\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Internal container storing the sequence of optimzable pose vertices \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a9cf0dad3f580228f157ab30518020b49}\label{classteb__local__planner_1_1TimedElasticBand_a9cf0dad3f580228f157ab30518020b49}} 
+Time\+Diff\+Sequence \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a9cf0dad3f580228f157ab30518020b49}{timediff\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Internal container storing the sequence of optimzable timediff vertices \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_aaae3fcdccc1f539b16ef6d4a3cab0ae7}{find\+Closest\+Trajectory\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+point, double $\ast$distance=NULL, int begin\+\_\+idx=0) const
+\begin{DoxyCompactList}\small\item\em Find the closest point on the trajectory w.\+r.\+t. to a provided reference point. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a21b422124633a6952e74fe14062929f1}{find\+Closest\+Trajectory\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+line\+\_\+start, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&ref\+\_\+line\+\_\+end, double $\ast$distance=NULL) const
+\begin{DoxyCompactList}\small\item\em Find the closest point on the trajectory w.\+r.\+t. to a provided reference line. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a0c33751be8735fb910738827d1da3f94}{find\+Closest\+Trajectory\+Pose}} (const Point2d\+Container \&vertices, double $\ast$distance=NULL) const
+\begin{DoxyCompactList}\small\item\em Find the closest point on the trajectory w.\+r.\+t. to a provided reference polygon. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a1c3ff9fb67b091fc2d881f0b446d8544}{find\+Closest\+Trajectory\+Pose}} (const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} \&obstacle, double $\ast$distance=NULL) const
+\begin{DoxyCompactList}\small\item\em Find the closest point on the trajectory w.\+r.\+t to a provided obstacle type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ac5be9a5d22a911483401cb8269bf07df}\label{classteb__local__planner_1_1TimedElasticBand_ac5be9a5d22a911483401cb8269bf07df}} 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_ac5be9a5d22a911483401cb8269bf07df}{size\+Poses}} () const
+\begin{DoxyCompactList}\small\item\em Get the length of the internal pose sequence \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a79a4fbc306ca569587ed2aacacfa47e8}\label{classteb__local__planner_1_1TimedElasticBand_a79a4fbc306ca569587ed2aacacfa47e8}} 
+int \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a79a4fbc306ca569587ed2aacacfa47e8}{size\+Time\+Diffs}} () const
+\begin{DoxyCompactList}\small\item\em Get the length of the internal timediff sequence \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a6f7628ef2e474fbad656844467213f7e}\label{classteb__local__planner_1_1TimedElasticBand_a6f7628ef2e474fbad656844467213f7e}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a6f7628ef2e474fbad656844467213f7e}{is\+Init}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the trajectory is initialized (nonzero pose and timediff sequences) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_af57e977ea235034489eefc4412fc2631}\label{classteb__local__planner_1_1TimedElasticBand_af57e977ea235034489eefc4412fc2631}} 
+double \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_af57e977ea235034489eefc4412fc2631}{get\+Sum\+Of\+All\+Time\+Diffs}} () const
+\begin{DoxyCompactList}\small\item\em Calculate the total transition time (sum over all time intervals of the timediff sequence) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_aee981e5dbf7aa461b11da45d86be4a3d}{get\+Sum\+Of\+Time\+Diffs\+Up\+To\+Idx}} (int index) const
+\begin{DoxyCompactList}\small\item\em Calculate the estimated transition time up to the pose denoted by index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a8368b4f256de4e34148af92c99822170}\label{classteb__local__planner_1_1TimedElasticBand_a8368b4f256de4e34148af92c99822170}} 
+double \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a8368b4f256de4e34148af92c99822170}{get\+Accumulated\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Calculate the length (accumulated euclidean distance) of the trajectory \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a2fce645048ad4fb6eca011a9a1acdc46}{is\+Trajectory\+Inside\+Region}} (double radius, double max\+\_\+dist\+\_\+behind\+\_\+robot=-\/1, int skip\+\_\+poses=0)
+\begin{DoxyCompactList}\small\item\em Check if all trajectory points are contained in a specific region \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Class that defines a trajectory modeled as an elastic band with augmented tempoarl information. 
+
+? Actual trajectory object
+
+All trajectory related methods (initialization, modifying, ...) are implemented inside this class. ~\newline
+ Let $ Q = \lbrace \mathbf{s}_i \rbrace_{i=0...n},\ n \in \mathbb{N} $ be a sequence of poses, ~\newline
+ in which $ \mathbf{s}_i = [x_i, y_i, \beta_i]^T \in \mathbb{R}^2 \times S^1 $ denotes a single pose of the robot. ~\newline
+ The Timed Elastic Band (TEB) augments this sequence of poses by incorporating time intervals between two consecutive poses, resuting in a sequence of {\ttfamily n-\/1} time intervals $ \Delta T_i $\+: ~\newline
+ $ \tau = \lbrace \Delta T_i \rbrace_{i=0...n-1} $. ~\newline
+ Each time interval (time diff) denotes the time that the robot requires to transit from the current configuration to the next configuration. The tuple of both sequences defines the underlying trajectory.
+
+Poses and time differences are wrapped into a g2o\+::\+Vertex class in order to enable the efficient optimization in \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}. ~\newline
+ \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} utilizes this Timed\+\_\+\+Elastic\+\_\+band class for representing an optimizable trajectory.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000008}{待办事项}}]Move decision if the start or goal state should be marked as fixed or unfixed for the optimization to the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}} class. \end{DoxyRefDesc}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a55c7d2e403207c4af122c0cdf6ae2f3a}\label{classteb__local__planner_1_1TimedElasticBand_a55c7d2e403207c4af122c0cdf6ae2f3a}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPose@{addPose}}
+\index{addPose@{addPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPose()}{addPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{theta,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Append a new pose vertex to the back of the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2D vector representing the position part \\
+\hline
+{\em theta} & yaw angle representing the orientation part \\
+\hline
+{\em fixed} & Mark the pose to be fixed or unfixed during trajectory optimization (important for the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a5f5cf9388f7ebb9ecb1cbea6b235e60b}\label{classteb__local__planner_1_1TimedElasticBand_a5f5cf9388f7ebb9ecb1cbea6b235e60b}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPose@{addPose}}
+\index{addPose@{addPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPose()}{addPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Append a new pose vertex to the back of the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} to push back on the internal Pose\+Sequence \\
+\hline
+{\em fixed} & Mark the pose to be fixed or unfixed during trajectory optimization (important for the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a3cfd2758befcac90bc79e450afdc4c03}\label{classteb__local__planner_1_1TimedElasticBand_a3cfd2758befcac90bc79e450afdc4c03}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPose@{addPose}}
+\index{addPose@{addPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPose()}{addPose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Append a new pose vertex to the back of the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate of the position part \\
+\hline
+{\em y} & y-\/coordinate of the position part \\
+\hline
+{\em theta} & yaw angle representing the orientation part \\
+\hline
+{\em fixed} & Mark the pose to be fixed or unfixed during trajectory optimization (important for the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a36032d2e8a0e15db1026c9e2452a8226}\label{classteb__local__planner_1_1TimedElasticBand_a36032d2e8a0e15db1026c9e2452a8226}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPoseAndTimeDiff@{addPoseAndTimeDiff}}
+\index{addPoseAndTimeDiff@{addPoseAndTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPoseAndTimeDiff()}{addPoseAndTimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose\+And\+Time\+Diff (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{theta,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2D vector representing the position part \\
+\hline
+{\em theta} & yaw angle representing the orientation part \\
+\hline
+{\em dt} & time difference value to push back on the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+see \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a138751cfb05d5f1647bf32c7b6df69ed}{add\+Pose\+And\+Time\+Diff(const Pose\+SE2\& pose, double dt)}} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a138751cfb05d5f1647bf32c7b6df69ed}\label{classteb__local__planner_1_1TimedElasticBand_a138751cfb05d5f1647bf32c7b6df69ed}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPoseAndTimeDiff@{addPoseAndTimeDiff}}
+\index{addPoseAndTimeDiff@{addPoseAndTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPoseAndTimeDiff()}{addPoseAndTimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose\+And\+Time\+Diff (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} to push back on the internal Pose\+Sequence \\
+\hline
+{\em dt} & time difference value to push back on the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+Since the timediff is defined to connect two consecutive poses, this call is only allowed if there exist already n poses and n-\/1 timediffs in the sequences (n=1,2,...)\+: therefore add a single pose using \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a5f5cf9388f7ebb9ecb1cbea6b235e60b}{add\+Pose()}} first! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a91fb6e1180497ad5fd31651a9a5df84d}\label{classteb__local__planner_1_1TimedElasticBand_a91fb6e1180497ad5fd31651a9a5df84d}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addPoseAndTimeDiff@{addPoseAndTimeDiff}}
+\index{addPoseAndTimeDiff@{addPoseAndTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addPoseAndTimeDiff()}{addPoseAndTimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Pose\+And\+Time\+Diff (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate of the position part \\
+\hline
+{\em y} & y-\/coordinate of the position part \\
+\hline
+{\em theta} & yaw angle representing the orientation part \\
+\hline
+{\em dt} & time difference value to push back on the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+see \mbox{\hyperlink{classteb__local__planner_1_1TimedElasticBand_a138751cfb05d5f1647bf32c7b6df69ed}{add\+Pose\+And\+Time\+Diff(const Pose\+SE2\& pose, double dt)}} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ab9ac72dac14283fc58f250a7e6d1808e}\label{classteb__local__planner_1_1TimedElasticBand_ab9ac72dac14283fc58f250a7e6d1808e}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!addTimeDiff@{addTimeDiff}}
+\index{addTimeDiff@{addTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{addTimeDiff()}{addTimeDiff()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::add\+Time\+Diff (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Append a new time difference vertex to the back of the time diff sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em dt} & time difference value to push back on the internal Time\+Diff\+Sequence \\
+\hline
+{\em fixed} & Mark the pose to be fixed or unfixed during trajectory optimization (important for the \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_afa43c55427a4b275e8eaba7a9d723b6a}\label{classteb__local__planner_1_1TimedElasticBand_afa43c55427a4b275e8eaba7a9d723b6a}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!autoResize@{autoResize}}
+\index{autoResize@{autoResize}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{autoResize()}{autoResize()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::auto\+Resize (\begin{DoxyParamCaption}\item[{double}]{dt\+\_\+ref,  }\item[{double}]{dt\+\_\+hysteresis,  }\item[{int}]{min\+\_\+samples = {\ttfamily 3},  }\item[{int}]{max\+\_\+samples = {\ttfamily 1000},  }\item[{bool}]{fast\+\_\+mode = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal resolution. 
+
+Resizing the trajectory is helpful e.\+g. for the following scenarios\+: \begin{DoxyVerb}- Obstacles requires the teb to be extended in order to 
+  satisfy the given discritization width (plan resolution)
+ and to avoid undesirable behavior due to a large/small discretization step widths \f$ \Delta T_i \f$
+  After clearance of obstacles, the teb should (re-) contract to its (time-)optimal version.
+\end{DoxyVerb}
+
+\begin{DoxyItemize}
+\item If the distance to the goal state is getting smaller, dt is decreasing as well. This leads to a heavily fine-\/grained discretization in combination with many discrete poses. Thus, the computation time will be/remain high and in addition numerical instabilities can appear (e.\+g. due to the division by a small $ \Delta T_i $).
+\end{DoxyItemize}
+
+The implemented strategy checks all timediffs $ \Delta T_i $ and \begin{DoxyVerb}- inserts a new sample if \f$ \Delta T_i > \Delta T_{ref} + \Delta T_{hyst} \f$
+\end{DoxyVerb}
+
+\begin{DoxyItemize}
+\item removes a sample if $ \Delta T_i < \Delta T_{ref} - \Delta T_{hyst} $
+\end{DoxyItemize}
+
+Each call only one new sample (pose-\/dt-\/pair) is inserted or removed. 
+\begin{DoxyParams}{参数}
+{\em dt\+\_\+ref} & reference temporal resolution \\
+\hline
+{\em dt\+\_\+hysteresis} & hysteresis to avoid oscillations \\
+\hline
+{\em min\+\_\+samples} & minimum number of samples that should be remain in the trajectory after resizing \\
+\hline
+{\em max\+\_\+samples} & maximum number of samples that should not be exceeded during resizing \\
+\hline
+{\em fast\+\_\+mode} & if true, the trajectory is iterated once to insert or erase points; if false the trajectory is repeatedly iterated until no poses are added or removed anymore \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a18ee2ca1b9620fdc4d68e45848800f1c}\label{classteb__local__planner_1_1TimedElasticBand_a18ee2ca1b9620fdc4d68e45848800f1c}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!deletePose@{deletePose}}
+\index{deletePose@{deletePose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{deletePose()}{deletePose()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::delete\+Pose (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Delete pose at pos. {\ttfamily index} in the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a396017a9ef049b722e0cb331518ecc80}\label{classteb__local__planner_1_1TimedElasticBand_a396017a9ef049b722e0cb331518ecc80}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!deletePoses@{deletePoses}}
+\index{deletePoses@{deletePoses}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{deletePoses()}{deletePoses()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::delete\+Poses (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Delete multiple ({\ttfamily number}) poses starting at pos. {\ttfamily index} in the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & first element position inside the internal Pose\+Sequence \\
+\hline
+{\em number} & number of elements that should be deleted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a1d2bc8affb6483a87e01b23c270becf0}\label{classteb__local__planner_1_1TimedElasticBand_a1d2bc8affb6483a87e01b23c270becf0}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!deleteTimeDiff@{deleteTimeDiff}}
+\index{deleteTimeDiff@{deleteTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{deleteTimeDiff()}{deleteTimeDiff()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::delete\+Time\+Diff (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Delete pose at pos. {\ttfamily index} in the timediff sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_aacd59478383ded51c3542080938d992f}\label{classteb__local__planner_1_1TimedElasticBand_aacd59478383ded51c3542080938d992f}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!deleteTimeDiffs@{deleteTimeDiffs}}
+\index{deleteTimeDiffs@{deleteTimeDiffs}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{deleteTimeDiffs()}{deleteTimeDiffs()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::delete\+Time\+Diffs (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Delete multiple ({\ttfamily number}) time differences starting at pos. {\ttfamily index} in the timediff sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & first element position inside the internal Time\+Diff\+Sequence \\
+\hline
+{\em number} & number of elements that should be deleted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a21b422124633a6952e74fe14062929f1}\label{classteb__local__planner_1_1TimedElasticBand_a21b422124633a6952e74fe14062929f1}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!findClosestTrajectoryPose@{findClosestTrajectoryPose}}
+\index{findClosestTrajectoryPose@{findClosestTrajectoryPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{findClosestTrajectoryPose()}{findClosestTrajectoryPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{ref\+\_\+line\+\_\+start,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{ref\+\_\+line\+\_\+end,  }\item[{double $\ast$}]{distance = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+
+
+Find the closest point on the trajectory w.\+r.\+t. to a provided reference line. 
+
+This function can be useful to find the part of a trajectory that is close to an (line) obstacle.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000011}{待办事项}}]implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em ref\+\_\+line\+\_\+start} & start of the reference line (2D position vector) \\
+\hline
+ & {\em ref\+\_\+line\+\_\+end} & end of the reference line (2D position vector) \\
+\hline
+\mbox{\texttt{ out}}  & {\em distance} & \mbox{[}optional\mbox{]} the resulting minimum distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Index to the closest pose in the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_aaae3fcdccc1f539b16ef6d4a3cab0ae7}\label{classteb__local__planner_1_1TimedElasticBand_aaae3fcdccc1f539b16ef6d4a3cab0ae7}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!findClosestTrajectoryPose@{findClosestTrajectoryPose}}
+\index{findClosestTrajectoryPose@{findClosestTrajectoryPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{findClosestTrajectoryPose()}{findClosestTrajectoryPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{ref\+\_\+point,  }\item[{double $\ast$}]{distance = {\ttfamily NULL},  }\item[{int}]{begin\+\_\+idx = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Find the closest point on the trajectory w.\+r.\+t. to a provided reference point. 
+
+This function can be useful to find the part of a trajectory that is close to an obstacle.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000010}{待办事项}}]implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em ref\+\_\+point} & reference point (2D position vector) \\
+\hline
+\mbox{\texttt{ out}}  & {\em distance} & \mbox{[}optional\mbox{]} the resulting minimum distance \\
+\hline
+ & {\em begin\+\_\+idx} & start search at this pose index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Index to the closest pose in the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a1c3ff9fb67b091fc2d881f0b446d8544}\label{classteb__local__planner_1_1TimedElasticBand_a1c3ff9fb67b091fc2d881f0b446d8544}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!findClosestTrajectoryPose@{findClosestTrajectoryPose}}
+\index{findClosestTrajectoryPose@{findClosestTrajectoryPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{findClosestTrajectoryPose()}{findClosestTrajectoryPose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} \&}]{obstacle,  }\item[{double $\ast$}]{distance = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+
+
+Find the closest point on the trajectory w.\+r.\+t to a provided obstacle type 
+
+This function can be useful to find the part of a trajectory that is close to an obstacle. The method is calculates appropriate distance metrics for point, line and polygon obstacles. For all unknown obstacles the centroid is used.
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em obstacle} & Subclass of the \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} base class \\
+\hline
+\mbox{\texttt{ out}}  & {\em distance} & \mbox{[}optional\mbox{]} the resulting minimum distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Index to the closest pose in the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a0c33751be8735fb910738827d1da3f94}\label{classteb__local__planner_1_1TimedElasticBand_a0c33751be8735fb910738827d1da3f94}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!findClosestTrajectoryPose@{findClosestTrajectoryPose}}
+\index{findClosestTrajectoryPose@{findClosestTrajectoryPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{findClosestTrajectoryPose()}{findClosestTrajectoryPose()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::find\+Closest\+Trajectory\+Pose (\begin{DoxyParamCaption}\item[{const Point2d\+Container \&}]{vertices,  }\item[{double $\ast$}]{distance = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+
+
+Find the closest point on the trajectory w.\+r.\+t. to a provided reference polygon. 
+
+This function can be useful to find the part of a trajectory that is close to an (polygon) obstacle.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000012}{待办事项}}]implement a more efficient version that first performs a coarse search. 
+
+implement a fast approximation that assumes only one local minima w.\+r.\+t to the distance\+: Allows simple comparisons starting from the middle of the trajectory.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em vertices} & vertex container containing Eigen\+::\+Vector2d points (the last and first point are connected) \\
+\hline
+\mbox{\texttt{ out}}  & {\em distance} & \mbox{[}optional\mbox{]} the resulting minimum distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Index to the closest pose in the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_aee981e5dbf7aa461b11da45d86be4a3d}\label{classteb__local__planner_1_1TimedElasticBand_aee981e5dbf7aa461b11da45d86be4a3d}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!getSumOfTimeDiffsUpToIdx@{getSumOfTimeDiffsUpToIdx}}
+\index{getSumOfTimeDiffsUpToIdx@{getSumOfTimeDiffsUpToIdx}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{getSumOfTimeDiffsUpToIdx()}{getSumOfTimeDiffsUpToIdx()}}
+{\footnotesize\ttfamily double teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::get\+Sum\+Of\+Time\+Diffs\+Up\+To\+Idx (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Calculate the estimated transition time up to the pose denoted by index 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & Index of the pose up to which the transition times are summed up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Estimated transition time up to pose index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a9a3b9daa92a7a5bca6fd213fe47b71fd}\label{classteb__local__planner_1_1TimedElasticBand_a9a3b9daa92a7a5bca6fd213fe47b71fd}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!initTrajectoryToGoal@{initTrajectoryToGoal}}
+\index{initTrajectoryToGoal@{initTrajectoryToGoal}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{initTrajectoryToGoal()}{initTrajectoryToGoal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Bidir\+Iter , typename Fun $>$ \\
+bool teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::init\+Trajectory\+To\+Goal (\begin{DoxyParamCaption}\item[{Bidir\+Iter}]{path\+\_\+start,  }\item[{Bidir\+Iter}]{path\+\_\+end,  }\item[{Fun}]{fun\+\_\+position,  }\item[{double}]{max\+\_\+vel\+\_\+x,  }\item[{double}]{max\+\_\+vel\+\_\+theta,  }\item[{boost\+::optional$<$ double $>$}]{max\+\_\+acc\+\_\+x,  }\item[{boost\+::optional$<$ double $>$}]{max\+\_\+acc\+\_\+theta,  }\item[{boost\+::optional$<$ double $>$}]{start\+\_\+orientation,  }\item[{boost\+::optional$<$ double $>$}]{goal\+\_\+orientation,  }\item[{int}]{min\+\_\+samples = {\ttfamily 3},  }\item[{bool}]{guess\+\_\+backwards\+\_\+motion = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initialize a trajectory from a generic 2D reference path. 
+
+The temporal information is determined using a given maximum velocity (2D vector containing the translational and angular velocity). ~\newline
+A constant velocity profile is implemented. ~\newline
+A possible maximum acceleration is considered if {\ttfamily max\+\_\+acceleration} param is provided.
+
+Since the orientation is not included in the reference path, it can be provided seperately (e.\+g. from the robot pose and robot goal). ~\newline
+Otherwise the goal heading will be used as start and goal orientation. ~\newline
+The orientation along the trajectory will be determined using the connection vector between two consecutive positions of the reference path.
+
+The reference path is provided using a start and end iterator to a container class. You must provide a unary function that accepts the dereferenced iterator and returns a copy or (const) reference to an Eigen\+::\+Vector2d type containing the 2d position.
+
+
+\begin{DoxyParams}{参数}
+{\em path\+\_\+start} & start iterator of a generic 2d path \\
+\hline
+{\em path\+\_\+end} & end iterator of a generic 2d path \\
+\hline
+{\em fun\+\_\+position} & unary function that returns the Eigen\+::\+Vector2d object \\
+\hline
+{\em max\+\_\+vel\+\_\+x} & maximum translational velocity used for determining time differences \\
+\hline
+{\em max\+\_\+vel\+\_\+theta} & maximum angular velocity used for determining time differences \\
+\hline
+{\em max\+\_\+acc\+\_\+x} & specify to satisfy a maxmimum transl. acceleration and decceleration (optional) \\
+\hline
+{\em max\+\_\+acc\+\_\+theta} & specify to satisfy a maxmimum angular acceleration and decceleration (optional) \\
+\hline
+{\em start\+\_\+orientation} & Orientation of the first pose of the trajectory (optional, otherwise use goal heading) \\
+\hline
+{\em goal\+\_\+orientation} & Orientation of the last pose of the trajectory (optional, otherwise use goal heading) \\
+\hline
+{\em min\+\_\+samples} & Minimum number of samples that should be initialized at least \\
+\hline
+{\em guess\+\_\+backwards\+\_\+motion} & Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Bidir\+Iter} & Bidirectional iterator type \\
+\hline
+{\em Fun} & unyary function that transforms the dereferenced iterator into an Eigen\+::\+Vector2d \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+true if everything was fine, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyRemark}{备注}
+Use {\ttfamily boost\+::none} to skip optional arguments. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ab9164d1e5d518b35da94744705cdc339}\label{classteb__local__planner_1_1TimedElasticBand_ab9164d1e5d518b35da94744705cdc339}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!initTrajectoryToGoal@{initTrajectoryToGoal}}
+\index{initTrajectoryToGoal@{initTrajectoryToGoal}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{initTrajectoryToGoal()}{initTrajectoryToGoal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::init\+Trajectory\+To\+Goal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{double}]{diststep = {\ttfamily 0},  }\item[{double}]{max\+\_\+vel\+\_\+x = {\ttfamily 0.5},  }\item[{int}]{min\+\_\+samples = {\ttfamily 3},  }\item[{bool}]{guess\+\_\+backwards\+\_\+motion = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initialize a trajectory between a given start and goal pose. 
+
+The implemented algorithm subsamples the straight line between start and goal using a given discretiziation width. ~\newline
+The discretization width can be defined in the euclidean space using the {\ttfamily diststep} parameter. Each time difference between two consecutive poses is initialized to {\ttfamily timestep}. ~\newline
+If the {\ttfamily diststep} is chosen to be zero, the resulting trajectory contains the start and goal pose only. 
+\begin{DoxyParams}{参数}
+{\em start} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} defining the start of the trajectory \\
+\hline
+{\em goal} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} defining the goal of the trajectory (final pose) \\
+\hline
+{\em diststep} & euclidean distance between two consecutive poses (if 0, no intermediate samples are inserted despite min\+\_\+samples) \\
+\hline
+{\em max\+\_\+vel\+\_\+x} & maximum translational velocity used for determining time differences \\
+\hline
+{\em min\+\_\+samples} & Minimum number of samples that should be initialized at least \\
+\hline
+{\em guess\+\_\+backwards\+\_\+motion} & Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+true if everything was fine, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_af98513600b5d2d929fa6fca5ec31af5f}\label{classteb__local__planner_1_1TimedElasticBand_af98513600b5d2d929fa6fca5ec31af5f}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!initTrajectoryToGoal@{initTrajectoryToGoal}}
+\index{initTrajectoryToGoal@{initTrajectoryToGoal}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{initTrajectoryToGoal()}{initTrajectoryToGoal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::init\+Trajectory\+To\+Goal (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan,  }\item[{double}]{max\+\_\+vel\+\_\+x,  }\item[{double}]{max\+\_\+vel\+\_\+theta,  }\item[{bool}]{estimate\+\_\+orient = {\ttfamily false},  }\item[{int}]{min\+\_\+samples = {\ttfamily 3},  }\item[{bool}]{guess\+\_\+backwards\+\_\+motion = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initialize a trajectory from a reference pose sequence (positions and orientations). 
+
+This method initializes the timed elastic band using a pose container (e.\+g. as local plan from the ros navigation stack). ~\newline
+The initial time difference between two consecutive poses can be uniformly set via the argument {\ttfamily dt}. 
+\begin{DoxyParams}{参数}
+{\em plan} & vector of geometry\+\_\+msgs\+::\+Pose\+Stamped \\
+\hline
+{\em max\+\_\+vel\+\_\+x} & maximum translational velocity used for determining time differences \\
+\hline
+{\em max\+\_\+vel\+\_\+theta} & maximum rotational velocity used for determining time differences \\
+\hline
+{\em estimate\+\_\+orient} & if {\ttfamily true}, calculate orientation using the straight line distance vector between consecutive poses (only copy start and goal orientation; recommended if no orientation data is available). \\
+\hline
+{\em min\+\_\+samples} & Minimum number of samples that should be initialized at least \\
+\hline
+{\em guess\+\_\+backwards\+\_\+motion} & Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot (this parameter is used only if {\ttfamily estimate\+\_\+orient} is enabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+true if everything was fine, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a5cfa7201ccdbb68c39e3613e374a7224}\label{classteb__local__planner_1_1TimedElasticBand_a5cfa7201ccdbb68c39e3613e374a7224}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!insertPose@{insertPose}}
+\index{insertPose@{insertPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{insertPose()}{insertPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::insert\+Pose (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{theta }\end{DoxyParamCaption})}
+
+
+
+Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+{\em position} & 2D vector representing the position part \\
+\hline
+{\em theta} & yaw-\/angle representing the orientation part \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a3cae916cb21a284dc24e85dc2b35e599}\label{classteb__local__planner_1_1TimedElasticBand_a3cae916cb21a284dc24e85dc2b35e599}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!insertPose@{insertPose}}
+\index{insertPose@{insertPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{insertPose()}{insertPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::insert\+Pose (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose }\end{DoxyParamCaption})}
+
+
+
+Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+{\em pose} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} element to insert into the internal Pose\+Sequence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a9327fd3bad6ca9aeb8ee14c2efc62ac5}\label{classteb__local__planner_1_1TimedElasticBand_a9327fd3bad6ca9aeb8ee14c2efc62ac5}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!insertPose@{insertPose}}
+\index{insertPose@{insertPose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{insertPose()}{insertPose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::insert\+Pose (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta }\end{DoxyParamCaption})}
+
+
+
+Insert a new pose vertex at pos. {\ttfamily index} to the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+{\em x} & x-\/coordinate of the position part \\
+\hline
+{\em y} & y-\/coordinate of the position part \\
+\hline
+{\em theta} & yaw-\/angle representing the orientation part \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a7adf1066f46e87b210d34dbfd6dad994}\label{classteb__local__planner_1_1TimedElasticBand_a7adf1066f46e87b210d34dbfd6dad994}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!insertTimeDiff@{insertTimeDiff}}
+\index{insertTimeDiff@{insertTimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{insertTimeDiff()}{insertTimeDiff()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::insert\+Time\+Diff (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Insert a new timediff vertex at pos. {\ttfamily index} to the timediff sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Time\+Diff\+Sequence \\
+\hline
+{\em dt} & timediff value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a2fce645048ad4fb6eca011a9a1acdc46}\label{classteb__local__planner_1_1TimedElasticBand_a2fce645048ad4fb6eca011a9a1acdc46}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!isTrajectoryInsideRegion@{isTrajectoryInsideRegion}}
+\index{isTrajectoryInsideRegion@{isTrajectoryInsideRegion}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{isTrajectoryInsideRegion()}{isTrajectoryInsideRegion()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::is\+Trajectory\+Inside\+Region (\begin{DoxyParamCaption}\item[{double}]{radius,  }\item[{double}]{max\+\_\+dist\+\_\+behind\+\_\+robot = {\ttfamily -\/1},  }\item[{int}]{skip\+\_\+poses = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Check if all trajectory points are contained in a specific region 
+
+The specific region is a circle around the current robot position (Pose(0)) with given radius {\ttfamily radius}. This method investigates a different radius for points behind the robot if {\ttfamily max\+\_\+dist\+\_\+behind\+\_\+robot} $>$= 0. 
+\begin{DoxyParams}{参数}
+{\em radius} & radius of the region with the robot position (Pose(0)) as center \\
+\hline
+{\em max\+\_\+dist\+\_\+behind\+\_\+robot} & A separate radius for trajectory points behind the robot, activated if 0 or positive \\
+\hline
+{\em skip\+\_\+poses} & If $>$0\+: the specified number of poses are skipped for the test, e.\+g. Pose(0), Pose(0+skip\+\_\+poses+1), Pose(2$\ast$skip\+\_\+poses+2), ... are tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if all tested trajectory points are inside the specified region, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a0419cba7f730da8edbe7c8555f4298b7}\label{classteb__local__planner_1_1TimedElasticBand_a0419cba7f730da8edbe7c8555f4298b7}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!Pose@{Pose}}
+\index{Pose@{Pose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Pose (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the pose at pos {\ttfamily index} of the pose sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+reference to the pose at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a0525a5c1369b37c7da5d900425d0cd0e}\label{classteb__local__planner_1_1TimedElasticBand_a0525a5c1369b37c7da5d900425d0cd0e}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!Pose@{Pose}}
+\index{Pose@{Pose}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Pose (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the pose at pos {\ttfamily index} of the pose sequence (read-\/only) 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+const reference to the pose at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ab65df05f563de4e1820ae0fcb191ec4d}\label{classteb__local__planner_1_1TimedElasticBand_ab65df05f563de4e1820ae0fcb191ec4d}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!poses@{poses}}
+\index{poses@{poses}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{poses()}{poses()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pose\+Sequence\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::poses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the complete pose sequence 
+
+\begin{DoxyReturn}{返回}
+reference to the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a61c56b02adc305f58cb52207841030ae}\label{classteb__local__planner_1_1TimedElasticBand_a61c56b02adc305f58cb52207841030ae}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!poses@{poses}}
+\index{poses@{poses}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{poses()}{poses()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Pose\+Sequence\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::poses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the complete pose sequence (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the pose sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a8cf537eef7aeb0a535def3e2034e81c3}\label{classteb__local__planner_1_1TimedElasticBand_a8cf537eef7aeb0a535def3e2034e81c3}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!PoseVertex@{PoseVertex}}
+\index{PoseVertex@{PoseVertex}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{PoseVertex()}{PoseVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1VertexPose}{Vertex\+Pose}}$\ast$ teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Pose\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the vertex of a pose at pos {\ttfamily index} for optimization purposes 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Pose\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Weak raw pointer to the pose vertex at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_ab39e9950fab1522eef115631efda6273}\label{classteb__local__planner_1_1TimedElasticBand_ab39e9950fab1522eef115631efda6273}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!setPoseVertexFixed@{setPoseVertexFixed}}
+\index{setPoseVertexFixed@{setPoseVertexFixed}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{setPoseVertexFixed()}{setPoseVertexFixed()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::set\+Pose\+Vertex\+Fixed (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Set a pose vertex at pos {\ttfamily index} of the pose sequence to be fixed or unfixed during optimization. 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & index to the pose vertex \\
+\hline
+{\em status} & if {\ttfamily true}, the vertex will be fixed, otherwise unfixed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a0ae2815baa6eeb0215888e5f5b7dadc5}\label{classteb__local__planner_1_1TimedElasticBand_a0ae2815baa6eeb0215888e5f5b7dadc5}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!setTimeDiffVertexFixed@{setTimeDiffVertexFixed}}
+\index{setTimeDiffVertexFixed@{setTimeDiffVertexFixed}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{setTimeDiffVertexFixed()}{setTimeDiffVertexFixed()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::set\+Time\+Diff\+Vertex\+Fixed (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{status }\end{DoxyParamCaption})}
+
+
+
+Set a timediff vertex at pos {\ttfamily index} of the timediff sequence to be fixed or unfixed during optimization. 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & index to the timediff vertex \\
+\hline
+{\em status} & if {\ttfamily true}, the vertex will be fixed, otherwise unfixed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a7c27963869face67896a5115649cb978}\label{classteb__local__planner_1_1TimedElasticBand_a7c27963869face67896a5115649cb978}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!TimeDiff@{TimeDiff}}
+\index{TimeDiff@{TimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{TimeDiff()}{TimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Time\+Diff (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the time difference at pos {\ttfamily index} of the time sequence 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+reference to the time difference at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a608ccd48d4a63eb1c84b604ca624146d}\label{classteb__local__planner_1_1TimedElasticBand_a608ccd48d4a63eb1c84b604ca624146d}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!TimeDiff@{TimeDiff}}
+\index{TimeDiff@{TimeDiff}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{TimeDiff()}{TimeDiff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Time\+Diff (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the time difference at pos {\ttfamily index} of the time sequence (read-\/only) 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+const reference to the time difference at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a9852268ff781b9bfac3e71d0dfacc8bb}\label{classteb__local__planner_1_1TimedElasticBand_a9852268ff781b9bfac3e71d0dfacc8bb}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!timediffs@{timediffs}}
+\index{timediffs@{timediffs}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{timediffs()}{timediffs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Time\+Diff\+Sequence\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::timediffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the complete timediff sequence 
+
+\begin{DoxyReturn}{返回}
+reference to the dimediff sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_afd7b3be659f16be7b45dac68f590d3da}\label{classteb__local__planner_1_1TimedElasticBand_afd7b3be659f16be7b45dac68f590d3da}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!timediffs@{timediffs}}
+\index{timediffs@{timediffs}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{timediffs()}{timediffs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Time\+Diff\+Sequence\& teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::timediffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the complete timediff sequence 
+
+\begin{DoxyReturn}{返回}
+reference to the dimediff sequence 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_a79d43e8c50679cc206d439f9ef615d7f}\label{classteb__local__planner_1_1TimedElasticBand_a79d43e8c50679cc206d439f9ef615d7f}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!TimeDiffVertex@{TimeDiffVertex}}
+\index{TimeDiffVertex@{TimeDiffVertex}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{TimeDiffVertex()}{TimeDiffVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff}{Vertex\+Time\+Diff}}$\ast$ teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::\+Time\+Diff\+Vertex (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the vertex of a time difference at pos {\ttfamily index} for optimization purposes 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & element position inside the internal Time\+Diff\+Sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Weak raw pointer to the timediff vertex at pos {\ttfamily index} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}\label{classteb__local__planner_1_1TimedElasticBand_adae6e7423ed1583f5daedac57562384e}} 
+\index{teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}!updateAndPruneTEB@{updateAndPruneTEB}}
+\index{updateAndPruneTEB@{updateAndPruneTEB}!teb\_local\_planner::TimedElasticBand@{teb\_local\_planner::TimedElasticBand}}
+\doxysubsubsection{\texorpdfstring{updateAndPruneTEB()}{updateAndPruneTEB()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Timed\+Elastic\+Band\+::update\+And\+Prune\+TEB (\begin{DoxyParamCaption}\item[{boost\+::optional$<$ const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& $>$}]{new\+\_\+start,  }\item[{boost\+::optional$<$ const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& $>$}]{new\+\_\+goal,  }\item[{int}]{min\+\_\+samples = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Hot-\/\+Start from an existing trajectory with updated start and goal poses. 
+
+This method updates a previously optimized trajectory with a new start and/or a new goal pose. ~\newline
+The current simple implementation cuts of pieces of the trajectory that are already passed due to the new start. ~\newline
+Afterwards the start and goal pose are replaced by the new ones. The resulting discontinuity will not be smoothed. The optimizer has to smooth the trajectory in \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner}{Teb\+Optimal\+Planner}}. ~\newline
+ \begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000009}{待办事项}}]Smooth the trajectory here and test the performance improvement of the optimization. 
+
+Implement a update\+And\+Prune\+TEB based on a new reference path / pose sequence.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+start} & New start pose (optional) \\
+\hline
+{\em new\+\_\+goal} & New goal pose (optional) \\
+\hline
+{\em min\+\_\+samples} & Specify the minimum number of samples that should at least remain in the trajectory \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/timed\+\_\+elastic\+\_\+band.\+h\end{DoxyCompactItemize}

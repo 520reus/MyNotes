@@ -1,0 +1,193 @@
+\hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC}{}\doxysection{costmap\+\_\+converter\+::Costmap\+To\+Lines\+DBSRANSAC类 参考}
+\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC}\index{costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}}
+
+
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of lines (and points)  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+to\+\_\+lines\+\_\+ransac.\+h$>$}
+
+类 costmap\+\_\+converter\+::Costmap\+To\+Lines\+DBSRANSAC 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcostmap__converter_1_1CostmapToLinesDBSRANSAC}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ab68b6d612e221e07df93055bdc6e68b0}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ab68b6d612e221e07df93055bdc6e68b0}} 
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ab68b6d612e221e07df93055bdc6e68b0}{Costmap\+To\+Lines\+DBSRANSAC}} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_aaf5d9b6eb2956b26f5dc5848b799b53e}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_aaf5d9b6eb2956b26f5dc5848b799b53e}} 
+virtual \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_aaf5d9b6eb2956b26f5dc5848b799b53e}{$\sim$\+Costmap\+To\+Lines\+DBSRANSAC}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a7d4d748eb406363f923deba89d412bcc}{initialize}} (ros\+::\+Node\+Handle nh)
+\begin{DoxyCompactList}\small\item\em Initialize the plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a58d638577ac6c9c1d1ad7da7aa75300a}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a58d638577ac6c9c1d1ad7da7aa75300a}} 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a58d638577ac6c9c1d1ad7da7aa75300a}{compute}} ()
+\begin{DoxyCompactList}\small\item\em This method performs the actual work (conversion of the costmap to polygons) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Point , typename Line\+Point $>$ }\\static bool \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a565e9766fd65a1028a4480a9230e6825}{is\+Inlier}} (const Point \&point, const Line\+Point \&line\+\_\+start, const Line\+Point \&line\+\_\+end, double min\+\_\+distance)
+\begin{DoxyCompactList}\small\item\em Check if the candidate point is an inlier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ac8c02d0aadbd0ee0b80561100e0a9b02}{line\+Ransac}} (const std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&data, double inlier\+\_\+distance, int no\+\_\+iterations, int min\+\_\+inliers, std\+::pair$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}}, \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&best\+\_\+model, std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $\ast$inliers=NULL, std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $\ast$outliers=NULL)
+\begin{DoxyCompactList}\small\item\em Find a straight line segment in a point cloud with RANSAC (without linear regression). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a660a2dc34185b389e3ff269f6285eb51}{linear\+Regression}} (const std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&data, double \&slope, double \&intercept, double $\ast$mean\+\_\+x\+\_\+out=NULL, double $\ast$mean\+\_\+y\+\_\+out=NULL)
+\begin{DoxyCompactList}\small\item\em Perform a simple linear regression in order to fit a straight line \textquotesingle{}y = slope$\ast$x + intercept\textquotesingle{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a106bc0a90f9d67fbe1b40de1ca0b4fe5}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a106bc0a90f9d67fbe1b40de1ca0b4fe5}} 
+double \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a106bc0a90f9d67fbe1b40de1ca0b4fe5}{ransac\+\_\+inlier\+\_\+distance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Maximum distance to the line segment for inliers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ae5d794c62c5db1943998bc2d62a7c491}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ae5d794c62c5db1943998bc2d62a7c491}} 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ae5d794c62c5db1943998bc2d62a7c491}{ransac\+\_\+min\+\_\+inliers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Minimum numer of inliers required to form a line \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a2a7b082e5065664815dd7aa956116cfc}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a2a7b082e5065664815dd7aa956116cfc}} 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a2a7b082e5065664815dd7aa956116cfc}{ransac\+\_\+no\+\_\+iterations\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of ransac iterations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a6b41a5167d7d9a3a2c1083f3a816973d}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a6b41a5167d7d9a3a2c1083f3a816973d}} 
+int \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a6b41a5167d7d9a3a2c1083f3a816973d}{ransac\+\_\+remainig\+\_\+outliers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Repeat ransac until the number of outliers is as specified here \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a046b4c8909d2eaf36318bac044414893}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a046b4c8909d2eaf36318bac044414893}} 
+bool \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a046b4c8909d2eaf36318bac044414893}{ransac\+\_\+convert\+\_\+outlier\+\_\+pts\+\_\+}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true}, convert remaining outliers to single points. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a501e7bec141e37a4f58bc6429e10b340}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a501e7bec141e37a4f58bc6429e10b340}} 
+bool \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a501e7bec141e37a4f58bc6429e10b340}{ransac\+\_\+filter\+\_\+remaining\+\_\+outlier\+\_\+pts\+\_\+}}
+\begin{DoxyCompactList}\small\item\em If {\ttfamily true}, filter the interior of remaining outliers and keep only keypoints of their convex hull \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a22fede266d9bd4df6a43b25c5af1920e}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a22fede266d9bd4df6a43b25c5af1920e}} 
+boost\+::random\+::mt19937 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a22fede266d9bd4df6a43b25c5af1920e}{rnd\+\_\+generator\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Random number generator for ransac with default seed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of lines (and points) 
+
+The conversion is performed in two stages\+:
+\begin{DoxyEnumerate}
+\item Clusters in the costmap are collected using the DBSCAN Algorithm (\href{https://en.wikipedia.org/wiki/DBSCAN}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+DBSCAN}}) Reference\+: Ester, Martin; Kriegel, Hans-\/\+Peter; Sander, Jörg; Xu, Xiaowei, A density-\/based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-\/57735-\/004-\/9.
+\item The RANSAC algorithm is used to find straight line segment models (\href{https://en.wikipedia.org/wiki/RANSAC}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+RANSAC}}) RANSAC is called repeatedly to find multiple lines per cluster until the number of inliners is below a specific threshold. In that case the remaining outliers are used as points or keypoints of their convex hull are used as points (depending on a paramter). The latter one applies as a filter. The convex assumption is not strict in practice, since the remaining regions/cluster (line inliers are removed) should be dense and small. For details about the convex hull algorithm, refer to \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}}. Resulting lines of RANSAC are currently not refined by linear regression.
+\end{DoxyEnumerate}
+
+The output is a container of polygons (but each polygon does only contain a single vertex (point) or two vertices (line) 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a7d4d748eb406363f923deba89d412bcc}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a7d4d748eb406363f923deba89d412bcc}} 
+\index{costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Nodehandle that defines the namespace for parameters \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} .
+
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a565e9766fd65a1028a4480a9230e6825}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a565e9766fd65a1028a4480a9230e6825}} 
+\index{costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}!isInlier@{isInlier}}
+\index{isInlier@{isInlier}!costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}}
+\doxysubsubsection{\texorpdfstring{isInlier()}{isInlier()}}
+{\footnotesize\ttfamily template$<$typename Point , typename Line\+Point $>$ \\
+bool costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC\+::is\+Inlier (\begin{DoxyParamCaption}\item[{const Point \&}]{point,  }\item[{const Line\+Point \&}]{line\+\_\+start,  }\item[{const Line\+Point \&}]{line\+\_\+end,  }\item[{double}]{min\+\_\+distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the candidate point is an inlier. 
+
+
+\begin{DoxyParams}{参数}
+{\em point} & generic 2D point type defining the reference point \\
+\hline
+{\em line\+\_\+start} & generic 2D point type defining the start of the line \\
+\hline
+{\em line\+\_\+end} & generic 2D point type defining the end of the line \\
+\hline
+{\em min\+\_\+distance} & minimum distance allowed \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{模板参数}
+{\em Point} & generic point type that should provide (writable) x and y member fiels. \\
+\hline
+{\em Line\+Point} & generic point type that should provide (writable) x and y member fiels. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if inlier, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a660a2dc34185b389e3ff269f6285eb51}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_a660a2dc34185b389e3ff269f6285eb51}} 
+\index{costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}!linearRegression@{linearRegression}}
+\index{linearRegression@{linearRegression}!costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}}
+\doxysubsubsection{\texorpdfstring{linearRegression()}{linearRegression()}}
+{\footnotesize\ttfamily bool costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC\+::linear\+Regression (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{data,  }\item[{double \&}]{slope,  }\item[{double \&}]{intercept,  }\item[{double $\ast$}]{mean\+\_\+x\+\_\+out = {\ttfamily NULL},  }\item[{double $\ast$}]{mean\+\_\+y\+\_\+out = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Perform a simple linear regression in order to fit a straight line \textquotesingle{}y = slope$\ast$x + intercept\textquotesingle{} 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em data} & set of 2D data points \\
+\hline
+\mbox{\texttt{ out}}  & {\em slope} & The slope of the fitted line \\
+\hline
+\mbox{\texttt{ out}}  & {\em intercept} & The intercept / offset of the line \\
+\hline
+\mbox{\texttt{ out}}  & {\em mean\+\_\+x\+\_\+out} & mean of the x-\/values of the data \mbox{[}optional\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em mean\+\_\+y\+\_\+out} & mean of the y-\/values of the data \mbox{[}optional\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if a valid line has been fitted, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ac8c02d0aadbd0ee0b80561100e0a9b02}\label{classcostmap__converter_1_1CostmapToLinesDBSRANSAC_ac8c02d0aadbd0ee0b80561100e0a9b02}} 
+\index{costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}!lineRansac@{lineRansac}}
+\index{lineRansac@{lineRansac}!costmap\_converter::CostmapToLinesDBSRANSAC@{costmap\_converter::CostmapToLinesDBSRANSAC}}
+\doxysubsubsection{\texorpdfstring{lineRansac()}{lineRansac()}}
+{\footnotesize\ttfamily bool costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSRANSAC\+::line\+Ransac (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{data,  }\item[{double}]{inlier\+\_\+distance,  }\item[{int}]{no\+\_\+iterations,  }\item[{int}]{min\+\_\+inliers,  }\item[{std\+::pair$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}}, \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{best\+\_\+model,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $\ast$}]{inliers = {\ttfamily NULL},  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ $\ast$}]{outliers = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Find a straight line segment in a point cloud with RANSAC (without linear regression). 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em data} & set of 2D data points \\
+\hline
+ & {\em inlier\+\_\+distance} & maximum distance that inliers must satisfy \\
+\hline
+ & {\em no\+\_\+iterations} & number of RANSAC iterations \\
+\hline
+ & {\em min\+\_\+inliers} & minimum number of inliers to return true \\
+\hline
+\mbox{\texttt{ out}}  & {\em best\+\_\+model} & start and end of the best straight line segment \\
+\hline
+\mbox{\texttt{ out}}  & {\em inliers} & inlier keypoints are written to this container \mbox{[}optional\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em outliers} & outlier keypoints are written to this container \mbox{[}optional\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily false}, if {\ttfamily min\+\_\+inliers} is not satisfied, {\ttfamily true} otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+lines\+\_\+ransac.\+h\end{DoxyCompactItemize}

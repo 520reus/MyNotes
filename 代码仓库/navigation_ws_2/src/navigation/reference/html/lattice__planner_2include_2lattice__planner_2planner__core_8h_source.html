@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner/include/lattice_planner/planner_core.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d4608036c0a5873288108ca7a6c056e0.html">lattice_planner</a></li><li class="navelem"><a class="el" href="dir_c69004a54815449a25c4300975d14d9f.html">include</a></li><li class="navelem"><a class="el" href="dir_8627c29d6f32bf739f086a6fbb89b9cb.html">lattice_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">planner_core.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2015 Marina Kollmitz</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * 3. Neither the name of the copyright holder nor the names of its contributors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * may be used to endorse or promote products derived from this software without</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * specific prior written permission.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * Author: Marina Kollmitz</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef _PLANNERCORE_H</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define _PLANNERCORE_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseArray.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;std_srvs/Empty.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;tf/transform_listener.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;tf/transform_datatypes.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_global_planner.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/GetPlan.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;kobuki_msgs/BumperEvent.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;lattice_planner/tb_lattice.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>lattice_planner</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="classlattice__planner_1_1TBLatticePlanner.html">TBLatticePlanner</a> : <span class="keyword">public</span> <a class="code" href="classnav__core_1_1BaseGlobalPlanner.html">nav_core::BaseGlobalPlanner</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a3e94d6208c2946d12ad416cdcf784947">   72</a></span>&#160;  <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a3e94d6208c2946d12ad416cdcf784947">TBLatticePlanner</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a17710330fed9607f8c3bf9e4c57c893c">   80</a></span>&#160;  <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a17710330fed9607f8c3bf9e4c57c893c">TBLatticePlanner</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                std::string frame_id);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#abb0cc52d1531fcec179c31469cf571ec">   88</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#abb0cc52d1531fcec179c31469cf571ec">initialize</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a0c4400a4f74a624528ca4ddf79f89477">   98</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a0c4400a4f74a624528ca4ddf79f89477">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; start,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; goal,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a6bd02211753eb063bcbf8978d3c0d330">  108</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a6bd02211753eb063bcbf8978d3c0d330">makePlanService</a>(nav_msgs::GetPlan::Request&amp; req,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                       nav_msgs::GetPlan::Response&amp; resp);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a54f806c6e7ef978a5cd8e0a535cab8ba">  115</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a54f806c6e7ef978a5cd8e0a535cab8ba">publishPlan</a>(std::vector&lt;geometry_msgs::PoseStamped&gt; plan);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a0b7d1a357d719d7d110b42625b11547f">  125</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a0b7d1a357d719d7d110b42625b11547f">initialize</a>(std::string name, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a> *costmap,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                  std::string frame_id);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a8da618dc94a2e311028968d775fe3730">  134</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a8da618dc94a2e311028968d775fe3730">clearRobotCell</a>(<a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> my);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#aa0d4587ee1a91a0564098a83cbc53588">  142</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#aa0d4587ee1a91a0564098a83cbc53588">outlineMap</a>(<a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#aeb10e86f12b427f7ed0799ce4fc7a995">  152</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#aeb10e86f12b427f7ed0799ce4fc7a995">replanServiceCallback</a>(std_srvs::Empty::Request&amp; request,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                             std_srvs::Empty::Response&amp; response);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a1baa9e3304d11fe4e990783a6f341652">  155</a></span>&#160;  ros::ServiceServer <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a1baa9e3304d11fe4e990783a6f341652">make_plan_srv_</a>; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#ab20c98f098ccc11aaa0d0e8559cec32d">  156</a></span>&#160;  ros::ServiceServer <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#ab20c98f098ccc11aaa0d0e8559cec32d">replan_service_</a>; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a008ecf6d7882fb85723ac3b24ee93b02">  157</a></span>&#160;  ros::Publisher <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a008ecf6d7882fb85723ac3b24ee93b02">path_pub_</a>; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a9425d20a479622549ed84e4a11d323d6">  159</a></span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a9425d20a479622549ed84e4a11d323d6">costmap_</a>; </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a28ea7c008e49baf332bd640e2ee15cf6">  160</a></span>&#160;  <a class="code" href="classlattice__planner_1_1AStarLattice.html">AStarLattice</a>* <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a28ea7c008e49baf332bd640e2ee15cf6">planner_</a>; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a453fef0397c9139e53a430cd7ec2f306">  161</a></span>&#160;  geometry_msgs::PoseStamped <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a453fef0397c9139e53a430cd7ec2f306">goal_pose_</a>; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a3ea628f678a9559317f6b7ca6beee2f6">  162</a></span>&#160;  std::string <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a3ea628f678a9559317f6b7ca6beee2f6">frame_id_</a>; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#afa1c0064b3077f0e078e46c02221a0de">  164</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#afa1c0064b3077f0e078e46c02221a0de">replanning_requested_</a>; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#afe0e4b7be31c0e87ac3f32f967433885">  165</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#afe0e4b7be31c0e87ac3f32f967433885">initialized_</a>; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classlattice__planner_1_1TBLatticePlanner.html#a6c325c16c75c89aa71fb175e130f83ce">  166</a></span>&#160;  boost::mutex <a class="code" href="classlattice__planner_1_1TBLatticePlanner.html#a6c325c16c75c89aa71fb175e130f83ce">mutex_</a>; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;};</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;} <span class="comment">//end namespace lattice_planner</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1AStarLattice_html"><div class="ttname"><a href="classlattice__planner_1_1AStarLattice.html">lattice_planner::AStarLattice</a></div><div class="ttdoc">This class implements a time-bounded A* lattice planner for time dependent planning on a layered,...</div><div class="ttdef"><b>Definition:</b> tb_lattice.h:103</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html">lattice_planner::TBLatticePlanner</a></div><div class="ttdoc">planner core.</div><div class="ttdef"><b>Definition:</b> planner_core.h:66</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a008ecf6d7882fb85723ac3b24ee93b02"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a008ecf6d7882fb85723ac3b24ee93b02">lattice_planner::TBLatticePlanner::path_pub_</a></div><div class="ttdeci">ros::Publisher path_pub_</div><div class="ttdoc">ros path publisher</div><div class="ttdef"><b>Definition:</b> planner_core.h:157</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a0b7d1a357d719d7d110b42625b11547f"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a0b7d1a357d719d7d110b42625b11547f">lattice_planner::TBLatticePlanner::initialize</a></div><div class="ttdeci">void initialize(std::string name, costmap_2d::Costmap2DROS *costmap, std::string frame_id)</div><div class="ttdoc">initialize the global planner</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a0c4400a4f74a624528ca4ddf79f89477"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a0c4400a4f74a624528ca4ddf79f89477">lattice_planner::TBLatticePlanner::makePlan</a></div><div class="ttdeci">bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</div><div class="ttdoc">generate a plan from a start position to a goal position. Usually called from move_base</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a17710330fed9607f8c3bf9e4c57c893c"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a17710330fed9607f8c3bf9e4c57c893c">lattice_planner::TBLatticePlanner::TBLatticePlanner</a></div><div class="ttdeci">TBLatticePlanner(std::string name, costmap_2d::Costmap2DROS *costmap, std::string frame_id)</div><div class="ttdoc">constructor</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a1baa9e3304d11fe4e990783a6f341652"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a1baa9e3304d11fe4e990783a6f341652">lattice_planner::TBLatticePlanner::make_plan_srv_</a></div><div class="ttdeci">ros::ServiceServer make_plan_srv_</div><div class="ttdoc">make plan ros service</div><div class="ttdef"><b>Definition:</b> planner_core.h:155</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a28ea7c008e49baf332bd640e2ee15cf6"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a28ea7c008e49baf332bd640e2ee15cf6">lattice_planner::TBLatticePlanner::planner_</a></div><div class="ttdeci">AStarLattice * planner_</div><div class="ttdoc">lattice planner instance</div><div class="ttdef"><b>Definition:</b> planner_core.h:160</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a3e94d6208c2946d12ad416cdcf784947"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a3e94d6208c2946d12ad416cdcf784947">lattice_planner::TBLatticePlanner::TBLatticePlanner</a></div><div class="ttdeci">TBLatticePlanner()</div><div class="ttdoc">default constructor</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a3ea628f678a9559317f6b7ca6beee2f6"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a3ea628f678a9559317f6b7ca6beee2f6">lattice_planner::TBLatticePlanner::frame_id_</a></div><div class="ttdeci">std::string frame_id_</div><div class="ttdoc">global frame id</div><div class="ttdef"><b>Definition:</b> planner_core.h:162</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a453fef0397c9139e53a430cd7ec2f306"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a453fef0397c9139e53a430cd7ec2f306">lattice_planner::TBLatticePlanner::goal_pose_</a></div><div class="ttdeci">geometry_msgs::PoseStamped goal_pose_</div><div class="ttdoc">goal position</div><div class="ttdef"><b>Definition:</b> planner_core.h:161</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a54f806c6e7ef978a5cd8e0a535cab8ba"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a54f806c6e7ef978a5cd8e0a535cab8ba">lattice_planner::TBLatticePlanner::publishPlan</a></div><div class="ttdeci">void publishPlan(std::vector&lt; geometry_msgs::PoseStamped &gt; plan)</div><div class="ttdoc">publish a plan</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a6bd02211753eb063bcbf8978d3c0d330"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a6bd02211753eb063bcbf8978d3c0d330">lattice_planner::TBLatticePlanner::makePlanService</a></div><div class="ttdeci">bool makePlanService(nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp)</div><div class="ttdoc">generate a plan from a service request</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a6c325c16c75c89aa71fb175e130f83ce"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a6c325c16c75c89aa71fb175e130f83ce">lattice_planner::TBLatticePlanner::mutex_</a></div><div class="ttdeci">boost::mutex mutex_</div><div class="ttdoc">mutex</div><div class="ttdef"><b>Definition:</b> planner_core.h:166</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a8da618dc94a2e311028968d775fe3730"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a8da618dc94a2e311028968d775fe3730">lattice_planner::TBLatticePlanner::clearRobotCell</a></div><div class="ttdeci">void clearRobotCell(costmap_2d::Costmap2D *costmap, unsigned int mx, unsigned int my)</div><div class="ttdoc">remove the cost value from the static cost map in which the robot is in</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_a9425d20a479622549ed84e4a11d323d6"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#a9425d20a479622549ed84e4a11d323d6">lattice_planner::TBLatticePlanner::costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2D * costmap_</div><div class="ttdoc">2D static cost map as provided by the ros navigation stack</div><div class="ttdef"><b>Definition:</b> planner_core.h:159</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_aa0d4587ee1a91a0564098a83cbc53588"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#aa0d4587ee1a91a0564098a83cbc53588">lattice_planner::TBLatticePlanner::outlineMap</a></div><div class="ttdeci">void outlineMap(costmap_2d::Costmap2D *costmap, unsigned char value)</div><div class="ttdoc">outline the map with a specific value</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_ab20c98f098ccc11aaa0d0e8559cec32d"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#ab20c98f098ccc11aaa0d0e8559cec32d">lattice_planner::TBLatticePlanner::replan_service_</a></div><div class="ttdeci">ros::ServiceServer replan_service_</div><div class="ttdoc">replanning ros service</div><div class="ttdef"><b>Definition:</b> planner_core.h:156</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_abb0cc52d1531fcec179c31469cf571ec"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#abb0cc52d1531fcec179c31469cf571ec">lattice_planner::TBLatticePlanner::initialize</a></div><div class="ttdeci">void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">initialize the global planner</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_aeb10e86f12b427f7ed0799ce4fc7a995"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#aeb10e86f12b427f7ed0799ce4fc7a995">lattice_planner::TBLatticePlanner::replanServiceCallback</a></div><div class="ttdeci">bool replanServiceCallback(std_srvs::Empty::Request &amp;request, std_srvs::Empty::Response &amp;response)</div><div class="ttdoc">service Callback if a replanning request was send from outside the planning node</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_afa1c0064b3077f0e078e46c02221a0de"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#afa1c0064b3077f0e078e46c02221a0de">lattice_planner::TBLatticePlanner::replanning_requested_</a></div><div class="ttdeci">bool replanning_requested_</div><div class="ttdoc">flag whether a replanning request was send from outside the planning node</div><div class="ttdef"><b>Definition:</b> planner_core.h:164</div></div>
+<div class="ttc" id="aclasslattice__planner_1_1TBLatticePlanner_html_afe0e4b7be31c0e87ac3f32f967433885"><div class="ttname"><a href="classlattice__planner_1_1TBLatticePlanner.html#afe0e4b7be31c0e87ac3f32f967433885">lattice_planner::TBLatticePlanner::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdoc">flag whether the planner is initialized</div><div class="ttdef"><b>Definition:</b> planner_core.h:165</div></div>
+<div class="ttc" id="aclassnav__core_1_1BaseGlobalPlanner_html"><div class="ttname"><a href="classnav__core_1_1BaseGlobalPlanner.html">nav_core::BaseGlobalPlanner</a></div><div class="ttdoc">Provides an interface for global planners used in navigation. All global planners written as plugins ...</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

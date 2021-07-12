@@ -1,0 +1,9 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~cluster_max_distance" : \b [double] Parameter for DB_Scan, maximum distance to neighbors [m] min: 0.0, default: 0.4, max: 10.0
+- \b "~cluster_min_pts" : \b [int] Parameter for DB_Scan: minimum number of points that define a cluster min: 1, default: 2, max: 20
+- \b "~cluster_max_pts" : \b [int] Parameter for DB_Scan: maximum number of points that define a cluster (limit cluster size to avoid large L- and U-shapes) min: 2, default: 30, max: 200
+- \b "~convex_hull_min_pt_separation" : \b [double] Clear keypoints of the convex polygon that are close to each other [distance in meters] (0: keep all) min: 0.0, default: 0.1, max: 10.0
+

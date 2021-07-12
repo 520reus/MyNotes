@@ -1,0 +1,98 @@
+\hypertarget{classteb__local__planner_1_1PointRobotFootprint}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Point\+Robot\+Footprint类 参考}
+\label{classteb__local__planner_1_1PointRobotFootprint}\index{teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}}
+类 teb\+\_\+local\+\_\+planner\+::Point\+Robot\+Footprint 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1PointRobotFootprint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PointRobotFootprint_a0c4ce0f8778255d9c31b82972523c5d3}\label{classteb__local__planner_1_1PointRobotFootprint_a0c4ce0f8778255d9c31b82972523c5d3}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_a0c4ce0f8778255d9c31b82972523c5d3}{Point\+Robot\+Footprint}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor of the abstract obstacle class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PointRobotFootprint_a25445851e0c326154242fc1340eb48cb}\label{classteb__local__planner_1_1PointRobotFootprint_a25445851e0c326154242fc1340eb48cb}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_a25445851e0c326154242fc1340eb48cb}{$\sim$\+Point\+Robot\+Footprint}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_ab0b9f073f7eb9354e9533e8626874c49}{calculate\+Distance}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle) const
+\begin{DoxyCompactList}\small\item\em Calculate the distance between the robot and an obstacle \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_ad51a5bef836cbf47f4be9a61ae7c6afd}{estimate\+Spatio\+Temporal\+Distance}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&current\+\_\+pose, const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$obstacle, double t) const
+\begin{DoxyCompactList}\small\item\em Estimate the distance between the robot and the predicted location of an obstacle at time t \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PointRobotFootprint_a4e768c89f8a3906f88c5a906d47e6297}{get\+Inscribed\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em Compute the inscribed radius of the footprint model \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PointRobotFootprint_ab0b9f073f7eb9354e9533e8626874c49}\label{classteb__local__planner_1_1PointRobotFootprint_ab0b9f073f7eb9354e9533e8626874c49}} 
+\index{teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Calculate the distance between the robot and an obstacle 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & Current robot pose \\
+\hline
+{\em obstacle} & Pointer to the obstacle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Euclidean distance to the robot 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_ae6336b7e84aa421a1a54c29fd36c1090}{teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PointRobotFootprint_ad51a5bef836cbf47f4be9a61ae7c6afd}\label{classteb__local__planner_1_1PointRobotFootprint_ad51a5bef836cbf47f4be9a61ae7c6afd}} 
+\index{teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}!estimateSpatioTemporalDistance@{estimateSpatioTemporalDistance}}
+\index{estimateSpatioTemporalDistance@{estimateSpatioTemporalDistance}!teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}}
+\doxysubsubsection{\texorpdfstring{estimateSpatioTemporalDistance()}{estimateSpatioTemporalDistance()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint\+::estimate\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{current\+\_\+pose,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1Obstacle}{Obstacle}} $\ast$}]{obstacle,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Estimate the distance between the robot and the predicted location of an obstacle at time t 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+pose} & robot pose, from which the distance to the obstacle is estimated \\
+\hline
+{\em obstacle} & Pointer to the dynamic obstacle (constant velocity model is assumed) \\
+\hline
+{\em t} & time, for which the predicted distance to the obstacle is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Euclidean distance to the robot 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a0e51cdaecc5fbae067d2e6bd3780f339}{teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PointRobotFootprint_a4e768c89f8a3906f88c5a906d47e6297}\label{classteb__local__planner_1_1PointRobotFootprint_a4e768c89f8a3906f88c5a906d47e6297}} 
+\index{teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}!getInscribedRadius@{getInscribedRadius}}
+\index{getInscribedRadius@{getInscribedRadius}!teb\_local\_planner::PointRobotFootprint@{teb\_local\_planner::PointRobotFootprint}}
+\doxysubsubsection{\texorpdfstring{getInscribedRadius()}{getInscribedRadius()}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Point\+Robot\+Footprint\+::get\+Inscribed\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compute the inscribed radius of the footprint model 
+
+\begin{DoxyReturn}{返回}
+inscribed radius 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1BaseRobotFootprintModel_a98af59319058aed548ea173605e58d9d}{teb\+\_\+local\+\_\+planner\+::\+Base\+Robot\+Footprint\+Model}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/robot\+\_\+footprint\+\_\+model.\+h\end{DoxyCompactItemize}
