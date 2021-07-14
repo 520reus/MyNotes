@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">teb_local_planner_ros.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef TEB_LOCAL_PLANNER_ROS_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define TEB_LOCAL_PLANNER_ROS_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// base local planner base class and utilities</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;nav_core/base_local_planner.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;mbf_costmap_core/costmap_controller.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/goal_functions.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/odometry_helper_ros.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/costmap_model.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// timed-elastic-band related classes</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/optimal_planner.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/homotopy_class_planner.h&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/visualization.h&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/recovery_behaviors.h&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// message types</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Path.h&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;visualization_msgs/MarkerArray.h&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;visualization_msgs/Marker.h&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/ObstacleMsg.h&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// transforms</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &lt;tf2/utils.h&gt;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// costmap</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &lt;costmap_2d/costmap_2d_ros.h&gt;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_converter_interface.h&gt;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// dynamic reconfigure</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/TebLocalPlannerReconfigureConfig.h&gt;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// boost classes</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &lt;boost/bind.hpp&gt;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html">   93</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html">TebLocalPlannerROS</a> : <span class="keyword">public</span> <a class="code" href="classnav__core_1_1BaseLocalPlanner.html">nav_core::BaseLocalPlanner</a>, <span class="keyword">public</span> mbf_costmap_core::CostmapController</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#aed91b849d54fec85b4427993ea09028e">  100</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#aed91b849d54fec85b4427993ea09028e">TebLocalPlannerROS</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#af551f7a41aaa31db6bfbc9e150191900">  105</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#af551f7a41aaa31db6bfbc9e150191900">~TebLocalPlannerROS</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a14c42d9f2840e1a78e74cbe8a3cc5b40">  113</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a14c42d9f2840e1a78e74cbe8a3cc5b40">initialize</a>(std::string name, tf2_ros::Buffer *tf, <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#addfffa93ebc72c920adfb495723a4973">  120</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#addfffa93ebc72c920adfb495723a4973">setPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; orig_global_plan);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7b303000c90b6b314e6a312aa6c8d5c8">  127</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7b303000c90b6b314e6a312aa6c8d5c8">computeVelocityCommands</a>(geometry_msgs::Twist&amp; cmd_vel);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a2dc58a23a0119e615308f64acb825a23">  156</a></span>&#160;  uint32_t <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a2dc58a23a0119e615308f64acb825a23">computeVelocityCommands</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; pose, <span class="keyword">const</span> geometry_msgs::TwistStamped&amp; velocity,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                   geometry_msgs::TwistStamped &amp;cmd_vel, std::string &amp;message);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ae7fe90aa17f7042d8a29b5340da80455">  166</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ae7fe90aa17f7042d8a29b5340da80455">isGoalReached</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a9c12586f34868c396c5fe09b72a55736">  171</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a9c12586f34868c396c5fe09b72a55736">isGoalReached</a>(<span class="keywordtype">double</span> xy_tolerance, <span class="keywordtype">double</span> yaw_tolerance) { <span class="keywordflow">return</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a9c12586f34868c396c5fe09b72a55736">isGoalReached</a>(); };</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a62d8a3828c86a12d8e69b9fc76f8ea42">  178</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a62d8a3828c86a12d8e69b9fc76f8ea42">cancel</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#aaeca05653edf103ec967bef389d67d9a">  191</a></span>&#160;  <span class="keyword">static</span> Eigen::Vector2d <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#aaeca05653edf103ec967bef389d67d9a">tfPoseToEigenVector2dTransRot</a>(<span class="keyword">const</span> tf::Pose&amp; tf_vel);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4fe92ed4174e8d6cb7ab62dcf9ed6a58">  198</a></span>&#160;  <span class="keyword">static</span> RobotFootprintModelPtr <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4fe92ed4174e8d6cb7ab62dcf9ed6a58">getRobotFootprintFromParamServer</a>(<span class="keyword">const</span> ros::NodeHandle&amp; nh);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#add27f7cfcbbc04b11677ad9c0a6ff234">  210</a></span>&#160;  <span class="keyword">static</span> Point2dContainer <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#add27f7cfcbbc04b11677ad9c0a6ff234">makeFootprintFromXMLRPC</a>(XmlRpc::XmlRpcValue&amp; footprint_xmlrpc, <span class="keyword">const</span> std::string&amp; full_param_name);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a0ea93c57220cbc9ce5186dd3a7acd9c7">  221</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a0ea93c57220cbc9ce5186dd3a7acd9c7">getNumberFromXMLRPC</a>(XmlRpc::XmlRpcValue&amp; value, <span class="keyword">const</span> std::string&amp; full_param_name);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ac4340c638b3411325361d066b86533af">  235</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ac4340c638b3411325361d066b86533af">updateObstacleContainerWithCostmap</a>();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7af3a733ffefec6f6d4e0e543feb02e2">  243</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7af3a733ffefec6f6d4e0e543feb02e2">updateObstacleContainerWithCostmapConverter</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  </div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ad24927877227af7af3b0cc20acc2b9de">  250</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#ad24927877227af7af3b0cc20acc2b9de">updateObstacleContainerWithCustomObstacles</a>();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4bfc7c515887d3778b812d09f3cdfee6">  259</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4bfc7c515887d3778b812d09f3cdfee6">updateViaPointsContainer</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; transformed_plan, <span class="keywordtype">double</span> min_separation);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a46b45e56e59eda7e5aaff6f1d0c57b7e">  269</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a46b45e56e59eda7e5aaff6f1d0c57b7e">reconfigureCB</a>(TebLocalPlannerReconfigureConfig&amp; config, uint32_t level);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  </div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a1fcf70532320de238a8b5d7dea1634ff">  276</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a1fcf70532320de238a8b5d7dea1634ff">customObstacleCB</a>(<span class="keyword">const</span> costmap_converter::ObstacleArrayMsg::ConstPtr&amp; obst_msg);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  </div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#af913c30f630d24ed94d880f5ec0b3b5a">  282</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#af913c30f630d24ed94d880f5ec0b3b5a">customViaPointsCB</a>(<span class="keyword">const</span> nav_msgs::Path::ConstPtr&amp; via_points_msg);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#acb295ac7b197443f29c7d31f3113e07d">  299</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#acb295ac7b197443f29c7d31f3113e07d">pruneGlobalPlan</a>(<span class="keyword">const</span> tf2_ros::Buffer&amp; tf, <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; global_pose,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                       std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; global_plan, <span class="keywordtype">double</span> dist_behind_robot=1);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ce8da94ef5a2285dfc30542ba52164b">  319</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ce8da94ef5a2285dfc30542ba52164b">transformGlobalPlan</a>(<span class="keyword">const</span> tf2_ros::Buffer&amp; tf, <span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; global_plan,</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                           <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; global_pose,  <span class="keyword">const</span> <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>&amp; costmap,</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                           <span class="keyword">const</span> std::string&amp; global_frame, <span class="keywordtype">double</span> max_plan_length, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; transformed_plan,</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                           <span class="keywordtype">int</span>* current_goal_idx = NULL, geometry_msgs::TransformStamped* tf_plan_to_global = NULL) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    </div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a89b3b2b23993d35ef2137dfb2f804f6c">  339</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a89b3b2b23993d35ef2137dfb2f804f6c">estimateLocalGoalOrientation</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; global_plan, <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; local_goal,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                                      <span class="keywordtype">int</span> current_goal_idx, <span class="keyword">const</span> geometry_msgs::TransformStamped&amp; tf_plan_to_global, <span class="keywordtype">int</span> moving_average_length=3) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        </div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ed319900ff055daf8f12fe24932ac32">  357</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ed319900ff055daf8f12fe24932ac32">saturateVelocity</a>(<span class="keywordtype">double</span>&amp; vx, <span class="keywordtype">double</span>&amp; vy, <span class="keywordtype">double</span>&amp; omega, <span class="keywordtype">double</span> max_vel_x, <span class="keywordtype">double</span> max_vel_y,</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        <span class="keywordtype">double</span> max_vel_theta, <span class="keywordtype">double</span> max_vel_x_backwards) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  </div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a37afb804bb76551c24d47c74b8313974">  375</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a37afb804bb76551c24d47c74b8313974">convertTransRotVelToSteeringAngle</a>(<span class="keywordtype">double</span> v, <span class="keywordtype">double</span> omega, <span class="keywordtype">double</span> wheelbase, <span class="keywordtype">double</span> min_turning_radius = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  </div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a59f136e3bcca29d343ecfe4d478b2eee">  386</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1TebLocalPlannerROS.html#a59f136e3bcca29d343ecfe4d478b2eee">validateFootprints</a>(<span class="keywordtype">double</span> opt_inscribed_radius, <span class="keywordtype">double</span> costmap_inscribed_radius, <span class="keywordtype">double</span> min_obst_dist);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <span class="keywordtype">void</span> configureBackupModes(std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; transformed_plan,  <span class="keywordtype">int</span>&amp; goal_idx);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="comment">// Definition of member variables</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="comment">// external objects (store weak pointers)</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a>* costmap_ros_; <span class="comment">//?&lt; Pointer to the costmap ros wrapper, received from the navigation stack</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap_; <span class="comment">//?&lt; Pointer to the 2d costmap (obtained from the costmap ros wrapper)</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  tf2_ros::Buffer* tf_; <span class="comment">//?&lt; pointer to tf buffer</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  <span class="comment">// internal objects (memory management owned)</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  PlannerInterfacePtr planner_; <span class="comment">//?&lt; Instance of the underlying optimal planner class</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  ObstContainer obstacles_; <span class="comment">//?&lt; Obstacle vector that should be considered during local trajectory optimization</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  ViaPointContainer via_points_; <span class="comment">//?&lt; Container of via-points that should be considered during local trajectory optimization</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  TebVisualizationPtr visualization_; <span class="comment">//?&lt; Instance of the visualization class (local/global plan, obstacles, ...)</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  boost::shared_ptr&lt;base_local_planner::CostmapModel&gt; costmap_model_;  </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> cfg_; <span class="comment">//?&lt; Config class that stores and manages all related parameters</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <a class="code" href="classteb__local__planner_1_1FailureDetector.html">FailureDetector</a> failure_detector_; <span class="comment">//?&lt; Detect if the robot got stucked</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  std::vector&lt;geometry_msgs::PoseStamped&gt; global_plan_; <span class="comment">//?&lt; Store the current global plan</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <a class="code" href="classbase__local__planner_1_1OdometryHelperRos.html">base_local_planner::OdometryHelperRos</a> odom_helper_; <span class="comment">//?&lt; Provides an interface to receive the current velocity from the robot</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  pluginlib::ClassLoader&lt;costmap_converter::BaseCostmapToPolygons&gt; costmap_converter_loader_; <span class="comment">//?&lt; Load costmap converter plugins at runtime</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  boost::shared_ptr&lt;costmap_converter::BaseCostmapToPolygons&gt; costmap_converter_; <span class="comment">//?&lt; Store the current costmap_converter  </span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  boost::shared_ptr&lt; dynamic_reconfigure::Server&lt;TebLocalPlannerReconfigureConfig&gt; &gt; dynamic_recfg_; <span class="comment">//?&lt; Dynamic reconfigure server to allow config modifications at runtime</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  ros::Subscriber custom_obst_sub_; <span class="comment">//?&lt; Subscriber for custom obstacles received via a ObstacleMsg.</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  boost::mutex custom_obst_mutex_; <span class="comment">//?&lt; Mutex that locks the obstacle array (multi-threaded)</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  costmap_converter::ObstacleArrayMsg custom_obstacle_msg_; <span class="comment">//?&lt; Copy of the most recent obstacle message</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  ros::Subscriber via_points_sub_; <span class="comment">//?&lt; Subscriber for custom via-points received via a Path msg.</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="keywordtype">bool</span> custom_via_points_active_; <span class="comment">//?&lt; Keep track whether valid via-points have been received from via_points_sub_</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  boost::mutex via_point_mutex_; <span class="comment">//?&lt; Mutex that locks the via_points container (multi-threaded)</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> robot_pose_; <span class="comment">//?&lt; Store current robot pose</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> robot_goal_; <span class="comment">//?&lt; Store current robot goal</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  geometry_msgs::Twist robot_vel_; <span class="comment">//?&lt; Store current robot translational and angular velocity (vx, vy, omega)</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="keywordtype">bool</span> goal_reached_; <span class="comment">//?&lt; store whether the goal is reached or not</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  ros::Time time_last_infeasible_plan_; <span class="comment">//?&lt; Store at which time stamp the last infeasible plan was detected</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordtype">int</span> no_infeasible_plans_; <span class="comment">//?&lt; Store how many times in a row the planner failed to find a feasible plan.</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  ros::Time time_last_oscillation_; <span class="comment">//?&lt; Store at which time stamp the last oscillation was detected</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  RotType last_preferred_rotdir_; <span class="comment">//?&lt; Store recent preferred turning direction</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  geometry_msgs::Twist last_cmd_; <span class="comment">//?&lt; Store the last control command generated in computeVelocityCommands()</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  </div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  std::vector&lt;geometry_msgs::Point&gt; footprint_spec_; <span class="comment">//?&lt; Store the footprint of the robot </span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keywordtype">double</span> robot_inscribed_radius_; <span class="comment">//?&lt; The radius of the inscribed circle of the robot (collision possible)</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  <span class="keywordtype">double</span> robot_circumscribed_radius; <span class="comment">//?&lt; The radius of the circumscribed circle of the robot</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  std::string global_frame_; <span class="comment">//?&lt; The frame in which the controller will run</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  std::string robot_base_frame_; <span class="comment">//?&lt; Used as the base frame id of the robot</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  <span class="comment">// flags</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keywordtype">bool</span> initialized_; <span class="comment">//?&lt; Keeps track about the correct initialization of this class</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;};</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}; <span class="comment">// end namespace teb_local_planner</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// TEB_LOCAL_PLANNER_ROS_H_</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160; </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="ttc" id="aclassbase__local__planner_1_1OdometryHelperRos_html"><div class="ttname"><a href="classbase__local__planner_1_1OdometryHelperRos.html">base_local_planner::OdometryHelperRos</a></div><div class="ttdef"><b>Definition:</b> odometry_helper_ros.h:48</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2DROS_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2DROS.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclassnav__core_1_1BaseLocalPlanner_html"><div class="ttname"><a href="classnav__core_1_1BaseLocalPlanner.html">nav_core::BaseLocalPlanner</a></div><div class="ttdoc">Provides an interface for local planners used in navigation. All local planners written as plugins fo...</div><div class="ttdef"><b>Definition:</b> base_local_planner.h:50</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1FailureDetector_html"><div class="ttname"><a href="classteb__local__planner_1_1FailureDetector.html">teb_local_planner::FailureDetector</a></div><div class="ttdoc">This class implements methods in order to detect if the robot got stucked or is oscillating</div><div class="ttdef"><b>Definition:</b> recovery_behaviors.h:59</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html">teb_local_planner::PoseSE2</a></div><div class="ttdoc">This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:58</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html">teb_local_planner::TebConfig</a></div><div class="ttdoc">Config class for the teb_local_planner and its components.</div><div class="ttdef"><b>Definition:</b> teb_config.h:62</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html">teb_local_planner::TebLocalPlannerROS</a></div><div class="ttdoc">Implements both nav_core::BaseLocalPlanner and mbf_costmap_core::CostmapController abstract interface...</div><div class="ttdef"><b>Definition:</b> teb_local_planner_ros.h:94</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a0ea93c57220cbc9ce5186dd3a7acd9c7"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a0ea93c57220cbc9ce5186dd3a7acd9c7">teb_local_planner::TebLocalPlannerROS::getNumberFromXMLRPC</a></div><div class="ttdeci">static double getNumberFromXMLRPC(XmlRpc::XmlRpcValue &amp;value, const std::string &amp;full_param_name)</div><div class="ttdoc">Get a number from the given XmlRpcValue.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a14c42d9f2840e1a78e74cbe8a3cc5b40"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a14c42d9f2840e1a78e74cbe8a3cc5b40">teb_local_planner::TebLocalPlannerROS::initialize</a></div><div class="ttdeci">void initialize(std::string name, tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">Initializes the teb plugin</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a1fcf70532320de238a8b5d7dea1634ff"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a1fcf70532320de238a8b5d7dea1634ff">teb_local_planner::TebLocalPlannerROS::customObstacleCB</a></div><div class="ttdeci">void customObstacleCB(const costmap_converter::ObstacleArrayMsg::ConstPtr &amp;obst_msg)</div><div class="ttdoc">Callback for custom obstacles that are not obtained from the costmap</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a2dc58a23a0119e615308f64acb825a23"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a2dc58a23a0119e615308f64acb825a23">teb_local_planner::TebLocalPlannerROS::computeVelocityCommands</a></div><div class="ttdeci">uint32_t computeVelocityCommands(const geometry_msgs::PoseStamped &amp;pose, const geometry_msgs::TwistStamped &amp;velocity, geometry_msgs::TwistStamped &amp;cmd_vel, std::string &amp;message)</div><div class="ttdoc">Given the current position, orientation, and velocity of the robot, compute velocity commands to send...</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a37afb804bb76551c24d47c74b8313974"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a37afb804bb76551c24d47c74b8313974">teb_local_planner::TebLocalPlannerROS::convertTransRotVelToSteeringAngle</a></div><div class="ttdeci">double convertTransRotVelToSteeringAngle(double v, double omega, double wheelbase, double min_turning_radius=0) const</div><div class="ttdoc">Convert translational and rotational velocities to a steering angle of a carlike robot</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a46b45e56e59eda7e5aaff6f1d0c57b7e"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a46b45e56e59eda7e5aaff6f1d0c57b7e">teb_local_planner::TebLocalPlannerROS::reconfigureCB</a></div><div class="ttdeci">void reconfigureCB(TebLocalPlannerReconfigureConfig &amp;config, uint32_t level)</div><div class="ttdoc">Callback for the dynamic_reconfigure node.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a4bfc7c515887d3778b812d09f3cdfee6"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4bfc7c515887d3778b812d09f3cdfee6">teb_local_planner::TebLocalPlannerROS::updateViaPointsContainer</a></div><div class="ttdeci">void updateViaPointsContainer(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;transformed_plan, double min_separation)</div><div class="ttdoc">Update internal via-point container based on the current reference plan</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a4fe92ed4174e8d6cb7ab62dcf9ed6a58"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a4fe92ed4174e8d6cb7ab62dcf9ed6a58">teb_local_planner::TebLocalPlannerROS::getRobotFootprintFromParamServer</a></div><div class="ttdeci">static RobotFootprintModelPtr getRobotFootprintFromParamServer(const ros::NodeHandle &amp;nh)</div><div class="ttdoc">Get the current robot footprint/contour model</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a59f136e3bcca29d343ecfe4d478b2eee"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a59f136e3bcca29d343ecfe4d478b2eee">teb_local_planner::TebLocalPlannerROS::validateFootprints</a></div><div class="ttdeci">void validateFootprints(double opt_inscribed_radius, double costmap_inscribed_radius, double min_obst_dist)</div><div class="ttdoc">Validate current parameter values of the footprint for optimization, obstacle distance and the costma...</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a62d8a3828c86a12d8e69b9fc76f8ea42"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a62d8a3828c86a12d8e69b9fc76f8ea42">teb_local_planner::TebLocalPlannerROS::cancel</a></div><div class="ttdeci">bool cancel()</div><div class="ttdoc">Requests the planner to cancel, e.g. if it takes too much time</div><div class="ttdef"><b>Definition:</b> teb_local_planner_ros.h:178</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a6ce8da94ef5a2285dfc30542ba52164b"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ce8da94ef5a2285dfc30542ba52164b">teb_local_planner::TebLocalPlannerROS::transformGlobalPlan</a></div><div class="ttdeci">bool transformGlobalPlan(const tf2_ros::Buffer &amp;tf, const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan, const geometry_msgs::PoseStamped &amp;global_pose, const costmap_2d::Costmap2D &amp;costmap, const std::string &amp;global_frame, double max_plan_length, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;transformed_plan, int *current_goal_idx=NULL, geometry_msgs::TransformStamped *tf_plan_to_global=NULL) const</div><div class="ttdoc">Transforms the global plan of the robot from the planner frame to the local frame (modified).</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a6ed319900ff055daf8f12fe24932ac32"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a6ed319900ff055daf8f12fe24932ac32">teb_local_planner::TebLocalPlannerROS::saturateVelocity</a></div><div class="ttdeci">void saturateVelocity(double &amp;vx, double &amp;vy, double &amp;omega, double max_vel_x, double max_vel_y, double max_vel_theta, double max_vel_x_backwards) const</div><div class="ttdoc">Saturate the translational and angular velocity to given limits.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a7af3a733ffefec6f6d4e0e543feb02e2"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7af3a733ffefec6f6d4e0e543feb02e2">teb_local_planner::TebLocalPlannerROS::updateObstacleContainerWithCostmapConverter</a></div><div class="ttdeci">void updateObstacleContainerWithCostmapConverter()</div><div class="ttdoc">Update internal obstacle vector based on polygons provided by a costmap_converter plugin</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a7b303000c90b6b314e6a312aa6c8d5c8"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a7b303000c90b6b314e6a312aa6c8d5c8">teb_local_planner::TebLocalPlannerROS::computeVelocityCommands</a></div><div class="ttdeci">bool computeVelocityCommands(geometry_msgs::Twist &amp;cmd_vel)</div><div class="ttdoc">Given the current position, orientation, and velocity of the robot, compute velocity commands to send...</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a89b3b2b23993d35ef2137dfb2f804f6c"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a89b3b2b23993d35ef2137dfb2f804f6c">teb_local_planner::TebLocalPlannerROS::estimateLocalGoalOrientation</a></div><div class="ttdeci">double estimateLocalGoalOrientation(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan, const geometry_msgs::PoseStamped &amp;local_goal, int current_goal_idx, const geometry_msgs::TransformStamped &amp;tf_plan_to_global, int moving_average_length=3) const</div><div class="ttdoc">Estimate the orientation of a pose from the global_plan that is treated as a local goal for the local...</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_a9c12586f34868c396c5fe09b72a55736"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#a9c12586f34868c396c5fe09b72a55736">teb_local_planner::TebLocalPlannerROS::isGoalReached</a></div><div class="ttdeci">bool isGoalReached(double xy_tolerance, double yaw_tolerance)</div><div class="ttdoc">Dummy version to satisfy MBF API</div><div class="ttdef"><b>Definition:</b> teb_local_planner_ros.h:171</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_aaeca05653edf103ec967bef389d67d9a"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#aaeca05653edf103ec967bef389d67d9a">teb_local_planner::TebLocalPlannerROS::tfPoseToEigenVector2dTransRot</a></div><div class="ttdeci">static Eigen::Vector2d tfPoseToEigenVector2dTransRot(const tf::Pose &amp;tf_vel)</div><div class="ttdoc">Transform a tf::Pose type into a Eigen::Vector2d containing the translational and angular velocities.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_ac4340c638b3411325361d066b86533af"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#ac4340c638b3411325361d066b86533af">teb_local_planner::TebLocalPlannerROS::updateObstacleContainerWithCostmap</a></div><div class="ttdeci">void updateObstacleContainerWithCostmap()</div><div class="ttdoc">Update internal obstacle vector based on occupied costmap cells</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_acb295ac7b197443f29c7d31f3113e07d"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#acb295ac7b197443f29c7d31f3113e07d">teb_local_planner::TebLocalPlannerROS::pruneGlobalPlan</a></div><div class="ttdeci">bool pruneGlobalPlan(const tf2_ros::Buffer &amp;tf, const geometry_msgs::PoseStamped &amp;global_pose, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan, double dist_behind_robot=1)</div><div class="ttdoc">Prune global plan such that already passed poses are cut off</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_ad24927877227af7af3b0cc20acc2b9de"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#ad24927877227af7af3b0cc20acc2b9de">teb_local_planner::TebLocalPlannerROS::updateObstacleContainerWithCustomObstacles</a></div><div class="ttdeci">void updateObstacleContainerWithCustomObstacles()</div><div class="ttdoc">Update internal obstacle vector based on custom messages received via subscriber</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_add27f7cfcbbc04b11677ad9c0a6ff234"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#add27f7cfcbbc04b11677ad9c0a6ff234">teb_local_planner::TebLocalPlannerROS::makeFootprintFromXMLRPC</a></div><div class="ttdeci">static Point2dContainer makeFootprintFromXMLRPC(XmlRpc::XmlRpcValue &amp;footprint_xmlrpc, const std::string &amp;full_param_name)</div><div class="ttdoc">Set the footprint from the given XmlRpcValue.</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_addfffa93ebc72c920adfb495723a4973"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#addfffa93ebc72c920adfb495723a4973">teb_local_planner::TebLocalPlannerROS::setPlan</a></div><div class="ttdeci">bool setPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</div><div class="ttdoc">Set the plan that the teb local planner is following</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_ae7fe90aa17f7042d8a29b5340da80455"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#ae7fe90aa17f7042d8a29b5340da80455">teb_local_planner::TebLocalPlannerROS::isGoalReached</a></div><div class="ttdeci">bool isGoalReached()</div><div class="ttdoc">Check if the goal pose has been achieved</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_aed91b849d54fec85b4427993ea09028e"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#aed91b849d54fec85b4427993ea09028e">teb_local_planner::TebLocalPlannerROS::TebLocalPlannerROS</a></div><div class="ttdeci">TebLocalPlannerROS()</div><div class="ttdoc">Default constructor of the teb plugin</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_af551f7a41aaa31db6bfbc9e150191900"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#af551f7a41aaa31db6bfbc9e150191900">teb_local_planner::TebLocalPlannerROS::~TebLocalPlannerROS</a></div><div class="ttdeci">~TebLocalPlannerROS()</div><div class="ttdoc">Destructor of the plugin</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebLocalPlannerROS_html_af913c30f630d24ed94d880f5ec0b3b5a"><div class="ttname"><a href="classteb__local__planner_1_1TebLocalPlannerROS.html#af913c30f630d24ed94d880f5ec0b3b5a">teb_local_planner::TebLocalPlannerROS::customViaPointsCB</a></div><div class="ttdeci">void customViaPointsCB(const nav_msgs::Path::ConstPtr &amp;via_points_msg)</div><div class="ttdoc">Callback for custom via-points</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

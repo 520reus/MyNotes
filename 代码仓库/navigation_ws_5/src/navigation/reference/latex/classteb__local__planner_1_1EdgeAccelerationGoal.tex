@@ -1,0 +1,75 @@
+\hypertarget{classteb__local__planner_1_1EdgeAccelerationGoal}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Goal类 参考}
+\label{classteb__local__planner_1_1EdgeAccelerationGoal}\index{teb\_local\_planner::EdgeAccelerationGoal@{teb\_local\_planner::EdgeAccelerationGoal}}
+
+
+Edge defining the cost function for limiting the translational and rotational acceleration at the end of the trajectory.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+acceleration.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Acceleration\+Goal 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeAccelerationGoal}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationGoal_ae2d9d608ba70b688f8b0d5fb37a1200f}\label{classteb__local__planner_1_1EdgeAccelerationGoal_ae2d9d608ba70b688f8b0d5fb37a1200f}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal_ae2d9d608ba70b688f8b0d5fb37a1200f}{Edge\+Acceleration\+Goal}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationGoal_a44f119aca25836391178d634af29535a}\label{classteb__local__planner_1_1EdgeAccelerationGoal_a44f119aca25836391178d634af29535a}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal_a44f119aca25836391178d634af29535a}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal_a1cbc1c3d2bcada6779e25cee432db967}{set\+Goal\+Velocity}} (const geometry\+\_\+msgs\+::\+Twist \&vel\+\_\+goal)
+\begin{DoxyCompactList}\small\item\em Set the goal / final velocity that is taken into account for calculating the acceleration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for limiting the translational and rotational acceleration at the end of the trajectory. 
+
+The edge depends on three vertices $ \mathbf{s}_i, \mathbf{s}_{ip1}, \Delta T_i $, an initial velocity defined by \mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationGoal_a1cbc1c3d2bcada6779e25cee432db967}{set\+Goal\+Velocity()}} and minimizes\+: ~\newline
+ $ \min \textrm{penaltyInterval}( [a, omegadot ]^T ) \cdot weight $. ~\newline
+{\itshape a} is calculated using the difference quotient (twice) and the position parts of the poses ~\newline
+{\itshape omegadot} is calculated using the difference quotient of the yaw angles followed by a normalization to \mbox{[}-\/pi, pi\mbox{]}. ~\newline
+{\itshape weight} can be set using set\+Information() ~\newline
+{\itshape penalty\+Interval} denotes the penalty function, see penalty\+Bound\+To\+Interval() ~\newline
+The dimension of the error / cost vector is 2\+: the first component represents the translational acceleration and the second one the rotational acceleration. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a69e605f23128c2f5e824dd074fb2c826}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAcceleration}{Edge\+Acceleration}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeAccelerationStart}{Edge\+Acceleration\+Start}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebMultiEdge_a8b22d7b41874fae70ac737b4b33d47e2}{set\+Teb\+Config()}} 
+
+Refer to Edge\+Acceleration\+Start() for defining boundary (initial) values at the end of the trajectory 
+\end{DoxyRemark}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeAccelerationGoal_a1cbc1c3d2bcada6779e25cee432db967}\label{classteb__local__planner_1_1EdgeAccelerationGoal_a1cbc1c3d2bcada6779e25cee432db967}} 
+\index{teb\_local\_planner::EdgeAccelerationGoal@{teb\_local\_planner::EdgeAccelerationGoal}!setGoalVelocity@{setGoalVelocity}}
+\index{setGoalVelocity@{setGoalVelocity}!teb\_local\_planner::EdgeAccelerationGoal@{teb\_local\_planner::EdgeAccelerationGoal}}
+\doxysubsubsection{\texorpdfstring{setGoalVelocity()}{setGoalVelocity()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Edge\+Acceleration\+Goal\+::set\+Goal\+Velocity (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist \&}]{vel\+\_\+goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the goal / final velocity that is taken into account for calculating the acceleration 
+
+
+\begin{DoxyParams}{参数}
+{\em vel\+\_\+goal} & twist message containing the translational and rotational velocity \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+acceleration.\+h\end{DoxyCompactItemize}

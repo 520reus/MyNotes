@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::LatchedStopRotateController类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1LatchedStopRotateController.html">LatchedStopRotateController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::LatchedStopRotateController类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a217e37ce23f57c28f157d2287d9ad02a"><td class="memItemLeft" align="right" valign="top"><a id="a217e37ce23f57c28f157d2287d9ad02a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LatchedStopRotateController</b> (const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="separator:a217e37ce23f57c28f157d2287d9ad02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22892ae258fb69ab1cbb78b3e076fba3"><td class="memItemLeft" align="right" valign="top"><a id="a22892ae258fb69ab1cbb78b3e076fba3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPositionReached</b> (<a class="el" href="classbase__local__planner_1_1LocalPlannerUtil.html">LocalPlannerUtil</a> *planner_util, const geometry_msgs::PoseStamped &amp;global_pose)</td></tr>
+<tr class="separator:a22892ae258fb69ab1cbb78b3e076fba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296b387b74afe1c430f0dc6efb2f2ae8"><td class="memItemLeft" align="right" valign="top"><a id="a296b387b74afe1c430f0dc6efb2f2ae8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isGoalReached</b> (<a class="el" href="classbase__local__planner_1_1LocalPlannerUtil.html">LocalPlannerUtil</a> *planner_util, <a class="el" href="classbase__local__planner_1_1OdometryHelperRos.html">OdometryHelperRos</a> &amp;odom_helper, const geometry_msgs::PoseStamped &amp;global_pose)</td></tr>
+<tr class="separator:a296b387b74afe1c430f0dc6efb2f2ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b08514bca9dfc212b770a071f85b3b"><td class="memItemLeft" align="right" valign="top"><a id="af3b08514bca9dfc212b770a071f85b3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetLatching</b> ()</td></tr>
+<tr class="separator:af3b08514bca9dfc212b770a071f85b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae204da0df3c727a7f655e7c12a7dae75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1LatchedStopRotateController.html#ae204da0df3c727a7f655e7c12a7dae75">stopWithAccLimits</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="memdesc:ae204da0df3c727a7f655e7c12a7dae75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the robot taking into account acceleration limits  <a href="classbase__local__planner_1_1LatchedStopRotateController.html#ae204da0df3c727a7f655e7c12a7dae75">更多...</a><br /></td></tr>
+<tr class="separator:ae204da0df3c727a7f655e7c12a7dae75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1784c0f8eb383822d41d0905cb6bda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1LatchedStopRotateController.html#a3f1784c0f8eb383822d41d0905cb6bda">rotateToGoal</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, double goal_th, geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, <a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> &amp;limits, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="memdesc:a3f1784c0f8eb383822d41d0905cb6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Once a goal position is reached... rotate to the goal orientation  <a href="classbase__local__planner_1_1LatchedStopRotateController.html#a3f1784c0f8eb383822d41d0905cb6bda">更多...</a><br /></td></tr>
+<tr class="separator:a3f1784c0f8eb383822d41d0905cb6bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd9394ca5cabf2a35526dcb193e36be"><td class="memItemLeft" align="right" valign="top"><a id="a5bd9394ca5cabf2a35526dcb193e36be"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>computeVelocityCommandsStopRotate</b> (geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, <a class="el" href="classbase__local__planner_1_1LocalPlannerUtil.html">LocalPlannerUtil</a> *planner_util, <a class="el" href="classbase__local__planner_1_1OdometryHelperRos.html">OdometryHelperRos</a> &amp;odom_helper, const geometry_msgs::PoseStamped &amp;global_pose, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="separator:a5bd9394ca5cabf2a35526dcb193e36be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3f1784c0f8eb383822d41d0905cb6bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1784c0f8eb383822d41d0905cb6bda">&#9670;&nbsp;</a></span>rotateToGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::rotateToGoal </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acc_lim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1LocalPlannerLimits.html">base_local_planner::LocalPlannerLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt;&#160;</td>
+          <td class="paramname"><em>obstacle_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Once a goal position is reached... rotate to the goal orientation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>The pose of the robot in the global frame </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>The velocity of the robot </td></tr>
+    <tr><td class="paramname">goal_th</td><td>The desired th value for the goal </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>The velocity commands to be filled </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid trajectory was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae204da0df3c727a7f655e7c12a7dae75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae204da0df3c727a7f655e7c12a7dae75">&#9670;&nbsp;</a></span>stopWithAccLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::stopWithAccLimits </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acc_lim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt;&#160;</td>
+          <td class="paramname"><em>obstacle_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop the robot taking into account acceleration limits </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>The pose of the robot in the global frame </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>The velocity of the robot </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>The velocity commands to be filled </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if a valid trajectory was found, false otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="latched__stop__rotate__controller_8h_source.html">latched_stop_rotate_controller.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

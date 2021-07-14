@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6872cdf95a15c52392bd00077aa39749.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_b215af9620d2fab195e8eeff09d07a8f.html">include</a></li><li class="navelem"><a class="el" href="dir_00533556fe5a7fea50e7a79c1e58a365.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_e0a8bd6f5cb1c1c2504539dc96d357eb.html">costmap_to_dynamic_obstacles</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">background_subtractor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2017</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Notes:</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * The following code makes use of the OpenCV library.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * OpenCV is licensed under the terms of the 3-clause BSD License.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * Authors: Franz Albers, Christoph Rösmann</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifndef BACKGROUNDSUBTRACTOR_H_</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define BACKGROUNDSUBTRACTOR_H_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;cv_bridge/cv_bridge.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBackgroundSubtractor.html">BackgroundSubtractor</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structBackgroundSubtractor_1_1Params.html">   60</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structBackgroundSubtractor_1_1Params.html">Params</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structBackgroundSubtractor_1_1Params.html#a1d1113f5cff564078a7995fd410fb1ec">   62</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structBackgroundSubtractor_1_1Params.html#a1d1113f5cff564078a7995fd410fb1ec">alpha_slow</a>; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structBackgroundSubtractor_1_1Params.html#af4253c1a5b2bd54a85da4ca41a098a75">   63</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="structBackgroundSubtractor_1_1Params.html#af4253c1a5b2bd54a85da4ca41a098a75">alpha_fast</a>; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">double</span> beta;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">double</span> min_sep_between_fast_and_slow_filter;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">double</span> min_occupancy_probability;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">double</span> max_occupancy_neighbors;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> morph_size;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html#ab0d0a02da5eeedc86cfc89f57e6e3db8">   72</a></span>&#160;  <a class="code" href="classBackgroundSubtractor.html#ab0d0a02da5eeedc86cfc89f57e6e3db8">BackgroundSubtractor</a>(<span class="keyword">const</span> <a class="code" href="structBackgroundSubtractor_1_1Params.html">Params</a>&amp; parameters);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html#a085944b991b9f7bad17ff89b37b2a073">   81</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBackgroundSubtractor.html#a085944b991b9f7bad17ff89b37b2a073">apply</a>(<span class="keyword">const</span> cv::Mat&amp; image, cv::Mat&amp; fg_mask, <span class="keywordtype">int</span> shift_x = 0, <span class="keywordtype">int</span> shift_y = 0);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html#a7cb3ea6295bbdf9bd8696e2fb211b02b">   88</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBackgroundSubtractor.html#a7cb3ea6295bbdf9bd8696e2fb211b02b">visualize</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> cv::Mat&amp; image);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html#ae6df09eb6aadd1fbee09933049d59678">   96</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBackgroundSubtractor.html#ae6df09eb6aadd1fbee09933049d59678">writeMatToYAML</a>(<span class="keyword">const</span> std::string&amp; filename, <span class="keyword">const</span> std::vector&lt;cv::Mat&gt;&amp; mat_vec);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classBackgroundSubtractor.html#a090063cdc2e7197b4f9079447695a008">   99</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBackgroundSubtractor.html#a090063cdc2e7197b4f9079447695a008">updateParameters</a>(<span class="keyword">const</span> <a class="code" href="structBackgroundSubtractor_1_1Params.html">Params</a>&amp; parameters);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> transformToCurrentFrame(<span class="keywordtype">int</span> shift_x, <span class="keywordtype">int</span> shift_y);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  cv::Mat occupancy_grid_fast_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  cv::Mat occupancy_grid_slow_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  cv::Mat current_frame_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> previous_shift_x_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">int</span> previous_shift_y_;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="structBackgroundSubtractor_1_1Params.html">Params</a> params_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// BACKGROUNDSUBTRACTOR_H_</span></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html"><div class="ttname"><a href="classBackgroundSubtractor.html">BackgroundSubtractor</a></div><div class="ttdoc">Perform background subtraction to extract the &quot;moving&quot; foreground</div><div class="ttdef"><b>Definition:</b> background_subtractor.h:58</div></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html_a085944b991b9f7bad17ff89b37b2a073"><div class="ttname"><a href="classBackgroundSubtractor.html#a085944b991b9f7bad17ff89b37b2a073">BackgroundSubtractor::apply</a></div><div class="ttdeci">void apply(const cv::Mat &amp;image, cv::Mat &amp;fg_mask, int shift_x=0, int shift_y=0)</div><div class="ttdoc">Computes a foreground mask</div></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html_a090063cdc2e7197b4f9079447695a008"><div class="ttname"><a href="classBackgroundSubtractor.html#a090063cdc2e7197b4f9079447695a008">BackgroundSubtractor::updateParameters</a></div><div class="ttdeci">void updateParameters(const Params &amp;parameters)</div><div class="ttdoc">Update internal parameters</div></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html_a7cb3ea6295bbdf9bd8696e2fb211b02b"><div class="ttname"><a href="classBackgroundSubtractor.html#a7cb3ea6295bbdf9bd8696e2fb211b02b">BackgroundSubtractor::visualize</a></div><div class="ttdeci">void visualize(const std::string &amp;name, const cv::Mat &amp;image)</div><div class="ttdoc">OpenCV Visualization</div></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html_ab0d0a02da5eeedc86cfc89f57e6e3db8"><div class="ttname"><a href="classBackgroundSubtractor.html#ab0d0a02da5eeedc86cfc89f57e6e3db8">BackgroundSubtractor::BackgroundSubtractor</a></div><div class="ttdeci">BackgroundSubtractor(const Params &amp;parameters)</div><div class="ttdoc">Constructor that accepts a specific parameter configuration</div></div>
+<div class="ttc" id="aclassBackgroundSubtractor_html_ae6df09eb6aadd1fbee09933049d59678"><div class="ttname"><a href="classBackgroundSubtractor.html#ae6df09eb6aadd1fbee09933049d59678">BackgroundSubtractor::writeMatToYAML</a></div><div class="ttdeci">void writeMatToYAML(const std::string &amp;filename, const std::vector&lt; cv::Mat &gt; &amp;mat_vec)</div><div class="ttdoc">Export vector of matrices to yaml file</div></div>
+<div class="ttc" id="astructBackgroundSubtractor_1_1Params_html"><div class="ttname"><a href="structBackgroundSubtractor_1_1Params.html">BackgroundSubtractor::Params</a></div><div class="ttdef"><b>Definition:</b> background_subtractor.h:61</div></div>
+<div class="ttc" id="astructBackgroundSubtractor_1_1Params_html_a1d1113f5cff564078a7995fd410fb1ec"><div class="ttname"><a href="structBackgroundSubtractor_1_1Params.html#a1d1113f5cff564078a7995fd410fb1ec">BackgroundSubtractor::Params::alpha_slow</a></div><div class="ttdeci">double alpha_slow</div><div class="ttdoc">Filter constant (learning rate) of the slow filter part</div><div class="ttdef"><b>Definition:</b> background_subtractor.h:62</div></div>
+<div class="ttc" id="astructBackgroundSubtractor_1_1Params_html_af4253c1a5b2bd54a85da4ca41a098a75"><div class="ttname"><a href="structBackgroundSubtractor_1_1Params.html#af4253c1a5b2bd54a85da4ca41a098a75">BackgroundSubtractor::Params::alpha_fast</a></div><div class="ttdeci">double alpha_fast</div><div class="ttdoc">Filter constant (learning rate) of the fast filter part</div><div class="ttdef"><b>Definition:</b> background_subtractor.h:63</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

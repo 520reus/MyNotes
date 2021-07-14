@@ -1,0 +1,134 @@
+\hypertarget{classteb__local__planner_1_1FailureDetector}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Failure\+Detector类 参考}
+\label{classteb__local__planner_1_1FailureDetector}\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+
+
+This class implements methods in order to detect if the robot got stucked or is oscillating  
+
+
+
+
+{\ttfamily \#include $<$recovery\+\_\+behaviors.\+h$>$}
+
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structteb__local__planner_1_1FailureDetector_1_1VelMeasurement}{Vel\+Measurement}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_ad35cf74417ee141f13a4b57bb8206ba0}\label{classteb__local__planner_1_1FailureDetector_ad35cf74417ee141f13a4b57bb8206ba0}} 
+\mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_ad35cf74417ee141f13a4b57bb8206ba0}{Failure\+Detector}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_a2891ef212ac58466c2f1f9c0184cdad7}\label{classteb__local__planner_1_1FailureDetector_a2891ef212ac58466c2f1f9c0184cdad7}} 
+\mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_a2891ef212ac58466c2f1f9c0184cdad7}{$\sim$\+Failure\+Detector}} ()
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_a3b1277e009d08218a90422da97845013}{set\+Buffer\+Length}} (int length)
+\begin{DoxyCompactList}\small\item\em Set buffer length (measurement history) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_ae055f862435b015a6936ec1a1891244c}{update}} (const geometry\+\_\+msgs\+::\+Twist \&twist, double v\+\_\+max, double v\+\_\+backwards\+\_\+max, double omega\+\_\+max, double v\+\_\+eps, double omega\+\_\+eps)
+\begin{DoxyCompactList}\small\item\em Add a new twist measurement to the internal buffer and compute a new decision \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_a0af9aa029a90a76afa3dfcdf473fb4c4}{is\+Oscillating}} () const
+\begin{DoxyCompactList}\small\item\em Check if the robot got stucked \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_a58bdf41fca70c6b98366e0d9511d4ff1}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the current internal state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_a8ffc84fe6f17813075d5c61120654c2d}{detect}} (double v\+\_\+eps, double omega\+\_\+eps)
+\begin{DoxyCompactList}\small\item\em Detect if the robot got stucked based on the current buffer content \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class implements methods in order to detect if the robot got stucked or is oscillating 
+
+The Stuck\+Detector analyzes the last N commanded velocities in order to detect whether the robot might got stucked or oscillates between left/right/forward/backwards motions. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_a58bdf41fca70c6b98366e0d9511d4ff1}\label{classteb__local__planner_1_1FailureDetector_a58bdf41fca70c6b98366e0d9511d4ff1}} 
+\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}!clear@{clear}}
+\index{clear@{clear}!teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Failure\+Detector\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the current internal state 
+
+This call also resets the internal buffer \mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_a8ffc84fe6f17813075d5c61120654c2d}\label{classteb__local__planner_1_1FailureDetector_a8ffc84fe6f17813075d5c61120654c2d}} 
+\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}!detect@{detect}}
+\index{detect@{detect}!teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Failure\+Detector\+::detect (\begin{DoxyParamCaption}\item[{double}]{v\+\_\+eps,  }\item[{double}]{omega\+\_\+eps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Detect if the robot got stucked based on the current buffer content 
+
+Afterwards the status might be checked using got\+Stucked(); 
+\begin{DoxyParams}{参数}
+{\em v\+\_\+eps} & Threshold for the average normalized linear velocity in (0,1) that must not be exceded (e.\+g. 0.\+1) \\
+\hline
+{\em omega\+\_\+eps} & Threshold for the average normalized angular velocity in (0,1) that must not be exceded (e.\+g. 0.\+1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+true if the robot got stucked, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_a0af9aa029a90a76afa3dfcdf473fb4c4}\label{classteb__local__planner_1_1FailureDetector_a0af9aa029a90a76afa3dfcdf473fb4c4}} 
+\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}!isOscillating@{isOscillating}}
+\index{isOscillating@{isOscillating}!teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+\doxysubsubsection{\texorpdfstring{isOscillating()}{isOscillating()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Failure\+Detector\+::is\+Oscillating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the robot got stucked 
+
+This call does not compute the actual decision, since it is computed within each \mbox{\hyperlink{classteb__local__planner_1_1FailureDetector_ae055f862435b015a6936ec1a1891244c}{update()}} invocation. \begin{DoxyReturn}{返回}
+true if the robot got stucked, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_a3b1277e009d08218a90422da97845013}\label{classteb__local__planner_1_1FailureDetector_a3b1277e009d08218a90422da97845013}} 
+\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}!setBufferLength@{setBufferLength}}
+\index{setBufferLength@{setBufferLength}!teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+\doxysubsubsection{\texorpdfstring{setBufferLength()}{setBufferLength()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Failure\+Detector\+::set\+Buffer\+Length (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set buffer length (measurement history) 
+
+
+\begin{DoxyParams}{参数}
+{\em length} & number of measurements to be kept \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1FailureDetector_ae055f862435b015a6936ec1a1891244c}\label{classteb__local__planner_1_1FailureDetector_ae055f862435b015a6936ec1a1891244c}} 
+\index{teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}!update@{update}}
+\index{update@{update}!teb\_local\_planner::FailureDetector@{teb\_local\_planner::FailureDetector}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Failure\+Detector\+::update (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Twist \&}]{twist,  }\item[{double}]{v\+\_\+max,  }\item[{double}]{v\+\_\+backwards\+\_\+max,  }\item[{double}]{omega\+\_\+max,  }\item[{double}]{v\+\_\+eps,  }\item[{double}]{omega\+\_\+eps }\end{DoxyParamCaption})}
+
+
+
+Add a new twist measurement to the internal buffer and compute a new decision 
+
+
+\begin{DoxyParams}{参数}
+{\em twist} & geometry\+\_\+msgs\+::\+Twist velocity information \\
+\hline
+{\em v\+\_\+max} & maximum forward translational velocity \\
+\hline
+{\em v\+\_\+backwards\+\_\+max} & maximum backward translational velocity \\
+\hline
+{\em omega\+\_\+max} & maximum angular velocity \\
+\hline
+{\em v\+\_\+eps} & Threshold for the average normalized linear velocity in (0,1) that must not be exceded (e.\+g. 0.\+1) \\
+\hline
+{\em omega\+\_\+eps} & Threshold for the average normalized angular velocity in (0,1) that must not be exceded (e.\+g. 0.\+1) \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/recovery\+\_\+behaviors.\+h\end{DoxyCompactItemize}

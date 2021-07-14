@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: BackgroundSubtractor类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">BackgroundSubtractor类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Perform background subtraction to extract the "moving" foreground  
+ <a href="classBackgroundSubtractor.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="background__subtractor_8h_source.html">background_subtractor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBackgroundSubtractor_1_1Params.html">Params</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab0d0a02da5eeedc86cfc89f57e6e3db8"><td class="memItemLeft" align="right" valign="top"><a id="ab0d0a02da5eeedc86cfc89f57e6e3db8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackgroundSubtractor.html#ab0d0a02da5eeedc86cfc89f57e6e3db8">BackgroundSubtractor</a> (const <a class="el" href="structBackgroundSubtractor_1_1Params.html">Params</a> &amp;parameters)</td></tr>
+<tr class="memdesc:ab0d0a02da5eeedc86cfc89f57e6e3db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that accepts a specific parameter configuration <br /></td></tr>
+<tr class="separator:ab0d0a02da5eeedc86cfc89f57e6e3db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085944b991b9f7bad17ff89b37b2a073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackgroundSubtractor.html#a085944b991b9f7bad17ff89b37b2a073">apply</a> (const cv::Mat &amp;image, cv::Mat &amp;fg_mask, int shift_x=0, int shift_y=0)</td></tr>
+<tr class="memdesc:a085944b991b9f7bad17ff89b37b2a073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a foreground mask  <a href="classBackgroundSubtractor.html#a085944b991b9f7bad17ff89b37b2a073">更多...</a><br /></td></tr>
+<tr class="separator:a085944b991b9f7bad17ff89b37b2a073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb3ea6295bbdf9bd8696e2fb211b02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackgroundSubtractor.html#a7cb3ea6295bbdf9bd8696e2fb211b02b">visualize</a> (const std::string &amp;name, const cv::Mat &amp;image)</td></tr>
+<tr class="memdesc:a7cb3ea6295bbdf9bd8696e2fb211b02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCV Visualization  <a href="classBackgroundSubtractor.html#a7cb3ea6295bbdf9bd8696e2fb211b02b">更多...</a><br /></td></tr>
+<tr class="separator:a7cb3ea6295bbdf9bd8696e2fb211b02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6df09eb6aadd1fbee09933049d59678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackgroundSubtractor.html#ae6df09eb6aadd1fbee09933049d59678">writeMatToYAML</a> (const std::string &amp;filename, const std::vector&lt; cv::Mat &gt; &amp;mat_vec)</td></tr>
+<tr class="memdesc:ae6df09eb6aadd1fbee09933049d59678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export vector of matrices to yaml file  <a href="classBackgroundSubtractor.html#ae6df09eb6aadd1fbee09933049d59678">更多...</a><br /></td></tr>
+<tr class="separator:ae6df09eb6aadd1fbee09933049d59678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090063cdc2e7197b4f9079447695a008"><td class="memItemLeft" align="right" valign="top"><a id="a090063cdc2e7197b4f9079447695a008"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackgroundSubtractor.html#a090063cdc2e7197b4f9079447695a008">updateParameters</a> (const <a class="el" href="structBackgroundSubtractor_1_1Params.html">Params</a> &amp;parameters)</td></tr>
+<tr class="memdesc:a090063cdc2e7197b4f9079447695a008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update internal parameters <br /></td></tr>
+<tr class="separator:a090063cdc2e7197b4f9079447695a008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Perform background subtraction to extract the "moving" foreground </p>
+<p>This class is based on OpenCV's background subtraction class cv::BackgroundSubtractor. It has been modified in order to incorporate a specialized bandpass filter.</p>
+<p>See <a href="http://docs.opencv.org/3.2.0/d7/df6/classcv_1_1BackgroundSubtractor.html">http://docs.opencv.org/3.2.0/d7/df6/classcv_1_1BackgroundSubtractor.html</a> for the original class. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a085944b991b9f7bad17ff89b37b2a073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085944b991b9f7bad17ff89b37b2a073">&#9670;&nbsp;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BackgroundSubtractor::apply </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>fg_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shift_x</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shift_y</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a foreground mask </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>Next video frame </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">fg_mask</td><td>Foreground mask as an 8-bit binary image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_x</td><td>Translation along the x axis between the current and previous image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shift_y</td><td>Translation along the y axis between the current and previous image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7cb3ea6295bbdf9bd8696e2fb211b02b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb3ea6295bbdf9bd8696e2fb211b02b">&#9670;&nbsp;</a></span>visualize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BackgroundSubtractor::visualize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OpenCV Visualization </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Id/name of the opencv window </td></tr>
+    <tr><td class="paramname">image</td><td>Image to be visualized </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae6df09eb6aadd1fbee09933049d59678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6df09eb6aadd1fbee09933049d59678">&#9670;&nbsp;</a></span>writeMatToYAML()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BackgroundSubtractor::writeMatToYAML </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat_vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export vector of matrices to yaml file </p>
+<dl class="section remark"><dt>备注</dt><dd>This method is intended for debugging purposes </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Desired filename including path and excluding file suffix </td></tr>
+    <tr><td class="paramname">mat_vec</td><td>Vector of cv::Mat to be exported </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/<a class="el" href="background__subtractor_8h_source.html">background_subtractor.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

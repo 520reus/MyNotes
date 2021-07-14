@@ -1,0 +1,76 @@
+\hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config\+::Trajectory结构体 参考}
+\label{structteb__local__planner_1_1TebConfig_1_1Trajectory}\index{teb\_local\_planner::TebConfig::Trajectory@{teb\_local\_planner::TebConfig::Trajectory}}
+
+
+\mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{Trajectory}} related parameters  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+config.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a18f327edfdad836547ab571c04549de3}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a18f327edfdad836547ab571c04549de3}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a18f327edfdad836547ab571c04549de3}{teb\+\_\+autosize}}
+\begin{DoxyCompactList}\small\item\em Enable automatic resizing of the trajectory w.\+r.\+t to the temporal resolution (recommended) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_aaebe745aa43ed83df47f6ea48aae89b1}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_aaebe745aa43ed83df47f6ea48aae89b1}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_aaebe745aa43ed83df47f6ea48aae89b1}{dt\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em Desired temporal resolution of the trajectory (should be in the magniture of the underlying control rate) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab9def037deb1a4508fefb9b95fb80ba5}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab9def037deb1a4508fefb9b95fb80ba5}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab9def037deb1a4508fefb9b95fb80ba5}{dt\+\_\+hysteresis}}
+\begin{DoxyCompactList}\small\item\em Hysteresis for automatic resizing depending on the current temporal resolution (dt)\+: usually 10\% of dt\+\_\+ref \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab894211af50857912e0417cff872b30a}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab894211af50857912e0417cff872b30a}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_ab894211af50857912e0417cff872b30a}{min\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em Minimum number of samples (should be always greater than 2) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a2d675aa1577939bdb0f7e3e0263dec8f}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a2d675aa1577939bdb0f7e3e0263dec8f}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a2d675aa1577939bdb0f7e3e0263dec8f}{max\+\_\+samples}}
+\begin{DoxyCompactList}\small\item\em Maximum number of samples; Warning\+: if too small the discretization/resolution might not be sufficient for the given robot model or obstacle avoidance does not work anymore. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac871cff46ea5817ce81735a23ac1a7ca}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac871cff46ea5817ce81735a23ac1a7ca}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac871cff46ea5817ce81735a23ac1a7ca}{global\+\_\+plan\+\_\+overwrite\+\_\+orientation}}
+\begin{DoxyCompactList}\small\item\em Overwrite orientation of local subgoals provided by the global planner \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_afc3ceb33819847e3c373e0347a7611d0}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_afc3ceb33819847e3c373e0347a7611d0}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_afc3ceb33819847e3c373e0347a7611d0}{allow\+\_\+init\+\_\+with\+\_\+backwards\+\_\+motion}}
+\begin{DoxyCompactList}\small\item\em If true, the underlying trajectories might be initialized with backwards motions in case the goal is behind the start within the local costmap (this is only recommended if the robot is equipped with rear sensors) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_acaca5ea36389c6153f008e8fee7bfe02}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_acaca5ea36389c6153f008e8fee7bfe02}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_acaca5ea36389c6153f008e8fee7bfe02}{global\+\_\+plan\+\_\+viapoint\+\_\+sep}}
+\begin{DoxyCompactList}\small\item\em Min. separation between each two consecutive via-\/points extracted from the global plan (if negative\+: disabled) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a4d6e5e9d857ae769908f9468ef297dea}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a4d6e5e9d857ae769908f9468ef297dea}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a4d6e5e9d857ae769908f9468ef297dea}{via\+\_\+points\+\_\+ordered}}
+\begin{DoxyCompactList}\small\item\em If true, the planner adheres to the order of via-\/points in the storage container \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a14ee0d96ba27a95bfc89f63edc3a646f}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a14ee0d96ba27a95bfc89f63edc3a646f}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a14ee0d96ba27a95bfc89f63edc3a646f}{max\+\_\+global\+\_\+plan\+\_\+lookahead\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Specify maximum length (cumulative Euclidean distances) of the subset of the global plan taken into account for optimization \mbox{[}if $<$=0\+: disabled; the length is also bounded by the local costmap size!\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_ad291b0609fef28a27379cb4df5529870}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_ad291b0609fef28a27379cb4df5529870}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_ad291b0609fef28a27379cb4df5529870}{global\+\_\+plan\+\_\+prune\+\_\+distance}}
+\begin{DoxyCompactList}\small\item\em Distance between robot and via\+\_\+points of global plan which is used for pruning \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6db63f26bc0f93766bff91f2deeaded8}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6db63f26bc0f93766bff91f2deeaded8}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6db63f26bc0f93766bff91f2deeaded8}{exact\+\_\+arc\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em If true, the planner uses the exact arc length in velocity, acceleration and turning rate computations \mbox{[}-\/$>$ increased cpu time\mbox{]}, otherwise the euclidean approximation is used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac02e70238fd4a11f2101d5cee21dc389}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac02e70238fd4a11f2101d5cee21dc389}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_ac02e70238fd4a11f2101d5cee21dc389}{force\+\_\+reinit\+\_\+new\+\_\+goal\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Reinitialize the trajectory if a previous goal is updated with a seperation of more than the specified value in meters (skip hot-\/starting) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a5fde4b43945472c2dae0a494cc181739}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a5fde4b43945472c2dae0a494cc181739}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a5fde4b43945472c2dae0a494cc181739}{force\+\_\+reinit\+\_\+new\+\_\+goal\+\_\+angular}}
+\begin{DoxyCompactList}\small\item\em Reinitialize the trajectory if a previous goal is updated with an angular difference of more than the specified value in radians (skip hot-\/starting) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a64ea3e047363bea760ad0691992c632e}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a64ea3e047363bea760ad0691992c632e}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a64ea3e047363bea760ad0691992c632e}{feasibility\+\_\+check\+\_\+no\+\_\+poses}}
+\begin{DoxyCompactList}\small\item\em Specify up to which pose on the predicted plan the feasibility should be checked each sampling interval. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a77473175739e9b78e172503148826366}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a77473175739e9b78e172503148826366}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a77473175739e9b78e172503148826366}{publish\+\_\+feedback}}
+\begin{DoxyCompactList}\small\item\em Publish planner feedback containing the full trajectory and a list of active obstacles (should be enabled only for evaluation or debugging purposes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_af744713129cf8d69f205dedf9e502e27}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_af744713129cf8d69f205dedf9e502e27}} 
+double {\bfseries min\+\_\+resolution\+\_\+collision\+\_\+check\+\_\+angular}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6897a10b70fc7ea8ae5c43356063d402}\label{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6897a10b70fc7ea8ae5c43356063d402}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory_a6897a10b70fc7ea8ae5c43356063d402}{control\+\_\+look\+\_\+ahead\+\_\+poses}}
+\begin{DoxyCompactList}\small\item\em Min angular resolution used during the costmap collision check. If not respected, intermediate samples are added. \mbox{[}rad\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Trajectory}{Trajectory}} related parameters 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

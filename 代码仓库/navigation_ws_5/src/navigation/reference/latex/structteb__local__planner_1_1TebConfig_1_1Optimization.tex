@@ -1,0 +1,97 @@
+\hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config\+::Optimization结构体 参考}
+\label{structteb__local__planner_1_1TebConfig_1_1Optimization}\index{teb\_local\_planner::TebConfig::Optimization@{teb\_local\_planner::TebConfig::Optimization}}
+
+
+\mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} related parameters  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+config.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a68b47d1ef42cb2bef9af4b5e4d7e9530}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a68b47d1ef42cb2bef9af4b5e4d7e9530}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a68b47d1ef42cb2bef9af4b5e4d7e9530}{no\+\_\+inner\+\_\+iterations}}
+\begin{DoxyCompactList}\small\item\em Number of solver iterations called in each outerloop iteration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a182e64606ae23c94fbecc1f71fcc800f}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a182e64606ae23c94fbecc1f71fcc800f}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a182e64606ae23c94fbecc1f71fcc800f}{no\+\_\+outer\+\_\+iterations}}
+\begin{DoxyCompactList}\small\item\em Each outerloop iteration automatically resizes the trajectory and invokes the internal optimizer with no\+\_\+inner\+\_\+iterations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a225b64613cd15bf7fcb52590f3e0541a}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a225b64613cd15bf7fcb52590f3e0541a}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a225b64613cd15bf7fcb52590f3e0541a}{optimization\+\_\+activate}}
+\begin{DoxyCompactList}\small\item\em Activate the optimization \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_adfb733d2400066e0b5afca4a4db54dca}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_adfb733d2400066e0b5afca4a4db54dca}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_adfb733d2400066e0b5afca4a4db54dca}{optimization\+\_\+verbose}}
+\begin{DoxyCompactList}\small\item\em Print verbose information \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a039dc3b4aab681511dd235a22f1d396c}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a039dc3b4aab681511dd235a22f1d396c}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a039dc3b4aab681511dd235a22f1d396c}{penalty\+\_\+epsilon}}
+\begin{DoxyCompactList}\small\item\em Add a small safety margin to penalty functions for hard-\/constraint approximations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a7479d3abad8a2200b35b96880d30b6d9}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a7479d3abad8a2200b35b96880d30b6d9}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a7479d3abad8a2200b35b96880d30b6d9}{weight\+\_\+max\+\_\+vel\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed translational velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ad4986558b30a08534d2baf9b095ca455}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ad4986558b30a08534d2baf9b095ca455}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ad4986558b30a08534d2baf9b095ca455}{weight\+\_\+max\+\_\+vel\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed strafing velocity (in use only for holonomic robots) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ae7bda9f07c16eaf68285837cae91d443}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ae7bda9f07c16eaf68285837cae91d443}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ae7bda9f07c16eaf68285837cae91d443}{weight\+\_\+max\+\_\+vel\+\_\+theta}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed angular velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a32840d82e659a3b8d7d5872359ba5c8a}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a32840d82e659a3b8d7d5872359ba5c8a}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a32840d82e659a3b8d7d5872359ba5c8a}{weight\+\_\+acc\+\_\+lim\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed translational acceleration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a8ddb8386f05aef9d38fe940db74824fb}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a8ddb8386f05aef9d38fe940db74824fb}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a8ddb8386f05aef9d38fe940db74824fb}{weight\+\_\+acc\+\_\+lim\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed strafing acceleration (in use only for holonomic robots) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a540e8806a454ce6be98dae702713afb4}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a540e8806a454ce6be98dae702713afb4}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a540e8806a454ce6be98dae702713afb4}{weight\+\_\+acc\+\_\+lim\+\_\+theta}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the maximum allowed angular acceleration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_aebcdeae7d9f6ddf690f8516acbfcaa9a}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_aebcdeae7d9f6ddf690f8516acbfcaa9a}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_aebcdeae7d9f6ddf690f8516acbfcaa9a}{weight\+\_\+kinematics\+\_\+nh}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying the non-\/holonomic kinematics \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ae4dd572bf8ca58666cab7a9089a39aae}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ae4dd572bf8ca58666cab7a9089a39aae}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ae4dd572bf8ca58666cab7a9089a39aae}{weight\+\_\+kinematics\+\_\+forward\+\_\+drive}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for forcing the robot to choose only forward directions (positive transl. velocities, only diffdrive robot) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ac84e0c29e2d413051aca4d44b1e16f4d}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ac84e0c29e2d413051aca4d44b1e16f4d}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ac84e0c29e2d413051aca4d44b1e16f4d}{weight\+\_\+kinematics\+\_\+turning\+\_\+radius}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for enforcing a minimum turning radius (carlike robots) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ab55083324f3fb810571bf2e93a020900}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ab55083324f3fb810571bf2e93a020900}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ab55083324f3fb810571bf2e93a020900}{weight\+\_\+optimaltime}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for contracting the trajectory w.\+r.\+t. transition time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ac1d105890074f7397d72c205baf108b7}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ac1d105890074f7397d72c205baf108b7}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ac1d105890074f7397d72c205baf108b7}{weight\+\_\+shortest\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for contracting the trajectory w.\+r.\+t. path length \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a574b4013ddfae2c374ebf5a9f39f92c6}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a574b4013ddfae2c374ebf5a9f39f92c6}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a574b4013ddfae2c374ebf5a9f39f92c6}{weight\+\_\+obstacle}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying a minimum separation from obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_afa42fbba07240e98b560d41edc50b8e7}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_afa42fbba07240e98b560d41edc50b8e7}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_afa42fbba07240e98b560d41edc50b8e7}{weight\+\_\+inflation}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for the inflation penalty (should be small) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_ab1c68535d5f834db4e7e6f4f5d2fa1c2}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_ab1c68535d5f834db4e7e6f4f5d2fa1c2}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_ab1c68535d5f834db4e7e6f4f5d2fa1c2}{weight\+\_\+dynamic\+\_\+obstacle}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying a minimum separation from dynamic obstacles \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_aa2133e8f8df84b5438f6ad7d55699e58}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_aa2133e8f8df84b5438f6ad7d55699e58}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_aa2133e8f8df84b5438f6ad7d55699e58}{weight\+\_\+dynamic\+\_\+obstacle\+\_\+inflation}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for the inflation penalty of dynamic obstacles (should be small) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a331953657b6af0e521bec0cef0561dc5}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a331953657b6af0e521bec0cef0561dc5}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a331953657b6af0e521bec0cef0561dc5}{weight\+\_\+velocity\+\_\+obstacle\+\_\+ratio}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for satisfying a maximum allowed velocity with respect to the distance to a static obstacle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_aa0d527d327aa7e6761abd181ecfb86dd}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_aa0d527d327aa7e6761abd181ecfb86dd}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_aa0d527d327aa7e6761abd181ecfb86dd}{weight\+\_\+viapoint}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for minimizing the distance to via-\/points \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a0f602dc888617a45da8b8836848e5d94}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a0f602dc888617a45da8b8836848e5d94}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a0f602dc888617a45da8b8836848e5d94}{weight\+\_\+prefer\+\_\+rotdir}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} weight for preferring a specific turning direction (-\/$>$ currently only activated if an oscillation is detected, see \textquotesingle{}oscillation\+\_\+recovery\textquotesingle{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a6941868fb757ec457d8f3f3ab1881d96}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a6941868fb757ec457d8f3f3ab1881d96}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a6941868fb757ec457d8f3f3ab1881d96}{weight\+\_\+adapt\+\_\+factor}}
+\begin{DoxyCompactList}\small\item\em Some special weights (currently \textquotesingle{}weight\+\_\+obstacle\textquotesingle{}) are repeatedly scaled by this factor in each outer TEB iteration (weight\+\_\+new = weight\+\_\+old$\ast$factor); Increasing weights iteratively instead of setting a huge value a-\/priori leads to better numerical conditions of the underlying optimization problem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1Optimization_a2d49bea6a8d740888270f78041ef636b}\label{structteb__local__planner_1_1TebConfig_1_1Optimization_a2d49bea6a8d740888270f78041ef636b}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization_a2d49bea6a8d740888270f78041ef636b}{obstacle\+\_\+cost\+\_\+exponent}}
+\begin{DoxyCompactList}\small\item\em Exponent for nonlinear obstacle cost (cost = linear\+\_\+cost $\ast$ obstacle\+\_\+cost\+\_\+exponent). Set to 1 to disable nonlinear cost (default) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1Optimization}{Optimization}} related parameters 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

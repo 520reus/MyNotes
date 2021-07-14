@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_converter/include/costmap_converter/costmap_to_dynamic_obstacles/costmap_to_dynamic_obstacles.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6872cdf95a15c52392bd00077aa39749.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_b215af9620d2fab195e8eeff09d07a8f.html">include</a></li><li class="navelem"><a class="el" href="dir_00533556fe5a7fea50e7a79c1e58a365.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_e0a8bd6f5cb1c1c2504539dc96d357eb.html">costmap_to_dynamic_obstacles</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">costmap_to_dynamic_obstacles.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2017</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Notes:</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * The following code makes use of the OpenCV library.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * OpenCV is licensed under the terms of the 3-clause BSD License.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * Authors: Franz Albers, Christoph Rösmann</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifndef COSTMAP_TO_DYNAMIC_OBSTACLES_H_</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define COSTMAP_TO_DYNAMIC_OBSTACLES_H_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// ROS</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_converter_interface.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;pluginlib/class_loader.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// OpenCV</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;cv_bridge/cv_bridge.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;opencv2/features2d/features2d.hpp&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;opencv2/video/tracking.hpp&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// dynamic reconfigure</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/CostmapToDynamicObstaclesConfig.h&gt;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// Own includes</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_to_dynamic_obstacles/multitarget_tracker/Ctracker.h&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_to_dynamic_obstacles/background_subtractor.h&gt;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_to_dynamic_obstacles/blob_detector.h&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// STL</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">namespace </span>costmap_converter {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html">CostmapToDynamicObstacles</a> : <span class="keyword">public</span> <a class="code" href="classcostmap__converter_1_1BaseCostmapToDynamicObstacles.html">BaseCostmapToDynamicObstacles</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a6d9b6be74490be79f24584f2fe81a8c7">   83</a></span>&#160;  <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a6d9b6be74490be79f24584f2fe81a8c7">CostmapToDynamicObstacles</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aec087af33f4b65c449a86193e0596983">   88</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aec087af33f4b65c449a86193e0596983">~CostmapToDynamicObstacles</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a81dcd29642c7576617086cd27033d392">   94</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a81dcd29642c7576617086cd27033d392">initialize</a>(ros::NodeHandle nh);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#abe455a3abf0457e705c94b42a815075b">  100</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#abe455a3abf0457e705c94b42a815075b">compute</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a01610c9d9ec802d11c991379a1b6a99e">  107</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a01610c9d9ec802d11c991379a1b6a99e">setCostmap2D</a>(<a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a0ddccd62ad3d089f69f204ea5226821a">  113</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a0ddccd62ad3d089f69f204ea5226821a">updateCostmap2D</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aea474a66f2b23002e1390b2e156d3255">  121</a></span>&#160;  ObstacleArrayConstPtr <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aea474a66f2b23002e1390b2e156d3255">getObstacles</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a610ef9b8c4bb18fedce04eeabf666198">  132</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a610ef9b8c4bb18fedce04eeabf666198">setOdomTopic</a>(<span class="keyword">const</span> std::string&amp; odom_topic)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    odom_topic_ = odom_topic;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a7e325eac22dc6f36d9d1b23aa3919bb2">  142</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a7e325eac22dc6f36d9d1b23aa3919bb2">visualize</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> cv::Mat&amp; image);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a559e0bd1e917ad8ea215bbaab7aa7e8b">  152</a></span>&#160;  Point_t <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a559e0bd1e917ad8ea215bbaab7aa7e8b">getEstimatedVelocityOfObject</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a717439d17250ca6be69644913894c9cd">  161</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a717439d17250ca6be69644913894c9cd">getContour</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx, std::vector&lt;Point_t&gt;&amp; contour);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a424cda0d40055d322c45e6731ee74f3f">  169</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a424cda0d40055d322c45e6731ee74f3f">updateObstacleContainer</a>(ObstacleArrayPtr obstacles);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  boost::mutex mutex_;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap_;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  cv::Mat costmap_mat_;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  ObstacleArrayPtr obstacles_;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  cv::Mat fg_mask_;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  std::unique_ptr&lt;BackgroundSubtractor&gt; bg_sub_;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  cv::Ptr&lt;BlobDetector&gt; blob_det_;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  std::vector&lt;cv::KeyPoint&gt; keypoints_;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  std::unique_ptr&lt;CTracker&gt; tracker_;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  ros::Subscriber odom_sub_;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  Point_t ego_vel_;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  std::string odom_topic_ = <span class="stringliteral">&quot;/odom&quot;</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">bool</span> publish_static_obstacles_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  dynamic_reconfigure::Server&lt;CostmapToDynamicObstaclesConfig&gt;*</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      dynamic_recfg_; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">void</span> odomCallback(<span class="keyword">const</span> nav_msgs::Odometry::ConstPtr &amp;msg);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">void</span> reconfigureCB(CostmapToDynamicObstaclesConfig &amp;config, uint32_t level);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;} <span class="comment">// end namespace costmap_converter</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* COSTMAP_TO_DYNAMIC_OBSTACLES_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1BaseCostmapToDynamicObstacles_html"><div class="ttname"><a href="classcostmap__converter_1_1BaseCostmapToDynamicObstacles.html">costmap_converter::BaseCostmapToDynamicObstacles</a></div><div class="ttdef"><b>Definition:</b> costmap_converter_interface.h:273</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html">costmap_converter::CostmapToDynamicObstacles</a></div><div class="ttdoc">This class converts the costmap_2d into dynamic obstacles.</div><div class="ttdef"><b>Definition:</b> costmap_to_dynamic_obstacles.h:78</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a01610c9d9ec802d11c991379a1b6a99e"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a01610c9d9ec802d11c991379a1b6a99e">costmap_converter::CostmapToDynamicObstacles::setCostmap2D</a></div><div class="ttdeci">virtual void setCostmap2D(costmap_2d::Costmap2D *costmap)</div><div class="ttdoc">Pass a pointer to the costmap to the plugin.</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a0ddccd62ad3d089f69f204ea5226821a"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a0ddccd62ad3d089f69f204ea5226821a">costmap_converter::CostmapToDynamicObstacles::updateCostmap2D</a></div><div class="ttdeci">virtual void updateCostmap2D()</div><div class="ttdoc">Get updated data from the previously set Costmap2D</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a424cda0d40055d322c45e6731ee74f3f"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a424cda0d40055d322c45e6731ee74f3f">costmap_converter::CostmapToDynamicObstacles::updateObstacleContainer</a></div><div class="ttdeci">void updateObstacleContainer(ObstacleArrayPtr obstacles)</div><div class="ttdoc">Thread-safe update of the internal obstacle container (that is shared using getObstacles() from outsi...</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a559e0bd1e917ad8ea215bbaab7aa7e8b"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a559e0bd1e917ad8ea215bbaab7aa7e8b">costmap_converter::CostmapToDynamicObstacles::getEstimatedVelocityOfObject</a></div><div class="ttdeci">Point_t getEstimatedVelocityOfObject(unsigned int idx)</div><div class="ttdoc">Converts the estimated velocity of a tracked object to m/s and returns it</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a610ef9b8c4bb18fedce04eeabf666198"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a610ef9b8c4bb18fedce04eeabf666198">costmap_converter::CostmapToDynamicObstacles::setOdomTopic</a></div><div class="ttdeci">virtual void setOdomTopic(const std::string &amp;odom_topic)</div><div class="ttdoc">Set name of robot's odometry topic</div><div class="ttdef"><b>Definition:</b> costmap_to_dynamic_obstacles.h:132</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a6d9b6be74490be79f24584f2fe81a8c7"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a6d9b6be74490be79f24584f2fe81a8c7">costmap_converter::CostmapToDynamicObstacles::CostmapToDynamicObstacles</a></div><div class="ttdeci">CostmapToDynamicObstacles()</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a717439d17250ca6be69644913894c9cd"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a717439d17250ca6be69644913894c9cd">costmap_converter::CostmapToDynamicObstacles::getContour</a></div><div class="ttdeci">void getContour(unsigned int idx, std::vector&lt; Point_t &gt; &amp;contour)</div><div class="ttdoc">Gets the last observed contour of a object and converts it from [px] to [m]</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a7e325eac22dc6f36d9d1b23aa3919bb2"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a7e325eac22dc6f36d9d1b23aa3919bb2">costmap_converter::CostmapToDynamicObstacles::visualize</a></div><div class="ttdeci">void visualize(const std::string &amp;name, const cv::Mat &amp;image)</div><div class="ttdoc">OpenCV Visualization</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_a81dcd29642c7576617086cd27033d392"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#a81dcd29642c7576617086cd27033d392">costmap_converter::CostmapToDynamicObstacles::initialize</a></div><div class="ttdeci">virtual void initialize(ros::NodeHandle nh)</div><div class="ttdoc">Initialize the plugin</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_abe455a3abf0457e705c94b42a815075b"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#abe455a3abf0457e705c94b42a815075b">costmap_converter::CostmapToDynamicObstacles::compute</a></div><div class="ttdeci">virtual void compute()</div><div class="ttdoc">This method performs the actual work (conversion of the costmap to obstacles)</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_aea474a66f2b23002e1390b2e156d3255"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aea474a66f2b23002e1390b2e156d3255">costmap_converter::CostmapToDynamicObstacles::getObstacles</a></div><div class="ttdeci">ObstacleArrayConstPtr getObstacles()</div><div class="ttdoc">Get a shared instance of the current obstacle container</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToDynamicObstacles_html_aec087af33f4b65c449a86193e0596983"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToDynamicObstacles.html#aec087af33f4b65c449a86193e0596983">costmap_converter::CostmapToDynamicObstacles::~CostmapToDynamicObstacles</a></div><div class="ttdeci">virtual ~CostmapToDynamicObstacles()</div><div class="ttdoc">Destructor</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

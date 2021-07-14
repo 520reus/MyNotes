@@ -1,0 +1,111 @@
+\hypertarget{classnav__core_1_1BaseGlobalPlanner}{}\doxysection{nav\+\_\+core\+::Base\+Global\+Planner类 参考}
+\label{classnav__core_1_1BaseGlobalPlanner}\index{nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}}
+
+
+Provides an interface for global planners used in navigation. All global planners written as plugins for the navigation stack must adhere to this interface.  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+global\+\_\+planner.\+h$>$}
+
+类 nav\+\_\+core\+::Base\+Global\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.087379cm]{classnav__core_1_1BaseGlobalPlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_ae34a7c7cf96ebdfaf6b33f24a646156c}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)=0
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_afbc2b0f16bdd55a8b619f9fb5b7aa8da}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan, double \&cost)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_a485461ff314103dac95744f771107c43}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)=0
+\begin{DoxyCompactList}\small\item\em Initialization function for the \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner}{Base\+Global\+Planner}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classnav__core_1_1BaseGlobalPlanner_a98120c1d76f7a5badb74adef9694a06d}\label{classnav__core_1_1BaseGlobalPlanner_a98120c1d76f7a5badb74adef9694a06d}} 
+virtual \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_a98120c1d76f7a5badb74adef9694a06d}{$\sim$\+Base\+Global\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the interface \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Provides an interface for global planners used in navigation. All global planners written as plugins for the navigation stack must adhere to this interface. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnav__core_1_1BaseGlobalPlanner_a485461ff314103dac95744f771107c43}\label{classnav__core_1_1BaseGlobalPlanner_a485461ff314103dac95744f771107c43}} 
+\index{nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void nav\+\_\+core\+::\+Base\+Global\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialization function for the \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner}{Base\+Global\+Planner}} 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap\+\_\+ros} & A pointer to the ROS wrapper of the costmap to use for planning \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classglobal__planner_1_1VdGlobalPlanner_a987f94bb7182b8b9ff12984b2ba17fd0}{global\+\_\+planner\+::\+Vd\+Global\+Planner}}, \mbox{\hyperlink{classnavfn_1_1NavfnROS_a7f1e06b4e3b390aaaa3e4733a0668c4d}{navfn\+::\+Navfn\+ROS}}, \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_abb0cc52d1531fcec179c31469cf571ec}{lattice\+\_\+planner\+::\+TBLattice\+Planner}}, \mbox{\hyperlink{classglobal__planner_1_1GlobalPlanner_a280ebb6723d46b462eb66ec73a2fe266}{global\+\_\+planner\+::\+Global\+Planner}} , 以及 \mbox{\hyperlink{classcarrot__planner_1_1CarrotPlanner_a83b1bb77b4ef4a2719dcc29bf90d077e}{carrot\+\_\+planner\+::\+Carrot\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1BaseGlobalPlanner_ae34a7c7cf96ebdfaf6b33f24a646156c}\label{classnav__core_1_1BaseGlobalPlanner_ae34a7c7cf96ebdfaf6b33f24a646156c}} 
+\index{nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool nav\+\_\+core\+::\+Base\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Given a goal pose in the world, compute a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classglobal__planner_1_1VdGlobalPlanner_a180660da5336c67b6cb86aeb678f6bac}{global\+\_\+planner\+::\+Vd\+Global\+Planner}}, \mbox{\hyperlink{classnavfn_1_1NavfnROS_aa8cec6d49a902ace7e71ffc7125b29a9}{navfn\+::\+Navfn\+ROS}}, \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a0c4400a4f74a624528ca4ddf79f89477}{lattice\+\_\+planner\+::\+TBLattice\+Planner}}, \mbox{\hyperlink{classglobal__planner_1_1GlobalPlanner_abb7f40f6a851f88e6b7668a38571712a}{global\+\_\+planner\+::\+Global\+Planner}} , 以及 \mbox{\hyperlink{classcarrot__planner_1_1CarrotPlanner_a59c64d61f2e992d08b32438116614ab5}{carrot\+\_\+planner\+::\+Carrot\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1BaseGlobalPlanner_afbc2b0f16bdd55a8b619f9fb5b7aa8da}\label{classnav__core_1_1BaseGlobalPlanner_afbc2b0f16bdd55a8b619f9fb5b7aa8da}} 
+\index{nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!nav\_core::BaseGlobalPlanner@{nav\_core::BaseGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool nav\+\_\+core\+::\+Base\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan,  }\item[{double \&}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Given a goal pose in the world, compute a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+{\em cost} & The plans calculated cost \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+nav\+\_\+core/include/nav\+\_\+core/base\+\_\+global\+\_\+planner.\+h\end{DoxyCompactItemize}

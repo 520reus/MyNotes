@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/g2o_types/edge_shortest_path.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_eacc228c05639ef6b40577b79f71225f.html">g2o_types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">edge_shortest_path.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Notes:</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * The following class is derived from a class defined by the</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * g2o-framework. g2o is licensed under the terms of the BSD License.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * Refer to the base class source for detailed licensing information.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef EDGE_SHORTEST_PATH_H_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define EDGE_SHORTEST_PATH_H_</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;float.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;base_local_planner/BaseLocalPlannerConfig.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/base_teb_edges.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/vertex_pose.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">namespace </span>teb_local_planner {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeShortestPath.html">   64</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1EdgeShortestPath.html">EdgeShortestPath</a> : <span class="keyword">public</span> <a class="code" href="classteb__local__planner_1_1BaseTebBinaryEdge.html">BaseTebBinaryEdge</a>&lt;1, double, VertexPose, VertexPose&gt; {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeShortestPath.html#a9ff895ee7d84204984b9aa2ed96c0abb">   69</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1EdgeShortestPath.html#a9ff895ee7d84204984b9aa2ed96c0abb">EdgeShortestPath</a>() { this-&gt;setMeasurement(0.); }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeShortestPath.html#aab74542b353be596da743894f4e08a38">   74</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeShortestPath.html#aab74542b353be596da743894f4e08a38">computeError</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ROS_ASSERT_MSG(<a class="code" href="classteb__local__planner_1_1BaseTebBinaryEdge.html#aa2deb5b31b4985b873d2fe1c119b224b">cfg_</a>, <span class="stringliteral">&quot;You must call setTebConfig on EdgeShortestPath()&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a> *pose1 = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>*<span class="keyword">&gt;</span>(_vertices[0]);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a> *pose2 = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>*<span class="keyword">&gt;</span>(_vertices[1]);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    _error[0] = (pose2-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>() - pose1-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>()).norm();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ROS_ASSERT_MSG(std::isfinite(_error[0]), <span class="stringliteral">&quot;EdgeShortestPath::computeError() _error[0]=%f\n&quot;</span>, _error[0]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* EDGE_SHORTEST_PATH_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebBinaryEdge_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebBinaryEdge.html">teb_local_planner::BaseTebBinaryEdge</a></div><div class="ttdoc">Base edge connecting two vertices in the TEB optimization problem</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:159</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebBinaryEdge_html_aa2deb5b31b4985b873d2fe1c119b224b"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebBinaryEdge.html#aa2deb5b31b4985b873d2fe1c119b224b">teb_local_planner::BaseTebBinaryEdge&lt; 1, double, VertexPose, VertexPose &gt;::cfg_</a></div><div class="ttdeci">const TebConfig * cfg_</div><div class="ttdoc">Store TebConfig class for parameters</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:231</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeShortestPath_html"><div class="ttname"><a href="classteb__local__planner_1_1EdgeShortestPath.html">teb_local_planner::EdgeShortestPath</a></div><div class="ttdoc">Edge defining the cost function for minimizing the Euclidean distance between two consectuive poses.</div><div class="ttdef"><b>Definition:</b> edge_shortest_path.h:64</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeShortestPath_html_a9ff895ee7d84204984b9aa2ed96c0abb"><div class="ttname"><a href="classteb__local__planner_1_1EdgeShortestPath.html#a9ff895ee7d84204984b9aa2ed96c0abb">teb_local_planner::EdgeShortestPath::EdgeShortestPath</a></div><div class="ttdeci">EdgeShortestPath()</div><div class="ttdoc">Construct edge.</div><div class="ttdef"><b>Definition:</b> edge_shortest_path.h:69</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeShortestPath_html_aab74542b353be596da743894f4e08a38"><div class="ttname"><a href="classteb__local__planner_1_1EdgeShortestPath.html#aab74542b353be596da743894f4e08a38">teb_local_planner::EdgeShortestPath::computeError</a></div><div class="ttdeci">void computeError()</div><div class="ttdoc">Actual cost function</div><div class="ttdef"><b>Definition:</b> edge_shortest_path.h:74</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html">teb_local_planner::VertexPose</a></div><div class="ttdoc">This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:64</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a4f7d908421b83db853820b1713e1eaa4"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">teb_local_planner::VertexPose::position</a></div><div class="ttdeci">Eigen::Vector2d &amp; position()</div><div class="ttdoc">Access the 2D position part</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:141</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

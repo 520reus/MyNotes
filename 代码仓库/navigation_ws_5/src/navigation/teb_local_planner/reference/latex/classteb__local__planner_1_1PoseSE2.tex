@@ -1,0 +1,556 @@
+\hypertarget{classteb__local__planner_1_1PoseSE2}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Pose\+SE2类 参考}
+\label{classteb__local__planner_1_1PoseSE2}\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+
+
+This class implements a pose in the domain SE2\+: $ \mathbb{R}^2 \times S^1 $ The pose consist of the position x and y and an orientation given as angle theta \mbox{[}-\/pi, pi\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$pose\+\_\+se2.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ad42d8fbf6ed274974b1a7cf8fdbac913}\label{classteb__local__planner_1_1PoseSE2_ad42d8fbf6ed274974b1a7cf8fdbac913}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ad42d8fbf6ed274974b1a7cf8fdbac913}{$\sim$\+Pose\+SE2}} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Construct Pose\+SE2 instances}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a31e51f12e4bda8732cd7d78b886709e4}\label{classteb__local__planner_1_1PoseSE2_a31e51f12e4bda8732cd7d78b886709e4}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a31e51f12e4bda8732cd7d78b886709e4}{Pose\+SE2}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ac413011a1c3597529899eb7802bb0c19}{Pose\+SE2}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ace95441452603c3b30f8e5cfe6a7e491}{position}}, double \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aee2f963dc9e88115f3979d1aa192efed}{theta}})
+\begin{DoxyCompactList}\small\item\em Construct pose given a position vector and an angle theta \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_af8e702a6d665f711d6f45cee9659f21c}{Pose\+SE2}} (double \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_af8bf1a6846fb12b168bb4f8e1fb1f2b6}{x}}, double \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a3fad831f48e070b8693408eb58ca2d3a}{y}}, double \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aee2f963dc9e88115f3979d1aa192efed}{theta}})
+\begin{DoxyCompactList}\small\item\em Construct pose using single components x, y, and the yaw angle \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aaf8b08d0067a6af0f2dc8ec625e48818}{Pose\+SE2}} (const geometry\+\_\+msgs\+::\+Pose \&pose)
+\begin{DoxyCompactList}\small\item\em Construct pose using a geometry\+\_\+msgs\+::\+Pose \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_afa90996d08e9647fde7307ddebd61887}{Pose\+SE2}} (const tf\+::\+Pose \&pose)
+\begin{DoxyCompactList}\small\item\em Construct pose using a tf\+::\+Pose \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aa772df8b96c681106cf6f0cc49654cb9}{Pose\+SE2}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose)
+\begin{DoxyCompactList}\small\item\em Copy constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Access and modify values}\par
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ace95441452603c3b30f8e5cfe6a7e491}{position}} ()
+\begin{DoxyCompactList}\small\item\em Access the 2D position part \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a2d6ee53bf31ca54ef0e01542ea34eaf0}{position}} () const
+\begin{DoxyCompactList}\small\item\em Access the 2D position part (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_af8bf1a6846fb12b168bb4f8e1fb1f2b6}{x}} ()
+\begin{DoxyCompactList}\small\item\em Access the x-\/coordinate the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ab14b372ffb4154a273522861d175bb79}{x}} () const
+\begin{DoxyCompactList}\small\item\em Access the x-\/coordinate the pose (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a3fad831f48e070b8693408eb58ca2d3a}{y}} ()
+\begin{DoxyCompactList}\small\item\em Access the y-\/coordinate the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aa9fb660e5cd68dede013a774658abb8c}{y}} () const
+\begin{DoxyCompactList}\small\item\em Access the y-\/coordinate the pose (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aee2f963dc9e88115f3979d1aa192efed}{theta}} ()
+\begin{DoxyCompactList}\small\item\em Access the orientation part (yaw angle) of the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a44563757fe517d03487835761d39c5ca}{theta}} () const
+\begin{DoxyCompactList}\small\item\em Access the orientation part (yaw angle) of the pose (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ad71f174d2dbf27cefc343040fe04c854}\label{classteb__local__planner_1_1PoseSE2_ad71f174d2dbf27cefc343040fe04c854}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ad71f174d2dbf27cefc343040fe04c854}{set\+Zero}} ()
+\begin{DoxyCompactList}\small\item\em Set pose to \mbox{[}0,0,0\mbox{]} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a667bc7698678de9bd0104c42bfc1fe8e}{to\+Pose\+Msg}} (geometry\+\_\+msgs\+::\+Pose \&pose) const
+\begin{DoxyCompactList}\small\item\em Convert \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} to a geometry\+\_\+msgs\+::\+Pose \end{DoxyCompactList}\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a0ec1e0ced58b47886053b6fa891cd65f}{orientation\+Unit\+Vec}} () const
+\begin{DoxyCompactList}\small\item\em Return the unit vector of the current orientation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Arithmetic operations for which operators are not always reasonable}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ac2ed43ac7455f584f465e72f16bf284f}{scale}} (double factor)
+\begin{DoxyCompactList}\small\item\em Scale all SE2 components (x,y,theta) and normalize theta afterwards to \mbox{[}-\/pi, pi\mbox{]} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ac1e93aa9e54eee6c5108f521e5a53e80}{plus}} (const double $\ast$pose\+\_\+as\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Increment the pose by adding a double\mbox{[}3\mbox{]} array The angle is normalized afterwards \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a9073884205b9dace6e7cf863b40a4c1c}{average\+In\+Place}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose1, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose2)
+\begin{DoxyCompactList}\small\item\em Get the mean / average of two poses and store it in the caller class For the position part\+: 0.\+5$\ast$(x1+x2) For the angle\+: take the angle of the mean direction vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_abf6b166cb742c48ac22de3175ff075b1}{rotate\+Global}} (double angle, bool adjust\+\_\+theta=true)
+\begin{DoxyCompactList}\small\item\em Rotate pose globally \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_acd9bc48a5371e9d3f3ed994d0da77bf9}{average}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose1, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose2)
+\begin{DoxyCompactList}\small\item\em Get the mean / average of two poses and return the result (static) For the position part\+: 0.\+5$\ast$(x1+x2) For the angle\+: take the angle of the mean direction vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Operator overloads / Allow some arithmetic operations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a49e25c8aaa6ee8db42f5463694bddaf3}{operator=}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Asignment operator \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_af34c041436acc48dca71fda9cfeaf7d3}{operator+=}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compound assignment operator (addition) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ab6c37c43b644107f94811d68d7a6ff16}{operator-\/=}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compound assignment operator (subtraction) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_ad2feff1efe471ef77a28a95463ccfd21}{operator+}} (\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} lhs, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Arithmetic operator overload for additions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_aa796492e15f987b1968b2baf8ac677a0}{operator-\/}} (\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} lhs, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Arithmetic operator overload for subtractions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a8a35a58b7adbc796b3de8eabd2b47323}{operator$\ast$}} (\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} pose, double scalar)
+\begin{DoxyCompactList}\small\item\em Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_adc5f91393ae2f50311bb6a950fc4bf98}{operator$\ast$}} (double scalar, \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} pose)
+\begin{DoxyCompactList}\small\item\em Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2_a2c487bf5a6b472f7109a1cd12300e653}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&pose)
+\begin{DoxyCompactList}\small\item\em Output stream operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class implements a pose in the domain SE2\+: $ \mathbb{R}^2 \times S^1 $ The pose consist of the position x and y and an orientation given as angle theta \mbox{[}-\/pi, pi\mbox{]}. 
+
+
+\begin{DoxyItemize}
+\item 车辆位姿\mbox{[}x,y,yaw\mbox{]}的数据结构,用\+Eigen\+::\+Vector2d + double存储 
+\end{DoxyItemize}
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ac413011a1c3597529899eb7802bb0c19}\label{classteb__local__planner_1_1PoseSE2_ac413011a1c3597529899eb7802bb0c19}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!PoseSE2@{PoseSE2}}
+\index{PoseSE2@{PoseSE2}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{PoseSE2()}{PoseSE2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::\+Pose\+SE2 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose given a position vector and an angle theta 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2D position vector \\
+\hline
+{\em theta} & angle given in rad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_af8e702a6d665f711d6f45cee9659f21c}\label{classteb__local__planner_1_1PoseSE2_af8e702a6d665f711d6f45cee9659f21c}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!PoseSE2@{PoseSE2}}
+\index{PoseSE2@{PoseSE2}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{PoseSE2()}{PoseSE2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::\+Pose\+SE2 (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using single components x, y, and the yaw angle 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate \\
+\hline
+{\em y} & y-\/coordinate \\
+\hline
+{\em theta} & yaw angle in rad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_aaf8b08d0067a6af0f2dc8ec625e48818}\label{classteb__local__planner_1_1PoseSE2_aaf8b08d0067a6af0f2dc8ec625e48818}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!PoseSE2@{PoseSE2}}
+\index{PoseSE2@{PoseSE2}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{PoseSE2()}{PoseSE2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::\+Pose\+SE2 (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using a geometry\+\_\+msgs\+::\+Pose 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & geometry\+\_\+msgs\+::\+Pose object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_afa90996d08e9647fde7307ddebd61887}\label{classteb__local__planner_1_1PoseSE2_afa90996d08e9647fde7307ddebd61887}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!PoseSE2@{PoseSE2}}
+\index{PoseSE2@{PoseSE2}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{PoseSE2()}{PoseSE2()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::\+Pose\+SE2 (\begin{DoxyParamCaption}\item[{const tf\+::\+Pose \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using a tf\+::\+Pose 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & tf\+::\+Pose object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_aa772df8b96c681106cf6f0cc49654cb9}\label{classteb__local__planner_1_1PoseSE2_aa772df8b96c681106cf6f0cc49654cb9}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!PoseSE2@{PoseSE2}}
+\index{PoseSE2@{PoseSE2}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{PoseSE2()}{PoseSE2()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::\+Pose\+SE2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} instance \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_acd9bc48a5371e9d3f3ed994d0da77bf9}\label{classteb__local__planner_1_1PoseSE2_acd9bc48a5371e9d3f3ed994d0da77bf9}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!average@{average}}
+\index{average@{average}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::average (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose1,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the mean / average of two poses and return the result (static) For the position part\+: 0.\+5$\ast$(x1+x2) For the angle\+: take the angle of the mean direction vector 
+
+
+\begin{DoxyParams}{参数}
+{\em pose1} & first pose to consider \\
+\hline
+{\em pose2} & second pose to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+mean / average of {\ttfamily pose1} and {\ttfamily pose2} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a9073884205b9dace6e7cf863b40a4c1c}\label{classteb__local__planner_1_1PoseSE2_a9073884205b9dace6e7cf863b40a4c1c}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!averageInPlace@{averageInPlace}}
+\index{averageInPlace@{averageInPlace}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{averageInPlace()}{averageInPlace()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::average\+In\+Place (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose1,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the mean / average of two poses and store it in the caller class For the position part\+: 0.\+5$\ast$(x1+x2) For the angle\+: take the angle of the mean direction vector 
+
+
+\begin{DoxyParams}{参数}
+{\em pose1} & first pose to consider \\
+\hline
+{\em pose2} & second pose to consider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_af34c041436acc48dca71fda9cfeaf7d3}\label{classteb__local__planner_1_1PoseSE2_af34c041436acc48dca71fda9cfeaf7d3}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compound assignment operator (addition) 
+
+
+\begin{DoxyParams}{参数}
+{\em rhs} & addend \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ab6c37c43b644107f94811d68d7a6ff16}\label{classteb__local__planner_1_1PoseSE2_ab6c37c43b644107f94811d68d7a6ff16}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compound assignment operator (subtraction) 
+
+
+\begin{DoxyParams}{参数}
+{\em rhs} & value to subtract \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a49e25c8aaa6ee8db42f5463694bddaf3}\label{classteb__local__planner_1_1PoseSE2_a49e25c8aaa6ee8db42f5463694bddaf3}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator=@{operator=}}
+\index{operator=@{operator=}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asignment operator 
+
+
+\begin{DoxyParams}{参数}
+{\em rhs} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000005}{待办事项}}]exception safe version of the assignment operator \end{DoxyRefDesc}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a0ec1e0ced58b47886053b6fa891cd65f}\label{classteb__local__planner_1_1PoseSE2_a0ec1e0ced58b47886053b6fa891cd65f}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!orientationUnitVec@{orientationUnitVec}}
+\index{orientationUnitVec@{orientationUnitVec}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{orientationUnitVec()}{orientationUnitVec()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector2d teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::orientation\+Unit\+Vec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the unit vector of the current orientation 
+
+\begin{DoxyReturn}{返回}
+\mbox{[}cos(theta), sin(theta))\mbox{]}$^\wedge$T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ac1e93aa9e54eee6c5108f521e5a53e80}\label{classteb__local__planner_1_1PoseSE2_ac1e93aa9e54eee6c5108f521e5a53e80}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!plus@{plus}}
+\index{plus@{plus}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{plus()}{plus()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::plus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{pose\+\_\+as\+\_\+array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Increment the pose by adding a double\mbox{[}3\mbox{]} array The angle is normalized afterwards 
+
+
+\begin{DoxyParams}{参数}
+{\em pose\+\_\+as\+\_\+array} & 3D double array \mbox{[}x, y, theta\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ace95441452603c3b30f8e5cfe6a7e491}\label{classteb__local__planner_1_1PoseSE2_ace95441452603c3b30f8e5cfe6a7e491}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!position@{position}}
+\index{position@{position}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the 2D position part 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+reference to the 2D position part 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a2d6ee53bf31ca54ef0e01542ea34eaf0}\label{classteb__local__planner_1_1PoseSE2_a2d6ee53bf31ca54ef0e01542ea34eaf0}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!position@{position}}
+\index{position@{position}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the 2D position part (read-\/only) 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+const reference to the 2D position part 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_abf6b166cb742c48ac22de3175ff075b1}\label{classteb__local__planner_1_1PoseSE2_abf6b166cb742c48ac22de3175ff075b1}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!rotateGlobal@{rotateGlobal}}
+\index{rotateGlobal@{rotateGlobal}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{rotateGlobal()}{rotateGlobal()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::rotate\+Global (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{bool}]{adjust\+\_\+theta = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate pose globally 
+
+Compute \mbox{[}pose\+\_\+x, pose\+\_\+y\mbox{]} = Rot({\ttfamily angle}) $\ast$ \mbox{[}pose\+\_\+x, pose\+\_\+y\mbox{]}. if {\ttfamily adjust\+\_\+theta}, pose\+\_\+theta is also rotated by {\ttfamily angle} 
+\begin{DoxyParams}{参数}
+{\em angle} & the angle defining the 2d rotation \\
+\hline
+{\em adjust\+\_\+theta} & if {\ttfamily true}, the orientation theta is also rotated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ac2ed43ac7455f584f465e72f16bf284f}\label{classteb__local__planner_1_1PoseSE2_ac2ed43ac7455f584f465e72f16bf284f}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!scale@{scale}}
+\index{scale@{scale}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale all SE2 components (x,y,theta) and normalize theta afterwards to \mbox{[}-\/pi, pi\mbox{]} 
+
+
+\begin{DoxyParams}{参数}
+{\em factor} & scale factor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_aee2f963dc9e88115f3979d1aa192efed}\label{classteb__local__planner_1_1PoseSE2_aee2f963dc9e88115f3979d1aa192efed}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!theta@{theta}}
+\index{theta@{theta}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the orientation part (yaw angle) of the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a44563757fe517d03487835761d39c5ca}\label{classteb__local__planner_1_1PoseSE2_a44563757fe517d03487835761d39c5ca}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!theta@{theta}}
+\index{theta@{theta}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the orientation part (yaw angle) of the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a667bc7698678de9bd0104c42bfc1fe8e}\label{classteb__local__planner_1_1PoseSE2_a667bc7698678de9bd0104c42bfc1fe8e}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!toPoseMsg@{toPoseMsg}}
+\index{toPoseMsg@{toPoseMsg}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{toPoseMsg()}{toPoseMsg()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::to\+Pose\+Msg (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose \&}]{pose }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} to a geometry\+\_\+msgs\+::\+Pose 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em pose} & Pose message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_af8bf1a6846fb12b168bb4f8e1fb1f2b6}\label{classteb__local__planner_1_1PoseSE2_af8bf1a6846fb12b168bb4f8e1fb1f2b6}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!x@{x}}
+\index{x@{x}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the x-\/coordinate the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the x-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ab14b372ffb4154a273522861d175bb79}\label{classteb__local__planner_1_1PoseSE2_ab14b372ffb4154a273522861d175bb79}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!x@{x}}
+\index{x@{x}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the x-\/coordinate the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the x-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a3fad831f48e070b8693408eb58ca2d3a}\label{classteb__local__planner_1_1PoseSE2_a3fad831f48e070b8693408eb58ca2d3a}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!y@{y}}
+\index{y@{y}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the y-\/coordinate the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the y-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_aa9fb660e5cd68dede013a774658abb8c}\label{classteb__local__planner_1_1PoseSE2_aa9fb660e5cd68dede013a774658abb8c}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!y@{y}}
+\index{y@{y}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Pose\+SE2\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the y-\/coordinate the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the y-\/coordinate 
+\end{DoxyReturn}
+
+
+\doxysubsection{友元及相关函数文档}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_adc5f91393ae2f50311bb6a950fc4bf98}\label{classteb__local__planner_1_1PoseSE2_adc5f91393ae2f50311bb6a950fc4bf98}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{scalar,  }\item[{\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... 
+
+
+\begin{DoxyParams}{参数}
+{\em scalar} & factor to multiply with \\
+\hline
+{\em pose} & pose to scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+theta is not normalized after multiplying 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a8a35a58b7adbc796b3de8eabd2b47323}\label{classteb__local__planner_1_1PoseSE2_a8a35a58b7adbc796b3de8eabd2b47323}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}}]{pose,  }\item[{double}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Multiply pose with scalar and return copy without normalizing theta This operator is useful for calculating velocities ... 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & pose to scale \\
+\hline
+{\em scalar} & factor to multiply with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{警告}
+theta is not normalized after multiplying 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_ad2feff1efe471ef77a28a95463ccfd21}\label{classteb__local__planner_1_1PoseSE2_ad2feff1efe471ef77a28a95463ccfd21}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator+@{operator+}}
+\index{operator+@{operator+}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}}]{lhs,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Arithmetic operator overload for additions 
+
+
+\begin{DoxyParams}{参数}
+{\em lhs} & First addend \\
+\hline
+{\em rhs} & Second addend \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_aa796492e15f987b1968b2baf8ac677a0}\label{classteb__local__planner_1_1PoseSE2_aa796492e15f987b1968b2baf8ac677a0}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}}]{lhs,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Arithmetic operator overload for subtractions 
+
+
+\begin{DoxyParams}{参数}
+{\em lhs} & First term \\
+\hline
+{\em rhs} & Second term \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PoseSE2_a2c487bf5a6b472f7109a1cd12300e653}\label{classteb__local__planner_1_1PoseSE2_a2c487bf5a6b472f7109a1cd12300e653}} 
+\index{teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!teb\_local\_planner::PoseSE2@{teb\_local\_planner::PoseSE2}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator 
+
+
+\begin{DoxyParams}{参数}
+{\em stream} & output stream \\
+\hline
+{\em pose} & to be used \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/pose\+\_\+se2.\+h\end{DoxyCompactItemize}

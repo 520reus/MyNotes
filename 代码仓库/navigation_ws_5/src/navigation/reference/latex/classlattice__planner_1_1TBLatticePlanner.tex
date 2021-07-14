@@ -1,0 +1,272 @@
+\hypertarget{classlattice__planner_1_1TBLatticePlanner}{}\doxysection{lattice\+\_\+planner\+::TBLattice\+Planner类 参考}
+\label{classlattice__planner_1_1TBLatticePlanner}\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+
+
+planner core.  
+
+
+
+
+{\ttfamily \#include $<$planner\+\_\+core.\+h$>$}
+
+类 lattice\+\_\+planner\+::TBLattice\+Planner 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlattice__planner_1_1TBLatticePlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a3e94d6208c2946d12ad416cdcf784947}\label{classlattice__planner_1_1TBLatticePlanner_a3e94d6208c2946d12ad416cdcf784947}} 
+\mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a3e94d6208c2946d12ad416cdcf784947}{TBLattice\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a17710330fed9607f8c3bf9e4c57c893c}{TBLattice\+Planner}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap, std\+::string frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_abb0cc52d1531fcec179c31469cf571ec}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em initialize the global planner \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a0c4400a4f74a624528ca4ddf79f89477}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em generate a plan from a start position to a goal position. Usually called from move\+\_\+base \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a6bd02211753eb063bcbf8978d3c0d330}{make\+Plan\+Service}} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\begin{DoxyCompactList}\small\item\em generate a plan from a service request \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a54f806c6e7ef978a5cd8e0a535cab8ba}{publish\+Plan}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ plan)
+\begin{DoxyCompactList}\small\item\em publish a plan \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a0b7d1a357d719d7d110b42625b11547f}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap, std\+::string frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em initialize the global planner \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a8da618dc94a2e311028968d775fe3730}{clear\+Robot\+Cell}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, unsigned int mx, unsigned int my)
+\begin{DoxyCompactList}\small\item\em remove the cost value from the static cost map in which the robot is in \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_aa0d4587ee1a91a0564098a83cbc53588}{outline\+Map}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, unsigned char value)
+\begin{DoxyCompactList}\small\item\em outline the map with a specific value \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_aeb10e86f12b427f7ed0799ce4fc7a995}{replan\+Service\+Callback}} (std\+\_\+srvs\+::\+Empty\+::\+Request \&request, std\+\_\+srvs\+::\+Empty\+::\+Response \&response)
+\begin{DoxyCompactList}\small\item\em service Callback if a replanning request was send from outside the planning node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a1baa9e3304d11fe4e990783a6f341652}\label{classlattice__planner_1_1TBLatticePlanner_a1baa9e3304d11fe4e990783a6f341652}} 
+ros\+::\+Service\+Server \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a1baa9e3304d11fe4e990783a6f341652}{make\+\_\+plan\+\_\+srv\+\_\+}}
+\begin{DoxyCompactList}\small\item\em make plan ros service \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_ab20c98f098ccc11aaa0d0e8559cec32d}\label{classlattice__planner_1_1TBLatticePlanner_ab20c98f098ccc11aaa0d0e8559cec32d}} 
+ros\+::\+Service\+Server \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_ab20c98f098ccc11aaa0d0e8559cec32d}{replan\+\_\+service\+\_\+}}
+\begin{DoxyCompactList}\small\item\em replanning ros service \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a008ecf6d7882fb85723ac3b24ee93b02}\label{classlattice__planner_1_1TBLatticePlanner_a008ecf6d7882fb85723ac3b24ee93b02}} 
+ros\+::\+Publisher \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a008ecf6d7882fb85723ac3b24ee93b02}{path\+\_\+pub\+\_\+}}
+\begin{DoxyCompactList}\small\item\em ros path publisher \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a9425d20a479622549ed84e4a11d323d6}\label{classlattice__planner_1_1TBLatticePlanner_a9425d20a479622549ed84e4a11d323d6}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a9425d20a479622549ed84e4a11d323d6}{costmap\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 2D static cost map as provided by the ros navigation stack \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a28ea7c008e49baf332bd640e2ee15cf6}\label{classlattice__planner_1_1TBLatticePlanner_a28ea7c008e49baf332bd640e2ee15cf6}} 
+\mbox{\hyperlink{classlattice__planner_1_1AStarLattice}{AStar\+Lattice}} $\ast$ \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a28ea7c008e49baf332bd640e2ee15cf6}{planner\+\_\+}}
+\begin{DoxyCompactList}\small\item\em lattice planner instance \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a453fef0397c9139e53a430cd7ec2f306}\label{classlattice__planner_1_1TBLatticePlanner_a453fef0397c9139e53a430cd7ec2f306}} 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a453fef0397c9139e53a430cd7ec2f306}{goal\+\_\+pose\+\_\+}}
+\begin{DoxyCompactList}\small\item\em goal position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a3ea628f678a9559317f6b7ca6beee2f6}\label{classlattice__planner_1_1TBLatticePlanner_a3ea628f678a9559317f6b7ca6beee2f6}} 
+std\+::string \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a3ea628f678a9559317f6b7ca6beee2f6}{frame\+\_\+id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em global frame id \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_afa1c0064b3077f0e078e46c02221a0de}\label{classlattice__planner_1_1TBLatticePlanner_afa1c0064b3077f0e078e46c02221a0de}} 
+bool \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_afa1c0064b3077f0e078e46c02221a0de}{replanning\+\_\+requested\+\_\+}}
+\begin{DoxyCompactList}\small\item\em flag whether a replanning request was send from outside the planning node \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_afe0e4b7be31c0e87ac3f32f967433885}\label{classlattice__planner_1_1TBLatticePlanner_afe0e4b7be31c0e87ac3f32f967433885}} 
+bool \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_afe0e4b7be31c0e87ac3f32f967433885}{initialized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em flag whether the planner is initialized \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a6c325c16c75c89aa71fb175e130f83ce}\label{classlattice__planner_1_1TBLatticePlanner_a6c325c16c75c89aa71fb175e130f83ce}} 
+boost\+::mutex \mbox{\hyperlink{classlattice__planner_1_1TBLatticePlanner_a6c325c16c75c89aa71fb175e130f83ce}{mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em mutex \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+planner core. 
+
+This class provides the link from move\+\_\+base to the lattice planner. The class is written as a plugin for the ros navigation stack and inherits from the \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner}{nav\+\_\+core\+::\+Base\+Global\+Planner}} class \begin{DoxySeeAlso}{参见}
+\href{http://wiki.ros.org/navigation/Tutorials/Writing\%20A\%20Global\%20Path\%20Planner\%20As\%20Plugin\%20in\%20ROS}{\texttt{ http\+://wiki.\+ros.\+org/navigation/\+Tutorials/\+Writing\%20\+A\%20\+Global\%20\+Path\%20\+Planner\%20\+As\%20\+Plugin\%20in\%20\+ROS}} for more information about how to write a global planner plugin 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a17710330fed9607f8c3bf9e4c57c893c}\label{classlattice__planner_1_1TBLatticePlanner_a17710330fed9607f8c3bf9e4c57c893c}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!TBLatticePlanner@{TBLatticePlanner}}
+\index{TBLatticePlanner@{TBLatticePlanner}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{TBLatticePlanner()}{TBLatticePlanner()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+TBLattice\+Planner\+::\+TBLattice\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & planner name \\
+\hline
+{\em costmap} & 2D static cost map as provided by the ros navigation stack \\
+\hline
+{\em frame\+\_\+id} & global frame ID \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a8da618dc94a2e311028968d775fe3730}\label{classlattice__planner_1_1TBLatticePlanner_a8da618dc94a2e311028968d775fe3730}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!clearRobotCell@{clearRobotCell}}
+\index{clearRobotCell@{clearRobotCell}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{clearRobotCell()}{clearRobotCell()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+TBLattice\+Planner\+::clear\+Robot\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+remove the cost value from the static cost map in which the robot is in 
+
+
+\begin{DoxyParams}{参数}
+{\em costmap} & map from which to remove the cost value \\
+\hline
+{\em mx} & robot\textquotesingle{}s x position in map coordinates \\
+\hline
+{\em my} & robot\textquotesingle{}s y position in map coordinates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a0b7d1a357d719d7d110b42625b11547f}\label{classlattice__planner_1_1TBLatticePlanner_a0b7d1a357d719d7d110b42625b11547f}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+TBLattice\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+initialize the global planner 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & planner name \\
+\hline
+{\em costmap} & static cost map as provided by the ros navigation stack \\
+\hline
+{\em frame\+\_\+id} & global frame id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_abb0cc52d1531fcec179c31469cf571ec}\label{classlattice__planner_1_1TBLatticePlanner_abb0cc52d1531fcec179c31469cf571ec}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+TBLattice\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialize the global planner 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & planner name \\
+\hline
+{\em costmap\+\_\+ros} & static cost map as provided by the ros navigation stack \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_a485461ff314103dac95744f771107c43}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a0c4400a4f74a624528ca4ddf79f89477}\label{classlattice__planner_1_1TBLatticePlanner_a0c4400a4f74a624528ca4ddf79f89477}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+TBLattice\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+generate a plan from a start position to a goal position. Usually called from move\+\_\+base 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & start position \\
+\hline
+{\em goal} & goal position \\
+\hline
+{\em plan} & the planned path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether a valid path was found 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1BaseGlobalPlanner_ae34a7c7cf96ebdfaf6b33f24a646156c}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a6bd02211753eb063bcbf8978d3c0d330}\label{classlattice__planner_1_1TBLatticePlanner_a6bd02211753eb063bcbf8978d3c0d330}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!makePlanService@{makePlanService}}
+\index{makePlanService@{makePlanService}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{makePlanService()}{makePlanService()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+TBLattice\+Planner\+::make\+Plan\+Service (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&}]{resp }\end{DoxyParamCaption})}
+
+
+
+generate a plan from a service request 
+
+
+\begin{DoxyParams}{参数}
+{\em req} & service request \\
+\hline
+{\em resp} & service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+whether a valid path was found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_aa0d4587ee1a91a0564098a83cbc53588}\label{classlattice__planner_1_1TBLatticePlanner_aa0d4587ee1a91a0564098a83cbc53588}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!outlineMap@{outlineMap}}
+\index{outlineMap@{outlineMap}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{outlineMap()}{outlineMap()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+TBLattice\+Planner\+::outline\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{unsigned char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+outline the map with a specific value 
+
+
+\begin{DoxyParams}{参数}
+{\em costmap} & costmap to outline \\
+\hline
+{\em value} & value with which to outline the map \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_a54f806c6e7ef978a5cd8e0a535cab8ba}\label{classlattice__planner_1_1TBLatticePlanner_a54f806c6e7ef978a5cd8e0a535cab8ba}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!publishPlan@{publishPlan}}
+\index{publishPlan@{publishPlan}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{publishPlan()}{publishPlan()}}
+{\footnotesize\ttfamily void lattice\+\_\+planner\+::\+TBLattice\+Planner\+::publish\+Plan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$}]{plan }\end{DoxyParamCaption})}
+
+
+
+publish a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em plan} & plan to publish \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1TBLatticePlanner_aeb10e86f12b427f7ed0799ce4fc7a995}\label{classlattice__planner_1_1TBLatticePlanner_aeb10e86f12b427f7ed0799ce4fc7a995}} 
+\index{lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}!replanServiceCallback@{replanServiceCallback}}
+\index{replanServiceCallback@{replanServiceCallback}!lattice\_planner::TBLatticePlanner@{lattice\_planner::TBLatticePlanner}}
+\doxysubsubsection{\texorpdfstring{replanServiceCallback()}{replanServiceCallback()}}
+{\footnotesize\ttfamily bool lattice\+\_\+planner\+::\+TBLattice\+Planner\+::replan\+Service\+Callback (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Empty\+::\+Request \&}]{request,  }\item[{std\+\_\+srvs\+::\+Empty\+::\+Response \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+service Callback if a replanning request was send from outside the planning node 
+
+
+\begin{DoxyParams}{参数}
+{\em request} & (empty) replanning request \\
+\hline
+{\em response} & (empty) replanning response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+always true 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/planner\+\_\+core.\+h\end{DoxyCompactItemize}

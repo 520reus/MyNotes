@@ -1,0 +1,94 @@
+\hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Config\+::Homotopy\+Classes结构体 参考}
+\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses}\index{teb\_local\_planner::TebConfig::HomotopyClasses@{teb\_local\_planner::TebConfig::HomotopyClasses}}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aa833e0dc74bbdd9c725f5e1963852171}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aa833e0dc74bbdd9c725f5e1963852171}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aa833e0dc74bbdd9c725f5e1963852171}{enable\+\_\+homotopy\+\_\+class\+\_\+planning}}
+\begin{DoxyCompactList}\small\item\em Activate homotopy class planning (Requires much more resources that simple planning, since multiple trajectories are optimized at once). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4855c579a8ddc62f3790cbd1fae7532c}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4855c579a8ddc62f3790cbd1fae7532c}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4855c579a8ddc62f3790cbd1fae7532c}{enable\+\_\+multithreading}}
+\begin{DoxyCompactList}\small\item\em Activate multiple threading for planning multiple trajectories in parallel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_abf54bb09e8cf1c25b2002b1ca30f94f9}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_abf54bb09e8cf1c25b2002b1ca30f94f9}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_abf54bb09e8cf1c25b2002b1ca30f94f9}{simple\+\_\+exploration}}
+\begin{DoxyCompactList}\small\item\em If true, distinctive trajectories are explored using a simple left-\/right approach (pass each obstacle on the left or right side) for path generation, otherwise sample possible roadmaps randomly in a specified region between start and goal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a927b3e8b610fcbd810131c7a3da48fbe}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a927b3e8b610fcbd810131c7a3da48fbe}} 
+int \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a927b3e8b610fcbd810131c7a3da48fbe}{max\+\_\+number\+\_\+classes}}
+\begin{DoxyCompactList}\small\item\em Specify the maximum number of allowed alternative homotopy classes (limits computational effort) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a167563d959f63f46afd91d14692a7fd7}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a167563d959f63f46afd91d14692a7fd7}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a167563d959f63f46afd91d14692a7fd7}{selection\+\_\+cost\+\_\+hysteresis}}
+\begin{DoxyCompactList}\small\item\em Specify how much trajectory cost must a new candidate have w.\+r.\+t. a previously selected trajectory in order to be selected (selection if new\+\_\+cost $<$ old\+\_\+cost$\ast$factor). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a68a8fab0e361eb70312612a5f19189ce}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a68a8fab0e361eb70312612a5f19189ce}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a68a8fab0e361eb70312612a5f19189ce}{selection\+\_\+prefer\+\_\+initial\+\_\+plan}}
+\begin{DoxyCompactList}\small\item\em Specify a cost reduction in the interval (0,1) for the trajectory in the equivalence class of the initial plan. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afe44fef137b8c73df061a45facbda4c6}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afe44fef137b8c73df061a45facbda4c6}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afe44fef137b8c73df061a45facbda4c6}{selection\+\_\+obst\+\_\+cost\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em Extra scaling of obstacle cost terms just for selecting the \textquotesingle{}best\textquotesingle{} candidate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a5ba993aff1594f2cd7683e68a5a60890}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a5ba993aff1594f2cd7683e68a5a60890}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a5ba993aff1594f2cd7683e68a5a60890}{selection\+\_\+viapoint\+\_\+cost\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em Extra scaling of via-\/point cost terms just for selecting the \textquotesingle{}best\textquotesingle{} candidate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a80b97210fd792c145928464408bfa9c2}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a80b97210fd792c145928464408bfa9c2}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a80b97210fd792c145928464408bfa9c2}{selection\+\_\+alternative\+\_\+time\+\_\+cost}}
+\begin{DoxyCompactList}\small\item\em If true, time cost is replaced by the total transition time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a0db3853d3b3f6cab94f532e9306ba57c}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a0db3853d3b3f6cab94f532e9306ba57c}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a0db3853d3b3f6cab94f532e9306ba57c}{switching\+\_\+blocking\+\_\+period}}
+\begin{DoxyCompactList}\small\item\em Specify a time duration in seconds that needs to be expired before a switch to new equivalence class is allowed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a12a4645d7c227540f7194042d172f79d}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a12a4645d7c227540f7194042d172f79d}} 
+int {\bfseries roadmap\+\_\+graph\+\_\+no\+\_\+samples}
+\item 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6d1fd33188fe86caa0a5ff7bc0da636}{roadmap\+\_\+graph\+\_\+area\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em $<$ Specify the number of samples generated for creating the roadmap graph, if simple\+\_\+exploration is turend off. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a77a32d1b0bfbe5a1e5f5bbd7018eb3a6}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a77a32d1b0bfbe5a1e5f5bbd7018eb3a6}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a77a32d1b0bfbe5a1e5f5bbd7018eb3a6}{roadmap\+\_\+graph\+\_\+area\+\_\+length\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em The length of the rectangular region is determined by the distance between start and goal. This parameter further scales the distance such that the geometric center remains equal! \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a12e1628cc721cd2dbf4f6df77e67f245}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a12e1628cc721cd2dbf4f6df77e67f245}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a12e1628cc721cd2dbf4f6df77e67f245}{h\+\_\+signature\+\_\+prescaler}}
+\begin{DoxyCompactList}\small\item\em Scale number of obstacle value in order to allow huge number of obstacles. Do not choose it extremly low, otherwise obstacles cannot be distinguished from each other (0.\+2$<$H$<$=1). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a077637b25e6190727c56fee606a040f3}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a077637b25e6190727c56fee606a040f3}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a077637b25e6190727c56fee606a040f3}{h\+\_\+signature\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Two h-\/signatures are assumed to be equal, if both the difference of real parts and complex parts are below the specified threshold. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a9a8c255f29a918800b6145b0d1bb1d81}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a9a8c255f29a918800b6145b0d1bb1d81}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a9a8c255f29a918800b6145b0d1bb1d81}{obstacle\+\_\+keypoint\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em If simple\+\_\+exploration is turned on, this parameter determines the distance on the left and right side of the obstacle at which a new keypoint will be cretead (in addition to min\+\_\+obstacle\+\_\+dist). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a3ab5d0857abd63fa47bf371ae40682de}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a3ab5d0857abd63fa47bf371ae40682de}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a3ab5d0857abd63fa47bf371ae40682de}{obstacle\+\_\+heading\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Specify the value of the normalized scalar product between obstacle heading and goal heading in order to take them (obstacles) into account for exploration \mbox{[}0,1\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aec3937706bdf99b50bfc2a0824def271}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aec3937706bdf99b50bfc2a0824def271}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_aec3937706bdf99b50bfc2a0824def271}{viapoints\+\_\+all\+\_\+candidates}}
+\begin{DoxyCompactList}\small\item\em If true, all trajectories of different topologies are attached to the current set of via-\/points, otherwise only the trajectory sharing the same one as the initial/global plan. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afba4251e5d2de26ed96faaa95605a1d6}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afba4251e5d2de26ed96faaa95605a1d6}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_afba4251e5d2de26ed96faaa95605a1d6}{visualize\+\_\+hc\+\_\+graph}}
+\begin{DoxyCompactList}\small\item\em Visualize the graph that is created for exploring new homotopy classes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_acba1a1d42884e74d62ae9568a4a345d1}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_acba1a1d42884e74d62ae9568a4a345d1}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_acba1a1d42884e74d62ae9568a4a345d1}{visualize\+\_\+with\+\_\+time\+\_\+as\+\_\+z\+\_\+axis\+\_\+scale}}
+\begin{DoxyCompactList}\small\item\em If this value is bigger than 0, the trajectory and obstacles are visualized in 3d using the time as the z-\/axis scaled by this value. Most useful for dynamic obstacles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6288fcd656b2672ebe4836b36df95fa}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6288fcd656b2672ebe4836b36df95fa}} 
+bool \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6288fcd656b2672ebe4836b36df95fa}{delete\+\_\+detours\+\_\+backwards}}
+\begin{DoxyCompactList}\small\item\em If enabled, the planner will discard the plans detouring backwards with respect to the best plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_af6b43a7df523b78a5772dd1ad1082a1c}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_af6b43a7df523b78a5772dd1ad1082a1c}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_af6b43a7df523b78a5772dd1ad1082a1c}{detours\+\_\+orientation\+\_\+tolerance}}
+\begin{DoxyCompactList}\small\item\em A plan is considered a detour if its start orientation differs more than this from the best plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a7e44eaa3759e1df33d72f8c268a2ad7a}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a7e44eaa3759e1df33d72f8c268a2ad7a}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a7e44eaa3759e1df33d72f8c268a2ad7a}{length\+\_\+start\+\_\+orientation\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Length of the vector used to compute the start orientation of a plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4f910d99fc7befbe5af96f6ca8650b96}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4f910d99fc7befbe5af96f6ca8650b96}} 
+double \mbox{\hyperlink{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_a4f910d99fc7befbe5af96f6ca8650b96}{max\+\_\+ratio\+\_\+detours\+\_\+duration\+\_\+best\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em Detours are discarted if their execution time / the execution time of the best teb is $>$ this \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6d1fd33188fe86caa0a5ff7bc0da636}\label{structteb__local__planner_1_1TebConfig_1_1HomotopyClasses_ab6d1fd33188fe86caa0a5ff7bc0da636}} 
+\index{teb\_local\_planner::TebConfig::HomotopyClasses@{teb\_local\_planner::TebConfig::HomotopyClasses}!roadmap\_graph\_area\_width@{roadmap\_graph\_area\_width}}
+\index{roadmap\_graph\_area\_width@{roadmap\_graph\_area\_width}!teb\_local\_planner::TebConfig::HomotopyClasses@{teb\_local\_planner::TebConfig::HomotopyClasses}}
+\doxysubsubsection{\texorpdfstring{roadmap\_graph\_area\_width}{roadmap\_graph\_area\_width}}
+{\footnotesize\ttfamily double teb\+\_\+local\+\_\+planner\+::\+Teb\+Config\+::\+Homotopy\+Classes\+::roadmap\+\_\+graph\+\_\+area\+\_\+width}
+
+
+
+$<$ Specify the number of samples generated for creating the roadmap graph, if simple\+\_\+exploration is turend off. 
+
+Random keypoints/waypoints are sampled in a rectangular region between start and goal. Specify the width of that region in meters. 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/teb\+\_\+config.\+h\end{DoxyCompactItemize}

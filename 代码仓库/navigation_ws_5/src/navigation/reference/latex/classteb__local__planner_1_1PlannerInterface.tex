@@ -1,0 +1,238 @@
+\hypertarget{classteb__local__planner_1_1PlannerInterface}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Planner\+Interface类 参考}
+\label{classteb__local__planner_1_1PlannerInterface}\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+
+
+This abstract class defines an interface for local planners  
+
+
+
+
+{\ttfamily \#include $<$planner\+\_\+interface.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Planner\+Interface 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1PlannerInterface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_af6e3288fc97b1b54847e47f171575def}\label{classteb__local__planner_1_1PlannerInterface_af6e3288fc97b1b54847e47f171575def}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_af6e3288fc97b1b54847e47f171575def}{Planner\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_ad1abeab53bae39232c51b902c357e2c0}\label{classteb__local__planner_1_1PlannerInterface_ad1abeab53bae39232c51b902c357e2c0}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_ad1abeab53bae39232c51b902c357e2c0}{$\sim$\+Planner\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Plan a trajectory}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}{plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&initial\+\_\+plan, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)=0
+\begin{DoxyCompactList}\small\item\em Plan a trajectory based on an initial reference plan. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a35f325b8dd40da1fd8cce699550bf8a2}{plan}} (const tf\+::\+Pose \&start, const tf\+::\+Pose \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)=0
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose (tf\+::\+Pose version). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_ade0509d13cf81df5ad503987ce0ab2cd}{plan}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+vel=NULL, bool free\+\_\+goal\+\_\+vel=false)=0
+\begin{DoxyCompactList}\small\item\em Plan a trajectory between a given start and goal pose. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afcaba6e2a81b5a9ff4c0103ca73c1d66}{get\+Velocity\+Command}} (double \&vx, double \&vy, double \&omega, int look\+\_\+ahead\+\_\+poses) const =0
+\begin{DoxyCompactList}\small\item\em Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_aab4b2a774a41d5d98a6eed6bdde81298}\label{classteb__local__planner_1_1PlannerInterface_aab4b2a774a41d5d98a6eed6bdde81298}} 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aab4b2a774a41d5d98a6eed6bdde81298}{clear\+Planner}} ()=0
+\begin{DoxyCompactList}\small\item\em Reset the planner. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a0df0a82d50a58e7e42ed3e27f5a3b382}{set\+Preferred\+Turning\+Dir}} (Rot\+Type dir)
+\begin{DoxyCompactList}\small\item\em Prefer a desired initial turning direction (by penalizing the opposing one) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_afeeda8f566d59ee83c02077d2ff6c241}\label{classteb__local__planner_1_1PlannerInterface_afeeda8f566d59ee83c02077d2ff6c241}} 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_afeeda8f566d59ee83c02077d2ff6c241}{visualize}} ()
+\begin{DoxyCompactList}\small\item\em Visualize planner specific stuff. Overwrite this method to provide an interface to perform all planner related visualizations at once. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a6c0c90babc218d68f88135335e3019f6}{is\+Trajectory\+Feasible}} (\mbox{\hyperlink{classbase__local__planner_1_1CostmapModel}{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model}} $\ast$costmap\+\_\+model, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec, double inscribed\+\_\+radius=0.\+0, double circumscribed\+\_\+radius=0.\+0, int look\+\_\+ahead\+\_\+idx=-\/1)=0
+\begin{DoxyCompactList}\small\item\em Check whether the planned trajectory is feasible or not. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_a62971a56c686fad9b139790cca52d0ff}{compute\+Current\+Cost}} (std\+::vector$<$ double $>$ \&cost, double obst\+\_\+cost\+\_\+scale=1.\+0, bool alternative\+\_\+time\+\_\+cost=false)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{详细描述}
+This abstract class defines an interface for local planners 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_a62971a56c686fad9b139790cca52d0ff}\label{classteb__local__planner_1_1PlannerInterface_a62971a56c686fad9b139790cca52d0ff}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!computeCurrentCost@{computeCurrentCost}}
+\index{computeCurrentCost@{computeCurrentCost}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{computeCurrentCost()}{computeCurrentCost()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::compute\+Current\+Cost (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{cost,  }\item[{double}]{obst\+\_\+cost\+\_\+scale = {\ttfamily 1.0},  }\item[{bool}]{alternative\+\_\+time\+\_\+cost = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Compute and return the cost of the current optimization graph (supports multiple trajectories) 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em cost} & current cost value for each trajectory \mbox{[}for a planner with just a single trajectory\+: size=1, vector will not be cleared\mbox{]} \\
+\hline
+ & {\em obst\+\_\+cost\+\_\+scale} & Specify extra scaling for obstacle costs \\
+\hline
+ & {\em alternative\+\_\+time\+\_\+cost} & Replace the cost for the time optimal objective by the actual (weighted) transition time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_afcaba6e2a81b5a9ff4c0103ca73c1d66}\label{classteb__local__planner_1_1PlannerInterface_afcaba6e2a81b5a9ff4c0103ca73c1d66}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!getVelocityCommand@{getVelocityCommand}}
+\index{getVelocityCommand@{getVelocityCommand}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{getVelocityCommand()}{getVelocityCommand()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::get\+Velocity\+Command (\begin{DoxyParamCaption}\item[{double \&}]{vx,  }\item[{double \&}]{vy,  }\item[{double \&}]{omega,  }\item[{int}]{look\+\_\+ahead\+\_\+poses }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. 
+
+\begin{DoxyWarning}{警告}
+Call \mbox{\hyperlink{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}{plan()}} first and check if the generated plan is feasible. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em vx} & translational velocity \mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em vy} & strafing velocity which can be nonzero for holonomic robots \mbox{[}m/s\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em omega} & rotational velocity \mbox{[}rad/s\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em look\+\_\+ahead\+\_\+poses} & index of the final pose used to compute the velocity command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if command is valid, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a3edcd74c62cadc9a5b1b6a56c15930cc}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a3e8f7fa1c3dbc5037a552024101f0c47}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_a6c0c90babc218d68f88135335e3019f6}\label{classteb__local__planner_1_1PlannerInterface_a6c0c90babc218d68f88135335e3019f6}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!isTrajectoryFeasible@{isTrajectoryFeasible}}
+\index{isTrajectoryFeasible@{isTrajectoryFeasible}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{isTrajectoryFeasible()}{isTrajectoryFeasible()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::is\+Trajectory\+Feasible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1CostmapModel}{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model}} $\ast$}]{costmap\+\_\+model,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec,  }\item[{double}]{inscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{double}]{circumscribed\+\_\+radius = {\ttfamily 0.0},  }\item[{int}]{look\+\_\+ahead\+\_\+idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check whether the planned trajectory is feasible or not. 
+
+This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal Obstacle\+Container. 
+\begin{DoxyParams}{参数}
+{\em costmap\+\_\+model} & Pointer to the costmap model \\
+\hline
+{\em footprint\+\_\+spec} & The specification of the footprint of the robot in world coordinates \\
+\hline
+{\em inscribed\+\_\+radius} & The radius of the inscribed circle of the robot \\
+\hline
+{\em circumscribed\+\_\+radius} & The radius of the circumscribed circle of the robot \\
+\hline
+{\em look\+\_\+ahead\+\_\+idx} & Number of poses along the trajectory that should be verified, if -\/1, the complete trajectory will be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true}, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac6b8c704d39d8edd35d6200a4673a532}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab5ed26e5b1a0978e6d2c43082a15caea}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_ade0509d13cf81df5ad503987ce0ab2cd}\label{classteb__local__planner_1_1PlannerInterface_ade0509d13cf81df5ad503987ce0ab2cd}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::plan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose. 
+
+Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. 
+\begin{DoxyParams}{参数}
+{\em start} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the start pose of the trajectory \\
+\hline
+{\em goal} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Initial velocity at the start pose (twist msg containing the translational and angular velocity). \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a17c9a979df9bf2d24652d9b06c332c35}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_a8cf7d641444293d5a51f90d7c02d7d8d}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}\label{classteb__local__planner_1_1PlannerInterface_aad7ea1d2454b0bc23db0082df85c99de}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{initial\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plan a trajectory based on an initial reference plan. 
+
+Provide this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). 
+\begin{DoxyParams}{参数}
+{\em initial\+\_\+plan} & vector of geometry\+\_\+msgs\+::\+Pose\+Stamped \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a54f19572a5d17d4c0928f7c6eb483c99}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ab17a26c1abb024c7695038c6d22078b8}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_a35f325b8dd40da1fd8cce699550bf8a2}\label{classteb__local__planner_1_1PlannerInterface_a35f325b8dd40da1fd8cce699550bf8a2}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!plan@{plan}}
+\index{plan@{plan}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::plan (\begin{DoxyParamCaption}\item[{const tf\+::\+Pose \&}]{start,  }\item[{const tf\+::\+Pose \&}]{goal,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+vel = {\ttfamily NULL},  }\item[{bool}]{free\+\_\+goal\+\_\+vel = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plan a trajectory between a given start and goal pose (tf\+::\+Pose version). 
+
+Provide this method to create and optimize a trajectory that is initialized between a given start and goal pose. 
+\begin{DoxyParams}{参数}
+{\em start} & tf\+::\+Pose containing the start pose of the trajectory \\
+\hline
+{\em goal} & tf\+::\+Pose containing the goal pose of the trajectory \\
+\hline
+{\em start\+\_\+vel} & Current start velocity (e.\+g. the velocity of the robot, only linear.\+x and angular.\+z are used) \\
+\hline
+{\em free\+\_\+goal\+\_\+vel} & if {\ttfamily true}, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default\+: false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if planning was successful, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_a6354ce8a27d063d531fd27f270e4556b}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac1c2fae1eafa197bd5d787180c036992}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PlannerInterface_a0df0a82d50a58e7e42ed3e27f5a3b382}\label{classteb__local__planner_1_1PlannerInterface_a0df0a82d50a58e7e42ed3e27f5a3b382}} 
+\index{teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}!setPreferredTurningDir@{setPreferredTurningDir}}
+\index{setPreferredTurningDir@{setPreferredTurningDir}!teb\_local\_planner::PlannerInterface@{teb\_local\_planner::PlannerInterface}}
+\doxysubsubsection{\texorpdfstring{setPreferredTurningDir()}{setPreferredTurningDir()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Planner\+Interface\+::set\+Preferred\+Turning\+Dir (\begin{DoxyParamCaption}\item[{Rot\+Type}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prefer a desired initial turning direction (by penalizing the opposing one) 
+
+A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. 
+\begin{DoxyParams}{参数}
+{\em dir} & This parameter might be Rot\+Type\+::left (prefer left), Rot\+Type\+::right (prefer right) or Rot\+Type\+::none (prefer none) \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_ac9153dd5c3985fba990263f071d1b6a9}{teb\+\_\+local\+\_\+planner\+::\+Teb\+Optimal\+Planner}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner_ac131c3d9f6de5ea8d9b67cb7dd2a6a4b}{teb\+\_\+local\+\_\+planner\+::\+Homotopy\+Class\+Planner}} 重载.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/planner\+\_\+interface.\+h\end{DoxyCompactItemize}

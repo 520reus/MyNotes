@@ -1,0 +1,585 @@
+\hypertarget{classteb__local__planner_1_1TebLocalPlannerROS}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Teb\+Local\+Planner\+ROS类 参考}
+\label{classteb__local__planner_1_1TebLocalPlannerROS}\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+
+
+Implements both nav\+\_\+core\+::\+Base\+Local\+Planner and mbf\+\_\+costmap\+\_\+core\+::\+Costmap\+Controller abstract interfaces, so the teb\+\_\+local\+\_\+planner plugin can be used both in move\+\_\+base and move\+\_\+base\+\_\+flex (MBF).  
+
+
+
+
+{\ttfamily \#include $<$teb\+\_\+local\+\_\+planner\+\_\+ros.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Teb\+Local\+Planner\+ROS 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1TebLocalPlannerROS}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_aed91b849d54fec85b4427993ea09028e}\label{classteb__local__planner_1_1TebLocalPlannerROS_aed91b849d54fec85b4427993ea09028e}} 
+\mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_aed91b849d54fec85b4427993ea09028e}{Teb\+Local\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor of the teb plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_af551f7a41aaa31db6bfbc9e150191900}\label{classteb__local__planner_1_1TebLocalPlannerROS_af551f7a41aaa31db6bfbc9e150191900}} 
+\mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_af551f7a41aaa31db6bfbc9e150191900}{$\sim$\+Teb\+Local\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the plugin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a14c42d9f2840e1a78e74cbe8a3cc5b40}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Initializes the teb plugin \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_addfffa93ebc72c920adfb495723a4973}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Set the plan that the teb local planner is following \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7b303000c90b6b314e6a312aa6c8d5c8}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a2dc58a23a0119e615308f64acb825a23}{compute\+Velocity\+Commands}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&pose, const geometry\+\_\+msgs\+::\+Twist\+Stamped \&velocity, geometry\+\_\+msgs\+::\+Twist\+Stamped \&cmd\+\_\+vel, std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ae7fe90aa17f7042d8a29b5340da80455}{is\+Goal\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em Check if the goal pose has been achieved \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a9c12586f34868c396c5fe09b72a55736}\label{classteb__local__planner_1_1TebLocalPlannerROS_a9c12586f34868c396c5fe09b72a55736}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a9c12586f34868c396c5fe09b72a55736}{is\+Goal\+Reached}} (double xy\+\_\+tolerance, double yaw\+\_\+tolerance)
+\begin{DoxyCompactList}\small\item\em Dummy version to satisfy MBF API \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a62d8a3828c86a12d8e69b9fc76f8ea42}{cancel}} ()
+\begin{DoxyCompactList}\small\item\em Requests the planner to cancel, e.\+g. if it takes too much time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public utility functions/methods}
+\begin{DoxyCompactItemize}
+\item 
+static Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_aaeca05653edf103ec967bef389d67d9a}{tf\+Pose\+To\+Eigen\+Vector2d\+Trans\+Rot}} (const tf\+::\+Pose \&tf\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em Transform a tf\+::\+Pose type into a Eigen\+::\+Vector2d containing the translational and angular velocities. \end{DoxyCompactList}\item 
+static Robot\+Footprint\+Model\+Ptr \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a4fe92ed4174e8d6cb7ab62dcf9ed6a58}{get\+Robot\+Footprint\+From\+Param\+Server}} (const ros\+::\+Node\+Handle \&nh)
+\begin{DoxyCompactList}\small\item\em Get the current robot footprint/contour model \end{DoxyCompactList}\item 
+static Point2d\+Container \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_add27f7cfcbbc04b11677ad9c0a6ff234}{make\+Footprint\+From\+XMLRPC}} (Xml\+Rpc\+::\+Xml\+Rpc\+Value \&footprint\+\_\+xmlrpc, const std\+::string \&full\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set the footprint from the given Xml\+Rpc\+Value. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a0ea93c57220cbc9ce5186dd3a7acd9c7}{get\+Number\+From\+XMLRPC}} (Xml\+Rpc\+::\+Xml\+Rpc\+Value \&value, const std\+::string \&full\+\_\+param\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Get a number from the given Xml\+Rpc\+Value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}{update\+Obstacle\+Container\+With\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em Update internal obstacle vector based on occupied costmap cells \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7af3a733ffefec6f6d4e0e543feb02e2}{update\+Obstacle\+Container\+With\+Costmap\+Converter}} ()
+\begin{DoxyCompactList}\small\item\em Update internal obstacle vector based on polygons provided by a costmap\+\_\+converter plugin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ad24927877227af7af3b0cc20acc2b9de}{update\+Obstacle\+Container\+With\+Custom\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Update internal obstacle vector based on custom messages received via subscriber \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a4bfc7c515887d3778b812d09f3cdfee6}{update\+Via\+Points\+Container}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan, double min\+\_\+separation)
+\begin{DoxyCompactList}\small\item\em Update internal via-\/point container based on the current reference plan \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a46b45e56e59eda7e5aaff6f1d0c57b7e}{reconfigure\+CB}} (Teb\+Local\+Planner\+Reconfigure\+Config \&config, uint32\+\_\+t level)
+\begin{DoxyCompactList}\small\item\em Callback for the dynamic\+\_\+reconfigure node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a1fcf70532320de238a8b5d7dea1634ff}{custom\+Obstacle\+CB}} (const costmap\+\_\+converter\+::\+Obstacle\+Array\+Msg\+::\+Const\+Ptr \&obst\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Callback for custom obstacles that are not obtained from the costmap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_af913c30f630d24ed94d880f5ec0b3b5a}{custom\+Via\+Points\+CB}} (const nav\+\_\+msgs\+::\+Path\+::\+Const\+Ptr \&via\+\_\+points\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Callback for custom via-\/points \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_acb295ac7b197443f29c7d31f3113e07d}{prune\+Global\+Plan}} (const tf2\+\_\+ros\+::\+Buffer \&tf, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, double dist\+\_\+behind\+\_\+robot=1)
+\begin{DoxyCompactList}\small\item\em Prune global plan such that already passed poses are cut off \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a6ce8da94ef5a2285dfc30542ba52164b}{transform\+Global\+Plan}} (const tf2\+\_\+ros\+::\+Buffer \&tf, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const costmap\+\_\+2d\+::\+Costmap2D \&costmap, const std\+::string \&global\+\_\+frame, double max\+\_\+plan\+\_\+length, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan, int $\ast$current\+\_\+goal\+\_\+idx=NULL, geometry\+\_\+msgs\+::\+Transform\+Stamped $\ast$tf\+\_\+plan\+\_\+to\+\_\+global=NULL) const
+\begin{DoxyCompactList}\small\item\em Transforms the global plan of the robot from the planner frame to the local frame (modified). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a89b3b2b23993d35ef2137dfb2f804f6c}{estimate\+Local\+Goal\+Orientation}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&local\+\_\+goal, int current\+\_\+goal\+\_\+idx, const geometry\+\_\+msgs\+::\+Transform\+Stamped \&tf\+\_\+plan\+\_\+to\+\_\+global, int moving\+\_\+average\+\_\+length=3) const
+\begin{DoxyCompactList}\small\item\em Estimate the orientation of a pose from the global\+\_\+plan that is treated as a local goal for the local planner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a6ed319900ff055daf8f12fe24932ac32}{saturate\+Velocity}} (double \&vx, double \&vy, double \&omega, double max\+\_\+vel\+\_\+x, double max\+\_\+vel\+\_\+y, double max\+\_\+vel\+\_\+theta, double max\+\_\+vel\+\_\+x\+\_\+backwards) const
+\begin{DoxyCompactList}\small\item\em Saturate the translational and angular velocity to given limits. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a37afb804bb76551c24d47c74b8313974}{convert\+Trans\+Rot\+Vel\+To\+Steering\+Angle}} (double v, double omega, double wheelbase, double min\+\_\+turning\+\_\+radius=0) const
+\begin{DoxyCompactList}\small\item\em Convert translational and rotational velocities to a steering angle of a carlike robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a59f136e3bcca29d343ecfe4d478b2eee}{validate\+Footprints}} (double opt\+\_\+inscribed\+\_\+radius, double costmap\+\_\+inscribed\+\_\+radius, double min\+\_\+obst\+\_\+dist)
+\begin{DoxyCompactList}\small\item\em Validate current parameter values of the footprint for optimization, obstacle distance and the costmap footprint \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a1cd741a6619fe7cf4cf2f1d9421208d8}\label{classteb__local__planner_1_1TebLocalPlannerROS_a1cd741a6619fe7cf4cf2f1d9421208d8}} 
+void {\bfseries configure\+Backup\+Modes} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan, int \&goal\+\_\+idx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Implements both nav\+\_\+core\+::\+Base\+Local\+Planner and mbf\+\_\+costmap\+\_\+core\+::\+Costmap\+Controller abstract interfaces, so the teb\+\_\+local\+\_\+planner plugin can be used both in move\+\_\+base and move\+\_\+base\+\_\+flex (MBF). 
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000006}{待办事项}}]Escape behavior, more efficient obstacle handling \end{DoxyRefDesc}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a62d8a3828c86a12d8e69b9fc76f8ea42}\label{classteb__local__planner_1_1TebLocalPlannerROS_a62d8a3828c86a12d8e69b9fc76f8ea42}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!cancel@{cancel}}
+\index{cancel@{cancel}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Requests the planner to cancel, e.\+g. if it takes too much time 
+
+\begin{DoxyRemark}{备注}
+New on MBF API 
+\end{DoxyRemark}
+\begin{DoxyReturn}{返回}
+True if a cancel has been successfully requested, false if not implemented. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a2dc58a23a0119e615308f64acb825a23}\label{classteb__local__planner_1_1TebLocalPlannerROS_a2dc58a23a0119e615308f64acb825a23}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint32\+\_\+t teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{pose,  }\item[{const geometry\+\_\+msgs\+::\+Twist\+Stamped \&}]{velocity,  }\item[{geometry\+\_\+msgs\+::\+Twist\+Stamped \&}]{cmd\+\_\+vel,  }\item[{std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base. 
+
+\begin{DoxyRemark}{备注}
+Extended version for MBF API 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em pose} & the current pose of the robot. \\
+\hline
+{\em velocity} & the current velocity of the robot. \\
+\hline
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base. \\
+\hline
+{\em message} & Optional more detailed outcome as a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Result code as described on Exe\+Path action result\+: SUCCESS = 0 1..9 are reserved as plugin specific non-\/error results FAILURE = 100 Unspecified failure, only used for old, non-\/mfb\+\_\+core based plugins CANCELED = 101 NO\+\_\+\+VALID\+\_\+\+CMD = 102 PAT\+\_\+\+EXCEEDED = 103 COLLISION = 104 OSCILLATION = 105 ROBOT\+\_\+\+STUCK = 106 MISSED\+\_\+\+GOAL = 107 MISSED\+\_\+\+PATH = 108 BLOCKED\+\_\+\+PATH = 109 INVALID\+\_\+\+PATH = 110 TF\+\_\+\+ERROR = 111 NOT\+\_\+\+INITIALIZED = 112 INVALID\+\_\+\+PLUGIN = 113 INTERNAL\+\_\+\+ERROR = 114 121..149 are reserved as plugin specific errors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a7b303000c90b6b314e6a312aa6c8d5c8}\label{classteb__local__planner_1_1TebLocalPlannerROS_a7b303000c90b6b314e6a312aa6c8d5c8}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})}
+
+
+
+Given the current position, orientation, and velocity of the robot, compute velocity commands to send to the base 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & Will be filled with the velocity command to be passed to the robot base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid trajectory was found, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a37afb804bb76551c24d47c74b8313974}\label{classteb__local__planner_1_1TebLocalPlannerROS_a37afb804bb76551c24d47c74b8313974}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!convertTransRotVelToSteeringAngle@{convertTransRotVelToSteeringAngle}}
+\index{convertTransRotVelToSteeringAngle@{convertTransRotVelToSteeringAngle}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{convertTransRotVelToSteeringAngle()}{convertTransRotVelToSteeringAngle()}}
+{\footnotesize\ttfamily double teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::convert\+Trans\+Rot\+Vel\+To\+Steering\+Angle (\begin{DoxyParamCaption}\item[{double}]{v,  }\item[{double}]{omega,  }\item[{double}]{wheelbase,  }\item[{double}]{min\+\_\+turning\+\_\+radius = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Convert translational and rotational velocities to a steering angle of a carlike robot 
+
+The conversion is based on the following equations\+:
+\begin{DoxyItemize}
+\item The turning radius is defined by $ R = v/omega $
+\item For a car like robot withe a distance L between both axles, the relation is\+: $ tan(\phi) = L/R $
+\item phi denotes the steering angle. \begin{DoxyRemark}{备注}
+You might provide distances instead of velocities, since the temporal information is not required. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em v} & translational velocity \mbox{[}m/s\mbox{]} \\
+\hline
+{\em omega} & rotational velocity \mbox{[}rad/s\mbox{]} \\
+\hline
+{\em wheelbase} & distance between both axles (drive shaft and steering axle), the value might be negative for back\+\_\+wheeled robots \\
+\hline
+{\em min\+\_\+turning\+\_\+radius} & Specify a lower bound on the turning radius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Resulting steering angle in \mbox{[}rad\mbox{]} inbetween \mbox{[}-\/pi/2, pi/2\mbox{]} 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a1fcf70532320de238a8b5d7dea1634ff}\label{classteb__local__planner_1_1TebLocalPlannerROS_a1fcf70532320de238a8b5d7dea1634ff}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!customObstacleCB@{customObstacleCB}}
+\index{customObstacleCB@{customObstacleCB}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{customObstacleCB()}{customObstacleCB()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::custom\+Obstacle\+CB (\begin{DoxyParamCaption}\item[{const costmap\+\_\+converter\+::\+Obstacle\+Array\+Msg\+::\+Const\+Ptr \&}]{obst\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Callback for custom obstacles that are not obtained from the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em obst\+\_\+msg} & pointer to the message containing a list of polygon shaped obstacles \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_af913c30f630d24ed94d880f5ec0b3b5a}\label{classteb__local__planner_1_1TebLocalPlannerROS_af913c30f630d24ed94d880f5ec0b3b5a}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!customViaPointsCB@{customViaPointsCB}}
+\index{customViaPointsCB@{customViaPointsCB}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{customViaPointsCB()}{customViaPointsCB()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::custom\+Via\+Points\+CB (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Path\+::\+Const\+Ptr \&}]{via\+\_\+points\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Callback for custom via-\/points 
+
+
+\begin{DoxyParams}{参数}
+{\em via\+\_\+points\+\_\+msg} & pointer to the message containing a list of via-\/points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a89b3b2b23993d35ef2137dfb2f804f6c}\label{classteb__local__planner_1_1TebLocalPlannerROS_a89b3b2b23993d35ef2137dfb2f804f6c}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!estimateLocalGoalOrientation@{estimateLocalGoalOrientation}}
+\index{estimateLocalGoalOrientation@{estimateLocalGoalOrientation}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{estimateLocalGoalOrientation()}{estimateLocalGoalOrientation()}}
+{\footnotesize\ttfamily double teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::estimate\+Local\+Goal\+Orientation (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{local\+\_\+goal,  }\item[{int}]{current\+\_\+goal\+\_\+idx,  }\item[{const geometry\+\_\+msgs\+::\+Transform\+Stamped \&}]{tf\+\_\+plan\+\_\+to\+\_\+global,  }\item[{int}]{moving\+\_\+average\+\_\+length = {\ttfamily 3} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Estimate the orientation of a pose from the global\+\_\+plan that is treated as a local goal for the local planner. 
+
+If the current (local) goal point is not the final one (global) substitute the goal orientation by the angle of the direction vector between the local goal and the subsequent pose of the global plan. This is often helpful, if the global planner does not consider orientations. ~\newline
+A moving average filter is utilized to smooth the orientation. 
+\begin{DoxyParams}[1]{参数}
+ & {\em global\+\_\+plan} & The global plan \\
+\hline
+ & {\em local\+\_\+goal} & Current local goal \\
+\hline
+ & {\em current\+\_\+goal\+\_\+idx} & Index of the current (local) goal pose in the global plan \\
+\hline
+\mbox{\texttt{ out}}  & {\em tf\+\_\+plan\+\_\+to\+\_\+global} & Transformation between the global plan and the global planning frame \\
+\hline
+ & {\em moving\+\_\+average\+\_\+length} & number of future poses of the global plan to be taken into account \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+orientation (yaw-\/angle) estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a0ea93c57220cbc9ce5186dd3a7acd9c7}\label{classteb__local__planner_1_1TebLocalPlannerROS_a0ea93c57220cbc9ce5186dd3a7acd9c7}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!getNumberFromXMLRPC@{getNumberFromXMLRPC}}
+\index{getNumberFromXMLRPC@{getNumberFromXMLRPC}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{getNumberFromXMLRPC()}{getNumberFromXMLRPC()}}
+{\footnotesize\ttfamily static double teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::get\+Number\+From\+XMLRPC (\begin{DoxyParamCaption}\item[{Xml\+Rpc\+::\+Xml\+Rpc\+Value \&}]{value,  }\item[{const std\+::string \&}]{full\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a number from the given Xml\+Rpc\+Value. 
+
+\begin{DoxyRemark}{备注}
+This method is copied from costmap\+\_\+2d/footprint.\+h, since it is not declared public in all ros distros 
+
+It is modified in order to return a container of Eigen\+::\+Vector2d instead of geometry\+\_\+msgs\+::\+Point 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em value} & double value type \\
+\hline
+{\em full\+\_\+param\+\_\+name} & this is the full name of the rosparam from which the footprint\+\_\+xmlrpc value came. It is used only for reporting errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+double value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a4fe92ed4174e8d6cb7ab62dcf9ed6a58}\label{classteb__local__planner_1_1TebLocalPlannerROS_a4fe92ed4174e8d6cb7ab62dcf9ed6a58}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!getRobotFootprintFromParamServer@{getRobotFootprintFromParamServer}}
+\index{getRobotFootprintFromParamServer@{getRobotFootprintFromParamServer}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{getRobotFootprintFromParamServer()}{getRobotFootprintFromParamServer()}}
+{\footnotesize\ttfamily static Robot\+Footprint\+Model\+Ptr teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::get\+Robot\+Footprint\+From\+Param\+Server (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the current robot footprint/contour model 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & const reference to the local ros\+::\+Node\+Handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Robot footprint model used for optimization 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a14c42d9f2840e1a78e74cbe8a3cc5b40}\label{classteb__local__planner_1_1TebLocalPlannerROS_a14c42d9f2840e1a78e74cbe8a3cc5b40}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!initialize@{initialize}}
+\index{initialize@{initialize}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Initializes the teb plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of the instance \\
+\hline
+{\em tf} & Pointer to a tf buffer \\
+\hline
+{\em costmap\+\_\+ros} & Cost map representing occupied and free space \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_ae7fe90aa17f7042d8a29b5340da80455}\label{classteb__local__planner_1_1TebLocalPlannerROS_ae7fe90aa17f7042d8a29b5340da80455}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the goal pose has been achieved 
+
+The actual check is performed in \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7b303000c90b6b314e6a312aa6c8d5c8}{compute\+Velocity\+Commands()}}. Only the status flag is checked here. \begin{DoxyReturn}{返回}
+True if achieved, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_add27f7cfcbbc04b11677ad9c0a6ff234}\label{classteb__local__planner_1_1TebLocalPlannerROS_add27f7cfcbbc04b11677ad9c0a6ff234}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!makeFootprintFromXMLRPC@{makeFootprintFromXMLRPC}}
+\index{makeFootprintFromXMLRPC@{makeFootprintFromXMLRPC}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{makeFootprintFromXMLRPC()}{makeFootprintFromXMLRPC()}}
+{\footnotesize\ttfamily static Point2d\+Container teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::make\+Footprint\+From\+XMLRPC (\begin{DoxyParamCaption}\item[{Xml\+Rpc\+::\+Xml\+Rpc\+Value \&}]{footprint\+\_\+xmlrpc,  }\item[{const std\+::string \&}]{full\+\_\+param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the footprint from the given Xml\+Rpc\+Value. 
+
+\begin{DoxyRemark}{备注}
+This method is copied from costmap\+\_\+2d/footprint.\+h, since it is not declared public in all ros distros 
+
+It is modified in order to return a container of Eigen\+::\+Vector2d instead of geometry\+\_\+msgs\+::\+Point 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em footprint\+\_\+xmlrpc} & should be an array of arrays, where the top-\/level array should have 3 or more elements, and the sub-\/arrays should all have exactly 2 elements (x and y coordinates). \\
+\hline
+{\em full\+\_\+param\+\_\+name} & this is the full name of the rosparam from which the footprint\+\_\+xmlrpc value came. It is used only for reporting errors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+container of vertices describing the polygon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_acb295ac7b197443f29c7d31f3113e07d}\label{classteb__local__planner_1_1TebLocalPlannerROS_acb295ac7b197443f29c7d31f3113e07d}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!pruneGlobalPlan@{pruneGlobalPlan}}
+\index{pruneGlobalPlan@{pruneGlobalPlan}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{pruneGlobalPlan()}{pruneGlobalPlan()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::prune\+Global\+Plan (\begin{DoxyParamCaption}\item[{const tf2\+\_\+ros\+::\+Buffer \&}]{tf,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan,  }\item[{double}]{dist\+\_\+behind\+\_\+robot = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prune global plan such that already passed poses are cut off 
+
+The pose of the robot is transformed into the frame of the global plan by taking the most recent tf transform. If no valid transformation can be found, the method returns {\ttfamily false}. The global plan is pruned until the distance to the robot is at least {\ttfamily dist\+\_\+behind\+\_\+robot}. If no pose within the specified treshold {\ttfamily dist\+\_\+behind\+\_\+robot} can be found, nothing will be pruned and the method returns {\ttfamily false}. \begin{DoxyRemark}{备注}
+Do not choose {\ttfamily dist\+\_\+behind\+\_\+robot} too small (not smaller the cellsize of the map), otherwise nothing will be pruned. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}[1]{参数}
+ & {\em tf} & A reference to a tf buffer \\
+\hline
+ & {\em global\+\_\+pose} & The global pose of the robot \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em global\+\_\+plan} & The plan to be transformed \\
+\hline
+ & {\em dist\+\_\+behind\+\_\+robot} & Distance behind the robot that should be kept \mbox{[}meters\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the plan is pruned, {\ttfamily false} in case of a transform exception or if no pose cannot be found inside the threshold 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a46b45e56e59eda7e5aaff6f1d0c57b7e}\label{classteb__local__planner_1_1TebLocalPlannerROS_a46b45e56e59eda7e5aaff6f1d0c57b7e}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{Teb\+Local\+Planner\+Reconfigure\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Callback for the dynamic\+\_\+reconfigure node. 
+
+This callback allows to modify parameters dynamically at runtime without restarting the node 
+\begin{DoxyParams}{参数}
+{\em config} & Reference to the dynamic reconfigure config \\
+\hline
+{\em level} & Dynamic reconfigure level \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a6ed319900ff055daf8f12fe24932ac32}\label{classteb__local__planner_1_1TebLocalPlannerROS_a6ed319900ff055daf8f12fe24932ac32}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!saturateVelocity@{saturateVelocity}}
+\index{saturateVelocity@{saturateVelocity}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{saturateVelocity()}{saturateVelocity()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::saturate\+Velocity (\begin{DoxyParamCaption}\item[{double \&}]{vx,  }\item[{double \&}]{vy,  }\item[{double \&}]{omega,  }\item[{double}]{max\+\_\+vel\+\_\+x,  }\item[{double}]{max\+\_\+vel\+\_\+y,  }\item[{double}]{max\+\_\+vel\+\_\+theta,  }\item[{double}]{max\+\_\+vel\+\_\+x\+\_\+backwards }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Saturate the translational and angular velocity to given limits. 
+
+The limit of the translational velocity for backwards driving can be changed independently. Do not choose max\+\_\+vel\+\_\+x\+\_\+backwards $<$= 0. If no backward driving is desired, change the optimization weight for penalizing backwards driving instead. 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em vx} & The translational velocity that should be saturated. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em vy} & Strafing velocity which can be nonzero for holonomic robots \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em omega} & The angular velocity that should be saturated. \\
+\hline
+ & {\em max\+\_\+vel\+\_\+x} & Maximum translational velocity for forward driving \\
+\hline
+ & {\em max\+\_\+vel\+\_\+y} & Maximum strafing velocity (for holonomic robots) \\
+\hline
+ & {\em max\+\_\+vel\+\_\+theta} & Maximum (absolute) angular velocity \\
+\hline
+ & {\em max\+\_\+vel\+\_\+x\+\_\+backwards} & Maximum translational velocity for backwards driving \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_addfffa93ebc72c920adfb495723a4973}\label{classteb__local__planner_1_1TebLocalPlannerROS_addfffa93ebc72c920adfb495723a4973}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})}
+
+
+
+Set the plan that the teb local planner is following 
+
+
+\begin{DoxyParams}{参数}
+{\em orig\+\_\+global\+\_\+plan} & The plan to pass to the local planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the plan was updated successfully, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_aaeca05653edf103ec967bef389d67d9a}\label{classteb__local__planner_1_1TebLocalPlannerROS_aaeca05653edf103ec967bef389d67d9a}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!tfPoseToEigenVector2dTransRot@{tfPoseToEigenVector2dTransRot}}
+\index{tfPoseToEigenVector2dTransRot@{tfPoseToEigenVector2dTransRot}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{tfPoseToEigenVector2dTransRot()}{tfPoseToEigenVector2dTransRot()}}
+{\footnotesize\ttfamily static Eigen\+::\+Vector2d teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::tf\+Pose\+To\+Eigen\+Vector2d\+Trans\+Rot (\begin{DoxyParamCaption}\item[{const tf\+::\+Pose \&}]{tf\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transform a tf\+::\+Pose type into a Eigen\+::\+Vector2d containing the translational and angular velocities. 
+
+Translational velocities (x-\/ and y-\/coordinates) are combined into a single translational velocity (first component). 
+\begin{DoxyParams}{参数}
+{\em tf\+\_\+vel} & tf\+::\+Pose message containing a 1D or 2D translational velocity (x,y) and an angular velocity (yaw-\/angle) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Translational and angular velocity combined into an Eigen\+::\+Vector2d 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a6ce8da94ef5a2285dfc30542ba52164b}\label{classteb__local__planner_1_1TebLocalPlannerROS_a6ce8da94ef5a2285dfc30542ba52164b}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!transformGlobalPlan@{transformGlobalPlan}}
+\index{transformGlobalPlan@{transformGlobalPlan}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{transformGlobalPlan()}{transformGlobalPlan()}}
+{\footnotesize\ttfamily bool teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::transform\+Global\+Plan (\begin{DoxyParamCaption}\item[{const tf2\+\_\+ros\+::\+Buffer \&}]{tf,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const costmap\+\_\+2d\+::\+Costmap2D \&}]{costmap,  }\item[{const std\+::string \&}]{global\+\_\+frame,  }\item[{double}]{max\+\_\+plan\+\_\+length,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{transformed\+\_\+plan,  }\item[{int $\ast$}]{current\+\_\+goal\+\_\+idx = {\ttfamily NULL},  }\item[{geometry\+\_\+msgs\+::\+Transform\+Stamped $\ast$}]{tf\+\_\+plan\+\_\+to\+\_\+global = {\ttfamily NULL} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Transforms the global plan of the robot from the planner frame to the local frame (modified). 
+
+The method replaces transform\+Global\+Plan as defined in base\+\_\+local\+\_\+planner/goal\+\_\+functions.\+h such that the index of the current goal pose is returned as well as the transformation between the global plan and the planning frame. 
+\begin{DoxyParams}[1]{参数}
+ & {\em tf} & A reference to a tf buffer \\
+\hline
+ & {\em global\+\_\+plan} & The plan to be transformed \\
+\hline
+ & {\em global\+\_\+pose} & The global pose of the robot \\
+\hline
+ & {\em costmap} & A reference to the costmap being used so the window size for transforming can be computed \\
+\hline
+ & {\em global\+\_\+frame} & The frame to transform the plan to \\
+\hline
+ & {\em max\+\_\+plan\+\_\+length} & Specify maximum length (cumulative Euclidean distances) of the transformed plan \mbox{[}if $<$=0\+: disabled; the length is also bounded by the local costmap size!\mbox{]} \\
+\hline
+\mbox{\texttt{ out}}  & {\em transformed\+\_\+plan} & Populated with the transformed plan \\
+\hline
+\mbox{\texttt{ out}}  & {\em current\+\_\+goal\+\_\+idx} & Index of the current (local) goal pose in the global plan \\
+\hline
+\mbox{\texttt{ out}}  & {\em tf\+\_\+plan\+\_\+to\+\_\+global} & Transformation between the global plan and the global planning frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the global plan is transformed, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}\label{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!updateObstacleContainerWithCostmap@{updateObstacleContainerWithCostmap}}
+\index{updateObstacleContainerWithCostmap@{updateObstacleContainerWithCostmap}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{updateObstacleContainerWithCostmap()}{updateObstacleContainerWithCostmap()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::update\+Obstacle\+Container\+With\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update internal obstacle vector based on occupied costmap cells 
+
+\begin{DoxyRemark}{备注}
+All occupied cells will be added as point obstacles. 
+
+All previous obstacles are cleared. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7af3a733ffefec6f6d4e0e543feb02e2}{update\+Obstacle\+Container\+With\+Costmap\+Converter}} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000007}{待办事项}}]Include temporal coherence among obstacle msgs (id vector) 
+
+Include properties for dynamic obstacles (e.\+g. using constant velocity model) \end{DoxyRefDesc}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a7af3a733ffefec6f6d4e0e543feb02e2}\label{classteb__local__planner_1_1TebLocalPlannerROS_a7af3a733ffefec6f6d4e0e543feb02e2}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!updateObstacleContainerWithCostmapConverter@{updateObstacleContainerWithCostmapConverter}}
+\index{updateObstacleContainerWithCostmapConverter@{updateObstacleContainerWithCostmapConverter}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{updateObstacleContainerWithCostmapConverter()}{updateObstacleContainerWithCostmapConverter()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::update\+Obstacle\+Container\+With\+Costmap\+Converter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update internal obstacle vector based on polygons provided by a costmap\+\_\+converter plugin 
+
+\begin{DoxyRemark}{备注}
+Requires a loaded costmap\+\_\+converter plugin. 
+
+All previous obstacles are cleared. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}{update\+Obstacle\+Container\+With\+Costmap}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_ad24927877227af7af3b0cc20acc2b9de}\label{classteb__local__planner_1_1TebLocalPlannerROS_ad24927877227af7af3b0cc20acc2b9de}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!updateObstacleContainerWithCustomObstacles@{updateObstacleContainerWithCustomObstacles}}
+\index{updateObstacleContainerWithCustomObstacles@{updateObstacleContainerWithCustomObstacles}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{updateObstacleContainerWithCustomObstacles()}{updateObstacleContainerWithCustomObstacles()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::update\+Obstacle\+Container\+With\+Custom\+Obstacles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update internal obstacle vector based on custom messages received via subscriber 
+
+\begin{DoxyRemark}{备注}
+All previous obstacles are NOT cleared. Call this method after other update methods. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_ac4340c638b3411325361d066b86533af}{update\+Obstacle\+Container\+With\+Costmap}}, \mbox{\hyperlink{classteb__local__planner_1_1TebLocalPlannerROS_a7af3a733ffefec6f6d4e0e543feb02e2}{update\+Obstacle\+Container\+With\+Costmap\+Converter}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a4bfc7c515887d3778b812d09f3cdfee6}\label{classteb__local__planner_1_1TebLocalPlannerROS_a4bfc7c515887d3778b812d09f3cdfee6}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!updateViaPointsContainer@{updateViaPointsContainer}}
+\index{updateViaPointsContainer@{updateViaPointsContainer}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{updateViaPointsContainer()}{updateViaPointsContainer()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::update\+Via\+Points\+Container (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{transformed\+\_\+plan,  }\item[{double}]{min\+\_\+separation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update internal via-\/point container based on the current reference plan 
+
+\begin{DoxyRemark}{备注}
+All previous via-\/points will be cleared. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em transformed\+\_\+plan} & (local) portion of the global plan (which is already transformed to the planning frame) \\
+\hline
+{\em min\+\_\+separation} & minimum separation between two consecutive via-\/points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1TebLocalPlannerROS_a59f136e3bcca29d343ecfe4d478b2eee}\label{classteb__local__planner_1_1TebLocalPlannerROS_a59f136e3bcca29d343ecfe4d478b2eee}} 
+\index{teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}!validateFootprints@{validateFootprints}}
+\index{validateFootprints@{validateFootprints}!teb\_local\_planner::TebLocalPlannerROS@{teb\_local\_planner::TebLocalPlannerROS}}
+\doxysubsubsection{\texorpdfstring{validateFootprints()}{validateFootprints()}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Teb\+Local\+Planner\+ROS\+::validate\+Footprints (\begin{DoxyParamCaption}\item[{double}]{opt\+\_\+inscribed\+\_\+radius,  }\item[{double}]{costmap\+\_\+inscribed\+\_\+radius,  }\item[{double}]{min\+\_\+obst\+\_\+dist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Validate current parameter values of the footprint for optimization, obstacle distance and the costmap footprint 
+
+This method prints warnings if validation fails. \begin{DoxyRemark}{备注}
+Currently, we only validate the inscribed radius of the footprints 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{参数}
+{\em opt\+\_\+inscribed\+\_\+radius} & Inscribed radius of the Robot\+Footprint\+Model for optimization \\
+\hline
+{\em costmap\+\_\+inscribed\+\_\+radius} & Inscribed radius of the footprint model used for the costmap \\
+\hline
+{\em min\+\_\+obst\+\_\+dist} & desired distance to obstacles \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/teb\+\_\+local\+\_\+planner\+\_\+ros.\+h\end{DoxyCompactItemize}

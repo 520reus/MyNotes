@@ -1,0 +1,346 @@
+\hypertarget{classteb__local__planner_1_1VertexPose}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Vertex\+Pose类 参考}
+\label{classteb__local__planner_1_1VertexPose}\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+
+
+This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized via g2o  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+pose.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Vertex\+Pose 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1VertexPose}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_add7e73c13d418002cb1c278c7aa7139d}{Vertex\+Pose}} (bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_aeb9f6fc43f34bb7f210f8140a17b8ded}{Vertex\+Pose}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a0c8cbabe5c33e10c81e023f954568839}{pose}}, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Construct pose using a given \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a770f58dce9d26fae0337e8cff64953e8}{Vertex\+Pose}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a4f7d908421b83db853820b1713e1eaa4}{position}}, double \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a061dd3dc688ca79f009465982985c1df}{theta}}, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Construct pose using a given 2D position vector and orientation \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a846ac1e94967ed8a5fe39b1761871093}{Vertex\+Pose}} (double \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a10ab23ac2ac3a7b44524c6f6c2356d66}{x}}, double \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_ad8cc8f5c9c10ac7ab585143bcba0f52d}{y}}, double \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a061dd3dc688ca79f009465982985c1df}{theta}}, bool fixed=false)
+\begin{DoxyCompactList}\small\item\em Construct pose using single components x, y, and the yaw angle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_aa9b1cc3b7ac9d5ee6922ceef3190dc46}\label{classteb__local__planner_1_1VertexPose_aa9b1cc3b7ac9d5ee6922ceef3190dc46}} 
+\mbox{\hyperlink{classteb__local__planner_1_1VertexPose_aa9b1cc3b7ac9d5ee6922ceef3190dc46}{$\sim$\+Vertex\+Pose}} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \mbox{\hyperlink{classteb__local__planner_1_1VertexPose}{Vertex\+Pose}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a0c8cbabe5c33e10c81e023f954568839}{pose}} ()
+\begin{DoxyCompactList}\small\item\em Access the pose \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a3f7d8a72e7fe760123c1fbde66374d1c}{pose}} () const
+\begin{DoxyCompactList}\small\item\em Access the pose (read-\/only) \end{DoxyCompactList}\item 
+Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a4f7d908421b83db853820b1713e1eaa4}{position}} ()
+\begin{DoxyCompactList}\small\item\em Access the 2D position part \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_ad4d8f97341c461bf915d4ac4fa72a48f}{position}} () const
+\begin{DoxyCompactList}\small\item\em Access the 2D position part (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a10ab23ac2ac3a7b44524c6f6c2356d66}{x}} ()
+\begin{DoxyCompactList}\small\item\em Access the x-\/coordinate the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a34045ca3f9d3c5cfe70a56a5a1476d9c}{x}} () const
+\begin{DoxyCompactList}\small\item\em Access the x-\/coordinate the pose (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_ad8cc8f5c9c10ac7ab585143bcba0f52d}{y}} ()
+\begin{DoxyCompactList}\small\item\em Access the y-\/coordinate the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_af736773c0723ddbb38089f150ea78fce}{y}} () const
+\begin{DoxyCompactList}\small\item\em Access the y-\/coordinate the pose (read-\/only) \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a061dd3dc688ca79f009465982985c1df}{theta}} ()
+\begin{DoxyCompactList}\small\item\em Access the orientation part (yaw angle) of the pose \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_af112d283f8c0aa1a3b9049afed970388}{theta}} () const
+\begin{DoxyCompactList}\small\item\em Access the orientation part (yaw angle) of the pose (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a69132d3bacadc2511680f9619f230b24}\label{classteb__local__planner_1_1VertexPose_a69132d3bacadc2511680f9619f230b24}} 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a69132d3bacadc2511680f9619f230b24}{set\+To\+Origin\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Set the underlying estimate (2D vector) to zero. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a94c1cb5ea15293fec6cb183218607278}{oplus\+Impl}} (const double $\ast$update)
+\begin{DoxyCompactList}\small\item\em Define the update increment $ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $. A simple addition for the position. The angle is first added to the previous estimated angle and afterwards normalized to the interval $ [-\pi \pi] $ \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a86177ac034501cc431359e4ab5a3bc21}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Read an estimate from an input stream. First the x-\/coordinate followed by y and the yaw angle. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1VertexPose_a613a1420d05db8b8a6972923fd492429}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Write the estimate to an output stream First the x-\/coordinate followed by y and the yaw angle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized via g2o 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} 
+
+\mbox{\hyperlink{classteb__local__planner_1_1VertexTimeDiff}{Vertex\+Time\+Diff}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_add7e73c13d418002cb1c278c7aa7139d}\label{classteb__local__planner_1_1VertexPose_add7e73c13d418002cb1c278c7aa7139d}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!VertexPose@{VertexPose}}
+\index{VertexPose@{VertexPose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{VertexPose()}{VertexPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::\+Vertex\+Pose (\begin{DoxyParamCaption}\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_aeb9f6fc43f34bb7f210f8140a17b8ded}\label{classteb__local__planner_1_1VertexPose_aeb9f6fc43f34bb7f210f8140a17b8ded}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!VertexPose@{VertexPose}}
+\index{VertexPose@{VertexPose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{VertexPose()}{VertexPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::\+Vertex\+Pose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{pose,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using a given \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} 
+
+
+\begin{DoxyParams}{参数}
+{\em pose} & \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} defining the pose \mbox{[}x, y, angle\+\_\+rad\mbox{]} \\
+\hline
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a770f58dce9d26fae0337e8cff64953e8}\label{classteb__local__planner_1_1VertexPose_a770f58dce9d26fae0337e8cff64953e8}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!VertexPose@{VertexPose}}
+\index{VertexPose@{VertexPose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{VertexPose()}{VertexPose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::\+Vertex\+Pose (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{position,  }\item[{double}]{theta,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using a given 2D position vector and orientation 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & Eigen\+::\+Vector2d containing x and y coordinates \\
+\hline
+{\em theta} & yaw-\/angle \\
+\hline
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a846ac1e94967ed8a5fe39b1761871093}\label{classteb__local__planner_1_1VertexPose_a846ac1e94967ed8a5fe39b1761871093}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!VertexPose@{VertexPose}}
+\index{VertexPose@{VertexPose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{VertexPose()}{VertexPose()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::\+Vertex\+Pose (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{theta,  }\item[{bool}]{fixed = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct pose using single components x, y, and the yaw angle 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate \\
+\hline
+{\em y} & y-\/coordinate \\
+\hline
+{\em theta} & yaw angle in rad \\
+\hline
+{\em fixed} & if {\ttfamily true}, this vertex is considered fixed during optimization \mbox{[}default\+: {\ttfamily false}\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a94c1cb5ea15293fec6cb183218607278}\label{classteb__local__planner_1_1VertexPose_a94c1cb5ea15293fec6cb183218607278}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!oplusImpl@{oplusImpl}}
+\index{oplusImpl@{oplusImpl}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{oplusImpl()}{oplusImpl()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::oplus\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Define the update increment $ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $. A simple addition for the position. The angle is first added to the previous estimated angle and afterwards normalized to the interval $ [-\pi \pi] $ 
+
+
+\begin{DoxyParams}{参数}
+{\em update} & increment that should be added to the previous esimate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a0c8cbabe5c33e10c81e023f954568839}\label{classteb__local__planner_1_1VertexPose_a0c8cbabe5c33e10c81e023f954568839}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!pose@{pose}}
+\index{pose@{pose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{pose()}{pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the pose 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+reference to the \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a3f7d8a72e7fe760123c1fbde66374d1c}\label{classteb__local__planner_1_1VertexPose_a3f7d8a72e7fe760123c1fbde66374d1c}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!pose@{pose}}
+\index{pose@{pose}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{pose()}{pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}}\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the pose (read-\/only) 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+const reference to the \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} estimate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a4f7d908421b83db853820b1713e1eaa4}\label{classteb__local__planner_1_1VertexPose_a4f7d908421b83db853820b1713e1eaa4}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!position@{position}}
+\index{position@{position}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the 2D position part 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+reference to the 2D position part 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_ad4d8f97341c461bf915d4ac4fa72a48f}\label{classteb__local__planner_1_1VertexPose_ad4d8f97341c461bf915d4ac4fa72a48f}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!position@{position}}
+\index{position@{position}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the 2D position part (read-\/only) 
+
+\begin{DoxySeeAlso}{参见}
+estimate 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{返回}
+const reference to the 2D position part 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a86177ac034501cc431359e4ab5a3bc21}\label{classteb__local__planner_1_1VertexPose_a86177ac034501cc431359e4ab5a3bc21}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!read@{read}}
+\index{read@{read}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Read an estimate from an input stream. First the x-\/coordinate followed by y and the yaw angle. 
+
+
+\begin{DoxyParams}{参数}
+{\em is} & input stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+always {\ttfamily true} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a061dd3dc688ca79f009465982985c1df}\label{classteb__local__planner_1_1VertexPose_a061dd3dc688ca79f009465982985c1df}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!theta@{theta}}
+\index{theta@{theta}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the orientation part (yaw angle) of the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_af112d283f8c0aa1a3b9049afed970388}\label{classteb__local__planner_1_1VertexPose_af112d283f8c0aa1a3b9049afed970388}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!theta@{theta}}
+\index{theta@{theta}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{theta()}{theta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the orientation part (yaw angle) of the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the yaw angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a613a1420d05db8b8a6972923fd492429}\label{classteb__local__planner_1_1VertexPose_a613a1420d05db8b8a6972923fd492429}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!write@{write}}
+\index{write@{write}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Write the estimate to an output stream First the x-\/coordinate followed by y and the yaw angle. 
+
+
+\begin{DoxyParams}{参数}
+{\em os} & output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if the export was successful, otherwise {\ttfamily false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a10ab23ac2ac3a7b44524c6f6c2356d66}\label{classteb__local__planner_1_1VertexPose_a10ab23ac2ac3a7b44524c6f6c2356d66}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!x@{x}}
+\index{x@{x}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the x-\/coordinate the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the x-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_a34045ca3f9d3c5cfe70a56a5a1476d9c}\label{classteb__local__planner_1_1VertexPose_a34045ca3f9d3c5cfe70a56a5a1476d9c}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!x@{x}}
+\index{x@{x}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{x()}{x()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the x-\/coordinate the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the x-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_ad8cc8f5c9c10ac7ab585143bcba0f52d}\label{classteb__local__planner_1_1VertexPose_ad8cc8f5c9c10ac7ab585143bcba0f52d}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!y@{y}}
+\index{y@{y}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the y-\/coordinate the pose 
+
+\begin{DoxyReturn}{返回}
+reference to the y-\/coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classteb__local__planner_1_1VertexPose_af736773c0723ddbb38089f150ea78fce}\label{classteb__local__planner_1_1VertexPose_af736773c0723ddbb38089f150ea78fce}} 
+\index{teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}!y@{y}}
+\index{y@{y}!teb\_local\_planner::VertexPose@{teb\_local\_planner::VertexPose}}
+\doxysubsubsection{\texorpdfstring{y()}{y()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& teb\+\_\+local\+\_\+planner\+::\+Vertex\+Pose\+::y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the y-\/coordinate the pose (read-\/only) 
+
+\begin{DoxyReturn}{返回}
+const reference to the y-\/coordinate 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/vertex\+\_\+pose.\+h\end{DoxyCompactItemize}

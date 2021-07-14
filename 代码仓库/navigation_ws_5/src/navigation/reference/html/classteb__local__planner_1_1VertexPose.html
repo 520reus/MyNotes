@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::VertexPose类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::VertexPose类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized via g2o  
+ <a href="classteb__local__planner_1_1VertexPose.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="vertex__pose_8h_source.html">vertex_pose.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::VertexPose 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1VertexPose.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:add7e73c13d418002cb1c278c7aa7139d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#add7e73c13d418002cb1c278c7aa7139d">VertexPose</a> (bool fixed=false)</td></tr>
+<tr class="memdesc:add7e73c13d418002cb1c278c7aa7139d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor  <a href="classteb__local__planner_1_1VertexPose.html#add7e73c13d418002cb1c278c7aa7139d">更多...</a><br /></td></tr>
+<tr class="separator:add7e73c13d418002cb1c278c7aa7139d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9f6fc43f34bb7f210f8140a17b8ded"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#aeb9f6fc43f34bb7f210f8140a17b8ded">VertexPose</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;<a class="el" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>, bool fixed=false)</td></tr>
+<tr class="memdesc:aeb9f6fc43f34bb7f210f8140a17b8ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct pose using a given <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a>  <a href="classteb__local__planner_1_1VertexPose.html#aeb9f6fc43f34bb7f210f8140a17b8ded">更多...</a><br /></td></tr>
+<tr class="separator:aeb9f6fc43f34bb7f210f8140a17b8ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770f58dce9d26fae0337e8cff64953e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a770f58dce9d26fae0337e8cff64953e8">VertexPose</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;<a class="el" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>, double <a class="el" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>, bool fixed=false)</td></tr>
+<tr class="memdesc:a770f58dce9d26fae0337e8cff64953e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct pose using a given 2D position vector and orientation  <a href="classteb__local__planner_1_1VertexPose.html#a770f58dce9d26fae0337e8cff64953e8">更多...</a><br /></td></tr>
+<tr class="separator:a770f58dce9d26fae0337e8cff64953e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846ac1e94967ed8a5fe39b1761871093"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a846ac1e94967ed8a5fe39b1761871093">VertexPose</a> (double <a class="el" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">x</a>, double <a class="el" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">y</a>, double <a class="el" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>, bool fixed=false)</td></tr>
+<tr class="memdesc:a846ac1e94967ed8a5fe39b1761871093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct pose using single components x, y, and the yaw angle  <a href="classteb__local__planner_1_1VertexPose.html#a846ac1e94967ed8a5fe39b1761871093">更多...</a><br /></td></tr>
+<tr class="separator:a846ac1e94967ed8a5fe39b1761871093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b1cc3b7ac9d5ee6922ceef3190dc46"><td class="memItemLeft" align="right" valign="top"><a id="aa9b1cc3b7ac9d5ee6922ceef3190dc46"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#aa9b1cc3b7ac9d5ee6922ceef3190dc46">~VertexPose</a> ()</td></tr>
+<tr class="memdesc:aa9b1cc3b7ac9d5ee6922ceef3190dc46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructs the <a class="el" href="classteb__local__planner_1_1VertexPose.html" title="This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...">VertexPose</a> <br /></td></tr>
+<tr class="separator:aa9b1cc3b7ac9d5ee6922ceef3190dc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8cbabe5c33e10c81e023f954568839"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a> ()</td></tr>
+<tr class="memdesc:a0c8cbabe5c33e10c81e023f954568839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the pose  <a href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">更多...</a><br /></td></tr>
+<tr class="separator:a0c8cbabe5c33e10c81e023f954568839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7d8a72e7fe760123c1fbde66374d1c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a3f7d8a72e7fe760123c1fbde66374d1c">pose</a> () const</td></tr>
+<tr class="memdesc:a3f7d8a72e7fe760123c1fbde66374d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the pose (read-only)  <a href="classteb__local__planner_1_1VertexPose.html#a3f7d8a72e7fe760123c1fbde66374d1c">更多...</a><br /></td></tr>
+<tr class="separator:a3f7d8a72e7fe760123c1fbde66374d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7d908421b83db853820b1713e1eaa4"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a> ()</td></tr>
+<tr class="memdesc:a4f7d908421b83db853820b1713e1eaa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the 2D position part  <a href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">更多...</a><br /></td></tr>
+<tr class="separator:a4f7d908421b83db853820b1713e1eaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d8f97341c461bf915d4ac4fa72a48f"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#ad4d8f97341c461bf915d4ac4fa72a48f">position</a> () const</td></tr>
+<tr class="memdesc:ad4d8f97341c461bf915d4ac4fa72a48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the 2D position part (read-only)  <a href="classteb__local__planner_1_1VertexPose.html#ad4d8f97341c461bf915d4ac4fa72a48f">更多...</a><br /></td></tr>
+<tr class="separator:ad4d8f97341c461bf915d4ac4fa72a48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ab23ac2ac3a7b44524c6f6c2356d66"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">x</a> ()</td></tr>
+<tr class="memdesc:a10ab23ac2ac3a7b44524c6f6c2356d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the x-coordinate the pose  <a href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">更多...</a><br /></td></tr>
+<tr class="separator:a10ab23ac2ac3a7b44524c6f6c2356d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34045ca3f9d3c5cfe70a56a5a1476d9c"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a34045ca3f9d3c5cfe70a56a5a1476d9c">x</a> () const</td></tr>
+<tr class="memdesc:a34045ca3f9d3c5cfe70a56a5a1476d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the x-coordinate the pose (read-only)  <a href="classteb__local__planner_1_1VertexPose.html#a34045ca3f9d3c5cfe70a56a5a1476d9c">更多...</a><br /></td></tr>
+<tr class="separator:a34045ca3f9d3c5cfe70a56a5a1476d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cc8f5c9c10ac7ab585143bcba0f52d"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">y</a> ()</td></tr>
+<tr class="memdesc:ad8cc8f5c9c10ac7ab585143bcba0f52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the y-coordinate the pose  <a href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">更多...</a><br /></td></tr>
+<tr class="separator:ad8cc8f5c9c10ac7ab585143bcba0f52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af736773c0723ddbb38089f150ea78fce"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#af736773c0723ddbb38089f150ea78fce">y</a> () const</td></tr>
+<tr class="memdesc:af736773c0723ddbb38089f150ea78fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the y-coordinate the pose (read-only)  <a href="classteb__local__planner_1_1VertexPose.html#af736773c0723ddbb38089f150ea78fce">更多...</a><br /></td></tr>
+<tr class="separator:af736773c0723ddbb38089f150ea78fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061dd3dc688ca79f009465982985c1df"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a> ()</td></tr>
+<tr class="memdesc:a061dd3dc688ca79f009465982985c1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the orientation part (yaw angle) of the pose  <a href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">更多...</a><br /></td></tr>
+<tr class="separator:a061dd3dc688ca79f009465982985c1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af112d283f8c0aa1a3b9049afed970388"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#af112d283f8c0aa1a3b9049afed970388">theta</a> () const</td></tr>
+<tr class="memdesc:af112d283f8c0aa1a3b9049afed970388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the orientation part (yaw angle) of the pose (read-only)  <a href="classteb__local__planner_1_1VertexPose.html#af112d283f8c0aa1a3b9049afed970388">更多...</a><br /></td></tr>
+<tr class="separator:af112d283f8c0aa1a3b9049afed970388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69132d3bacadc2511680f9619f230b24"><td class="memItemLeft" align="right" valign="top"><a id="a69132d3bacadc2511680f9619f230b24"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a69132d3bacadc2511680f9619f230b24">setToOriginImpl</a> ()</td></tr>
+<tr class="memdesc:a69132d3bacadc2511680f9619f230b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying estimate (2D vector) to zero. <br /></td></tr>
+<tr class="separator:a69132d3bacadc2511680f9619f230b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c1cb5ea15293fec6cb183218607278"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a94c1cb5ea15293fec6cb183218607278">oplusImpl</a> (const double *update)</td></tr>
+<tr class="memdesc:a94c1cb5ea15293fec6cb183218607278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the update increment <img class="formulaInl" alt="$ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $" src="form_24.png"/>. A simple addition for the position. The angle is first added to the previous estimated angle and afterwards normalized to the interval <img class="formulaInl" alt="$ [-\pi \pi] $" src="form_25.png"/>  <a href="classteb__local__planner_1_1VertexPose.html#a94c1cb5ea15293fec6cb183218607278">更多...</a><br /></td></tr>
+<tr class="separator:a94c1cb5ea15293fec6cb183218607278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86177ac034501cc431359e4ab5a3bc21"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a86177ac034501cc431359e4ab5a3bc21">read</a> (std::istream &amp;is)</td></tr>
+<tr class="memdesc:a86177ac034501cc431359e4ab5a3bc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an estimate from an input stream. First the x-coordinate followed by y and the yaw angle.  <a href="classteb__local__planner_1_1VertexPose.html#a86177ac034501cc431359e4ab5a3bc21">更多...</a><br /></td></tr>
+<tr class="separator:a86177ac034501cc431359e4ab5a3bc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613a1420d05db8b8a6972923fd492429"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1VertexPose.html#a613a1420d05db8b8a6972923fd492429">write</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:a613a1420d05db8b8a6972923fd492429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the estimate to an output stream First the x-coordinate followed by y and the yaw angle.  <a href="classteb__local__planner_1_1VertexPose.html#a613a1420d05db8b8a6972923fd492429">更多...</a><br /></td></tr>
+<tr class="separator:a613a1420d05db8b8a6972923fd492429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized via g2o </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1VertexTimeDiff.html" title="This class stores and wraps a time difference  into a vertex that can be optimized via g2o">VertexTimeDiff</a> </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="add7e73c13d418002cb1c278c7aa7139d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7e73c13d418002cb1c278c7aa7139d">&#9670;&nbsp;</a></span>VertexPose() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::VertexPose::VertexPose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fixed</td><td>if <code>true</code>, this vertex is considered fixed during optimization [default: <code>false</code>] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb9f6fc43f34bb7f210f8140a17b8ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9f6fc43f34bb7f210f8140a17b8ded">&#9670;&nbsp;</a></span>VertexPose() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::VertexPose::VertexPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct pose using a given <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> defining the pose [x, y, angle_rad] </td></tr>
+    <tr><td class="paramname">fixed</td><td>if <code>true</code>, this vertex is considered fixed during optimization [default: <code>false</code>] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a770f58dce9d26fae0337e8cff64953e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770f58dce9d26fae0337e8cff64953e8">&#9670;&nbsp;</a></span>VertexPose() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::VertexPose::VertexPose </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct pose using a given 2D position vector and orientation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Eigen::Vector2d containing x and y coordinates </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw-angle </td></tr>
+    <tr><td class="paramname">fixed</td><td>if <code>true</code>, this vertex is considered fixed during optimization [default: <code>false</code>] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a846ac1e94967ed8a5fe39b1761871093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846ac1e94967ed8a5fe39b1761871093">&#9670;&nbsp;</a></span>VertexPose() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::VertexPose::VertexPose </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct pose using single components x, y, and the yaw angle </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw angle in rad </td></tr>
+    <tr><td class="paramname">fixed</td><td>if <code>true</code>, this vertex is considered fixed during optimization [default: <code>false</code>] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a94c1cb5ea15293fec6cb183218607278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c1cb5ea15293fec6cb183218607278">&#9670;&nbsp;</a></span>oplusImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::VertexPose::oplusImpl </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>update</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the update increment <img class="formulaInl" alt="$ \mathbf{x}_{k+1} = \mathbf{x}_k + \Delta \mathbf{x} $" src="form_24.png"/>. A simple addition for the position. The angle is first added to the previous estimated angle and afterwards normalized to the interval <img class="formulaInl" alt="$ [-\pi \pi] $" src="form_25.png"/> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update</td><td>increment that should be added to the previous esimate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c8cbabe5c33e10c81e023f954568839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8cbabe5c33e10c81e023f954568839">&#9670;&nbsp;</a></span>pose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; teb_local_planner::VertexPose::pose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the pose </p>
+<dl class="section see"><dt>参见</dt><dd>estimate </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>reference to the <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> estimate </dd></dl>
+
+</div>
+</div>
+<a id="a3f7d8a72e7fe760123c1fbde66374d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7d8a72e7fe760123c1fbde66374d1c">&#9670;&nbsp;</a></span>pose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; teb_local_planner::VertexPose::pose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the pose (read-only) </p>
+<dl class="section see"><dt>参见</dt><dd>estimate </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>const reference to the <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> estimate </dd></dl>
+
+</div>
+</div>
+<a id="a4f7d908421b83db853820b1713e1eaa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f7d908421b83db853820b1713e1eaa4">&#9670;&nbsp;</a></span>position() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector2d&amp; teb_local_planner::VertexPose::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the 2D position part </p>
+<dl class="section see"><dt>参见</dt><dd>estimate </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>reference to the 2D position part </dd></dl>
+
+</div>
+</div>
+<a id="ad4d8f97341c461bf915d4ac4fa72a48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d8f97341c461bf915d4ac4fa72a48f">&#9670;&nbsp;</a></span>position() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Vector2d&amp; teb_local_planner::VertexPose::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the 2D position part (read-only) </p>
+<dl class="section see"><dt>参见</dt><dd>estimate </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>const reference to the 2D position part </dd></dl>
+
+</div>
+</div>
+<a id="a86177ac034501cc431359e4ab5a3bc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86177ac034501cc431359e4ab5a3bc21">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::VertexPose::read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read an estimate from an input stream. First the x-coordinate followed by y and the yaw angle. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>input stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>always <code>true</code> </dd></dl>
+
+</div>
+</div>
+<a id="a061dd3dc688ca79f009465982985c1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061dd3dc688ca79f009465982985c1df">&#9670;&nbsp;</a></span>theta() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double&amp; teb_local_planner::VertexPose::theta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the orientation part (yaw angle) of the pose </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the yaw angle </dd></dl>
+
+</div>
+</div>
+<a id="af112d283f8c0aa1a3b9049afed970388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af112d283f8c0aa1a3b9049afed970388">&#9670;&nbsp;</a></span>theta() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double&amp; teb_local_planner::VertexPose::theta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the orientation part (yaw angle) of the pose (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const reference to the yaw angle </dd></dl>
+
+</div>
+</div>
+<a id="a613a1420d05db8b8a6972923fd492429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613a1420d05db8b8a6972923fd492429">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::VertexPose::write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the estimate to an output stream First the x-coordinate followed by y and the yaw angle. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if the export was successful, otherwise <code>false</code> </dd></dl>
+
+</div>
+</div>
+<a id="a10ab23ac2ac3a7b44524c6f6c2356d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ab23ac2ac3a7b44524c6f6c2356d66">&#9670;&nbsp;</a></span>x() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double&amp; teb_local_planner::VertexPose::x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the x-coordinate the pose </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the x-coordinate </dd></dl>
+
+</div>
+</div>
+<a id="a34045ca3f9d3c5cfe70a56a5a1476d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34045ca3f9d3c5cfe70a56a5a1476d9c">&#9670;&nbsp;</a></span>x() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double&amp; teb_local_planner::VertexPose::x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the x-coordinate the pose (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const reference to the x-coordinate </dd></dl>
+
+</div>
+</div>
+<a id="ad8cc8f5c9c10ac7ab585143bcba0f52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8cc8f5c9c10ac7ab585143bcba0f52d">&#9670;&nbsp;</a></span>y() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double&amp; teb_local_planner::VertexPose::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the y-coordinate the pose </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the y-coordinate </dd></dl>
+
+</div>
+</div>
+<a id="af736773c0723ddbb38089f150ea78fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af736773c0723ddbb38089f150ea78fce">&#9670;&nbsp;</a></span>y() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double&amp; teb_local_planner::VertexPose::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the y-coordinate the pose (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const reference to the y-coordinate </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>teb_local_planner/include/teb_local_planner/g2o_types/<a class="el" href="vertex__pose_8h_source.html">vertex_pose.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

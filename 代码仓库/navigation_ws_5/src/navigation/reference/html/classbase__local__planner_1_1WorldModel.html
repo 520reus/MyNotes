@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: base_local_planner::WorldModel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>base_local_planner</b></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1WorldModel.html">WorldModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">base_local_planner::WorldModel类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>An interface the trajectory controller uses to interact with the world regardless of the underlying world model.  
+ <a href="classbase__local__planner_1_1WorldModel.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="world__model_8h_source.html">world_model.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::WorldModel 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classbase__local__planner_1_1WorldModel.png" usemap="#base_5Flocal_5Fplanner::WorldModel_map" alt=""/>
+  <map id="base_5Flocal_5Fplanner::WorldModel_map" name="base_5Flocal_5Fplanner::WorldModel_map">
+<area href="classbase__local__planner_1_1CostmapModel.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="base_local_planner::CostmapModel" shape="rect" coords="0,56,220,80"/>
+<area href="classbase__local__planner_1_1PointGrid.html" title="A class that implements the WorldModel interface to provide free-space collision checks for the traje..." alt="base_local_planner::PointGrid" shape="rect" coords="230,56,450,80"/>
+<area href="classbase__local__planner_1_1VoxelGridModel.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="base_local_planner::VoxelGridModel" shape="rect" coords="460,56,680,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1WorldModel.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1WorldModel.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memItemLeft" align="right" valign="top"><a id="ac7e8dc9c77a2dd2fa77f5a27d812fd43"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>footprintCost</b> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1WorldModel.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1WorldModel.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c45611143fde55c4a2efb4d078471d"><td class="memItemLeft" align="right" valign="top"><a id="a87c45611143fde55c4a2efb4d078471d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1WorldModel.html#a87c45611143fde55c4a2efb4d078471d">~WorldModel</a> ()</td></tr>
+<tr class="memdesc:a87c45611143fde55c4a2efb4d078471d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement a destructor <br /></td></tr>
+<tr class="separator:a87c45611143fde55c4a2efb4d078471d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An interface the trajectory controller uses to interact with the world regardless of the underlying world model. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a36d4c808bc441e2b87b0ac038099993a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d4c808bc441e2b87b0ac038099993a">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subclass will implement this method to check a footprint at a given position and orientation for legality in the world </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise: -1 if footprint covers at least a lethal obstacle cell, or -2 if footprint covers at least a no-information cell, or -3 if footprint is partially or totally outside of the map </dd></dl>
+
+<p>在 <a class="el" href="classbase__local__planner_1_1VoxelGridModel.html#aa6bc3668327838938f7881a6f553b521">base_local_planner::VoxelGridModel</a>, <a class="el" href="classbase__local__planner_1_1PointGrid.html#ad1d2b34fc12c74b22c9693865b5f2d9e">base_local_planner::PointGrid</a> , 以及 <a class="el" href="classbase__local__planner_1_1CostmapModel.html#a8a6c30a640dc5046a483bc109f0d99b1">base_local_planner::CostmapModel</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a358fe0d75fefe46dda134ee6e3305f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358fe0d75fefe46dda134ee6e3305f71">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>extra</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="world__model_8h_source.html">world_model.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

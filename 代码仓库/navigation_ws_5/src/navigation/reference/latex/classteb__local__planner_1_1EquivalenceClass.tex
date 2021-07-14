@@ -1,0 +1,105 @@
+\hypertarget{classteb__local__planner_1_1EquivalenceClass}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Equivalence\+Class类 参考}
+\label{classteb__local__planner_1_1EquivalenceClass}\index{teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}}
+
+
+Abstract class that defines an interface for computing and comparing equivalence classes  
+
+
+
+
+{\ttfamily \#include $<$equivalence\+\_\+relations.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Equivalence\+Class 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1EquivalenceClass}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EquivalenceClass_a0434d26c2fabd9eaac01271db88bbac3}\label{classteb__local__planner_1_1EquivalenceClass_a0434d26c2fabd9eaac01271db88bbac3}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_a0434d26c2fabd9eaac01271db88bbac3}{Equivalence\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EquivalenceClass_ae21516475709fe52963f7df751972de2}\label{classteb__local__planner_1_1EquivalenceClass_ae21516475709fe52963f7df751972de2}} 
+virtual \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_ae21516475709fe52963f7df751972de2}{$\sim$\+Equivalence\+Class}} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_a7e289b0f8bd72e2f82f4efa480e5803f}{is\+Equal}} (const \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} \&other) const =0
+\begin{DoxyCompactList}\small\item\em Check if two candidate classes are equivalent \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_adb6d033b42cf00ee5c62e47c9c12819c}{is\+Valid}} () const =0
+\begin{DoxyCompactList}\small\item\em Check if the equivalence value is detected correctly \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass_ac688c64b4a1bbdbb25313a6bce01751f}{is\+Reasonable}} () const =0
+\begin{DoxyCompactList}\small\item\em Check if the trajectory is non-\/looping around an obstacle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Abstract class that defines an interface for computing and comparing equivalence classes 
+
+Equivalence relations are utilized in order to test if two trajectories are belonging to the same equivalence class w.\+r.\+t. the current obstacle configurations. A common equivalence relation is the concept of homotopy classes. All trajectories belonging to the same homotopy class can CONTINUOUSLY be deformed into each other without intersecting any obstacle. Hence they likely share the same local minimum after invoking (local) trajectory optimization. A weaker equivalence relation is defined by the concept of homology classes (e.\+g. refer to \mbox{\hyperlink{classteb__local__planner_1_1HSignature}{HSignature}}).
+
+Each \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} object (or subclass) stores a candidate value which might be compared to another \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} object.
+
+\begin{DoxyRemark}{备注}
+Currently, the compute\+Equivalence\+Class method is not available in the generic interface \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}}. Call the \char`\"{}compute\char`\"{}-\/methods directly on the subclass. 
+\end{DoxyRemark}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1EquivalenceClass_a7e289b0f8bd72e2f82f4efa480e5803f}\label{classteb__local__planner_1_1EquivalenceClass_a7e289b0f8bd72e2f82f4efa480e5803f}} 
+\index{teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1EquivalenceClass}{Equivalence\+Class}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if two candidate classes are equivalent 
+
+
+\begin{DoxyParams}{参数}
+{\em other} & The other equivalence class to test with \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a0e4b1416456fd96d65a22aa5293280f3}{teb\+\_\+local\+\_\+planner\+::\+HSignature3d}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HSignature_a0c4b0a4ab7052e46e36b37d4c3c6a89b}{teb\+\_\+local\+\_\+planner\+::\+HSignature}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1EquivalenceClass_ac688c64b4a1bbdbb25313a6bce01751f}\label{classteb__local__planner_1_1EquivalenceClass_ac688c64b4a1bbdbb25313a6bce01751f}} 
+\index{teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}!isReasonable@{isReasonable}}
+\index{isReasonable@{isReasonable}!teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}}
+\doxysubsubsection{\texorpdfstring{isReasonable()}{isReasonable()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class\+::is\+Reasonable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the trajectory is non-\/looping around an obstacle 
+
+\begin{DoxyReturn}{返回}
+Returns false, if the trajectory loops around an obstacle 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a20174912c0ce8a6c342681da959d3845}{teb\+\_\+local\+\_\+planner\+::\+HSignature3d}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HSignature_aa3833e5b8709f2327392d2f6d6db62a2}{teb\+\_\+local\+\_\+planner\+::\+HSignature}} 内被实现.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1EquivalenceClass_adb6d033b42cf00ee5c62e47c9c12819c}\label{classteb__local__planner_1_1EquivalenceClass_adb6d033b42cf00ee5c62e47c9c12819c}} 
+\index{teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}!isValid@{isValid}}
+\index{isValid@{isValid}!teb\_local\_planner::EquivalenceClass@{teb\_local\_planner::EquivalenceClass}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Equivalence\+Class\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the equivalence value is detected correctly 
+
+\begin{DoxyReturn}{返回}
+Returns false, if the equivalence class detection failed, e.\+g. if nan-\/ or inf values occur. 
+\end{DoxyReturn}
+
+
+在 \mbox{\hyperlink{classteb__local__planner_1_1HSignature3d_a7d9b77c526c10768ecfa028c3fb26942}{teb\+\_\+local\+\_\+planner\+::\+HSignature3d}} , 以及 \mbox{\hyperlink{classteb__local__planner_1_1HSignature_a81b855d2ec4fd59685e601c9cc57377e}{teb\+\_\+local\+\_\+planner\+::\+HSignature}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/equivalence\+\_\+relations.\+h\end{DoxyCompactItemize}

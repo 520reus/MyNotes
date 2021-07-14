@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: global_planner::DijkstraExpansion类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>global_planner</b></li><li class="navelem"><a class="el" href="classglobal__planner_1_1DijkstraExpansion.html">DijkstraExpansion</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">global_planner::DijkstraExpansion类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 global_planner::DijkstraExpansion 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classglobal__planner_1_1DijkstraExpansion.png" usemap="#global_5Fplanner::DijkstraExpansion_map" alt=""/>
+  <map id="global_5Fplanner::DijkstraExpansion_map" name="global_5Fplanner::DijkstraExpansion_map">
+<area href="classglobal__planner_1_1Expander.html" alt="global_planner::Expander" shape="rect" coords="0,0,202,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a58e6885deccbdab45ecda172bb74c702"><td class="memItemLeft" align="right" valign="top"><a id="a58e6885deccbdab45ecda172bb74c702"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DijkstraExpansion</b> (<a class="el" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a58e6885deccbdab45ecda172bb74c702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1102e169bb79dac31de8fe5ca5ace39b"><td class="memItemLeft" align="right" valign="top"><a id="a1102e169bb79dac31de8fe5ca5ace39b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>calculatePotentials</b> (unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)</td></tr>
+<tr class="separator:a1102e169bb79dac31de8fe5ca5ace39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d286126b2c478fc55c5e995e1deff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1DijkstraExpansion.html#a7d286126b2c478fc55c5e995e1deff29">setSize</a> (int nx, int ny)</td></tr>
+<tr class="memdesc:a7d286126b2c478fc55c5e995e1deff29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classglobal__planner_1_1DijkstraExpansion.html#a7d286126b2c478fc55c5e995e1deff29">更多...</a><br /></td></tr>
+<tr class="separator:a7d286126b2c478fc55c5e995e1deff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec5a9b73f4a8680adc8e406bc18b254"><td class="memItemLeft" align="right" valign="top"><a id="a2ec5a9b73f4a8680adc8e406bc18b254"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNeutralCost</b> (unsigned char neutral_cost)</td></tr>
+<tr class="separator:a2ec5a9b73f4a8680adc8e406bc18b254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba5aa2bff86fd1b18b24163379d9e2b"><td class="memItemLeft" align="right" valign="top"><a id="a5ba5aa2bff86fd1b18b24163379d9e2b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPreciseStart</b> (bool precise)</td></tr>
+<tr class="separator:a5ba5aa2bff86fd1b18b24163379d9e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classglobal__planner_1_1Expander"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classglobal__planner_1_1Expander')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classglobal__planner_1_1Expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a8ccb306a28ea41d2bfd9202d4b16f26a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Expander</b> (<a class="el" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="aee9c360fb6316c538bbadcccc6bf98b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLethalCost</b> (unsigned char lethal_cost)</td></tr>
+<tr class="separator:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a386d3239f3aaa7a5e583bad9893a8ca1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNeutralCost</b> (unsigned char neutral_cost)</td></tr>
+<tr class="separator:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a53a3174aef024f0a4d01ac3fa7a74489"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFactor</b> (float factor)</td></tr>
+<tr class="separator:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a1dcbac968719e195552d063c4314618e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setHasUnknown</b> (bool unknown)</td></tr>
+<tr class="separator:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a02060106b60c2661cb1f1878a151a40e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clearEndpoint</b> (unsigned char *costs, float *potential, int gx, int gy, int s)</td></tr>
+<tr class="separator:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classglobal__planner_1_1Expander"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classglobal__planner_1_1Expander')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classglobal__planner_1_1Expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="ab9ed0e500049774014960dfb68f1e50c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>toIndex</b> (int x, int y)</td></tr>
+<tr class="separator:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classglobal__planner_1_1Expander"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classglobal__planner_1_1Expander')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classglobal__planner_1_1Expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a72bbafddd4f838603ebe42cf7fb57cbc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>nx_</b></td></tr>
+<tr class="separator:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a3d1877778a6ed03533dace263d0dbe7e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ny_</b></td></tr>
+<tr class="separator:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1Expander.html#a0538b977e9cd0022810096b79e61e529">ns_</a></td></tr>
+<tr class="separator:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="abbb2fc0fd78f4ae3e8ffad2981629a91"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>unknown_</b></td></tr>
+<tr class="separator:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a044a34d5d5ddd41016afec643cb65d4e"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>lethal_cost_</b></td></tr>
+<tr class="separator:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="aa8941c07a0f50a2e3ce3088f7ecb8e61"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>neutral_cost_</b></td></tr>
+<tr class="separator:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="ad51bd3f97e8d1ca48c357175d723f3f4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>cells_visited_</b></td></tr>
+<tr class="separator:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a999123a5d229a31933a64ba56a4f525d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>factor_</b></td></tr>
+<tr class="separator:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memItemLeft" align="right" valign="top"><a id="a3d991703be557e08056daedd3d872fff"></a>
+<a class="el" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_calc_</b></td></tr>
+<tr class="separator:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1Expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7d286126b2c478fc55c5e995e1deff29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d286126b2c478fc55c5e995e1deff29">&#9670;&nbsp;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::DijkstraExpansion::setSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets or resets the size of the map </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nx</td><td>The x size of the map </td></tr>
+    <tr><td class="paramname">ny</td><td>The y size of the map sets or resets the size of the map </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classglobal__planner_1_1Expander.html#aeeaa60103de1ee71a1969e40a3735094">global_planner::Expander</a> .</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="global__planner_2include_2global__planner_2dijkstra_8h_source.html">dijkstra.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

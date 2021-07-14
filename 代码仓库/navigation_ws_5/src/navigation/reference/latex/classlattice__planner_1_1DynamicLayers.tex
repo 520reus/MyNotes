@@ -1,0 +1,110 @@
+\hypertarget{classlattice__planner_1_1DynamicLayers}{}\doxysection{lattice\+\_\+planner\+::Dynamic\+Layers类 参考}
+\label{classlattice__planner_1_1DynamicLayers}\index{lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}}
+
+
+The \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers}{Dynamic\+Layers}} class defines the plugin interface for the dynamic layers of the dynamic\+\_\+costmap used by the lattice\+\_\+planner.  
+
+
+
+
+{\ttfamily \#include $<$dynamic\+\_\+layers.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers_a4a96d3ad5297b8276720a0cd4a080a0d}{initialize}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$static\+\_\+map, unsigned int max\+\_\+timesteps, ros\+::\+Duration time\+\_\+resolution)=0
+\begin{DoxyCompactList}\small\item\em initialize function for the dynamic layers plugin \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers_a6b6b530fa7a5c89c194b03519e31f821}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em update the dynamic cost map \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers_a213275c13e00f3472b48520dc189e42e}{get\+Cost}} (unsigned int map\+\_\+ix, unsigned int map\+\_\+iy, ros\+::\+Time time)=0
+\begin{DoxyCompactList}\small\item\em get the (dynamic) cost at the requested time \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers_a708d4f9357747923a4408f2915d4ce78}{get\+Cost}} (unsigned int map\+\_\+index, ros\+::\+Time time)=0
+\begin{DoxyCompactList}\small\item\em get the (dynamic) cost at the requested time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicLayers_aa78f6f2a9ca6d9081624d6d0bf2d343b}\label{classlattice__planner_1_1DynamicLayers_aa78f6f2a9ca6d9081624d6d0bf2d343b}} 
+\mbox{\hyperlink{classlattice__planner_1_1DynamicLayers_aa78f6f2a9ca6d9081624d6d0bf2d343b}{Dynamic\+Layers}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+The \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers}{Dynamic\+Layers}} class defines the plugin interface for the dynamic layers of the dynamic\+\_\+costmap used by the lattice\+\_\+planner. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicLayers_a708d4f9357747923a4408f2915d4ce78}\label{classlattice__planner_1_1DynamicLayers_a708d4f9357747923a4408f2915d4ce78}} 
+\index{lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual unsigned int lattice\+\_\+planner\+::\+Dynamic\+Layers\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+index,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the (dynamic) cost at the requested time 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+index} & map index \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+dynamic cost according to the defined time dependent constraints 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicLayers_a213275c13e00f3472b48520dc189e42e}\label{classlattice__planner_1_1DynamicLayers_a213275c13e00f3472b48520dc189e42e}} 
+\index{lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual unsigned int lattice\+\_\+planner\+::\+Dynamic\+Layers\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+ix,  }\item[{unsigned int}]{map\+\_\+iy,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the (dynamic) cost at the requested time 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+ix} & map cell index in x \\
+\hline
+{\em map\+\_\+iy} & map cell index in y \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+dynamic cost according to the defined time dependent constraints 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicLayers_a4a96d3ad5297b8276720a0cd4a080a0d}\label{classlattice__planner_1_1DynamicLayers_a4a96d3ad5297b8276720a0cd4a080a0d}} 
+\index{lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}!initialize@{initialize}}
+\index{initialize@{initialize}!lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void lattice\+\_\+planner\+::\+Dynamic\+Layers\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{static\+\_\+map,  }\item[{unsigned int}]{max\+\_\+timesteps,  }\item[{ros\+::\+Duration}]{time\+\_\+resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+initialize function for the dynamic layers plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em static\+\_\+map} & the static map \\
+\hline
+{\em max\+\_\+timesteps} & maximum number of time steps represented by the dynamic layers \\
+\hline
+{\em time\+\_\+resolution} & time resolution of the dynamic layers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicLayers_a6b6b530fa7a5c89c194b03519e31f821}\label{classlattice__planner_1_1DynamicLayers_a6b6b530fa7a5c89c194b03519e31f821}} 
+\index{lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}!update@{update}}
+\index{update@{update}!lattice\_planner::DynamicLayers@{lattice\_planner::DynamicLayers}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void lattice\+\_\+planner\+::\+Dynamic\+Layers\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update the dynamic cost map 
+
+update is called by the planner right before a new plan is computed. That way the dynamic representation is only updated when needed, not every time a new observation comes in 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/dynamic\+\_\+layers.\+h\end{DoxyCompactItemize}

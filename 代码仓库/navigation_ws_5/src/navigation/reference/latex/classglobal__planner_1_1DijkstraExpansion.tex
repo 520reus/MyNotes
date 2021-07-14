@@ -1,0 +1,55 @@
+\hypertarget{classglobal__planner_1_1DijkstraExpansion}{}\doxysection{global\+\_\+planner\+::Dijkstra\+Expansion类 参考}
+\label{classglobal__planner_1_1DijkstraExpansion}\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+类 global\+\_\+planner\+::Dijkstra\+Expansion 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classglobal__planner_1_1DijkstraExpansion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1DijkstraExpansion_a58e6885deccbdab45ecda172bb74c702}\label{classglobal__planner_1_1DijkstraExpansion_a58e6885deccbdab45ecda172bb74c702}} 
+{\bfseries Dijkstra\+Expansion} (\mbox{\hyperlink{classglobal__planner_1_1PotentialCalculator}{Potential\+Calculator}} $\ast$p\+\_\+calc, int nx, int ny)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1DijkstraExpansion_a1102e169bb79dac31de8fe5ca5ace39b}\label{classglobal__planner_1_1DijkstraExpansion_a1102e169bb79dac31de8fe5ca5ace39b}} 
+bool {\bfseries calculate\+Potentials} (unsigned char $\ast$costs, double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, int cycles, float $\ast$potential)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1DijkstraExpansion_a7d286126b2c478fc55c5e995e1deff29}{set\+Size}} (int nx, int ny)
+\begin{DoxyCompactList}\small\item\em Sets or resets the size of the map \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classglobal__planner_1_1DijkstraExpansion_a2ec5a9b73f4a8680adc8e406bc18b254}\label{classglobal__planner_1_1DijkstraExpansion_a2ec5a9b73f4a8680adc8e406bc18b254}} 
+void {\bfseries set\+Neutral\+Cost} (unsigned char neutral\+\_\+cost)
+\item 
+\mbox{\Hypertarget{classglobal__planner_1_1DijkstraExpansion_a5ba5aa2bff86fd1b18b24163379d9e2b}\label{classglobal__planner_1_1DijkstraExpansion_a5ba5aa2bff86fd1b18b24163379d9e2b}} 
+void {\bfseries set\+Precise\+Start} (bool precise)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1DijkstraExpansion_a7d286126b2c478fc55c5e995e1deff29}\label{classglobal__planner_1_1DijkstraExpansion_a7d286126b2c478fc55c5e995e1deff29}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!setSize@{setSize}}
+\index{setSize@{setSize}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Dijkstra\+Expansion\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets or resets the size of the map 
+
+
+\begin{DoxyParams}{参数}
+{\em nx} & The x size of the map \\
+\hline
+{\em ny} & The y size of the map sets or resets the size of the map \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classglobal__planner_1_1Expander_aeeaa60103de1ee71a1969e40a3735094}{global\+\_\+planner\+::\+Expander}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/dijkstra.\+h\end{DoxyCompactItemize}

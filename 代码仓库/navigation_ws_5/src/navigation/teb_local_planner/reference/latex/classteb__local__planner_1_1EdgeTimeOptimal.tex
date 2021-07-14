@@ -1,0 +1,47 @@
+\hypertarget{classteb__local__planner_1_1EdgeTimeOptimal}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Edge\+Time\+Optimal类 参考}
+\label{classteb__local__planner_1_1EdgeTimeOptimal}\index{teb\_local\_planner::EdgeTimeOptimal@{teb\_local\_planner::EdgeTimeOptimal}}
+
+
+Edge defining the cost function for minimizing transition time of the trajectory.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+time\+\_\+optimal.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Edge\+Time\+Optimal 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classteb__local__planner_1_1EdgeTimeOptimal}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeTimeOptimal_a39d66c52f782da91ac0788bb08549bee}\label{classteb__local__planner_1_1EdgeTimeOptimal_a39d66c52f782da91ac0788bb08549bee}} 
+\mbox{\hyperlink{classteb__local__planner_1_1EdgeTimeOptimal_a39d66c52f782da91ac0788bb08549bee}{Edge\+Time\+Optimal}} ()
+\begin{DoxyCompactList}\small\item\em Construct edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1EdgeTimeOptimal_a5cacf16de6579bb4f8b785a5985399c3}\label{classteb__local__planner_1_1EdgeTimeOptimal_a5cacf16de6579bb4f8b785a5985399c3}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1EdgeTimeOptimal_a5cacf16de6579bb4f8b785a5985399c3}{compute\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Actual cost function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Edge defining the cost function for minimizing transition time of the trajectory. 
+
+The edge depends on a single vertex $ \Delta T_i $ and minimizes\+: ~\newline
+ $ \min \Delta T_i^2 \cdot scale \cdot weight $. ~\newline
+{\itshape scale} is determined using the penalty\+Equality() function, since we experiences good convergence speeds with it. ~\newline
+{\itshape weight} can be set using set\+Information() (something around 1.\+0 seems to be fine). ~\newline
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1TebOptimalPlanner_af23eb93b4e4ff117e18bb60e37eec02c}{Teb\+Optimal\+Planner\+::\+Add\+Edges\+Time\+Optimal}} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{备注}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1BaseTebUnaryEdge_a7be295bcbe7ad6ef8dcaefe11aa1be3f}{set\+Teb\+Config()}} 
+\end{DoxyRemark}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/g2o\+\_\+types/edge\+\_\+time\+\_\+optimal.\+h\end{DoxyCompactItemize}

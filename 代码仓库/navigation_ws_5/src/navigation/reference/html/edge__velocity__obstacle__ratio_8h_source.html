@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity_obstacle_ratio.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_eacc228c05639ef6b40577b79f71225f.html">g2o_types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">edge_velocity_obstacle_ratio.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/optimal_planner.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html">EdgeVelocityObstacleRatio</a> : <span class="keyword">public</span> <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html">BaseTebMultiEdge</a>&lt;2, const Obstacle*&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a93c8065128710ec69ca3417b8dbb569e">   30</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a93c8065128710ec69ca3417b8dbb569e">EdgeVelocityObstacleRatio</a>() :</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a>(nullptr)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// The three vertices are two poses and one time difference</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    this-&gt;resize(3); <span class="comment">// Since we derive from a g2o::BaseMultiEdge, set the desired number of vertices</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a2da97f70fe171ccb6975f749456af05a">   40</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a2da97f70fe171ccb6975f749456af05a">computeError</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ROS_ASSERT_MSG(<a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a> &amp;&amp; _measurement &amp;&amp; <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a>, <span class="stringliteral">&quot;You must call setTebConfig(), setObstacle() and setRobotModel() on EdgeVelocityObstacleRatio()&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>* conf1 = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>*<span class="keyword">&gt;</span>(_vertices[0]);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>* conf2 = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>*<span class="keyword">&gt;</span>(_vertices[1]);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexTimeDiff.html">VertexTimeDiff</a>* deltaT = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexTimeDiff.html">VertexTimeDiff</a>*<span class="keyword">&gt;</span>(_vertices[2]);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> Eigen::Vector2d deltaS = conf2-&gt;estimate().<a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>() - conf1-&gt;estimate().<a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> dist = deltaS.norm();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> angle_diff = g2o::normalize_theta(conf2-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>() - conf1-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a0d1821f67925bb11f4dff771ee3c157f">trajectory</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Trajectory.html#a6db63f26bc0f93766bff91f2deeaded8">exact_arc_length</a> &amp;&amp; angle_diff != 0)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">double</span> radius =  dist/(2*sin(angle_diff/2));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        dist = fabs( angle_diff * radius ); <span class="comment">// actual arg length!</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">double</span> vel = dist / deltaT-&gt;estimate();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    vel *= fast_sigmoid( 100 * (deltaS.x()*cos(conf1-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>()) + deltaS.y()*sin(conf1-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>())) ); <span class="comment">// consider direction</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> omega = angle_diff / deltaT-&gt;estimate();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">double</span> dist_to_obstacle = <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a>-&gt;<a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#ae6336b7e84aa421a1a54c29fd36c1090">calculateDistance</a>(conf1-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>(), _measurement);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">double</span> ratio;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (dist_to_obstacle &lt; cfg_-&gt;obstacles.obstacle_proximity_lower_bound)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      ratio = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dist_to_obstacle &gt; <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#ad5a39a721cddad0e4092277938cad072">obstacle_proximity_upper_bound</a>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      ratio = 1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      ratio = (dist_to_obstacle - <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#a528b6f8fd4495b946e9e86118dcf4037">obstacle_proximity_lower_bound</a>) /</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      (<a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#ad5a39a721cddad0e4092277938cad072">obstacle_proximity_upper_bound</a> - <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#a528b6f8fd4495b946e9e86118dcf4037">obstacle_proximity_lower_bound</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ratio *= <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#aeec2ad6b09a10e3eb62935e72a7a6537">obstacle_proximity_ratio_max_vel</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> max_vel_fwd = ratio * <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a092492e3bcf83ddd13dc311553902a4b">robot</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Robot.html#a3a2f449cee6d833e59ce7aed22ac4793">max_vel_x</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> max_omega = ratio * <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a092492e3bcf83ddd13dc311553902a4b">robot</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Robot.html#ac2faa65c4fd3d77656f6b67ff571bb7c">max_vel_theta</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    _error[0] = penaltyBoundToInterval(vel, max_vel_fwd, 0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    _error[1] = penaltyBoundToInterval(omega, max_omega, 0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ROS_ASSERT_MSG(std::isfinite(_error[0]) || std::isfinite(_error[1]), <span class="stringliteral">&quot;EdgeVelocityObstacleRatio::computeError() _error[0]=%f , _error[1]=%f\n&quot;</span>,_error[0],_error[1]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a435be15bb82f71d8fae1a2a4d13fa8e3">   86</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a435be15bb82f71d8fae1a2a4d13fa8e3">setObstacle</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a>* obstacle)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    _measurement = obstacle;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a1fe938c1c9abd186957b9db0441cd2cf">   95</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a1fe938c1c9abd186957b9db0441cd2cf">setRobotModel</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* robot_model)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a> = robot_model;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a472e85704b1d145c913fcb0d694059ab">  106</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a472e85704b1d145c913fcb0d694059ab">setParameters</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>&amp; cfg, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* robot_model, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a>* obstacle)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">cfg_</a> = &amp;cfg;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a> = robot_model;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    _measurement = obstacle;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">  115</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* <a class="code" href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">robot_model_</a>; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseRobotFootprintModel_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseRobotFootprintModel.html">teb_local_planner::BaseRobotFootprintModel</a></div><div class="ttdoc">Abstract class that defines the interface for robot footprint/contour models</div><div class="ttdef"><b>Definition:</b> robot_footprint_model.h:59</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseRobotFootprintModel_html_ae6336b7e84aa421a1a54c29fd36c1090"><div class="ttname"><a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#ae6336b7e84aa421a1a54c29fd36c1090">teb_local_planner::BaseRobotFootprintModel::calculateDistance</a></div><div class="ttdeci">virtual double calculateDistance(const PoseSE2 &amp;current_pose, const Obstacle *obstacle) const =0</div><div class="ttdoc">Calculate the distance between the robot and an obstacle</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebMultiEdge_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebMultiEdge.html">teb_local_planner::BaseTebMultiEdge</a></div><div class="ttdoc">Base edge connecting two vertices in the TEB optimization problem</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:250</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebMultiEdge_html_a01095f3c4e80b245c3dbc637ebe2d742"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebMultiEdge.html#a01095f3c4e80b245c3dbc637ebe2d742">teb_local_planner::BaseTebMultiEdge&lt; 2, const Obstacle * &gt;::cfg_</a></div><div class="ttdeci">const TebConfig * cfg_</div><div class="ttdoc">Store TebConfig class for parameters</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:333</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html">teb_local_planner::EdgeVelocityObstacleRatio</a></div><div class="ttdoc">Edge defining the cost function for keeping a minimum distance from obstacles.</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:24</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a1fe938c1c9abd186957b9db0441cd2cf"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a1fe938c1c9abd186957b9db0441cd2cf">teb_local_planner::EdgeVelocityObstacleRatio::setRobotModel</a></div><div class="ttdeci">void setRobotModel(const BaseRobotFootprintModel *robot_model)</div><div class="ttdoc">Set pointer to the robot model</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:95</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a2da97f70fe171ccb6975f749456af05a"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a2da97f70fe171ccb6975f749456af05a">teb_local_planner::EdgeVelocityObstacleRatio::computeError</a></div><div class="ttdeci">void computeError()</div><div class="ttdoc">Actual cost function</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:40</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a3d86890a6c163103c172825ee0d08eff"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a3d86890a6c163103c172825ee0d08eff">teb_local_planner::EdgeVelocityObstacleRatio::robot_model_</a></div><div class="ttdeci">const BaseRobotFootprintModel * robot_model_</div><div class="ttdoc">Store pointer to robot_model</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:115</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a435be15bb82f71d8fae1a2a4d13fa8e3"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a435be15bb82f71d8fae1a2a4d13fa8e3">teb_local_planner::EdgeVelocityObstacleRatio::setObstacle</a></div><div class="ttdeci">void setObstacle(const Obstacle *obstacle)</div><div class="ttdoc">Set pointer to associated obstacle for the underlying cost function</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:86</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a472e85704b1d145c913fcb0d694059ab"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a472e85704b1d145c913fcb0d694059ab">teb_local_planner::EdgeVelocityObstacleRatio::setParameters</a></div><div class="ttdeci">void setParameters(const TebConfig &amp;cfg, const BaseRobotFootprintModel *robot_model, const Obstacle *obstacle)</div><div class="ttdoc">Set all parameters at once</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:106</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeVelocityObstacleRatio_html_a93c8065128710ec69ca3417b8dbb569e"><div class="ttname"><a href="classteb__local__planner_1_1EdgeVelocityObstacleRatio.html#a93c8065128710ec69ca3417b8dbb569e">teb_local_planner::EdgeVelocityObstacleRatio::EdgeVelocityObstacleRatio</a></div><div class="ttdeci">EdgeVelocityObstacleRatio()</div><div class="ttdoc">Construct edge.</div><div class="ttdef"><b>Definition:</b> edge_velocity_obstacle_ratio.h:30</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1Obstacle_html"><div class="ttname"><a href="classteb__local__planner_1_1Obstacle.html">teb_local_planner::Obstacle</a></div><div class="ttdoc">Abstract class that defines the interface for modelling obstacles</div><div class="ttdef"><b>Definition:</b> obstacles.h:68</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html">teb_local_planner::TebConfig</a></div><div class="ttdoc">Config class for the teb_local_planner and its components.</div><div class="ttdef"><b>Definition:</b> teb_config.h:62</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html_a092492e3bcf83ddd13dc311553902a4b"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html#a092492e3bcf83ddd13dc311553902a4b">teb_local_planner::TebConfig::robot</a></div><div class="ttdeci">struct teb_local_planner::TebConfig::Robot robot</div><div class="ttdoc">Robot related parameters</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html_a0d1821f67925bb11f4dff771ee3c157f"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html#a0d1821f67925bb11f4dff771ee3c157f">teb_local_planner::TebConfig::trajectory</a></div><div class="ttdeci">struct teb_local_planner::TebConfig::Trajectory trajectory</div><div class="ttdoc">Trajectory related parameters</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html_a5405a3abdb78c886f500ee57943a6582"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">teb_local_planner::TebConfig::obstacles</a></div><div class="ttdeci">struct teb_local_planner::TebConfig::Obstacles obstacles</div><div class="ttdoc">Obstacle related parameters</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html">teb_local_planner::VertexPose</a></div><div class="ttdoc">This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:64</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a061dd3dc688ca79f009465982985c1df"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">teb_local_planner::VertexPose::theta</a></div><div class="ttdeci">double &amp; theta()</div><div class="ttdoc">Access the orientation part (yaw angle) of the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:178</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a0c8cbabe5c33e10c81e023f954568839"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">teb_local_planner::VertexPose::pose</a></div><div class="ttdeci">PoseSE2 &amp; pose()</div><div class="ttdoc">Access the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:126</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a4f7d908421b83db853820b1713e1eaa4"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">teb_local_planner::VertexPose::position</a></div><div class="ttdeci">Eigen::Vector2d &amp; position()</div><div class="ttdoc">Access the 2D position part</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:141</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexTimeDiff_html"><div class="ttname"><a href="classteb__local__planner_1_1VertexTimeDiff.html">teb_local_planner::VertexTimeDiff</a></div><div class="ttdoc">This class stores and wraps a time difference  into a vertex that can be optimized via g2o</div><div class="ttdef"><b>Definition:</b> vertex_timediff.h:66</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Obstacles_html_a528b6f8fd4495b946e9e86118dcf4037"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#a528b6f8fd4495b946e9e86118dcf4037">teb_local_planner::TebConfig::Obstacles::obstacle_proximity_lower_bound</a></div><div class="ttdeci">double obstacle_proximity_lower_bound</div><div class="ttdoc">Distance to a static obstacle for which the velocity should be lower</div><div class="ttdef"><b>Definition:</b> teb_config.h:134</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Obstacles_html_ad5a39a721cddad0e4092277938cad072"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#ad5a39a721cddad0e4092277938cad072">teb_local_planner::TebConfig::Obstacles::obstacle_proximity_upper_bound</a></div><div class="ttdeci">double obstacle_proximity_upper_bound</div><div class="ttdoc">Distance to a static obstacle for which the velocity should be higher</div><div class="ttdef"><b>Definition:</b> teb_config.h:135</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Obstacles_html_aeec2ad6b09a10e3eb62935e72a7a6537"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#aeec2ad6b09a10e3eb62935e72a7a6537">teb_local_planner::TebConfig::Obstacles::obstacle_proximity_ratio_max_vel</a></div><div class="ttdeci">double obstacle_proximity_ratio_max_vel</div><div class="ttdoc">Ratio of the maximum velocities used as an upper bound when reducing the speed due to the proximity t...</div><div class="ttdef"><b>Definition:</b> teb_config.h:133</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Robot_html_a3a2f449cee6d833e59ce7aed22ac4793"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Robot.html#a3a2f449cee6d833e59ce7aed22ac4793">teb_local_planner::TebConfig::Robot::max_vel_x</a></div><div class="ttdeci">double max_vel_x</div><div class="ttdoc">Maximum translational velocity of the robot</div><div class="ttdef"><b>Definition:</b> teb_config.h:94</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Robot_html_ac2faa65c4fd3d77656f6b67ff571bb7c"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Robot.html#ac2faa65c4fd3d77656f6b67ff571bb7c">teb_local_planner::TebConfig::Robot::max_vel_theta</a></div><div class="ttdeci">double max_vel_theta</div><div class="ttdoc">Maximum angular velocity of the robot</div><div class="ttdef"><b>Definition:</b> teb_config.h:97</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Trajectory_html_a6db63f26bc0f93766bff91f2deeaded8"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Trajectory.html#a6db63f26bc0f93766bff91f2deeaded8">teb_local_planner::TebConfig::Trajectory::exact_arc_length</a></div><div class="ttdeci">bool exact_arc_length</div><div class="ttdoc">If true, the planner uses the exact arc length in velocity, acceleration and turning rate computation...</div><div class="ttdef"><b>Definition:</b> teb_config.h:82</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
