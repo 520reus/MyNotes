@@ -1,0 +1,242 @@
+\hypertarget{classlattice__planner_1_1DynamicCostmap}{}\doxysection{lattice\+\_\+planner\+::Dynamic\+Costmap类 参考}
+\label{classlattice__planner_1_1DynamicCostmap}\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+
+
+The \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} class defines a layered dynamic cost map representation for time dependent planning.  
+
+
+
+
+{\ttfamily \#include $<$dynamic\+\_\+costmap.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_aea112e013f4933c2f40b9353d12408ec}{Dynamic\+Costmap}} (\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$static\+\_\+map, int max\+\_\+layers, ros\+::\+Duration time\+\_\+resolution, std\+::string dynamic\+\_\+layers\+\_\+plugin)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a57561e9b23ad151c38b0770ad7237172}\label{classlattice__planner_1_1DynamicCostmap_a57561e9b23ad151c38b0770ad7237172}} 
+void \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a57561e9b23ad151c38b0770ad7237172}{update}} ()
+\begin{DoxyCompactList}\small\item\em update the dynamic layers according to the most recent environment observations \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a8f50196645b565c82ea55c8acdcc9cd4}{get\+Static\+Cost}} (unsigned int map\+\_\+ix, unsigned int map\+\_\+iy)
+\begin{DoxyCompactList}\small\item\em get cost value from static layer \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_ac02bf1fab14a3ba588acf0e7d4b85e0e}{get\+Static\+Cost}} (unsigned int map\+\_\+index)
+\begin{DoxyCompactList}\small\item\em get cost value from static layer \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a7d307b739e2790622dd5474c18754332}{get\+Dynamic\+Cost}} (unsigned int map\+\_\+ix, unsigned int map\+\_\+iy, ros\+::\+Time time)
+\begin{DoxyCompactList}\small\item\em get cost value from dynamic layers at the specified time \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a5796942a4c8f4a3f3a8ae8a4a0fface3}{get\+Dynamic\+Cost}} (unsigned int map\+\_\+index, ros\+::\+Time time)
+\begin{DoxyCompactList}\small\item\em get cost value from dynamic layers at the specified time \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a38e6b5619012d717866bf20e2e2b3e4b}{get\+Cost}} (unsigned int map\+\_\+ix, unsigned int map\+\_\+iy, ros\+::\+Time time)
+\begin{DoxyCompactList}\small\item\em get cost at a specific time as a combination of the static and dynamic cost map layer at the specified time \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a0077e0dcdf987a17bd4f12cfa227670d}{get\+Cost}} (unsigned int map\+\_\+index, ros\+::\+Time time)
+\begin{DoxyCompactList}\small\item\em get cost at a specific time as a combination of the static and dynamic cost map layer at the specified time \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a9f2317dd383378799342f0ba38db4336}{get\+Static\+ROSCostmap}} ()
+\begin{DoxyCompactList}\small\item\em get static layer of the dynamic cost map \end{DoxyCompactList}\item 
+ros\+::\+Duration \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a276841589dba9cf48f38b87af562ebbf}{get\+Time\+Resolution}} () const
+\begin{DoxyCompactList}\small\item\em get the time resolution of the dynamic layers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a70805a85ac00259350d1a1daaee42b8b}\label{classlattice__planner_1_1DynamicCostmap_a70805a85ac00259350d1a1daaee42b8b}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_a70805a85ac00259350d1a1daaee42b8b}{static\+\_\+map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em static layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_ac228cd40d726bd9ab5913b8e1dedbcaf}\label{classlattice__planner_1_1DynamicCostmap_ac228cd40d726bd9ab5913b8e1dedbcaf}} 
+pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers}{lattice\+\_\+planner\+::\+Dynamic\+Layers}} $>$ {\bfseries dl\+\_\+loader\+\_\+}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_ab0dc3a26e2cb78165860684936bd3758}\label{classlattice__planner_1_1DynamicCostmap_ab0dc3a26e2cb78165860684936bd3758}} 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlattice__planner_1_1DynamicLayers}{lattice\+\_\+planner\+::\+Dynamic\+Layers}} $>$ \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_ab0dc3a26e2cb78165860684936bd3758}{dynamic\+\_\+layers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em dynamic layers, defined as plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_ac980176c187c7557d1d1256e871301a9}\label{classlattice__planner_1_1DynamicCostmap_ac980176c187c7557d1d1256e871301a9}} 
+ros\+::\+Duration \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap_ac980176c187c7557d1d1256e871301a9}{time\+\_\+resolution\+\_\+}}
+\begin{DoxyCompactList}\small\item\em time resolution of dynamic layers \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+The \mbox{\hyperlink{classlattice__planner_1_1DynamicCostmap}{Dynamic\+Costmap}} class defines a layered dynamic cost map representation for time dependent planning. 
+
+It contains of one static layer that follows the 2D cost map representation also used by the ROS navigation stack. On top of that, dynamic layers account for the time dependent navigation constraints. The dynamic layers are are defined as plugins to allow for a custom definition of time dependent navigation constraints. \begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classlattice__planner_1_1DynamicLayers}{Dynamic\+Layers}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_aea112e013f4933c2f40b9353d12408ec}\label{classlattice__planner_1_1DynamicCostmap_aea112e013f4933c2f40b9353d12408ec}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!DynamicCostmap@{DynamicCostmap}}
+\index{DynamicCostmap@{DynamicCostmap}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{DynamicCostmap()}{DynamicCostmap()}}
+{\footnotesize\ttfamily lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::\+Dynamic\+Costmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{static\+\_\+map,  }\item[{int}]{max\+\_\+layers,  }\item[{ros\+::\+Duration}]{time\+\_\+resolution,  }\item[{std\+::string}]{dynamic\+\_\+layers\+\_\+plugin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em static\+\_\+map} & static cost map \\
+\hline
+{\em max\+\_\+layers} & maximum number of layers (represented time steps) \\
+\hline
+{\em time\+\_\+resolution} & time resolution of the dynamic layers \\
+\hline
+{\em dynamic\+\_\+layers\+\_\+plugin} & fully qualified plugin type for dynamic layers to be used \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a0077e0dcdf987a17bd4f12cfa227670d}\label{classlattice__planner_1_1DynamicCostmap_a0077e0dcdf987a17bd4f12cfa227670d}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+index,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost at a specific time as a combination of the static and dynamic cost map layer at the specified time 
+
+The returned cost is the maximum value of static and dynamic cost
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+index} & map index \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+combined cost from static and dynamic cost map layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a38e6b5619012d717866bf20e2e2b3e4b}\label{classlattice__planner_1_1DynamicCostmap_a38e6b5619012d717866bf20e2e2b3e4b}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getCost@{getCost}}
+\index{getCost@{getCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+ix,  }\item[{unsigned int}]{map\+\_\+iy,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost at a specific time as a combination of the static and dynamic cost map layer at the specified time 
+
+The returned cost is the maximum value of static and dynamic cost
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+ix} & map cell index in x \\
+\hline
+{\em map\+\_\+iy} & map cell index in y \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+combined cost from static and dynamic cost map layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a5796942a4c8f4a3f3a8ae8a4a0fface3}\label{classlattice__planner_1_1DynamicCostmap_a5796942a4c8f4a3f3a8ae8a4a0fface3}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getDynamicCost@{getDynamicCost}}
+\index{getDynamicCost@{getDynamicCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getDynamicCost()}{getDynamicCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Dynamic\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+index,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from dynamic layers at the specified time 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+index} & map index \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value from dynamic layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a7d307b739e2790622dd5474c18754332}\label{classlattice__planner_1_1DynamicCostmap_a7d307b739e2790622dd5474c18754332}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getDynamicCost@{getDynamicCost}}
+\index{getDynamicCost@{getDynamicCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getDynamicCost()}{getDynamicCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Dynamic\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+ix,  }\item[{unsigned int}]{map\+\_\+iy,  }\item[{ros\+::\+Time}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from dynamic layers at the specified time 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+ix} & map cell index in x \\
+\hline
+{\em map\+\_\+iy} & map cell index in y \\
+\hline
+{\em time} & requested time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value from dynamic layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_ac02bf1fab14a3ba588acf0e7d4b85e0e}\label{classlattice__planner_1_1DynamicCostmap_ac02bf1fab14a3ba588acf0e7d4b85e0e}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getStaticCost@{getStaticCost}}
+\index{getStaticCost@{getStaticCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getStaticCost()}{getStaticCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Static\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from static layer 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+index} & map index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value from static layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a8f50196645b565c82ea55c8acdcc9cd4}\label{classlattice__planner_1_1DynamicCostmap_a8f50196645b565c82ea55c8acdcc9cd4}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getStaticCost@{getStaticCost}}
+\index{getStaticCost@{getStaticCost}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getStaticCost()}{getStaticCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned char lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Static\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{map\+\_\+ix,  }\item[{unsigned int}]{map\+\_\+iy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get cost value from static layer 
+
+
+\begin{DoxyParams}{参数}
+{\em map\+\_\+ix} & map cell index in x \\
+\hline
+{\em map\+\_\+iy} & map cell index in y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+cost value from static layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a9f2317dd383378799342f0ba38db4336}\label{classlattice__planner_1_1DynamicCostmap_a9f2317dd383378799342f0ba38db4336}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getStaticROSCostmap@{getStaticROSCostmap}}
+\index{getStaticROSCostmap@{getStaticROSCostmap}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getStaticROSCostmap()}{getStaticROSCostmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Static\+ROSCostmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get static layer of the dynamic cost map 
+
+\begin{DoxyReturn}{返回}
+static cost map layer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlattice__planner_1_1DynamicCostmap_a276841589dba9cf48f38b87af562ebbf}\label{classlattice__planner_1_1DynamicCostmap_a276841589dba9cf48f38b87af562ebbf}} 
+\index{lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}!getTimeResolution@{getTimeResolution}}
+\index{getTimeResolution@{getTimeResolution}!lattice\_planner::DynamicCostmap@{lattice\_planner::DynamicCostmap}}
+\doxysubsubsection{\texorpdfstring{getTimeResolution()}{getTimeResolution()}}
+{\footnotesize\ttfamily ros\+::\+Duration lattice\+\_\+planner\+::\+Dynamic\+Costmap\+::get\+Time\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the time resolution of the dynamic layers 
+
+\begin{DoxyReturn}{返回}
+time resolution of dynamic layers 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/dynamic\+\_\+costmap.\+h\end{DoxyCompactItemize}

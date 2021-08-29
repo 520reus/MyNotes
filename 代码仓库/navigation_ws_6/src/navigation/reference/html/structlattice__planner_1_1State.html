@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: lattice_planner::State结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>lattice_planner</b></li><li class="navelem"><a class="el" href="structlattice__planner_1_1State.html">State</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">lattice_planner::State结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>data container for the properties of a planning state in the configuration space and methods for state-related calculations and conversions  
+ <a href="structlattice__planner_1_1State.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="state_8h_source.html">state.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State_1_1greater.html">greater</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">container for the ordering of priority queues from states  <a href="structlattice__planner_1_1State_1_1greater.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae6477724f9bdecc9958812965649a56a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#ae6477724f9bdecc9958812965649a56a">State</a> (int <a class="el" href="structlattice__planner_1_1State.html#a1a67f398734e36fe371ff54db7a5e755">id</a>, <a class="el" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a> <a class="el" href="structlattice__planner_1_1State.html#a685f1159073bb78e25425d4f7ff5cb4e">state_i</a>, <a class="el" href="classlattice__planner_1_1Pose.html">Pose</a> <a class="el" href="structlattice__planner_1_1State.html#aa1fbfb9889e2df33a59c6f01dea382f4">pose</a>, <a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a> velocity, ros::Time <a class="el" href="structlattice__planner_1_1State.html#a7c9e7ee4488673d0555a3189b6466b31">time</a>, <a class="el" href="structlattice__planner_1_1State.html">State</a> *<a class="el" href="structlattice__planner_1_1State.html#aaeb91ade6dbf1915d2404df8c674c8ce">ancestor</a>)</td></tr>
+<tr class="memdesc:ae6477724f9bdecc9958812965649a56a"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="structlattice__planner_1_1State.html#ae6477724f9bdecc9958812965649a56a">更多...</a><br /></td></tr>
+<tr class="separator:ae6477724f9bdecc9958812965649a56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae872ddfc5ca41c44bea746d8fff31dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#aae872ddfc5ca41c44bea746d8fff31dd">setCosts</a> (double <a class="el" href="structlattice__planner_1_1State.html#a2723eb1f2aeb552d2639f6bdff834d63">way_cost</a>, double <a class="el" href="structlattice__planner_1_1State.html#a0eb534983f4a407f7cb0d493acea8e23">cost_to_goal</a>)</td></tr>
+<tr class="memdesc:aae872ddfc5ca41c44bea746d8fff31dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the cost values for the state  <a href="structlattice__planner_1_1State.html#aae872ddfc5ca41c44bea746d8fff31dd">更多...</a><br /></td></tr>
+<tr class="separator:aae872ddfc5ca41c44bea746d8fff31dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad660ba32cae84fc8ecff7fd06323d805"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#ad660ba32cae84fc8ecff7fd06323d805">getTotalCost</a> ()</td></tr>
+<tr class="memdesc:ad660ba32cae84fc8ecff7fd06323d805"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the total cost of the state  <a href="structlattice__planner_1_1State.html#ad660ba32cae84fc8ecff7fd06323d805">更多...</a><br /></td></tr>
+<tr class="separator:ad660ba32cae84fc8ecff7fd06323d805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68065a76375ffc94408eb6d896807145"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a68065a76375ffc94408eb6d896807145">getDescription</a> ()</td></tr>
+<tr class="memdesc:a68065a76375ffc94408eb6d896807145"><td class="mdescLeft">&#160;</td><td class="mdescRight">obtain a string description of a state, including its properties.  <a href="structlattice__planner_1_1State.html#a68065a76375ffc94408eb6d896807145">更多...</a><br /></td></tr>
+<tr class="separator:a68065a76375ffc94408eb6d896807145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a1a67f398734e36fe371ff54db7a5e755"><td class="memItemLeft" align="right" valign="top"><a id="a1a67f398734e36fe371ff54db7a5e755"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a1a67f398734e36fe371ff54db7a5e755">id</a></td></tr>
+<tr class="memdesc:a1a67f398734e36fe371ff54db7a5e755"><td class="mdescLeft">&#160;</td><td class="mdescRight">state ID <br /></td></tr>
+<tr class="separator:a1a67f398734e36fe371ff54db7a5e755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685f1159073bb78e25425d4f7ff5cb4e"><td class="memItemLeft" align="right" valign="top"><a id="a685f1159073bb78e25425d4f7ff5cb4e"></a>
+<a class="el" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a685f1159073bb78e25425d4f7ff5cb4e">state_i</a></td></tr>
+<tr class="memdesc:a685f1159073bb78e25425d4f7ff5cb4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">discrete state representation of the state <br /></td></tr>
+<tr class="separator:a685f1159073bb78e25425d4f7ff5cb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fbfb9889e2df33a59c6f01dea382f4"><td class="memItemLeft" align="right" valign="top"><a id="aa1fbfb9889e2df33a59c6f01dea382f4"></a>
+<a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#aa1fbfb9889e2df33a59c6f01dea382f4">pose</a></td></tr>
+<tr class="memdesc:aa1fbfb9889e2df33a59c6f01dea382f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">pose of the state <br /></td></tr>
+<tr class="separator:aa1fbfb9889e2df33a59c6f01dea382f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd032a6e34310e553cf6543268e0a0c"><td class="memItemLeft" align="right" valign="top"><a id="aecd032a6e34310e553cf6543268e0a0c"></a>
+<a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#aecd032a6e34310e553cf6543268e0a0c">vel</a></td></tr>
+<tr class="memdesc:aecd032a6e34310e553cf6543268e0a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">velocity of the state <br /></td></tr>
+<tr class="separator:aecd032a6e34310e553cf6543268e0a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9e7ee4488673d0555a3189b6466b31"><td class="memItemLeft" align="right" valign="top"><a id="a7c9e7ee4488673d0555a3189b6466b31"></a>
+ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a7c9e7ee4488673d0555a3189b6466b31">time</a></td></tr>
+<tr class="memdesc:a7c9e7ee4488673d0555a3189b6466b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">the state's time <br /></td></tr>
+<tr class="separator:a7c9e7ee4488673d0555a3189b6466b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b8ff1804ffac8f5923d88cb10de022"><td class="memItemLeft" align="right" valign="top"><a id="a53b8ff1804ffac8f5923d88cb10de022"></a>
+std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a53b8ff1804ffac8f5923d88cb10de022">trajectory</a></td></tr>
+<tr class="memdesc:a53b8ff1804ffac8f5923d88cb10de022"><td class="mdescLeft">&#160;</td><td class="mdescRight">cells touched by the traversed path to the state from its ancestor <br /></td></tr>
+<tr class="separator:a53b8ff1804ffac8f5923d88cb10de022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2723eb1f2aeb552d2639f6bdff834d63"><td class="memItemLeft" align="right" valign="top"><a id="a2723eb1f2aeb552d2639f6bdff834d63"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a2723eb1f2aeb552d2639f6bdff834d63">way_cost</a></td></tr>
+<tr class="memdesc:a2723eb1f2aeb552d2639f6bdff834d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">costs from the start to the state <br /></td></tr>
+<tr class="separator:a2723eb1f2aeb552d2639f6bdff834d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb534983f4a407f7cb0d493acea8e23"><td class="memItemLeft" align="right" valign="top"><a id="a0eb534983f4a407f7cb0d493acea8e23"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#a0eb534983f4a407f7cb0d493acea8e23">cost_to_goal</a></td></tr>
+<tr class="memdesc:a0eb534983f4a407f7cb0d493acea8e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">estimated costs from a state to reach the goal <br /></td></tr>
+<tr class="separator:a0eb534983f4a407f7cb0d493acea8e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3275903254e4d7a421ffdc5794a3cc2"><td class="memItemLeft" align="right" valign="top"><a id="aa3275903254e4d7a421ffdc5794a3cc2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#aa3275903254e4d7a421ffdc5794a3cc2">in_goal_tolerance</a></td></tr>
+<tr class="memdesc:aa3275903254e4d7a421ffdc5794a3cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag whether state is within the defined goal tolerance for planning <br /></td></tr>
+<tr class="separator:aa3275903254e4d7a421ffdc5794a3cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb91ade6dbf1915d2404df8c674c8ce"><td class="memItemLeft" align="right" valign="top"><a id="aaeb91ade6dbf1915d2404df8c674c8ce"></a>
+<a class="el" href="structlattice__planner_1_1State.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlattice__planner_1_1State.html#aaeb91ade6dbf1915d2404df8c674c8ce">ancestor</a></td></tr>
+<tr class="memdesc:aaeb91ade6dbf1915d2404df8c674c8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">the state's parent <br /></td></tr>
+<tr class="separator:aaeb91ade6dbf1915d2404df8c674c8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>data container for the properties of a planning state in the configuration space and methods for state-related calculations and conversions </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae6477724f9bdecc9958812965649a56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6477724f9bdecc9958812965649a56a">&#9670;&nbsp;</a></span>State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lattice_planner::State::State </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1DiscreteState.html">DiscreteState</a>&#160;</td>
+          <td class="paramname"><em>state_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlattice__planner_1_1Pose.html">Pose</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1Velocity.html">Velocity</a>&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ros::Time&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlattice__planner_1_1State.html">State</a> *&#160;</td>
+          <td class="paramname"><em>ancestor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>state ID </td></tr>
+    <tr><td class="paramname">state_i</td><td>discrete state representation of the state </td></tr>
+    <tr><td class="paramname">pose</td><td>the pose of the state </td></tr>
+    <tr><td class="paramname">velocity</td><td>the velocity of the state </td></tr>
+    <tr><td class="paramname">time</td><td>the state's time </td></tr>
+    <tr><td class="paramname">ancestor</td><td>the state's parent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a68065a76375ffc94408eb6d896807145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68065a76375ffc94408eb6d896807145">&#9670;&nbsp;</a></span>getDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lattice_planner::State::getDescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>obtain a string description of a state, including its properties. </p>
+<dl class="section return"><dt>返回</dt><dd>string description of a state </dd></dl>
+
+</div>
+</div>
+<a id="ad660ba32cae84fc8ecff7fd06323d805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad660ba32cae84fc8ecff7fd06323d805">&#9670;&nbsp;</a></span>getTotalCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double lattice_planner::State::getTotalCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the total cost of the state </p>
+<p>The total cost of a state is is made up off the way cost from the start to the state along the planned path and the estimated cost to reach the goal, according to a defined heuristic</p>
+<dl class="section return"><dt>返回</dt><dd>the total cost of the state </dd></dl>
+
+</div>
+</div>
+<a id="aae872ddfc5ca41c44bea746d8fff31dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae872ddfc5ca41c44bea746d8fff31dd">&#9670;&nbsp;</a></span>setCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lattice_planner::State::setCosts </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>way_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cost_to_goal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the cost values for the state </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">way_cost</td><td>the (known) cost from the start to the state along the planned path </td></tr>
+    <tr><td class="paramname">cost_to_goal</td><td>the estimated remaining cost from the state to reach the goal, according to a defined heuristic </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>lattice_planner/include/lattice_planner/<a class="el" href="state_8h_source.html">state.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

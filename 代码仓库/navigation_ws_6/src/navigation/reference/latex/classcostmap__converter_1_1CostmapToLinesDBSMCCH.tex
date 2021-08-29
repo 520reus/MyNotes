@@ -1,0 +1,107 @@
+\hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH}{}\doxysection{costmap\+\_\+converter\+::Costmap\+To\+Lines\+DBSMCCH类 参考}
+\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH}\index{costmap\_converter::CostmapToLinesDBSMCCH@{costmap\_converter::CostmapToLinesDBSMCCH}}
+
+
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of lines (and points)  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+to\+\_\+lines\+\_\+convex\+\_\+hull.\+h$>$}
+
+类 costmap\+\_\+converter\+::Costmap\+To\+Lines\+DBSMCCH 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcostmap__converter_1_1CostmapToLinesDBSMCCH}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a70b70a63816d41a41756cc182cd251da}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a70b70a63816d41a41756cc182cd251da}} 
+\mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a70b70a63816d41a41756cc182cd251da}{Costmap\+To\+Lines\+DBSMCCH}} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a6901dc0cb771b6de93d43cbb787821c4}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a6901dc0cb771b6de93d43cbb787821c4}} 
+virtual \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a6901dc0cb771b6de93d43cbb787821c4}{$\sim$\+Costmap\+To\+Lines\+DBSMCCH}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_aac61c254df219ed217b148665e81e04f}{initialize}} (ros\+::\+Node\+Handle nh)
+\begin{DoxyCompactList}\small\item\em Initialize the plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a3f2f5db368dfcb95e316cc5a72a6a001}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a3f2f5db368dfcb95e316cc5a72a6a001}} 
+virtual void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a3f2f5db368dfcb95e316cc5a72a6a001}{compute}} ()
+\begin{DoxyCompactList}\small\item\em This method performs the actual work (conversion of the costmap to polygons) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a5bf179c759c276224483c1474d848166}{extract\+Points\+And\+Lines}} (std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&cluster, const geometry\+\_\+msgs\+::\+Polygon \&polygon, std\+::back\+\_\+insert\+\_\+iterator$<$ std\+::vector$<$ geometry\+\_\+msgs\+::\+Polygon $>$ $>$ lines)
+\begin{DoxyCompactList}\small\item\em Extract points and lines from a given cluster by checking all keypoint pairs of the convex hull for a minimum number of support points \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a18d86c2f3b0faf896eaa757184505501}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a18d86c2f3b0faf896eaa757184505501}} 
+double {\bfseries support\+\_\+pts\+\_\+max\+\_\+dist\+\_\+inbetween\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a122e085664ddf56ad80bf171fcf8dcb6}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a122e085664ddf56ad80bf171fcf8dcb6}} 
+double {\bfseries support\+\_\+pts\+\_\+max\+\_\+dist\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a46d4e4f094556624d22af42afd2eb948}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a46d4e4f094556624d22af42afd2eb948}} 
+int {\bfseries min\+\_\+support\+\_\+pts\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+This class converts the \mbox{\hyperlink{namespacecostmap__2d}{costmap\+\_\+2d}} into a set of lines (and points) 
+
+The conversion is performed in three stages\+:
+\begin{DoxyEnumerate}
+\item Clusters in the costmap are collected using the DBSCAN Algorithm (\href{https://en.wikipedia.org/wiki/DBSCAN}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+DBSCAN}}) Reference\+: Ester, Martin; Kriegel, Hans-\/\+Peter; Sander, Jörg; Xu, Xiaowei, A density-\/based algorithm for discovering clusters in large spatial databases with noise. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining. AAAI Press. 1996. pp. 226–231. ISBN 1-\/57735-\/004-\/9.
+\item In the subsequent stage, the convex hull of each cluster is determined using the monotone chain algorithm aka Andrew\textquotesingle{}s algorithm\+: C++ implementation example\+: \href{http://www.algorithmist.com/index.php/Monotone_Chain_Convex_Hull}{\texttt{ http\+://www.\+algorithmist.\+com/index.\+php/\+Monotone\+\_\+\+Chain\+\_\+\+Convex\+\_\+\+Hull}} ( GNU Free Documentation License 1.\+2 ) Reference\+: A. M. Andrew, \char`\"{}\+Another Efficient Algorithm for Convex Hulls in Two Dimensions\char`\"{}, Info. Proc. Letters 9, 216-\/219 (1979).
+\item In the third step extract lines from each polygon (convex hull) if there exist at least a predefined number of support points.
+\end{DoxyEnumerate}
+
+The output is a container of polygons (but each polygon does only contain a single vertex (point) or two vertices (line) 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a5bf179c759c276224483c1474d848166}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_a5bf179c759c276224483c1474d848166}} 
+\index{costmap\_converter::CostmapToLinesDBSMCCH@{costmap\_converter::CostmapToLinesDBSMCCH}!extractPointsAndLines@{extractPointsAndLines}}
+\index{extractPointsAndLines@{extractPointsAndLines}!costmap\_converter::CostmapToLinesDBSMCCH@{costmap\_converter::CostmapToLinesDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{extractPointsAndLines()}{extractPointsAndLines()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSMCCH\+::extract\+Points\+And\+Lines (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint}{Key\+Point}} $>$ \&}]{cluster,  }\item[{const geometry\+\_\+msgs\+::\+Polygon \&}]{polygon,  }\item[{std\+::back\+\_\+insert\+\_\+iterator$<$ std\+::vector$<$ geometry\+\_\+msgs\+::\+Polygon $>$ $>$}]{lines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Extract points and lines from a given cluster by checking all keypoint pairs of the convex hull for a minimum number of support points 
+
+
+\begin{DoxyParams}[1]{参数}
+ & {\em cluster} & list of points in the cluster \\
+\hline
+ & {\em polygon} & convex hull of the cluster {\ttfamily cluster} \\
+\hline
+\mbox{\texttt{ out}}  & {\em lines} & back\+\_\+inserter object to a sequence of polygon msgs (new lines will be pushed back) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1CostmapToLinesDBSMCCH_aac61c254df219ed217b148665e81e04f}\label{classcostmap__converter_1_1CostmapToLinesDBSMCCH_aac61c254df219ed217b148665e81e04f}} 
+\index{costmap\_converter::CostmapToLinesDBSMCCH@{costmap\_converter::CostmapToLinesDBSMCCH}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_converter::CostmapToLinesDBSMCCH@{costmap\_converter::CostmapToLinesDBSMCCH}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+converter\+::\+Costmap\+To\+Lines\+DBSMCCH\+::initialize (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Nodehandle that defines the namespace for parameters \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH_ab10c4b289420d6c65fcfbd446634fd22}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+lines\+\_\+convex\+\_\+hull.\+h\end{DoxyCompactItemize}

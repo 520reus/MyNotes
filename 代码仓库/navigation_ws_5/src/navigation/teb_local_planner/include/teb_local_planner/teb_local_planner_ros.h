@@ -465,7 +465,7 @@ private:
   int goal_idx_;
   geometry_msgs::TransformStamped tf_plan_to_global_;
   geometry_msgs::PoseStamped global_goal_;
-  size_t index_;
+  size_t index_; //全局路径中的路径点索引
   
   
 

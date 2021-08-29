@@ -216,7 +216,7 @@ bool TebLocalPlannerROS::setPlan(const std::vector<geometry_msgs::PoseStamped>& 
 
   // store the global plan
   global_plan_.clear();
-  global_plan_ = orig_global_plan;
+  global_plan_ = orig_global_plan; //global_plan_会随着车辆的运动而变化，比如会删掉车辆passed的点
 
   // we do not clear the local planner here, since setPlan is called frequently whenever the global planner updates the plan.
   // the local planner checks whether it is required to reinitialize the trajectory or not within each velocity computation step.  
@@ -371,9 +371,10 @@ uint32_t TebLocalPlannerROS::computeVelocityCommands(const geometry_msgs::PoseSt
   double consider_global_goal_orientation_distance = 2;
   double distance = estimateDisanceToGoal(robot_pose_,global_plan_,index_);
   ROS_INFO("DISTANCE TO GOAL:%.2f",distance);
+  ROS_INFO("INDEX:%d",index_);
   if (cfg_.trajectory.global_plan_overwrite_orientation && distance > consider_global_goal_orientation_distance)
   {
-    std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan.back().pose.orientation)*180/M_PI << std::endl; 
+    //std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan.back().pose.orientation)*180/M_PI << std::endl; 
     robot_goal_.theta() = estimateLocalGoalOrientation(global_plan_, transformed_plan.back(), goal_idx, tf_plan_to_global);
     Eigen::Vector2d point_to_local_goal = robot_goal_.position() - robot_pose_.position(); //1
     double local_goal_orient_init = tf2::getYaw(transformed_plan.back().pose.orientation);
@@ -382,7 +383,7 @@ uint32_t TebLocalPlannerROS::computeVelocityCommands(const geometry_msgs::PoseSt
     if(point_to_local_goal.dot(robot_pose_.orientationUnitVec()) < 0)
       robot_goal_.theta() = g2o::normalize_theta(local_goal_orient_init+M_PI);
 
-    std::cout << "after change,local_goal_yaw= " << robot_goal_.theta()*180/M_PI << std::endl;
+    //std::cout << "after change,local_goal_yaw= " << robot_goal_.theta()*180/M_PI << std::endl;
     // overwrite/update goal orientation of the transformed plan with the actual goal (enable using the plan as initialization)
     tf2::Quaternion q;
     q.setRPY(0, 0, robot_goal_.theta());
@@ -1309,7 +1310,7 @@ void TebLocalPlannerROS::updateLocalGoal(const ros::TimerEvent& event)
   double consider_global_goal_orientation_distance = 2;
   if (cfg_.trajectory.global_plan_overwrite_orientation && sqrt(global_dx*global_dx+global_dy*global_dy) > consider_global_goal_orientation_distance)
   {
-    std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan_.back().pose.orientation)*180/M_PI << std::endl; 
+    //std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan_.back().pose.orientation)*180/M_PI << std::endl; 
     local_goal_.theta() = estimateLocalGoalOrientation(global_plan_, transformed_plan_.back(), goal_idx_, tf_plan_to_global_);
     Eigen::Vector2d point_to_local_goal = local_goal_.position() - robot_pose_.position();
     double dir_to_local_goal = std::atan2(point_to_local_goal[1],point_to_local_goal[0]);
@@ -1318,7 +1319,7 @@ void TebLocalPlannerROS::updateLocalGoal(const ros::TimerEvent& event)
     if(point_to_local_goal.dot(robot_pose_.orientationUnitVec()) < 0)
       local_goal_.theta() = g2o::normalize_theta(local_goal_orient_init);
       
-    std::cout << "after change,local_goal_yaw= " << local_goal_.theta()*180/M_PI << std::endl;
+    //std::cout << "after change,local_goal_yaw= " << local_goal_.theta()*180/M_PI << std::endl;
     // overwrite/update goal orientation of the transformed plan with the actual goal (enable using the plan as initialization)
     tf2::Quaternion q;
     q.setRPY(0, 0, local_goal_.theta());
@@ -1343,7 +1344,7 @@ void TebLocalPlannerROS::InitupdateLocalGoal()
   double consider_global_goal_orientation_distance = 2;
   if (cfg_.trajectory.global_plan_overwrite_orientation && sqrt(global_dx*global_dx+global_dy*global_dy) > consider_global_goal_orientation_distance)
   {
-    std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan_.back().pose.orientation)*180/M_PI << std::endl; 
+    //std::cout << "transformed_plan_yaw= " << tf2::getYaw(transformed_plan_.back().pose.orientation)*180/M_PI << std::endl; 
     local_goal_.theta() = estimateLocalGoalOrientation(global_plan_, transformed_plan_.back(), goal_idx_, tf_plan_to_global_);
     Eigen::Vector2d point_to_local_goal = local_goal_.position() - robot_pose_.position();
     double dir_to_local_goal = std::atan2(point_to_local_goal[1],point_to_local_goal[0]);
@@ -1352,7 +1353,7 @@ void TebLocalPlannerROS::InitupdateLocalGoal()
     if(point_to_local_goal.dot(robot_pose_.orientationUnitVec()) < 0)
       local_goal_.theta() = g2o::normalize_theta(local_goal_orient_init);
       
-    std::cout << "after change,local_goal_yaw= " << local_goal_.theta()*180/M_PI << std::endl;
+    //std::cout << "after change,local_goal_yaw= " << local_goal_.theta()*180/M_PI << std::endl;
     // overwrite/update goal orientation of the transformed plan with the actual goal (enable using the plan as initialization)
     tf2::Quaternion q;
     q.setRPY(0, 0, local_goal_.theta());
@@ -1368,15 +1369,15 @@ double TebLocalPlannerROS::estimateDisanceToGoal(const PoseSE2& car_pose,
                                                const std::vector<geometry_msgs::PoseStamped>& global_path,
                                                size_t& index)
 {
-  /* if(index < 0 || index > global_path.size())
-    return; */
+  if(index < 0 || index > global_path.size())
+    ROS_ERROR("index out of range!");
   double shortest_distance = std::numeric_limits<double>::max();
-  for(size_t i = index;i < global_path.size()-1;i++){
+  for(size_t i = 0;i < global_path.size()-1;i++){
     double dx = car_pose.x() - global_path[i].pose.position.x;
     double dy = car_pose.y() - global_path[i].pose.position.y;
     if(sqrt(dx*dx+dy*dy) < shortest_distance)
     {
-      shortest_distance = dx*dx+dy*dy;
+      shortest_distance = sqrt(dx*dx+dy*dy);
       index = i;
     }
   }

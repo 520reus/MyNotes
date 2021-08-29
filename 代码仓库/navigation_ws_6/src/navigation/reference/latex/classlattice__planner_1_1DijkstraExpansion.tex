@@ -1,0 +1,54 @@
+\hypertarget{classlattice__planner_1_1DijkstraExpansion}{}\doxysection{lattice\+\_\+planner\+::Dijkstra\+Expansion类 参考}
+\label{classlattice__planner_1_1DijkstraExpansion}\index{lattice\_planner::DijkstraExpansion@{lattice\_planner::DijkstraExpansion}}
+
+
+Class for conducting wavefront style Dijkstra expansions inside a cost map.  
+
+
+
+
+{\ttfamily \#include $<$dijkstra.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a0a3ffc1b2fcbaa927f560f70d279a9f6}\label{classlattice__planner_1_1DijkstraExpansion_a0a3ffc1b2fcbaa927f560f70d279a9f6}} 
+{\bfseries Dijkstra\+Expansion} (int nx, int ny)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a662d460654ae14e5c224bbe45d92703d}\label{classlattice__planner_1_1DijkstraExpansion_a662d460654ae14e5c224bbe45d92703d}} 
+bool {\bfseries expand\+To\+Goal} (unsigned char $\ast$costs, unsigned int start\+\_\+x, unsigned int start\+\_\+y, unsigned int goal\+\_\+x, unsigned int goal\+\_\+y, int max\+\_\+cycles, float $\ast$potential)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a37cc2cc462c2dee1f0e034952d1686b5}\label{classlattice__planner_1_1DijkstraExpansion_a37cc2cc462c2dee1f0e034952d1686b5}} 
+bool {\bfseries expand} (unsigned char $\ast$costs, unsigned int start\+\_\+x, unsigned int start\+\_\+y, int max\+\_\+cycles, float $\ast$potential)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a3407dd33fff6f3edc2632c4351286b34}\label{classlattice__planner_1_1DijkstraExpansion_a3407dd33fff6f3edc2632c4351286b34}} 
+void {\bfseries set\+Size} (int nx, int ny)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_acf29e08472950c5ac4936cf1a90a4f13}\label{classlattice__planner_1_1DijkstraExpansion_acf29e08472950c5ac4936cf1a90a4f13}} 
+void {\bfseries set\+Neutral\+Cost} (float neutral\+\_\+cost)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a5c8300ce16ea1a19dffc5af0289c570f}\label{classlattice__planner_1_1DijkstraExpansion_a5c8300ce16ea1a19dffc5af0289c570f}} 
+void {\bfseries set\+Lethal\+Cost} (float lethal\+\_\+cost)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a4a53d084dfdecba12fcd84633e4a19a1}\label{classlattice__planner_1_1DijkstraExpansion_a4a53d084dfdecba12fcd84633e4a19a1}} 
+void {\bfseries set\+Factor} (float factor)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a5e13ab0e57608e894fb674c1dbf16ded}\label{classlattice__planner_1_1DijkstraExpansion_a5e13ab0e57608e894fb674c1dbf16ded}} 
+void {\bfseries set\+Allow\+Unknown} (bool allow\+\_\+unknown)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_a3fb4914e203d7c67b2a89e5140bcfaad}\label{classlattice__planner_1_1DijkstraExpansion_a3fb4914e203d7c67b2a89e5140bcfaad}} 
+int {\bfseries to\+Index} (unsigned int mx, unsigned int my)
+\item 
+\mbox{\Hypertarget{classlattice__planner_1_1DijkstraExpansion_aa13e87530b39365a366a61caf8bda5a0}\label{classlattice__planner_1_1DijkstraExpansion_aa13e87530b39365a366a61caf8bda5a0}} 
+float {\bfseries calculate\+Potential} (float $\ast$potential, float cost, int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Class for conducting wavefront style Dijkstra expansions inside a cost map. 
+
+The algorithm finds the cheapest path (according to a step cost and an 2D cost map) from each point inside the map to a given goal location. The class is based on the \mbox{\hyperlink{classlattice__planner_1_1DijkstraExpansion}{Dijkstra\+Expansion}} class inside the global\+\_\+planner package of the ros navigation stack. Their \mbox{\hyperlink{classlattice__planner_1_1DijkstraExpansion}{Dijkstra\+Expansion}} class was modified to enable eight-\/ connected expansion on the grid and expand from one point outwards along the whole map, instead of expanding from a start state to a goal state. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+lattice\+\_\+planner/include/lattice\+\_\+planner/dijkstra.\+h\end{DoxyCompactItemize}

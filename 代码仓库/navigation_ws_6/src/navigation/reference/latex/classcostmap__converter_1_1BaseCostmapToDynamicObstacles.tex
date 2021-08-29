@@ -1,0 +1,115 @@
+\hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles}{}\doxysection{costmap\+\_\+converter\+::Base\+Costmap\+To\+Dynamic\+Obstacles类 参考}
+\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles}\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+类 costmap\+\_\+converter\+::Base\+Costmap\+To\+Dynamic\+Obstacles 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcostmap__converter_1_1BaseCostmapToDynamicObstacles}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a8676d9c43a2d3030019850e321be9574}{load\+Static\+Costmap\+Converter\+Plugin}} (const std\+::string \&plugin\+\_\+name, ros\+::\+Node\+Handle nh\+\_\+parent)
+\begin{DoxyCompactList}\small\item\em Load underlying static costmap conversion plugin via plugin-\/loader \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a689b3f3812b943b381f489179d11f0d8}{set\+Static\+Costmap\+Converter\+Plugin}} (boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons}{Base\+Costmap\+To\+Polygons}} $>$ static\+\_\+costmap\+\_\+converter)
+\begin{DoxyCompactList}\small\item\em Set the underlying plugin for subsequent costmap conversion of the static background of the costmap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a376f67cc2a6dba308a0fb8e0097f4c38}{set\+Static\+Costmap}} (boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $>$ static\+\_\+costmap)
+\begin{DoxyCompactList}\small\item\em Set the costmap for the underlying plugin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a10dba078631ef120ec585e46fb1ae690}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a10dba078631ef120ec585e46fb1ae690}} 
+void \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a10dba078631ef120ec585e46fb1ae690}{convert\+Static\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Apply the underlying plugin for static costmap conversion \end{DoxyCompactList}\item 
+Polygon\+Container\+Const\+Ptr \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a506653e4f553b784d2784e7aef02bd7e}{get\+Static\+Polygons}} ()
+\begin{DoxyCompactList}\small\item\em Get the converted polygons from the underlying plugin \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a314f921603fc71c47bb1666de9a577f5}{stacked\+Costmap\+Conversion}} ()
+\begin{DoxyCompactList}\small\item\em Determines whether an additional plugin for subsequent costmap conversion is specified \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_af9c4d3851bea551a15e344ffc72724c5}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_af9c4d3851bea551a15e344ffc72724c5}} 
+\mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_af9c4d3851bea551a15e344ffc72724c5}{Base\+Costmap\+To\+Dynamic\+Obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Protected constructor that should be called by subclasses \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a506653e4f553b784d2784e7aef02bd7e}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a506653e4f553b784d2784e7aef02bd7e}} 
+\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}!getStaticPolygons@{getStaticPolygons}}
+\index{getStaticPolygons@{getStaticPolygons}!costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{getStaticPolygons()}{getStaticPolygons()}}
+{\footnotesize\ttfamily Polygon\+Container\+Const\+Ptr costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles\+::get\+Static\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the converted polygons from the underlying plugin 
+
+\begin{DoxyReturn}{返回}
+Shared instance of the underlying plugins polygon container 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a8676d9c43a2d3030019850e321be9574}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a8676d9c43a2d3030019850e321be9574}} 
+\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}!loadStaticCostmapConverterPlugin@{loadStaticCostmapConverterPlugin}}
+\index{loadStaticCostmapConverterPlugin@{loadStaticCostmapConverterPlugin}!costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{loadStaticCostmapConverterPlugin()}{loadStaticCostmapConverterPlugin()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles\+::load\+Static\+Costmap\+Converter\+Plugin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plugin\+\_\+name,  }\item[{ros\+::\+Node\+Handle}]{nh\+\_\+parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load underlying static costmap conversion plugin via plugin-\/loader 
+
+
+\begin{DoxyParams}{参数}
+{\em plugin\+\_\+name} & Exact class name of the plugin to be loaded, e.\+g. \mbox{\hyperlink{classcostmap__converter_1_1CostmapToPolygonsDBSMCCH}{costmap\+\_\+converter\+::\+Costmap\+To\+Polygons\+DBSMCCH}} \\
+\hline
+{\em nh\+\_\+parent} & Node\+Handle which is extended by the namespace of the static conversion plugin \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a376f67cc2a6dba308a0fb8e0097f4c38}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a376f67cc2a6dba308a0fb8e0097f4c38}} 
+\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}!setStaticCostmap@{setStaticCostmap}}
+\index{setStaticCostmap@{setStaticCostmap}!costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{setStaticCostmap()}{setStaticCostmap()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles\+::set\+Static\+Costmap (\begin{DoxyParamCaption}\item[{boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $>$}]{static\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the costmap for the underlying plugin 
+
+
+\begin{DoxyParams}{参数}
+{\em static\+\_\+costmap} & Costmap2D, which contains the static part of the original costmap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a689b3f3812b943b381f489179d11f0d8}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a689b3f3812b943b381f489179d11f0d8}} 
+\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}!setStaticCostmapConverterPlugin@{setStaticCostmapConverterPlugin}}
+\index{setStaticCostmapConverterPlugin@{setStaticCostmapConverterPlugin}!costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{setStaticCostmapConverterPlugin()}{setStaticCostmapConverterPlugin()}}
+{\footnotesize\ttfamily void costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles\+::set\+Static\+Costmap\+Converter\+Plugin (\begin{DoxyParamCaption}\item[{boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons}{Base\+Costmap\+To\+Polygons}} $>$}]{static\+\_\+costmap\+\_\+converter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the underlying plugin for subsequent costmap conversion of the static background of the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em static\+\_\+costmap\+\_\+converter} & shared pointer to the static costmap conversion plugin \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a314f921603fc71c47bb1666de9a577f5}\label{classcostmap__converter_1_1BaseCostmapToDynamicObstacles_a314f921603fc71c47bb1666de9a577f5}} 
+\index{costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}!stackedCostmapConversion@{stackedCostmapConversion}}
+\index{stackedCostmapConversion@{stackedCostmapConversion}!costmap\_converter::BaseCostmapToDynamicObstacles@{costmap\_converter::BaseCostmapToDynamicObstacles}}
+\doxysubsubsection{\texorpdfstring{stackedCostmapConversion()}{stackedCostmapConversion()}}
+{\footnotesize\ttfamily bool costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Dynamic\+Obstacles\+::stacked\+Costmap\+Conversion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether an additional plugin for subsequent costmap conversion is specified 
+
+\begin{DoxyReturn}{返回}
+true, if a plugin for subsequent costmap conversion is specified 
+\end{DoxyReturn}
+
+
+重载 \mbox{\hyperlink{classcostmap__converter_1_1BaseCostmapToPolygons_a5f42b7263fcfdde112b09c73429e55be}{costmap\+\_\+converter\+::\+Base\+Costmap\+To\+Polygons}} .
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+converter\+\_\+interface.\+h\end{DoxyCompactItemize}

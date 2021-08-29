@@ -1,0 +1,451 @@
+\hypertarget{classteb__local__planner_1_1PolygonObstacle}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Polygon\+Obstacle类 参考}
+\label{classteb__local__planner_1_1PolygonObstacle}\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+
+
+Implements a polygon obstacle with an arbitrary number of vertices  
+
+
+
+
+{\ttfamily \#include $<$obstacles.\+h$>$}
+
+类 teb\+\_\+local\+\_\+planner\+::Polygon\+Obstacle 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1PolygonObstacle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ac01c295bc0fadd3c039e2a54dba7b72d}\label{classteb__local__planner_1_1PolygonObstacle_ac01c295bc0fadd3c039e2a54dba7b72d}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ac01c295bc0fadd3c039e2a54dba7b72d}{Polygon\+Obstacle}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor of the polygon obstacle class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a0fa44f8beb858e50c9b52cbbf4a2e1c9}\label{classteb__local__planner_1_1PolygonObstacle_a0fa44f8beb858e50c9b52cbbf4a2e1c9}} 
+\mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a0fa44f8beb858e50c9b52cbbf4a2e1c9}{Polygon\+Obstacle}} (const Point2d\+Container \&\mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a61873bd10adfd87b6e029c4eef8cd05b}{vertices}})
+\begin{DoxyCompactList}\small\item\em Construct polygon obstacle with a list of vertices \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ae88041e423f072b3317b76c52229a807}{check\+Collision}} (const Eigen\+::\+Vector2d \&point, double min\+\_\+dist) const
+\begin{DoxyCompactList}\small\item\em Check if a given point collides with the obstacle \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a0541751d0d3cffb7f562704ccaa770ae}{check\+Line\+Intersection}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end, double min\+\_\+dist=0) const
+\begin{DoxyCompactList}\small\item\em Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance {\ttfamily min\+\_\+dist}) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ac99771e8cd56489e6751e2087be737be}{get\+Minimum\+Distance}} (const Eigen\+::\+Vector2d \&position) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (point as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_af0a5a2a5cf83069429a5984e87036e2e}{get\+Minimum\+Distance}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (line as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_aaff9231f36de555ce7eebd6b89a4c859}{get\+Minimum\+Distance}} (const Point2d\+Container \&polygon) const
+\begin{DoxyCompactList}\small\item\em Get the minimum euclidean distance to the obstacle (polygon as reference) \end{DoxyCompactList}\item 
+virtual Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a2ba7d9e1cfb5a11001a5f4695cc4d08d}{get\+Closest\+Point}} (const Eigen\+::\+Vector2d \&position) const
+\begin{DoxyCompactList}\small\item\em Get the closest point on the boundary of the obstacle w.\+r.\+t. a specified reference position \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a2c1f8c97e611d59fa85beb4cf0f49b41}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Eigen\+::\+Vector2d \&position, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ae4fe735f436b00f2f2182b546fd2b71e}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Eigen\+::\+Vector2d \&line\+\_\+start, const Eigen\+::\+Vector2d \&line\+\_\+end, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ad1c6703d6ba6037b3bf0e615ac6b8bd1}{get\+Minimum\+Spatio\+Temporal\+Distance}} (const Point2d\+Container \&polygon, double t) const
+\begin{DoxyCompactList}\small\item\em Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a1f8d8d06315e4a58337f9965ff55b871}\label{classteb__local__planner_1_1PolygonObstacle_a1f8d8d06315e4a58337f9965ff55b871}} 
+virtual void {\bfseries predict\+Vertices} (double t, Point2d\+Container \&pred\+\_\+vertices) const
+\item 
+virtual const Eigen\+::\+Vector2d \& \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ae7124c0565f0a8612bb052ee5b7ef218}{get\+Centroid}} () const
+\begin{DoxyCompactList}\small\item\em Get centroid coordinates of the obstacle \end{DoxyCompactList}\item 
+virtual std\+::complex$<$ double $>$ \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a4cb519781a14e2cdc3c871234b6f348a}{get\+Centroid\+Cplx}} () const
+\begin{DoxyCompactList}\small\item\em Get centroid coordinates of the obstacle as complex number \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a9d35d63ae1d6bd94791b26298d614049}{to\+Polygon\+Msg}} (geometry\+\_\+msgs\+::\+Polygon \&polygon)
+\begin{DoxyCompactList}\small\item\em Convert the obstacle to a polygon message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Define the polygon}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a61873bd10adfd87b6e029c4eef8cd05b}\label{classteb__local__planner_1_1PolygonObstacle_a61873bd10adfd87b6e029c4eef8cd05b}} 
+const Point2d\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a61873bd10adfd87b6e029c4eef8cd05b}{vertices}} () const
+\begin{DoxyCompactList}\small\item\em Access vertices container (read-\/only) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_abc59bc5ea588be700637021b4b1ff198}\label{classteb__local__planner_1_1PolygonObstacle_abc59bc5ea588be700637021b4b1ff198}} 
+Point2d\+Container \& \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_abc59bc5ea588be700637021b4b1ff198}{vertices}} ()
+\begin{DoxyCompactList}\small\item\em Access vertices container \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a7e5792cd0ccd34827330bde3f9fbb206}{push\+Back\+Vertex}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&vertex)
+\begin{DoxyCompactList}\small\item\em Add a vertex to the polygon (edge-\/point) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a72f8b38d74b5b89b3f35d32e646c7229}{push\+Back\+Vertex}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Add a vertex to the polygon (edge-\/point) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}\label{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}{finalize\+Polygon}} ()
+\begin{DoxyCompactList}\small\item\em Call finalize\+Polygon after the polygon is created with the help of \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a7e5792cd0ccd34827330bde3f9fbb206}{push\+Back\+Vertex()}} methods \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ae51600295c7817e58c2fe0fdb1306399}\label{classteb__local__planner_1_1PolygonObstacle_ae51600295c7817e58c2fe0fdb1306399}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ae51600295c7817e58c2fe0fdb1306399}{clear\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em Clear all vertices (Afterwards the polygon is not valid anymore) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a5e432e1b44d0d5a0ad11417a4baaa5be}\label{classteb__local__planner_1_1PolygonObstacle_a5e432e1b44d0d5a0ad11417a4baaa5be}} 
+int \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a5e432e1b44d0d5a0ad11417a4baaa5be}{no\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of vertices defining the polygon (the first vertex is counted once) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_aea5407f4e08d93eaaf4d25eff9c44ffe}\label{classteb__local__planner_1_1PolygonObstacle_aea5407f4e08d93eaaf4d25eff9c44ffe}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_aea5407f4e08d93eaaf4d25eff9c44ffe}{fix\+Polygon\+Closure}} ()
+\begin{DoxyCompactList}\small\item\em Check if the current polygon contains the first vertex twice (as start and end) and in that case erase the last redundant one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_aa0c64e3679a5b2f16addeaa90d2a1962}\label{classteb__local__planner_1_1PolygonObstacle_aa0c64e3679a5b2f16addeaa90d2a1962}} 
+void \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_aa0c64e3679a5b2f16addeaa90d2a1962}{calc\+Centroid}} ()
+\begin{DoxyCompactList}\small\item\em Compute the centroid of the polygon (called inside \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}{finalize\+Polygon()}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+Point2d\+Container \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_ad0d71707e44f7cf2ab3b9743f9c5ce0f}{vertices\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store vertices defining the polygon ( \end{DoxyCompactList}\item 
+Eigen\+::\+Vector2d \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a22569c9ed8f5fd34276789fd6df38627}{centroid\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store the centroid coordinates of the polygon ( \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a231156349a2ed9e930cd726df152bf53}\label{classteb__local__planner_1_1PolygonObstacle_a231156349a2ed9e930cd726df152bf53}} 
+bool \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a231156349a2ed9e930cd726df152bf53}{finalized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Flat that keeps track if the polygon was finalized after adding all vertices \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Implements a polygon obstacle with an arbitrary number of vertices 
+
+If the polygon has only 2 vertices, than it is considered as a line, otherwise the polygon will always be closed (a connection between the first and the last vertex is included automatically). 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ae88041e423f072b3317b76c52229a807}\label{classteb__local__planner_1_1PolygonObstacle_ae88041e423f072b3317b76c52229a807}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::check\+Collision (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position,  }\item[{double}]{min\+\_\+dist }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a given point collides with the obstacle 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2D reference position that should be checked \\
+\hline
+{\em min\+\_\+dist} & Minimum distance allowed to the obstacle to be collision free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if position is inside the region of the obstacle or if the minimum distance is lower than min\+\_\+dist 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_af2487bf6752ca520032608e95a016223}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a0541751d0d3cffb7f562704ccaa770ae}\label{classteb__local__planner_1_1PolygonObstacle_a0541751d0d3cffb7f562704ccaa770ae}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!checkLineIntersection@{checkLineIntersection}}
+\index{checkLineIntersection@{checkLineIntersection}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{checkLineIntersection()}{checkLineIntersection()}}
+{\footnotesize\ttfamily virtual bool teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::check\+Line\+Intersection (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end,  }\item[{double}]{min\+\_\+dist = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if a given line segment between two points intersects with the obstacle (and additionally keeps a safty distance {\ttfamily min\+\_\+dist}) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2D point for the end of the reference line \\
+\hline
+{\em line\+\_\+end} & 2D point for the end of the reference line \\
+\hline
+{\em min\+\_\+dist} & Minimum distance allowed to the obstacle to be collision/intersection free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{备注}
+we ignore {\ttfamily min\+\_\+dist} here 
+\end{DoxyRemark}
+\begin{DoxyReturn}{返回}
+{\ttfamily true} if given line intersects the region of the obstacle or if the minimum distance is lower than min\+\_\+dist 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_af94e4f86ac2c6d26fccb6022d4b3c457}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ae7124c0565f0a8612bb052ee5b7ef218}\label{classteb__local__planner_1_1PolygonObstacle_ae7124c0565f0a8612bb052ee5b7ef218}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getCentroid@{getCentroid}}
+\index{getCentroid@{getCentroid}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getCentroid()}{getCentroid()}}
+{\footnotesize\ttfamily virtual const Eigen\+::\+Vector2d\& teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Centroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get centroid coordinates of the obstacle 
+
+\begin{DoxyReturn}{返回}
+Eigen\+::\+Vector2d containing the centroid 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a6960c8404759401120d53a44ec2155cc}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a4cb519781a14e2cdc3c871234b6f348a}\label{classteb__local__planner_1_1PolygonObstacle_a4cb519781a14e2cdc3c871234b6f348a}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getCentroidCplx@{getCentroidCplx}}
+\index{getCentroidCplx@{getCentroidCplx}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getCentroidCplx()}{getCentroidCplx()}}
+{\footnotesize\ttfamily virtual std\+::complex$<$double$>$ teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Centroid\+Cplx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get centroid coordinates of the obstacle as complex number 
+
+\begin{DoxyReturn}{返回}
+std\+::complex containing the centroid coordinate 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_abb48a94476235acde6ff31fd6607b35c}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a2ba7d9e1cfb5a11001a5f4695cc4d08d}\label{classteb__local__planner_1_1PolygonObstacle_a2ba7d9e1cfb5a11001a5f4695cc4d08d}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getClosestPoint@{getClosestPoint}}
+\index{getClosestPoint@{getClosestPoint}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getClosestPoint()}{getClosestPoint()}}
+{\footnotesize\ttfamily virtual Eigen\+::\+Vector2d teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Closest\+Point (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the closest point on the boundary of the obstacle w.\+r.\+t. a specified reference position 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & reference 2d position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+closest point on the obstacle boundary 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ab16489bf4a8a5a1dd116b7714f8d04a9}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_af0a5a2a5cf83069429a5984e87036e2e}\label{classteb__local__planner_1_1PolygonObstacle_af0a5a2a5cf83069429a5984e87036e2e}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (line as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2d position of the begin of the reference line \\
+\hline
+{\em line\+\_\+end} & 2d position of the end of the reference line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ad0318a1d12949d41f72109477e002587}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ac99771e8cd56489e6751e2087be737be}\label{classteb__local__planner_1_1PolygonObstacle_ac99771e8cd56489e6751e2087be737be}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (point as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2d reference position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_aa402c55336629cea9eb2abf34cffc013}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_aaff9231f36de555ce7eebd6b89a4c859}\label{classteb__local__planner_1_1PolygonObstacle_aaff9231f36de555ce7eebd6b89a4c859}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumDistance@{getMinimumDistance}}
+\index{getMinimumDistance@{getMinimumDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumDistance()}{getMinimumDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Distance (\begin{DoxyParamCaption}\item[{const Point2d\+Container \&}]{polygon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the minimum euclidean distance to the obstacle (polygon as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & Vertices (2D points) describing a closed polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a252167bfbe5e08dea1ea3c5d3ed94ca3}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ae4fe735f436b00f2f2182b546fd2b71e}\label{classteb__local__planner_1_1PolygonObstacle_ae4fe735f436b00f2f2182b546fd2b71e}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+start,  }\item[{const Eigen\+::\+Vector2d \&}]{line\+\_\+end,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (line as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em line\+\_\+start} & 2d position of the begin of the reference line \\
+\hline
+{\em line\+\_\+end} & 2d position of the end of the reference line \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a1a36926f6b2c9554ada188ad431d919c}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a2c1f8c97e611d59fa85beb4cf0f49b41}\label{classteb__local__planner_1_1PolygonObstacle_a2c1f8c97e611d59fa85beb4cf0f49b41}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector2d \&}]{position,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (point as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em position} & 2d reference position \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a39a81893ed6f8acb5c0bea07f26788a3}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ad1c6703d6ba6037b3bf0e615ac6b8bd1}\label{classteb__local__planner_1_1PolygonObstacle_ad1c6703d6ba6037b3bf0e615ac6b8bd1}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}}
+\index{getMinimumSpatioTemporalDistance@{getMinimumSpatioTemporalDistance}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{getMinimumSpatioTemporalDistance()}{getMinimumSpatioTemporalDistance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual double teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::get\+Minimum\+Spatio\+Temporal\+Distance (\begin{DoxyParamCaption}\item[{const Point2d\+Container \&}]{polygon,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the estimated minimum spatiotemporal distance to the moving obstacle using a constant velocity model (polygon as reference) 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & Vertices (2D points) describing a closed polygon \\
+\hline
+{\em t} & time, for which the minimum distance to the obstacle is estimated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The nearest possible distance to the obstacle at time t 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_ae70483f0255fed37cef35b9c60b2f001}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a7e5792cd0ccd34827330bde3f9fbb206}\label{classteb__local__planner_1_1PolygonObstacle_a7e5792cd0ccd34827330bde3f9fbb206}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!pushBackVertex@{pushBackVertex}}
+\index{pushBackVertex@{pushBackVertex}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{pushBackVertex()}{pushBackVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::push\+Back\+Vertex (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector2d $>$ \&}]{vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a vertex to the polygon (edge-\/point) 
+
+\begin{DoxyRemark}{备注}
+You do not need to close the polygon (do not repeat the first vertex) 
+\end{DoxyRemark}
+\begin{DoxyWarning}{警告}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}{finalize\+Polygon()}} after adding all vertices 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{参数}
+{\em vertex} & 2D point defining a new polygon edge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a72f8b38d74b5b89b3f35d32e646c7229}\label{classteb__local__planner_1_1PolygonObstacle_a72f8b38d74b5b89b3f35d32e646c7229}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!pushBackVertex@{pushBackVertex}}
+\index{pushBackVertex@{pushBackVertex}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{pushBackVertex()}{pushBackVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::push\+Back\+Vertex (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a vertex to the polygon (edge-\/point) 
+
+\begin{DoxyRemark}{备注}
+You do not need to close the polygon (do not repeat the first vertex) 
+\end{DoxyRemark}
+\begin{DoxyWarning}{警告}
+Do not forget to call \mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a244240eb114108c8de4fd712f2d9f9c1}{finalize\+Polygon()}} after adding all vertices 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{参数}
+{\em x} & x-\/coordinate of the new vertex \\
+\hline
+{\em y} & y-\/coordinate of the new vertex \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a9d35d63ae1d6bd94791b26298d614049}\label{classteb__local__planner_1_1PolygonObstacle_a9d35d63ae1d6bd94791b26298d614049}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!toPolygonMsg@{toPolygonMsg}}
+\index{toPolygonMsg@{toPolygonMsg}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{toPolygonMsg()}{toPolygonMsg()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::to\+Polygon\+Msg (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Polygon \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Convert the obstacle to a polygon message 
+
+Convert the obstacle to a corresponding polygon msg. Point obstacles have one vertex, lines have two vertices and polygons might are implictly closed such that the start vertex must not be repeated. 
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em polygon} & the polygon message \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1Obstacle_a13d46bddd41ab00dbcc968da213424d4}{teb\+\_\+local\+\_\+planner\+::\+Obstacle}}.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_a22569c9ed8f5fd34276789fd6df38627}\label{classteb__local__planner_1_1PolygonObstacle_a22569c9ed8f5fd34276789fd6df38627}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!centroid\_@{centroid\_}}
+\index{centroid\_@{centroid\_}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{centroid\_}{centroid\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector2d teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::centroid\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Store the centroid coordinates of the polygon ( 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_aa0c64e3679a5b2f16addeaa90d2a1962}{calc\+Centroid}}) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classteb__local__planner_1_1PolygonObstacle_ad0d71707e44f7cf2ab3b9743f9c5ce0f}\label{classteb__local__planner_1_1PolygonObstacle_ad0d71707e44f7cf2ab3b9743f9c5ce0f}} 
+\index{teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}!vertices\_@{vertices\_}}
+\index{vertices\_@{vertices\_}!teb\_local\_planner::PolygonObstacle@{teb\_local\_planner::PolygonObstacle}}
+\doxysubsubsection{\texorpdfstring{vertices\_}{vertices\_}}
+{\footnotesize\ttfamily Point2d\+Container teb\+\_\+local\+\_\+planner\+::\+Polygon\+Obstacle\+::vertices\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Store vertices defining the polygon ( 
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1PolygonObstacle_a7e5792cd0ccd34827330bde3f9fbb206}{push\+Back\+Vertex}}) 
+\end{DoxySeeAlso}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+teb\+\_\+local\+\_\+planner/include/teb\+\_\+local\+\_\+planner/obstacles.\+h\end{DoxyCompactItemize}

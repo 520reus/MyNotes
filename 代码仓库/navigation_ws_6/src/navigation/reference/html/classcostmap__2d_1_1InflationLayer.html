@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_2d::InflationLayer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></li><li class="navelem"><a class="el" href="classcostmap__2d_1_1InflationLayer.html">InflationLayer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">costmap_2d::InflationLayer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 costmap_2d::InflationLayer 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcostmap__2d_1_1InflationLayer.png" usemap="#costmap_5F2d::InflationLayer_map" alt=""/>
+  <map id="costmap_5F2d::InflationLayer_map" name="costmap_5F2d::InflationLayer_map">
+<area href="classcostmap__2d_1_1Layer.html" alt="costmap_2d::Layer" shape="rect" coords="0,0,162,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afa192475f613ad4663f17eb099f698aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#afa192475f613ad4663f17eb099f698aa">onInitialize</a> ()</td></tr>
+<tr class="memdesc:afa192475f613ad4663f17eb099f698aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called at the end of initialize(). Override to implement subclass-specific initialization.  <a href="classcostmap__2d_1_1InflationLayer.html#afa192475f613ad4663f17eb099f698aa">更多...</a><br /></td></tr>
+<tr class="separator:afa192475f613ad4663f17eb099f698aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb359aaee3f5ed1b3617515a9f001e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#a9fb359aaee3f5ed1b3617515a9f001e6">updateBounds</a> (double robot_x, double robot_y, double robot_yaw, double *min_x, double *min_y, double *max_x, double *max_y)</td></tr>
+<tr class="memdesc:a9fb359aaee3f5ed1b3617515a9f001e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called by the <a class="el" href="classcostmap__2d_1_1LayeredCostmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds.  <a href="classcostmap__2d_1_1InflationLayer.html#a9fb359aaee3f5ed1b3617515a9f001e6">更多...</a><br /></td></tr>
+<tr class="separator:a9fb359aaee3f5ed1b3617515a9f001e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22c75aaa975f97f7c0cb864cc552db8"><td class="memItemLeft" align="right" valign="top"><a id="ad22c75aaa975f97f7c0cb864cc552db8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#ad22c75aaa975f97f7c0cb864cc552db8">updateCosts</a> (<a class="el" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> &amp;master_grid, int min_i, int min_j, int max_i, int max_j)</td></tr>
+<tr class="memdesc:ad22c75aaa975f97f7c0cb864cc552db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually update the underlying costmap, only within the bounds calculated during UpdateBounds(). <br /></td></tr>
+<tr class="separator:ad22c75aaa975f97f7c0cb864cc552db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298ae7ff737ea8b409405c51aa34dab3"><td class="memItemLeft" align="right" valign="top"><a id="a298ae7ff737ea8b409405c51aa34dab3"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDiscretized</b> ()</td></tr>
+<tr class="separator:a298ae7ff737ea8b409405c51aa34dab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31d5b18cab3f9408d99542b3cfd30d3"><td class="memItemLeft" align="right" valign="top"><a id="aa31d5b18cab3f9408d99542b3cfd30d3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#aa31d5b18cab3f9408d99542b3cfd30d3">matchSize</a> ()</td></tr>
+<tr class="memdesc:aa31d5b18cab3f9408d99542b3cfd30d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this to make this layer match the size of the parent costmap. <br /></td></tr>
+<tr class="separator:aa31d5b18cab3f9408d99542b3cfd30d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5df966fb4dd99b8b69945408f42c2a6"><td class="memItemLeft" align="right" valign="top"><a id="aa5df966fb4dd99b8b69945408f42c2a6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:aa5df966fb4dd99b8b69945408f42c2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded99a51737669d85ccc3f1b932061e5"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#aded99a51737669d85ccc3f1b932061e5">computeCost</a> (double distance) const</td></tr>
+<tr class="memdesc:aded99a51737669d85ccc3f1b932061e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a distance, compute a cost.  <a href="classcostmap__2d_1_1InflationLayer.html#aded99a51737669d85ccc3f1b932061e5">更多...</a><br /></td></tr>
+<tr class="separator:aded99a51737669d85ccc3f1b932061e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#a9bb0571041eaadcf3e93a9e0b1395cbb">setInflationParameters</a> (double inflation_radius, double cost_scaling_factor)</td></tr>
+<tr class="memdesc:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the values of the inflation radius parameters  <a href="classcostmap__2d_1_1InflationLayer.html#a9bb0571041eaadcf3e93a9e0b1395cbb">更多...</a><br /></td></tr>
+<tr class="separator:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcostmap__2d_1_1Layer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcostmap__2d_1_1Layer')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcostmap__2d_1_1Layer.html">costmap_2d::Layer</a></td></tr>
+<tr class="memitem:af6c7a09667d7cc23e207e0121e60ba4b inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="af6c7a09667d7cc23e207e0121e60ba4b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a> *parent, std::string name, tf2_ros::Buffer *tf)</td></tr>
+<tr class="separator:af6c7a09667d7cc23e207e0121e60ba4b inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="a8238b7e03dc09bade9543a23addc65e2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1Layer.html#a8238b7e03dc09bade9543a23addc65e2">deactivate</a> ()</td></tr>
+<tr class="memdesc:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop publishers. <br /></td></tr>
+<tr class="separator:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="a83cb399475b5536ae8e278569756d68b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1Layer.html#a83cb399475b5536ae8e278569756d68b">activate</a> ()</td></tr>
+<tr class="memdesc:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1Layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart publishers if they've been stopped. <br /></td></tr>
+<tr class="separator:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1Layer.html#a3331b68fc4db5ca14dcc31de179fd75f">isCurrent</a> () const</td></tr>
+<tr class="memdesc:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1Layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know.  <a href="classcostmap__2d_1_1Layer.html#a3331b68fc4db5ca14dcc31de179fd75f">更多...</a><br /></td></tr>
+<tr class="separator:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85315764d007012838b33516999a727 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="af85315764d007012838b33516999a727"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
+<tr class="separator:af85315764d007012838b33516999a727 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd164562392c1e243a4d4a5a23c27cb0 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="afd164562392c1e243a4d4a5a23c27cb0"></a>
+const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1Layer.html#afd164562392c1e243a4d4a5a23c27cb0">getFootprint</a> () const</td></tr>
+<tr class="memdesc:afd164562392c1e243a4d4a5a23c27cb0 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for layered_costmap_-&gt;<a class="el" href="classcostmap__2d_1_1Layer.html#afd164562392c1e243a4d4a5a23c27cb0" title="Convenience function for layered_costmap_-&gt;getFootprint().">getFootprint()</a>. <br /></td></tr>
+<tr class="separator:afd164562392c1e243a4d4a5a23c27cb0 inherit pub_methods_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:aa61f02cb6b2c88176257a6e0d5553cdc"><td class="memItemLeft" align="right" valign="top"><a id="aa61f02cb6b2c88176257a6e0d5553cdc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1InflationLayer.html#aa61f02cb6b2c88176257a6e0d5553cdc">onFootprintChanged</a> ()</td></tr>
+<tr class="memdesc:aa61f02cb6b2c88176257a6e0d5553cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcostmap__2d_1_1LayeredCostmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> calls this whenever the footprint there changes (via <a class="el" href="classcostmap__2d_1_1LayeredCostmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed（外接圆半径） and inscribed radii（内切圆）,...">LayeredCostmap::setFootprint()</a>). Override to be notified of changes to the robot's footprint. <br /></td></tr>
+<tr class="separator:aa61f02cb6b2c88176257a6e0d5553cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a194f58d14ff80500d724c0822c5f960a"><td class="memItemLeft" align="right" valign="top"><a id="a194f58d14ff80500d724c0822c5f960a"></a>
+boost::recursive_mutex *&#160;</td><td class="memItemRight" valign="bottom"><b>inflation_access_</b></td></tr>
+<tr class="separator:a194f58d14ff80500d724c0822c5f960a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d76789a37f24cf6af5d82e900a5852"><td class="memItemLeft" align="right" valign="top"><a id="a05d76789a37f24cf6af5d82e900a5852"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>resolution_</b></td></tr>
+<tr class="separator:a05d76789a37f24cf6af5d82e900a5852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66302e9f414da11c156e7ce1b5e16bae"><td class="memItemLeft" align="right" valign="top"><a id="a66302e9f414da11c156e7ce1b5e16bae"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>inflation_radius_</b></td></tr>
+<tr class="separator:a66302e9f414da11c156e7ce1b5e16bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c7d884932a3d5f215099f29361d0a8"><td class="memItemLeft" align="right" valign="top"><a id="af7c7d884932a3d5f215099f29361d0a8"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>inscribed_radius_</b></td></tr>
+<tr class="separator:af7c7d884932a3d5f215099f29361d0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507bd49c3aca392d91efcabfe999cc0d"><td class="memItemLeft" align="right" valign="top"><a id="a507bd49c3aca392d91efcabfe999cc0d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>weight_</b></td></tr>
+<tr class="separator:a507bd49c3aca392d91efcabfe999cc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcffd8162d89b97e668bde22b53ec4a"><td class="memItemLeft" align="right" valign="top"><a id="a9dcffd8162d89b97e668bde22b53ec4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>inflate_unknown_</b></td></tr>
+<tr class="separator:a9dcffd8162d89b97e668bde22b53ec4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcostmap__2d_1_1Layer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcostmap__2d_1_1Layer')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classcostmap__2d_1_1Layer.html">costmap_2d::Layer</a></td></tr>
+<tr class="memitem:a4cebd6c53e8089f863f16cee9a0a2184 inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="a4cebd6c53e8089f863f16cee9a0a2184"></a>
+<a class="el" href="classcostmap__2d_1_1LayeredCostmap.html">LayeredCostmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>layered_costmap_</b></td></tr>
+<tr class="separator:a4cebd6c53e8089f863f16cee9a0a2184 inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67484d6f9573d583f3ad809375e976a inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="af67484d6f9573d583f3ad809375e976a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>current_</b></td></tr>
+<tr class="separator:af67484d6f9573d583f3ad809375e976a inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61b2a3e01353b97258c207a397977fe inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="ab61b2a3e01353b97258c207a397977fe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1Layer.html#ab61b2a3e01353b97258c207a397977fe">enabled_</a></td></tr>
+<tr class="memdesc:ab61b2a3e01353b97258c207a397977fe inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently this var is managed by subclasses. TODO: make this managed by this class and/or container class. <br /></td></tr>
+<tr class="separator:ab61b2a3e01353b97258c207a397977fe inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fa1f64ebd9d39af5947c738202e248 inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="ac1fa1f64ebd9d39af5947c738202e248"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b></td></tr>
+<tr class="separator:ac1fa1f64ebd9d39af5947c738202e248 inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a977acd639966f447262b5c8837a40f inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memItemLeft" align="right" valign="top"><a id="a4a977acd639966f447262b5c8837a40f"></a>
+tf2_ros::Buffer *&#160;</td><td class="memItemRight" valign="bottom"><b>tf_</b></td></tr>
+<tr class="separator:a4a977acd639966f447262b5c8837a40f inherit pro_attribs_classcostmap__2d_1_1Layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aded99a51737669d85ccc3f1b932061e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded99a51737669d85ccc3f1b932061e5">&#9670;&nbsp;</a></span>computeCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned char costmap_2d::InflationLayer::computeCost </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a distance, compute a cost. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>The distance from an obstacle in cells </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A cost value for the distance </dd></dl>
+
+</div>
+</div>
+<a id="afa192475f613ad4663f17eb099f698aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa192475f613ad4663f17eb099f698aa">&#9670;&nbsp;</a></span>onInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void costmap_2d::InflationLayer::onInitialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is called at the end of initialize(). Override to implement subclass-specific initialization. </p>
+<p>tf_, name_, and layered_costmap_ will all be set already when this is called. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1Layer.html#a97888a23e12ab5b798a854c2f590ae71">costmap_2d::Layer</a> .</p>
+
+</div>
+</div>
+<a id="a9bb0571041eaadcf3e93a9e0b1395cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb0571041eaadcf3e93a9e0b1395cbb">&#9670;&nbsp;</a></span>setInflationParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::setInflationParameters </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inflation_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cost_scaling_factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the values of the inflation radius parameters </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inflation_radius</td><td>The new inflation radius </td></tr>
+    <tr><td class="paramname">cost_scaling_factor</td><td>The new weight </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9fb359aaee3f5ed1b3617515a9f001e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb359aaee3f5ed1b3617515a9f001e6">&#9670;&nbsp;</a></span>updateBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void costmap_2d::InflationLayer::updateBounds </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_yaw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>min_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>min_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>max_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>max_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is called by the <a class="el" href="classcostmap__2d_1_1LayeredCostmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. </p>
+<p>For more details, see "Layered Costmaps for Context-Sensitive Navigation", by Lu et. Al, IROS 2014. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1Layer.html#a978fb5288265b293a6fd08787314f2f1">costmap_2d::Layer</a> .</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_2d/include/costmap_2d/<a class="el" href="inflation__layer_8h_source.html">inflation_layer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

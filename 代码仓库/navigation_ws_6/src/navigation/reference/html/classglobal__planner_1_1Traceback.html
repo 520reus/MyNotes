@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: global_planner::Traceback类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>global_planner</b></li><li class="navelem"><a class="el" href="classglobal__planner_1_1Traceback.html">Traceback</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">global_planner::Traceback类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 global_planner::Traceback 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classglobal__planner_1_1Traceback.png" usemap="#global_5Fplanner::Traceback_map" alt=""/>
+  <map id="global_5Fplanner::Traceback_map" name="global_5Fplanner::Traceback_map">
+<area href="classglobal__planner_1_1GradientPath.html" alt="global_planner::GradientPath" shape="rect" coords="0,56,175,80"/>
+<area href="classglobal__planner_1_1GridPath.html" alt="global_planner::GridPath" shape="rect" coords="185,56,360,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abf48245c8bc021ba9df355ae74ded3e4"><td class="memItemLeft" align="right" valign="top"><a id="abf48245c8bc021ba9df355ae74ded3e4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Traceback</b> (<a class="el" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a> *p_calc)</td></tr>
+<tr class="separator:abf48245c8bc021ba9df355ae74ded3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3562c3ff5dc3a1e4465d2ddbe62f812"><td class="memItemLeft" align="right" valign="top"><a id="ad3562c3ff5dc3a1e4465d2ddbe62f812"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>getPath</b> (float *potential, double start_x, double start_y, double end_x, double end_y, std::vector&lt; std::pair&lt; float, float &gt; &gt; &amp;path)=0</td></tr>
+<tr class="separator:ad3562c3ff5dc3a1e4465d2ddbe62f812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fa8c3628baa7debd94ac83b02e03a7"><td class="memItemLeft" align="right" valign="top"><a id="a75fa8c3628baa7debd94ac83b02e03a7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setSize</b> (int xs, int ys)</td></tr>
+<tr class="separator:a75fa8c3628baa7debd94ac83b02e03a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9565bfa976f8ce019ce4e4d814b3b575"><td class="memItemLeft" align="right" valign="top"><a id="a9565bfa976f8ce019ce4e4d814b3b575"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> (int x, int y)</td></tr>
+<tr class="separator:a9565bfa976f8ce019ce4e4d814b3b575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af411eb96102bcedea2d530137b13a002"><td class="memItemLeft" align="right" valign="top"><a id="af411eb96102bcedea2d530137b13a002"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLethalCost</b> (unsigned char lethal_cost)</td></tr>
+<tr class="separator:af411eb96102bcedea2d530137b13a002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a062d8297437fb132a87a9adff70c2c8f"><td class="memItemLeft" align="right" valign="top"><a id="a062d8297437fb132a87a9adff70c2c8f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>xs_</b></td></tr>
+<tr class="separator:a062d8297437fb132a87a9adff70c2c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7c2fd48b6d48696ee7fcd650e5cc4b"><td class="memItemLeft" align="right" valign="top"><a id="a1d7c2fd48b6d48696ee7fcd650e5cc4b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ys_</b></td></tr>
+<tr class="separator:a1d7c2fd48b6d48696ee7fcd650e5cc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b0a5a5dfb61d942d2dfd7c0d7a58ea"><td class="memItemLeft" align="right" valign="top"><a id="a61b0a5a5dfb61d942d2dfd7c0d7a58ea"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>lethal_cost_</b></td></tr>
+<tr class="separator:a61b0a5a5dfb61d942d2dfd7c0d7a58ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918825f1ecb2858a3b4a6d516ad144b4"><td class="memItemLeft" align="right" valign="top"><a id="a918825f1ecb2858a3b4a6d516ad144b4"></a>
+<a class="el" href="classglobal__planner_1_1PotentialCalculator.html">PotentialCalculator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_calc_</b></td></tr>
+<tr class="separator:a918825f1ecb2858a3b4a6d516ad144b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="traceback_8h_source.html">traceback.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

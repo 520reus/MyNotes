@@ -986,7 +986,7 @@ namespace move_base {
           ROS_DEBUG_NAMED("move_base_recovery","Something should abort after this.");
 
           if(recovery_trigger_ == CONTROLLING_R){
-            ROS_ERROR("Aborting because a valid control could not be found. Even after executing all recovery behaviors");
+            ROS_ERROR("because a valid control could not be found. Even after executing all recovery behaviors");
             as_->setAborted(move_base_msgs::MoveBaseResult(), "Failed to find a valid control. Even after executing recovery behaviors.");
           }
           else if(recovery_trigger_ == PLANNING_R){

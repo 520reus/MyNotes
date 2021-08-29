@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner/include/teb_local_planner/g2o_types/edge_dynamic_obstacle.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a43065ac9e6a4d3baa1ccfe36f6ac7d4.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_12bc4cd0c1d0bd41b9b483e018d49149.html">include</a></li><li class="navelem"><a class="el" href="dir_1a09b40d633567d520f0e29b13bc7804.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_eacc228c05639ef6b40577b79f71225f.html">g2o_types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">edge_dynamic_obstacle.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Notes:</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * The following class is derived from a class defined by the</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * g2o-framework. g2o is licensed under the terms of the BSD License.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * Refer to the base class source for detailed licensing information.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * Author: Christoph Rösmann, Franz Albers</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef EDGE_DYNAMICOBSTACLE_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define EDGE_DYNAMICOBSTACLE_H</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/vertex_pose.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/vertex_timediff.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/penalties.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/g2o_types/base_teb_edges.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/obstacles.h&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/teb_config.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/robot_footprint_model.h&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html">   71</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html">EdgeDynamicObstacle</a> : <span class="keyword">public</span> <a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html">BaseTebUnaryEdge</a>&lt;2, const Obstacle*, VertexPose&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a8f44ce2c24d7b9e4559edec5ab0d2d93">   78</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a8f44ce2c24d7b9e4559edec5ab0d2d93">EdgeDynamicObstacle</a>() : <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">t_</a>(0)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ad6dec9459215785d548662d97297cf31">   86</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ad6dec9459215785d548662d97297cf31">EdgeDynamicObstacle</a>(<span class="keywordtype">double</span> t) : <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">t_</a>(t)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a9d732d1d472aa4df5a0c780cfa00df8e">   93</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a9d732d1d472aa4df5a0c780cfa00df8e">computeError</a>()</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ROS_ASSERT_MSG(<a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">cfg_</a> &amp;&amp; _measurement &amp;&amp; <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">robot_model_</a>, <span class="stringliteral">&quot;You must call setTebConfig(), setObstacle() and setRobotModel() on EdgeDynamicObstacle()&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>* bandpt = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>*<span class="keyword">&gt;</span>(_vertices[0]);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">double</span> dist = <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">robot_model_</a>-&gt;<a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a0e51cdaecc5fbae067d2e6bd3780f339">estimateSpatioTemporalDistance</a>(bandpt-&gt;<a class="code" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>(), _measurement, <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">t_</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    _error[0] = penaltyBoundFromBelow(dist, <a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#ae3add2c68529da3636e673e4405d0271">min_obstacle_dist</a>, <a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#ab86fc083498a98c5a598bdc4c75e5cc6">optim</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Optimization.html#a039dc3b4aab681511dd235a22f1d396c">penalty_epsilon</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    _error[1] = penaltyBoundFromBelow(dist, <a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">cfg_</a>-&gt;<a class="code" href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">obstacles</a>.<a class="code" href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#a889f5292434e4541e25d9149e0696de5">dynamic_obstacle_inflation_dist</a>, 0.0);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    ROS_ASSERT_MSG(std::isfinite(_error[0]), <span class="stringliteral">&quot;EdgeDynamicObstacle::computeError() _error[0]=%f\n&quot;</span>,_error[0]);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#aeadd42dc2777cdeceaa3c06e3d8b6dd8">  111</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#aeadd42dc2777cdeceaa3c06e3d8b6dd8">setObstacle</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a>* obstacle)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    _measurement = obstacle;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a84a3040a9e133542e95a35b5d20b0da5">  120</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a84a3040a9e133542e95a35b5d20b0da5">setRobotModel</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* robot_model)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">robot_model_</a> = robot_model;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a477e0c0564261da0b5afbeccee6651a5">  131</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a477e0c0564261da0b5afbeccee6651a5">setParameters</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a>&amp; cfg, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* robot_model, <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a>* obstacle)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">cfg_</a> = &amp;cfg;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">robot_model_</a> = robot_model;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    _measurement = obstacle;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">  140</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a>* <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">robot_model_</a>; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">  141</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">t_</a>; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">public</span>: </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseRobotFootprintModel_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseRobotFootprintModel.html">teb_local_planner::BaseRobotFootprintModel</a></div><div class="ttdoc">Abstract class that defines the interface for robot footprint/contour models</div><div class="ttdef"><b>Definition:</b> robot_footprint_model.h:59</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseRobotFootprintModel_html_a0e51cdaecc5fbae067d2e6bd3780f339"><div class="ttname"><a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a0e51cdaecc5fbae067d2e6bd3780f339">teb_local_planner::BaseRobotFootprintModel::estimateSpatioTemporalDistance</a></div><div class="ttdeci">virtual double estimateSpatioTemporalDistance(const PoseSE2 &amp;current_pose, const Obstacle *obstacle, double t) const =0</div><div class="ttdoc">Estimate the distance between the robot and the predicted location of an obstacle at time t</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebUnaryEdge_html"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebUnaryEdge.html">teb_local_planner::BaseTebUnaryEdge</a></div><div class="ttdoc">Base edge connecting a single vertex in the TEB optimization problem</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:71</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1BaseTebUnaryEdge_html_a74a26d9eb532fd12dbb488ecb810f4aa"><div class="ttname"><a href="classteb__local__planner_1_1BaseTebUnaryEdge.html#a74a26d9eb532fd12dbb488ecb810f4aa">teb_local_planner::BaseTebUnaryEdge&lt; 2, const Obstacle *, VertexPose &gt;::cfg_</a></div><div class="ttdeci">const TebConfig * cfg_</div><div class="ttdoc">Store TebConfig class for parameters</div><div class="ttdef"><b>Definition:</b> base_teb_edges.h:141</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html">teb_local_planner::EdgeDynamicObstacle</a></div><div class="ttdoc">Edge defining the cost function for keeping a distance from dynamic (moving) obstacles.</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:72</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_a477e0c0564261da0b5afbeccee6651a5"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a477e0c0564261da0b5afbeccee6651a5">teb_local_planner::EdgeDynamicObstacle::setParameters</a></div><div class="ttdeci">void setParameters(const TebConfig &amp;cfg, const BaseRobotFootprintModel *robot_model, const Obstacle *obstacle)</div><div class="ttdoc">Set all parameters at once</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:131</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_a6a6926821abdaa258194d88a8a8b017b"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a6a6926821abdaa258194d88a8a8b017b">teb_local_planner::EdgeDynamicObstacle::robot_model_</a></div><div class="ttdeci">const BaseRobotFootprintModel * robot_model_</div><div class="ttdoc">Store pointer to robot_model</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:140</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_a84a3040a9e133542e95a35b5d20b0da5"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a84a3040a9e133542e95a35b5d20b0da5">teb_local_planner::EdgeDynamicObstacle::setRobotModel</a></div><div class="ttdeci">void setRobotModel(const BaseRobotFootprintModel *robot_model)</div><div class="ttdoc">Set pointer to the robot model</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:120</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_a8f44ce2c24d7b9e4559edec5ab0d2d93"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a8f44ce2c24d7b9e4559edec5ab0d2d93">teb_local_planner::EdgeDynamicObstacle::EdgeDynamicObstacle</a></div><div class="ttdeci">EdgeDynamicObstacle()</div><div class="ttdoc">Construct edge.</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:78</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_a9d732d1d472aa4df5a0c780cfa00df8e"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#a9d732d1d472aa4df5a0c780cfa00df8e">teb_local_planner::EdgeDynamicObstacle::computeError</a></div><div class="ttdeci">void computeError()</div><div class="ttdoc">Actual cost function</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:93</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_ad6dec9459215785d548662d97297cf31"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ad6dec9459215785d548662d97297cf31">teb_local_planner::EdgeDynamicObstacle::EdgeDynamicObstacle</a></div><div class="ttdeci">EdgeDynamicObstacle(double t)</div><div class="ttdoc">Construct edge and specify the time for its associated pose (neccessary for computeError).</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:86</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_ae2ca5d7025bc839a8f53b39cd555ebf5"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#ae2ca5d7025bc839a8f53b39cd555ebf5">teb_local_planner::EdgeDynamicObstacle::t_</a></div><div class="ttdeci">double t_</div><div class="ttdoc">Estimated time until current pose is reached</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:141</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1EdgeDynamicObstacle_html_aeadd42dc2777cdeceaa3c06e3d8b6dd8"><div class="ttname"><a href="classteb__local__planner_1_1EdgeDynamicObstacle.html#aeadd42dc2777cdeceaa3c06e3d8b6dd8">teb_local_planner::EdgeDynamicObstacle::setObstacle</a></div><div class="ttdeci">void setObstacle(const Obstacle *obstacle)</div><div class="ttdoc">Set Obstacle for the underlying cost function</div><div class="ttdef"><b>Definition:</b> edge_dynamic_obstacle.h:111</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1Obstacle_html"><div class="ttname"><a href="classteb__local__planner_1_1Obstacle.html">teb_local_planner::Obstacle</a></div><div class="ttdoc">Abstract class that defines the interface for modelling obstacles</div><div class="ttdef"><b>Definition:</b> obstacles.h:68</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html">teb_local_planner::TebConfig</a></div><div class="ttdoc">Config class for the teb_local_planner and its components.</div><div class="ttdef"><b>Definition:</b> teb_config.h:62</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html_a5405a3abdb78c886f500ee57943a6582"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html#a5405a3abdb78c886f500ee57943a6582">teb_local_planner::TebConfig::obstacles</a></div><div class="ttdeci">struct teb_local_planner::TebConfig::Obstacles obstacles</div><div class="ttdoc">Obstacle related parameters</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1TebConfig_html_ab86fc083498a98c5a598bdc4c75e5cc6"><div class="ttname"><a href="classteb__local__planner_1_1TebConfig.html#ab86fc083498a98c5a598bdc4c75e5cc6">teb_local_planner::TebConfig::optim</a></div><div class="ttdeci">struct teb_local_planner::TebConfig::Optimization optim</div><div class="ttdoc">Optimization related parameters</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html">teb_local_planner::VertexPose</a></div><div class="ttdoc">This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:64</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a0c8cbabe5c33e10c81e023f954568839"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">teb_local_planner::VertexPose::pose</a></div><div class="ttdeci">PoseSE2 &amp; pose()</div><div class="ttdoc">Access the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:126</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Obstacles_html_a889f5292434e4541e25d9149e0696de5"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#a889f5292434e4541e25d9149e0696de5">teb_local_planner::TebConfig::Obstacles::dynamic_obstacle_inflation_dist</a></div><div class="ttdeci">double dynamic_obstacle_inflation_dist</div><div class="ttdoc">Buffer zone around predicted locations of dynamic obstacles with non-zero penalty costs (should be la...</div><div class="ttdef"><b>Definition:</b> teb_config.h:122</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Obstacles_html_ae3add2c68529da3636e673e4405d0271"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Obstacles.html#ae3add2c68529da3636e673e4405d0271">teb_local_planner::TebConfig::Obstacles::min_obstacle_dist</a></div><div class="ttdeci">double min_obstacle_dist</div><div class="ttdoc">Minimum desired separation from obstacles</div><div class="ttdef"><b>Definition:</b> teb_config.h:120</div></div>
+<div class="ttc" id="astructteb__local__planner_1_1TebConfig_1_1Optimization_html_a039dc3b4aab681511dd235a22f1d396c"><div class="ttname"><a href="structteb__local__planner_1_1TebConfig_1_1Optimization.html#a039dc3b4aab681511dd235a22f1d396c">teb_local_planner::TebConfig::Optimization::penalty_epsilon</a></div><div class="ttdeci">double penalty_epsilon</div><div class="ttdoc">Add a small safety margin to penalty functions for hard-constraint approximations</div><div class="ttdef"><b>Definition:</b> teb_config.h:148</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

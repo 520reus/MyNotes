@@ -1,0 +1,2193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::TebOptimalPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html">TebOptimalPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::TebOptimalPlanner类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.  
+ <a href="classteb__local__planner_1_1TebOptimalPlanner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="optimal__planner_8h_source.html">optimal_planner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::TebOptimalPlanner 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1TebOptimalPlanner.png" usemap="#teb_5Flocal_5Fplanner::TebOptimalPlanner_map" alt=""/>
+  <map id="teb_5Flocal_5Fplanner::TebOptimalPlanner_map" name="teb_5Flocal_5Fplanner::TebOptimalPlanner_map">
+<area href="classteb__local__planner_1_1PlannerInterface.html" title="This abstract class defines an interface for local planners" alt="teb_local_planner::PlannerInterface" shape="rect" coords="0,0,226,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0ba04283a62fcb7c529606c2f9b7c803"><td class="memItemLeft" align="right" valign="top"><a id="a0ba04283a62fcb7c529606c2f9b7c803"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a0ba04283a62fcb7c529606c2f9b7c803">TebOptimalPlanner</a> ()</td></tr>
+<tr class="memdesc:a0ba04283a62fcb7c529606c2f9b7c803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor <br /></td></tr>
+<tr class="separator:a0ba04283a62fcb7c529606c2f9b7c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6766218fd9b01629195513fc3db499"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a9f6766218fd9b01629195513fc3db499">TebOptimalPlanner</a> (const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;cfg, ObstContainer *obstacles=NULL, RobotFootprintModelPtr robot_model=boost::make_shared&lt; <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a> &gt;(), TebVisualizationPtr visual=TebVisualizationPtr(), const ViaPointContainer *via_points=NULL)</td></tr>
+<tr class="memdesc:a9f6766218fd9b01629195513fc3db499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and initialize the TEB optimal planner.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a9f6766218fd9b01629195513fc3db499">更多...</a><br /></td></tr>
+<tr class="separator:a9f6766218fd9b01629195513fc3db499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d6e6f285a39d6f7ed05d1ce1df569b"><td class="memItemLeft" align="right" valign="top"><a id="a65d6e6f285a39d6f7ed05d1ce1df569b"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a65d6e6f285a39d6f7ed05d1ce1df569b">~TebOptimalPlanner</a> ()</td></tr>
+<tr class="memdesc:a65d6e6f285a39d6f7ed05d1ce1df569b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the optimal planner. <br /></td></tr>
+<tr class="separator:a65d6e6f285a39d6f7ed05d1ce1df569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8f8c41393753abb7bd2eaef6bf58df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a0c8f8c41393753abb7bd2eaef6bf58df">initialize</a> (const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;cfg, ObstContainer *obstacles=NULL, RobotFootprintModelPtr robot_model=boost::make_shared&lt; <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a> &gt;(), TebVisualizationPtr visual=TebVisualizationPtr(), const ViaPointContainer *via_points=NULL)</td></tr>
+<tr class="memdesc:a0c8f8c41393753abb7bd2eaef6bf58df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the optimal planner  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a0c8f8c41393753abb7bd2eaef6bf58df">更多...</a><br /></td></tr>
+<tr class="separator:a0c8f8c41393753abb7bd2eaef6bf58df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Plan a trajectory &lt;br&gt;</div></td></tr>
+<tr class="memitem:a54f19572a5d17d4c0928f7c6eb483c99"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99">plan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;initial_plan, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:a54f19572a5d17d4c0928f7c6eb483c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory based on an initial reference plan.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99">更多...</a><br /></td></tr>
+<tr class="separator:a54f19572a5d17d4c0928f7c6eb483c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6354ce8a27d063d531fd27f270e4556b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a6354ce8a27d063d531fd27f270e4556b">plan</a> (const tf::Pose &amp;start, const tf::Pose &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:a6354ce8a27d063d531fd27f270e4556b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory between a given start and goal pose (tf::Pose version)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a6354ce8a27d063d531fd27f270e4556b">更多...</a><br /></td></tr>
+<tr class="separator:a6354ce8a27d063d531fd27f270e4556b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c9a979df9bf2d24652d9b06c332c35"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a17c9a979df9bf2d24652d9b06c332c35">plan</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, const geometry_msgs::Twist *start_vel=NULL, bool free_goal_vel=false)</td></tr>
+<tr class="memdesc:a17c9a979df9bf2d24652d9b06c332c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plan a trajectory between a given start and goal pose  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a17c9a979df9bf2d24652d9b06c332c35">更多...</a><br /></td></tr>
+<tr class="separator:a17c9a979df9bf2d24652d9b06c332c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edcd74c62cadc9a5b1b6a56c15930cc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a3edcd74c62cadc9a5b1b6a56c15930cc">getVelocityCommand</a> (double &amp;vx, double &amp;vy, double &amp;omega, int look_ahead_poses) const</td></tr>
+<tr class="memdesc:a3edcd74c62cadc9a5b1b6a56c15930cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the velocity command from a previously optimized plan to control the robot at the current sampling interval.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a3edcd74c62cadc9a5b1b6a56c15930cc">更多...</a><br /></td></tr>
+<tr class="separator:a3edcd74c62cadc9a5b1b6a56c15930cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cfecf3e37a6e1e9fa6becf61afc756"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756">optimizeTEB</a> (int iterations_innerloop, int iterations_outerloop, bool compute_cost_afterwards=false, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="memdesc:aa3cfecf3e37a6e1e9fa6becf61afc756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB implements the main optimization loop. <br  />
+It consist of two nested loops:  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756">更多...</a><br /></td></tr>
+<tr class="separator:aa3cfecf3e37a6e1e9fa6becf61afc756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Desired initial and final velocity</div></td></tr>
+<tr class="memitem:ab121ccfc26b010915bf81e4c367c4b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ab121ccfc26b010915bf81e4c367c4b68">setVelocityStart</a> (const geometry_msgs::Twist &amp;vel_start)</td></tr>
+<tr class="memdesc:ab121ccfc26b010915bf81e4c367c4b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial velocity at the trajectory's start pose (e.g. the robot's velocity) [twist overload].  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ab121ccfc26b010915bf81e4c367c4b68">更多...</a><br /></td></tr>
+<tr class="separator:ab121ccfc26b010915bf81e4c367c4b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2bbed3f93347aebfce658e921d11c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aec2bbed3f93347aebfce658e921d11c4">setVelocityGoal</a> (const geometry_msgs::Twist &amp;vel_goal)</td></tr>
+<tr class="memdesc:aec2bbed3f93347aebfce658e921d11c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the desired final velocity at the trajectory's goal pose.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#aec2bbed3f93347aebfce658e921d11c4">更多...</a><br /></td></tr>
+<tr class="separator:aec2bbed3f93347aebfce658e921d11c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8fcd3c73563ede8f4e300d65c02a63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a7f8fcd3c73563ede8f4e300d65c02a63">setVelocityGoalFree</a> ()</td></tr>
+<tr class="memdesc:a7f8fcd3c73563ede8f4e300d65c02a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the desired final velocity at the trajectory's goal pose to be the maximum velocity limit  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a7f8fcd3c73563ede8f4e300d65c02a63">更多...</a><br /></td></tr>
+<tr class="separator:a7f8fcd3c73563ede8f4e300d65c02a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Take obstacles into account</div></td></tr>
+<tr class="memitem:a9e23e475b8c0c6175129cc9333fd9396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a9e23e475b8c0c6175129cc9333fd9396">setObstVector</a> (ObstContainer *obst_vector)</td></tr>
+<tr class="memdesc:a9e23e475b8c0c6175129cc9333fd9396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a new set of obstacles  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a9e23e475b8c0c6175129cc9333fd9396">更多...</a><br /></td></tr>
+<tr class="separator:a9e23e475b8c0c6175129cc9333fd9396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5adf49662d6bb349c714f99e74606f8"><td class="memItemLeft" align="right" valign="top">const ObstContainer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae5adf49662d6bb349c714f99e74606f8">getObstVector</a> () const</td></tr>
+<tr class="memdesc:ae5adf49662d6bb349c714f99e74606f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal obstacle container.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ae5adf49662d6bb349c714f99e74606f8">更多...</a><br /></td></tr>
+<tr class="separator:ae5adf49662d6bb349c714f99e74606f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Take via-points into account</div></td></tr>
+<tr class="memitem:a2912d5630763073946c4993be5255d2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2912d5630763073946c4993be5255d2d">setViaPoints</a> (const ViaPointContainer *via_points)</td></tr>
+<tr class="memdesc:a2912d5630763073946c4993be5255d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a new set of via-points  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a2912d5630763073946c4993be5255d2d">更多...</a><br /></td></tr>
+<tr class="separator:a2912d5630763073946c4993be5255d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba17a7fd491cd7b15241180a7e865aa"><td class="memItemLeft" align="right" valign="top">const ViaPointContainer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aeba17a7fd491cd7b15241180a7e865aa">getViaPoints</a> () const</td></tr>
+<tr class="memdesc:aeba17a7fd491cd7b15241180a7e865aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal via-point container.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#aeba17a7fd491cd7b15241180a7e865aa">更多...</a><br /></td></tr>
+<tr class="separator:aeba17a7fd491cd7b15241180a7e865aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Visualization</div></td></tr>
+<tr class="memitem:ad7d2a6a5baf060b2501fbda38d4fefea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ad7d2a6a5baf060b2501fbda38d4fefea">setVisualization</a> (TebVisualizationPtr visualization)</td></tr>
+<tr class="memdesc:ad7d2a6a5baf060b2501fbda38d4fefea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class to enable visiualization routines (e.g. publish the local plan and pose sequence)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ad7d2a6a5baf060b2501fbda38d4fefea">更多...</a><br /></td></tr>
+<tr class="separator:ad7d2a6a5baf060b2501fbda38d4fefea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c1e72aa9ec203450458368fb6b1b97"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ac7c1e72aa9ec203450458368fb6b1b97">visualize</a> ()</td></tr>
+<tr class="memdesc:ac7c1e72aa9ec203450458368fb6b1b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish the local plan and pose sequence via ros topics (e.g. subscribe with rviz).  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ac7c1e72aa9ec203450458368fb6b1b97">更多...</a><br /></td></tr>
+<tr class="separator:ac7c1e72aa9ec203450458368fb6b1b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classteb__local__planner_1_1PlannerInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classteb__local__planner_1_1PlannerInterface')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html">teb_local_planner::PlannerInterface</a></td></tr>
+<tr class="memitem:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top"><a id="af6e3288fc97b1b54847e47f171575def"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#af6e3288fc97b1b54847e47f171575def">PlannerInterface</a> ()</td></tr>
+<tr class="memdesc:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor <br /></td></tr>
+<tr class="separator:af6e3288fc97b1b54847e47f171575def inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top"><a id="ad1abeab53bae39232c51b902c357e2c0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#ad1abeab53bae39232c51b902c357e2c0">~PlannerInterface</a> ()</td></tr>
+<tr class="memdesc:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ad1abeab53bae39232c51b902c357e2c0 inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62971a56c686fad9b139790cca52d0ff inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a62971a56c686fad9b139790cca52d0ff">computeCurrentCost</a> (std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="separator:a62971a56c686fad9b139790cca52d0ff inherit pub_methods_classteb__local__planner_1_1PlannerInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Hyper-Graph creation and optimization</h2></td></tr>
+<tr class="memitem:a8455e6300b1b02d0a16ce3174ce9f673"><td class="memItemLeft" align="right" valign="top"><a id="a8455e6300b1b02d0a16ce3174ce9f673"></a>
+const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cfg_</b></td></tr>
+<tr class="separator:a8455e6300b1b02d0a16ce3174ce9f673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e885d06c3effab5c129687c3d77953"><td class="memItemLeft" align="right" valign="top"><a id="aa9e885d06c3effab5c129687c3d77953"></a>
+ObstContainer *&#160;</td><td class="memItemRight" valign="bottom"><b>obstacles_</b></td></tr>
+<tr class="separator:aa9e885d06c3effab5c129687c3d77953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaceedc4c110d45e895509e14b083540b"><td class="memItemLeft" align="right" valign="top"><a id="aaceedc4c110d45e895509e14b083540b"></a>
+const ViaPointContainer *&#160;</td><td class="memItemRight" valign="bottom"><b>via_points_</b></td></tr>
+<tr class="separator:aaceedc4c110d45e895509e14b083540b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e9a024cb3720022683cf47bcb1a206"><td class="memItemLeft" align="right" valign="top"><a id="a87e9a024cb3720022683cf47bcb1a206"></a>
+std::vector&lt; ObstContainer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>obstacles_per_vertex_</b></td></tr>
+<tr class="separator:a87e9a024cb3720022683cf47bcb1a206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841d6785ed5c68d1ef00218697987e58"><td class="memItemLeft" align="right" valign="top"><a id="a841d6785ed5c68d1ef00218697987e58"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>cost_</b></td></tr>
+<tr class="separator:a841d6785ed5c68d1ef00218697987e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d48be92ddd0d3e9c8ac7ef49a6d036"><td class="memItemLeft" align="right" valign="top"><a id="ae0d48be92ddd0d3e9c8ac7ef49a6d036"></a>
+RotType&#160;</td><td class="memItemRight" valign="bottom"><b>prefer_rotdir_</b></td></tr>
+<tr class="separator:ae0d48be92ddd0d3e9c8ac7ef49a6d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c0e9ab32c5c4b51c5e603fc607407d"><td class="memItemLeft" align="right" valign="top"><a id="ae6c0e9ab32c5c4b51c5e603fc607407d"></a>
+TebVisualizationPtr&#160;</td><td class="memItemRight" valign="bottom"><b>visualization_</b></td></tr>
+<tr class="separator:ae6c0e9ab32c5c4b51c5e603fc607407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801394856b20e94b3f81dc8d60cf9e14"><td class="memItemLeft" align="right" valign="top"><a id="a801394856b20e94b3f81dc8d60cf9e14"></a>
+<a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a>&#160;</td><td class="memItemRight" valign="bottom"><b>teb_</b></td></tr>
+<tr class="separator:a801394856b20e94b3f81dc8d60cf9e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4080b9d944dd849f818be2ffb197c6d"><td class="memItemLeft" align="right" valign="top"><a id="ac4080b9d944dd849f818be2ffb197c6d"></a>
+RobotFootprintModelPtr&#160;</td><td class="memItemRight" valign="bottom"><b>robot_model_</b></td></tr>
+<tr class="separator:ac4080b9d944dd849f818be2ffb197c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b43b65c9427ddb7d210830ed34fe49"><td class="memItemLeft" align="right" valign="top"><a id="a50b43b65c9427ddb7d210830ed34fe49"></a>
+boost::shared_ptr&lt; g2o::SparseOptimizer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>optimizer_</b></td></tr>
+<tr class="separator:a50b43b65c9427ddb7d210830ed34fe49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff60efe55052e8dafc7f6a71245c3669"><td class="memItemLeft" align="right" valign="top"><a id="aff60efe55052e8dafc7f6a71245c3669"></a>
+std::pair&lt; bool, geometry_msgs::Twist &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vel_start_</b></td></tr>
+<tr class="separator:aff60efe55052e8dafc7f6a71245c3669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776fa3b9572a9772b7cacf21ab6ac1bc"><td class="memItemLeft" align="right" valign="top"><a id="a776fa3b9572a9772b7cacf21ab6ac1bc"></a>
+std::pair&lt; bool, geometry_msgs::Twist &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vel_goal_</b></td></tr>
+<tr class="separator:a776fa3b9572a9772b7cacf21ab6ac1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64906f916610fb60eb7a6128f97f0094"><td class="memItemLeft" align="right" valign="top"><a id="a64906f916610fb60eb7a6128f97f0094"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialized_</b></td></tr>
+<tr class="separator:a64906f916610fb60eb7a6128f97f0094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf0e611c4f633d96e3f848a5a90f236"><td class="memItemLeft" align="right" valign="top"><a id="a5bf0e611c4f633d96e3f848a5a90f236"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>optimized_</b></td></tr>
+<tr class="separator:a5bf0e611c4f633d96e3f848a5a90f236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9ad598cec60b56906806603fa45497"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497">buildGraph</a> (double weight_multiplier=1.0)</td></tr>
+<tr class="memdesc:a2b9ad598cec60b56906806603fa45497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the hyper-graph representing the TEB optimization problem.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497">更多...</a><br /></td></tr>
+<tr class="separator:a2b9ad598cec60b56906806603fa45497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae991fe9022fb0c823a1e313669882cc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5">optimizeGraph</a> (int no_iterations, bool clear_after=true)</td></tr>
+<tr class="memdesc:ae991fe9022fb0c823a1e313669882cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method invokes the g2o framework to solve the optimization problem considering dedicated sparsity patterns. <br  />
+The current implementation calls a non-constrained sparse Levenberg-Marquardt algorithm. Constraints are considered by utilizing penalty approximations. Refer to the literature cited in the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> class description.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5">更多...</a><br /></td></tr>
+<tr class="separator:ae991fe9022fb0c823a1e313669882cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6793ab24a3714cd6fd297a5ebc38631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae6793ab24a3714cd6fd297a5ebc38631">clearGraph</a> ()</td></tr>
+<tr class="memdesc:ae6793ab24a3714cd6fd297a5ebc38631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear an existing internal hyper-graph.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ae6793ab24a3714cd6fd297a5ebc38631">更多...</a><br /></td></tr>
+<tr class="separator:ae6793ab24a3714cd6fd297a5ebc38631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90337a5bf178e33a33aa6147ebf7a8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a90337a5bf178e33a33aa6147ebf7a8ef">AddTEBVertices</a> ()</td></tr>
+<tr class="memdesc:a90337a5bf178e33a33aa6147ebf7a8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all relevant vertices to the hyper-graph as optimizable variables.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a90337a5bf178e33a33aa6147ebf7a8ef">更多...</a><br /></td></tr>
+<tr class="separator:a90337a5bf178e33a33aa6147ebf7a8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a472b1e7242f295eae693e428861bbfc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a472b1e7242f295eae693e428861bbfc1">AddEdgesVelocity</a> ()</td></tr>
+<tr class="memdesc:a472b1e7242f295eae693e428861bbfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for limiting the translational and angular velocity.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a472b1e7242f295eae693e428861bbfc1">更多...</a><br /></td></tr>
+<tr class="separator:a472b1e7242f295eae693e428861bbfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e605f23128c2f5e824dd074fb2c826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a69e605f23128c2f5e824dd074fb2c826">AddEdgesAcceleration</a> ()</td></tr>
+<tr class="memdesc:a69e605f23128c2f5e824dd074fb2c826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for limiting the translational and angular acceleration.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a69e605f23128c2f5e824dd074fb2c826">更多...</a><br /></td></tr>
+<tr class="separator:a69e605f23128c2f5e824dd074fb2c826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23eb93b4e4ff117e18bb60e37eec02c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#af23eb93b4e4ff117e18bb60e37eec02c">AddEdgesTimeOptimal</a> ()</td></tr>
+<tr class="memdesc:af23eb93b4e4ff117e18bb60e37eec02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#af23eb93b4e4ff117e18bb60e37eec02c">更多...</a><br /></td></tr>
+<tr class="separator:af23eb93b4e4ff117e18bb60e37eec02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bda7f323f46b792a67cca3c38d3980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a08bda7f323f46b792a67cca3c38d3980">AddEdgesShortestPath</a> ()</td></tr>
+<tr class="memdesc:a08bda7f323f46b792a67cca3c38d3980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for minimizing the path length  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a08bda7f323f46b792a67cca3c38d3980">更多...</a><br /></td></tr>
+<tr class="separator:a08bda7f323f46b792a67cca3c38d3980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65977ce4df05c24315742b9486cfc6b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a65977ce4df05c24315742b9486cfc6b0">AddEdgesObstacles</a> (double weight_multiplier=1.0)</td></tr>
+<tr class="memdesc:a65977ce4df05c24315742b9486cfc6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) related to keeping a distance from static obstacles  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a65977ce4df05c24315742b9486cfc6b0">更多...</a><br /></td></tr>
+<tr class="separator:a65977ce4df05c24315742b9486cfc6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812147eae7e393fd8fded8f25fbb4997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a812147eae7e393fd8fded8f25fbb4997">AddEdgesObstaclesLegacy</a> (double weight_multiplier=1.0)</td></tr>
+<tr class="memdesc:a812147eae7e393fd8fded8f25fbb4997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) related to keeping a distance from static obstacles (legacy association strategy)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a812147eae7e393fd8fded8f25fbb4997">更多...</a><br /></td></tr>
+<tr class="separator:a812147eae7e393fd8fded8f25fbb4997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f3b5a2cfe4ef2bb35a6d940cb6ba343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a3f3b5a2cfe4ef2bb35a6d940cb6ba343">AddEdgesViaPoints</a> ()</td></tr>
+<tr class="memdesc:a3f3b5a2cfe4ef2bb35a6d940cb6ba343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) related to minimizing the distance to via-points  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a3f3b5a2cfe4ef2bb35a6d940cb6ba343">更多...</a><br /></td></tr>
+<tr class="separator:a3f3b5a2cfe4ef2bb35a6d940cb6ba343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0361f9f5c2fb8cd561cdf1b34db9a32b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a0361f9f5c2fb8cd561cdf1b34db9a32b">AddEdgesDynamicObstacles</a> (double weight_multiplier=1.0)</td></tr>
+<tr class="memdesc:a0361f9f5c2fb8cd561cdf1b34db9a32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a0361f9f5c2fb8cd561cdf1b34db9a32b">更多...</a><br /></td></tr>
+<tr class="separator:a0361f9f5c2fb8cd561cdf1b34db9a32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79bc03a4d6833462aa86f779bfa0a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ab79bc03a4d6833462aa86f779bfa0a96">AddEdgesKinematicsDiffDrive</a> ()</td></tr>
+<tr class="memdesc:ab79bc03a4d6833462aa86f779bfa0a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive robot  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ab79bc03a4d6833462aa86f779bfa0a96">更多...</a><br /></td></tr>
+<tr class="separator:ab79bc03a4d6833462aa86f779bfa0a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3ade5bc750a68b96a46e88802898d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a7a3ade5bc750a68b96a46e88802898d0">AddEdgesKinematicsCarlike</a> ()</td></tr>
+<tr class="memdesc:a7a3ade5bc750a68b96a46e88802898d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a7a3ade5bc750a68b96a46e88802898d0">更多...</a><br /></td></tr>
+<tr class="separator:a7a3ade5bc750a68b96a46e88802898d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82d52230299209794fbe543156dbd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa82d52230299209794fbe543156dbd7e">AddEdgesPreferRotDir</a> ()</td></tr>
+<tr class="memdesc:aa82d52230299209794fbe543156dbd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost functions) for prefering a specifiy turning direction (by penalizing the other one)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#aa82d52230299209794fbe543156dbd7e">更多...</a><br /></td></tr>
+<tr class="separator:aa82d52230299209794fbe543156dbd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6167d79f6ba1e565cc1ace9b3943fe77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a6167d79f6ba1e565cc1ace9b3943fe77">AddEdgesVelocityObstacleRatio</a> ()</td></tr>
+<tr class="memdesc:a6167d79f6ba1e565cc1ace9b3943fe77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all edges (local cost function) for reducing the velocity of a vertex due to its associated obstacles  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a6167d79f6ba1e565cc1ace9b3943fe77">更多...</a><br /></td></tr>
+<tr class="separator:a6167d79f6ba1e565cc1ace9b3943fe77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55a7a04c4a95985723e9a4eb00eaec0"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; g2o::SparseOptimizer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa55a7a04c4a95985723e9a4eb00eaec0">initOptimizer</a> ()</td></tr>
+<tr class="memdesc:aa55a7a04c4a95985723e9a4eb00eaec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and configure the g2o sparse optimizer.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#aa55a7a04c4a95985723e9a4eb00eaec0">更多...</a><br /></td></tr>
+<tr class="separator:aa55a7a04c4a95985723e9a4eb00eaec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Utility methods and more</h2></td></tr>
+<tr class="memitem:a3f28e3eaabb07fcf641fa4bd32108709"><td class="memItemLeft" align="right" valign="top"><a id="a3f28e3eaabb07fcf641fa4bd32108709"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a3f28e3eaabb07fcf641fa4bd32108709">clearPlanner</a> ()</td></tr>
+<tr class="memdesc:a3f28e3eaabb07fcf641fa4bd32108709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the planner by clearing the internal graph and trajectory. <br /></td></tr>
+<tr class="separator:a3f28e3eaabb07fcf641fa4bd32108709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9153dd5c3985fba990263f071d1b6a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ac9153dd5c3985fba990263f071d1b6a9">setPreferredTurningDir</a> (RotType dir)</td></tr>
+<tr class="memdesc:ac9153dd5c3985fba990263f071d1b6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefer a desired initial turning direction (by penalizing the opposing one)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ac9153dd5c3985fba990263f071d1b6a9">更多...</a><br /></td></tr>
+<tr class="separator:ac9153dd5c3985fba990263f071d1b6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64a76a129fc5804862d3af4ad177337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ad64a76a129fc5804862d3af4ad177337">teb</a> ()</td></tr>
+<tr class="memdesc:ad64a76a129fc5804862d3af4ad177337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a> trajectory.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ad64a76a129fc5804862d3af4ad177337">更多...</a><br /></td></tr>
+<tr class="separator:ad64a76a129fc5804862d3af4ad177337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cdd44c5b86ae8e1e20a48fedbc4267"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54cdd44c5b86ae8e1e20a48fedbc4267">teb</a> () const</td></tr>
+<tr class="memdesc:a54cdd44c5b86ae8e1e20a48fedbc4267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a> trajectory (read-only).  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a54cdd44c5b86ae8e1e20a48fedbc4267">更多...</a><br /></td></tr>
+<tr class="separator:a54cdd44c5b86ae8e1e20a48fedbc4267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ab876d763e8732821ae3dac56f0d59"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; g2o::SparseOptimizer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a47ab876d763e8732821ae3dac56f0d59">optimizer</a> ()</td></tr>
+<tr class="memdesc:a47ab876d763e8732821ae3dac56f0d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal g2o optimizer.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a47ab876d763e8732821ae3dac56f0d59">更多...</a><br /></td></tr>
+<tr class="separator:a47ab876d763e8732821ae3dac56f0d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a17deafef39f0b646f69aa15dfb6bd"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; const g2o::SparseOptimizer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a32a17deafef39f0b646f69aa15dfb6bd">optimizer</a> () const</td></tr>
+<tr class="memdesc:a32a17deafef39f0b646f69aa15dfb6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the internal g2o optimizer (read-only).  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a32a17deafef39f0b646f69aa15dfb6bd">更多...</a><br /></td></tr>
+<tr class="separator:a32a17deafef39f0b646f69aa15dfb6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab600de8322392a73580662422056d235"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ab600de8322392a73580662422056d235">isOptimized</a> () const</td></tr>
+<tr class="memdesc:ab600de8322392a73580662422056d235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if last optimization was successful  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ab600de8322392a73580662422056d235">更多...</a><br /></td></tr>
+<tr class="separator:ab600de8322392a73580662422056d235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1821ce3262ce2c607d482b40eccaa57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#af1821ce3262ce2c607d482b40eccaa57">computeCurrentCost</a> (double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="memdesc:af1821ce3262ce2c607d482b40eccaa57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the cost vector of a given optimization problen (hyper-graph must exist).  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#af1821ce3262ce2c607d482b40eccaa57">更多...</a><br /></td></tr>
+<tr class="separator:af1821ce3262ce2c607d482b40eccaa57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7811a28ae0551d44dd0d529e68a6e57f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a7811a28ae0551d44dd0d529e68a6e57f">computeCurrentCost</a> (std::vector&lt; double &gt; &amp;cost, double obst_cost_scale=1.0, double viapoint_cost_scale=1.0, bool alternative_time_cost=false)</td></tr>
+<tr class="separator:a7811a28ae0551d44dd0d529e68a6e57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d045641148bff5ed2399f68fc82b768"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a4d045641148bff5ed2399f68fc82b768">getCurrentCost</a> () const</td></tr>
+<tr class="memdesc:a4d045641148bff5ed2399f68fc82b768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the cost vector.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a4d045641148bff5ed2399f68fc82b768">更多...</a><br /></td></tr>
+<tr class="separator:a4d045641148bff5ed2399f68fc82b768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd65a41266ebbd57a03a8d76dd1f0ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#afd65a41266ebbd57a03a8d76dd1f0ab5">extractVelocity</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;pose1, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;pose2, double dt, double &amp;vx, double &amp;vy, double &amp;omega) const</td></tr>
+<tr class="memdesc:afd65a41266ebbd57a03a8d76dd1f0ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the velocity from consecutive poses and a time difference (including strafing velocity for holonomic robots)  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#afd65a41266ebbd57a03a8d76dd1f0ab5">更多...</a><br /></td></tr>
+<tr class="separator:afd65a41266ebbd57a03a8d76dd1f0ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c67743fd9c065c3addb8b67aa2b775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a40c67743fd9c065c3addb8b67aa2b775">getVelocityProfile</a> (std::vector&lt; geometry_msgs::Twist &gt; &amp;velocity_profile) const</td></tr>
+<tr class="memdesc:a40c67743fd9c065c3addb8b67aa2b775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the velocity profile of the trajectory This method computes the translational and rotational velocity for the complete planned trajectory. The first velocity is the one that is provided as initial velocity (fixed). Velocities at index k=2...end-1 are related to the transition from pose_{k-1} to pose_k. The last velocity is the final velocity (fixed). The number of Twist objects is therefore sizePoses()+1; In summary: v[0] = v_start, v[1,...end-1] = +-(pose_{k+1}-pose{k})/dt, v(end) = v_goal It can be used for evaluation and debugging purposes or for open-loop control. For computing the velocity required for controlling the robot to the next step refer to <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a3edcd74c62cadc9a5b1b6a56c15930cc" title="Get the velocity command from a previously optimized plan to control the robot at the current samplin...">getVelocityCommand()</a>.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a40c67743fd9c065c3addb8b67aa2b775">更多...</a><br /></td></tr>
+<tr class="separator:a40c67743fd9c065c3addb8b67aa2b775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6853f051df0dfde21f1e6a2c4e15974c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a6853f051df0dfde21f1e6a2c4e15974c">getFullTrajectory</a> (std::vector&lt; TrajectoryPointMsg &gt; &amp;trajectory) const</td></tr>
+<tr class="memdesc:a6853f051df0dfde21f1e6a2c4e15974c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the complete trajectory including poses, velocity profiles and temporal information  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a6853f051df0dfde21f1e6a2c4e15974c">更多...</a><br /></td></tr>
+<tr class="separator:a6853f051df0dfde21f1e6a2c4e15974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b8c704d39d8edd35d6200a4673a532"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ac6b8c704d39d8edd35d6200a4673a532">isTrajectoryFeasible</a> (base_local_planner::CostmapModel *costmap_model, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0, int look_ahead_idx=-1)</td></tr>
+<tr class="memdesc:ac6b8c704d39d8edd35d6200a4673a532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the planned trajectory is feasible or not.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#ac6b8c704d39d8edd35d6200a4673a532">更多...</a><br /></td></tr>
+<tr class="separator:ac6b8c704d39d8edd35d6200a4673a532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb6d6ff85b7230cc48b360ee223472e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a0fb6d6ff85b7230cc48b360ee223472e">registerG2OTypes</a> ()</td></tr>
+<tr class="memdesc:a0fb6d6ff85b7230cc48b360ee223472e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the vertices and edges defined for the TEB to the g2o::Factory.  <a href="classteb__local__planner_1_1TebOptimalPlanner.html#a0fb6d6ff85b7230cc48b360ee223472e">更多...</a><br /></td></tr>
+<tr class="separator:a0fb6d6ff85b7230cc48b360ee223472e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework. </p>
+<p>For an introduction and further details about the TEB optimization problem refer to:</p><ul>
+<li>C. Rösmann et al.: Trajectory modification considering dynamic constraints of autonomous robots, ROBOTIK, 2012.</li>
+<li>C. Rösmann et al.: Efficient trajectory optimization using a sparse model, ECMR, 2013.</li>
+<li>R. Kümmerle et al.: G2o: A general framework for graph optimization, ICRA, 2011.</li>
+</ul>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd><p class="startdd">: Call <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph()</a> only if the teb structure has been modified to speed up hot-starting from previous solutions. </p>
+<p class="enddd">: We introduced the non-fast mode with the support of dynamic obstacles (which leads to better results in terms of x-y-t homotopy planning). However, we have not tested this mode intensively yet, so we keep the legacy fast mode as default until we finish our tests. </p>
+</dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9f6766218fd9b01629195513fc3db499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6766218fd9b01629195513fc3db499">&#9670;&nbsp;</a></span>TebOptimalPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">teb_local_planner::TebOptimalPlanner::TebOptimalPlanner </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ObstContainer *&#160;</td>
+          <td class="paramname"><em>obstacles</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RobotFootprintModelPtr&#160;</td>
+          <td class="paramname"><em>robot_model</em> = <code>boost::make_shared&lt;&#160;<a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a>&#160;&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visual</em> = <code>TebVisualizationPtr()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ViaPointContainer *&#160;</td>
+          <td class="paramname"><em>via_points</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct and initialize the TEB optimal planner. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Const reference to the <a class="el" href="classteb__local__planner_1_1TebConfig.html" title="Config class for the teb_local_planner and its components.">TebConfig</a> class for internal parameters </td></tr>
+    <tr><td class="paramname">obstacles</td><td>Container storing all relevant obstacles (see <a class="el" href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles">Obstacle</a>) </td></tr>
+    <tr><td class="paramname">robot_model</td><td>Shared pointer to the robot shape model used for optimization (optional) </td></tr>
+    <tr><td class="paramname">visual</td><td>Shared pointer to the <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class (optional) </td></tr>
+    <tr><td class="paramname">via_points</td><td>Container storing via-points (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a69e605f23128c2f5e824dd074fb2c826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e605f23128c2f5e824dd074fb2c826">&#9670;&nbsp;</a></span>AddEdgesAcceleration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesAcceleration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for limiting the translational and angular acceleration. </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeAcceleration.html" title="Edge defining the cost function for limiting the translational and rotational acceleration.">EdgeAcceleration</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1EdgeAccelerationStart.html" title="Edge defining the cost function for limiting the translational and rotational acceleration at the beg...">EdgeAccelerationStart</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1EdgeAccelerationGoal.html" title="Edge defining the cost function for limiting the translational and rotational acceleration at the end...">EdgeAccelerationGoal</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a0361f9f5c2fb8cd561cdf1b34db9a32b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0361f9f5c2fb8cd561cdf1b34db9a32b">&#9670;&nbsp;</a></span>AddEdgesDynamicObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesDynamicObstacles </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>weight_multiplier</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) related to keeping a distance from dynamic (moving) obstacles. </p>
+<dl class="section warning"><dt>警告</dt><dd>experimental </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">待办事项:</a></b></dt><dd>Should we also add neighbors to decrease jiggling/oscillations </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeDynamicObstacle.html" title="Edge defining the cost function for keeping a distance from dynamic (moving) obstacles.">EdgeDynamicObstacle</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_multiplier</td><td>Specify an additional weight multipler (in addition to the the config weight) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7a3ade5bc750a68b96a46e88802898d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3ade5bc750a68b96a46e88802898d0">&#9670;&nbsp;</a></span>AddEdgesKinematicsCarlike()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesKinematicsCarlike </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot </p>
+<dl class="section warning"><dt>警告</dt><dd>do not combine with <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ab79bc03a4d6833462aa86f779bfa0a96" title="Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive rob...">AddEdgesKinematicsDiffDrive()</a> </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ab79bc03a4d6833462aa86f779bfa0a96" title="Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive rob...">AddEdgesKinematicsDiffDrive</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab79bc03a4d6833462aa86f779bfa0a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79bc03a4d6833462aa86f779bfa0a96">&#9670;&nbsp;</a></span>AddEdgesKinematicsDiffDrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesKinematicsDiffDrive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for satisfying kinematic constraints of a differential drive robot </p>
+<dl class="section warning"><dt>警告</dt><dd>do not combine with <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a7a3ade5bc750a68b96a46e88802898d0" title="Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot">AddEdgesKinematicsCarlike()</a> </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a7a3ade5bc750a68b96a46e88802898d0" title="Add all edges (local cost functions) for satisfying kinematic constraints of a carlike robot">AddEdgesKinematicsCarlike</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a65977ce4df05c24315742b9486cfc6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65977ce4df05c24315742b9486cfc6b0">&#9670;&nbsp;</a></span>AddEdgesObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesObstacles </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>weight_multiplier</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) related to keeping a distance from static obstacles </p>
+<dl class="section warning"><dt>警告</dt><dd>do not combine with AddEdgesInflatedObstacles </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeObstacle.html" title="Edge defining the cost function for keeping a minimum distance from obstacles.">EdgeObstacle</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_multiplier</td><td>Specify an additional weight multipler (in addition to the the config weight) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a812147eae7e393fd8fded8f25fbb4997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812147eae7e393fd8fded8f25fbb4997">&#9670;&nbsp;</a></span>AddEdgesObstaclesLegacy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesObstaclesLegacy </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>weight_multiplier</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) related to keeping a distance from static obstacles (legacy association strategy) </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeObstacle.html" title="Edge defining the cost function for keeping a minimum distance from obstacles.">EdgeObstacle</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_multiplier</td><td>Specify an additional weight multipler (in addition to the the config weight) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa82d52230299209794fbe543156dbd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82d52230299209794fbe543156dbd7e">&#9670;&nbsp;</a></span>AddEdgesPreferRotDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesPreferRotDir </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for prefering a specifiy turning direction (by penalizing the other one) </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a08bda7f323f46b792a67cca3c38d3980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bda7f323f46b792a67cca3c38d3980">&#9670;&nbsp;</a></span>AddEdgesShortestPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesShortestPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for minimizing the path length </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeShortestPath.html" title="Edge defining the cost function for minimizing the Euclidean distance between two consectuive poses.">EdgeShortestPath</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="af23eb93b4e4ff117e18bb60e37eec02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23eb93b4e4ff117e18bb60e37eec02c">&#9670;&nbsp;</a></span>AddEdgesTimeOptimal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesTimeOptimal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for minimizing the transition time (resp. minimize time differences) </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeTimeOptimal.html" title="Edge defining the cost function for minimizing transition time of the trajectory.">EdgeTimeOptimal</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a472b1e7242f295eae693e428861bbfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472b1e7242f295eae693e428861bbfc1">&#9670;&nbsp;</a></span>AddEdgesVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) for limiting the translational and angular velocity. </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeVelocity.html" title="Edge defining the cost function for limiting the translational and rotational velocity.">EdgeVelocity</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6167d79f6ba1e565cc1ace9b3943fe77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6167d79f6ba1e565cc1ace9b3943fe77">&#9670;&nbsp;</a></span>AddEdgesVelocityObstacleRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesVelocityObstacleRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost function) for reducing the velocity of a vertex due to its associated obstacles </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3f3b5a2cfe4ef2bb35a6d940cb6ba343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f3b5a2cfe4ef2bb35a6d940cb6ba343">&#9670;&nbsp;</a></span>AddEdgesViaPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddEdgesViaPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all edges (local cost functions) related to minimizing the distance to via-points </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1EdgeViaPoint.html" title="Edge defining the cost function for pushing a configuration towards a via point">EdgeViaPoint</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a90337a5bf178e33a33aa6147ebf7a8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90337a5bf178e33a33aa6147ebf7a8ef">&#9670;&nbsp;</a></span>AddTEBVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::AddTEBVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add all relevant vertices to the hyper-graph as optimizable variables. </p>
+<p>Vertices (if unfixed) represent the variables that will be optimized. <br  />
+ In case of the Timed-Elastic-Band poses and time differences form the vertices of the hyper-graph. <br  />
+ The order of insertion of vertices (to the graph) is important for efficiency, since it affect the sparsity pattern of the underlying hessian computed for optimization. </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1VertexPose.html" title="This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...">VertexPose</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1VertexTimeDiff.html" title="This class stores and wraps a time difference  into a vertex that can be optimized via g2o">VertexTimeDiff</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2b9ad598cec60b56906806603fa45497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9ad598cec60b56906806603fa45497">&#9670;&nbsp;</a></span>buildGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TebOptimalPlanner::buildGraph </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>weight_multiplier</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build the hyper-graph representing the TEB optimization problem. </p>
+<p>! important</p>
+<p>This method creates the optimization problem according to the hyper-graph formulation. <br  />
+For more details refer to the literature cited in the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> class description. </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae6793ab24a3714cd6fd297a5ebc38631" title="Clear an existing internal hyper-graph.">clearGraph</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_multiplier</td><td>Specify a weight multipler for selected weights in optimizeGraph This might be used for weight adapation strategies. Currently, only obstacle collision weights are considered. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code>, if the graph was created successfully, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae6793ab24a3714cd6fd297a5ebc38631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6793ab24a3714cd6fd297a5ebc38631">&#9670;&nbsp;</a></span>clearGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::clearGraph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear an existing internal hyper-graph. </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph</a> </dd></dl>
+
+</div>
+</div>
+<a id="af1821ce3262ce2c607d482b40eccaa57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1821ce3262ce2c607d482b40eccaa57">&#9670;&nbsp;</a></span>computeCurrentCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::computeCurrentCost </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obst_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>viapoint_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alternative_time_cost</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the cost vector of a given optimization problen (hyper-graph must exist). </p>
+<p>Use this method to obtain information about the current edge errors / costs (local cost functions). <br  />
+The vector of cost values is composed according to the different edge types (time_optimal, obstacles, ...). <br  />
+Refer to the method declaration for the detailed composition. <br  />
+The cost for the edges that minimize time differences (<a class="el" href="classteb__local__planner_1_1EdgeTimeOptimal.html" title="Edge defining the cost function for minimizing transition time of the trajectory.">EdgeTimeOptimal</a>) corresponds to the sum of all single squared time differneces: <img class="formulaInl" alt="$ \sum_i \Delta T_i^2 $" src="form_29.png"/>. Sometimes, the user may want to get a value that is proportional or identical to the actual trajectory transition time <img class="formulaInl" alt="$ \sum_i \Delta T_i $" src="form_30.png"/>. <br  />
+Set <code>alternative_time_cost</code> to true in order to get the cost calculated using the latter equation, but check the implemented definition, if the value is scaled to match the magnitude of other cost values.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">待办事项:</a></b></dt><dd><p class="startdd">Remove the scaling term for the alternative time cost. </p>
+<p class="enddd">Can we use the last error (chi2) calculated from g2o instead of calculating it by ourself? </p>
+</dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a4d045641148bff5ed2399f68fc82b768" title="Access the cost vector.">getCurrentCost</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">optimizeTEB</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obst_cost_scale</td><td>Specify extra scaling for obstacle costs. </td></tr>
+    <tr><td class="paramname">viapoint_cost_scale</td><td>Specify extra scaling for via points. </td></tr>
+    <tr><td class="paramname">alternative_time_cost</td><td>Replace the cost for the time optimal objective by the actual (weighted) transition time. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TebCostVec containing the cost values </dd></dl>
+
+</div>
+</div>
+<a id="a7811a28ae0551d44dd0d529e68a6e57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7811a28ae0551d44dd0d529e68a6e57f">&#9670;&nbsp;</a></span>computeCurrentCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::TebOptimalPlanner::computeCurrentCost </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obst_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>viapoint_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alternative_time_cost</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute and return the cost of the current optimization graph (supports multiple trajectories) </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cost</td><td>current cost value for each trajectory [for a planner with just a single trajectory: size=1, vector will not be cleared] </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">obst_cost_scale</td><td>Specify extra scaling for obstacle costs </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">viapoint_cost_scale</td><td>Specify extra scaling for via points. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">alternative_time_cost</td><td>Replace the cost for the time optimal objective by the actual (weighted) transition time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd65a41266ebbd57a03a8d76dd1f0ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd65a41266ebbd57a03a8d76dd1f0ab5">&#9670;&nbsp;</a></span>extractVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::extractVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>omega</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extract the velocity from consecutive poses and a time difference (including strafing velocity for holonomic robots) </p>
+<p>! important</p>
+<p>The velocity is extracted using finite differences. The direction of the translational velocity is also determined. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">pose1</td><td>pose at time k </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">pose2</td><td>consecutive pose at time k+1 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">dt</td><td>actual time difference between k and k+1 (must be &gt;0 !!!) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vx</td><td>translational velocity </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vy</td><td>strafing velocity which can be nonzero for holonomic robots </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">omega</td><td>rotational velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d045641148bff5ed2399f68fc82b768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d045641148bff5ed2399f68fc82b768">&#9670;&nbsp;</a></span>getCurrentCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double teb_local_planner::TebOptimalPlanner::getCurrentCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the cost vector. </p>
+<p>The accumulated cost value previously calculated using computeCurrentCost or by calling optimizeTEB with enabled cost flag. </p><dl class="section return"><dt>返回</dt><dd>const reference to the TebCostVec. </dd></dl>
+
+</div>
+</div>
+<a id="a6853f051df0dfde21f1e6a2c4e15974c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6853f051df0dfde21f1e6a2c4e15974c">&#9670;&nbsp;</a></span>getFullTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::getFullTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; TrajectoryPointMsg &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the complete trajectory including poses, velocity profiles and temporal information </p>
+<p>! important</p>
+<p>It is useful for evaluation and debugging purposes or for open-loop control. Since the velocity obtained using difference quotients is the mean velocity between consecutive poses, the velocity at each pose at time stamp k is obtained by taking the average between both velocities. The velocity of the first pose is v_start (provided initial value) and the last one is v_goal (usually zero, if free_goal_vel is off). See <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a40c67743fd9c065c3addb8b67aa2b775" title="Compute the velocity profile of the trajectory This method computes the translational and rotational ...">getVelocityProfile()</a> for the list of velocities between consecutive points. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">待办事项:</a></b></dt><dd>The acceleration profile is not added at the moment. </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">trajectory</td><td>the resulting trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5adf49662d6bb349c714f99e74606f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5adf49662d6bb349c714f99e74606f8">&#9670;&nbsp;</a></span>getObstVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ObstContainer&amp; teb_local_planner::TebOptimalPlanner::getObstVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal obstacle container. </p>
+<dl class="section return"><dt>返回</dt><dd>Const reference to the obstacle container </dd></dl>
+
+</div>
+</div>
+<a id="a3edcd74c62cadc9a5b1b6a56c15930cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3edcd74c62cadc9a5b1b6a56c15930cc">&#9670;&nbsp;</a></span>getVelocityCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::TebOptimalPlanner::getVelocityCommand </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>omega</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>look_ahead_poses</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the velocity command from a previously optimized plan to control the robot at the current sampling interval. </p>
+<dl class="section warning"><dt>警告</dt><dd>Call <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99" title="Plan a trajectory based on an initial reference plan.">plan()</a> first and check if the generated plan is feasible. </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">vx</td><td>translational velocity [m/s] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vy</td><td>strafing velocity which can be nonzero for holonomic robots[m/s] </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">omega</td><td>rotational velocity [rad/s] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">look_ahead_poses</td><td>index of the final pose used to compute the velocity command. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if command is valid, <code>false</code> otherwise </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#afcaba6e2a81b5a9ff4c0103ca73c1d66">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a40c67743fd9c065c3addb8b67aa2b775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c67743fd9c065c3addb8b67aa2b775">&#9670;&nbsp;</a></span>getVelocityProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::getVelocityProfile </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::Twist &gt; &amp;&#160;</td>
+          <td class="paramname"><em>velocity_profile</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the velocity profile of the trajectory This method computes the translational and rotational velocity for the complete planned trajectory. The first velocity is the one that is provided as initial velocity (fixed). Velocities at index k=2...end-1 are related to the transition from pose_{k-1} to pose_k. The last velocity is the final velocity (fixed). The number of Twist objects is therefore sizePoses()+1; In summary: v[0] = v_start, v[1,...end-1] = +-(pose_{k+1}-pose{k})/dt, v(end) = v_goal It can be used for evaluation and debugging purposes or for open-loop control. For computing the velocity required for controlling the robot to the next step refer to <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a3edcd74c62cadc9a5b1b6a56c15930cc" title="Get the velocity command from a previously optimized plan to control the robot at the current samplin...">getVelocityCommand()</a>. </p>
+<p>! important </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">velocity_profile</td><td>velocity profile will be written to this vector (after clearing any existing content) with the size=no_poses+1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeba17a7fd491cd7b15241180a7e865aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba17a7fd491cd7b15241180a7e865aa">&#9670;&nbsp;</a></span>getViaPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ViaPointContainer&amp; teb_local_planner::TebOptimalPlanner::getViaPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal via-point container. </p>
+<dl class="section return"><dt>返回</dt><dd>Const reference to the via-point container </dd></dl>
+
+</div>
+</div>
+<a id="a0c8f8c41393753abb7bd2eaef6bf58df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8f8c41393753abb7bd2eaef6bf58df">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1TebConfig.html">TebConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ObstContainer *&#160;</td>
+          <td class="paramname"><em>obstacles</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RobotFootprintModelPtr&#160;</td>
+          <td class="paramname"><em>robot_model</em> = <code>boost::make_shared&lt;&#160;<a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html">PointRobotFootprint</a>&#160;&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visual</em> = <code>TebVisualizationPtr()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ViaPointContainer *&#160;</td>
+          <td class="paramname"><em>via_points</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the optimal planner </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Const reference to the <a class="el" href="classteb__local__planner_1_1TebConfig.html" title="Config class for the teb_local_planner and its components.">TebConfig</a> class for internal parameters </td></tr>
+    <tr><td class="paramname">obstacles</td><td>Container storing all relevant obstacles (see <a class="el" href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles">Obstacle</a>) </td></tr>
+    <tr><td class="paramname">robot_model</td><td>Shared pointer to the robot shape model used for optimization (optional) </td></tr>
+    <tr><td class="paramname">visual</td><td>Shared pointer to the <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class (optional) </td></tr>
+    <tr><td class="paramname">via_points</td><td>Container storing via-points (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa55a7a04c4a95985723e9a4eb00eaec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55a7a04c4a95985723e9a4eb00eaec0">&#9670;&nbsp;</a></span>initOptimizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;g2o::SparseOptimizer&gt; teb_local_planner::TebOptimalPlanner::initOptimizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize and configure the g2o sparse optimizer. </p>
+<dl class="section return"><dt>返回</dt><dd>shared pointer to the g2o::SparseOptimizer instance </dd></dl>
+
+</div>
+</div>
+<a id="ab600de8322392a73580662422056d235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab600de8322392a73580662422056d235">&#9670;&nbsp;</a></span>isOptimized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TebOptimalPlanner::isOptimized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if last optimization was successful </p>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if the last optimization returned without errors, otherwise <code>false</code> (also if no optimization has been called before). </dd></dl>
+
+</div>
+</div>
+<a id="ac6b8c704d39d8edd35d6200a4673a532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b8c704d39d8edd35d6200a4673a532">&#9670;&nbsp;</a></span>isTrajectoryFeasible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::TebOptimalPlanner::isTrajectoryFeasible </td>
+          <td>(</td>
+          <td class="paramtype">base_local_planner::CostmapModel *&#160;</td>
+          <td class="paramname"><em>costmap_model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>look_ahead_idx</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether the planned trajectory is feasible or not. </p>
+<p>! important</p>
+<p>This method currently checks only that the trajectory, or a part of the trajectory is collision free. Obstacles are here represented as costmap instead of the internal ObstacleContainer. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap_model</td><td>Pointer to the costmap model </td></tr>
+    <tr><td class="paramname">footprint_spec</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+    <tr><td class="paramname">look_ahead_idx</td><td>Number of poses along the trajectory that should be verified, if -1, the complete trajectory will be checked. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code>, if the robot footprint along the first part of the trajectory intersects with any obstacle in the costmap, <code>false</code> otherwise. </dd></dl>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a6c0c90babc218d68f88135335e3019f6">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="ae991fe9022fb0c823a1e313669882cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae991fe9022fb0c823a1e313669882cc5">&#9670;&nbsp;</a></span>optimizeGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TebOptimalPlanner::optimizeGraph </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>no_iterations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clear_after</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method invokes the g2o framework to solve the optimization problem considering dedicated sparsity patterns. <br  />
+The current implementation calls a non-constrained sparse Levenberg-Marquardt algorithm. Constraints are considered by utilizing penalty approximations. Refer to the literature cited in the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> class description. </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a2b9ad598cec60b56906806603fa45497" title="Build the hyper-graph representing the TEB optimization problem.">buildGraph</a> </dd>
+<dd>
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae6793ab24a3714cd6fd297a5ebc38631" title="Clear an existing internal hyper-graph.">clearGraph</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no_iterations</td><td>Number of solver iterations </td></tr>
+    <tr><td class="paramname">clear_after</td><td>Clear the graph after optimization. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code>, if optimization terminates successfully, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a47ab876d763e8732821ae3dac56f0d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ab876d763e8732821ae3dac56f0d59">&#9670;&nbsp;</a></span>optimizer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;g2o::SparseOptimizer&gt; teb_local_planner::TebOptimalPlanner::optimizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal g2o optimizer. </p>
+<dl class="section warning"><dt>警告</dt><dd>In general, the underlying optimizer must not be modified directly. Use with care... </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>const shared pointer to the g2o sparse optimizer </dd></dl>
+
+</div>
+</div>
+<a id="a32a17deafef39f0b646f69aa15dfb6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a17deafef39f0b646f69aa15dfb6bd">&#9670;&nbsp;</a></span>optimizer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;const g2o::SparseOptimizer&gt; teb_local_planner::TebOptimalPlanner::optimizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal g2o optimizer (read-only). </p>
+<dl class="section return"><dt>返回</dt><dd>const shared pointer to the g2o sparse optimizer </dd></dl>
+
+</div>
+</div>
+<a id="aa3cfecf3e37a6e1e9fa6becf61afc756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cfecf3e37a6e1e9fa6becf61afc756">&#9670;&nbsp;</a></span>optimizeTEB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TebOptimalPlanner::optimizeTEB </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iterations_innerloop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iterations_outerloop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>compute_cost_afterwards</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obst_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>viapoint_cost_scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>alternative_time_cost</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB implements the main optimization loop. <br  />
+It consist of two nested loops: </p>
+<ul>
+<li>The outer loop resizes the trajectory according to the temporal resolution by invoking <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#afa43c55427a4b275e8eaba7a9d723b6a" title="Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal res...">TimedElasticBand::autoResize()</a>. Afterwards the internal method <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ae991fe9022fb0c823a1e313669882cc5" title="Optimize the previously constructed hyper-graph to deform / optimize the TEB. ! important This method...">optimizeGraph()</a> is called that constitutes the innerloop.</li>
+<li>The inner loop calls the solver (g2o framework, resp. sparse Levenberg-Marquardt) and iterates a specified number of optimization calls (<code>iterations_innerloop</code>).</li>
+</ul>
+<p>The outer loop is repeated <code>iterations_outerloop</code> times. <br  />
+ The ratio of inner and outer loop iterations significantly defines the contraction behavior and convergence rate of the trajectory optimization. Based on our experiences, 2-6 innerloop iterations are sufficient. <br  />
+ The number of outer loop iterations should be determined by considering the maximum CPU time required to match the control rate. <br  />
+Optionally, the cost vector can be calculated by specifying <code>compute_cost_afterwards</code>, see <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#af1821ce3262ce2c607d482b40eccaa57" title="Compute the cost vector of a given optimization problen (hyper-graph must exist).">computeCurrentCost()</a>. </p><dl class="section remark"><dt>备注</dt><dd>This method is usually called from a <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99" title="Plan a trajectory based on an initial reference plan.">plan()</a> method </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterations_innerloop</td><td>Number of iterations for the actual solver loop </td></tr>
+    <tr><td class="paramname">iterations_outerloop</td><td>Specifies how often the trajectory should be resized followed by the inner solver loop. </td></tr>
+    <tr><td class="paramname">compute_cost_afterwards</td><td>if <code>true</code> Calculate the cost vector according to <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#af1821ce3262ce2c607d482b40eccaa57" title="Compute the cost vector of a given optimization problen (hyper-graph must exist).">computeCurrentCost()</a>, the vector can be accessed afterwards using <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a4d045641148bff5ed2399f68fc82b768" title="Access the cost vector.">getCurrentCost()</a>. </td></tr>
+    <tr><td class="paramname">obst_cost_scale</td><td>Specify extra scaling for obstacle costs (only used if <code>compute_cost_afterwards</code> is true) </td></tr>
+    <tr><td class="paramname">viapoint_cost_scale</td><td>Specify extra scaling for via-point costs (only used if <code>compute_cost_afterwards</code> is true) </td></tr>
+    <tr><td class="paramname">alternative_time_cost</td><td>Replace the cost for the time optimal objective by the actual (weighted) transition time (only used if <code>compute_cost_afterwards</code> is true). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if the optimization terminates successfully, <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a17c9a979df9bf2d24652d9b06c332c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c9a979df9bf2d24652d9b06c332c35">&#9670;&nbsp;</a></span>plan() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::TebOptimalPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory between a given start and goal pose </p>
+<p>Call this method to create and optimize a trajectory that is initialized between a given start and goal pose. <br  />
+The method supports hot-starting from previous solutions, if avaiable: <br  />
+</p><ul>
+<li>If no trajectory exist yet, a new trajectory is initialized between start and goal poses <dl class="section see"><dt>参见</dt><dd>TimedElasticBand::initTEBtoGoal</dd></dl>
+</li>
+<li>If a previous solution is avaiable, update the trajectory <dl class="section see"><dt>参见</dt><dd>bool <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#adae6e7423ed1583f5daedac57562384e" title="Hot-Start from an existing trajectory with updated start and goal poses.">TimedElasticBand::updateAndPruneTEB</a></dd></dl>
+</li>
+<li>Afterwards optimize the recently initialized or updated trajectory by calling <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">optimizeTEB()</a> and invoking g2o <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> containing the start pose of the trajectory </td></tr>
+    <tr><td class="paramname">goal</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> containing the goal pose of the trajectory </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Initial velocity at the start pose (twist message containing the translational and angular velocity). </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+</li>
+</ul>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#ade0509d13cf81df5ad503987ce0ab2cd">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a54f19572a5d17d4c0928f7c6eb483c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f19572a5d17d4c0928f7c6eb483c99">&#9670;&nbsp;</a></span>plan() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::TebOptimalPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory based on an initial reference plan. </p>
+<p>! important</p>
+<p>Call this method to create and optimize a trajectory that is initialized according to an initial reference plan (given as a container of poses). <br  />
+ The method supports hot-starting from previous solutions, if avaiable: <br  />
+</p><ul>
+<li>If no trajectory exist yet, a new trajectory is initialized based on the initial plan, see TimedElasticBand::initTEBtoGoal</li>
+<li>If a previous solution is avaiable, update the trajectory based on the initial plan, see bool <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#adae6e7423ed1583f5daedac57562384e" title="Hot-Start from an existing trajectory with updated start and goal poses.">TimedElasticBand::updateAndPruneTEB</a></li>
+<li>Afterwards optimize the recently initialized or updated trajectory by calling <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">optimizeTEB()</a> and invoking g2o <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_plan</td><td>vector of geometry_msgs::PoseStamped </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Current start velocity (e.g. the velocity of the robot, only linear.x, linear.y (holonomic) and angular.z are used) </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+</li>
+</ul>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#aad7ea1d2454b0bc23db0082df85c99de">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a6354ce8a27d063d531fd27f270e4556b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6354ce8a27d063d531fd27f270e4556b">&#9670;&nbsp;</a></span>plan() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool teb_local_planner::TebOptimalPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">const tf::Pose &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const tf::Pose &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Twist *&#160;</td>
+          <td class="paramname"><em>start_vel</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>free_goal_vel</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plan a trajectory between a given start and goal pose (tf::Pose version) </p>
+<p>Call this method to create and optimize a trajectory that is initialized between a given start and goal pose. <br  />
+The method supports hot-starting from previous solutions, if avaiable: <br  />
+</p><ul>
+<li>If no trajectory exist yet, a new trajectory is initialized between start and goal poses, see TimedElasticBand::initTEBtoGoal</li>
+<li>If a previous solution is avaiable, update the trajectory <dl class="section see"><dt>参见</dt><dd>bool <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#adae6e7423ed1583f5daedac57562384e" title="Hot-Start from an existing trajectory with updated start and goal poses.">TimedElasticBand::updateAndPruneTEB</a></dd></dl>
+</li>
+<li>Afterwards optimize the recently initialized or updated trajectory by calling <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#aa3cfecf3e37a6e1e9fa6becf61afc756" title="Optimize a previously initialized trajectory (actual TEB optimization loop). ! important optimizeTEB ...">optimizeTEB()</a> and invoking g2o <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>tf::Pose containing the start pose of the trajectory </td></tr>
+    <tr><td class="paramname">goal</td><td>tf::Pose containing the goal pose of the trajectory </td></tr>
+    <tr><td class="paramname">start_vel</td><td>Current start velocity (e.g. the velocity of the robot, only linear.x, linear.y (holonomic) and angular.z are used) </td></tr>
+    <tr><td class="paramname">free_goal_vel</td><td>if <code>true</code>, a nonzero final velocity at the goal pose is allowed, otherwise the final velocity will be zero (default: false) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code> if planning was successful, <code>false</code> otherwise </dd></dl>
+</li>
+</ul>
+
+<p>实现了 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a35f325b8dd40da1fd8cce699550bf8a2">teb_local_planner::PlannerInterface</a>.</p>
+
+</div>
+</div>
+<a id="a0fb6d6ff85b7230cc48b360ee223472e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb6d6ff85b7230cc48b360ee223472e">&#9670;&nbsp;</a></span>registerG2OTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void teb_local_planner::TebOptimalPlanner::registerG2OTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register the vertices and edges defined for the TEB to the g2o::Factory. </p>
+<p>This allows the user to export the internal graph to a text file for instance. Access the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a47ab876d763e8732821ae3dac56f0d59" title="Access the internal g2o optimizer.">optimizer()</a> for more details. </p>
+
+</div>
+</div>
+<a id="a9e23e475b8c0c6175129cc9333fd9396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e23e475b8c0c6175129cc9333fd9396">&#9670;&nbsp;</a></span>setObstVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setObstVector </td>
+          <td>(</td>
+          <td class="paramtype">ObstContainer *&#160;</td>
+          <td class="paramname"><em>obst_vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign a new set of obstacles </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obst_vector</td><td>pointer to an obstacle container (can also be a nullptr) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>备注</dt><dd>This method overrids the obstacle container optinally assigned in the constructor. </dd></dl>
+
+</div>
+</div>
+<a id="ac9153dd5c3985fba990263f071d1b6a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9153dd5c3985fba990263f071d1b6a9">&#9670;&nbsp;</a></span>setPreferredTurningDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::TebOptimalPlanner::setPreferredTurningDir </td>
+          <td>(</td>
+          <td class="paramtype">RotType&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prefer a desired initial turning direction (by penalizing the opposing one) </p>
+<p>A desired (initial) turning direction might be specified in case the planned trajectory oscillates between two solutions (in the same equivalence class!) with similar cost. Check the parameters in order to adjust the weight of the penalty. Initial means that the penalty is applied only to the first few poses of the trajectory. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>This parameter might be RotType::left (prefer left), RotType::right (prefer right) or RotType::none (prefer none) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#a0df0a82d50a58e7e42ed3e27f5a3b382">teb_local_planner::PlannerInterface</a> .</p>
+
+</div>
+</div>
+<a id="aec2bbed3f93347aebfce658e921d11c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2bbed3f93347aebfce658e921d11c4">&#9670;&nbsp;</a></span>setVelocityGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setVelocityGoal </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>vel_goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the desired final velocity at the trajectory's goal pose. </p>
+<dl class="section remark"><dt>备注</dt><dd>Call this function only if a non-zero velocity is desired and if <code>free_goal_vel</code> is set to <code>false</code> in <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99" title="Plan a trajectory based on an initial reference plan.">plan()</a> </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vel_goal</td><td>twist message containing the translational and angular final velocity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f8fcd3c73563ede8f4e300d65c02a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8fcd3c73563ede8f4e300d65c02a63">&#9670;&nbsp;</a></span>setVelocityGoalFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setVelocityGoalFree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the desired final velocity at the trajectory's goal pose to be the maximum velocity limit </p>
+<dl class="section remark"><dt>备注</dt><dd>Calling this function is not neccessary if <code>free_goal_vel</code> is set to <code>false</code> in <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99" title="Plan a trajectory based on an initial reference plan.">plan()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab121ccfc26b010915bf81e4c367c4b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab121ccfc26b010915bf81e4c367c4b68">&#9670;&nbsp;</a></span>setVelocityStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setVelocityStart </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>vel_start</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the initial velocity at the trajectory's start pose (e.g. the robot's velocity) [twist overload]. </p>
+<dl class="section remark"><dt>备注</dt><dd>Calling this function is not neccessary if the initial velocity is passed via the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#a54f19572a5d17d4c0928f7c6eb483c99" title="Plan a trajectory based on an initial reference plan.">plan()</a> method </dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vel_start</td><td>Current start velocity (e.g. the velocity of the robot, only linear.x and angular.z are used, for holonomic robots also linear.y) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2912d5630763073946c4993be5255d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2912d5630763073946c4993be5255d2d">&#9670;&nbsp;</a></span>setViaPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setViaPoints </td>
+          <td>(</td>
+          <td class="paramtype">const ViaPointContainer *&#160;</td>
+          <td class="paramname"><em>via_points</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign a new set of via-points </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">via_points</td><td>pointer to a via_point container (can also be a nullptr)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Any previously set container will be overwritten. </p>
+
+</div>
+</div>
+<a id="ad7d2a6a5baf060b2501fbda38d4fefea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d2a6a5baf060b2501fbda38d4fefea">&#9670;&nbsp;</a></span>setVisualization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TebOptimalPlanner::setVisualization </td>
+          <td>(</td>
+          <td class="paramtype">TebVisualizationPtr&#160;</td>
+          <td class="paramname"><em>visualization</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> class to enable visiualization routines (e.g. publish the local plan and pose sequence) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visualization</td><td>shared pointer to a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ac7c1e72aa9ec203450458368fb6b1b97" title="Publish the local plan and pose sequence via ros topics (e.g. subscribe with rviz).">visualize</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad64a76a129fc5804862d3af4ad177337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad64a76a129fc5804862d3af4ad177337">&#9670;&nbsp;</a></span>teb() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a>&amp; teb_local_planner::TebOptimalPlanner::teb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a> trajectory. </p>
+<dl class="section warning"><dt>警告</dt><dd>In general, the underlying teb must not be modified directly. Use with care... </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>reference to the teb </dd></dl>
+
+</div>
+</div>
+<a id="a54cdd44c5b86ae8e1e20a48fedbc4267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54cdd44c5b86ae8e1e20a48fedbc4267">&#9670;&nbsp;</a></span>teb() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a>&amp; teb_local_planner::TebOptimalPlanner::teb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the internal <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html" title="Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.">TimedElasticBand</a> trajectory (read-only). </p>
+<dl class="section return"><dt>返回</dt><dd>const reference to the teb </dd></dl>
+
+</div>
+</div>
+<a id="ac7c1e72aa9ec203450458368fb6b1b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c1e72aa9ec203450458368fb6b1b97">&#9670;&nbsp;</a></span>visualize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::TebOptimalPlanner::visualize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publish the local plan and pose sequence via ros topics (e.g. subscribe with rviz). </p>
+<p>Make sure to register a <a class="el" href="classteb__local__planner_1_1TebVisualization.html" title="Forward Declaration">TebVisualization</a> instance before using <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ad7d2a6a5baf060b2501fbda38d4fefea" title="Register a TebVisualization class to enable visiualization routines (e.g. publish the local plan and ...">setVisualization()</a> or an overlaoded constructor. </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html#ad7d2a6a5baf060b2501fbda38d4fefea" title="Register a TebVisualization class to enable visiualization routines (e.g. publish the local plan and ...">setVisualization</a> </dd></dl>
+
+<p>重载 <a class="el" href="classteb__local__planner_1_1PlannerInterface.html#afeeda8f566d59ee83c02077d2ff6c241">teb_local_planner::PlannerInterface</a> .</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/teb_local_planner/<a class="el" href="optimal__planner_8h_source.html">optimal_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

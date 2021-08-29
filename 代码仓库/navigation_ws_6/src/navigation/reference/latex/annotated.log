@@ -1,0 +1,1245 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2021.7.12)  19 JUL 2021 17:07
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**annotated.tex
+(./annotated.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+! Undefined control sequence.
+l.1 \doxysection
+                {结构体}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \doxysection{结
+                    构体}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 构 in font nullfont!
+Missing character: There is no 体 in font nullfont!
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 里 in font nullfont!
+Missing character: There is no 列 in font nullfont!
+Missing character: There is no 出 in font nullfont!
+Missing character: There is no 了 in font nullfont!
+Missing character: There is no 所 in font nullfont!
+Missing character: There is no 有 in font nullfont!
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 构 in font nullfont!
+Missing character: There is no 体 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 并 in font nullfont!
+Missing character: There is no 附 in font nullfont!
+Missing character: There is no 带 in font nullfont!
+Missing character: There is no 简 in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 说 in font nullfont!
+Missing character: There is no 明 in font nullfont!
+! Undefined control sequence.
+l.2 ...��所有结构体，并附带简要说明\+
+                                                  :\begin{DoxyCompactList}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no : in font nullfont!
+
+! LaTeX Error: Environment DoxyCompactList undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...��带简要说明\+:\begin{DoxyCompactList}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[] 
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \item\contentsline
+                      {section}{\mbox{\hyperlink{struct__pf__sample__set__t}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {struct__pf__sample__set__t}{\+\_\+pf\+\_\+sample\+\_\...
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+! Missing { inserted.
+<to be read again> 
+                   _
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Undefined control sequence.
+<argument> ...link {struct__pf__sample__set__t}{\+
+                                                  \_\+pf\+\_\+sample\+\_\+se...
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... {struct__pf__sample__set__t}{\+\_\+
+                                                  pf\+\_\+sample\+\_\+set\+\...
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ruct__pf__sample__set__t}{\+\_\+pf\+
+                                                  \_\+sample\+\_\+set\+\_\+t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...__pf__sample__set__t}{\+\_\+pf\+\_\+
+                                                  sample\+\_\+set\+\_\+t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...mple__set__t}{\+\_\+pf\+\_\+sample\+
+                                                  \_\+set\+\_\+t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...__set__t}{\+\_\+pf\+\_\+sample\+\_\+
+                                                  set\+\_\+t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+
+                                                  \_\+t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+
+                                                  t}
+l.3 ...__t}{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t}}
+                                                   }{\pageref{struct__pf__sa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> ...__pf__sample__set__t' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.3 ...+t}} }{\pageref{struct__pf__sample__set__t}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `struct__pf__sample__set__t' on page  undefined on inp
+ut line 3.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \item
+         \contentsline{section}{\mbox{\hyperlink{struct__pf__t}{\+\_\+pf\+\_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \item\contentsline
+                      {section}{\mbox{\hyperlink{struct__pf__t}{\+\_\+pf\+\_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \item\contentsline
+                      {section}{\mbox{\hyperlink{struct__pf__t}{\+\_\+pf\+\_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \item\contentsline
+                      {section}{\mbox{\hyperlink{struct__pf__t}{\+\_\+pf\+\_...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {struct__pf__t}{\+\_\+pf\+\_\+t}
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing { inserted.
+<to be read again> 
+                   _
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Undefined control sequence.
+<argument> \hyperlink {struct__pf__t}{\+
+                                        \_\+pf\+\_\+t}
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \hyperlink {struct__pf__t}{\+\_\+
+                                            pf\+\_\+t}
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \hyperlink {struct__pf__t}{\+\_\+pf\+
+                                                \_\+t}
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...rlink {struct__pf__t}{\+\_\+pf\+\_\+
+                                                  t}
+l.4 ...\hyperlink{struct__pf__t}{\+\_\+pf\+\_\+t}}
+                                                   }{\pageref{struct__pf__t}}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.4 ...yperlink{struct__pf__t}{\+\_\+pf\+\_\+t}} }
+                                                  {\pageref{struct__pf__t}}{}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<write> ...rence `struct__pf__t' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.4 ...\+\_\+pf\+\_\+t}} }{\pageref{struct__pf__t}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `struct__pf__t' on page  undefined on input line 4.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \item
+         \contentsline{section}{\mbox{\hyperlink{classamcl_1_1AMCLLaser}{amc...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaser}{amc...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaser}{amc...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaser}{amc...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaser}{amc...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {classamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> \hyperlink {classamcl_1_
+                                   1AMCLLaser}{amcl\+::\+AMCLLaser}
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+<argument> \hyperlink {classamcl_1_1AMCLLaser}
+                                              {amcl\+::\+AMCLLaser}
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ...link {classamcl_1_1AMCLLaser}{amcl\+
+                                                  ::\+AMCLLaser}
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ... {classamcl_1_1AMCLLaser}{amcl\+::\+
+                                                  AMCLLaser}
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.5 ...assamcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.5 ...samcl_1_1AMCLLaser}{amcl\+::\+AMCLLaser}} }
+                                                  {\pageref{classamcl_1_1AMC...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<write> ...assamcl_1_1AMCLLaser' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.5 ...LLaser}} }{\pageref{classamcl_1_1AMCLLaser}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `classamcl_1_1AMCLLaser' on page  undefined on input l
+ine 5.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \item
+         \contentsline{section}{\mbox{\hyperlink{classamcl_1_1AMCLLaserData}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaserData}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaserData}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaserData}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLLaserData}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {classamcl_1_1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> \hyperlink {classamcl_1_
+                                   1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+<argument> \hyperlink {classamcl_1_1AMCLLaserData}
+                                                  {amcl\+::\+AMCLLaser\+Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ... {classamcl_1_1AMCLLaserData}{amcl\+
+                                                  ::\+AMCLLaser\+Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...assamcl_1_1AMCLLaserData}{amcl\+::\+
+                                                  AMCLLaser\+Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...AMCLLaserData}{amcl\+::\+AMCLLaser\+
+                                                  Data}
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.6 ...1AMCLLaserData}{amcl\+::\+AMCLLaser\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.6 ...MCLLaserData}{amcl\+::\+AMCLLaser\+Data}} }
+                                                  {\pageref{classamcl_1_1AMC...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<write> ...mcl_1_1AMCLLaserData' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.6 ...ta}} }{\pageref{classamcl_1_1AMCLLaserData}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `classamcl_1_1AMCLLaserData' on page  undefined on inp
+ut line 6.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \item
+         \contentsline{section}{\mbox{\hyperlink{classamcl_1_1AMCLOdom}{amcl...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.7 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdom}{amcl...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdom}{amcl...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdom}{amcl...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdom}{amcl...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> \hyperlink {classamcl_1_
+                                   1AMCLOdom}{amcl\+::\+AMCLOdom}
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+<argument> \hyperlink {classamcl_1_1AMCLOdom}
+                                             {amcl\+::\+AMCLOdom}
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ...rlink {classamcl_1_1AMCLOdom}{amcl\+
+                                                  ::\+AMCLOdom}
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...k {classamcl_1_1AMCLOdom}{amcl\+::\+
+                                                  AMCLOdom}
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.7 ...classamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.7 ...assamcl_1_1AMCLOdom}{amcl\+::\+AMCLOdom}} }
+                                                  {\pageref{classamcl_1_1AMC...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<write> ...lassamcl_1_1AMCLOdom' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.7 ...MCLOdom}} }{\pageref{classamcl_1_1AMCLOdom}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `classamcl_1_1AMCLOdom' on page  undefined on input li
+ne 7.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \item
+         \contentsline{section}{\mbox{\hyperlink{classamcl_1_1AMCLOdomData}{...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdomData}{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdomData}{...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdomData}{...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLOdomData}{...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {classamcl_1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> \hyperlink {classamcl_1_
+                                   1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+<argument> \hyperlink {classamcl_1_1AMCLOdomData}
+                                                 {amcl\+::\+AMCLOdom\+Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ...k {classamcl_1_1AMCLOdomData}{amcl\+
+                                                  ::\+AMCLOdom\+Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...lassamcl_1_1AMCLOdomData}{amcl\+::\+
+                                                  AMCLOdom\+Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ..._1AMCLOdomData}{amcl\+::\+AMCLOdom\+
+                                                  Data}
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.8 ...1_1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.8 ...1AMCLOdomData}{amcl\+::\+AMCLOdom\+Data}} }
+                                                  {\pageref{classamcl_1_1AMC...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<write> ...amcl_1_1AMCLOdomData' on page \thepage 
+                                                  \space undefined\on@line .^^J
+l.8 ...ata}} }{\pageref{classamcl_1_1AMCLOdomData}
+                                                  }{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `classamcl_1_1AMCLOdomData' on page  undefined on inpu
+t line 8.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \item
+         \contentsline{section}{\mbox{\hyperlink{classamcl_1_1AMCLSensor}{am...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.9 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLSensor}{am...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLSensor}{am...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLSensor}{am...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \item\contentsline
+                      {section}{\mbox{\hyperlink{classamcl_1_1AMCLSensor}{am...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \hyperlink 
+                      {classamcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> \hyperlink {classamcl_1_
+                                   1AMCLSensor}{amcl\+::\+AMCLSensor}
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Extra }, or forgotten $.
+<argument> \hyperlink {classamcl_1_1AMCLSensor}
+                                               {amcl\+::\+AMCLSensor}
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ...ink {classamcl_1_1AMCLSensor}{amcl\+
+                                                  ::\+AMCLSensor}
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...{classamcl_1_1AMCLSensor}{amcl\+::\+
+                                                  AMCLSensor}
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+\mbox #1->\leavevmode \hbox {#1}
+                                
+l.9 ...samcl_1_1AMCLSensor}{amcl\+::\+AMCLSensor}}
+                                                   }{\pageref{classamcl_1_1A...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 23 strings out of 493007
+ 444 string characters out of 6136719
+ 62813 words of memory out of 5000000
+ 4090 multiletter control sequences out of 15000+600000
+ 3656 words of font info for 16 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 20i,14n,16p,198b,178s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: include/teb_local_planner/g2o_types/vertex_pose.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d24ca4bd67b87562381dd0f2e8dc09d1.html">teb_local_planner</a></li><li class="navelem"><a class="el" href="dir_a36fc907c3ef6d6a2efb27af0fec317c.html">g2o_types</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vertex_pose.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Notes:</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * The following class is derived from a class defined by the</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * g2o-framework. g2o is licensed under the terms of the BSD License.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * Refer to the base class source for detailed licensing information.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * Author: Christoph Rösmann</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#ifndef VERTEX_POSE_H_</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define VERTEX_POSE_H_</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;g2o/config.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;g2o/core/base_vertex.h&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;g2o/core/hyper_graph_action.h&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;g2o/stuff/misc.h&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;teb_local_planner/pose_se2.h&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">namespace </span>teb_local_planner</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html">   63</a></span>&#160;<span class="keyword">class </span><a class="code" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a> : <span class="keyword">public</span> g2o::BaseVertex&lt;3, PoseSE2 &gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#add7e73c13d418002cb1c278c7aa7139d">   71</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1VertexPose.html#add7e73c13d418002cb1c278c7aa7139d">VertexPose</a>(<span class="keywordtype">bool</span> fixed = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classteb__local__planner_1_1VertexPose.html#a69132d3bacadc2511680f9619f230b24">setToOriginImpl</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    setFixed(fixed);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#aeb9f6fc43f34bb7f210f8140a17b8ded">   82</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1VertexPose.html#aeb9f6fc43f34bb7f210f8140a17b8ded">VertexPose</a>(<span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>, <span class="keywordtype">bool</span> fixed = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    _estimate = <a class="code" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    setFixed(fixed);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a770f58dce9d26fae0337e8cff64953e8">   94</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1VertexPose.html#a770f58dce9d26fae0337e8cff64953e8">VertexPose</a>(<span class="keyword">const</span> Eigen::Ref&lt;const Eigen::Vector2d&gt;&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>, <span class="keywordtype">bool</span> fixed = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    _estimate.position() = <a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    _estimate.theta() = <a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    setFixed(fixed);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a846ac1e94967ed8a5fe39b1761871093">  108</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1VertexPose.html#a846ac1e94967ed8a5fe39b1761871093">VertexPose</a>(<span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">x</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">y</a>, <span class="keywordtype">double</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>, <span class="keywordtype">bool</span> fixed = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    _estimate.x() = <a class="code" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">x</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    _estimate.y() = <a class="code" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">y</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    _estimate.theta() = <a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    setFixed(fixed);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#aa9b1cc3b7ac9d5ee6922ceef3190dc46">  119</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1VertexPose.html#aa9b1cc3b7ac9d5ee6922ceef3190dc46">~VertexPose</a>() {}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">  126</a></span>&#160;  <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">pose</a>() {<span class="keywordflow">return</span> _estimate;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a3f7d8a72e7fe760123c1fbde66374d1c">  133</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a3f7d8a72e7fe760123c1fbde66374d1c">pose</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _estimate;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">  141</a></span>&#160;  Eigen::Vector2d&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">position</a>() {<span class="keywordflow">return</span> _estimate.position();}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#ad4d8f97341c461bf915d4ac4fa72a48f">  148</a></span>&#160;  <span class="keyword">const</span> Eigen::Vector2d&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#ad4d8f97341c461bf915d4ac4fa72a48f">position</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _estimate.position();}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">  154</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">x</a>() {<span class="keywordflow">return</span> _estimate.x();}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  </div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a34045ca3f9d3c5cfe70a56a5a1476d9c">  160</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a34045ca3f9d3c5cfe70a56a5a1476d9c">x</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _estimate.x();}</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">  166</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">y</a>() {<span class="keywordflow">return</span> _estimate.y();}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#af736773c0723ddbb38089f150ea78fce">  172</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#af736773c0723ddbb38089f150ea78fce">y</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _estimate.y();}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">  178</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">theta</a>() {<span class="keywordflow">return</span> _estimate.theta();}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#af112d283f8c0aa1a3b9049afed970388">  184</a></span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="classteb__local__planner_1_1VertexPose.html#af112d283f8c0aa1a3b9049afed970388">theta</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> _estimate.theta();}</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a69132d3bacadc2511680f9619f230b24">  189</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a69132d3bacadc2511680f9619f230b24">setToOriginImpl</a>()</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    _estimate.setZero();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a94c1cb5ea15293fec6cb183218607278">  200</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a94c1cb5ea15293fec6cb183218607278">oplusImpl</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* update)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    _estimate.plus(update);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a86177ac034501cc431359e4ab5a3bc21">  211</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a86177ac034501cc431359e4ab5a3bc21">read</a>(std::istream&amp; is)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    is &gt;&gt; _estimate.x() &gt;&gt; _estimate.y() &gt;&gt; _estimate.theta();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classteb__local__planner_1_1VertexPose.html#a613a1420d05db8b8a6972923fd492429">  223</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classteb__local__planner_1_1VertexPose.html#a613a1420d05db8b8a6972923fd492429">write</a>(std::ostream&amp; os)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    os &lt;&lt; _estimate.x() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; _estimate.y() &lt;&lt; _estimate.theta();</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">return</span> os.good();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  EIGEN_MAKE_ALIGNED_OPERATOR_NEW  </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;};</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// VERTEX_POSE_H_</span></div>
+<div class="ttc" id="aclassteb__local__planner_1_1PoseSE2_html"><div class="ttname"><a href="classteb__local__planner_1_1PoseSE2.html">teb_local_planner::PoseSE2</a></div><div class="ttdoc">This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...</div><div class="ttdef"><b>Definition:</b> pose_se2.h:59</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html">teb_local_planner::VertexPose</a></div><div class="ttdoc">This class stores and wraps a SE2 pose (position and orientation) into a vertex that can be optimized...</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:64</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a061dd3dc688ca79f009465982985c1df"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a061dd3dc688ca79f009465982985c1df">teb_local_planner::VertexPose::theta</a></div><div class="ttdeci">double &amp; theta()</div><div class="ttdoc">Access the orientation part (yaw angle) of the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:178</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a0c8cbabe5c33e10c81e023f954568839"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a0c8cbabe5c33e10c81e023f954568839">teb_local_planner::VertexPose::pose</a></div><div class="ttdeci">PoseSE2 &amp; pose()</div><div class="ttdoc">Access the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:126</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a10ab23ac2ac3a7b44524c6f6c2356d66"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a10ab23ac2ac3a7b44524c6f6c2356d66">teb_local_planner::VertexPose::x</a></div><div class="ttdeci">double &amp; x()</div><div class="ttdoc">Access the x-coordinate the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:154</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a34045ca3f9d3c5cfe70a56a5a1476d9c"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a34045ca3f9d3c5cfe70a56a5a1476d9c">teb_local_planner::VertexPose::x</a></div><div class="ttdeci">const double &amp; x() const</div><div class="ttdoc">Access the x-coordinate the pose (read-only)</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:160</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a3f7d8a72e7fe760123c1fbde66374d1c"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a3f7d8a72e7fe760123c1fbde66374d1c">teb_local_planner::VertexPose::pose</a></div><div class="ttdeci">const PoseSE2 &amp; pose() const</div><div class="ttdoc">Access the pose (read-only)</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:133</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a4f7d908421b83db853820b1713e1eaa4"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a4f7d908421b83db853820b1713e1eaa4">teb_local_planner::VertexPose::position</a></div><div class="ttdeci">Eigen::Vector2d &amp; position()</div><div class="ttdoc">Access the 2D position part</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:141</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a613a1420d05db8b8a6972923fd492429"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a613a1420d05db8b8a6972923fd492429">teb_local_planner::VertexPose::write</a></div><div class="ttdeci">virtual bool write(std::ostream &amp;os) const</div><div class="ttdoc">Write the estimate to an output stream First the x-coordinate followed by y and the yaw angle.</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:223</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a69132d3bacadc2511680f9619f230b24"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a69132d3bacadc2511680f9619f230b24">teb_local_planner::VertexPose::setToOriginImpl</a></div><div class="ttdeci">virtual void setToOriginImpl()</div><div class="ttdoc">Set the underlying estimate (2D vector) to zero.</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:189</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a770f58dce9d26fae0337e8cff64953e8"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a770f58dce9d26fae0337e8cff64953e8">teb_local_planner::VertexPose::VertexPose</a></div><div class="ttdeci">VertexPose(const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, bool fixed=false)</div><div class="ttdoc">Construct pose using a given 2D position vector and orientation</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:94</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a846ac1e94967ed8a5fe39b1761871093"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a846ac1e94967ed8a5fe39b1761871093">teb_local_planner::VertexPose::VertexPose</a></div><div class="ttdeci">VertexPose(double x, double y, double theta, bool fixed=false)</div><div class="ttdoc">Construct pose using single components x, y, and the yaw angle</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:108</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a86177ac034501cc431359e4ab5a3bc21"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a86177ac034501cc431359e4ab5a3bc21">teb_local_planner::VertexPose::read</a></div><div class="ttdeci">virtual bool read(std::istream &amp;is)</div><div class="ttdoc">Read an estimate from an input stream. First the x-coordinate followed by y and the yaw angle.</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:211</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_a94c1cb5ea15293fec6cb183218607278"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#a94c1cb5ea15293fec6cb183218607278">teb_local_planner::VertexPose::oplusImpl</a></div><div class="ttdeci">virtual void oplusImpl(const double *update)</div><div class="ttdoc">Define the update increment . A simple addition for the position. The angle is first added to the pre...</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:200</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_aa9b1cc3b7ac9d5ee6922ceef3190dc46"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#aa9b1cc3b7ac9d5ee6922ceef3190dc46">teb_local_planner::VertexPose::~VertexPose</a></div><div class="ttdeci">~VertexPose()</div><div class="ttdoc">Destructs the VertexPose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:119</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_ad4d8f97341c461bf915d4ac4fa72a48f"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#ad4d8f97341c461bf915d4ac4fa72a48f">teb_local_planner::VertexPose::position</a></div><div class="ttdeci">const Eigen::Vector2d &amp; position() const</div><div class="ttdoc">Access the 2D position part (read-only)</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:148</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_ad8cc8f5c9c10ac7ab585143bcba0f52d"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#ad8cc8f5c9c10ac7ab585143bcba0f52d">teb_local_planner::VertexPose::y</a></div><div class="ttdeci">double &amp; y()</div><div class="ttdoc">Access the y-coordinate the pose</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:166</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_add7e73c13d418002cb1c278c7aa7139d"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#add7e73c13d418002cb1c278c7aa7139d">teb_local_planner::VertexPose::VertexPose</a></div><div class="ttdeci">VertexPose(bool fixed=false)</div><div class="ttdoc">Default constructor</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:71</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_aeb9f6fc43f34bb7f210f8140a17b8ded"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#aeb9f6fc43f34bb7f210f8140a17b8ded">teb_local_planner::VertexPose::VertexPose</a></div><div class="ttdeci">VertexPose(const PoseSE2 &amp;pose, bool fixed=false)</div><div class="ttdoc">Construct pose using a given PoseSE2</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:82</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_af112d283f8c0aa1a3b9049afed970388"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#af112d283f8c0aa1a3b9049afed970388">teb_local_planner::VertexPose::theta</a></div><div class="ttdeci">const double &amp; theta() const</div><div class="ttdoc">Access the orientation part (yaw angle) of the pose (read-only)</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:184</div></div>
+<div class="ttc" id="aclassteb__local__planner_1_1VertexPose_html_af736773c0723ddbb38089f150ea78fce"><div class="ttname"><a href="classteb__local__planner_1_1VertexPose.html#af736773c0723ddbb38089f150ea78fce">teb_local_planner::VertexPose::y</a></div><div class="ttdeci">const double &amp; y() const</div><div class="ttdoc">Access the y-coordinate the pose (read-only)</div><div class="ttdef"><b>Definition:</b> vertex_pose.h:172</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

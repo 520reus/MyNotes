@@ -1,0 +1,46 @@
+\hypertarget{classbase__local__planner_1_1LocalPlannerUtil}{}\doxysection{base\+\_\+local\+\_\+planner\+::Local\+Planner\+Util类 参考}
+\label{classbase__local__planner_1_1LocalPlannerUtil}\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+
+
+Helper class implementing infrastructure code many local planner implementations may need.  
+
+
+
+
+{\ttfamily \#include $<$local\+\_\+planner\+\_\+util.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_a84581c07b821dbdb93f78a6def7f8850}\label{classbase__local__planner_1_1LocalPlannerUtil_a84581c07b821dbdb93f78a6def7f8850}} 
+void \mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerUtil_a84581c07b821dbdb93f78a6def7f8850}{reconfigure\+CB}} (\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{Local\+Planner\+Limits}} \&config, bool restore\+\_\+defaults)
+\begin{DoxyCompactList}\small\item\em Callback to update the local planner\textquotesingle{}s parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_aef146076f0095773cb6e89827ff06b4b}\label{classbase__local__planner_1_1LocalPlannerUtil_aef146076f0095773cb6e89827ff06b4b}} 
+void {\bfseries initialize} (tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_a40a75811cc424cb2f4e205a0ec18cb41}\label{classbase__local__planner_1_1LocalPlannerUtil_a40a75811cc424cb2f4e205a0ec18cb41}} 
+bool {\bfseries get\+Goal} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal\+\_\+pose)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_af0eb515ddb49387ac87153ed4401a248}\label{classbase__local__planner_1_1LocalPlannerUtil_af0eb515ddb49387ac87153ed4401a248}} 
+bool {\bfseries set\+Plan} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_adb22b6981dc80e9159298c8f3dc738eb}\label{classbase__local__planner_1_1LocalPlannerUtil_adb22b6981dc80e9159298c8f3dc738eb}} 
+bool {\bfseries get\+Local\+Plan} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan)
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_a6b0ecce1146b2d8a039063e0f17d8810}\label{classbase__local__planner_1_1LocalPlannerUtil_a6b0ecce1146b2d8a039063e0f17d8810}} 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ {\bfseries get\+Costmap} ()
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_ab872bb31110cc8cf9d1fa7f5b339c6fd}\label{classbase__local__planner_1_1LocalPlannerUtil_ab872bb31110cc8cf9d1fa7f5b339c6fd}} 
+\mbox{\hyperlink{classbase__local__planner_1_1LocalPlannerLimits}{Local\+Planner\+Limits}} {\bfseries get\+Current\+Limits} ()
+\item 
+\mbox{\Hypertarget{classbase__local__planner_1_1LocalPlannerUtil_ac3e2070b5a7adcc1ba141d41d3f6865c}\label{classbase__local__planner_1_1LocalPlannerUtil_ac3e2070b5a7adcc1ba141d41d3f6865c}} 
+std\+::string {\bfseries get\+Global\+Frame} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Helper class implementing infrastructure code many local planner implementations may need. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/local\+\_\+planner\+\_\+util.\+h\end{DoxyCompactItemize}

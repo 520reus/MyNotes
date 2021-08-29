@@ -1,0 +1,16 @@
+\subsubsection usage Usage
+\verbatim
+<node name="standalone_converter" pkg="costmap_converter" type="standalone_converter">
+  <param name="cluster_max_distance" type="double" value="0.4" />
+  <param name="cluster_min_pts" type="int" value="2" />
+  <param name="cluster_max_pts" type="int" value="30" />
+  <param name="ransac_inlier_distance" type="double" value="0.2" />
+  <param name="ransac_min_inliers" type="int" value="10" />
+  <param name="ransac_no_iterations" type="int" value="2000" />
+  <param name="ransac_remainig_outliers" type="int" value="3" />
+  <param name="ransac_convert_outlier_pts" type="bool" value="True" />
+  <param name="ransac_filter_remaining_outlier_pts" type="bool" value="False" />
+  <param name="convex_hull_min_pt_separation" type="double" value="0.1" />
+</node>
+\endverbatim
+

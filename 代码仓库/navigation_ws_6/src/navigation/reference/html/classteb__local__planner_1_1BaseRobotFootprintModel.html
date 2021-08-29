@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::BaseRobotFootprintModel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html">BaseRobotFootprintModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::BaseRobotFootprintModel类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract class that defines the interface for robot footprint/contour models  
+ <a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="robot__footprint__model_8h_source.html">robot_footprint_model.h</a>&gt;</code></p>
+<div class="dynheader">
+类 teb_local_planner::BaseRobotFootprintModel 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classteb__local__planner_1_1BaseRobotFootprintModel.png" usemap="#teb_5Flocal_5Fplanner::BaseRobotFootprintModel_map" alt=""/>
+  <map id="teb_5Flocal_5Fplanner::BaseRobotFootprintModel_map" name="teb_5Flocal_5Fplanner::BaseRobotFootprintModel_map">
+<area href="classteb__local__planner_1_1CircularRobotFootprint.html" title="Class that defines the a robot of circular shape" alt="teb_local_planner::CircularRobotFootprint" shape="rect" coords="0,56,264,80"/>
+<area href="classteb__local__planner_1_1LineRobotFootprint.html" title="Class that approximates the robot with line segment (zero-width)" alt="teb_local_planner::LineRobotFootprint" shape="rect" coords="274,56,538,80"/>
+<area href="classteb__local__planner_1_1PointRobotFootprint.html" alt="teb_local_planner::PointRobotFootprint" shape="rect" coords="548,56,812,80"/>
+<area href="classteb__local__planner_1_1PolygonRobotFootprint.html" title="Class that approximates the robot with a closed polygon" alt="teb_local_planner::PolygonRobotFootprint" shape="rect" coords="822,56,1086,80"/>
+<area href="classteb__local__planner_1_1TwoCirclesRobotFootprint.html" title="Class that approximates the robot with two shifted circles" alt="teb_local_planner::TwoCirclesRobotFootprint" shape="rect" coords="1096,56,1360,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a276e41b148ee2eaa19f5611e8380695e"><td class="memItemLeft" align="right" valign="top"><a id="a276e41b148ee2eaa19f5611e8380695e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a276e41b148ee2eaa19f5611e8380695e">BaseRobotFootprintModel</a> ()</td></tr>
+<tr class="memdesc:a276e41b148ee2eaa19f5611e8380695e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor of the abstract obstacle class <br /></td></tr>
+<tr class="separator:a276e41b148ee2eaa19f5611e8380695e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7178ea660f72955a12efe8f13b5eab91"><td class="memItemLeft" align="right" valign="top"><a id="a7178ea660f72955a12efe8f13b5eab91"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a7178ea660f72955a12efe8f13b5eab91">~BaseRobotFootprintModel</a> ()</td></tr>
+<tr class="memdesc:a7178ea660f72955a12efe8f13b5eab91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:a7178ea660f72955a12efe8f13b5eab91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6336b7e84aa421a1a54c29fd36c1090"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#ae6336b7e84aa421a1a54c29fd36c1090">calculateDistance</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;current_pose, const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> *obstacle) const =0</td></tr>
+<tr class="memdesc:ae6336b7e84aa421a1a54c29fd36c1090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the distance between the robot and an obstacle  <a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#ae6336b7e84aa421a1a54c29fd36c1090">更多...</a><br /></td></tr>
+<tr class="separator:ae6336b7e84aa421a1a54c29fd36c1090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e51cdaecc5fbae067d2e6bd3780f339"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a0e51cdaecc5fbae067d2e6bd3780f339">estimateSpatioTemporalDistance</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;current_pose, const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> *obstacle, double t) const =0</td></tr>
+<tr class="memdesc:a0e51cdaecc5fbae067d2e6bd3780f339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimate the distance between the robot and the predicted location of an obstacle at time t  <a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a0e51cdaecc5fbae067d2e6bd3780f339">更多...</a><br /></td></tr>
+<tr class="separator:a0e51cdaecc5fbae067d2e6bd3780f339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8185bccad3e8f40d89e284d4178bfe9d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a8185bccad3e8f40d89e284d4178bfe9d">visualizeRobot</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;current_pose, std::vector&lt; visualization_msgs::Marker &gt; &amp;markers, const std_msgs::ColorRGBA &amp;color) const</td></tr>
+<tr class="memdesc:a8185bccad3e8f40d89e284d4178bfe9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize the robot using a markers  <a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a8185bccad3e8f40d89e284d4178bfe9d">更多...</a><br /></td></tr>
+<tr class="separator:a8185bccad3e8f40d89e284d4178bfe9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98af59319058aed548ea173605e58d9d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a98af59319058aed548ea173605e58d9d">getInscribedRadius</a> ()=0</td></tr>
+<tr class="memdesc:a98af59319058aed548ea173605e58d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the inscribed radius of the footprint model  <a href="classteb__local__planner_1_1BaseRobotFootprintModel.html#a98af59319058aed548ea173605e58d9d">更多...</a><br /></td></tr>
+<tr class="separator:a98af59319058aed548ea173605e58d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Abstract class that defines the interface for robot footprint/contour models </p>
+<p>The robot model class is currently used in optimization only, since taking the navigation stack footprint into account might be inefficient. The footprint is only used for checking feasibility. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ae6336b7e84aa421a1a54c29fd36c1090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6336b7e84aa421a1a54c29fd36c1090">&#9670;&nbsp;</a></span>calculateDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::BaseRobotFootprintModel::calculateDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>current_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> *&#160;</td>
+          <td class="paramname"><em>obstacle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the distance between the robot and an obstacle </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_pose</td><td>Current robot pose </td></tr>
+    <tr><td class="paramname">obstacle</td><td>Pointer to the obstacle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Euclidean distance to the robot </dd></dl>
+
+<p>在 <a class="el" href="classteb__local__planner_1_1PolygonRobotFootprint.html#a2a10b4adc6fb7596ea94caa7352b617d">teb_local_planner::PolygonRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1LineRobotFootprint.html#a5bdb68e28dd61d3bd758480ffafa7965">teb_local_planner::LineRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1TwoCirclesRobotFootprint.html#a713f0abe443316b003bedb0098d68f5e">teb_local_planner::TwoCirclesRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1CircularRobotFootprint.html#a3045ccae12f203819c8542f98914f0e1">teb_local_planner::CircularRobotFootprint</a> , 以及 <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html#ab0b9f073f7eb9354e9533e8626874c49">teb_local_planner::PointRobotFootprint</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a0e51cdaecc5fbae067d2e6bd3780f339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e51cdaecc5fbae067d2e6bd3780f339">&#9670;&nbsp;</a></span>estimateSpatioTemporalDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::BaseRobotFootprintModel::estimateSpatioTemporalDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>current_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> *&#160;</td>
+          <td class="paramname"><em>obstacle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estimate the distance between the robot and the predicted location of an obstacle at time t </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_pose</td><td>robot pose, from which the distance to the obstacle is estimated </td></tr>
+    <tr><td class="paramname">obstacle</td><td>Pointer to the dynamic obstacle (constant velocity model is assumed) </td></tr>
+    <tr><td class="paramname">t</td><td>time, for which the predicted distance to the obstacle is calculated </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Euclidean distance to the robot </dd></dl>
+
+<p>在 <a class="el" href="classteb__local__planner_1_1PolygonRobotFootprint.html#aa586f6c69b42a9a7c0a132230f578206">teb_local_planner::PolygonRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1LineRobotFootprint.html#a08897be48121e11234845be66227d769">teb_local_planner::LineRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1TwoCirclesRobotFootprint.html#a9cb191f97744f76ea1205af27c55d8fa">teb_local_planner::TwoCirclesRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1CircularRobotFootprint.html#aede7b34bbcdf87880674b44cdafd9373">teb_local_planner::CircularRobotFootprint</a> , 以及 <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html#ad51a5bef836cbf47f4be9a61ae7c6afd">teb_local_planner::PointRobotFootprint</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a98af59319058aed548ea173605e58d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98af59319058aed548ea173605e58d9d">&#9670;&nbsp;</a></span>getInscribedRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double teb_local_planner::BaseRobotFootprintModel::getInscribedRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the inscribed radius of the footprint model </p>
+<dl class="section return"><dt>返回</dt><dd>inscribed radius </dd></dl>
+
+<p>在 <a class="el" href="classteb__local__planner_1_1PolygonRobotFootprint.html#aa48a4a3bb9da49300fcb854ee47b405e">teb_local_planner::PolygonRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1LineRobotFootprint.html#a8827631f84fdb056ea60f6d64e6a4bfc">teb_local_planner::LineRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1TwoCirclesRobotFootprint.html#affb216e1cd3cd866ad737d89044a5e50">teb_local_planner::TwoCirclesRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1CircularRobotFootprint.html#a49d17823fc078f82d2965c0a620b58dc">teb_local_planner::CircularRobotFootprint</a> , 以及 <a class="el" href="classteb__local__planner_1_1PointRobotFootprint.html#a4e768c89f8a3906f88c5a906d47e6297">teb_local_planner::PointRobotFootprint</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a8185bccad3e8f40d89e284d4178bfe9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8185bccad3e8f40d89e284d4178bfe9d">&#9670;&nbsp;</a></span>visualizeRobot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void teb_local_planner::BaseRobotFootprintModel::visualizeRobot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>current_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; visualization_msgs::Marker &gt; &amp;&#160;</td>
+          <td class="paramname"><em>markers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std_msgs::ColorRGBA &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visualize the robot using a markers </p>
+<p>Fill a marker message with all necessary information (type, pose, scale and color). The header, namespace, id and marker lifetime will be overwritten. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">current_pose</td><td>Current robot pose </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">markers</td><td>container of marker messages describing the robot shape </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">color</td><td>Color of the footprint </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="classteb__local__planner_1_1PolygonRobotFootprint.html#ad05f96b9cefee993eda7dbf06379c0e3">teb_local_planner::PolygonRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1LineRobotFootprint.html#a23eda7c76e0c9eadcb7a4ffb26e47be9">teb_local_planner::LineRobotFootprint</a>, <a class="el" href="classteb__local__planner_1_1TwoCirclesRobotFootprint.html#a56c9ce12df8170bb4723910413be1c7f">teb_local_planner::TwoCirclesRobotFootprint</a> , 以及 <a class="el" href="classteb__local__planner_1_1CircularRobotFootprint.html#a47b8c1c966ab0787c6ac11e4c0213b02">teb_local_planner::CircularRobotFootprint</a> 重载.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>teb_local_planner/include/teb_local_planner/<a class="el" href="robot__footprint__model_8h_source.html">robot_footprint_model.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

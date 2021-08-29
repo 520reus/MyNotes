@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: costmap_converter/include/costmap_converter/costmap_to_polygons.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6872cdf95a15c52392bd00077aa39749.html">costmap_converter</a></li><li class="navelem"><a class="el" href="dir_b215af9620d2fab195e8eeff09d07a8f.html">include</a></li><li class="navelem"><a class="el" href="dir_00533556fe5a7fea50e7a79c1e58a365.html">costmap_converter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">costmap_to_polygons.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*********************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright (c) 2016,</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  TU Dortmund - Institute of Control Theory and Systems Engineering.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  are met:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *   * Neither the name of the institute nor the names of its</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * Author: Christoph Rösmann, Otniel Rinaldo</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef COSTMAP_TO_POLYGONS_H_</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define COSTMAP_TO_POLYGONS_H_</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/costmap_converter_interface.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/OccupancyGrid.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;visualization_msgs/Marker.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Point.h&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/Polygon.h&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;Eigen/StdVector&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;boost/thread/mutex.hpp&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;boost/thread/thread.hpp&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// dynamic reconfigure</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;costmap_converter/CostmapToPolygonsDBSMCCHConfig.h&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">namespace </span>costmap_converter</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">   79</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">CostmapToPolygonsDBSMCCH</a> : <span class="keyword">public</span> <a class="code" href="classcostmap__converter_1_1BaseCostmapToPolygons.html">BaseCostmapToPolygons</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">   87</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#aa20b0929077e8d9636b74de1507de754">   90</a></span>&#160;      <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#aa20b0929077e8d9636b74de1507de754">KeyPoint</a>() {}</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a08bdab994b172d37c8b197216f0539ae">   92</a></span>&#160;      <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a08bdab994b172d37c8b197216f0539ae">KeyPoint</a>(<span class="keywordtype">double</span> x_, <span class="keywordtype">double</span> y_) : <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">x</a>(x_), <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">y</a>(y_) {}</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">   93</a></span>&#160;      <span class="keywordtype">double</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">x</a>; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">   94</a></span>&#160;      <span class="keywordtype">double</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">y</a>; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a1d13269542a88c665deb7f3f0e9949d2">   97</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a1d13269542a88c665deb7f3f0e9949d2">toPointMsg</a>(geometry_msgs::Point&amp; point)<span class="keyword"> const </span>{point.x=<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">x</a>; point.y=<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">y</a>; point.z=0;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae41f4b705484a7f728be0a2b5acebad1">   99</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae41f4b705484a7f728be0a2b5acebad1">toPointMsg</a>(geometry_msgs::Point32&amp; point)<span class="keyword"> const </span>{point.x=<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">x</a>; point.y=<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">y</a>; point.z=0;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">  106</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">Parameters</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">Parameters</a>() : <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">max_distance_</a>(0.4), <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a28994597f67d1be4d306d99f2a7f1fb1">min_pts_</a>(2), <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a9a03568b3a66137442998a5e74e304a3">max_pts_</a>(30), <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a099e0aab9fc720377ca17d1de8e7b1a1">min_keypoint_separation_</a>(0.1) {}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="comment">// DBSCAN parameters</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">  110</a></span>&#160;      <span class="keywordtype">double</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">max_distance_</a>; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a28994597f67d1be4d306d99f2a7f1fb1">  111</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a28994597f67d1be4d306d99f2a7f1fb1">min_pts_</a>; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a9a03568b3a66137442998a5e74e304a3">  112</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a9a03568b3a66137442998a5e74e304a3">max_pts_</a>; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="comment">// convex hull parameters</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a099e0aab9fc720377ca17d1de8e7b1a1">  115</a></span>&#160;      <span class="keywordtype">double</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a099e0aab9fc720377ca17d1de8e7b1a1">min_keypoint_separation_</a>; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa221aa769dc1d82db848a47fddfe6b51">  121</a></span>&#160;    <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa221aa769dc1d82db848a47fddfe6b51">CostmapToPolygonsDBSMCCH</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a14113894b97b32b6c467642392a1d1cd">  126</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a14113894b97b32b6c467642392a1d1cd">~CostmapToPolygonsDBSMCCH</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#ab10c4b289420d6c65fcfbd446634fd22">  132</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#ab10c4b289420d6c65fcfbd446634fd22">initialize</a>(ros::NodeHandle nh);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6e2b9aa4db5eec24e2cae5f4d3af1909">  137</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6e2b9aa4db5eec24e2cae5f4d3af1909">compute</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aed33709b3251194bf95b0f611ac606a3">  144</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aed33709b3251194bf95b0f611ac606a3">setCostmap2D</a>(<a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a>* costmap);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05">  150</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05">updateCostmap2D</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> Po<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6ea25c3ebd002c376481a6167acd10a0">  160</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6ea25c3ebd002c376481a6167acd10a0">convertPointToPolygon</a>(<span class="keyword">const</span> Point&amp; point, geometry_msgs::Polygon&amp; polygon)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      polygon.points.resize(1);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      polygon.points.front().x = point.x;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      polygon.points.front().y = point.y;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      polygon.points.front().z = 0;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62">  173</a></span>&#160;    PolygonContainerConstPtr <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62">getPolygons</a>();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a0cd5aaaba9344ff25b5c3feb6faa534c">  190</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a0cd5aaaba9344ff25b5c3feb6faa534c">dbScan</a>(std::vector&lt; std::vector&lt;KeyPoint&gt; &gt;&amp; clusters);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a30c9e455820f8193735362f325e0de60">  198</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a30c9e455820f8193735362f325e0de60">regionQuery</a>(<span class="keywordtype">int</span> curr_index, std::vector&lt;int&gt;&amp; neighbor_indices);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a4fb264f67eb63e68e8d5183f1f0ca4ad">  203</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a4fb264f67eb63e68e8d5183f1f0ca4ad">addPoint</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordtype">int</span> idx = <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">occupied_cells_</a>.size();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">occupied_cells_</a>.emplace_back(x, y);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordtype">int</span> cx, cy;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">pointToNeighborCells</a>(<a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">occupied_cells_</a>.back(), cx, cy);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <span class="keywordtype">int</span> nidx = <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">neighborCellsToIndex</a>(cx, cy);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">if</span> (nidx &gt;= 0)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        neighbor_lookup_[nidx].push_back(idx);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9a3b5ea703ba4487deb9171842938ccc">  226</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9a3b5ea703ba4487deb9171842938ccc">convexHull</a>(std::vector&lt;KeyPoint&gt;&amp; cluster, geometry_msgs::Polygon&amp; polygon);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    </div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6c45bf9acf6fcaae63dfb51871895bc3">  241</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6c45bf9acf6fcaae63dfb51871895bc3">convexHull2</a>(std::vector&lt;KeyPoint&gt;&amp; cluster, geometry_msgs::Polygon&amp; polygon);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a980a39de9a8e2aad76f3e72d221de173">  250</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a980a39de9a8e2aad76f3e72d221de173">simplifyPolygon</a>(geometry_msgs::Polygon&amp; polygon);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> P1, <span class="keyword">typename</span> P2, <span class="keyword">typename</span> P3&gt;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aaeed7c6af5b0b8420f0988d6213c3f61">  262</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aaeed7c6af5b0b8420f0988d6213c3f61">cross</a>(<span class="keyword">const</span> P1&amp; O, <span class="keyword">const</span> P2&amp; A, <span class="keyword">const</span> P3&amp; B)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    { </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> (<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(A.x - O.x) * (<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(B.y - O.y) - (<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(A.y - O.y) * (<span class="keywordtype">long</span> <span class="keywordtype">double</span>)(B.x - O.x);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a8a09ea3e7b78271f0b9f1f7e13933479">  272</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a8a09ea3e7b78271f0b9f1f7e13933479">updatePolygonContainer</a>(PolygonContainerPtr polygons);   </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;          </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;   </div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">  275</a></span>&#160;   std::vector&lt;KeyPoint&gt; <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">occupied_cells_</a>; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;   </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    std::vector&lt;std::vector&lt;int&gt; &gt; neighbor_lookup_; </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">  278</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">neighbor_size_x_</a>; </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a71e2a22cfd9b4a35129dab677980e12b">  279</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a71e2a22cfd9b4a35129dab677980e12b">neighbor_size_y_</a>; </div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a68009a61efee912fa6f53c88216d2a28">  280</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a68009a61efee912fa6f53c88216d2a28">offset_x_</a>;     </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a40315680a42482e8a81367f802c73545">  281</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a40315680a42482e8a81367f802c73545">offset_y_</a>;     </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">  288</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">neighborCellsToIndex</a>(<span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordflow">if</span> (cx &lt; 0 || cx &gt;= <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">neighbor_size_x_</a> || cy &lt; 0 || cy &gt;= <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a71e2a22cfd9b4a35129dab677980e12b">neighbor_size_y_</a>)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="keywordflow">return</span> cy * <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">neighbor_size_x_</a> + cx;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">  301</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">pointToNeighborCells</a>(<span class="keyword">const</span> <a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">KeyPoint</a>&amp; kp, <span class="keywordtype">int</span>&amp; cx, <span class="keywordtype">int</span>&amp; cy)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      cx = int((kp.<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">x</a> - <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a68009a61efee912fa6f53c88216d2a28">offset_x_</a>) / parameter_.<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">max_distance_</a>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      cy = int((kp.<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">y</a> - <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a40315680a42482e8a81367f802c73545">offset_y_</a>) / parameter_.<a class="code" href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">max_distance_</a>);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    Parameters parameter_;          <span class="comment">//&lt; active parameters throughout computation</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    Parameters parameter_buffered_; <span class="comment">//&lt; the buffered parameters that are offered to dynamic reconfigure</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a86d471167f2abe46d792f8e8479e1bc1">  310</a></span>&#160;    boost::mutex <a class="code" href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a86d471167f2abe46d792f8e8479e1bc1">parameter_mutex_</a>;  </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;   </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;       </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordtype">void</span> reconfigureCB(CostmapToPolygonsDBSMCCHConfig&amp; config, uint32_t level);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    PolygonContainerPtr polygons_; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    boost::mutex mutex_; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    dynamic_reconfigure::Server&lt;CostmapToPolygonsDBSMCCHConfig&gt;* dynamic_recfg_; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;   </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a> *costmap_; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;   </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;} <span class="comment">//end namespace teb_local_planner</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* COSTMAP_TO_POLYGONS_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1Costmap2D_html"><div class="ttname"><a href="classcostmap__2d_1_1Costmap2D.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:61</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1BaseCostmapToPolygons_html"><div class="ttname"><a href="classcostmap__converter_1_1BaseCostmapToPolygons.html">costmap_converter::BaseCostmapToPolygons</a></div><div class="ttdoc">This abstract class defines the interface for plugins that convert the costmap into polygon types</div><div class="ttdef"><b>Definition:</b> costmap_converter_interface.h:78</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html">costmap_converter::CostmapToPolygonsDBSMCCH</a></div><div class="ttdoc">This class converts the costmap_2d into a set of convex polygons (and points)</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:80</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a0cd5aaaba9344ff25b5c3feb6faa534c"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a0cd5aaaba9344ff25b5c3feb6faa534c">costmap_converter::CostmapToPolygonsDBSMCCH::dbScan</a></div><div class="ttdeci">void dbScan(std::vector&lt; std::vector&lt; KeyPoint &gt; &gt; &amp;clusters)</div><div class="ttdoc">DBSCAN algorithm for clustering</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a14113894b97b32b6c467642392a1d1cd"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a14113894b97b32b6c467642392a1d1cd">costmap_converter::CostmapToPolygonsDBSMCCH::~CostmapToPolygonsDBSMCCH</a></div><div class="ttdeci">virtual ~CostmapToPolygonsDBSMCCH()</div><div class="ttdoc">Destructor</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a30c9e455820f8193735362f325e0de60"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a30c9e455820f8193735362f325e0de60">costmap_converter::CostmapToPolygonsDBSMCCH::regionQuery</a></div><div class="ttdeci">void regionQuery(int curr_index, std::vector&lt; int &gt; &amp;neighbor_indices)</div><div class="ttdoc">Helper function for dbScan to search for neighboring points</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a40315680a42482e8a81367f802c73545"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a40315680a42482e8a81367f802c73545">costmap_converter::CostmapToPolygonsDBSMCCH::offset_y_</a></div><div class="ttdeci">double offset_y_</div><div class="ttdoc">offset [meters] in x for the lookup grid</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:281</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a44c350a82dd0b45084b05701e3094caf"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a44c350a82dd0b45084b05701e3094caf">costmap_converter::CostmapToPolygonsDBSMCCH::pointToNeighborCells</a></div><div class="ttdeci">void pointToNeighborCells(const KeyPoint &amp;kp, int &amp;cx, int &amp;cy)</div><div class="ttdoc">compute the cell indices of a keypoint</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:301</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a4fb264f67eb63e68e8d5183f1f0ca4ad"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a4fb264f67eb63e68e8d5183f1f0ca4ad">costmap_converter::CostmapToPolygonsDBSMCCH::addPoint</a></div><div class="ttdeci">void addPoint(double x, double y)</div><div class="ttdoc">helper function for adding a point to the lookup data structures</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:203</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a55d233727263d3f89d007f9fb8754744"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a55d233727263d3f89d007f9fb8754744">costmap_converter::CostmapToPolygonsDBSMCCH::neighborCellsToIndex</a></div><div class="ttdeci">int neighborCellsToIndex(int cx, int cy)</div><div class="ttdoc">offset [meters] in y for the lookup grid</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:288</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a68009a61efee912fa6f53c88216d2a28"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a68009a61efee912fa6f53c88216d2a28">costmap_converter::CostmapToPolygonsDBSMCCH::offset_x_</a></div><div class="ttdeci">double offset_x_</div><div class="ttdoc">size of the neighbour lookup in y (number of cells)</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:280</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a6c45bf9acf6fcaae63dfb51871895bc3"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6c45bf9acf6fcaae63dfb51871895bc3">costmap_converter::CostmapToPolygonsDBSMCCH::convexHull2</a></div><div class="ttdeci">void convexHull2(std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::Polygon &amp;polygon)</div><div class="ttdoc">Compute the convex hull for a single cluster</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a6e2b9aa4db5eec24e2cae5f4d3af1909"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6e2b9aa4db5eec24e2cae5f4d3af1909">costmap_converter::CostmapToPolygonsDBSMCCH::compute</a></div><div class="ttdeci">virtual void compute()</div><div class="ttdoc">This method performs the actual work (conversion of the costmap to polygons)</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a6ea25c3ebd002c376481a6167acd10a0"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a6ea25c3ebd002c376481a6167acd10a0">costmap_converter::CostmapToPolygonsDBSMCCH::convertPointToPolygon</a></div><div class="ttdeci">static void convertPointToPolygon(const Point &amp;point, geometry_msgs::Polygon &amp;polygon)</div><div class="ttdoc">Convert a generi point type to a geometry_msgs::Polygon</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:160</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a71e2a22cfd9b4a35129dab677980e12b"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a71e2a22cfd9b4a35129dab677980e12b">costmap_converter::CostmapToPolygonsDBSMCCH::neighbor_size_y_</a></div><div class="ttdeci">int neighbor_size_y_</div><div class="ttdoc">size of the neighbour lookup in x (number of cells)</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:279</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a722070f9f4e331ce6576b61b1e0baf05"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a722070f9f4e331ce6576b61b1e0baf05">costmap_converter::CostmapToPolygonsDBSMCCH::updateCostmap2D</a></div><div class="ttdeci">virtual void updateCostmap2D()</div><div class="ttdoc">Get updated data from the previously set Costmap2D</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a86d471167f2abe46d792f8e8479e1bc1"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a86d471167f2abe46d792f8e8479e1bc1">costmap_converter::CostmapToPolygonsDBSMCCH::parameter_mutex_</a></div><div class="ttdeci">boost::mutex parameter_mutex_</div><div class="ttdoc">Mutex that keeps track about the ownership of the shared polygon instance</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:310</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a8a09ea3e7b78271f0b9f1f7e13933479"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a8a09ea3e7b78271f0b9f1f7e13933479">costmap_converter::CostmapToPolygonsDBSMCCH::updatePolygonContainer</a></div><div class="ttdeci">void updatePolygonContainer(PolygonContainerPtr polygons)</div><div class="ttdoc">Thread-safe update of the internal polygon container (that is shared using getPolygons() from outside...</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a980a39de9a8e2aad76f3e72d221de173"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a980a39de9a8e2aad76f3e72d221de173">costmap_converter::CostmapToPolygonsDBSMCCH::simplifyPolygon</a></div><div class="ttdeci">void simplifyPolygon(geometry_msgs::Polygon &amp;polygon)</div><div class="ttdoc">Simplify a polygon by removing points.</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a9933aaeb5d7249fe8d4f466771fb677f"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9933aaeb5d7249fe8d4f466771fb677f">costmap_converter::CostmapToPolygonsDBSMCCH::neighbor_size_x_</a></div><div class="ttdeci">int neighbor_size_x_</div><div class="ttdoc">array of cells for neighbor lookup</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:278</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_a9a3b5ea703ba4487deb9171842938ccc"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#a9a3b5ea703ba4487deb9171842938ccc">costmap_converter::CostmapToPolygonsDBSMCCH::convexHull</a></div><div class="ttdeci">void convexHull(std::vector&lt; KeyPoint &gt; &amp;cluster, geometry_msgs::Polygon &amp;polygon)</div><div class="ttdoc">Compute the convex hull for a single cluster (monotone chain algorithm)</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_aa221aa769dc1d82db848a47fddfe6b51"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa221aa769dc1d82db848a47fddfe6b51">costmap_converter::CostmapToPolygonsDBSMCCH::CostmapToPolygonsDBSMCCH</a></div><div class="ttdeci">CostmapToPolygonsDBSMCCH()</div><div class="ttdoc">Constructor</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_aa6d70bea1ba80d5ad84c221846e9ea62"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aa6d70bea1ba80d5ad84c221846e9ea62">costmap_converter::CostmapToPolygonsDBSMCCH::getPolygons</a></div><div class="ttdeci">PolygonContainerConstPtr getPolygons()</div><div class="ttdoc">Get a shared instance of the current polygon container</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_aaeed7c6af5b0b8420f0988d6213c3f61"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aaeed7c6af5b0b8420f0988d6213c3f61">costmap_converter::CostmapToPolygonsDBSMCCH::cross</a></div><div class="ttdeci">long double cross(const P1 &amp;O, const P2 &amp;A, const P3 &amp;B)</div><div class="ttdoc">2D Cross product of two vectors defined by two points and a common origin</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:262</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_ab10c4b289420d6c65fcfbd446634fd22"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#ab10c4b289420d6c65fcfbd446634fd22">costmap_converter::CostmapToPolygonsDBSMCCH::initialize</a></div><div class="ttdeci">virtual void initialize(ros::NodeHandle nh)</div><div class="ttdoc">Initialize the plugin</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_aed33709b3251194bf95b0f611ac606a3"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#aed33709b3251194bf95b0f611ac606a3">costmap_converter::CostmapToPolygonsDBSMCCH::setCostmap2D</a></div><div class="ttdeci">virtual void setCostmap2D(costmap_2d::Costmap2D *costmap)</div><div class="ttdoc">Pass a pointer to the costap to the plugin.</div></div>
+<div class="ttc" id="aclasscostmap__converter_1_1CostmapToPolygonsDBSMCCH_html_af086dcaa5d4d7196a94552105bc9b868"><div class="ttname"><a href="classcostmap__converter_1_1CostmapToPolygonsDBSMCCH.html#af086dcaa5d4d7196a94552105bc9b868">costmap_converter::CostmapToPolygonsDBSMCCH::occupied_cells_</a></div><div class="ttdeci">std::vector&lt; KeyPoint &gt; occupied_cells_</div><div class="ttdoc">List of occupied cells in the current map (updated by updateCostmap2D())</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:275</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint</a></div><div class="ttdoc">Defines a keypoint in metric coordinates of the map</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:88</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_a08bdab994b172d37c8b197216f0539ae"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a08bdab994b172d37c8b197216f0539ae">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::KeyPoint</a></div><div class="ttdeci">KeyPoint(double x_, double y_)</div><div class="ttdoc">Constructor with point initialization</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:92</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_a1d13269542a88c665deb7f3f0e9949d2"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a1d13269542a88c665deb7f3f0e9949d2">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::toPointMsg</a></div><div class="ttdeci">void toPointMsg(geometry_msgs::Point &amp;point) const</div><div class="ttdoc">Convert keypoint to geometry_msgs::Point message type</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:97</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_a6f3884916fa72912b0d0a0a4964a8afe"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#a6f3884916fa72912b0d0a0a4964a8afe">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">y coordinate [m]</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:94</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_aa20b0929077e8d9636b74de1507de754"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#aa20b0929077e8d9636b74de1507de754">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::KeyPoint</a></div><div class="ttdeci">KeyPoint()</div><div class="ttdoc">Default constructor</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:90</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_ae41f4b705484a7f728be0a2b5acebad1"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae41f4b705484a7f728be0a2b5acebad1">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::toPointMsg</a></div><div class="ttdeci">void toPointMsg(geometry_msgs::Point32 &amp;point) const</div><div class="ttdoc">Convert keypoint to geometry_msgs::Point32 message type</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:99</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint_html_ae6f998d82e1297529daa14f998c01284"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1KeyPoint.html#ae6f998d82e1297529daa14f998c01284">costmap_converter::CostmapToPolygonsDBSMCCH::KeyPoint::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">x coordinate [m]</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:93</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_html"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters</a></div><div class="ttdoc">Defines the parameters of the algorithm</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:107</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_html_a099e0aab9fc720377ca17d1de8e7b1a1"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a099e0aab9fc720377ca17d1de8e7b1a1">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::min_keypoint_separation_</a></div><div class="ttdeci">double min_keypoint_separation_</div><div class="ttdoc">Clear keypoints of the convex polygon that are close to each other [distance in meters] (0: keep all)</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:115</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_html_a28994597f67d1be4d306d99f2a7f1fb1"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a28994597f67d1be4d306d99f2a7f1fb1">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::min_pts_</a></div><div class="ttdeci">int min_pts_</div><div class="ttdoc">Parameter for DB_Scan: minimum number of points that define a cluster</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:111</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_html_a9a03568b3a66137442998a5e74e304a3"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#a9a03568b3a66137442998a5e74e304a3">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::max_pts_</a></div><div class="ttdeci">int max_pts_</div><div class="ttdoc">Parameter for DB_Scan: maximum number of points that define a cluster (to avoid large L- and U-shapes...</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:112</div></div>
+<div class="ttc" id="astructcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters_html_af298a1d0f7fbd95cd3fab66e366ef520"><div class="ttname"><a href="structcostmap__converter_1_1CostmapToPolygonsDBSMCCH_1_1Parameters.html#af298a1d0f7fbd95cd3fab66e366ef520">costmap_converter::CostmapToPolygonsDBSMCCH::Parameters::max_distance_</a></div><div class="ttdeci">double max_distance_</div><div class="ttdoc">Parameter for DB_Scan, maximum distance to neighbors [m]</div><div class="ttdef"><b>Definition:</b> costmap_to_polygons.h:110</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

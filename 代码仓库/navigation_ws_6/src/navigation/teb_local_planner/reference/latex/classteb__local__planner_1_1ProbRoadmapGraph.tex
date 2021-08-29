@@ -1,0 +1,62 @@
+\hypertarget{classteb__local__planner_1_1ProbRoadmapGraph}{}\doxysection{teb\+\_\+local\+\_\+planner\+::Prob\+Roadmap\+Graph类 参考}
+\label{classteb__local__planner_1_1ProbRoadmapGraph}\index{teb\_local\_planner::ProbRoadmapGraph@{teb\_local\_planner::ProbRoadmapGraph}}
+类 teb\+\_\+local\+\_\+planner\+::Prob\+Roadmap\+Graph 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classteb__local__planner_1_1ProbRoadmapGraph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classteb__local__planner_1_1ProbRoadmapGraph_a5ab746e6567a09880e6657ff3eb7af35}\label{classteb__local__planner_1_1ProbRoadmapGraph_a5ab746e6567a09880e6657ff3eb7af35}} 
+{\bfseries Prob\+Roadmap\+Graph} (const \mbox{\hyperlink{classteb__local__planner_1_1TebConfig}{Teb\+Config}} \&cfg, \mbox{\hyperlink{classteb__local__planner_1_1HomotopyClassPlanner}{Homotopy\+Class\+Planner}} $\ast$hcp)
+\item 
+virtual void \mbox{\hyperlink{classteb__local__planner_1_1ProbRoadmapGraph_a8d532f9cbcd43d39da0c28a5b1c7e6e6}{create\+Graph}} (const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&start, const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&goal, double dist\+\_\+to\+\_\+obst, double obstacle\+\_\+heading\+\_\+threshold, const geometry\+\_\+msgs\+::\+Twist $\ast$start\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Create a graph and sample points in the global frame that can be used to explore new possible paths between start and goal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classteb__local__planner_1_1ProbRoadmapGraph_a8d532f9cbcd43d39da0c28a5b1c7e6e6}\label{classteb__local__planner_1_1ProbRoadmapGraph_a8d532f9cbcd43d39da0c28a5b1c7e6e6}} 
+\index{teb\_local\_planner::ProbRoadmapGraph@{teb\_local\_planner::ProbRoadmapGraph}!createGraph@{createGraph}}
+\index{createGraph@{createGraph}!teb\_local\_planner::ProbRoadmapGraph@{teb\_local\_planner::ProbRoadmapGraph}}
+\doxysubsubsection{\texorpdfstring{createGraph()}{createGraph()}}
+{\footnotesize\ttfamily virtual void teb\+\_\+local\+\_\+planner\+::\+Prob\+Roadmap\+Graph\+::create\+Graph (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{start,  }\item[{const \mbox{\hyperlink{classteb__local__planner_1_1PoseSE2}{Pose\+SE2}} \&}]{goal,  }\item[{double}]{dist\+\_\+to\+\_\+obst,  }\item[{double}]{obstacle\+\_\+heading\+\_\+threshold,  }\item[{const geometry\+\_\+msgs\+::\+Twist $\ast$}]{start\+\_\+velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a graph and sample points in the global frame that can be used to explore new possible paths between start and goal. 
+
+This version of the graph samples keypoints in a predefined area (config) in the current frame between start and goal. ~\newline
+Afterwards all feasible paths between start and goal point are extracted using a Depth First Search. ~\newline
+Use the sampling method for complex, non-\/point or huge obstacles. ~\newline
+You may call \mbox{\hyperlink{classteb__local__planner_1_1ProbRoadmapGraph_a8d532f9cbcd43d39da0c28a5b1c7e6e6}{create\+Graph()}} instead.
+
+\begin{DoxySeeAlso}{参见}
+\mbox{\hyperlink{classteb__local__planner_1_1ProbRoadmapGraph_a8d532f9cbcd43d39da0c28a5b1c7e6e6}{create\+Graph}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{参数}
+{\em start} & Start pose from wich to start on (e.\+g. the current robot pose). \\
+\hline
+{\em goal} & Goal pose to find paths to (e.\+g. the robot\textquotesingle{}s goal). \\
+\hline
+{\em dist\+\_\+to\+\_\+obst} & Allowed distance to obstacles\+: if not satisfying, the path will be rejected (note, this is not the distance used for optimization). \\
+\hline
+{\em no\+\_\+samples} & number of random samples \\
+\hline
+{\em obstacle\+\_\+heading\+\_\+threshold} & Value of the normalized scalar product between obstacle heading and goal heading in order to take them (obstacles) into account \mbox{[}0,1\mbox{]} \\
+\hline
+{\em start\+\_\+velocity} & start velocity (optional) \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classteb__local__planner_1_1GraphSearchInterface}{teb\+\_\+local\+\_\+planner\+::\+Graph\+Search\+Interface}}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+include/teb\+\_\+local\+\_\+planner/graph\+\_\+search.\+h\end{DoxyCompactItemize}

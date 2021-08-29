@@ -1,0 +1,72 @@
+\hypertarget{classmove__base_1_1MoveBase}{}\doxysection{move\+\_\+base\+::Move\+Base类 参考}
+\label{classmove__base_1_1MoveBase}\index{move\_base::MoveBase@{move\_base::MoveBase}}
+
+
+A class that uses the actionlib\+::\+Action\+Server interface that moves the robot base to a goal location.  
+
+
+
+
+{\ttfamily \#include $<$move\+\_\+base.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmove__base_1_1MoveBase_a1132ccb47b3c514d52be347805eb31f5}{Move\+Base}} (tf2\+\_\+ros\+::\+Buffer \&tf)
+\begin{DoxyCompactList}\small\item\em Constructor for the actions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmove__base_1_1MoveBase_a8afc8f7c7f940d87a7a81e508ec99e6d}\label{classmove__base_1_1MoveBase_a8afc8f7c7f940d87a7a81e508ec99e6d}} 
+virtual \mbox{\hyperlink{classmove__base_1_1MoveBase_a8afc8f7c7f940d87a7a81e508ec99e6d}{$\sim$\+Move\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ Cleans up \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmove__base_1_1MoveBase_a217b7185de670a1ee56bb59433ee54d2}{execute\+Cycle}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Performs a control cycle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class that uses the actionlib\+::\+Action\+Server interface that moves the robot base to a goal location. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classmove__base_1_1MoveBase_a1132ccb47b3c514d52be347805eb31f5}\label{classmove__base_1_1MoveBase_a1132ccb47b3c514d52be347805eb31f5}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!MoveBase@{MoveBase}}
+\index{MoveBase@{MoveBase}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{MoveBase()}{MoveBase()}}
+{\footnotesize\ttfamily move\+\_\+base\+::\+Move\+Base\+::\+Move\+Base (\begin{DoxyParamCaption}\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+
+
+Constructor for the actions 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of the action \\
+\hline
+{\em tf} & A reference to a Transform\+Listener \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classmove__base_1_1MoveBase_a217b7185de670a1ee56bb59433ee54d2}\label{classmove__base_1_1MoveBase_a217b7185de670a1ee56bb59433ee54d2}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!executeCycle@{executeCycle}}
+\index{executeCycle@{executeCycle}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{executeCycle()}{executeCycle()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::execute\+Cycle (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan }\end{DoxyParamCaption})}
+
+
+
+Performs a control cycle 
+
+
+\begin{DoxyParams}{参数}
+{\em goal} & A reference to the goal to pursue \\
+\hline
+{\em global\+\_\+plan} & A reference to the global plan being used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if processing of the goal is done, false otherwise 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+move\+\_\+base/include/move\+\_\+base/move\+\_\+base.\+h\end{DoxyCompactItemize}

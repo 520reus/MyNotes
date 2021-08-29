@@ -1,0 +1,236 @@
+\hypertarget{classcostmap__2d_1_1Costmap2DROS}{}\doxysection{costmap\+\_\+2d\+::Costmap2\+DROS类 参考}
+\label{classcostmap__2d_1_1Costmap2DROS}\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+
+
+A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacles in either the form of Point\+Cloud or Laser\+Scan messages.  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+2d\+\_\+ros.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a8e6acdb79ef3eb738e8f4d9a5197a9ed}{Costmap2\+DROS}} (const std\+::string \&name, tf2\+\_\+ros\+::\+Buffer \&tf)
+\begin{DoxyCompactList}\small\item\em Constructor for the wrapper \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a426e3bfc085f9534b908807d1d734396}\label{classcostmap__2d_1_1Costmap2DROS_a426e3bfc085f9534b908807d1d734396}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a426e3bfc085f9534b908807d1d734396}{start}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the costmap after calls to either \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a6034554ce34557a2426eda649629c670}{stop()}} or \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a9df641b15f263c18d7a39e55224d5df3}{pause()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a6034554ce34557a2426eda649629c670}\label{classcostmap__2d_1_1Costmap2DROS_a6034554ce34557a2426eda649629c670}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a6034554ce34557a2426eda649629c670}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops costmap updates and unsubscribes from sensor topics \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a9df641b15f263c18d7a39e55224d5df3}\label{classcostmap__2d_1_1Costmap2DROS_a9df641b15f263c18d7a39e55224d5df3}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a9df641b15f263c18d7a39e55224d5df3}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Stops the costmap from updating, but sensor data still comes in over the wire \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a881910f6dbefabddbf012b8c51c4dd0a}\label{classcostmap__2d_1_1Costmap2DROS_a881910f6dbefabddbf012b8c51c4dd0a}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a881910f6dbefabddbf012b8c51c4dd0a}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes costmap updates \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a9c3aa244e7890b363a6317500d66e900}\label{classcostmap__2d_1_1Costmap2DROS_a9c3aa244e7890b363a6317500d66e900}} 
+void {\bfseries update\+Map} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_af0370b7b97c5d8cfcc961abb8d190f21}\label{classcostmap__2d_1_1Costmap2DROS_af0370b7b97c5d8cfcc961abb8d190f21}} 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_af0370b7b97c5d8cfcc961abb8d190f21}{reset\+Layers}} ()
+\begin{DoxyCompactList}\small\item\em Reset each individual layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_aa5cec3bacf7f8ce288acae413e77bace}\label{classcostmap__2d_1_1Costmap2DROS_aa5cec3bacf7f8ce288acae413e77bace}} 
+bool \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_aa5cec3bacf7f8ce288acae413e77bace}{is\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Same as get\+Layered\+Costmap()-\/$>$\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_aa5cec3bacf7f8ce288acae413e77bace}{is\+Current()}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_adcf3512b555a02dbbe2f57e784defce9}{get\+Robot\+Pose}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose) const
+\begin{DoxyCompactList}\small\item\em Get the pose of the robot in the global frame of the costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a25a9d0682d5997a6e8b3f548f095a2dd}\label{classcostmap__2d_1_1Costmap2DROS_a25a9d0682d5997a6e8b3f548f095a2dd}} 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a25a9d0682d5997a6e8b3f548f095a2dd}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns costmap name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_aa96116a5847c4cbbe872e7ace18dc67c}\label{classcostmap__2d_1_1Costmap2DROS_aa96116a5847c4cbbe872e7ace18dc67c}} 
+double \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_aa96116a5847c4cbbe872e7ace18dc67c}{get\+Transform\+Tolerance}} () const
+\begin{DoxyCompactList}\small\item\em Returns the delay in transform (tf) data that is tolerable in seconds \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_ac07a4d7573ab5d8daa87e4bbebf43853}{get\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \char`\"{}master\char`\"{} costmap which receives updates from all the layers. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a10181fc2c66a8f1ae9a9d67100f98d73}{get\+Global\+Frame\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Returns the global frame of the costmap \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_ad529a3c85f89233a524699514fee1927}{get\+Base\+Frame\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Returns the local frame of the costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a555aa9850ee20c826b5b229b49081c30}\label{classcostmap__2d_1_1Costmap2DROS_a555aa9850ee20c826b5b229b49081c30}} 
+\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} $\ast$ {\bfseries get\+Layered\+Costmap} ()
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a8e23eef773096a1fca61ae038220070d}\label{classcostmap__2d_1_1Costmap2DROS_a8e23eef773096a1fca61ae038220070d}} 
+geometry\+\_\+msgs\+::\+Polygon \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a8e23eef773096a1fca61ae038220070d}{get\+Robot\+Footprint\+Polygon}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current padded footprint as a geometry\+\_\+msgs\+::\+Polygon. \end{DoxyCompactList}\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_add1c9e06ffbae7fecc956c3c377f869e}{get\+Robot\+Footprint}} ()
+\begin{DoxyCompactList}\small\item\em Return the current footprint of the robot as a vector of points. \end{DoxyCompactList}\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a8f4eafac38f214509cd00d1541ec8a84}{get\+Unpadded\+Robot\+Footprint}} ()
+\begin{DoxyCompactList}\small\item\em Return the current unpadded footprint of the robot as a vector of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a66b8eaac1ba4252fd663adfddfecbb7e}{get\+Oriented\+Footprint}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&oriented\+\_\+footprint) const
+\begin{DoxyCompactList}\small\item\em Build the oriented footprint of the robot at the robot\textquotesingle{}s current pose \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a220a578102cf3592a744ad5264bf09ed}{set\+Unpadded\+Robot\+Footprint}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Set the footprint of the robot to be the given set of points, padded by footprint\+\_\+padding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a05c662c0ad169c124480ed3d9ee500e8}{set\+Unpadded\+Robot\+Footprint\+Polygon}} (const geometry\+\_\+msgs\+::\+Polygon \&footprint)
+\begin{DoxyCompactList}\small\item\em Set the footprint of the robot to be the given polygon, padded by footprint\+\_\+padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_acab094b1a98d6ab5b598123aa9b88640}\label{classcostmap__2d_1_1Costmap2DROS_acab094b1a98d6ab5b598123aa9b88640}} 
+\mbox{\hyperlink{classcostmap__2d_1_1LayeredCostmap}{Layered\+Costmap}} $\ast$ {\bfseries layered\+\_\+costmap\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a8db674938a25c40af469413238c25dca}\label{classcostmap__2d_1_1Costmap2DROS_a8db674938a25c40af469413238c25dca}} 
+std\+::string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_ac93f26f0c6816cb16e4b17b2aa4d5ff8}\label{classcostmap__2d_1_1Costmap2DROS_ac93f26f0c6816cb16e4b17b2aa4d5ff8}} 
+tf2\+\_\+ros\+::\+Buffer \& \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_ac93f26f0c6816cb16e4b17b2aa4d5ff8}{tf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used for transforming point clouds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_aee5cf95f348f42b83a7b5733b452a4b1}\label{classcostmap__2d_1_1Costmap2DROS_aee5cf95f348f42b83a7b5733b452a4b1}} 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_aee5cf95f348f42b83a7b5733b452a4b1}{global\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The global frame for the costmap \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_abd4149bf56e6935f1adc9114c2db162c}\label{classcostmap__2d_1_1Costmap2DROS_abd4149bf56e6935f1adc9114c2db162c}} 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_abd4149bf56e6935f1adc9114c2db162c}{robot\+\_\+base\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The frame\+\_\+id of the robot base \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a285fdb30fb75f5bc94091e4f40de4b0b}\label{classcostmap__2d_1_1Costmap2DROS_a285fdb30fb75f5bc94091e4f40de4b0b}} 
+double \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a285fdb30fb75f5bc94091e4f40de4b0b}{transform\+\_\+tolerance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em timeout before transform errors \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacles in either the form of Point\+Cloud or Laser\+Scan messages. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a8e6acdb79ef3eb738e8f4d9a5197a9ed}\label{classcostmap__2d_1_1Costmap2DROS_a8e6acdb79ef3eb738e8f4d9a5197a9ed}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!Costmap2DROS@{Costmap2DROS}}
+\index{Costmap2DROS@{Costmap2DROS}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{Costmap2DROS()}{Costmap2DROS()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DROS\+::\+Costmap2\+DROS (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+
+
+Constructor for the wrapper 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name for this costmap \\
+\hline
+{\em tf} & A reference to a Transform\+Listener \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_ad529a3c85f89233a524699514fee1927}\label{classcostmap__2d_1_1Costmap2DROS_ad529a3c85f89233a524699514fee1927}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getBaseFrameID@{getBaseFrameID}}
+\index{getBaseFrameID@{getBaseFrameID}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getBaseFrameID()}{getBaseFrameID()}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Base\+Frame\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the local frame of the costmap 
+
+\begin{DoxyReturn}{返回}
+The local frame of the costmap 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_ac07a4d7573ab5d8daa87e4bbebf43853}\label{classcostmap__2d_1_1Costmap2DROS_ac07a4d7573ab5d8daa87e4bbebf43853}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getCostmap@{getCostmap}}
+\index{getCostmap@{getCostmap}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getCostmap()}{getCostmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1Costmap2D}{Costmap2D}}$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a pointer to the \char`\"{}master\char`\"{} costmap which receives updates from all the layers. 
+
+Same as calling get\+Layered\+Costmap()-\/$>$\mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_ac07a4d7573ab5d8daa87e4bbebf43853}{get\+Costmap()}}. \mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a10181fc2c66a8f1ae9a9d67100f98d73}\label{classcostmap__2d_1_1Costmap2DROS_a10181fc2c66a8f1ae9a9d67100f98d73}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getGlobalFrameID@{getGlobalFrameID}}
+\index{getGlobalFrameID@{getGlobalFrameID}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getGlobalFrameID()}{getGlobalFrameID()}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Global\+Frame\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the global frame of the costmap 
+
+\begin{DoxyReturn}{返回}
+The global frame of the costmap 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a66b8eaac1ba4252fd663adfddfecbb7e}\label{classcostmap__2d_1_1Costmap2DROS_a66b8eaac1ba4252fd663adfddfecbb7e}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getOrientedFootprint@{getOrientedFootprint}}
+\index{getOrientedFootprint@{getOrientedFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getOrientedFootprint()}{getOrientedFootprint()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Oriented\+Footprint (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{oriented\+\_\+footprint }\end{DoxyParamCaption}) const}
+
+
+
+Build the oriented footprint of the robot at the robot\textquotesingle{}s current pose 
+
+
+\begin{DoxyParams}{参数}
+{\em oriented\+\_\+footprint} & Will be filled with the points in the oriented footprint of the robot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_add1c9e06ffbae7fecc956c3c377f869e}\label{classcostmap__2d_1_1Costmap2DROS_add1c9e06ffbae7fecc956c3c377f869e}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getRobotFootprint@{getRobotFootprint}}
+\index{getRobotFootprint@{getRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getRobotFootprint()}{getRobotFootprint()}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Robot\+Footprint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the current footprint of the robot as a vector of points. 
+
+This version of the footprint is padded by the footprint\+\_\+padding\+\_\+ distance, set in the rosparam \char`\"{}footprint\+\_\+padding\char`\"{}.
+
+The footprint initially comes from the rosparam \char`\"{}footprint\char`\"{} but can be overwritten by dynamic reconfigure or by messages received on the \char`\"{}footprint\char`\"{} topic. \mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_adcf3512b555a02dbbe2f57e784defce9}\label{classcostmap__2d_1_1Costmap2DROS_adcf3512b555a02dbbe2f57e784defce9}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getRobotPose@{getRobotPose}}
+\index{getRobotPose@{getRobotPose}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getRobotPose()}{getRobotPose()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Robot\+Pose (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose }\end{DoxyParamCaption}) const}
+
+
+
+Get the pose of the robot in the global frame of the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & Will be set to the pose of the robot in the global frame of the costmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the pose was set successfully, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a8f4eafac38f214509cd00d1541ec8a84}\label{classcostmap__2d_1_1Costmap2DROS_a8f4eafac38f214509cd00d1541ec8a84}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getUnpaddedRobotFootprint@{getUnpaddedRobotFootprint}}
+\index{getUnpaddedRobotFootprint@{getUnpaddedRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getUnpaddedRobotFootprint()}{getUnpaddedRobotFootprint()}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Unpadded\+Robot\+Footprint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the current unpadded footprint of the robot as a vector of points. 
+
+This is the raw version of the footprint without padding.
+
+The footprint initially comes from the rosparam \char`\"{}footprint\char`\"{} but can be overwritten by dynamic reconfigure or by messages received on the \char`\"{}footprint\char`\"{} topic. \mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a220a578102cf3592a744ad5264bf09ed}\label{classcostmap__2d_1_1Costmap2DROS_a220a578102cf3592a744ad5264bf09ed}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!setUnpaddedRobotFootprint@{setUnpaddedRobotFootprint}}
+\index{setUnpaddedRobotFootprint@{setUnpaddedRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{setUnpaddedRobotFootprint()}{setUnpaddedRobotFootprint()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::set\+Unpadded\+Robot\+Footprint (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{points }\end{DoxyParamCaption})}
+
+
+
+Set the footprint of the robot to be the given set of points, padded by footprint\+\_\+padding. 
+
+Should be a convex polygon, though this is not enforced.
+
+First expands the given polygon by footprint\+\_\+padding\+\_\+ and then sets padded\+\_\+footprint\+\_\+ and calls layered\+\_\+costmap\+\_\+-\/$>$set\+Footprint(). Also saves the unpadded footprint, which is available from \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a8f4eafac38f214509cd00d1541ec8a84}{get\+Unpadded\+Robot\+Footprint()}}. \mbox{\Hypertarget{classcostmap__2d_1_1Costmap2DROS_a05c662c0ad169c124480ed3d9ee500e8}\label{classcostmap__2d_1_1Costmap2DROS_a05c662c0ad169c124480ed3d9ee500e8}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!setUnpaddedRobotFootprintPolygon@{setUnpaddedRobotFootprintPolygon}}
+\index{setUnpaddedRobotFootprintPolygon@{setUnpaddedRobotFootprintPolygon}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{setUnpaddedRobotFootprintPolygon()}{setUnpaddedRobotFootprintPolygon()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::set\+Unpadded\+Robot\+Footprint\+Polygon (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Polygon \&}]{footprint }\end{DoxyParamCaption})}
+
+
+
+Set the footprint of the robot to be the given polygon, padded by footprint\+\_\+padding. 
+
+Should be a convex polygon, though this is not enforced.
+
+First expands the given polygon by footprint\+\_\+padding\+\_\+ and then sets padded\+\_\+footprint\+\_\+ and calls layered\+\_\+costmap\+\_\+-\/$>$set\+Footprint(). Also saves the unpadded footprint, which is available from \mbox{\hyperlink{classcostmap__2d_1_1Costmap2DROS_a8f4eafac38f214509cd00d1541ec8a84}{get\+Unpadded\+Robot\+Footprint()}}. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/costmap\+\_\+2d\+\_\+ros.\+h\end{DoxyCompactItemize}

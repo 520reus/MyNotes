@@ -1,0 +1,1912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>project_name: teb_local_planner::TimedElasticBand类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="log.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">project_name
+   &#160;<span id="projectnumber">ver:1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>teb_local_planner</b></li><li class="navelem"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html">TimedElasticBand</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle">
+<div class="title">teb_local_planner::TimedElasticBand类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class that defines a trajectory modeled as an elastic band with augmented tempoarl information.  
+ <a href="classteb__local__planner_1_1TimedElasticBand.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="timed__elastic__band_8h_source.html">timed_elastic_band.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aeb15c5735bdf8852cc344da0657f3fc8"><td class="memItemLeft" align="right" valign="top"><a id="aeb15c5735bdf8852cc344da0657f3fc8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#aeb15c5735bdf8852cc344da0657f3fc8">TimedElasticBand</a> ()</td></tr>
+<tr class="memdesc:aeb15c5735bdf8852cc344da0657f3fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the class <br /></td></tr>
+<tr class="separator:aeb15c5735bdf8852cc344da0657f3fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c2c073edd5f3749ad08cd96f2d7a19"><td class="memItemLeft" align="right" valign="top"><a id="a25c2c073edd5f3749ad08cd96f2d7a19"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a25c2c073edd5f3749ad08cd96f2d7a19">~TimedElasticBand</a> ()</td></tr>
+<tr class="memdesc:a25c2c073edd5f3749ad08cd96f2d7a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct the class <br /></td></tr>
+<tr class="separator:a25c2c073edd5f3749ad08cd96f2d7a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Access pose and timediff sequences</div></td></tr>
+<tr class="memitem:ab65df05f563de4e1820ae0fcb191ec4d"><td class="memItemLeft" align="right" valign="top">PoseSequence &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ab65df05f563de4e1820ae0fcb191ec4d">poses</a> ()</td></tr>
+<tr class="memdesc:ab65df05f563de4e1820ae0fcb191ec4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the complete pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#ab65df05f563de4e1820ae0fcb191ec4d">更多...</a><br /></td></tr>
+<tr class="separator:ab65df05f563de4e1820ae0fcb191ec4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c56b02adc305f58cb52207841030ae"><td class="memItemLeft" align="right" valign="top">const PoseSequence &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a61c56b02adc305f58cb52207841030ae">poses</a> () const</td></tr>
+<tr class="memdesc:a61c56b02adc305f58cb52207841030ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the complete pose sequence (read-only)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a61c56b02adc305f58cb52207841030ae">更多...</a><br /></td></tr>
+<tr class="separator:a61c56b02adc305f58cb52207841030ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9852268ff781b9bfac3e71d0dfacc8bb"><td class="memItemLeft" align="right" valign="top">TimeDiffSequence &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a9852268ff781b9bfac3e71d0dfacc8bb">timediffs</a> ()</td></tr>
+<tr class="memdesc:a9852268ff781b9bfac3e71d0dfacc8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the complete timediff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a9852268ff781b9bfac3e71d0dfacc8bb">更多...</a><br /></td></tr>
+<tr class="separator:a9852268ff781b9bfac3e71d0dfacc8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7b3be659f16be7b45dac68f590d3da"><td class="memItemLeft" align="right" valign="top">const TimeDiffSequence &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#afd7b3be659f16be7b45dac68f590d3da">timediffs</a> () const</td></tr>
+<tr class="memdesc:afd7b3be659f16be7b45dac68f590d3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the complete timediff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#afd7b3be659f16be7b45dac68f590d3da">更多...</a><br /></td></tr>
+<tr class="separator:afd7b3be659f16be7b45dac68f590d3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c27963869face67896a5115649cb978"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a7c27963869face67896a5115649cb978">TimeDiff</a> (int index)</td></tr>
+<tr class="memdesc:a7c27963869face67896a5115649cb978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the time difference at pos <code>index</code> of the time sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a7c27963869face67896a5115649cb978">更多...</a><br /></td></tr>
+<tr class="separator:a7c27963869face67896a5115649cb978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608ccd48d4a63eb1c84b604ca624146d"><td class="memItemLeft" align="right" valign="top">const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a608ccd48d4a63eb1c84b604ca624146d">TimeDiff</a> (int index) const</td></tr>
+<tr class="memdesc:a608ccd48d4a63eb1c84b604ca624146d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the time difference at pos <code>index</code> of the time sequence (read-only)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a608ccd48d4a63eb1c84b604ca624146d">更多...</a><br /></td></tr>
+<tr class="separator:a608ccd48d4a63eb1c84b604ca624146d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0419cba7f730da8edbe7c8555f4298b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a0419cba7f730da8edbe7c8555f4298b7">Pose</a> (int index)</td></tr>
+<tr class="memdesc:a0419cba7f730da8edbe7c8555f4298b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the pose at pos <code>index</code> of the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a0419cba7f730da8edbe7c8555f4298b7">更多...</a><br /></td></tr>
+<tr class="separator:a0419cba7f730da8edbe7c8555f4298b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0525a5c1369b37c7da5d900425d0cd0e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a0525a5c1369b37c7da5d900425d0cd0e">Pose</a> (int index) const</td></tr>
+<tr class="memdesc:a0525a5c1369b37c7da5d900425d0cd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the pose at pos <code>index</code> of the pose sequence (read-only)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a0525a5c1369b37c7da5d900425d0cd0e">更多...</a><br /></td></tr>
+<tr class="separator:a0525a5c1369b37c7da5d900425d0cd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe87f06b1e503fe5bd7491433e23ebcf"><td class="memItemLeft" align="right" valign="top"><a id="afe87f06b1e503fe5bd7491433e23ebcf"></a>
+<a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#afe87f06b1e503fe5bd7491433e23ebcf">BackPose</a> ()</td></tr>
+<tr class="memdesc:afe87f06b1e503fe5bd7491433e23ebcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the last <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> in the pose sequence <br /></td></tr>
+<tr class="separator:afe87f06b1e503fe5bd7491433e23ebcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd083434acfeff5eaf29973249e3c24"><td class="memItemLeft" align="right" valign="top"><a id="a3dd083434acfeff5eaf29973249e3c24"></a>
+const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a3dd083434acfeff5eaf29973249e3c24">BackPose</a> () const</td></tr>
+<tr class="memdesc:a3dd083434acfeff5eaf29973249e3c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the last <a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> in the pose sequence (read-only) <br /></td></tr>
+<tr class="separator:a3dd083434acfeff5eaf29973249e3c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2477ed1a8d60df2b9cd5839e0928c51"><td class="memItemLeft" align="right" valign="top"><a id="af2477ed1a8d60df2b9cd5839e0928c51"></a>
+double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#af2477ed1a8d60df2b9cd5839e0928c51">BackTimeDiff</a> ()</td></tr>
+<tr class="memdesc:af2477ed1a8d60df2b9cd5839e0928c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the last TimeDiff in the time diff sequence <br /></td></tr>
+<tr class="separator:af2477ed1a8d60df2b9cd5839e0928c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17b6b00f6bed32aa74aaf0d45a33e58"><td class="memItemLeft" align="right" valign="top"><a id="ac17b6b00f6bed32aa74aaf0d45a33e58"></a>
+const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ac17b6b00f6bed32aa74aaf0d45a33e58">BackTimeDiff</a> () const</td></tr>
+<tr class="memdesc:ac17b6b00f6bed32aa74aaf0d45a33e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the last TimeDiff in the time diff sequence (read-only) <br /></td></tr>
+<tr class="separator:ac17b6b00f6bed32aa74aaf0d45a33e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf537eef7aeb0a535def3e2034e81c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a8cf537eef7aeb0a535def3e2034e81c3">PoseVertex</a> (int index)</td></tr>
+<tr class="memdesc:a8cf537eef7aeb0a535def3e2034e81c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the vertex of a pose at pos <code>index</code> for optimization purposes  <a href="classteb__local__planner_1_1TimedElasticBand.html#a8cf537eef7aeb0a535def3e2034e81c3">更多...</a><br /></td></tr>
+<tr class="separator:a8cf537eef7aeb0a535def3e2034e81c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d43e8c50679cc206d439f9ef615d7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classteb__local__planner_1_1VertexTimeDiff.html">VertexTimeDiff</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a79d43e8c50679cc206d439f9ef615d7f">TimeDiffVertex</a> (int index)</td></tr>
+<tr class="memdesc:a79d43e8c50679cc206d439f9ef615d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the vertex of a time difference at pos <code>index</code> for optimization purposes  <a href="classteb__local__planner_1_1TimedElasticBand.html#a79d43e8c50679cc206d439f9ef615d7f">更多...</a><br /></td></tr>
+<tr class="separator:a79d43e8c50679cc206d439f9ef615d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Append new elements to the pose and timediff sequences</div></td></tr>
+<tr class="memitem:a5f5cf9388f7ebb9ecb1cbea6b235e60b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a5f5cf9388f7ebb9ecb1cbea6b235e60b">addPose</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;pose, bool fixed=false)</td></tr>
+<tr class="memdesc:a5f5cf9388f7ebb9ecb1cbea6b235e60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a new pose vertex to the back of the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a5f5cf9388f7ebb9ecb1cbea6b235e60b">更多...</a><br /></td></tr>
+<tr class="separator:a5f5cf9388f7ebb9ecb1cbea6b235e60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c7d2e403207c4af122c0cdf6ae2f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a55c7d2e403207c4af122c0cdf6ae2f3a">addPose</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, bool fixed=false)</td></tr>
+<tr class="memdesc:a55c7d2e403207c4af122c0cdf6ae2f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a new pose vertex to the back of the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a55c7d2e403207c4af122c0cdf6ae2f3a">更多...</a><br /></td></tr>
+<tr class="separator:a55c7d2e403207c4af122c0cdf6ae2f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfd2758befcac90bc79e450afdc4c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a3cfd2758befcac90bc79e450afdc4c03">addPose</a> (double x, double y, double theta, bool fixed=false)</td></tr>
+<tr class="memdesc:a3cfd2758befcac90bc79e450afdc4c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a new pose vertex to the back of the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a3cfd2758befcac90bc79e450afdc4c03">更多...</a><br /></td></tr>
+<tr class="separator:a3cfd2758befcac90bc79e450afdc4c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ac72dac14283fc58f250a7e6d1808e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ab9ac72dac14283fc58f250a7e6d1808e">addTimeDiff</a> (double dt, bool fixed=false)</td></tr>
+<tr class="memdesc:ab9ac72dac14283fc58f250a7e6d1808e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a new time difference vertex to the back of the time diff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#ab9ac72dac14283fc58f250a7e6d1808e">更多...</a><br /></td></tr>
+<tr class="separator:ab9ac72dac14283fc58f250a7e6d1808e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138751cfb05d5f1647bf32c7b6df69ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a138751cfb05d5f1647bf32c7b6df69ed">addPoseAndTimeDiff</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;pose, double dt)</td></tr>
+<tr class="memdesc:a138751cfb05d5f1647bf32c7b6df69ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a138751cfb05d5f1647bf32c7b6df69ed">更多...</a><br /></td></tr>
+<tr class="separator:a138751cfb05d5f1647bf32c7b6df69ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36032d2e8a0e15db1026c9e2452a8226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a36032d2e8a0e15db1026c9e2452a8226">addPoseAndTimeDiff</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta, double dt)</td></tr>
+<tr class="memdesc:a36032d2e8a0e15db1026c9e2452a8226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a36032d2e8a0e15db1026c9e2452a8226">更多...</a><br /></td></tr>
+<tr class="separator:a36032d2e8a0e15db1026c9e2452a8226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91fb6e1180497ad5fd31651a9a5df84d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a91fb6e1180497ad5fd31651a9a5df84d">addPoseAndTimeDiff</a> (double x, double y, double theta, double dt)</td></tr>
+<tr class="memdesc:a91fb6e1180497ad5fd31651a9a5df84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences)  <a href="classteb__local__planner_1_1TimedElasticBand.html#a91fb6e1180497ad5fd31651a9a5df84d">更多...</a><br /></td></tr>
+<tr class="separator:a91fb6e1180497ad5fd31651a9a5df84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Insert new elements and remove elements of the pose and timediff sequences</div></td></tr>
+<tr class="memitem:a3cae916cb21a284dc24e85dc2b35e599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a3cae916cb21a284dc24e85dc2b35e599">insertPose</a> (int index, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;pose)</td></tr>
+<tr class="memdesc:a3cae916cb21a284dc24e85dc2b35e599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new pose vertex at pos. <code>index</code> to the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a3cae916cb21a284dc24e85dc2b35e599">更多...</a><br /></td></tr>
+<tr class="separator:a3cae916cb21a284dc24e85dc2b35e599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfa7201ccdbb68c39e3613e374a7224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a5cfa7201ccdbb68c39e3613e374a7224">insertPose</a> (int index, const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;position, double theta)</td></tr>
+<tr class="memdesc:a5cfa7201ccdbb68c39e3613e374a7224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new pose vertex at pos. <code>index</code> to the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a5cfa7201ccdbb68c39e3613e374a7224">更多...</a><br /></td></tr>
+<tr class="separator:a5cfa7201ccdbb68c39e3613e374a7224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9327fd3bad6ca9aeb8ee14c2efc62ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a9327fd3bad6ca9aeb8ee14c2efc62ac5">insertPose</a> (int index, double x, double y, double theta)</td></tr>
+<tr class="memdesc:a9327fd3bad6ca9aeb8ee14c2efc62ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new pose vertex at pos. <code>index</code> to the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a9327fd3bad6ca9aeb8ee14c2efc62ac5">更多...</a><br /></td></tr>
+<tr class="separator:a9327fd3bad6ca9aeb8ee14c2efc62ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adf1066f46e87b210d34dbfd6dad994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a7adf1066f46e87b210d34dbfd6dad994">insertTimeDiff</a> (int index, double dt)</td></tr>
+<tr class="memdesc:a7adf1066f46e87b210d34dbfd6dad994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new timediff vertex at pos. <code>index</code> to the timediff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a7adf1066f46e87b210d34dbfd6dad994">更多...</a><br /></td></tr>
+<tr class="separator:a7adf1066f46e87b210d34dbfd6dad994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ee2ca1b9620fdc4d68e45848800f1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a18ee2ca1b9620fdc4d68e45848800f1c">deletePose</a> (int index)</td></tr>
+<tr class="memdesc:a18ee2ca1b9620fdc4d68e45848800f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete pose at pos. <code>index</code> in the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a18ee2ca1b9620fdc4d68e45848800f1c">更多...</a><br /></td></tr>
+<tr class="separator:a18ee2ca1b9620fdc4d68e45848800f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396017a9ef049b722e0cb331518ecc80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a396017a9ef049b722e0cb331518ecc80">deletePoses</a> (int index, int number)</td></tr>
+<tr class="memdesc:a396017a9ef049b722e0cb331518ecc80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete multiple (<code>number</code>) poses starting at pos. <code>index</code> in the pose sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a396017a9ef049b722e0cb331518ecc80">更多...</a><br /></td></tr>
+<tr class="separator:a396017a9ef049b722e0cb331518ecc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2bc8affb6483a87e01b23c270becf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a1d2bc8affb6483a87e01b23c270becf0">deleteTimeDiff</a> (int index)</td></tr>
+<tr class="memdesc:a1d2bc8affb6483a87e01b23c270becf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete pose at pos. <code>index</code> in the timediff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#a1d2bc8affb6483a87e01b23c270becf0">更多...</a><br /></td></tr>
+<tr class="separator:a1d2bc8affb6483a87e01b23c270becf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd59478383ded51c3542080938d992f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#aacd59478383ded51c3542080938d992f">deleteTimeDiffs</a> (int index, int number)</td></tr>
+<tr class="memdesc:aacd59478383ded51c3542080938d992f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete multiple (<code>number</code>) time differences starting at pos. <code>index</code> in the timediff sequence  <a href="classteb__local__planner_1_1TimedElasticBand.html#aacd59478383ded51c3542080938d992f">更多...</a><br /></td></tr>
+<tr class="separator:aacd59478383ded51c3542080938d992f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Init the trajectory</div></td></tr>
+<tr class="memitem:ab9164d1e5d518b35da94744705cdc339"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ab9164d1e5d518b35da94744705cdc339">initTrajectoryToGoal</a> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, double diststep=0, double max_vel_x=0.5, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="memdesc:ab9164d1e5d518b35da94744705cdc339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a trajectory between a given start and goal pose.  <a href="classteb__local__planner_1_1TimedElasticBand.html#ab9164d1e5d518b35da94744705cdc339">更多...</a><br /></td></tr>
+<tr class="separator:ab9164d1e5d518b35da94744705cdc339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3b9daa92a7a5bca6fd213fe47b71fd"><td class="memTemplParams" colspan="2">template&lt;typename BidirIter , typename Fun &gt; </td></tr>
+<tr class="memitem:a9a3b9daa92a7a5bca6fd213fe47b71fd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a9a3b9daa92a7a5bca6fd213fe47b71fd">initTrajectoryToGoal</a> (BidirIter path_start, BidirIter path_end, Fun fun_position, double max_vel_x, double max_vel_theta, boost::optional&lt; double &gt; max_acc_x, boost::optional&lt; double &gt; max_acc_theta, boost::optional&lt; double &gt; start_orientation, boost::optional&lt; double &gt; goal_orientation, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="memdesc:a9a3b9daa92a7a5bca6fd213fe47b71fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a trajectory from a generic 2D reference path.  <a href="classteb__local__planner_1_1TimedElasticBand.html#a9a3b9daa92a7a5bca6fd213fe47b71fd">更多...</a><br /></td></tr>
+<tr class="separator:a9a3b9daa92a7a5bca6fd213fe47b71fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98513600b5d2d929fa6fca5ec31af5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#af98513600b5d2d929fa6fca5ec31af5f">initTrajectoryToGoal</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double max_vel_x, double max_vel_theta, bool estimate_orient=false, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="memdesc:af98513600b5d2d929fa6fca5ec31af5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a trajectory from a reference pose sequence (positions and orientations).  <a href="classteb__local__planner_1_1TimedElasticBand.html#af98513600b5d2d929fa6fca5ec31af5f">更多...</a><br /></td></tr>
+<tr class="separator:af98513600b5d2d929fa6fca5ec31af5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646b2a8e88b85cda88dc0ebb772105f3"><td class="memItemLeft" align="right" valign="top"><a id="a646b2a8e88b85cda88dc0ebb772105f3"></a>
+ROS_DEPRECATED bool&#160;</td><td class="memItemRight" valign="bottom"><b>initTEBtoGoal</b> (const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;start, const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;goal, double diststep=0, double timestep=1, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="separator:a646b2a8e88b85cda88dc0ebb772105f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a145f9f3e6f25ffb86e06b419397687f4"><td class="memTemplParams" colspan="2"><a id="a145f9f3e6f25ffb86e06b419397687f4"></a>
+template&lt;typename BidirIter , typename Fun &gt; </td></tr>
+<tr class="memitem:a145f9f3e6f25ffb86e06b419397687f4"><td class="memTemplItemLeft" align="right" valign="top">ROS_DEPRECATED bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>initTEBtoGoal</b> (BidirIter path_start, BidirIter path_end, Fun fun_position, double max_vel_x, double max_vel_theta, boost::optional&lt; double &gt; max_acc_x, boost::optional&lt; double &gt; max_acc_theta, boost::optional&lt; double &gt; start_orientation, boost::optional&lt; double &gt; goal_orientation, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="separator:a145f9f3e6f25ffb86e06b419397687f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ec1380b32638068e27427a081acf6c"><td class="memItemLeft" align="right" valign="top"><a id="ae0ec1380b32638068e27427a081acf6c"></a>
+ROS_DEPRECATED bool&#160;</td><td class="memItemRight" valign="bottom"><b>initTEBtoGoal</b> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double dt, bool estimate_orient=false, int min_samples=3, bool guess_backwards_motion=false)</td></tr>
+<tr class="separator:ae0ec1380b32638068e27427a081acf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Update and modify the trajectory</div></td></tr>
+<tr class="memitem:adae6e7423ed1583f5daedac57562384e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#adae6e7423ed1583f5daedac57562384e">updateAndPruneTEB</a> (boost::optional&lt; const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp; &gt; new_start, boost::optional&lt; const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp; &gt; new_goal, int min_samples=3)</td></tr>
+<tr class="memdesc:adae6e7423ed1583f5daedac57562384e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hot-Start from an existing trajectory with updated start and goal poses.  <a href="classteb__local__planner_1_1TimedElasticBand.html#adae6e7423ed1583f5daedac57562384e">更多...</a><br /></td></tr>
+<tr class="separator:adae6e7423ed1583f5daedac57562384e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa43c55427a4b275e8eaba7a9d723b6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#afa43c55427a4b275e8eaba7a9d723b6a">autoResize</a> (double dt_ref, double dt_hysteresis, int min_samples=3, int max_samples=1000, bool fast_mode=false)</td></tr>
+<tr class="memdesc:afa43c55427a4b275e8eaba7a9d723b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal resolution.  <a href="classteb__local__planner_1_1TimedElasticBand.html#afa43c55427a4b275e8eaba7a9d723b6a">更多...</a><br /></td></tr>
+<tr class="separator:afa43c55427a4b275e8eaba7a9d723b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39e9950fab1522eef115631efda6273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ab39e9950fab1522eef115631efda6273">setPoseVertexFixed</a> (int index, bool status)</td></tr>
+<tr class="memdesc:ab39e9950fab1522eef115631efda6273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pose vertex at pos <code>index</code> of the pose sequence to be fixed or unfixed during optimization.  <a href="classteb__local__planner_1_1TimedElasticBand.html#ab39e9950fab1522eef115631efda6273">更多...</a><br /></td></tr>
+<tr class="separator:ab39e9950fab1522eef115631efda6273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae2815baa6eeb0215888e5f5b7dadc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a0ae2815baa6eeb0215888e5f5b7dadc5">setTimeDiffVertexFixed</a> (int index, bool status)</td></tr>
+<tr class="memdesc:a0ae2815baa6eeb0215888e5f5b7dadc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a timediff vertex at pos <code>index</code> of the timediff sequence to be fixed or unfixed during optimization.  <a href="classteb__local__planner_1_1TimedElasticBand.html#a0ae2815baa6eeb0215888e5f5b7dadc5">更多...</a><br /></td></tr>
+<tr class="separator:a0ae2815baa6eeb0215888e5f5b7dadc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a342e52e49e691809bc7c19c3d6c48f"><td class="memItemLeft" align="right" valign="top"><a id="a4a342e52e49e691809bc7c19c3d6c48f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a4a342e52e49e691809bc7c19c3d6c48f">clearTimedElasticBand</a> ()</td></tr>
+<tr class="memdesc:a4a342e52e49e691809bc7c19c3d6c48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear all poses and timediffs from the trajectory. The pose and timediff sequences will be empty and <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a6f7628ef2e474fbad656844467213f7e" title="Check whether the trajectory is initialized (nonzero pose and timediff sequences)">isInit()</a> will return <code>false</code> <br /></td></tr>
+<tr class="separator:a4a342e52e49e691809bc7c19c3d6c48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Utility and status methods</h2></td></tr>
+<tr class="memitem:a6d7b7cf9d858a1c20f64ec2489190758"><td class="memItemLeft" align="right" valign="top"><a id="a6d7b7cf9d858a1c20f64ec2489190758"></a>
+PoseSequence&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a6d7b7cf9d858a1c20f64ec2489190758">pose_vec_</a></td></tr>
+<tr class="memdesc:a6d7b7cf9d858a1c20f64ec2489190758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal container storing the sequence of optimzable pose vertices <br /></td></tr>
+<tr class="separator:a6d7b7cf9d858a1c20f64ec2489190758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf0dad3f580228f157ab30518020b49"><td class="memItemLeft" align="right" valign="top"><a id="a9cf0dad3f580228f157ab30518020b49"></a>
+TimeDiffSequence&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a9cf0dad3f580228f157ab30518020b49">timediff_vec_</a></td></tr>
+<tr class="memdesc:a9cf0dad3f580228f157ab30518020b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal container storing the sequence of optimzable timediff vertices <br /></td></tr>
+<tr class="separator:a9cf0dad3f580228f157ab30518020b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae3fcdccc1f539b16ef6d4a3cab0ae7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#aaae3fcdccc1f539b16ef6d4a3cab0ae7">findClosestTrajectoryPose</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_point, double *distance=NULL, int begin_idx=0) const</td></tr>
+<tr class="memdesc:aaae3fcdccc1f539b16ef6d4a3cab0ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the closest point on the trajectory w.r.t. to a provided reference point.  <a href="classteb__local__planner_1_1TimedElasticBand.html#aaae3fcdccc1f539b16ef6d4a3cab0ae7">更多...</a><br /></td></tr>
+<tr class="separator:aaae3fcdccc1f539b16ef6d4a3cab0ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b422124633a6952e74fe14062929f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a21b422124633a6952e74fe14062929f1">findClosestTrajectoryPose</a> (const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_line_start, const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;ref_line_end, double *distance=NULL) const</td></tr>
+<tr class="memdesc:a21b422124633a6952e74fe14062929f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the closest point on the trajectory w.r.t. to a provided reference line.  <a href="classteb__local__planner_1_1TimedElasticBand.html#a21b422124633a6952e74fe14062929f1">更多...</a><br /></td></tr>
+<tr class="separator:a21b422124633a6952e74fe14062929f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c33751be8735fb910738827d1da3f94"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a0c33751be8735fb910738827d1da3f94">findClosestTrajectoryPose</a> (const Point2dContainer &amp;vertices, double *distance=NULL) const</td></tr>
+<tr class="memdesc:a0c33751be8735fb910738827d1da3f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the closest point on the trajectory w.r.t. to a provided reference polygon.  <a href="classteb__local__planner_1_1TimedElasticBand.html#a0c33751be8735fb910738827d1da3f94">更多...</a><br /></td></tr>
+<tr class="separator:a0c33751be8735fb910738827d1da3f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3ff9fb67b091fc2d881f0b446d8544"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a1c3ff9fb67b091fc2d881f0b446d8544">findClosestTrajectoryPose</a> (const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> &amp;obstacle, double *distance=NULL) const</td></tr>
+<tr class="memdesc:a1c3ff9fb67b091fc2d881f0b446d8544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the closest point on the trajectory w.r.t to a provided obstacle type  <a href="classteb__local__planner_1_1TimedElasticBand.html#a1c3ff9fb67b091fc2d881f0b446d8544">更多...</a><br /></td></tr>
+<tr class="separator:a1c3ff9fb67b091fc2d881f0b446d8544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5be9a5d22a911483401cb8269bf07df"><td class="memItemLeft" align="right" valign="top"><a id="ac5be9a5d22a911483401cb8269bf07df"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#ac5be9a5d22a911483401cb8269bf07df">sizePoses</a> () const</td></tr>
+<tr class="memdesc:ac5be9a5d22a911483401cb8269bf07df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the internal pose sequence <br /></td></tr>
+<tr class="separator:ac5be9a5d22a911483401cb8269bf07df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a4fbc306ca569587ed2aacacfa47e8"><td class="memItemLeft" align="right" valign="top"><a id="a79a4fbc306ca569587ed2aacacfa47e8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a79a4fbc306ca569587ed2aacacfa47e8">sizeTimeDiffs</a> () const</td></tr>
+<tr class="memdesc:a79a4fbc306ca569587ed2aacacfa47e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the internal timediff sequence <br /></td></tr>
+<tr class="separator:a79a4fbc306ca569587ed2aacacfa47e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7628ef2e474fbad656844467213f7e"><td class="memItemLeft" align="right" valign="top"><a id="a6f7628ef2e474fbad656844467213f7e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a6f7628ef2e474fbad656844467213f7e">isInit</a> () const</td></tr>
+<tr class="memdesc:a6f7628ef2e474fbad656844467213f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the trajectory is initialized (nonzero pose and timediff sequences) <br /></td></tr>
+<tr class="separator:a6f7628ef2e474fbad656844467213f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57e977ea235034489eefc4412fc2631"><td class="memItemLeft" align="right" valign="top"><a id="af57e977ea235034489eefc4412fc2631"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#af57e977ea235034489eefc4412fc2631">getSumOfAllTimeDiffs</a> () const</td></tr>
+<tr class="memdesc:af57e977ea235034489eefc4412fc2631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the total transition time (sum over all time intervals of the timediff sequence) <br /></td></tr>
+<tr class="separator:af57e977ea235034489eefc4412fc2631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee981e5dbf7aa461b11da45d86be4a3d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#aee981e5dbf7aa461b11da45d86be4a3d">getSumOfTimeDiffsUpToIdx</a> (int index) const</td></tr>
+<tr class="memdesc:aee981e5dbf7aa461b11da45d86be4a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the estimated transition time up to the pose denoted by index  <a href="classteb__local__planner_1_1TimedElasticBand.html#aee981e5dbf7aa461b11da45d86be4a3d">更多...</a><br /></td></tr>
+<tr class="separator:aee981e5dbf7aa461b11da45d86be4a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8368b4f256de4e34148af92c99822170"><td class="memItemLeft" align="right" valign="top"><a id="a8368b4f256de4e34148af92c99822170"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a8368b4f256de4e34148af92c99822170">getAccumulatedDistance</a> () const</td></tr>
+<tr class="memdesc:a8368b4f256de4e34148af92c99822170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the length (accumulated euclidean distance) of the trajectory <br /></td></tr>
+<tr class="separator:a8368b4f256de4e34148af92c99822170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fce645048ad4fb6eca011a9a1acdc46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a2fce645048ad4fb6eca011a9a1acdc46">isTrajectoryInsideRegion</a> (double radius, double max_dist_behind_robot=-1, int skip_poses=0)</td></tr>
+<tr class="memdesc:a2fce645048ad4fb6eca011a9a1acdc46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all trajectory points are contained in a specific region  <a href="classteb__local__planner_1_1TimedElasticBand.html#a2fce645048ad4fb6eca011a9a1acdc46">更多...</a><br /></td></tr>
+<tr class="separator:a2fce645048ad4fb6eca011a9a1acdc46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Class that defines a trajectory modeled as an elastic band with augmented tempoarl information. </p>
+<p>All trajectory related methods (initialization, modifying, ...) are implemented inside this class. <br  />
+Let <img class="formulaInl" alt="$ Q = \lbrace \mathbf{s}_i \rbrace_{i=0...n},\ n \in \mathbb{N} $" src="form_34.png"/> be a sequence of poses, <br  />
+in which <img class="formulaInl" alt="$ \mathbf{s}_i = [x_i, y_i, \beta_i]^T \in \mathbb{R}^2 \times S^1 $" src="form_35.png"/> denotes a single pose of the robot. <br  />
+The Timed Elastic Band (TEB) augments this sequence of poses by incorporating time intervals between two consecutive poses, resuting in a sequence of <code>n-1</code> time intervals <img class="formulaInl" alt="$ \Delta T_i $" src="form_16.png"/>: <br  />
+ <img class="formulaInl" alt="$ \tau = \lbrace \Delta T_i \rbrace_{i=0...n-1} $" src="form_36.png"/>. <br  />
+Each time interval (time diff) denotes the time that the robot requires to transit from the current configuration to the next configuration. The tuple of both sequences defines the underlying trajectory.</p>
+<p>Poses and time differences are wrapped into a g2o::Vertex class in order to enable the efficient optimization in <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>. <br  />
+<a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> utilizes this Timed_Elastic_band class for representing an optimizable trajectory.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">待办事项:</a></b></dt><dd>Move decision if the start or goal state should be marked as fixed or unfixed for the optimization to the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a> class. </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a55c7d2e403207c4af122c0cdf6ae2f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c7d2e403207c4af122c0cdf6ae2f3a">&#9670;&nbsp;</a></span>addPose() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPose </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a new pose vertex to the back of the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>2D vector representing the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw angle representing the orientation part </td></tr>
+    <tr><td class="paramname">fixed</td><td>Mark the pose to be fixed or unfixed during trajectory optimization (important for the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f5cf9388f7ebb9ecb1cbea6b235e60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5cf9388f7ebb9ecb1cbea6b235e60b">&#9670;&nbsp;</a></span>addPose() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a new pose vertex to the back of the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> to push back on the internal PoseSequence </td></tr>
+    <tr><td class="paramname">fixed</td><td>Mark the pose to be fixed or unfixed during trajectory optimization (important for the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3cfd2758befcac90bc79e450afdc4c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cfd2758befcac90bc79e450afdc4c03">&#9670;&nbsp;</a></span>addPose() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPose </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a new pose vertex to the back of the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate of the position part </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate of the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw angle representing the orientation part </td></tr>
+    <tr><td class="paramname">fixed</td><td>Mark the pose to be fixed or unfixed during trajectory optimization (important for the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36032d2e8a0e15db1026c9e2452a8226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36032d2e8a0e15db1026c9e2452a8226">&#9670;&nbsp;</a></span>addPoseAndTimeDiff() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPoseAndTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>2D vector representing the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw angle representing the orientation part </td></tr>
+    <tr><td class="paramname">dt</td><td>time difference value to push back on the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>see <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a138751cfb05d5f1647bf32c7b6df69ed" title="Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequenc...">addPoseAndTimeDiff(const PoseSE2&amp; pose, double dt)</a> </dd></dl>
+
+</div>
+</div>
+<a id="a138751cfb05d5f1647bf32c7b6df69ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138751cfb05d5f1647bf32c7b6df69ed">&#9670;&nbsp;</a></span>addPoseAndTimeDiff() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPoseAndTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pose</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> to push back on the internal PoseSequence </td></tr>
+    <tr><td class="paramname">dt</td><td>time difference value to push back on the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>Since the timediff is defined to connect two consecutive poses, this call is only allowed if there exist already n poses and n-1 timediffs in the sequences (n=1,2,...): therefore add a single pose using <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a5f5cf9388f7ebb9ecb1cbea6b235e60b" title="Append a new pose vertex to the back of the pose sequence">addPose()</a> first! </dd></dl>
+
+</div>
+</div>
+<a id="a91fb6e1180497ad5fd31651a9a5df84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91fb6e1180497ad5fd31651a9a5df84d">&#9670;&nbsp;</a></span>addPoseAndTimeDiff() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addPoseAndTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequences) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x-coordinate of the position part </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate of the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw angle representing the orientation part </td></tr>
+    <tr><td class="paramname">dt</td><td>time difference value to push back on the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>see <a class="el" href="classteb__local__planner_1_1TimedElasticBand.html#a138751cfb05d5f1647bf32c7b6df69ed" title="Append a (pose, timediff) vertex pair to the end of the current trajectory (pose and timediff sequenc...">addPoseAndTimeDiff(const PoseSE2&amp; pose, double dt)</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab9ac72dac14283fc58f250a7e6d1808e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ac72dac14283fc58f250a7e6d1808e">&#9670;&nbsp;</a></span>addTimeDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::addTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fixed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a new time difference vertex to the back of the time diff sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>time difference value to push back on the internal TimeDiffSequence </td></tr>
+    <tr><td class="paramname">fixed</td><td>Mark the pose to be fixed or unfixed during trajectory optimization (important for the <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa43c55427a4b275e8eaba7a9d723b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa43c55427a4b275e8eaba7a9d723b6a">&#9670;&nbsp;</a></span>autoResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::autoResize </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt_ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt_hysteresis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_samples</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_samples</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fast_mode</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize the trajectory by removing or inserting a (pose,dt) pair depending on a reference temporal resolution. </p>
+<p>Resizing the trajectory is helpful e.g. for the following scenarios: </p><pre class="fragment">- Obstacles requires the teb to be extended in order to 
+  satisfy the given discritization width (plan resolution)
+ and to avoid undesirable behavior due to a large/small discretization step widths \f$ \Delta T_i \f$
+  After clearance of obstacles, the teb should (re-) contract to its (time-)optimal version.
+</pre><ul>
+<li>If the distance to the goal state is getting smaller, dt is decreasing as well. This leads to a heavily fine-grained discretization in combination with many discrete poses. Thus, the computation time will be/remain high and in addition numerical instabilities can appear (e.g. due to the division by a small <img class="formulaInl" alt="$ \Delta T_i $" src="form_16.png"/>).</li>
+</ul>
+<p>The implemented strategy checks all timediffs <img class="formulaInl" alt="$ \Delta T_i $" src="form_16.png"/> and </p><pre class="fragment">- inserts a new sample if \f$ \Delta T_i &gt; \Delta T_{ref} + \Delta T_{hyst} \f$
+</pre><ul>
+<li>removes a sample if <img class="formulaInl" alt="$ \Delta T_i &lt; \Delta T_{ref} - \Delta T_{hyst} $" src="form_37.png"/></li>
+</ul>
+<p>Each call only one new sample (pose-dt-pair) is inserted or removed. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt_ref</td><td>reference temporal resolution </td></tr>
+    <tr><td class="paramname">dt_hysteresis</td><td>hysteresis to avoid oscillations </td></tr>
+    <tr><td class="paramname">min_samples</td><td>minimum number of samples that should be remain in the trajectory after resizing </td></tr>
+    <tr><td class="paramname">max_samples</td><td>maximum number of samples that should not be exceeded during resizing </td></tr>
+    <tr><td class="paramname">fast_mode</td><td>if true, the trajectory is iterated once to insert or erase points; if false the trajectory is repeatedly iterated until no poses are added or removed anymore </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18ee2ca1b9620fdc4d68e45848800f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ee2ca1b9620fdc4d68e45848800f1c">&#9670;&nbsp;</a></span>deletePose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::deletePose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete pose at pos. <code>index</code> in the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a396017a9ef049b722e0cb331518ecc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396017a9ef049b722e0cb331518ecc80">&#9670;&nbsp;</a></span>deletePoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::deletePoses </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete multiple (<code>number</code>) poses starting at pos. <code>index</code> in the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>first element position inside the internal PoseSequence </td></tr>
+    <tr><td class="paramname">number</td><td>number of elements that should be deleted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d2bc8affb6483a87e01b23c270becf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2bc8affb6483a87e01b23c270becf0">&#9670;&nbsp;</a></span>deleteTimeDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::deleteTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete pose at pos. <code>index</code> in the timediff sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacd59478383ded51c3542080938d992f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd59478383ded51c3542080938d992f">&#9670;&nbsp;</a></span>deleteTimeDiffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::deleteTimeDiffs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete multiple (<code>number</code>) time differences starting at pos. <code>index</code> in the timediff sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>first element position inside the internal TimeDiffSequence </td></tr>
+    <tr><td class="paramname">number</td><td>number of elements that should be deleted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21b422124633a6952e74fe14062929f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b422124633a6952e74fe14062929f1">&#9670;&nbsp;</a></span>findClosestTrajectoryPose() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teb_local_planner::TimedElasticBand::findClosestTrajectoryPose </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_line_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_line_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the closest point on the trajectory w.r.t. to a provided reference line. </p>
+<p>This function can be useful to find the part of a trajectory that is close to an (line) obstacle.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">待办事项:</a></b></dt><dd><p class="startdd">implement a more efficient version that first performs a coarse search. </p>
+<p class="enddd">implement a fast approximation that assumes only one local minima w.r.t to the distance: Allows simple comparisons starting from the middle of the trajectory.</p>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ref_line_start</td><td>start of the reference line (2D position vector) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">ref_line_end</td><td>end of the reference line (2D position vector) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">distance</td><td>[optional] the resulting minimum distance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Index to the closest pose in the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="aaae3fcdccc1f539b16ef6d4a3cab0ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae3fcdccc1f539b16ef6d4a3cab0ae7">&#9670;&nbsp;</a></span>findClosestTrajectoryPose() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teb_local_planner::TimedElasticBand::findClosestTrajectoryPose </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>begin_idx</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the closest point on the trajectory w.r.t. to a provided reference point. </p>
+<p>This function can be useful to find the part of a trajectory that is close to an obstacle.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">待办事项:</a></b></dt><dd><p class="startdd">implement a more efficient version that first performs a coarse search. </p>
+<p class="enddd">implement a fast approximation that assumes only one local minima w.r.t to the distance: Allows simple comparisons starting from the middle of the trajectory.</p>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">ref_point</td><td>reference point (2D position vector) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">distance</td><td>[optional] the resulting minimum distance </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">begin_idx</td><td>start search at this pose index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Index to the closest pose in the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="a1c3ff9fb67b091fc2d881f0b446d8544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3ff9fb67b091fc2d881f0b446d8544">&#9670;&nbsp;</a></span>findClosestTrajectoryPose() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teb_local_planner::TimedElasticBand::findClosestTrajectoryPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1Obstacle.html">Obstacle</a> &amp;&#160;</td>
+          <td class="paramname"><em>obstacle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the closest point on the trajectory w.r.t to a provided obstacle type </p>
+<p>This function can be useful to find the part of a trajectory that is close to an obstacle. The method is calculates appropriate distance metrics for point, line and polygon obstacles. For all unknown obstacles the centroid is used.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">obstacle</td><td>Subclass of the <a class="el" href="classteb__local__planner_1_1Obstacle.html" title="Abstract class that defines the interface for modelling obstacles">Obstacle</a> base class </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">distance</td><td>[optional] the resulting minimum distance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Index to the closest pose in the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="a0c33751be8735fb910738827d1da3f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c33751be8735fb910738827d1da3f94">&#9670;&nbsp;</a></span>findClosestTrajectoryPose() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int teb_local_planner::TimedElasticBand::findClosestTrajectoryPose </td>
+          <td>(</td>
+          <td class="paramtype">const Point2dContainer &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>distance</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the closest point on the trajectory w.r.t. to a provided reference polygon. </p>
+<p>This function can be useful to find the part of a trajectory that is close to an (polygon) obstacle.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">待办事项:</a></b></dt><dd><p class="startdd">implement a more efficient version that first performs a coarse search. </p>
+<p class="enddd">implement a fast approximation that assumes only one local minima w.r.t to the distance: Allows simple comparisons starting from the middle of the trajectory.</p>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">vertices</td><td>vertex container containing Eigen::Vector2d points (the last and first point are connected) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">distance</td><td>[optional] the resulting minimum distance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Index to the closest pose in the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="aee981e5dbf7aa461b11da45d86be4a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee981e5dbf7aa461b11da45d86be4a3d">&#9670;&nbsp;</a></span>getSumOfTimeDiffsUpToIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double teb_local_planner::TimedElasticBand::getSumOfTimeDiffsUpToIdx </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the estimated transition time up to the pose denoted by index </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of the pose up to which the transition times are summed up </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Estimated transition time up to pose index </dd></dl>
+
+</div>
+</div>
+<a id="a9a3b9daa92a7a5bca6fd213fe47b71fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3b9daa92a7a5bca6fd213fe47b71fd">&#9670;&nbsp;</a></span>initTrajectoryToGoal() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BidirIter , typename Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TimedElasticBand::initTrajectoryToGoal </td>
+          <td>(</td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BidirIter&#160;</td>
+          <td class="paramname"><em>path_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fun&#160;</td>
+          <td class="paramname"><em>fun_position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>max_acc_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>max_acc_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>start_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>goal_orientation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_samples</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>guess_backwards_motion</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a trajectory from a generic 2D reference path. </p>
+<p>The temporal information is determined using a given maximum velocity (2D vector containing the translational and angular velocity). <br  />
+A constant velocity profile is implemented. <br  />
+A possible maximum acceleration is considered if <code>max_acceleration</code> param is provided.</p>
+<p>Since the orientation is not included in the reference path, it can be provided seperately (e.g. from the robot pose and robot goal). <br  />
+Otherwise the goal heading will be used as start and goal orientation. <br  />
+The orientation along the trajectory will be determined using the connection vector between two consecutive positions of the reference path.</p>
+<p>The reference path is provided using a start and end iterator to a container class. You must provide a unary function that accepts the dereferenced iterator and returns a copy or (const) reference to an Eigen::Vector2d type containing the 2d position.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_start</td><td>start iterator of a generic 2d path </td></tr>
+    <tr><td class="paramname">path_end</td><td>end iterator of a generic 2d path </td></tr>
+    <tr><td class="paramname">fun_position</td><td>unary function that returns the Eigen::Vector2d object </td></tr>
+    <tr><td class="paramname">max_vel_x</td><td>maximum translational velocity used for determining time differences </td></tr>
+    <tr><td class="paramname">max_vel_theta</td><td>maximum angular velocity used for determining time differences </td></tr>
+    <tr><td class="paramname">max_acc_x</td><td>specify to satisfy a maxmimum transl. acceleration and decceleration (optional) </td></tr>
+    <tr><td class="paramname">max_acc_theta</td><td>specify to satisfy a maxmimum angular acceleration and decceleration (optional) </td></tr>
+    <tr><td class="paramname">start_orientation</td><td>Orientation of the first pose of the trajectory (optional, otherwise use goal heading) </td></tr>
+    <tr><td class="paramname">goal_orientation</td><td>Orientation of the last pose of the trajectory (optional, otherwise use goal heading) </td></tr>
+    <tr><td class="paramname">min_samples</td><td>Minimum number of samples that should be initialized at least </td></tr>
+    <tr><td class="paramname">guess_backwards_motion</td><td>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BidirIter</td><td>Bidirectional iterator type </td></tr>
+    <tr><td class="paramname">Fun</td><td>unyary function that transforms the dereferenced iterator into an Eigen::Vector2d </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if everything was fine, false otherwise </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>Use <code>boost::none</code> to skip optional arguments. </dd></dl>
+
+</div>
+</div>
+<a id="ab9164d1e5d518b35da94744705cdc339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9164d1e5d518b35da94744705cdc339">&#9670;&nbsp;</a></span>initTrajectoryToGoal() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TimedElasticBand::initTrajectoryToGoal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>diststep</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_x</em> = <code>0.5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_samples</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>guess_backwards_motion</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a trajectory between a given start and goal pose. </p>
+<p>The implemented algorithm subsamples the straight line between start and goal using a given discretiziation width. <br  />
+The discretization width can be defined in the euclidean space using the <code>diststep</code> parameter. Each time difference between two consecutive poses is initialized to <code>timestep</code>. <br  />
+If the <code>diststep</code> is chosen to be zero, the resulting trajectory contains the start and goal pose only. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> defining the start of the trajectory </td></tr>
+    <tr><td class="paramname">goal</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> defining the goal of the trajectory (final pose) </td></tr>
+    <tr><td class="paramname">diststep</td><td>euclidean distance between two consecutive poses (if 0, no intermediate samples are inserted despite min_samples) </td></tr>
+    <tr><td class="paramname">max_vel_x</td><td>maximum translational velocity used for determining time differences </td></tr>
+    <tr><td class="paramname">min_samples</td><td>Minimum number of samples that should be initialized at least </td></tr>
+    <tr><td class="paramname">guess_backwards_motion</td><td>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if everything was fine, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af98513600b5d2d929fa6fca5ec31af5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98513600b5d2d929fa6fca5ec31af5f">&#9670;&nbsp;</a></span>initTrajectoryToGoal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TimedElasticBand::initTrajectoryToGoal </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_vel_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>estimate_orient</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_samples</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>guess_backwards_motion</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a trajectory from a reference pose sequence (positions and orientations). </p>
+<p>This method initializes the timed elastic band using a pose container (e.g. as local plan from the ros navigation stack). <br  />
+The initial time difference between two consecutive poses can be uniformly set via the argument <code>dt</code>. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plan</td><td>vector of geometry_msgs::PoseStamped </td></tr>
+    <tr><td class="paramname">max_vel_x</td><td>maximum translational velocity used for determining time differences </td></tr>
+    <tr><td class="paramname">max_vel_theta</td><td>maximum rotational velocity used for determining time differences </td></tr>
+    <tr><td class="paramname">estimate_orient</td><td>if <code>true</code>, calculate orientation using the straight line distance vector between consecutive poses (only copy start and goal orientation; recommended if no orientation data is available). </td></tr>
+    <tr><td class="paramname">min_samples</td><td>Minimum number of samples that should be initialized at least </td></tr>
+    <tr><td class="paramname">guess_backwards_motion</td><td>Allow the initialization of backwards oriented trajectories if the goal heading is pointing behind the robot (this parameter is used only if <code>estimate_orient</code> is enabled. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if everything was fine, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a5cfa7201ccdbb68c39e3613e374a7224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfa7201ccdbb68c39e3613e374a7224">&#9670;&nbsp;</a></span>insertPose() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::insertPose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Vector2d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a new pose vertex at pos. <code>index</code> to the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+    <tr><td class="paramname">position</td><td>2D vector representing the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw-angle representing the orientation part </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3cae916cb21a284dc24e85dc2b35e599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cae916cb21a284dc24e85dc2b35e599">&#9670;&nbsp;</a></span>insertPose() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::insertPose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a new pose vertex at pos. <code>index</code> to the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+    <tr><td class="paramname">pose</td><td><a class="el" href="classteb__local__planner_1_1PoseSE2.html" title="This class implements a pose in the domain SE2:  The pose consist of the position x and y and an orie...">PoseSE2</a> element to insert into the internal PoseSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9327fd3bad6ca9aeb8ee14c2efc62ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9327fd3bad6ca9aeb8ee14c2efc62ac5">&#9670;&nbsp;</a></span>insertPose() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::insertPose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a new pose vertex at pos. <code>index</code> to the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+    <tr><td class="paramname">x</td><td>x-coordinate of the position part </td></tr>
+    <tr><td class="paramname">y</td><td>y-coordinate of the position part </td></tr>
+    <tr><td class="paramname">theta</td><td>yaw-angle representing the orientation part </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7adf1066f46e87b210d34dbfd6dad994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7adf1066f46e87b210d34dbfd6dad994">&#9670;&nbsp;</a></span>insertTimeDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::insertTimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a new timediff vertex at pos. <code>index</code> to the timediff sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal TimeDiffSequence </td></tr>
+    <tr><td class="paramname">dt</td><td>timediff value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fce645048ad4fb6eca011a9a1acdc46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fce645048ad4fb6eca011a9a1acdc46">&#9670;&nbsp;</a></span>isTrajectoryInsideRegion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool teb_local_planner::TimedElasticBand::isTrajectoryInsideRegion </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_dist_behind_robot</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip_poses</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if all trajectory points are contained in a specific region </p>
+<p>The specific region is a circle around the current robot position (Pose(0)) with given radius <code>radius</code>. This method investigates a different radius for points behind the robot if <code>max_dist_behind_robot</code> &gt;= 0. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>radius of the region with the robot position (Pose(0)) as center </td></tr>
+    <tr><td class="paramname">max_dist_behind_robot</td><td>A separate radius for trajectory points behind the robot, activated if 0 or positive </td></tr>
+    <tr><td class="paramname">skip_poses</td><td>If &gt;0: the specified number of poses are skipped for the test, e.g. Pose(0), Pose(0+skip_poses+1), Pose(2*skip_poses+2), ... are tested. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>true</code>, if all tested trajectory points are inside the specified region, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a0419cba7f730da8edbe7c8555f4298b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0419cba7f730da8edbe7c8555f4298b7">&#9670;&nbsp;</a></span>Pose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; teb_local_planner::TimedElasticBand::Pose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the pose at pos <code>index</code> of the pose sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>reference to the pose at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="a0525a5c1369b37c7da5d900425d0cd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0525a5c1369b37c7da5d900425d0cd0e">&#9670;&nbsp;</a></span>Pose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a>&amp; teb_local_planner::TimedElasticBand::Pose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the pose at pos <code>index</code> of the pose sequence (read-only) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>const reference to the pose at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="ab65df05f563de4e1820ae0fcb191ec4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65df05f563de4e1820ae0fcb191ec4d">&#9670;&nbsp;</a></span>poses() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PoseSequence&amp; teb_local_planner::TimedElasticBand::poses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the complete pose sequence </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="a61c56b02adc305f58cb52207841030ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c56b02adc305f58cb52207841030ae">&#9670;&nbsp;</a></span>poses() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PoseSequence&amp; teb_local_planner::TimedElasticBand::poses </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the complete pose sequence (read-only) </p>
+<dl class="section return"><dt>返回</dt><dd>const reference to the pose sequence </dd></dl>
+
+</div>
+</div>
+<a id="a8cf537eef7aeb0a535def3e2034e81c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf537eef7aeb0a535def3e2034e81c3">&#9670;&nbsp;</a></span>PoseVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteb__local__planner_1_1VertexPose.html">VertexPose</a>* teb_local_planner::TimedElasticBand::PoseVertex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the vertex of a pose at pos <code>index</code> for optimization purposes </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal PoseSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Weak raw pointer to the pose vertex at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="ab39e9950fab1522eef115631efda6273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39e9950fab1522eef115631efda6273">&#9670;&nbsp;</a></span>setPoseVertexFixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::setPoseVertexFixed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a pose vertex at pos <code>index</code> of the pose sequence to be fixed or unfixed during optimization. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index to the pose vertex </td></tr>
+    <tr><td class="paramname">status</td><td>if <code>true</code>, the vertex will be fixed, otherwise unfixed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ae2815baa6eeb0215888e5f5b7dadc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae2815baa6eeb0215888e5f5b7dadc5">&#9670;&nbsp;</a></span>setTimeDiffVertexFixed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::setTimeDiffVertexFixed </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a timediff vertex at pos <code>index</code> of the timediff sequence to be fixed or unfixed during optimization. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index to the timediff vertex </td></tr>
+    <tr><td class="paramname">status</td><td>if <code>true</code>, the vertex will be fixed, otherwise unfixed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7c27963869face67896a5115649cb978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c27963869face67896a5115649cb978">&#9670;&nbsp;</a></span>TimeDiff() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double&amp; teb_local_planner::TimedElasticBand::TimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the time difference at pos <code>index</code> of the time sequence </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>reference to the time difference at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="a608ccd48d4a63eb1c84b604ca624146d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a608ccd48d4a63eb1c84b604ca624146d">&#9670;&nbsp;</a></span>TimeDiff() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double&amp; teb_local_planner::TimedElasticBand::TimeDiff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the time difference at pos <code>index</code> of the time sequence (read-only) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>const reference to the time difference at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="a9852268ff781b9bfac3e71d0dfacc8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9852268ff781b9bfac3e71d0dfacc8bb">&#9670;&nbsp;</a></span>timediffs() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeDiffSequence&amp; teb_local_planner::TimedElasticBand::timediffs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the complete timediff sequence </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the dimediff sequence </dd></dl>
+
+</div>
+</div>
+<a id="afd7b3be659f16be7b45dac68f590d3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7b3be659f16be7b45dac68f590d3da">&#9670;&nbsp;</a></span>timediffs() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const TimeDiffSequence&amp; teb_local_planner::TimedElasticBand::timediffs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the complete timediff sequence </p>
+<dl class="section return"><dt>返回</dt><dd>reference to the dimediff sequence </dd></dl>
+
+</div>
+</div>
+<a id="a79d43e8c50679cc206d439f9ef615d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d43e8c50679cc206d439f9ef615d7f">&#9670;&nbsp;</a></span>TimeDiffVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classteb__local__planner_1_1VertexTimeDiff.html">VertexTimeDiff</a>* teb_local_planner::TimedElasticBand::TimeDiffVertex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access the vertex of a time difference at pos <code>index</code> for optimization purposes </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>element position inside the internal TimeDiffSequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Weak raw pointer to the timediff vertex at pos <code>index</code> </dd></dl>
+
+</div>
+</div>
+<a id="adae6e7423ed1583f5daedac57562384e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae6e7423ed1583f5daedac57562384e">&#9670;&nbsp;</a></span>updateAndPruneTEB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void teb_local_planner::TimedElasticBand::updateAndPruneTEB </td>
+          <td>(</td>
+          <td class="paramtype">boost::optional&lt; const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp; &gt;&#160;</td>
+          <td class="paramname"><em>new_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::optional&lt; const <a class="el" href="classteb__local__planner_1_1PoseSE2.html">PoseSE2</a> &amp; &gt;&#160;</td>
+          <td class="paramname"><em>new_goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_samples</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hot-Start from an existing trajectory with updated start and goal poses. </p>
+<p>This method updates a previously optimized trajectory with a new start and/or a new goal pose. <br  />
+The current simple implementation cuts of pieces of the trajectory that are already passed due to the new start. <br  />
+Afterwards the start and goal pose are replaced by the new ones. The resulting discontinuity will not be smoothed. The optimizer has to smooth the trajectory in <a class="el" href="classteb__local__planner_1_1TebOptimalPlanner.html" title="This class optimizes an internal Timed Elastic Band trajectory using the g2o-framework.">TebOptimalPlanner</a>. <br  />
+ </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">待办事项:</a></b></dt><dd><p class="startdd">Smooth the trajectory here and test the performance improvement of the optimization. </p>
+<p class="enddd">Implement a updateAndPruneTEB based on a new reference path / pose sequence.</p>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_start</td><td>New start pose (optional) </td></tr>
+    <tr><td class="paramname">new_goal</td><td>New goal pose (optional) </td></tr>
+    <tr><td class="paramname">min_samples</td><td>Specify the minimum number of samples that should at least remain in the trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>teb_local_planner/include/teb_local_planner/<a class="el" href="timed__elastic__band_8h_source.html">timed_elastic_band.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

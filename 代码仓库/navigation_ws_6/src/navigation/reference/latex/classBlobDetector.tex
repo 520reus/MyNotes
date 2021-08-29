@@ -1,0 +1,109 @@
+\hypertarget{classBlobDetector}{}\doxysection{Blob\+Detector类 参考}
+\label{classBlobDetector}\index{BlobDetector@{BlobDetector}}
+
+
+Detect blobs in image (specialized for dynamic obstacles in the costmap)  
+
+
+
+
+{\ttfamily \#include $<$blob\+\_\+detector.\+h$>$}
+
+类 Blob\+Detector 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBlobDetector}
+\end{center}
+\end{figure}
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBlobDetector_1_1Center}{Center}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlobDetector_a7236b44e5d1d7429c271d90d19caaaf1}\label{classBlobDetector_a7236b44e5d1d7429c271d90d19caaaf1}} 
+\mbox{\hyperlink{classBlobDetector_a7236b44e5d1d7429c271d90d19caaaf1}{Blob\+Detector}} (const cv\+::\+Simple\+Blob\+Detector\+::\+Params \&parameters=cv\+::\+Simple\+Blob\+Detector\+::\+Params())
+\begin{DoxyCompactList}\small\item\em Default constructor which optionally accepts custom parameters \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlobDetector_aeee7a975ec0f91694540d8aef773302d}{detect}} (const cv\+::\+Mat \&image, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, const cv\+::\+Mat \&mask=cv\+::\+Mat())
+\begin{DoxyCompactList}\small\item\em Detects keypoints in an image and extracts contours \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ \& \mbox{\hyperlink{classBlobDetector_ac5475d5355100020dd3d7ac2c3bb34b3}{get\+Contours}} ()
+\begin{DoxyCompactList}\small\item\em Access contours extracted during detection stage \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBlobDetector_a8618e0dc069886d6114c4dc18a750b94}\label{classBlobDetector_a8618e0dc069886d6114c4dc18a750b94}} 
+void \mbox{\hyperlink{classBlobDetector_a8618e0dc069886d6114c4dc18a750b94}{update\+Parameters}} (const cv\+::\+Simple\+Blob\+Detector\+::\+Params \&parameters)
+\begin{DoxyCompactList}\small\item\em Update internal parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlobDetector_a06482d15406e630738ea05e8fa9089a8}\label{classBlobDetector_a06482d15406e630738ea05e8fa9089a8}} 
+static cv\+::\+Ptr$<$ \mbox{\hyperlink{classBlobDetector}{Blob\+Detector}} $>$ \mbox{\hyperlink{classBlobDetector_a06482d15406e630738ea05e8fa9089a8}{create}} (const Blob\+Detector\+::\+Params \&params)
+\begin{DoxyCompactList}\small\item\em Create shared instance of the blob detector with given parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlobDetector_a5523bdab90de40ce9dbe31bd58ff3cc5}\label{classBlobDetector_a5523bdab90de40ce9dbe31bd58ff3cc5}} 
+virtual void {\bfseries find\+Blobs} (const cv\+::\+Mat \&image, const cv\+::\+Mat \&binary\+\_\+image, std\+::vector$<$ \mbox{\hyperlink{structBlobDetector_1_1Center}{Center}} $>$ \&centers, std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&cur\+\_\+contours) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlobDetector_ab0391d8ad851963c910d488c81ca49f6}\label{classBlobDetector_ab0391d8ad851963c910d488c81ca49f6}} 
+std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$ $>$ {\bfseries contours\+\_\+}
+\item 
+\mbox{\Hypertarget{classBlobDetector_a9ea09a8c22d390a858c8d8e8c5573837}\label{classBlobDetector_a9ea09a8c22d390a858c8d8e8c5573837}} 
+Params {\bfseries params\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Detect blobs in image (specialized for dynamic obstacles in the costmap) 
+
+This class is based on Open\+CV\textquotesingle{}s blob detector cv\+::\+Simple\+Blob\+Detector. It has been modified and specialized for dynamic obstacle tracking in the costmap\+: -\/$>$ The modified version also returns contours of the blob.
+
+See \href{http://docs.opencv.org/trunk/d0/d7a/classcv_1_1SimpleBlobDetector.html}{\texttt{ http\+://docs.\+opencv.\+org/trunk/d0/d7a/classcv\+\_\+1\+\_\+1\+Simple\+Blob\+Detector.\+html}} for the original class. 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classBlobDetector_aeee7a975ec0f91694540d8aef773302d}\label{classBlobDetector_aeee7a975ec0f91694540d8aef773302d}} 
+\index{BlobDetector@{BlobDetector}!detect@{detect}}
+\index{detect@{detect}!BlobDetector@{BlobDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily virtual void Blob\+Detector\+::detect (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints,  }\item[{const cv\+::\+Mat \&}]{mask = {\ttfamily cv\+:\+:Mat()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Detects keypoints in an image and extracts contours 
+
+In contrast to the original detect method, this extended version also extracts contours. Contours can be accessed by \mbox{\hyperlink{classBlobDetector_ac5475d5355100020dd3d7ac2c3bb34b3}{get\+Contours()}} after invoking this method.
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000001}{待办事项}}]The mask option is currently not implemented.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{参数}
+{\em image} & image \\
+\hline
+{\em keypoints} & The detected keypoints. \\
+\hline
+{\em mask} & Mask specifying where to look for keypoints (optional). It must be a 8-\/bit integer matrix with non-\/zero values in the region of interest. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBlobDetector_ac5475d5355100020dd3d7ac2c3bb34b3}\label{classBlobDetector_ac5475d5355100020dd3d7ac2c3bb34b3}} 
+\index{BlobDetector@{BlobDetector}!getContours@{getContours}}
+\index{getContours@{getContours}!BlobDetector@{BlobDetector}}
+\doxysubsubsection{\texorpdfstring{getContours()}{getContours()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::vector$<$cv\+::\+Point$>$ $>$\& Blob\+Detector\+::get\+Contours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access contours extracted during detection stage 
+
+\begin{DoxyReturn}{返回}
+Read-\/only reference to the contours set of the previous \mbox{\hyperlink{classBlobDetector_aeee7a975ec0f91694540d8aef773302d}{detect()}} run 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+converter/include/costmap\+\_\+converter/costmap\+\_\+to\+\_\+dynamic\+\_\+obstacles/blob\+\_\+detector.\+h\end{DoxyCompactItemize}
