@@ -61,8 +61,10 @@ def interpolate_b_spline_path(x: list, y: list, n_path_points: int,
 def main():
     print(__file__ + " start!!")
     # way points
-    way_point_x = [-1.0, 3.0, 4.0, 2.0, 1.0]
-    way_point_y = [0.0, -3.0, 1.0, 1.0, 3.0]
+    # way_point_x = [-1.0, 3.0, 4.0, 2.0, 1.0]
+    # way_point_y = [0.0, -3.0, 1.0, 1.0, 3.0]
+    way_point_x = [1.0,2.0,3.0,5.0]
+    way_point_y = [1.0,2.0,3.0,4.0]
     n_course_point = 100  # sampling number
 
     rax, ray = approximate_b_spline_path(way_point_x, way_point_y,

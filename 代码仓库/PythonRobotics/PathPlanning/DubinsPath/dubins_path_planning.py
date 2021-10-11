@@ -319,8 +319,8 @@ def main():
     start_y = 0.0  # [m]
     start_yaw = np.deg2rad(0.0)  # [rad]
 
-    end_x = 10.0  # [m]
-    end_y = 10.0  # [m]
+    end_x = 1.0  # [m]
+    end_y = 1.0  # [m]
     end_yaw = np.deg2rad(45.0)  # [rad]
 
     curvature = 1.0

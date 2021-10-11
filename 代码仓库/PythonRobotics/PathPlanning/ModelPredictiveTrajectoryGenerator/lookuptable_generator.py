@@ -1,9 +1,10 @@
 """
-
 Lookup Table generation for model predictive trajectory generator
+当状态空间是低维并且光滑，lookup table可以用来对最优参数进行猜测。由于一般使用初始和最终位置(x,y)、角度ψ和初始和最终的曲率k0,
+kf作为边界条件，因此lookup table使用这5维参数作为查询条件，查询最优参数的初始猜测。
 
-author: Atsushi Sakai
-
+这里主要是采样一些状态空间，利用牛顿迭代求最优参数的方式，提前计算一些最优参数，并保存在文件中。以后有求解任务时，
+可以通过初始曲率k0，目标位置x,y,yaw从lookup table中得到一个条件近似的参数值当做初始参数，节省模型预测轨迹生成时牛顿迭代的计算量。
 """
 from matplotlib import pyplot as plt
 import numpy as np
@@ -14,6 +15,12 @@ import pandas as pd
 
 
 def calc_states_list():
+    """
+    均匀采样状态空间，生成一些终止点
+    Returns
+    -------
+    状态点
+    """
     maxyaw = np.deg2rad(-30.0)
 
     x = np.arange(10.0, 30.0, 5.0)
@@ -31,6 +38,9 @@ def calc_states_list():
 
 
 def search_nearest_one_from_lookuptable(tx, ty, tyaw, lookuptable):
+    """
+    从lookuptable中找终止状态和tx,ty,tyaw最近似的一条数据
+    """
     mind = float("inf")
     minid = -1
 
@@ -66,6 +76,7 @@ def save_lookup_table(fname, table):
 
 
 def generate_lookup_table():
+    # 采样状态点
     states = calc_states_list()
     k0 = 0.0
 
@@ -73,15 +84,19 @@ def generate_lookup_table():
     lookuptable = [[1.0, 0.0, 0.0, 1.0, 0.0, 0.0]]
 
     for state in states:
+        # 从lookuptable中找到条件最近的参数
         bestp = search_nearest_one_from_lookuptable(
             state[0], state[1], state[2], lookuptable)
-
+        # 把采样的状态点当做目标点
         target = motion_model.State(x=state[0], y=state[1], yaw=state[2])
+        # 把从lookup table中查到的参数作为初始参数
         init_p = np.array(
             [math.sqrt(state[0] ** 2 + state[1] ** 2), bestp[4], bestp[5]]).reshape(3, 1)
 
+        # 优化参数，生成轨迹
         x, y, yaw, p = planner.optimize_trajectory(target, k0, init_p)
 
+        # 将优化结果放入lookup table
         if x is not None:
             print("find good path")
             lookuptable.append(
@@ -104,6 +119,7 @@ def generate_lookup_table():
     plt.show()
 
     print("Done")
+
 
 
 def main():

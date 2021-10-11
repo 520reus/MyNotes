@@ -1,7 +1,7 @@
 """
 
 Path tracking simulation with Stanley steering control and PID speed control.
-
+前轮参考横向控制，逐渐减小前轮参考点与最近参考路径点的横向误差
 author: Atsushi Sakai (@Atsushi_twi)
 
 Ref:
@@ -56,7 +56,7 @@ class State(object):
         :param acceleration: (float) Acceleration
         :param delta: (float) Steering
         """
-        delta = np.clip(delta, -max_steer, max_steer)
+        delta = np.clip(delta, -max_steer, max_steer) # 将输出限制在[-max_steer,max_steer]之间
 
         self.x += self.v * np.cos(self.yaw) * dt
         self.y += self.v * np.sin(self.yaw) * dt
@@ -92,9 +92,9 @@ def stanley_control(state, cx, cy, cyaw, last_target_idx):
     if last_target_idx >= current_target_idx:
         current_target_idx = last_target_idx
 
-    # theta_e corrects the heading error
+    # theta_e corrects the heading error 航向误差
     theta_e = normalize_angle(cyaw[current_target_idx] - state.yaw)
-    # theta_d corrects the cross track error
+    # theta_d corrects the cross track error 横向误差
     theta_d = np.arctan2(k * error_front_axle, state.v)
     # Steering control
     delta = theta_e + theta_d

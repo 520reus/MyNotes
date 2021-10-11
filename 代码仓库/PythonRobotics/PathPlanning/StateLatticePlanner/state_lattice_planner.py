@@ -84,7 +84,7 @@ def generate_path(target_states, k0):
 def calc_uniform_polar_states(nxy, nh, d, a_min, a_max, p_min, p_max):
     """
     calc uniform state
-
+    均匀采样
     :param nxy: number of position sampling
     :param nh: number of heading sampleing
     :param d: distance of terminal state
@@ -104,7 +104,8 @@ def calc_uniform_polar_states(nxy, nh, d, a_min, a_max, p_min, p_max):
 def calc_biased_polar_states(goal_angle, ns, nxy, nh, d, a_min, a_max, p_min, p_max):
     """
     calc biased state
-
+    有global guidance的采样，主要思想是全局规划器会有一个cost判断，走到cost高的地方，再向目标点出发，
+    会有更低的概率走出一条效率高且feasible的路，因此在采样阶段，在cost低的地方稠密的采样，在cost高的地方更稀疏的采样。
     :param goal_angle: goal orientation for biased sampling
     :param ns: number of biased sampling
     :param nxy: number of position sampling
@@ -146,8 +147,9 @@ def calc_biased_polar_states(goal_angle, ns, nxy, nh, d, a_min, a_max, p_min, p_
 def calc_lane_states(l_center, l_heading, l_width, v_width, d, nxy):
     """
 
-    calc lane states
-
+    calc lane states,将sl坐标转化为二维平面坐标
+    环境约束的边界采样，考虑到道路的形状，在沿道路向前一定距离、垂直于道路中心线的横切线上采样，
+    或者使用躲避障碍物和切换道路的策略。
     :param l_center: lane lateral position
     :param l_heading:  lane heading
     :param l_width:  lane width
@@ -156,6 +158,7 @@ def calc_lane_states(l_center, l_heading, l_width, v_width, d, nxy):
     :param nxy: sampling number
     :return: state list
     """
+    # 道路中点的二维平面坐标
     xc = math.cos(l_heading) * d + math.sin(l_heading) * l_center
     yc = math.sin(l_heading) * d + math.cos(l_heading) * l_center
 
@@ -323,10 +326,10 @@ def lane_state_sampling_test1():
 
 
 def main():
-    uniform_terminal_state_sampling_test1()
-    uniform_terminal_state_sampling_test2()
-    biased_terminal_state_sampling_test1()
-    biased_terminal_state_sampling_test2()
+    # uniform_terminal_state_sampling_test1()
+    # uniform_terminal_state_sampling_test2()
+    # biased_terminal_state_sampling_test1()
+    # biased_terminal_state_sampling_test2()
     lane_state_sampling_test1()
 
 

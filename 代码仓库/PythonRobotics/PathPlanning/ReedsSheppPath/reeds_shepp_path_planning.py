@@ -362,7 +362,7 @@ def reeds_shepp_path_planning(sx, sy, syaw,
 
     if not paths:
         return None, None, None, None, None
-    # 从
+
     minL = float("Inf")
     best_path_index = -1
     for i, _ in enumerate(paths):
@@ -392,7 +392,7 @@ def main():
 
     end_x = 1.0  # [m]
     end_y = 1.0  # [m]
-    end_yaw = np.deg2rad(0.0)  # [rad]
+    end_yaw = np.deg2rad(45.0)  # [rad]
 
     curvature = 1.0
     step_size = 0.1

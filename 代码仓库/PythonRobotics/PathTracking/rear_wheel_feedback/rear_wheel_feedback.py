@@ -1,7 +1,7 @@
 """
 
 Path tracking simulation with rear wheel feedback steering control and PID speed control.
-
+后轮参考横向控制，逐渐减小后轮参考点与最近参考路径点的横向误差
 author: Atsushi Sakai(@Atsushi_twi)
 
 """
@@ -31,10 +31,10 @@ class State:
         self.direction = direction
 
     def update(self, a, delta, dt):
-        self.x   = self.x + self.v * math.cos(self.yaw) * dt
-        self.y   = self.y + self.v * math.sin(self.yaw) * dt
+        self.x = self.x + self.v * math.cos(self.yaw) * dt
+        self.y = self.y + self.v * math.sin(self.yaw) * dt
         self.yaw = self.yaw + self.v / L * math.tan(delta) * dt
-        self.v   = self.v + a * dt
+        self.v = self.v + a * dt
 
 class CubicSplinePath:
     def __init__(self, x, y):
@@ -63,7 +63,7 @@ class CubicSplinePath:
     
     def __find_nearest_point(self, s0, x, y):
         def calc_distance(_s, *args):
-            _x, _y= self.X(_s), self.Y(_s)
+            _x, _y = self.X(_s), self.Y(_s)
             return (_x - args[0])**2 + (_y - args[1])**2
         
         def calc_distance_jacobian(_s, *args):
@@ -80,14 +80,14 @@ class CubicSplinePath:
         s = ret[0][0]
         e = ret[1]
 
-        k   = self.calc_curvature(s)
+        k = self.calc_curvature(s)
         yaw = self.calc_yaw(s)
 
         dxl = self.X(s) - x
         dyl = self.Y(s) - y
         angle = pi_2_pi(yaw - math.atan2(dyl, dxl))
         if angle < 0:
-            e*= -1
+            e *= -1
 
         return e, k, yaw, s
 
