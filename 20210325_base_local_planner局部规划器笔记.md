@@ -52,3 +52,8 @@ private:
 
 worldModel除了costmapModel在obstacle_cost_function里面用到之外，其他两个并没用到，所以这里就不看了。回顾整个工程，可以发现这种接口化的设计有种说不出的美感，每一步的实现都具体踏实，调用又简洁可靠，将一个复杂的项目简化到游刃有余的地步，实在厉害。原来的非接口的trajectory_planner就不看了，有了电驴还要啥自行车（主要因为懒）。
 
+
+
+# 其他有价值参考文档
+
+https://blog.csdn.net/peakzuo/article/details/86487923
