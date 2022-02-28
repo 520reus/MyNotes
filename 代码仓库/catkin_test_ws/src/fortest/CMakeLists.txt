@@ -41,6 +41,8 @@ find_package(serial REQUIRED)
 add_executable(test3 src/test3.cpp)
 target_link_libraries(test3 ${catkin_LIBRARIES} ${Eigen3_LIBRARIES})
 
+add_executable(test4 src/test4.cpp)
+
 ############ipopt#################3
 set(IPOPT_LIBRARY_DIRS /usr/local/lib)
 set(IPOPT_INCLUDE_DIRS /usr/local/include/coin)

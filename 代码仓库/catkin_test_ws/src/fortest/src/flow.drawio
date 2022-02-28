@@ -1,0 +1,25 @@
+<mxfile>
+    <diagram id="3NmnNiKm97gW4xVO3ZSi" name="第 1 页">
+        <mxGraphModel dx="963" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#DAD2D8" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="21" value="global plan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;strokeColor=#A8201A;fillColor=#FAE5C7;labelBackgroundColor=#DAD2D8;fontColor=#143642;strokeWidth=1;" edge="1" parent="1" source="19" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Pruene Global plan" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="294" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="local plan" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#143642;strokeColor=#A8201A;fillColor=#FAE5C7;strokeWidth=1;fontSize=15;labelBackgroundColor=none;" edge="1" parent="1" source="20" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="transform Global Plan" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#143642;strokeColor=#0F8B8D;fillColor=#FAE5C7;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="294" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="is Goal Reached?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;sketch=0;fontColor=#143642;strokeColor=#0F8B8D;fillColor=#FAE5C7;strokeWidth=1;fontSize=15;" vertex="1" parent="1">
+                    <mxGeometry x="314" y="380" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

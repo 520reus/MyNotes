@@ -465,16 +465,46 @@ void plotPaths(const std::vector<double>& x,const std::vector<double>& y,
     plt::show();
 }
 
+inline double penaltyBoundToInterval(const double& var,const double& a,const double& epsilon)
+{
+  if (var < -a+epsilon)
+  {
+    return (-var - (a - epsilon));
+  }
+  if (var <= a-epsilon)
+  {
+    return 0.;
+  }
+  else
+  {
+    return (var - (a - epsilon));
+  }
+}
+
+
 int main() {
     
-    std::vector<double> x,y,sam_x,sam_y,smooth_x,smooth_y;
+    /* std::vector<double> x,y,sam_x,sam_y,smooth_x,smooth_y;
     generateDiscretePoints(x,y);
     PointsSampling(x,y,sam_x,sam_y);
     //plotPath(sam_x,sam_y);
     DiscetePointsSmoother smoother(sam_x,sam_y);
     smoother.discretePointsSmoother(smooth_x,smooth_y);
-    plotPaths(x,y,smooth_x,smooth_y);
+    plotPaths(x,y,smooth_x,smooth_y); */
+    int a = 5;
+    int b = 10;
+    cout << a/b << endl;
+    cout << static_cast<double>(a)/b << endl;
 
+    std::vector<double> t(200);
+    std::vector<double> yt(200);
+    for(int i=0;i<101;i++)
+    {
+        t[i] = static_cast<double>(i-50)/5;
+        yt[i] = penaltyBoundToInterval(t[i],5,0);
+    }
+    plt::plot(t,yt);
+    plt::show();
 }
 
 

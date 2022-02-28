@@ -1,0 +1,48 @@
+Algorithm：倒车逻辑算法实现(in teb plan cycle)
+Requrie:car odometry,global goal,local plan
+Begin
+1.calculate the distance between global goal and car -> global_distance 
+2.set the region of handling global goal -> consider_global_goal_orientation_distance 
+3.if global_distance > consider_global_goal_orientation_distance then
+    calculate the distance between local goal and car -> pos_to_local_goal(take the car as the reference)
+    get the local goal from the last point of local plan
+    get the yaw of local goal -> local_goal_orient_init,car orientation unit vector -> car_orientationUnitVec
+    calculate the dot with pos_to_local_goal and car_orientationUnitVec -> direction_dot 
+    if direction_dot < 0 then
+        local goal.theta = local_goal_.theta() = g2o::normalize_theta(local_goal_orient_init+M_PI)
+    End
+  else //mean the car arrive the nearby of global goal
+    get the yaw of global goal -> global_yaw
+    local goal.theta = global_yaw
+  End
+End
+
+
+Algorithm：时间一致性实现(in teb plan cycle)(方法一)
+Requrie:car odometry,local plan
+Begin
+1.set initial flag to False -> init_local_goal
+2.if not init_local_goal then
+    set the last point of local plan to local goal
+    init_local_goal = True
+  End
+3.calculate the distance between car and local goal -> local_distance
+4.set the tolerance of local goal -> local_goal_tolorence
+4.if local_distance < local_goal_tolorence then
+    updating local goal with the last point of local plan
+  End
+End
+
+
+Algorithm：时间一致性实现(in teb plan cycle)(方法二)
+Requrie:car velocity
+Begin
+1.set proportion factor -> k
+2.get car velocity -> vel_x
+3.if abs(vel_x) > 0.1 then
+    update_adaptive_time = k/abs(vel_x)
+  else
+    update_adaptive_time = 2 //In order to prevent the speed is 0 as denominator, the local target is updated once every 2 seconds when the speed is 0
+  End
+4.call Timer to update the local goal
+End

@@ -69,11 +69,15 @@
         "csignal": "cpp",
         "condition_variable": "cpp",
         "mutex": "cpp",
-        "any": "cpp"
+        "any": "cpp",
+        "core": "cpp",
+        "*.ipp": "cpp",
+        "stack": "cpp"
     },
     "python.analysis.extraPaths": [
         "/home/wu/lidar_mapping_ws/devel/lib/python2.7/dist-packages",
         "/home/wu/catkin_ws/devel/lib/python2.7/dist-packages",
         "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    ],
+    "ros.distro": "melodic"
 }

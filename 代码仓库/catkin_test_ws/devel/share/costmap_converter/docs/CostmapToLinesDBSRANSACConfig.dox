@@ -1,0 +1,15 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~cluster_max_distance" : \b [double] Parameter for DB_Scan, maximum distance to neighbors [m] min: 0.0, default: 0.4, max: 10.0
+- \b "~cluster_min_pts" : \b [int] Parameter for DB_Scan: minimum number of points that define a cluster min: 1, default: 2, max: 20
+- \b "~cluster_max_pts" : \b [int] Parameter for DB_Scan: maximum number of points that define a cluster (limit cluster size to avoid large L- and U-shapes) min: 2, default: 30, max: 200
+- \b "~ransac_inlier_distance" : \b [double] Maximum distance to the line segment for inliers min: 0.0, default: 0.2, max: 10.0
+- \b "~ransac_min_inliers" : \b [int] Minimum numer of inliers required to form a line min: 0, default: 10, max: 100
+- \b "~ransac_no_iterations" : \b [int] Number of ransac iterations min: 1, default: 2000, max: 10000
+- \b "~ransac_remainig_outliers" : \b [int] Repeat ransac until the number of outliers is as specified here min: 0, default: 3, max: 50
+- \b "~ransac_convert_outlier_pts" : \b [bool] Convert remaining outliers to single points. min: False, default: True, max: True
+- \b "~ransac_filter_remaining_outlier_pts" : \b [bool] Filter the interior of remaining outliers and keep only keypoints of their convex hull min: False, default: False, max: True
+- \b "~convex_hull_min_pt_separation" : \b [double] Clear keypoints of the convex polygon that are close to each other [distance in meters] (0: keep all) min: 0.0, default: 0.1, max: 10.0
+

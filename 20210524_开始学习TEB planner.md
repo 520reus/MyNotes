@@ -24,7 +24,7 @@ ros wiki teb local planner: http://wiki.ros.org/teb_local_planner/Tutorials
 
 1. min_obstacle_dist：与障碍物之间的最小期望距离（以米为单位）
 2. inflation_dist：惩罚成本不为零的障碍物周围的缓冲区（应大于min_obstacle_dist才能生效）。  另请参阅权重weight_inflation。
-3. weight_inflation：通胀惩罚的优化权重（应该很小）。
+3. weight_inflation：膨胀惩罚的优化权重（应该很小）。
 4. include_dynamic_obstacles：如果将此参数设置为true，则将通过等速模型在优化过程中预测并考虑速度为非零的障碍物的运动（通过用户在主题〜/障碍物上提供的障碍物或从costmap_converter获得）。
 5. penalty_epsilon：为惩罚函数增加一个小的安全余量，以实现硬约束近似
 6. dt_ref：轨迹的所需时间分辨率（由于时间分辨率是优化的一部分，因此轨迹不固定为dt_ref，但是如果违反dt_ref + -dt_hysteresis，则将在迭代之间调整轨迹的大小。

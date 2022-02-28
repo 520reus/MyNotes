@@ -3,6 +3,8 @@
 
 fortest/CMakeFiles/test3.dir/src/test3.cpp.o
  /home/wu/catkin_test_ws/src/fortest/src/test3.cpp
+ /opt/ros/melodic/include/geometry_msgs/Twist.h
+ /opt/ros/melodic/include/geometry_msgs/Vector3.h
  /opt/ros/melodic/include/ros/advertise_options.h
  /opt/ros/melodic/include/ros/advertise_service_options.h
  /opt/ros/melodic/include/ros/assert.h
@@ -21,6 +23,7 @@ fortest/CMakeFiles/test3.dir/src/test3.cpp.o
  /opt/ros/melodic/include/ros/message.h
  /opt/ros/melodic/include/ros/message_event.h
  /opt/ros/melodic/include/ros/message_forward.h
+ /opt/ros/melodic/include/ros/message_operations.h
  /opt/ros/melodic/include/ros/message_traits.h
  /opt/ros/melodic/include/ros/names.h
  /opt/ros/melodic/include/ros/node_handle.h
@@ -58,7 +61,5 @@ fortest/CMakeFiles/test3.dir/src/test3.cpp.o
  /opt/ros/melodic/include/ros/wall_timer.h
  /opt/ros/melodic/include/ros/wall_timer_options.h
  /opt/ros/melodic/include/rosconsole/macros_generated.h
- /opt/ros/melodic/include/serial/serial.h
- /opt/ros/melodic/include/serial/v8stdint.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h

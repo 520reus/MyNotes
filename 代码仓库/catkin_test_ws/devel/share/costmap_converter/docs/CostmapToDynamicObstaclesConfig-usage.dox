@@ -1,0 +1,31 @@
+\subsubsection usage Usage
+\verbatim
+<node name="standalone_converter" pkg="costmap_converter" type="standalone_converter">
+  <param name="alpha_slow" type="double" value="0.3" />
+  <param name="alpha_fast" type="double" value="0.85" />
+  <param name="beta" type="double" value="0.85" />
+  <param name="min_sep_between_slow_and_fast_filter" type="int" value="80" />
+  <param name="min_occupancy_probability" type="int" value="180" />
+  <param name="max_occupancy_neighbors" type="int" value="80" />
+  <param name="morph_size" type="int" value="1" />
+  <param name="publish_static_obstacles" type="bool" value="True" />
+  <param name="min_distance_between_blobs" type="double" value="10.0" />
+  <param name="filter_by_area" type="bool" value="True" />
+  <param name="min_area" type="int" value="3" />
+  <param name="max_area" type="int" value="300" />
+  <param name="filter_by_circularity" type="bool" value="True" />
+  <param name="min_circularity" type="double" value="0.2" />
+  <param name="max_circularity" type="double" value="1.0" />
+  <param name="filter_by_inertia" type="bool" value="True" />
+  <param name="min_inertia_ratio" type="double" value="0.2" />
+  <param name="max_inertia_ratio" type="double" value="1.0" />
+  <param name="filter_by_convexity" type="bool" value="False" />
+  <param name="min_convexity" type="double" value="0.0" />
+  <param name="max_convexity" type="double" value="1.0" />
+  <param name="dt" type="double" value="0.2" />
+  <param name="dist_thresh" type="double" value="20.0" />
+  <param name="max_allowed_skipped_frames" type="int" value="3" />
+  <param name="max_trace_length" type="int" value="10" />
+</node>
+\endverbatim
+

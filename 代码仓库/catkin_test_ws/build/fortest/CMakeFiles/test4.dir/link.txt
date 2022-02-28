@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/test4.dir/src/test4.cpp.o  -o /home/wu/catkin_test_ws/devel/lib/fortest/test4 

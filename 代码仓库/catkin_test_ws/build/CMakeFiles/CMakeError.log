@@ -53,3 +53,22 @@ Makefile:126: recipe for target 'cmTC_60580/fast' failed
 make: *** [cmTC_60580/fast] Error 2
 
 
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/wu/catkin_test_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4e45c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4e45c.dir/build.make CMakeFiles/cmTC_4e45c.dir/build
+make[1]: 进入目录“/home/wu/catkin_test_ws/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_4e45c.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_4e45c.dir/CheckIncludeFile.cxx.o -c /home/wu/catkin_test_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/wu/catkin_test_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: 没有那个文件或目录
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_4e45c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4e45c.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_4e45c.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: 离开目录“/home/wu/catkin_test_ws/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_4e45c/fast' failed
+make: *** [cmTC_4e45c/fast] Error 2
+
+

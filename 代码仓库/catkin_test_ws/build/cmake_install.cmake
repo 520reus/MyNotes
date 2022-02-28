@@ -131,11 +131,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/wu/catkin_test_ws/build/gtest/cmake_install.cmake")
+  include("/home/wu/catkin_test_ws/build/offer/cmake_install.cmake")
   include("/home/wu/catkin_test_ws/build/fortest/cmake_install.cmake")
   include("/home/wu/catkin_test_ws/build/tutorial_action/cmake_install.cmake")
   include("/home/wu/catkin_test_ws/build/tutorial_dynamic_reconfigure/cmake_install.cmake")
   include("/home/wu/catkin_test_ws/build/tutorial_multi_thread/cmake_install.cmake")
-  include("/home/wu/catkin_test_ws/build/tutorial_namespaceROS/cmake_install.cmake")
+  include("/home/wu/catkin_test_ws/build/tutorial_namespace_ros/cmake_install.cmake")
   include("/home/wu/catkin_test_ws/build/learning_veddha/cmake_install.cmake")
 
 endif()
